@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T6WVGJVD4J"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-T6WVGJVD4J');</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Web Application Security Basics: Protect Your Own Website</title>
+<meta name="description" content="Learn web app security fundamentals — OWASP Top 10 awareness, HTTPS, input validation — for defending your own sites. Ethical only.">
+<link rel="stylesheet" href="../styles.css">
+<link rel="canonical" href="https://anwaardigital.github.io/Cybersecurity/hacking/web-application-security-basics.html">
+<meta property="og:title" content="Web Application Security Basics: Protect Your Own Website">
+<meta property="og:description" content="Learn web app security fundamentals — OWASP Top 10 awareness, HTTPS, input validation — for defending your own sites. Ethical only.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://anwaardigital.github.io/Cybersecurity/hacking/web-application-security-basics.html">
+<meta property="og:site_name" content="CyberSec Hub">
+</head>
+<body>
+<nav class="navbar"><div class="nav-inner">
+<a href="../index.html" class="brand"><span class="brand-icon">🛡️</span><span>CyberSec <span class="green">Hub</span></span></a>
+<button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+<ul class="nav-links" id="navLinks">
+<li><a href="../index.html">Home</a></li>
+<li><a href="../index.html#basics">Basics</a></li>
+<li><a href="../index.html#hacking">Ethical Hacking</a></li>
+<li><a href="../index.html#tools">Tools</a></li>
+<li><a href="../index.html#career">Career</a></li>
+<li><a href="../about.html">About</a></li>
+</ul></div></nav><div class="breadcrumb"><a href="../index.html">Home</a> / 🎯 Ethical Hacking / Web Application Security Basics</div>
+<header class="article-hero"><span class="section-tag">🎯 Ethical Hacking</span><h1>Web Application Security Basics: Protect Your Own Website</h1><div class="article-meta">By CyberSec Hub · 16 min read</div></header>
+<main class="article-body"><div class="ethical-box"><strong>⚠️ Ethical Use Only:</strong> Only test systems you own or have <strong>written permission</strong> to test. Unauthorized hacking is illegal in Pakistan and worldwide. Everything here is for defensive security education and authorized testing only.</div><p><strong>Web Application Security Basics: Protect Your Own Website</strong> — If you own a website — a blog, an online store, a company page — you are responsible for keeping it safe. This guide explains the fundamentals of web application security from a <strong>defensive</strong> point of view: the threats to know about, and the practical steps that protect your own site. <strong>Ethical boundary:</strong> this article is for defending websites you own or administer with written permission. Never probe, scan, or test any website you do not own or have explicit authorization to test — that is illegal.</p>
+
+<h2>Why Websites Are Constant Targets</h2>
+<p>Websites are attacked every day because they are reachable from anywhere on the internet. Automated bots constantly probe sites for known weaknesses — outdated software, weak login pages, misconfigured forms. Most small websites are not attacked by someone who picked them personally; they are attacked by scripts scanning millions of sites for the same handful of mistakes. That is actually good news: fixing those few common mistakes removes you from the easy-target list.</p>
+<p>Think of web security like locking your shop at night. You cannot stop a determined professional thief forever, but a strong lock, an alarm, and good lighting will stop nearly every opportunist. Web security works the same way — layers of sensible defenses.</p>
+
+<h2>Know the OWASP Top 10 (Awareness, Not Attack Guides)</h2>
+<p>The <strong>OWASP Top 10</strong> is a respected, publicly maintained list of the most critical security risks to web applications. Understanding it is essential for every website owner. Here are the key ones explained defensively:</p>
+<ul>
+<li><strong>Injection flaws (e.g., SQL injection):</strong> when an application blindly trusts user input and passes it to a database or command interpreter. <em>Defense:</em> use parameterized queries (prepared statements) and never build database queries by gluing text together.</li>
+<li><strong>Cross-site scripting (XSS):</strong> when an attacker stores or reflects malicious scripts that run in visitors' browsers. <em>Defense:</em> escape all user-supplied output (encode HTML), validate input, and set a Content Security Policy.</li>
+<li><strong>Broken access control:</strong> when pages or functions meant for admins are reachable by ordinary users. <em>Defense:</em> enforce server-side checks on every request — never rely on hiding a button.</li>
+<li><strong>Broken authentication:</strong> weak logins, credential stuffing, session hijacking. <em>Defense:</em> enforce strong passwords, rate-limit login attempts, use multi-factor authentication (MFA), and invalidate sessions properly.</li>
+<li><strong>Security misconfiguration:</strong> default passwords, debug modes left on, verbose error messages revealing server details. <em>Defense:</em> review every default setting, disable debug output on production sites.</li>
+<li><strong>Vulnerable components:</strong> outdated libraries, plugins, and themes with known flaws. <em>Defense:</em> keep everything updated and remove what you do not use.</li>
+</ul>
+<p>You do not need to learn how these attacks are carried out. You need to recognize their names, understand the damage they cause, and apply the defenses listed above on your own sites.</p>
+
+<h2>HTTPS Everywhere — No Exceptions</h2>
+<p><strong>HTTPS</strong> encrypts traffic between your visitors' browsers and your server using TLS certificates. Without it, logins, contact forms, and payment details travel across the network in plain text where anyone on the path can read them.</p>
+<p>Today there is no excuse for skipping HTTPS — free certificates (such as Let's Encrypt) work on almost every host. After enabling it:</p>
+<ul>
+<li>Force all traffic to HTTPS with a redirect from HTTP.</li>
+<li>Enable <strong>HSTS</strong> (HTTP Strict Transport Security) so browsers refuse insecure connections to your site.</li>
+<li>Check your certificate regularly for expiry and renewal failures.</li>
+</ul>
+
+<h2>Input Validation: Never Trust User Data</h2>
+<p>Nearly every serious web attack begins with malicious input — a crafted search query, a manipulated form field, a forged upload. The golden rule: <strong>never trust data coming from the browser</strong>. Validate on the server side, because client-side checks (JavaScript) can be bypassed trivially.</p>
+<p>Practical rules for your own applications:</p>
+<ul>
+<li>Accept only the exact data types and lengths you expect (e.g., a phone-number field should accept only digits).</li>
+<li>Use allow-lists (accept known-good values) rather than trying to block every bad one.</li>
+<li>Escape or encode data when displaying it back to users (prevents XSS).</li>
+<li>Restrict file uploads strictly — check file types, rename files on the server, store them outside the web root.</li>
+</ul>
+
+<h2>Keep Your CMS, Plugins, and Themes Updated</h2>
+<p>The majority of hacked small-business websites were compromised through <strong>outdated software</strong>, not clever zero-day attacks. Popular platforms like WordPress are secure at their core; the danger comes from themes and plugins that are never updated.</p>
+<ul>
+<li>Update your CMS core, plugins, and themes promptly — enable automatic updates where available.</li>
+<li>Delete unused plugins and themes instead of leaving them dormant.</li>
+<li>Take regular backups (files + database) and test restoring them occasionally.</li>
+<li>Use reputable, actively maintained extensions; avoid nulled or pirated themes — they often contain backdoors.</li>
+</ul>
+
+<h2>Security Headers: Free Protection You Should Turn On</h2>
+<p>HTTP <strong>security headers</strong> are simple server settings that tell browsers how to handle your site safely. They cost nothing and block whole classes of attacks:</p>
+<ul>
+<li><strong>Content-Security-Policy (CSP):</strong> restricts which scripts and resources can load — a strong shield against XSS.</li>
+<li><strong>X-Frame-Options / frame-ancestors:</strong> prevents clickjacking by stopping your site from being embedded in attacker's pages.</li>
+<li><strong>X-Content-Type-Options:</strong> stops browsers from "guessing" file types, blocking some upload-based attacks.</li>
+<li><strong>Referrer-Policy:</strong> limits how much of your URL is shared with other sites.</li>
+</ul>
+<p>Many of these can be set with a plugin or a few lines in your server configuration. Free online checkers can scan <em>your own</em> site and tell you which headers are missing.</p>
+
+<h2>Monitoring, Backups, and Incident Readiness</h2>
+<p>Defense is not a one-time setup. Keep a routine: review update notifications weekly, watch your login logs for unusual failed attempts, and keep offline backups so a compromise or ransomware event does not destroy your business. If you ever suspect your site was hacked — change all passwords, restore from a known-clean backup, and scan with a reputable malware scanner before going back online. Document what happened so you can fix the root cause, not just the symptom.</p>
+
+<h2>Key Takeaways</h2>
+<ul>
+<li>Know the OWASP Top 10 so you can recognize common risks — focus on <strong>defenses</strong>, not attack techniques.</li>
+<li>Use <strong>HTTPS everywhere</strong> with HSTS enabled.</li>
+<li><strong>Never trust user input</strong> — validate and escape everything on the server side.</li>
+<li>Keep your <strong>CMS, plugins, and themes updated</strong>; remove what you do not use.</li>
+<li>Turn on <strong>security headers</strong> and keep tested backups of your site.</li>
+<li>Only ever test or scan websites you <strong>own or have written permission</strong> to test.</li>
+</ul>
+</main>
+<footer class="footer"><div class="container">
+<div class="footer-brand">🛡️ CyberSec <span class="green">Hub</span></div>
+<p>Learn cybersecurity the ethical, legal way.</p>
+<div class="footer-links">
+<a href="../index.html">Home</a><a href="../about.html">About</a><a href="../contact.html">Contact</a><a href="../privacy.html">Privacy Policy</a><a href="../disclaimer.html">Disclaimer</a><a href="../terms.html">Terms</a>
+</div>
+<p class="copyright">© 2026 CyberSec Hub by Anwaar Digital. All rights reserved. Educational content only — always test with written permission.</p>
+<p class="copyright">Developed by <strong style="color:#00e676">Malik Anwaar</strong></p>
+</div></footer><a href="https://wa.me/923288317526" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.6 6.1 1.6h.1c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.6 1.2 1.2-4.5-.3-.4c-1-1.6-1.6-3.5-1.6-5.5C5 9.6 10.6 5 16 5s11 4.6 11 10-5.4 9.8-11 9.8zm6.1-7.3c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.8.1-.3-.2-1.4-.5-2.7-1.6-.9-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6L13 9.5c-.3-.8-.7-.7-1-.7h-.8c-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.5s1.5 4 1.7 4.3c.2.3 2.9 4.4 7 6.2 1 .4 1.7.7 2.3.9.9.3 1.8.2 2.5.2.8-.1 2.3-1 2.7-1.9.3-.9.3-1.7.2-1.9-.1-.1-.3-.2-.7-.4z"/></svg></a></body></html>
