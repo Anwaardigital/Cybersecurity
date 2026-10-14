@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T6WVGJVD4J"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-T6WVGJVD4J');</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Wireless Security Basics: Secure Your Own WiFi</title>
+<meta name="description" content="Secure your home WiFi properly — WPA3, router hardening, guest networks, and spotting intruders on your own network.">
+<link rel="stylesheet" href="../styles.css">
+<link rel="canonical" href="https://anwaardigital.github.io/Cybersecurity/tools/wireless-security-basics.html">
+<meta property="og:title" content="Wireless Security Basics: Secure Your Own WiFi">
+<meta property="og:description" content="Secure your home WiFi properly — WPA3, router hardening, guest networks, and spotting intruders on your own network.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://anwaardigital.github.io/Cybersecurity/tools/wireless-security-basics.html">
+<meta property="og:site_name" content="CyberSec Hub">
+</head>
+<body>
+<nav class="navbar"><div class="nav-inner">
+<a href="../index.html" class="brand"><span class="brand-icon">🛡️</span><span>CyberSec <span class="green">Hub</span></span></a>
+<button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+<ul class="nav-links" id="navLinks">
+<li><a href="../index.html">Home</a></li>
+<li><a href="../index.html#basics">Basics</a></li>
+<li><a href="../index.html#hacking">Ethical Hacking</a></li>
+<li><a href="../index.html#tools">Tools</a></li>
+<li><a href="../index.html#career">Career</a></li>
+<li><a href="../about.html">About</a></li>
+</ul></div></nav><div class="breadcrumb"><a href="../index.html">Home</a> / 🔧 Tools & Techniques / Wireless Security Basics</div>
+<header class="article-hero"><span class="section-tag">🔧 Tools & Techniques</span><h1>Wireless Security Basics: Secure Your Own WiFi</h1><div class="article-meta">By CyberSec Hub · 10 min read</div></header>
+<main class="article-body"><div class="ethical-box"><strong>⚠️ Ethical Use Only:</strong> Only test systems you own or have <strong>written permission</strong> to test. Unauthorized hacking is illegal in Pakistan and worldwide. Everything here is for defensive security education and authorized testing only.</div>
+<p>Your WiFi is the front door to your entire digital home — every phone, laptop, camera, and smart device sits behind it. Yet most people never change a single router setting. This guide hardens <strong>your own</strong> wireless network step by step.</p>
+
+<h2>Know Your Current State</h2>
+<p>First, audit what you have. Log into your own router (usually at <code>192.168.1.1</code> or <code>192.168.0.1</code> — address printed on the router label) and note: the WiFi encryption type, the admin password status, the firmware version, and the list of connected devices. Use our <a href="../hacking/nmap-guide.html">Nmap guide</a> to scan your own network (<code>nmap -sn 192.168.1.0/24</code>) and compare the device list against what you actually own.</p>
+
+<h2>Step 1: Change Default Credentials</h2>
+<p>Router admin panels ship with defaults like admin/admin — and attackers know every brand's defaults. Change the <strong>router admin password</strong> to something long and unique, stored in your password manager. This alone closes one of the most exploited holes in home networking.</p>
+
+<h2>Step 2: Use WPA3 (or WPA2-AES)</h2>
+<p>In your router's wireless security settings:</p>
+<ul>
+<li>Choose <strong>WPA3-Personal</strong> if all your devices support it; otherwise <strong>WPA2-PSK (AES)</strong>.</li>
+<li>Never use WEP or WPA-TKIP — both are broken and crackable in minutes.</li>
+<li>Set a <strong>long WiFi passphrase</strong> (20+ characters, e.g., a passphrase of random words). This is the key attackers would try to guess — length wins.</li>
+<li>Disable <strong>WPS</strong> (WiFi Protected Setup) — its PIN method has a well-known weakness.</li>
+</ul>
+
+<h2>Step 3: Update Router Firmware</h2>
+<p>Check your router's admin panel for firmware updates and install them. Manufacturers patch serious vulnerabilities this way. If your router no longer receives updates and is several years old, consider replacing it — an unpatchable router guarding your whole network is a liability.</p>
+
+<h2>Step 4: Harden the Settings</h2>
+<ul>
+<li><strong>Disable remote management</strong> (WAN-side admin access) — your router's admin panel should never be reachable from the internet.</li>
+<li><strong>Disable UPnP</strong> unless you specifically need it — it can punch holes in your firewall automatically.</li>
+<li><strong>Enable the built-in firewall</strong> if present.</li>
+<li>Turn off <strong>guest network</strong> isolation exceptions — actually, do set up a <strong>separate guest network</strong> for visitors and IoT gadgets, isolated from your main devices.</li>
+</ul>
+
+<h2>Step 5: Segment Smart Devices</h2>
+<p>Smart bulbs, cameras, and plugs are notoriously insecure. Put them on the <strong>guest/IoT network</strong>, separate from your phones and laptops. If a cheap camera gets compromised, it cannot reach your computer. Change every smart device's default password too.</p>
+
+<h2>Step 6: Watch for Intruders (Your Network Only)</h2>
+<p>Periodically review your router's connected-devices list and re-run your Nmap ping scan. An unknown device could be a forgotten gadget — or a neighbor on your WiFi. If you find one: change the WiFi passphrase immediately, check for firmware updates, and review who you have shared the password with.</p>
+
+<h2>Public WiFi: Different Rules</h2>
+<p>On networks you do not control (cafes, airports), assume eavesdropping is possible:</p>
+<ul>
+<li>Prefer mobile data for sensitive tasks.</li>
+<li>Use a reputable VPN on untrusted networks.</li>
+<li>Confirm sites use HTTPS (padlock icon) before logging in.</li>
+<li>Turn off auto-join for open networks and disable file sharing.</li>
+</ul>
+
+<div class="tip-box"><strong>💡 Boundaries reminder:</strong> everything in this guide is for <em>your own</em> network. Testing, probing, or accessing anyone else's WiFi without permission is illegal — including "just checking if it was open."</div>
+
+<h2>Router Admin Panel Tour (Your Own Router)</h2>
+<p>Log into your own router and explore: the <strong>connected devices</strong> list (do you recognize everything?), <strong>firmware update</strong> section, <strong>wireless security</strong> settings (confirm WPA2-AES or WPA3), <strong>guest network</strong> toggle, and <strong>remote management</strong> (must be off). Screenshot your "before" settings — after hardening, you will have a documented baseline. Repeat this tour every six months; routers are "set and forget" devices, which is exactly why attackers love them.</p>
+<h2>IoT Device Triage</h2>
+<p>Walk through your home and list every connected gadget. For each: did you change its default password? Does it still get updates? Does it <em>need</em> internet, or just your local network? Retire what you cannot secure — that 2016 camera with no updates belongs in a drawer, not on your network. For keepers, put them on the isolated guest/IoT network as described above.</p>
+<h2>When Something Feels Wrong</h2>
+<p>Signs of WiFi trouble on your own network: unknown devices in the client list, sudden slowness at odd hours, router settings changed without you touching them. Response: change WiFi and admin passwords immediately, update firmware, re-scan with Nmap, and check whether any device was factory-reset by an intruder (which would indicate deeper compromise — consider a full reset and reconfigure from scratch).</p>
+
+
+<h2>What About Hiding Your SSID?</h2>
+<p>Some guides suggest hiding your network name (disabling SSID broadcast) for security. Honest assessment: it stops casual snoopers from <em>seeing</em> the name, but the network is still trivially discoverable with basic tools — and hidden SSIDs can cause connection quirks on your own devices. It is <strong>not</strong> real security. Spend the effort on WPA3, a long passphrase, and firmware updates instead — those actually matter.</p>
+<h2>MAC Filtering: Also Not Security</h2>
+<p>Similarly, MAC address filtering (allowing only listed devices) is often recommended but easily bypassed — MAC addresses are broadcast in plaintext and trivially spoofed. Use it as a mild organizational aid if you like, but never as a security control. Real WiFi security rests on strong encryption (WPA2-AES/WPA3), strong passphrases, updated firmware, and disabled WPS/remote-admin — everything else is decoration.</p>
+<h2>Kids, Guests, and Shared Housing</h2>
+<p>Give visitors the <strong>guest network</strong> password, never the main one — you can change the guest password freely without reconfiguring your own devices. In shared housing, each person should still practice the basics on their own devices (2FA, updates), because one compromised device on any network segment is a foothold. Consider a separate IoT network even in apartments — cheap cameras are the weakest link in most homes.</p>
+
+</main>
+<footer class="footer"><div class="container">
+<div class="footer-brand">🛡️ CyberSec <span class="green">Hub</span></div>
+<p>Learn cybersecurity the ethical, legal way.</p>
+<div class="footer-links">
+<a href="../index.html">Home</a><a href="../about.html">About</a><a href="../contact.html">Contact</a><a href="../privacy.html">Privacy Policy</a><a href="../disclaimer.html">Disclaimer</a><a href="../terms.html">Terms</a>
+</div>
+<p class="copyright">© 2026 CyberSec Hub by Anwaar Digital. All rights reserved. Educational content only — always test with written permission.</p>
+</div></footer></body></html>
