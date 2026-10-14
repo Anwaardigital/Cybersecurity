@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T6WVGJVD4J"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-T6WVGJVD4J');</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Nmap Advanced Techniques: Deep Scans of Your Own Network</title>
+<meta name="description" content="Go beyond basics with Nmap — OS detection, service versions, NSE scripts — on your own network only. Defensive use.">
+<link rel="stylesheet" href="../styles.css">
+<link rel="canonical" href="https://anwaardigital.github.io/Cybersecurity/tools/nmap-advanced-techniques.html">
+<meta property="og:title" content="Nmap Advanced Techniques: Deep Scans of Your Own Network">
+<meta property="og:description" content="Go beyond basics with Nmap — OS detection, service versions, NSE scripts — on your own network only. Defensive use.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://anwaardigital.github.io/Cybersecurity/tools/nmap-advanced-techniques.html">
+<meta property="og:site_name" content="CyberSec Hub">
+</head>
+<body>
+<nav class="navbar"><div class="nav-inner">
+<a href="../index.html" class="brand"><span class="brand-icon">🛡️</span><span>CyberSec <span class="green">Hub</span></span></a>
+<button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+<ul class="nav-links" id="navLinks">
+<li><a href="../index.html">Home</a></li>
+<li><a href="../index.html#basics">Basics</a></li>
+<li><a href="../index.html#hacking">Ethical Hacking</a></li>
+<li><a href="../index.html#tools">Tools</a></li>
+<li><a href="../index.html#career">Career</a></li>
+<li><a href="../about.html">About</a></li>
+</ul></div></nav><div class="breadcrumb"><a href="../index.html">Home</a> / 🔧 Tools & Techniques / Nmap Advanced Techniques</div>
+<header class="article-hero"><span class="section-tag">🔧 Tools & Techniques</span><h1>Nmap Advanced Techniques: Deep Scans of Your Own Network</h1><div class="article-meta">By CyberSec Hub · 17 min read</div></header>
+<main class="article-body"><div class="ethical-box"><strong>⚠️ Ethical Use Only:</strong> Only test systems you own or have <strong>written permission</strong> to test. Unauthorized hacking is illegal in Pakistan and worldwide. Everything here is for defensive security education and authorized testing only.</div><h2>Nmap Advanced Techniques: Deep Scans of Your Own Network</h2>
+
+<p>If you have ever run a basic Nmap scan on your home network or your lab machines, you already know how useful it is for discovering which devices are online. But Nmap's real power shows up in its advanced features: figuring out operating systems, identifying exact service versions, and running ready-made auditing scripts against your own systems. This guide walks through those advanced techniques — with one hard rule that never changes: <strong>only scan devices you own or that you have written permission to test</strong>. Scanning someone else's systems without consent is illegal in most countries, even if you "mean well."</p>
+
+<h2>Start With Consent, Not Commands</h2>
+
+<p>Before anything technical, let's set the boundary clearly. Legitimate places to practice advanced Nmap techniques include your own home router and computers, virtual machines you run yourself, lab environments you have built (for example with VirtualBox or VMware), and deliberately vulnerable training platforms designed for learning. Never point Nmap at a network, server, or device that is not yours unless you have explicit written authorization — a polite verbal "okay" is not enough for professional work.</p>
+
+<h2>OS Detection: What Is Running on Your Machines?</h2>
+
+<p>The <strong>-O</strong> flag tells Nmap to attempt operating system detection. It sends a series of specially crafted probes and compares the responses against a database of known OS "fingerprints." For example, scanning your own laptop from another of your machines might reveal something like "Linux 5.x" or "Windows 10/11."</p>
+
+<p>Why does this matter defensively? Because if Nmap can figure out your OS remotely, so can an intruder probing your network. OS detection helps you answer an important question: <strong>how much information are your devices leaking to anyone who knocks?</strong> If a retired Windows 7 machine you forgot about is still online on your home network, OS detection will find it — and that is exactly the kind of discovery that prevents a forgotten device from becoming someone else's entry point. When you know every OS on your network, you can update, patch, or retire anything that should not be there.</p>
+
+<h2>Service and Version Detection: Know What's Listening</h2>
+
+<p>Adding <strong>-sV</strong> to a scan makes Nmap go beyond "this port is open" and ask "what software is actually answering, and which version is it?" A scan of your own test server might show "Apache httpd 2.4.52" on port 80, or an old version of SSH on port 22.</p>
+
+<p>This is the core of defensive auditing. Outdated service versions are one of the most common reasons real systems get compromised — attackers keep databases of known weaknesses tied to specific version numbers, and they look for exactly what -sV reveals. Run version detection against your own web server, your own NAS device, or your own lab machines, then compare the versions against current releases. If something is old, update it. The same scan that would arm an attacker against your network becomes your early warning system when you run it yourself, against yourself.</p>
+
+<h2>NSE Scripts: Built-In Auditing Helpers</h2>
+
+<p>Nmap ships with the <strong>Nmap Scripting Engine (NSE)</strong>, a collection of ready-made scripts for deeper inspection. The key defensive use is auditing your own systems: scripts can check whether your own web server exposes risky HTTP methods, whether your own SSL configuration supports weak ciphers, or whether your own services reveal version banners they should not.</p>
+
+<p>You can run safe default script checks on your own machines with <strong>--script=default</strong>, or target a specific area — for instance, scripts that audit the SMB services on your own Windows test machine. Think of NSE as an assistant that checks hundreds of small details you would otherwise miss. The results are a to-do list for hardening: disable the unnecessary service, tighten the weak cipher, close the port you left open during testing. Always run these scripts against your own lab or home systems only; many scripts are intrusive by design, which is another reason consent and ownership are non-negotiable.</p>
+
+<h2>Timing Options: Scan Without Breaking Things</h2>
+
+<p>Nmap offers timing templates from <strong>-T0</strong> (extremely slow and cautious) to <strong>-T5</strong> (aggressive). Beginners often jump to the fastest option, but aggressive scanning can overwhelm fragile devices — old routers, printers, and IoT gadgets sometimes crash under a heavy scan.</p>
+
+<p>On your own network, the smart approach is to start polite and only speed up when you know the target can handle it. <strong>-T3</strong> is the normal default and fine for most lab machines. If you are scanning your own embedded devices or an older router, drop to <strong>-T2</strong> or even <strong>-T1</strong> to stay gentle. This habit matters professionally: in a real authorized audit, taking a client's printer offline with an aggressive scan is a serious failure. Practice careful timing on your own network first, and document which settings you used — reproducibility is part of good security work.</p>
+
+<h2>Output Formats: Keep Records Like a Professional</h2>
+
+<p>A scan result you cannot read again later is wasted. Nmap can save results in several formats: normal text (<strong>-oN</strong>), XML (<strong>-oX</strong>), and a greppable format (<strong>-oG</strong>) that is easy to search through later. The XML output is especially useful because it feeds into other security tools and lets you compare scans over time.</p>
+
+<p>Build this habit now: every time you audit your own network, save the output with a date in the filename. Next month, run the same scan and compare. New open port? New service version? Something changed, and your records will show it. Periodic self-scanning turns a one-time exercise into an ongoing security routine — and that routine is what separates a careful administrator from someone who sets up a network once and forgets it.</p>
+
+<h2>Turning Results Into Hardening</h2>
+
+<p>Scanning is only half the job; the other half is acting on what you find. Use your own scan results as a hardening checklist:</p>
+
+<ul>
+<li><strong>Close what you do not need.</strong> An open port running a service you never use is pure risk — disable the service or block the port on your own firewall.</li>
+<li><strong>Update what you keep.</strong> Any service version that is behind current releases should be patched, especially on machines reachable from the internet.</li>
+<li><strong>Segment your network.</strong> If a scan shows your IoT devices can reach your main computer freely, consider a separate guest or IoT network on your router.</li>
+<li><strong>Verify your firewall.</strong> Scan your own machine from another device on your network and confirm that only expected ports respond.</li>
+<li><strong>Re-scan after changes.</strong> Confirm that the port you closed is actually closed and the service you updated reports the new version.</li>
+</ul>
+
+<h2>Key Takeaways</h2>
+
+<ul>
+<li>Advanced Nmap features — OS detection, version detection, and NSE scripts — reveal what your own devices expose to the network.</li>
+<li>Only ever scan systems you own or have written permission to test; this boundary is both legal and ethical.</li>
+<li>Use gentler timing on fragile devices, save your results in XML or greppable formats, and re-scan regularly to spot changes.</li>
+<li>A scan is only useful if you act on it: close unused ports, patch outdated services, and verify your firewall rules.</li>
+<li>Practice in your own lab until the workflow is second nature — then you will be ready to do it professionally, with authorization, for real clients.</li>
+</ul>
+</main>
+<footer class="footer"><div class="container">
+<div class="footer-brand">🛡️ CyberSec <span class="green">Hub</span></div>
+<p>Learn cybersecurity the ethical, legal way.</p>
+<div class="footer-links">
+<a href="../index.html">Home</a><a href="../about.html">About</a><a href="../contact.html">Contact</a><a href="../privacy.html">Privacy Policy</a><a href="../disclaimer.html">Disclaimer</a><a href="../terms.html">Terms</a>
+</div>
+<p class="copyright">© 2026 CyberSec Hub by Anwaar Digital. All rights reserved. Educational content only — always test with written permission.</p>
+<p class="copyright">Developed by <strong style="color:#00e676">Malik Anwaar</strong></p>
+</div></footer><a href="https://wa.me/923288317526" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.6 6.1 1.6h.1c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.6 1.2 1.2-4.5-.3-.4c-1-1.6-1.6-3.5-1.6-5.5C5 9.6 10.6 5 16 5s11 4.6 11 10-5.4 9.8-11 9.8zm6.1-7.3c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.8.1-.3-.2-1.4-.5-2.7-1.6-.9-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6L13 9.5c-.3-.8-.7-.7-1-.7h-.8c-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.5s1.5 4 1.7 4.3c.2.3 2.9 4.4 7 6.2 1 .4 1.7.7 2.3.9.9.3 1.8.2 2.5.2.8-.1 2.3-1 2.7-1.9.3-.9.3-1.7.2-1.9-.1-.1-.3-.2-.7-.4z"/></svg></a></body></html>
