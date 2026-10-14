@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T6WVGJVD4J"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-T6WVGJVD4J');</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Kali Linux Setup Guide: Build Your Ethical Hacking Lab</title>
+<meta name="description" content="Install Kali Linux safely in a virtual machine and build your own isolated security lab for legal, ethical practice.">
+<link rel="stylesheet" href="../styles.css">
+<link rel="canonical" href="https://anwaardigital.github.io/Cybersecurity/tools/kali-linux-setup.html">
+<meta property="og:title" content="Kali Linux Setup Guide: Build Your Ethical Hacking Lab">
+<meta property="og:description" content="Install Kali Linux safely in a virtual machine and build your own isolated security lab for legal, ethical practice.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://anwaardigital.github.io/Cybersecurity/tools/kali-linux-setup.html">
+<meta property="og:site_name" content="CyberSec Hub">
+</head>
+<body>
+<nav class="navbar"><div class="nav-inner">
+<a href="../index.html" class="brand"><span class="brand-icon">🛡️</span><span>CyberSec <span class="green">Hub</span></span></a>
+<button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+<ul class="nav-links" id="navLinks">
+<li><a href="../index.html">Home</a></li>
+<li><a href="../index.html#basics">Basics</a></li>
+<li><a href="../index.html#hacking">Ethical Hacking</a></li>
+<li><a href="../index.html#tools">Tools</a></li>
+<li><a href="../index.html#career">Career</a></li>
+<li><a href="../about.html">About</a></li>
+</ul></div></nav><div class="breadcrumb"><a href="../index.html">Home</a> / 🔧 Tools & Techniques / Kali Linux Setup Guide</div>
+<header class="article-hero"><span class="section-tag">🔧 Tools & Techniques</span><h1>Kali Linux Setup Guide: Build Your Ethical Hacking Lab</h1><div class="article-meta">By CyberSec Hub · 10 min read</div></header>
+<main class="article-body"><div class="ethical-box"><strong>⚠️ Ethical Use Only:</strong> Only test systems you own or have <strong>written permission</strong> to test. Unauthorized hacking is illegal in Pakistan and worldwide. Everything here is for defensive security education and authorized testing only.</div>
+<p><strong>Kali Linux</strong> is the most famous operating system for security professionals — a Linux distribution pre-loaded with hundreds of security testing tools. This guide shows you how to set it up <strong>safely in a virtual machine</strong> so you can learn on an isolated lab without risking your main computer or touching anyone else's systems.</p>
+
+<h2>Why a Virtual Machine (Not Your Main System)</h2>
+<p>Security tools are powerful, and mistakes happen while learning. A <strong>virtual machine (VM)</strong> runs Kali as a guest inside your normal operating system — completely isolated. If something breaks, you delete the VM and start over; your real computer is untouched. This isolation is non-negotiable for ethical practice.</p>
+
+<h2>What You Need</h2>
+<ul>
+<li>A computer with at least 8GB RAM (16GB better) and 40GB free disk space.</li>
+<li><strong>VirtualBox</strong> (free) or <strong>VMware Workstation Player</strong> (free for personal use).</li>
+<li>The Kali Linux VM image from the official kali.org website — use the pre-built VirtualBox/VMware images to skip installation hassle.</li>
+</ul>
+
+<h2>Step-by-Step Setup</h2>
+<ol>
+<li><strong>Download VirtualBox</strong> from virtualbox.org and install it.</li>
+<li><strong>Download the Kali VM image</strong> from kali.org (choose the VirtualBox 64-bit image). Verify the download checksum published on the site — this confirms the file is genuine and unmodified.</li>
+<li><strong>Import the VM:</strong> in VirtualBox, File → Import Appliance, select the downloaded file, and import with default settings (give it at least 4GB RAM and 2 CPU cores).</li>
+<li><strong>Start Kali</strong> and log in (default credentials are published in Kali's documentation — change them immediately).</li>
+<li><strong>Update everything:</strong> open a terminal and run <code>sudo apt update && sudo apt full-upgrade -y</code>. Security tools must stay current.</li>
+<li><strong>Take a snapshot</strong> (VirtualBox: Machine → Take Snapshot). This is your "reset button" — one click restores a clean lab anytime.</li>
+</ol>
+
+<h2>Configure Your Lab Network Safely</h2>
+<p>Keep your lab isolated:</p>
+<ul>
+<li>Use VirtualBox's <strong>Host-only</strong> or <strong>internal network</strong> mode for practice targets, so lab traffic never reaches your real network or the internet.</li>
+<li>Never bridge your attack VM directly to networks you do not fully control.</li>
+<li>Install your practice targets (like OWASP Juice Shop or Metasploitable) as separate VMs on the same isolated virtual network.</li>
+</ul>
+
+<h2>Essential First Tools to Explore (On Your Lab Only)</h2>
+<ul>
+<li><strong>Nmap</strong> — network discovery on your own virtual network (see our <a href="../hacking/nmap-guide.html">Nmap guide</a>).</li>
+<li><strong>Wireshark</strong> — watch your lab's traffic (see our <a href="wireshark-basics.html">Wireshark guide</a>).</li>
+<li><strong>Burp Suite</strong> — web app testing against your own lab apps (see our <a href="../hacking/burp-suite-basics.html">Burp guide</a>).</li>
+<li><strong>Terminal basics</strong> — learn <code>ls</code>, <code>cd</code>, <code>ip a</code>, <code>ping</code>, and <code>man</code>; comfort with the command line underpins everything.</li>
+</ul>
+
+<h2>Golden Rules for Your Lab</h2>
+<ul>
+<li>Everything you do stays inside your VMs and isolated virtual network.</li>
+<li>Never scan, probe, or test anything outside your lab without explicit written permission.</li>
+<li>Keep snapshots so you can always reset cleanly.</li>
+<li>Document what you learn — good notes become your future professional reports.</li>
+</ul>
+
+<div class="tip-box"><strong>💡 Next:</strong> with your lab running, work through our <a href="../hacking/penetration-testing-methodology.html">methodology guide</a> to practice the professional workflow end to end — safely inside your own environment.</div>
+
+<h2>Keeping Kali Updated and Healthy</h2>
+<p>Security tools rot fast — an outdated Kali misses new checks and may itself contain vulnerabilities. Monthly routine inside your VM:</p>
+<pre><code>sudo apt update && sudo apt full-upgrade -y
+sudo apt autoremove -y</code></pre>
+<p>If an update breaks something, your VirtualBox snapshot rolls you back in seconds — another reason snapshots are mandatory. Also update VirtualBox itself and its Extension Pack occasionally; virtualization bugs are real attack surface on the host.</p>
+<h2>Useful Customizations for Learning</h2>
+<ul>
+<li><strong>Shared folders:</strong> set up a host↔VM shared folder for moving your notes and lab files conveniently (VirtualBox Guest Additions required).</li>
+<li><strong>Snapshots before experiments:</strong> name them descriptively ("before-nmap-lab") so you can hop between states.</li>
+<li><strong>Terminal multiplexer:</strong> learn <code>tmux</code> basics — split panes for running a scan in one pane and reading results in another.</li>
+<li><strong>Note-taking:</strong> keep a lab journal (Obsidian, Joplin, or plain markdown) — professionals live in their notes.</li>
+</ul>
+<h2>When to Move Beyond the VM</h2>
+<p>As you advance, you may want a dedicated Kali laptop or a Raspberry Pi lab — but only after the VM workflow is second nature. The VM teaches the essential discipline: isolated, snapshotted, documented practice. Hardware changes nothing about the ethics: every target remains your own lab or an explicitly authorized system.</p>
+
+
+<h2>Alternative: Kali on Windows via WSL</h2>
+<p>If a full VM feels heavy, Windows users can run <strong>Kali under WSL2</strong> (Windows Subsystem for Linux) — lighter weight, with the Kali app available from the Microsoft Store as "Kali Linux". Install, then add the Win-KeX package for a graphical desktop if you want GUI tools. Trade-offs: WSL networking is NAT-ed behind Windows, which complicates some lab networking scenarios, and USB WiFi adapters (for wireless practice on your own network) do not pass through easily. For serious lab work the VM remains better; WSL is a fine lightweight start.</p>
+<h2>Essential Linux Commands for Security Work</h2>
+<p>Comfort with these pays off daily: <code>ls -la</code>, <code>cd</code>, <code>pwd</code>, <code>cat</code>/<code>less</code>, <code>grep -r</code>, <code>find</code>, <code>chmod</code>, <code>ps aux</code>, <code>netstat -tulpn</code> (or <code>ss -tulpn</code>), <code>ip a</code>, <code>ping</code>, <code>curl</code>, <code>wget</code>, <code>tar</code>, <code>ssh</code>, and <code>man &lt;command&gt;</code> for everything else. Practice them on your Kali VM until they are reflexes — every advanced guide assumes this fluency.</p>
+
+</main>
+<footer class="footer"><div class="container">
+<div class="footer-brand">🛡️ CyberSec <span class="green">Hub</span></div>
+<p>Learn cybersecurity the ethical, legal way.</p>
+<div class="footer-links">
+<a href="../index.html">Home</a><a href="../about.html">About</a><a href="../contact.html">Contact</a><a href="../privacy.html">Privacy Policy</a><a href="../disclaimer.html">Disclaimer</a><a href="../terms.html">Terms</a>
+</div>
+<p class="copyright">© 2026 CyberSec Hub by Anwaar Digital. All rights reserved. Educational content only — always test with written permission.</p>
+</div></footer></body></html>

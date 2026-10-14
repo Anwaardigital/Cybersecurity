@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T6WVGJVD4J"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-T6WVGJVD4J');</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Wireshark Basics: See Your Network Traffic (Your Own Network)</title>
+<meta name="description" content="Learn Wireshark — the world's top network analyzer — to inspect your own network traffic, diagnose issues, and understand protocols.">
+<link rel="stylesheet" href="../styles.css">
+<link rel="canonical" href="https://anwaardigital.github.io/Cybersecurity/tools/wireshark-basics.html">
+<meta property="og:title" content="Wireshark Basics: See Your Network Traffic (Your Own Network)">
+<meta property="og:description" content="Learn Wireshark — the world's top network analyzer — to inspect your own network traffic, diagnose issues, and understand protocols.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://anwaardigital.github.io/Cybersecurity/tools/wireshark-basics.html">
+<meta property="og:site_name" content="CyberSec Hub">
+</head>
+<body>
+<nav class="navbar"><div class="nav-inner">
+<a href="../index.html" class="brand"><span class="brand-icon">🛡️</span><span>CyberSec <span class="green">Hub</span></span></a>
+<button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+<ul class="nav-links" id="navLinks">
+<li><a href="../index.html">Home</a></li>
+<li><a href="../index.html#basics">Basics</a></li>
+<li><a href="../index.html#hacking">Ethical Hacking</a></li>
+<li><a href="../index.html#tools">Tools</a></li>
+<li><a href="../index.html#career">Career</a></li>
+<li><a href="../about.html">About</a></li>
+</ul></div></nav><div class="breadcrumb"><a href="../index.html">Home</a> / 🔧 Tools & Techniques / Wireshark Basics</div>
+<header class="article-hero"><span class="section-tag">🔧 Tools & Techniques</span><h1>Wireshark Basics: See Your Network Traffic (Your Own Network)</h1><div class="article-meta">By CyberSec Hub · 10 min read</div></header>
+<main class="article-body"><div class="ethical-box"><strong>⚠️ Ethical Use Only:</strong> Only test systems you own or have <strong>written permission</strong> to test. Unauthorized hacking is illegal in Pakistan and worldwide. Everything here is for defensive security education and authorized testing only.</div>
+<p><strong>Wireshark</strong> is the world's most widely used network protocol analyzer — free, open source, and standard equipment for network engineers and security professionals. It captures the packets flowing through <em>your own</em> network interface and displays them in readable form. This guide teaches legitimate uses: understanding your own traffic, diagnosing your own network issues, and learning how protocols work.</p>
+
+<h2>What Wireshark Shows You</h2>
+<p>Every email sent, every page loaded, every video streamed is broken into <strong>packets</strong> — small envelopes of data with source, destination, and contents. Wireshark captures these envelopes as they pass your own computer's network card and decodes them: "this packet is part of a web page load," "this one is a DNS lookup for example.com." Watching real traffic makes abstract networking concepts concrete.</p>
+
+<h2>Installing Wireshark</h2>
+<p>Download only from the official wireshark.org site. On Windows the installer includes Npcap (the capture driver) — accept it. On Linux: <code>sudo apt install wireshark</code> (add your user to the <code>wireshark</code> group to capture without root). On macOS, install via the official disk image. During setup you will be asked about capture permissions — grant them only for your own learning use.</p>
+
+<h2>Your First Capture (Your Own Traffic)</h2>
+<ol>
+<li>Open Wireshark. You will see a list of your computer's network interfaces.</li>
+<li>Double-click your active interface (WiFi or Ethernet) to start capturing <strong>your own computer's</strong> traffic.</li>
+<li>Open a website in your browser, then return to Wireshark and click the red square to stop.</li>
+<li>You now have a list of packets your own computer sent and received. Click any packet to see its decoded layers — Ethernet, IP, TCP/UDP, and the application data.</li>
+</ol>
+
+<h2>Filtering: Finding the Signal</h2>
+<p>Real captures contain thousands of packets. The display filter bar is your most important skill:</p>
+<ul>
+<li><code>dns</code> — show only DNS lookups (what names your computer resolved).</li>
+<li><code>http</code> — show HTTP traffic.</li>
+<li><code>ip.addr == 192.168.1.1</code> — traffic involving your own router.</li>
+<li><code>tcp.port == 443</code> — encrypted web traffic.</li>
+</ul>
+<p>Try this exercise on your own capture: filter <code>dns</code> and see every website your computer looked up while you browsed. Eye-opening — and entirely your own data.</p>
+
+<h2>Legitimate Things to Learn From Your Own Traffic</h2>
+<ul>
+<li><strong>Which apps "phone home":</strong> filter by your phone's or PC's traffic and see what background connections your own software makes — great for privacy awareness.</li>
+<li><strong>Diagnosing your own issues:</strong> slow connection? Capture while it happens and look for retransmissions and DNS delays.</li>
+<li><strong>Protocol learning:</strong> watch a TCP handshake (SYN, SYN-ACK, ACK) happen live — textbooks cannot compete.</li>
+<li><strong>Checking encryption:</strong> confirm your banking and email actually use TLS (look for the TLS handshake, not readable content).</li>
+</ul>
+
+<h2>What You Must NOT Do</h2>
+<ul>
+<li>Never capture traffic on networks you do not own or administer — intercepting others' communications is illegal in most countries, even "just looking."</li>
+<li>On shared or public networks, capture only with explicit written authorization (e.g., your employer's network as part of your job, with approval).</li>
+<li>Encrypted traffic (HTTPS) is unreadable by design — tools claiming to "decrypt others' traffic" are either scams or attack tools. Do not go there.</li>
+</ul>
+
+<div class="tip-box"><strong>💡 Pair with Nmap:</strong> use our <a href="../hacking/nmap-guide.html">Nmap guide</a> to map your own network's devices, then Wireshark to watch what those devices actually say. Together they teach you more about networking than any course.</div>
+
+<h2>Following a TCP Stream (Your Own Traffic)</h2>
+<p>Right-click any TCP packet from your own browsing session and choose <strong>Follow → TCP Stream</strong>. Wireshark reconstructs the entire conversation — you will see your browser's request and the server's response as readable text (for unencrypted HTTP on your own lab server). This is the single best way to understand what "a web request" actually is. Try it against your own lab web server running plain HTTP, then compare with an HTTPS site where you will see only encrypted gibberish — a visceral lesson in why encryption matters.</p>
+<h2>Statistics: Seeing Patterns</h2>
+<p>Wireshark's <strong>Statistics</strong> menu reveals patterns invisible in packet lists: <em>Protocol Hierarchy</em> shows what share of your traffic is DNS, TCP, UDP; <em>Conversations</em> lists who talked to whom and how much; <em>IO Graphs</em> plot traffic over time — spikes correlate with that video call or download. On your own network, these views answer "what is my network actually doing?" faster than any dashboard.</p>
+<h2>Capture Filters vs. Display Filters</h2>
+<p>Beginners should know the difference: <strong>capture filters</strong> (set before capturing, e.g., <code>port 80</code>) decide what gets recorded — unrecorded traffic is gone forever. <strong>Display filters</strong> (the main bar) only hide/show from an already-complete capture. Rule of thumb: capture broadly on your own interface, filter narrowly afterward. Disk is cheap; missed packets are not recoverable.</p>
+
+
+<h2>Useful Display Filters Cookbook (Your Traffic)</h2>
+<ul>
+<li><code>dns.qry.name contains google</code> — DNS lookups involving google.</li>
+<li><code>http.request.method == "POST"</code> — form submissions from your own browsing.</li>
+<li><code>tcp.analysis.retransmission</code> — retransmitted packets, a sign of network trouble on your own connection.</li>
+<li><code>dhcp</code> — watch your own device get its IP address when joining WiFi.</li>
+<li><code>arp</code> — address resolution chatter on your own LAN.</li>
+</ul>
+<p>Save filters you reuse (right-click the filter bar → save). A personal cookbook of filters is a working analyst's treasure.</p>
+<h2>Exporting Evidence From Your Own Captures</h2>
+<p>File → Export Objects → HTTP lets you save files transferred in your own capture — handy for analyzing what your own lab server sent. <strong>Statistics → Protocol Hierarchy</strong> exports nicely into reports. And remember: capture files can contain sensitive data (even your own), so store them securely and delete when done. Professionals treat pcaps like evidence — because they are.</p>
+
+</main>
+<footer class="footer"><div class="container">
+<div class="footer-brand">🛡️ CyberSec <span class="green">Hub</span></div>
+<p>Learn cybersecurity the ethical, legal way.</p>
+<div class="footer-links">
+<a href="../index.html">Home</a><a href="../about.html">About</a><a href="../contact.html">Contact</a><a href="../privacy.html">Privacy Policy</a><a href="../disclaimer.html">Disclaimer</a><a href="../terms.html">Terms</a>
+</div>
+<p class="copyright">© 2026 CyberSec Hub by Anwaar Digital. All rights reserved. Educational content only — always test with written permission.</p>
+</div></footer></body></html>

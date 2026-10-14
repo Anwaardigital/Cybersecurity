@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T6WVGJVD4J"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-T6WVGJVD4J');</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Burp Suite Basics: Test Your Own Web Apps Safely</title>
+<meta name="description" content="Introduction to Burp Suite — the professional web security toolkit — for testing your own applications and labs, ethically and legally.">
+<link rel="stylesheet" href="../styles.css">
+<link rel="canonical" href="https://anwaardigital.github.io/Cybersecurity/hacking/burp-suite-basics.html">
+<meta property="og:title" content="Burp Suite Basics: Test Your Own Web Apps Safely">
+<meta property="og:description" content="Introduction to Burp Suite — the professional web security toolkit — for testing your own applications and labs, ethically and legally.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://anwaardigital.github.io/Cybersecurity/hacking/burp-suite-basics.html">
+<meta property="og:site_name" content="CyberSec Hub">
+</head>
+<body>
+<nav class="navbar"><div class="nav-inner">
+<a href="../index.html" class="brand"><span class="brand-icon">🛡️</span><span>CyberSec <span class="green">Hub</span></span></a>
+<button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+<ul class="nav-links" id="navLinks">
+<li><a href="../index.html">Home</a></li>
+<li><a href="../index.html#basics">Basics</a></li>
+<li><a href="../index.html#hacking">Ethical Hacking</a></li>
+<li><a href="../index.html#tools">Tools</a></li>
+<li><a href="../index.html#career">Career</a></li>
+<li><a href="../about.html">About</a></li>
+</ul></div></nav><div class="breadcrumb"><a href="../index.html">Home</a> / 🎯 Ethical Hacking / Burp Suite Basics</div>
+<header class="article-hero"><span class="section-tag">🎯 Ethical Hacking</span><h1>Burp Suite Basics: Test Your Own Web Apps Safely</h1><div class="article-meta">By CyberSec Hub · 10 min read</div></header>
+<main class="article-body"><div class="ethical-box"><strong>⚠️ Ethical Use Only:</strong> Only test systems you own or have <strong>written permission</strong> to test. Unauthorized hacking is illegal in Pakistan and worldwide. Everything here is for defensive security education and authorized testing only.</div>
+<p><strong>Burp Suite</strong> is the industry-standard toolkit for web application security testing, used by professional penetration testers worldwide. It works as an intercepting proxy: it sits between your browser and the web server, letting you inspect and modify every request. This guide introduces it for the only legitimate uses — your own applications, your own lab, and authorized training targets.</p>
+
+<h2>What Burp Suite Does</h2>
+<p>When you browse normally, requests flow straight from browser to server. With Burp running, traffic flows browser → Burp → server, and Burp shows you everything: headers, cookies, parameters, and responses. This visibility is how professionals find flaws like missing protections, exposed data, and weak session handling — in systems they are authorized to test.</p>
+
+<h2>Getting Started (Community Edition)</h2>
+<p>PortSwigger offers a free <strong>Community Edition</strong> — plenty for learning. Download it only from the official portswigger.net site. After installing:</p>
+<ol>
+<li>Launch Burp and create a temporary project.</li>
+<li>Burp starts its proxy listener on <code>127.0.0.1:8080</code> by default.</li>
+<li>Configure your browser to use that proxy (Burp's built-in Chromium browser option is the easiest — no manual setup).</li>
+<li>Install Burp's CA certificate in the browser so HTTPS traffic can be inspected (Burp guides you through this).</li>
+</ol>
+
+<h2>Your First Exercise: Inspect Your Own Lab Traffic</h2>
+<p>Set up a legal practice target first — <strong>OWASP Juice Shop</strong> or <strong>DVWA</strong> running on your own computer are the standard choices (both are intentionally vulnerable apps built for training). Then:</p>
+<ol>
+<li>Browse your lab app through Burp's browser.</li>
+<li>Open the <strong>Proxy → HTTP history</strong> tab — every request and response is logged.</li>
+<li>Click a request to see its raw headers, parameters, and cookies.</li>
+<li>Try the <strong>Intercept</strong> feature: turn intercept on, submit a form in your lab app, and Burp pauses the request so you can edit it before forwarding — then observe how your own app responds.</li>
+</ol>
+<p>This single skill — seeing and editing your own traffic — is the foundation of web security testing.</p>
+
+<h2>Key Tools Inside Burp</h2>
+<ul>
+<li><strong>Proxy:</strong> the intercepting core described above.</li>
+<li><strong>Repeater:</strong> manually resend and tweak individual requests to your own app to understand its behavior.</li>
+<li><strong>Intruder (limited in Community):</strong> automates sending many request variations — useful in authorized tests for checking things like rate limiting on your own login forms.</li>
+<li><strong>Decoder & Comparer:</strong> utilities for decoding data formats and comparing responses.</li>
+</ul>
+
+<h2>Learning Path With Burp</h2>
+<ol>
+<li>Master the proxy and HTTP history on your lab apps.</li>
+<li>Work through PortSwigger's free <strong>Web Security Academy</strong> — excellent labs, all authorized by design.</li>
+<li>Study the <strong>OWASP Top 10</strong> (see our <a href="../basics/types-of-cyber-attacks.html">cyber attacks guide</a>) and reproduce each category in your lab.</li>
+<li>Practice writing clear findings — what you found, where, why it matters, how to fix it.</li>
+</ol>
+
+<h2>Strict Boundaries</h2>
+<p>Burp is a dual-use tool: everything above is legitimate on your own systems and authorized targets — and illegal anywhere else. Never point it at websites, APIs, or networks without explicit written permission. Employers, bug bounty programs with clear scope, and your own lab are the only valid targets.</p>
+
+<div class="tip-box"><strong>💡 Defensive takeaway:</strong> everything Burp reveals about your lab app, attackers can see in real apps too. Use these lessons to build better defenses: validate all input, use secure cookies, enforce HTTPS, and keep software updated.</div>
+
+<h2>Understanding Requests Deeply (Your Lab)</h2>
+<p>Open Burp's HTTP history after browsing your lab app and study one login request end to end: the method (GET vs POST), the headers (what is a <code>Cookie</code>? a <code>User-Agent</code>?), the body parameters, and the server's response codes (200 OK, 302 redirect, 403 forbidden). Now change one parameter in Repeater and resend — observe how your own app reacts. This slow, curious inspection builds the mental model every web tester needs: the web is just structured text conversations, and security flaws are conversations the developer did not anticipate.</p>
+<h2>Session Handling: A Defensive Lesson</h2>
+<p>In your lab, log in and watch the <code>Set-Cookie</code> response. Good apps mark cookies <code>HttpOnly</code> (invisible to scripts), <code>Secure</code> (HTTPS only), and <code>SameSite</code> (limits cross-site sending). If your practice app lacks these flags, you have found a genuine (lab-safe) finding — and learned exactly what to check in real code reviews. Defense insight: these three flags cost nothing to set and block entire attack classes.</p>
+<h2>From Lab to Profession</h2>
+<p>Burp skill compounds: proxy fluency → Repeater intuition → understanding authentication flows → spotting logic flaws. Pair each technical step with report writing — describe each lab finding as if billing a client: what, where, impact, fix. After a year of consistent lab work plus the Web Security Academy, you will think about web apps the way professionals do. Our <a href="../career/how-to-become-pentester.html">career guide</a> shows where this skill fits in the bigger journey.</p>
+
+</main>
+<footer class="footer"><div class="container">
+<div class="footer-brand">🛡️ CyberSec <span class="green">Hub</span></div>
+<p>Learn cybersecurity the ethical, legal way.</p>
+<div class="footer-links">
+<a href="../index.html">Home</a><a href="../about.html">About</a><a href="../contact.html">Contact</a><a href="../privacy.html">Privacy Policy</a><a href="../disclaimer.html">Disclaimer</a><a href="../terms.html">Terms</a>
+</div>
+<p class="copyright">© 2026 CyberSec Hub by Anwaar Digital. All rights reserved. Educational content only — always test with written permission.</p>
+</div></footer></body></html>
