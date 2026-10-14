@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T6WVGJVD4J"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-T6WVGJVD4J');</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Penetration Testing Methodology: The Professional Workflow</title>
+<meta name="description" content="Learn the standard penetration testing methodology — PTES phases from scoping to reporting — used by professional ethical hackers.">
+<link rel="stylesheet" href="../styles.css">
+<link rel="canonical" href="https://anwaardigital.github.io/Cybersecurity/hacking/penetration-testing-methodology.html">
+<meta property="og:title" content="Penetration Testing Methodology: The Professional Workflow">
+<meta property="og:description" content="Learn the standard penetration testing methodology — PTES phases from scoping to reporting — used by professional ethical hackers.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://anwaardigital.github.io/Cybersecurity/hacking/penetration-testing-methodology.html">
+<meta property="og:site_name" content="CyberSec Hub">
+</head>
+<body>
+<nav class="navbar"><div class="nav-inner">
+<a href="../index.html" class="brand"><span class="brand-icon">🛡️</span><span>CyberSec <span class="green">Hub</span></span></a>
+<button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+<ul class="nav-links" id="navLinks">
+<li><a href="../index.html">Home</a></li>
+<li><a href="../index.html#basics">Basics</a></li>
+<li><a href="../index.html#hacking">Ethical Hacking</a></li>
+<li><a href="../index.html#tools">Tools</a></li>
+<li><a href="../index.html#career">Career</a></li>
+<li><a href="../about.html">About</a></li>
+</ul></div></nav><div class="breadcrumb"><a href="../index.html">Home</a> / 🎯 Ethical Hacking / Penetration Testing Methodology</div>
+<header class="article-hero"><span class="section-tag">🎯 Ethical Hacking</span><h1>Penetration Testing Methodology: The Professional Workflow</h1><div class="article-meta">By CyberSec Hub · 10 min read</div></header>
+<main class="article-body"><div class="ethical-box"><strong>⚠️ Ethical Use Only:</strong> Only test systems you own or have <strong>written permission</strong> to test. Unauthorized hacking is illegal in Pakistan and worldwide. Everything here is for defensive security education and authorized testing only.</div>
+<p>Professional penetration testing is not improvised — it follows proven methodologies. The best-known framework is the <strong>Penetration Testing Execution Standard (PTES)</strong>, which divides an engagement into seven phases. Understanding this workflow separates professionals from amateurs.</p>
+
+<h2>Phase 1: Pre-Engagement & Scoping</h2>
+<p>Before anything technical happens, everything is agreed in writing:</p>
+<ul>
+<li><strong>Scope:</strong> exactly which systems, IPs, URLs, and time windows are in bounds.</li>
+<li><strong>Rules of engagement:</strong> what techniques are allowed (is social engineering permitted? denial-of-service?) and emergency contacts.</li>
+<li><strong>Legal authorization:</strong> a signed contract. This single document is what separates a professional test from a crime.</li>
+</ul>
+
+<h2>Phase 2: Intelligence Gathering (Reconnaissance)</h2>
+<p>Collecting information about the target organization — using only public sources and the agreed methods. This includes the organization's own websites, public records, DNS information, and job postings (which often reveal technologies in use). Passive reconnaissance never touches the target's systems directly.</p>
+
+<h2>Phase 3: Threat Modeling</h2>
+<p>Analyzing the gathered intelligence to identify the most valuable targets and likely attack paths — the crown jewels (customer databases, payment systems) and how an attacker would plausibly reach them. This focuses the test where it matters most.</p>
+
+<h2>Phase 4: Vulnerability Analysis</h2>
+<p>Systematically identifying weaknesses in the agreed scope: scanning the organization's own systems for open ports and services, checking software versions against known vulnerability databases, and reviewing configurations. The output is a prioritized list of <em>potential</em> issues to verify.</p>
+
+<h2>Phase 5: Exploitation (Controlled Proof)</h2>
+<p>Carefully demonstrating that a vulnerability is real — for example, showing that a test account can access data it should not — while staying strictly within scope and stopping before any harm. The goal is <strong>proof, not damage</strong>: screenshots and logs that prove impact, then immediate halt. Anything risking real damage is documented as a finding instead of exploited.</p>
+
+<h2>Phase 6: Post-Exploitation</h2>
+<p>Determining what an attacker <em>could</em> do after an initial foothold — within the agreed limits. In professional practice this is tightly controlled and often simulated or table-topped rather than fully executed, since the point (the vulnerability is real and serious) is already proven.</p>
+
+<h2>Phase 7: Reporting — The Real Deliverable</h2>
+<p>A penetration test's value lives in its report. A professional report includes:</p>
+<ul>
+<li><strong>Executive summary</strong> — risk in business language for leadership.</li>
+<li><strong>Findings</strong> — each with severity rating, evidence, affected systems, and business impact.</li>
+<li><strong>Remediation guidance</strong> — specific, actionable fix instructions prioritized by risk.</li>
+<li><strong>Positive findings</strong> — defenses that worked well (important for morale and budgets).</li>
+</ul>
+
+<h2>Other Frameworks Worth Knowing</h2>
+<ul>
+<li><strong>OWASP Testing Guide</strong> — the standard for web application testing.</li>
+<li><strong>NIST SP 800-115</strong> — the US government's technical guide to security testing.</li>
+<li><strong>OSSTMM</strong> — a scientific methodology for operational security metrics.</li>
+</ul>
+
+<h2>Practicing Legally</h2>
+<p>You can learn every phase hands-on without ever touching a real target: build your own lab with virtual machines, use intentionally vulnerable training applications (like OWASP Juice Shop or DVWA) on your own computer, and join authorized platforms like HackTheBox, TryHackMe, or bug bounty programs that explicitly invite testing. See our <a href="../tools/kali-linux-setup.html">Kali Linux setup guide</a> to build your lab.</p>
+
+<h2>Methodology in Practice: A Walkthrough Mindset</h2>
+<p>Imagine you are authorized to test a small company's website. Methodology keeps you disciplined: in recon you map what exists (subdomains, technologies) without touching anything sensitive; in scanning you enumerate the agreed targets systematically rather than poking randomly; in exploitation you prove <em>one</em> clear issue with minimal impact and stop; in reporting you explain it so a non-technical owner understands the risk and the fix. Amateurs chase excitement; professionals produce evidence and remediation. That discipline is what clients pay for.</p>
+<h2>Common Beginner Mistakes</h2>
+<ul>
+<li><strong>Skipping scoping:</strong> testing anything "interesting" outside the agreement — the fastest way to turn legal work into a crime.</li>
+<li><strong>No notes:</strong> failing to document steps, then being unable to reproduce or evidence findings.</li>
+<li><strong>Tool-first thinking:</strong> running scanners without understanding what they do or what the output means.</li>
+<li><strong>Weak reports:</strong> technical dumps with no severity ratings or fix guidance — useless to the client.</li>
+<li><strong>Scope creep excitement:</strong> finding something cool out-of-scope and "just taking a peek." Never.</li>
+</ul>
+<h2>Checklists Professionals Use</h2>
+<p>Before engagement: signed authorization? Emergency contacts? Backup/rollback plan? Test window confirmed? During: notes timestamped? Screenshots captured? Staying in scope? After: report reviewed? Findings prioritized? Retest scheduled? Methodology is, at its core, checklists plus judgment — boring, repeatable, and effective.</p>
+
+
+<h2>Adapting Methodology to Scope</h2>
+<p>Not every engagement needs all seven PTES phases at full depth. A small business website test might compress recon and threat modeling into a day; a bank's annual assessment runs every phase rigorously for weeks. The methodology is a <strong>framework, not a cage</strong> — professionals scale effort to risk, always keeping the core disciplines: written scope, systematic coverage, evidenced findings, and clear reporting. What never gets skipped: authorization, documentation, and the report.</p>
+<h2>Tools Mapped to Phases (Your Lab)</h2>
+<ul>
+<li><strong>Recon:</strong> search engines, DNS tools, and your own notes — all passive against public sources.</li>
+<li><strong>Scanning:</strong> Nmap on your own lab network (see our <a href="nmap-guide.html">Nmap guide</a>).</li>
+<li><strong>Vulnerability analysis:</strong> version research against public databases for your lab VMs.</li>
+<li><strong>Exploitation:</strong> Metasploit <em>check</em> and controlled modules against your own vulnerable VMs (see our <a href="../tools/metasploit-basics-ethical.html">Metasploit guide</a>).</li>
+<li><strong>Reporting:</strong> your lab journal, formatted as a professional finding.</li>
+</ul>
+<p>Practicing each phase with its proper tool, in your own environment, builds the muscle memory professionals rely on.</p>
+
+</main>
+<footer class="footer"><div class="container">
+<div class="footer-brand">🛡️ CyberSec <span class="green">Hub</span></div>
+<p>Learn cybersecurity the ethical, legal way.</p>
+<div class="footer-links">
+<a href="../index.html">Home</a><a href="../about.html">About</a><a href="../contact.html">Contact</a><a href="../privacy.html">Privacy Policy</a><a href="../disclaimer.html">Disclaimer</a><a href="../terms.html">Terms</a>
+</div>
+<p class="copyright">© 2026 CyberSec Hub by Anwaar Digital. All rights reserved. Educational content only — always test with written permission.</p>
+</div></footer></body></html>

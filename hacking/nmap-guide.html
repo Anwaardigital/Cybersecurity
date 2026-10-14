@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T6WVGJVD4J"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-T6WVGJVD4J');</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Nmap Beginner's Guide: Scan Your Own Network Safely</title>
+<meta name="description" content="Learn Nmap the safe way — what it is, how to scan your own home network, understand open ports, and improve your defenses.">
+<link rel="stylesheet" href="../styles.css">
+<link rel="canonical" href="https://anwaardigital.github.io/Cybersecurity/hacking/nmap-guide.html">
+<meta property="og:title" content="Nmap Beginner's Guide: Scan Your Own Network Safely">
+<meta property="og:description" content="Learn Nmap the safe way — what it is, how to scan your own home network, understand open ports, and improve your defenses.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://anwaardigital.github.io/Cybersecurity/hacking/nmap-guide.html">
+<meta property="og:site_name" content="CyberSec Hub">
+</head>
+<body>
+<nav class="navbar"><div class="nav-inner">
+<a href="../index.html" class="brand"><span class="brand-icon">🛡️</span><span>CyberSec <span class="green">Hub</span></span></a>
+<button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+<ul class="nav-links" id="navLinks">
+<li><a href="../index.html">Home</a></li>
+<li><a href="../index.html#basics">Basics</a></li>
+<li><a href="../index.html#hacking">Ethical Hacking</a></li>
+<li><a href="../index.html#tools">Tools</a></li>
+<li><a href="../index.html#career">Career</a></li>
+<li><a href="../about.html">About</a></li>
+</ul></div></nav><div class="breadcrumb"><a href="../index.html">Home</a> / 🎯 Ethical Hacking / Nmap Beginner's Guide</div>
+<header class="article-hero"><span class="section-tag">🎯 Ethical Hacking</span><h1>Nmap Beginner's Guide: Scan Your Own Network Safely</h1><div class="article-meta">By CyberSec Hub · 11 min read</div></header>
+<main class="article-body"><div class="ethical-box"><strong>⚠️ Ethical Use Only:</strong> Only test systems you own or have <strong>written permission</strong> to test. Unauthorized hacking is illegal in Pakistan and worldwide. Everything here is for defensive security education and authorized testing only.</div>
+<p><strong>Nmap</strong> (Network Mapper) is the most famous network scanning tool in cybersecurity — free, open source, and used by professionals worldwide. Its legitimate purpose is simple: it tells you <strong>what is on your own network</strong>. Which devices are connected? Which ports are open? What software is running? Knowing this about your own home or office network is the first step to securing it.</p>
+
+<h2>Why Scan Your Own Network?</h2>
+<p>Most people have no idea what is actually on their WiFi — phones, laptops, smart TVs, maybe an old camera with a default password, possibly even a neighbor leeching the connection. Scanning your own network answers critical defensive questions: are there unknown devices? Is my router exposing management ports? Penetration testers use Nmap in every engagement's scanning phase; learning it on your own network teaches you exactly what an attacker would see — so you can close the gaps first.</p>
+
+<h2>Installing Nmap</h2>
+<p>Nmap runs on Windows, macOS, and Linux. On Windows, download the installer from the official nmap.org site (the graphical version is called Zenmap). On Linux: <code>sudo apt install nmap</code> on Ubuntu/Debian. On macOS: <code>brew install nmap</code>. Always download from the official site to avoid fake versions bundled with malware.</p>
+
+<h2>Your First Safe Scan: Your Own Computer</h2>
+<p>The safest possible target is your own machine, using the address <code>127.0.0.1</code> ("localhost" — always means "this computer"):</p>
+<pre><code>nmap 127.0.0.1</code></pre>
+<p>Nmap checks the 1,000 most common ports and reports each as <strong>open</strong> (a program is listening), <strong>closed</strong> (reachable, nothing listening), or <strong>filtered</strong> (a firewall blocked the probe). This scan harms nothing — it is the equivalent of checking which doors of your own house are unlocked.</p>
+
+<h2>Understanding Ports and Services</h2>
+<p>A <strong>port</strong> is a numbered doorway (0–65535) for network programs. Common ones: 80 and 443 (web), 22 (SSH), 21 (FTP), 3389 (Windows Remote Desktop). When Nmap reports "80/tcp open http," a web server is running there. Each open port is a potential entry point — the defensive goal is simple: <strong>every open port should be intentional and necessary</strong>.</p>
+
+<h2>Scanning Your Home Network (Your WiFi Only)</h2>
+<p>Find your network range first: on Windows run <code>ipconfig</code>; on Linux/macOS run <code>ip addr</code> — look for your IPv4 address, e.g. 192.168.1.5, making your network probably 192.168.1.0/24. A safe discovery scan:</p>
+<pre><code>nmap -sn 192.168.1.0/24</code></pre>
+<p>The <code>-sn</code> flag means "ping scan only — don't scan ports." It lists which devices are online. Compare against devices you recognize. An unknown device might be a forgotten gadget — or a neighbor on your WiFi, in which case change your WiFi password immediately.</p>
+
+<h2>Reading Results Like a Defender</h2>
+<p>When you scan one of your own devices more deeply — e.g. <code>nmap -sV 192.168.1.1</code> against your own router (<code>-sV</code> detects software versions) — ask defensive questions about every open port: Do I know what this service is? Did I enable it? Can I disable it? Is it updated? If your router shows Telnet (port 23) open with old firmware, log in, update the firmware, disable remote management, and change the default admin password.</p>
+
+<h2>Useful Beginner Options</h2>
+<ul>
+<li><code>nmap -sV &lt;target&gt;</code> — detect service versions on your own host.</li>
+<li><code>nmap -O &lt;target&gt;</code> — guess the operating system of your own device.</li>
+<li><code>nmap -A &lt;target&gt;</code> — aggressive scan combining several techniques (use only on your own systems).</li>
+<li><code>nmap --top-ports 100 &lt;target&gt;</code> — scan just the 100 most common ports for a quick check.</li>
+</ul>
+
+<h2>What NOT To Do</h2>
+<p>Never scan networks, websites, or IP addresses you do not own or lack written permission to test. Unauthorized scanning is illegal in many jurisdictions and can be interpreted as the start of an attack. Keep every scan on your own equipment and your own lab.</p>
+
+<div class="tip-box"><strong>💡 Next step:</strong> pair Nmap with our <a href="../tools/wireshark-basics.html">Wireshark basics guide</a> to see your network traffic visually, and our <a href="../basics/mobile-security.html">mobile security guide</a> to lock down the devices you discovered.</div>
+
+<h2>Service Detection Deep Dive (Your Lab)</h2>
+<p>The <code>-sV</code> flag does more than name services — it probes them and reports versions, like "Apache httpd 2.4.49." In your lab, compare the versions on your own VMs against public vulnerability databases to understand <em>why</em> patching matters: an old version number maps directly to known, documented flaws. This is the defensive lesson — attackers do exactly this mapping, so your job is to ensure there is nothing outdated left to map. Try it: spin up an old Linux VM in your isolated lab, scan it with <code>nmap -sV</code>, and research what you find. Then patch the VM and rescan — watch the findings disappear.</p>
+<h2>Output Formats for Your Notes</h2>
+<p>Professionals save scan results for reports. Useful options on your own systems:</p>
+<ul>
+<li><code>-oN scan.txt</code> — normal human-readable output to a file.</li>
+<li><code>-oX scan.xml</code> — XML output for tooling and records.</li>
+<li><code>-oA myscan</code> — all three major formats at once.</li>
+</ul>
+<p>Keeping dated scan records of your own network lets you spot changes over time — a new open port that was not there last month deserves investigation.</p>
+<h2>Nmap Scripting Engine (Safe Introduction)</h2>
+<p>Nmap ships with <strong>NSE scripts</strong> that automate checks — many are purely informational and safe on your own systems, like <code>--script=banner</code> or <code>--script=http-titles</code> against your own lab web server. Rule: use only clearly non-intrusive scripts, only on your own equipment, and read what a script does (<code>--script-help</code>) before running it. When in doubt, do not run it.</p>
+
+</main>
+<footer class="footer"><div class="container">
+<div class="footer-brand">🛡️ CyberSec <span class="green">Hub</span></div>
+<p>Learn cybersecurity the ethical, legal way.</p>
+<div class="footer-links">
+<a href="../index.html">Home</a><a href="../about.html">About</a><a href="../contact.html">Contact</a><a href="../privacy.html">Privacy Policy</a><a href="../disclaimer.html">Disclaimer</a><a href="../terms.html">Terms</a>
+</div>
+<p class="copyright">© 2026 CyberSec Hub by Anwaar Digital. All rights reserved. Educational content only — always test with written permission.</p>
+</div></footer></body></html>
