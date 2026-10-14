@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T6WVGJVD4J"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-T6WVGJVD4J');</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Hash Generator — MD5, SHA-1, SHA-256 Online</title>
+<meta name="description" content="Free online hash generator: create MD5, SHA-1 and SHA-256 hashes of any text instantly in your browser.">
+<link rel="stylesheet" href="../styles.css">
+<link rel="canonical" href="https://anwaardigital.github.io/Cybersecurity/sectools/hash-generator.html">
+<meta property="og:title" content="Hash Generator — MD5, SHA-1, SHA-256 Online">
+<meta property="og:description" content="Free online hash generator: create MD5, SHA-1 and SHA-256 hashes of any text instantly in your browser.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://anwaardigital.github.io/Cybersecurity/sectools/hash-generator.html">
+<meta property="og:site_name" content="CyberSec Hub">
+</head>
+<body>
+<nav class="navbar"><div class="nav-inner">
+<a href="../index.html" class="brand"><span class="brand-icon">🛡️</span><span>CyberSec <span class="green">Hub</span></span></a>
+<button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+<ul class="nav-links" id="navLinks">
+<li><a href="../index.html">Home</a></li>
+<li><a href="../index.html#basics">Basics</a></li>
+<li><a href="../index.html#hacking">Ethical Hacking</a></li>
+<li><a href="../index.html#tools">Tools</a></li>
+<li><a href="../index.html#career">Career</a></li>
+<li><a href="../about.html">About</a></li>
+</ul></div></nav><main class="tool-wrap"><h1>🔑 Hash Generator</h1>
+<p class="tool-sub">Generate MD5, SHA-1 and SHA-256 hashes of any text. Runs fully in your browser.</p>
+<div class="ethical-box"><strong>⚠️ Ethical Use Only:</strong> These tools are for <strong>defensive</strong> purposes — securing your own accounts and systems. Never use security knowledge against systems you do not own or lack written permission to test.</div>
+<div class="tool-card">
+<div class="tool-field"><label for="htext">Text to hash</label>
+<textarea id="htext" placeholder="Type or paste text here..." oninput="genHashes()"></textarea></div>
+<div class="tool-result"><span class="res-label">MD5 (128-bit)</span><span id="md5">—</span><br><button class="copy-btn" onclick="copyRes('md5')">Copy</button></div>
+<div class="tool-result"><span class="res-label">SHA-1 (160-bit)</span><span id="sha1">—</span><br><button class="copy-btn" onclick="copyRes('sha1')">Copy</button></div>
+<div class="tool-result"><span class="res-label">SHA-256 (256-bit)</span><span id="sha256">—</span><br><button class="copy-btn" onclick="copyRes('sha256')">Copy</button></div>
+</div>
+<div class="tip-box" style="margin-top:22px"><strong>💡 What are hashes?</strong> A hash is a one-way fingerprint of data. MD5 and SHA-1 are <strong>broken</strong> — never use them for passwords. SHA-256 is still secure for integrity checks. For password storage, professionals use bcrypt or Argon2.</div>
+</main>
+<script>
+function md5(s){function R(n,c){return(n<<c)|(n>>>(32-c))}function F(x,y,z){return(x&y)|(~x&z)}function G(x,y,z){return(x&z)|(y&~z)}function H(x,y,z){return x^y^z}function I(x,y,z){return y^(x|~z)}function FF(a,b,c,d,x,s,ac){a=(a+F(b,c,d)+x+ac)|0;return(R(a,s)+b)|0}function GG(a,b,c,d,x,s,ac){a=(a+G(b,c,d)+x+ac)|0;return(R(a,s)+b)|0}function HH(a,b,c,d,x,s,ac){a=(a+H(b,c,d)+x+ac)|0;return(R(a,s)+b)|0}function II(a,b,c,d,x,s,ac){a=(a+I(b,c,d)+x+ac)|0;return(R(a,s)+b)|0}
+var msg=unescape(encodeURIComponent(s)),ml=msg.length,bl=ml*8;msg+="\x80";while(msg.length%64!==56)msg+="\x00";
+var words=[];for(var i=0;i<msg.length;i++)words[i>>2]|=msg.charCodeAt(i)<<(8*(i%4));
+words[words.length]=(bl&0xffffffff);words[words.length]=(bl/0x100000000)|0;
+var a0=0x67452301,b0=0xefcdab89,c0=0x98badcfe,d0=0x10325476;
+for(var j=0;j<words.length;j+=16){var A=a0,B=b0,C=c0,D=d0;
+A=FF(A,B,C,D,words[j+0],7,0xd76aa478);D=FF(D,A,B,C,words[j+1],12,0xe8c7b756);C=FF(C,D,A,B,words[j+2],17,0x242070db);B=FF(B,C,D,A,words[j+3],22,0xc1bdceee);
+A=FF(A,B,C,D,words[j+4],7,0xf57c0faf);D=FF(D,A,B,C,words[j+5],12,0x4787c62a);C=FF(C,D,A,B,words[j+6],17,0xa8304613);B=FF(B,C,D,A,words[j+7],22,0xfd469501);
+A=FF(A,B,C,D,words[j+8],7,0x698098d8);D=FF(D,A,B,C,words[j+9],12,0x8b44f7af);C=FF(C,D,A,B,words[j+10],17,0xffff5bb1);B=FF(B,C,D,A,words[j+11],22,0x895cd7be);
+A=FF(A,B,C,D,words[j+12],7,0x6b901122);D=FF(D,A,B,C,words[j+13],12,0xfd987193);C=FF(C,D,A,B,words[j+14],17,0xa679438e);B=FF(B,C,D,A,words[j+15],22,0x49b40821);
+A=GG(A,B,C,D,words[j+1],5,0xf61e2562);D=GG(D,A,B,C,words[j+6],9,0xc040b340);C=GG(C,D,A,B,words[j+11],14,0x265e5a51);B=GG(B,C,D,A,words[j+0],20,0xe9b6c7aa);
+A=GG(A,B,C,D,words[j+5],5,0xd62f105d);D=GG(D,A,B,C,words[j+10],9,0x2441453);C=GG(C,D,A,B,words[j+15],14,0xd8a1e681);B=GG(B,C,D,A,words[j+4],20,0xe7d3fbc8);
+A=GG(A,B,C,D,words[j+9],5,0x21e1cde6);D=GG(D,A,B,C,words[j+14],9,0xc33707d6);C=GG(C,D,A,B,words[j+3],14,0xf4d50d87);B=GG(B,C,D,A,words[j+8],20,0x455a14ed);
+A=GG(A,B,C,D,words[j+13],5,0xa9e3e905);D=GG(D,A,B,C,words[j+2],9,0xfcefa3f8);C=GG(C,D,A,B,words[j+7],14,0x676f02d9);B=GG(B,C,D,A,words[j+12],20,0x8d2a4c8a);
+A=HH(A,B,C,D,words[j+5],4,0xfffa3942);D=HH(D,A,B,C,words[j+8],11,0x8771f681);C=HH(C,D,A,B,words[j+11],16,0x6d9d6122);B=HH(B,C,D,A,words[j+14],23,0xfde5380c);
+A=HH(A,B,C,D,words[j+1],4,0xa4beea44);D=HH(D,A,B,C,words[j+4],11,0x4bdecfa9);C=HH(C,D,A,B,words[j+7],16,0xf6bb4b60);B=HH(B,C,D,A,words[j+10],23,0xbebfbc70);
+A=HH(A,B,C,D,words[j+13],4,0x289b7ec6);D=HH(D,A,B,C,words[j+0],11,0xeaa127fa);C=HH(C,D,A,B,words[j+3],16,0xd4ef3085);B=HH(B,C,D,A,words[j+6],23,0x4881d05);
+A=HH(A,B,C,D,words[j+9],4,0xd9d4d039);D=HH(D,A,B,C,words[j+12],11,0xe6db99e5);C=HH(C,D,A,B,words[j+15],16,0x1fa27cf8);B=HH(B,C,D,A,words[j+2],23,0xc4ac5665);
+A=II(A,B,C,D,words[j+0],6,0xf4292244);D=II(D,A,B,C,words[j+7],10,0x432aff97);C=II(C,D,A,B,words[j+14],15,0xab9423a7);B=II(B,C,D,A,words[j+5],21,0xfc93a039);
+A=II(A,B,C,D,words[j+12],6,0x655b59c3);D=II(D,A,B,C,words[j+3],10,0x8f0ccc92);C=II(C,D,A,B,words[j+10],15,0xffeff47d);B=II(B,C,D,A,words[j+1],21,0x85845dd1);
+A=II(A,B,C,D,words[j+8],6,0x6fa87e4f);D=II(D,A,B,C,words[j+15],10,0xfe2ce6e0);C=II(C,D,A,B,words[j+6],15,0xa3014314);B=II(B,C,D,A,words[j+13],21,0x4e0811a1);
+A=II(A,B,C,D,words[j+4],6,0xf7537e82);D=II(D,A,B,C,words[j+11],10,0xbd3af235);C=II(C,D,A,B,words[j+2],15,0x2ad7d2bb);B=II(B,C,D,A,words[j+9],21,0xeb86d391);
+a0=(a0+A)|0;b0=(b0+B)|0;c0=(c0+C)|0;d0=(d0+D)|0;}
+function hex(n){var s="";for(var i=0;i<4;i++)s+=("0"+((n>>(i*8))&255).toString(16)).slice(-2);return s}
+return hex(a0)+hex(b0)+hex(c0)+hex(d0)}
+async function sha(alg,text){var buf=await crypto.subtle.digest(alg,new TextEncoder().encode(text));return Array.from(new Uint8Array(buf)).map(function(b){return b.toString(16).padStart(2,"0")}).join("")}
+async function genHashes(){var t=document.getElementById('htext').value;
+document.getElementById('md5').textContent=t?md5(t):"—";
+document.getElementById('sha1').textContent=t?await sha("SHA-1",t):"—";
+document.getElementById('sha256').textContent=t?await sha("SHA-256",t):"—";}
+function copyRes(id){var t=document.getElementById(id).textContent;if(t&&t!=="—"){navigator.clipboard.writeText(t);alert("Copied!")}}
+</script><footer class="footer"><div class="container">
+<div class="footer-brand">🛡️ CyberSec <span class="green">Hub</span></div>
+<p>Learn cybersecurity the ethical, legal way.</p>
+<div class="footer-links">
+<a href="../index.html">Home</a><a href="../about.html">About</a><a href="../contact.html">Contact</a><a href="../privacy.html">Privacy Policy</a><a href="../disclaimer.html">Disclaimer</a><a href="../terms.html">Terms</a>
+</div>
+<p class="copyright">© 2026 CyberSec Hub by Anwaar Digital. All rights reserved. Educational content only — always test with written permission.</p>
+<p class="copyright">Developed by <strong style="color:#00e676">Malik Anwaar</strong></p>
+</div></footer><a href="https://wa.me/923288317526" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.6 6.1 1.6h.1c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.6 1.2 1.2-4.5-.3-.4c-1-1.6-1.6-3.5-1.6-5.5C5 9.6 10.6 5 16 5s11 4.6 11 10-5.4 9.8-11 9.8zm6.1-7.3c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.8.1-.3-.2-1.4-.5-2.7-1.6-.9-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6L13 9.5c-.3-.8-.7-.7-1-.7h-.8c-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.5s1.5 4 1.7 4.3c.2.3 2.9 4.4 7 6.2 1 .4 1.7.7 2.3.9.9.3 1.8.2 2.5.2.8-.1 2.3-1 2.7-1.9.3-.9.3-1.7.2-1.9-.1-.1-.3-.2-.7-.4z"/></svg></a></body></html>
