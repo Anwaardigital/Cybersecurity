@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-T6WVGJVD4J"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-T6WVGJVD4J');</script>
+<!-- Cookie consent (GDPR): Google Analytics loads only after you press Accept -->
+<script src="cookie-consent.js" defer></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>CyberSec Hub — Learn Cybersecurity the Ethical Way</title>
@@ -37,7 +36,7 @@
 <a href="#career" class="btn btn-outline">Career Roadmap</a>
 </div>
 <div class="hero-stats">
-<div class="stat"><span class="stat-num">26</span><span class="stat-label">In-Depth Guides</span></div>
+<div class="stat"><span class="stat-num">27</span><span class="stat-label">In-Depth Guides</span></div>
 <div class="stat"><span class="stat-num">4</span><span class="stat-label">Categories</span></div>
 <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Ethical</span></div>
 </div></div>
@@ -104,7 +103,7 @@
 <p>Interactive tools, a plain-English glossary, and honest answers — all free.</p></div>
 <div class="cat-grid">
 <a href="sectools/index.html" class="cat-card"><span class="cat-emoji">🛠️</span><h3>Security Tools</h3><p>Free browser-based tools — password checker, hash generator, password generator, Base64 encoder. 100% private.</p><span class="cat-count">4 tools</span></a>
-<a href="glossary.html" class="cat-card"><span class="cat-emoji">📚</span><h3>Cybersecurity Glossary</h3><p>60+ essential cybersecurity terms explained in plain English, with instant search.</p><span class="cat-count">60+ terms</span></a>
+<a href="glossary.html" class="cat-card"><span class="cat-emoji">📚</span><h3>Cybersecurity Glossary</h3><p>79 essential cybersecurity terms explained in plain English, with instant search.</p><span class="cat-count">79 terms</span></a>
 <a href="faq.html" class="cat-card"><span class="cat-emoji">❓</span><h3>FAQ</h3><p>20 honest answers to the questions beginners ask most — careers, safety, and getting started.</p><span class="cat-count">20 answers</span></a>
 </div>
 </div></section>
@@ -130,11 +129,28 @@
 <section class="section"><div class="container">
 <div class="newsletter">
 <h2>📬 Get Security Tips Weekly</h2>
-<p>One practical cybersecurity tip every week. No spam, unsubscribe anytime.</p>
-<form class="news-form" onsubmit="alert('Thanks for subscribing!');return false;">
-<input type="email" placeholder="Your email address" required>
+<p>Email updates are coming soon — save your email below and it will stay safely in your own browser until then. No spam, ever.</p>
+<form class="news-form" id="cyberNlForm">
+<input type="email" id="cyberNlEmail" placeholder="Your email address" required>
 <button type="submit" class="btn btn-green">Subscribe</button>
-</form></div>
+</form>
+<p id="cyberNlMsg" style="display:none;color:#16a34a;font-weight:700;margin-top:10px"></p>
+</div>
+<script>
+(function(){
+  var f=document.getElementById('cyberNlForm');if(!f)return;
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var em=document.getElementById('cyberNlEmail'),v=(em.value||'').trim();
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)){em.focus();return;}
+    try{localStorage.setItem('cyb_newsletter_email',v);}catch(err){}
+    var m=document.getElementById('cyberNlMsg');
+    m.textContent='✅ Email saved on this device — email updates are coming soon!';
+    m.style.display='';
+    em.value='';
+  });
+})();
+</script>
 </div></section>
 
 <section class="section" id="our-websites"><div class="container">
