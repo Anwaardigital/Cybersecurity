@@ -170,3 +170,10 @@ a{color:inherit;text-decoration:none}
 .faq-a{display:none;padding:0 20px 18px;color:#d4e0ee;font-size:.94rem}
 .faq-item.open .faq-a{display:block}
 .faq-item.open .faq-icon{transform:rotate(45deg)}
+
+.related-box{background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:22px;margin-top:36px}
+.related-box h3{margin:0 0 8px;color:#00e676;font-size:1.15rem}
+.related-box ul{list-style:none;padding:0;margin:0}
+.related-box li{margin:10px 0}
+.related-box a{color:#38bdf8;text-decoration:none}
+.related-box a:hover{text-decoration:underline;color:#7dd3fc}
