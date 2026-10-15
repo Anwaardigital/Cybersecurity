@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/png" sizes="192x192" href="https://anwaardigital.github.io/Cybersecurity/cyber-icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="https://anwaardigital.github.io/Cybersecurity/cyber-icon-512.png">
+<link rel="apple-touch-icon" href="https://anwaardigital.github.io/Cybersecurity/cyber-icon-192.png">
+<!-- Cookie consent (GDPR): Google Analytics loads only after you press Accept -->
+<script src="../cookie-consent.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Privacy Settings Guide — Social Media Checklists</title>
+<meta name="description" content="Free interactive privacy settings guide: platform-by-platform checklists for Facebook, Instagram, X, TikTok, LinkedIn and WhatsApp — learn exactly which settings to review and why.">
+<link rel="stylesheet" href="../styles.css">
+<link rel="canonical" href="https://anwaardigital.github.io/Cybersecurity/sectools/privacy-settings-guide.html">
+<meta property="og:title" content="Privacy Settings Guide — Social Media Checklists">
+<meta property="og:description" content="Free interactive privacy settings guide: platform-by-platform checklists for Facebook, Instagram, X, TikTok, LinkedIn and WhatsApp — learn exactly which settings to review and why.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://anwaardigital.github.io/Cybersecurity/sectools/privacy-settings-guide.html">
+<meta property="og:site_name" content="CyberSec Hub">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Privacy Settings Guide",
+  "description": "Free interactive privacy settings guide: platform-by-platform checklists for Facebook, Instagram, X, TikTok, LinkedIn and WhatsApp — learn exactly which settings to review and why.",
+  "url": "https://anwaardigital.github.io/Cybersecurity/sectools/privacy-settings-guide.html",
+  "applicationCategory": "SecurityApplication",
+  "operatingSystem": "Any",
+  "offers": {"@type": "Offer","price": "0"},
+  "author": {"@type": "Person","name": "Malik Muhammad Anwaar"}
+}
+</script>
+<style>
+.quiz-q{background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:10px;padding:16px;margin:14px 0}
+.quiz-q p{font-weight:600;margin-bottom:6px}
+.quiz-opts button{display:block;width:100%;text-align:left;margin:8px 0;padding:11px 14px;border-radius:9px;border:1px solid var(--border);background:rgba(255,255,255,.04);color:var(--text);cursor:pointer;font-size:.95rem;font-family:inherit}
+.quiz-opts button:hover:not(:disabled){border-color:var(--green)}
+.quiz-opts button.correct{border-color:#00e676;background:rgba(0,230,118,.12)}
+.quiz-opts button.wrong{border-color:#ff5252;background:rgba(255,82,82,.1)}
+.quiz-opts button:disabled{cursor:default}
+.quiz-why{font-size:.88rem;color:var(--muted);margin-top:8px;display:none}
+.chk{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border:1px solid var(--border);border-radius:10px;margin:9px 0;background:rgba(255,255,255,.02);cursor:pointer;font-size:.93rem}
+.chk:hover{border-color:var(--green)}
+.chk input{margin-top:5px;transform:scale(1.3);accent-color:#00e676;flex-shrink:0}
+.chk small{display:block;color:var(--muted);font-size:.85rem;margin-top:3px}
+.chk.done{opacity:.72;border-color:rgba(0,230,118,.45)}
+.pbar{height:12px;background:rgba(255,255,255,.07);border-radius:8px;overflow:hidden;margin:12px 0}
+.pbar>div{height:100%;width:0;background:linear-gradient(90deg,#00b35c,#00e676);transition:width .4s;border-radius:8px}
+.flag{border-left:4px solid;padding:12px 14px;border-radius:0 10px 10px 0;margin:10px 0;background:rgba(255,255,255,.03)}
+.flag.danger{border-color:#ff5252}.flag.warn{border-color:#ff9800}.flag.info{border-color:#29b6f6}.flag.safe{border-color:#00e676}
+.flag b{display:block;margin-bottom:4px;font-size:.95rem}
+.flag p{margin:0;font-size:.89rem;color:#c9d6e8}
+.step-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.step-tabs button{padding:9px 16px;border-radius:20px;border:1px solid var(--border);background:rgba(255,255,255,.04);color:var(--text);cursor:pointer;font-size:.9rem;font-family:inherit}
+.step-tabs button.active{background:rgba(0,230,118,.15);border-color:var(--green);color:#fff}
+.edu h3{color:var(--green);margin:24px 0 8px;font-size:1.05rem}
+.edu ul{margin:6px 0 6px 18px}.edu ol{margin:6px 0 6px 18px}
+.edu li{margin-bottom:6px;font-size:.94rem;color:#d4e0ee}
+.edu p{font-size:.94rem;color:#d4e0ee;margin-bottom:10px}
+table.cmp{width:100%;border-collapse:collapse;font-size:.89rem;margin:12px 0}
+table.cmp th,table.cmp td{border:1px solid var(--border);padding:9px 10px;text-align:left;vertical-align:top}
+table.cmp th{background:rgba(0,230,118,.08);color:var(--green)}
+.score-line{font-size:1.05rem;font-weight:700;margin:14px 0}
+.verdict{border-radius:10px;padding:16px;margin-top:14px;font-size:.95rem}
+</style>
+</head>
+<body>
+<nav class="navbar"><div class="nav-inner">
+<a href="../index.html" class="brand"><span class="brand-icon">🛡️</span><span>CyberSec <span class="green">Hub</span></span></a>
+<button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+<ul class="nav-links" id="navLinks">
+<li><a href="../index.html">Home</a></li>
+<li><a href="../index.html#basics">Basics</a></li>
+<li><a href="../index.html#hacking">Ethical Hacking</a></li>
+<li><a href="../index.html#tools">Tools</a></li>
+<li><a href="../index.html#career">Career</a></li>
+<li><a href="../about.html">About</a></li>
+</ul></div></nav>
+<main class="tool-wrap">
+<h1>👁️ Privacy Settings Guide</h1>
+<p class="tool-sub">Default social-media settings usually favor <b>sharing</b>, not privacy. Pick a platform below and work through what to review. <i>Note: apps rename menus often — if a setting moved, search the app's settings for the keyword.</i></p>
+<div class="ethical-box"><strong>⚠️ Ethical Use Only:</strong> These tools are for <strong>defensive</strong> purposes — securing your own accounts and systems. Never use security knowledge against systems you do not own or lack written permission to test.</div>
+<div class="tool-card">
+<div class="step-tabs" id="prvtabs"></div>
+<div class="pbar"><div id="prvbar"></div></div>
+<div class="score-line" id="prvscore"></div>
+<div id="prvlist"></div>
+</div>
+<div class="tip-box edu" style="margin-top:22px"><strong>💡 The mindset:</strong>
+<p style="margin-top:8px">Ask three questions about everything you post: <b>who</b> can see this, <b>what</b> could a stranger infer from it (location, routine, contacts), and <b>how long</b> will it exist? Attackers build spear-phishing profiles from exactly these public crumbs — birthday posts, pet names (common passwords!), check-ins, and workplace details.</p></div>
+</main>
+<script>
+
+var PRV={
+ "📘 Facebook":[
+  ["Profile & posts visible to 'Friends', not 'Public'","Check Settings → Privacy → who can see your posts, friends list, and profile details."],
+  ["Review tags before they appear","Turn on tag review so embarrassing or revealing photos need your approval."],
+  ["Limit who can find you by phone/email","Strangers shouldn't be able to look you up by your number."],
+  ["Turn off location history / precise location for the app","Your movements are valuable data — share only while using, or never."],
+  ["Review ad preferences & off-Facebook activity","See what advertisers know; clear history and limit ad personalization."],
+  ["Enable 2FA","Settings → Accounts Center → Password and security."]],
+ "📸 Instagram":[
+  ["Consider a private account","Private = you approve followers. Public = anyone, including scrapers and strangers."],
+  ["Hide your activity status & read receipts if you prefer","Settings → Privacy → Activity status / Messages."],
+  ["Turn off precise location","Photos with location tags reveal home, work, and routines."],
+  ["Review tagged photos & mentions","Approve tags manually; remove unwanted ones."],
+  ["Limit story sharing and close-friends lists","Use Close Friends for personal content instead of all followers."],
+  ["Enable 2FA","Accounts Center → Password and security."]],
+ "🐦 X (Twitter)":[
+  ["Protect your posts (private account) if you don't need public reach","Settings → Privacy → Audience."],
+  ["Disable precise location on posts","Never broadcast real-time location publicly."],
+  ["Control who can message & tag you","Limit DMs to people you follow; require tag approval mindset."],
+  ["Review ad personalization & data sharing","Privacy → Ads preferences; turn off what you're uncomfortable with."],
+  ["Enable 2FA (authenticator app, not just SMS)","Security → Two-factor authentication."]],
+ "🎵 TikTok":[
+  ["Private account + approve followers","Settings → Privacy → Private account."],
+  ["Turn off 'suggest to others' via contacts/location if unwanted","Limits discovery by strangers."],
+  ["Disable precise location","Especially important given video + location combos."],
+  ["Restrict comments, duets, downloads","Set to Friends or Only me for personal videos."],
+  ["Review ad personalization","Privacy → Ads personalization."],
+  ["Enable 2FA","Security → 2-step verification."]],
+ "💼 LinkedIn":[
+  ["Remember: it's public-by-design","Treat everything as visible to recruiters, colleagues — and scammers building pretexts."],
+  ["Limit profile viewing options sensibly","Decide who sees your connections and activity broadcasts."],
+  ["Turn off 'share profile updates' when job-hunting quietly","Avoid broadcasting every edit to your network."],
+  ["Be picky with connection requests","Fake recruiter profiles harvest data and launch phishing. Verify before accepting."],
+  ["Enable 2FA","Settings → Sign in & security."]],
+ "💬 WhatsApp":[
+  ["Last seen / online / profile photo → 'My contacts' (not Everybody)","Settings → Privacy. Strangers shouldn't track your activity."],
+  ["Turn off read receipts if you prefer (note: group chats unaffected)","Same Privacy screen."],
+  ["Enable disappearing messages for sensitive chats","24h/7d/90d options per chat."],
+  ["Enable 2-step verification (PIN)","Settings → Account — protects against SIM-swap account theft."],
+  ["Review who can add you to groups → 'My contacts'","Stops spam/scam group adds."],
+  ["Lock chats with sensitive content","Chat lock adds biometric protection on shared devices."]]};
+var prvKeys=Object.keys(PRV), prvCur=0, prvDone={};
+function prvRenderTabs(){var h='';prvKeys.forEach(function(k,i){h+='<button class="'+(i===prvCur?'active':'')+'" onclick="prvGo('+i+')">'+k+'</button>';});
+document.getElementById('prvtabs').innerHTML=h;}
+function prvGo(i){prvCur=i;prvRenderTabs();prvRender();}
+function prvRender(){var steps=PRV[prvKeys[prvCur]],done=prvDone[prvCur]||steps.map(function(){return false;});prvDone[prvCur]=done;
+var h='';steps.forEach(function(s,i){h+='<label class="chk'+(done[i]?' done':'')+'"><input type="checkbox" '+(done[i]?'checked':'')+' onchange="prvTgl('+i+',this)"><span><b>'+s[0]+'</b><small>'+s[1]+'</small></span></label>';});
+document.getElementById('prvlist').innerHTML=h;prvUpd();}
+function prvTgl(i,box){prvDone[prvCur][i]=box.checked;prvRender();}
+function prvUpd(){var total=0,done=0;
+prvKeys.forEach(function(k){var s=PRV[k],d=prvDone[k]||s.map(function(){return false;});total+=s.length;done+=d.filter(Boolean).length;});
+document.getElementById('prvbar').style.width=Math.round(done/total*100)+'%';
+document.getElementById('prvscore').textContent='Overall: '+done+' of '+total+' reviewed'+(done===total?' — 🏆 Privacy champion!':'');}
+prvRenderTabs();prvRender();
+</script>
+<footer class="footer"><div class="container">
+<div class="footer-brand">🛡️ CyberSec <span class="green">Hub</span></div>
+<p>Learn cybersecurity the ethical, legal way.</p>
+<div class="footer-links">
+<a href="../index.html">Home</a><a href="../about.html">About</a><a href="../contact.html">Contact</a><a href="../privacy.html">Privacy Policy</a><a href="../disclaimer.html">Disclaimer</a><a href="../terms.html">Terms</a>
+</div>
+<p class="copyright">© 2026 CyberSec Hub by Anwaar Digital. All rights reserved. Educational content only — always test with written permission.</p>
+<p class="copyright">Developed by <strong style="color:#00e676">Malik Anwaar</strong></p>
+</div></footer><a href="https://wa.me/923288317526" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.6 6.1 1.6h.1c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.6 1.2 1.2-4.5-.3-.4c-1-1.6-1.6-3.5-1.6-5.5C5 9.6 10.6 5 16 5s11 4.6 11 10-5.4 9.8-11 9.8zm6.1-7.3c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.8.1-.3-.2-1.4-.5-2.7-1.6-.9-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6L13 9.5c-.3-.8-.7-.7-1-.7h-.8c-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.5s1.5 4 1.7 4.3c.2.3 2.9 4.4 7 6.2 1 .4 1.7.7 2.3.9.9.3 1.8.2 2.5.2.8-.1 2.3-1 2.7-1.9.3-.9.3-1.7.2-1.9-.1-.1-.3-.2-.7-.4z"/></svg></a>
+</body></html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/png" sizes="192x192" href="https://anwaardigital.github.io/Cybersecurity/cyber-icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="https://anwaardigital.github.io/Cybersecurity/cyber-icon-512.png">
+<link rel="apple-touch-icon" href="https://anwaardigital.github.io/Cybersecurity/cyber-icon-192.png">
+<!-- Cookie consent (GDPR): Google Analytics loads only after you press Accept -->
+<script src="../cookie-consent.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Secure Data Deletion Guide — Wipe Devices Before You Sell</title>
+<meta name="description" content="Free interactive secure deletion guide: pick your device (Android, iPhone, Windows, Mac, USB drive) and follow exact wipe steps before selling or recycling — plus why simple delete isn't enough.">
+<link rel="stylesheet" href="../styles.css">
+<link rel="canonical" href="https://anwaardigital.github.io/Cybersecurity/sectools/secure-deletion-guide.html">
+<meta property="og:title" content="Secure Data Deletion Guide — Wipe Devices Before You Sell">
+<meta property="og:description" content="Free interactive secure deletion guide: pick your device (Android, iPhone, Windows, Mac, USB drive) and follow exact wipe steps before selling or recycling — plus why simple delete isn't enough.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://anwaardigital.github.io/Cybersecurity/sectools/secure-deletion-guide.html">
+<meta property="og:site_name" content="CyberSec Hub">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Secure Deletion Guide",
+  "description": "Free interactive secure deletion guide: pick your device (Android, iPhone, Windows, Mac, USB drive) and follow exact wipe steps before selling or recycling — plus why simple delete isn't enough.",
+  "url": "https://anwaardigital.github.io/Cybersecurity/sectools/secure-deletion-guide.html",
+  "applicationCategory": "SecurityApplication",
+  "operatingSystem": "Any",
+  "offers": {"@type": "Offer","price": "0"},
+  "author": {"@type": "Person","name": "Malik Muhammad Anwaar"}
+}
+</script>
+<style>
+.quiz-q{background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:10px;padding:16px;margin:14px 0}
+.quiz-q p{font-weight:600;margin-bottom:6px}
+.quiz-opts button{display:block;width:100%;text-align:left;margin:8px 0;padding:11px 14px;border-radius:9px;border:1px solid var(--border);background:rgba(255,255,255,.04);color:var(--text);cursor:pointer;font-size:.95rem;font-family:inherit}
+.quiz-opts button:hover:not(:disabled){border-color:var(--green)}
+.quiz-opts button.correct{border-color:#00e676;background:rgba(0,230,118,.12)}
+.quiz-opts button.wrong{border-color:#ff5252;background:rgba(255,82,82,.1)}
+.quiz-opts button:disabled{cursor:default}
+.quiz-why{font-size:.88rem;color:var(--muted);margin-top:8px;display:none}
+.chk{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border:1px solid var(--border);border-radius:10px;margin:9px 0;background:rgba(255,255,255,.02);cursor:pointer;font-size:.93rem}
+.chk:hover{border-color:var(--green)}
+.chk input{margin-top:5px;transform:scale(1.3);accent-color:#00e676;flex-shrink:0}
+.chk small{display:block;color:var(--muted);font-size:.85rem;margin-top:3px}
+.chk.done{opacity:.72;border-color:rgba(0,230,118,.45)}
+.pbar{height:12px;background:rgba(255,255,255,.07);border-radius:8px;overflow:hidden;margin:12px 0}
+.pbar>div{height:100%;width:0;background:linear-gradient(90deg,#00b35c,#00e676);transition:width .4s;border-radius:8px}
+.flag{border-left:4px solid;padding:12px 14px;border-radius:0 10px 10px 0;margin:10px 0;background:rgba(255,255,255,.03)}
+.flag.danger{border-color:#ff5252}.flag.warn{border-color:#ff9800}.flag.info{border-color:#29b6f6}.flag.safe{border-color:#00e676}
+.flag b{display:block;margin-bottom:4px;font-size:.95rem}
+.flag p{margin:0;font-size:.89rem;color:#c9d6e8}
+.step-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.step-tabs button{padding:9px 16px;border-radius:20px;border:1px solid var(--border);background:rgba(255,255,255,.04);color:var(--text);cursor:pointer;font-size:.9rem;font-family:inherit}
+.step-tabs button.active{background:rgba(0,230,118,.15);border-color:var(--green);color:#fff}
+.edu h3{color:var(--green);margin:24px 0 8px;font-size:1.05rem}
+.edu ul{margin:6px 0 6px 18px}.edu ol{margin:6px 0 6px 18px}
+.edu li{margin-bottom:6px;font-size:.94rem;color:#d4e0ee}
+.edu p{font-size:.94rem;color:#d4e0ee;margin-bottom:10px}
+table.cmp{width:100%;border-collapse:collapse;font-size:.89rem;margin:12px 0}
+table.cmp th,table.cmp td{border:1px solid var(--border);padding:9px 10px;text-align:left;vertical-align:top}
+table.cmp th{background:rgba(0,230,118,.08);color:var(--green)}
+.score-line{font-size:1.05rem;font-weight:700;margin:14px 0}
+.verdict{border-radius:10px;padding:16px;margin-top:14px;font-size:.95rem}
+</style>
+</head>
+<body>
+<nav class="navbar"><div class="nav-inner">
+<a href="../index.html" class="brand"><span class="brand-icon">🛡️</span><span>CyberSec <span class="green">Hub</span></span></a>
+<button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+<ul class="nav-links" id="navLinks">
+<li><a href="../index.html">Home</a></li>
+<li><a href="../index.html#basics">Basics</a></li>
+<li><a href="../index.html#hacking">Ethical Hacking</a></li>
+<li><a href="../index.html#tools">Tools</a></li>
+<li><a href="../index.html#career">Career</a></li>
+<li><a href="../about.html">About</a></li>
+</ul></div></nav>
+<main class="tool-wrap">
+<h1>🧹 Secure Deletion Guide</h1>
+<p class="tool-sub">Selling, gifting, or recycling a device? <b>Deleting files isn't enough</b> — recovery software can resurrect "deleted" data in minutes. Pick your device type and follow the proper wipe.</p>
+<div class="ethical-box"><strong>⚠️ Ethical Use Only:</strong> These tools are for <strong>defensive</strong> purposes — securing your own accounts and systems. Never use security knowledge against systems you do not own or lack written permission to test.</div>
+<div class="tool-card edu">
+<h3 style="margin-top:0">🧠 Why "delete" doesn't delete</h3>
+<p>Deleting a file usually just removes its <b>index entry</b> — the actual data stays on the disk until overwritten. Anyone with free recovery software can bring it back. Proper wiping either <b>overwrites</b> every byte or destroys the <b>encryption key</b> that makes the data readable.</p>
+<div class="flag warn"><b>⚠️ Before wiping anything</b><p>Back up what you want to keep first (see our <a href="secure-backup-checklist.html" style="color:var(--green)">backup checklist</a>), sign out of all accounts, and remove SIM/SD cards. Wiping is irreversible.</p></div>
+</div>
+<div class="tool-card" style="margin-top:20px">
+<h3 style="margin-top:0">📱 Pick your device</h3>
+<div class="step-tabs" id="sdtabs"></div>
+<div id="sddetail" style="margin-top:6px"></div>
+</div>
+<div class="tool-card" style="margin-top:20px">
+<h3 style="margin-top:0">✅ Final hand-over checklist</h3>
+<div class="pbar"><div id="sdbar"></div></div>
+<div class="score-line" id="sdscore">0 of 6 completed</div>
+<div id="sdlist"></div>
+</div>
+</main>
+<script>
+
+var SD={
+ "🤖 Android":[
+  "Back up photos, chats and files you want to keep.",
+  "Remove your Google account: Settings → Accounts → Google → Remove (this also disables Factory Reset Protection lock for the next owner).",
+  "Encrypt the phone first if the option exists (older Androids): Settings → Security → Encrypt phone.",
+  "Factory reset: Settings → System → Reset → Erase all data.",
+  "After reset, if you're extra cautious: set it up without signing in, load a large video file to fill storage, then reset once more — this overwrites old data remnants.",
+  "Remove SIM and SD card."],
+ "🍏 iPhone / iPad":[
+  "Back up to iCloud or a computer.",
+  "Sign out of iCloud: Settings → [your name] → Sign Out (this disables Activation Lock — otherwise the next owner can't use it).",
+  "Unpair Apple Watch and remove the device from your Apple ID device list.",
+  "Erase: Settings → General → Transfer or Reset → Erase All Content and Settings.",
+  "iPhones encrypt storage by default, so erasing destroys the encryption key — your data becomes unrecoverable. No extra overwrite step needed.",
+  "Remove SIM card."],
+ "🪟 Windows PC":[
+  "Back up your files to an external drive or cloud.",
+  "Sign out of Microsoft account and deauthorize apps (Office, iTunes, etc.).",
+  "Reset: Settings → System → Recovery → Reset PC → Remove everything.",
+  "Choose 'Clean data' / 'Fully clean the drive' when offered — this overwrites instead of quick-erasing.",
+  "For SSDs: the manufacturer's secure-erase tool is the most thorough option; for HDDs, a full overwrite pass suffices for personal use.",
+  "Reinstall a fresh OS if you're gifting it, so the next owner starts clean."],
+ "🍎 Mac":[
+  "Back up with Time Machine or manual copy.",
+  "Sign out of iCloud, iMessage, and deauthorize the Mac in Music/TV apps.",
+  "Boot into Recovery (Apple silicon: hold power; Intel: Cmd+R) → Disk Utility → Erase the startup disk (APFS, GUID).",
+  "Reinstall macOS from Recovery so it boots to the setup screen for the next owner.",
+  "Modern Macs with T2/Apple silicon encrypt by default — erasing destroys the keys."],
+ "💾 USB drive / SD card":[
+  "Copy off anything you want to keep.",
+  "Don't just delete — do a FULL format (uncheck 'Quick Format' on Windows) or overwrite with a disk-wipe tool.",
+  "For highly sensitive data on flash media: physical destruction is the only certain method — flash wear-leveling can preserve fragments software can't reach.",
+  "Remove any encryption passwords you set, or tell the recipient — an encrypted drive you can't unlock is a brick."],
+ "💀 Dead / broken drive":[
+  "If it still spins: try the manufacturer's secure-erase or overwrite tool first.",
+  "If it's dead: remove it from the device before recycling the rest.",
+  "For sensitive data on a dead drive, physical destruction (drilling/shredding via an e-waste service) is the reliable answer.",
+  "Keep the destruction receipt/certificate if the data was business-sensitive."]};
+var sdKeys=Object.keys(SD), sdCur=0;
+function sdRenderTabs(){var h='';sdKeys.forEach(function(k,i){h+='<button class="'+(i===sdCur?'active':'')+'" onclick="sdGo('+i+')">'+k+'</button>';});
+document.getElementById('sdtabs').innerHTML=h;}
+function sdGo(i){sdCur=i;sdRenderTabs();
+var h='<ol style="margin:6px 0 6px 18px;font-size:.94rem;color:#d4e0ee">';
+SD[sdKeys[sdCur]].forEach(function(s){h+='<li style="margin-bottom:8px">'+s+'</li>';});
+h+='</ol>';document.getElementById('sddetail').innerHTML=h;}
+var SDC=[
+ ["All accounts signed out (Google, Apple, Microsoft…)","Leftover logins give the next owner access to your email, purchases and cloud data — and lock them out via activation locks."],
+ ["SIM and memory cards removed","They hold contacts, messages and photos independently of the wipe."],
+ ["2FA / authenticator moved to the new device","Transfer authenticator apps BEFORE wiping the old phone, or you'll be locked out of accounts."],
+ ["Device removed from 'Find My' / account device lists","Prevents tracking confusion and lets the new owner activate cleanly."],
+ ["Backup verified on the new device","Open a few files on the new device — a backup you can't read is no backup."],
+ ["Accessories reset too (watch, earbuds)","Paired wearables can leak notifications and health data."]];
+var sdDone=new Array(SDC.length).fill(false);
+(function(){var h='';
+SDC.forEach(function(c,i){h+='<label class="chk" id="sdchk'+i+'"><input type="checkbox" onchange="sdTgl('+i+',this)"><span><b>'+(i+1)+'. '+c[0]+'</b><small>'+c[1]+'</small></span></label>';});
+document.getElementById('sdlist').innerHTML=h;})();
+function sdTgl(i,box){sdDone[i]=box.checked;document.getElementById('sdchk'+i).classList.toggle('done',box.checked);
+var n=sdDone.filter(Boolean).length;
+document.getElementById('sdbar').style.width=Math.round(n/SDC.length*100)+'%';
+document.getElementById('sdscore').textContent=n+' of '+SDC.length+' completed'+(n===SDC.length?' — ✅ Safe to hand over!':'');}
+sdRenderTabs();sdGo(0);
+</script>
+<footer class="footer"><div class="container">
+<div class="footer-brand">🛡️ CyberSec <span class="green">Hub</span></div>
+<p>Learn cybersecurity the ethical, legal way.</p>
+<div class="footer-links">
+<a href="../index.html">Home</a><a href="../about.html">About</a><a href="../contact.html">Contact</a><a href="../privacy.html">Privacy Policy</a><a href="../disclaimer.html">Disclaimer</a><a href="../terms.html">Terms</a>
+</div>
+<p class="copyright">© 2026 CyberSec Hub by Anwaar Digital. All rights reserved. Educational content only — always test with written permission.</p>
+<p class="copyright">Developed by <strong style="color:#00e676">Malik Anwaar</strong></p>
+</div></footer><a href="https://wa.me/923288317526" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.6 6.1 1.6h.1c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.6 1.2 1.2-4.5-.3-.4c-1-1.6-1.6-3.5-1.6-5.5C5 9.6 10.6 5 16 5s11 4.6 11 10-5.4 9.8-11 9.8zm6.1-7.3c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.8.1-.3-.2-1.4-.5-2.7-1.6-.9-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6L13 9.5c-.3-.8-.7-.7-1-.7h-.8c-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.5s1.5 4 1.7 4.3c.2.3 2.9 4.4 7 6.2 1 .4 1.7.7 2.3.9.9.3 1.8.2 2.5.2.8-.1 2.3-1 2.7-1.9.3-.9.3-1.7.2-1.9-.1-.1-.3-.2-.7-.4z"/></svg></a>
+</body></html>

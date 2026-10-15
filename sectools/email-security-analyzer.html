@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/png" sizes="192x192" href="https://anwaardigital.github.io/Cybersecurity/cyber-icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="https://anwaardigital.github.io/Cybersecurity/cyber-icon-512.png">
+<link rel="apple-touch-icon" href="https://anwaardigital.github.io/Cybersecurity/cyber-icon-192.png">
+<!-- Cookie consent (GDPR): Google Analytics loads only after you press Accept -->
+<script src="../cookie-consent.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Email Security Analyzer — Learn to Spot Malicious Email</title>
+<meta name="description" content="Free educational email security analyzer: enter a suspicious email's sender and subject to learn spoofing red flags — lookalike domains, display-name tricks, urgency language — explained in plain English.">
+<link rel="stylesheet" href="../styles.css">
+<link rel="canonical" href="https://anwaardigital.github.io/Cybersecurity/sectools/email-security-analyzer.html">
+<meta property="og:title" content="Email Security Analyzer — Learn to Spot Malicious Email">
+<meta property="og:description" content="Free educational email security analyzer: enter a suspicious email's sender and subject to learn spoofing red flags — lookalike domains, display-name tricks, urgency language — explained in plain English.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://anwaardigital.github.io/Cybersecurity/sectools/email-security-analyzer.html">
+<meta property="og:site_name" content="CyberSec Hub">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Email Security Analyzer",
+  "description": "Free educational email security analyzer: enter a suspicious email's sender and subject to learn spoofing red flags — lookalike domains, display-name tricks, urgency language — explained in plain English.",
+  "url": "https://anwaardigital.github.io/Cybersecurity/sectools/email-security-analyzer.html",
+  "applicationCategory": "SecurityApplication",
+  "operatingSystem": "Any",
+  "offers": {"@type": "Offer","price": "0"},
+  "author": {"@type": "Person","name": "Malik Muhammad Anwaar"}
+}
+</script>
+<style>
+.quiz-q{background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:10px;padding:16px;margin:14px 0}
+.quiz-q p{font-weight:600;margin-bottom:6px}
+.quiz-opts button{display:block;width:100%;text-align:left;margin:8px 0;padding:11px 14px;border-radius:9px;border:1px solid var(--border);background:rgba(255,255,255,.04);color:var(--text);cursor:pointer;font-size:.95rem;font-family:inherit}
+.quiz-opts button:hover:not(:disabled){border-color:var(--green)}
+.quiz-opts button.correct{border-color:#00e676;background:rgba(0,230,118,.12)}
+.quiz-opts button.wrong{border-color:#ff5252;background:rgba(255,82,82,.1)}
+.quiz-opts button:disabled{cursor:default}
+.quiz-why{font-size:.88rem;color:var(--muted);margin-top:8px;display:none}
+.chk{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border:1px solid var(--border);border-radius:10px;margin:9px 0;background:rgba(255,255,255,.02);cursor:pointer;font-size:.93rem}
+.chk:hover{border-color:var(--green)}
+.chk input{margin-top:5px;transform:scale(1.3);accent-color:#00e676;flex-shrink:0}
+.chk small{display:block;color:var(--muted);font-size:.85rem;margin-top:3px}
+.chk.done{opacity:.72;border-color:rgba(0,230,118,.45)}
+.pbar{height:12px;background:rgba(255,255,255,.07);border-radius:8px;overflow:hidden;margin:12px 0}
+.pbar>div{height:100%;width:0;background:linear-gradient(90deg,#00b35c,#00e676);transition:width .4s;border-radius:8px}
+.flag{border-left:4px solid;padding:12px 14px;border-radius:0 10px 10px 0;margin:10px 0;background:rgba(255,255,255,.03)}
+.flag.danger{border-color:#ff5252}.flag.warn{border-color:#ff9800}.flag.info{border-color:#29b6f6}.flag.safe{border-color:#00e676}
+.flag b{display:block;margin-bottom:4px;font-size:.95rem}
+.flag p{margin:0;font-size:.89rem;color:#c9d6e8}
+.step-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.step-tabs button{padding:9px 16px;border-radius:20px;border:1px solid var(--border);background:rgba(255,255,255,.04);color:var(--text);cursor:pointer;font-size:.9rem;font-family:inherit}
+.step-tabs button.active{background:rgba(0,230,118,.15);border-color:var(--green);color:#fff}
+.edu h3{color:var(--green);margin:24px 0 8px;font-size:1.05rem}
+.edu ul{margin:6px 0 6px 18px}.edu ol{margin:6px 0 6px 18px}
+.edu li{margin-bottom:6px;font-size:.94rem;color:#d4e0ee}
+.edu p{font-size:.94rem;color:#d4e0ee;margin-bottom:10px}
+table.cmp{width:100%;border-collapse:collapse;font-size:.89rem;margin:12px 0}
+table.cmp th,table.cmp td{border:1px solid var(--border);padding:9px 10px;text-align:left;vertical-align:top}
+table.cmp th{background:rgba(0,230,118,.08);color:var(--green)}
+.score-line{font-size:1.05rem;font-weight:700;margin:14px 0}
+.verdict{border-radius:10px;padding:16px;margin-top:14px;font-size:.95rem}
+</style>
+</head>
+<body>
+<nav class="navbar"><div class="nav-inner">
+<a href="../index.html" class="brand"><span class="brand-icon">🛡️</span><span>CyberSec <span class="green">Hub</span></span></a>
+<button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+<ul class="nav-links" id="navLinks">
+<li><a href="../index.html">Home</a></li>
+<li><a href="../index.html#basics">Basics</a></li>
+<li><a href="../index.html#hacking">Ethical Hacking</a></li>
+<li><a href="../index.html#tools">Tools</a></li>
+<li><a href="../index.html#career">Career</a></li>
+<li><a href="../about.html">About</a></li>
+</ul></div></nav>
+<main class="tool-wrap">
+<h1>📧 Email Security Analyzer</h1>
+<p class="tool-sub">Copy the <b>sender name</b>, <b>sender email address</b>, and <b>subject</b> from a suspicious email (don't click anything in it). This educational tool explains the red flags — so you learn the patterns, not just this one email.</p>
+<div class="ethical-box"><strong>⚠️ Ethical Use Only:</strong> These tools are for <strong>defensive</strong> purposes — securing your own accounts and systems. Never use security knowledge against systems you do not own or lack written permission to test.</div>
+<div class="tool-card">
+<div class="tool-field"><label for="efrom">Sender display name (the "From" name you see)</label>
+<input type="text" id="efrom" placeholder='e.g. PayPal Security' autocomplete="off"></div>
+<div class="tool-field"><label for="eaddr">Sender email address (the real address behind the name)</label>
+<input type="text" id="eaddr" placeholder="e.g. security@paypa1-support.tk" autocomplete="off" spellcheck="false"></div>
+<div class="tool-field"><label for="esubj">Subject line</label>
+<input type="text" id="esubj" placeholder="e.g. URGENT: verify your account within 24 hours" autocomplete="off"></div>
+<button class="btn btn-green" onclick="analyzeEmail()">🔍 Analyze email</button>
+<div id="eresult" style="margin-top:18px"></div>
+</div>
+<div class="tool-card edu" style="margin-top:20px">
+<h3 style="margin-top:0">📄 SPF, DKIM &amp; DMARC — in plain English</h3>
+<p>These are email authentication standards that help prove a message really came from who it claims:</p>
+<ul>
+<li><b>SPF:</b> the domain owner publishes which servers may send their mail. Others get flagged.</li>
+<li><b>DKIM:</b> the sender cryptographically signs the message — tampering breaks the signature.</li>
+<li><b>DMARC:</b> tells receivers what to do when SPF/DKIM fail (quarantine or reject).</li>
+</ul>
+<p>You can't check these from the message alone — but reputable providers (Gmail, Outlook) check them automatically and warn you ("couldn't verify sender"). <b>Never ignore those warnings.</b></p>
+<h3>🛡️ Email safety habits</h3>
+<ul>
+<li>Never enable macros or "enable content" in unexpected Office attachments.</li>
+<li>Don't download attachments you didn't ask for — even from known senders (their account may be hacked).</li>
+<li>Verify requests through a separate channel: call the person/organization on a known number.</li>
+<li>Use a <a href="phishing-url-analyzer.html" style="color:var(--green)">phishing URL analyzer</a> mindset on every link: read the real domain before clicking.</li>
+</ul>
+</div>
+</main>
+<script>
+
+function eflag(level,title,text){return '<div class="flag '+level+'"><b>'+title+'</b><p>'+text+'</p></div>';}
+function analyzeEmail(){
+var name=document.getElementById('efrom').value.trim(), addr=document.getElementById('eaddr').value.trim().toLowerCase(), subj=document.getElementById('esubj').value.trim();
+var out=document.getElementById('eresult');
+if(!addr){out.innerHTML=eflag('info','⌨️ Enter the sender address','The sender email address is the most revealing part — copy it from the email (in most apps: tap/click the sender name to reveal it).');return;}
+var flags=[],ok=[];
+var m=addr.match(/@([^@\s>]+)/);
+if(!m){out.innerHTML=eflag('warn','⚠️ Invalid address format','This doesn\'t look like a valid email address ('+addr+'). Malformed sender data is itself suspicious.');return;}
+var domain=m[1], labels=domain.split('.'), etld=labels.slice(-2).join('.');
+var OFFICIAL={paypal:"paypal.com",google:"google.com",facebook:"facebook.com",apple:"apple.com",microsoft:"microsoft.com",amazon:"amazon.com",netflix:"netflix.com",instagram:"instagram.com",whatsapp:"whatsapp.com",linkedin:"linkedin.com",ebay:"ebay.com",dhl:"dhl.com",fedex:"fedex.com"};
+var FREE=["gmail.com","yahoo.com","outlook.com","hotmail.com","aol.com","proton.me","protonmail.com","icloud.com","gmx.com","yandex.com"];
+var CORPWORDS=["bank","paypal","security","support","billing","verify","account","irs","tax","customs","delivery"];
+var claimed=null;
+for(var b in OFFICIAL){ if(name.toLowerCase().indexOf(b)>-1||subj.toLowerCase().indexOf(b)>-1){claimed=b;break;} }
+if(claimed&&etld!==OFFICIAL[claimed]) flags.push(eflag('danger','🚨 Impersonating "'+claimed+'"','The message claims to be about <b>'+claimed+'</b> but was sent from <b>'+domain+'</b> — not the official '+OFFICIAL[claimed]+'. This is the classic phishing pattern.'));
+if(!claimed&&CORPWORDS.some(function(w){return name.toLowerCase().indexOf(w)>-1;})&&FREE.indexOf(etld)>-1)
+ flags.push(eflag('danger','🚨 "Official" name from a free email provider','The sender name sounds corporate ('+name+') but the address is a free '+etld+' account. Real banks and companies send from their own domains.'));
+if(FREE.indexOf(etld)>-1&&claimed) flags.push(eflag('warn','⚠️ Free provider for a sensitive topic','Sent from '+etld+' while discussing "'+claimed+'". Possible, but treat with skepticism and verify independently.'));
+if(/[\d]{3,}/.test(domain)||/[-_]{2,}/.test(domain)) flags.push(eflag('warn','⚠️ Odd-looking domain','Random numbers or repeated dashes/hyphens in domains (like '+domain+') are common in throwaway phishing domains.'));
+if(labels.length>3) flags.push(eflag('warn','⚠️ Many subdomains','The real domain is the last two parts ('+etld+'). Attackers bury trusted names in subdomains: <b>secure.'+claimed||'bank'+'.'+domain+'</b> is still just '+domain+'.'));
+var URG=["urgent","immediately","within 24 hours","suspended","verify now","action required","limited time","final notice","account closed","unauthorized"];
+var found=URG.filter(function(w){return subj.toLowerCase().indexOf(w)>-1;});
+if(found.length) flags.push(eflag('warn','⚠️ Pressure language in subject','Words like "'+found.slice(0,3).join('", "')+'" are designed to make you act before thinking. Legitimate organizations rarely threaten account closure by email.'));
+var PRIZE=["congratulations","you won","winner","claim your prize","gift card","lottery","inheritance"];
+var pf=PRIZE.filter(function(w){return subj.toLowerCase().indexOf(w)>-1;});
+if(pf.length) flags.push(eflag('warn','⚠️ Too-good-to-be-true subject','"'+pf[0]+'" — prize/lottery emails you never entered are scams, usually leading to "fees" or credential theft.'));
+if(/invoice|payment|receipt|attached|document/i.test(subj)) flags.push(eflag('info','ℹ️ Mentions an attachment or invoice','Unexpected attachments are a top malware vector. Confirm with the sender through a separate channel before opening.'));
+if(!flags.length) ok.push(eflag('safe','✅ No common red flags in these fields','Nothing suspicious detected in the sender/subject — but this is <b>not</b> a clean bill of health. Sophisticated attacks pass simple checks. Stay cautious with links and attachments.'));
+var html='<div class="score-line">'+(flags.length?('🚩 '+flags.length+' red flag'+(flags.length>1?'s':'')+' — treat this email as <span style="color:#ff5252">suspicious</span>. Do not click links or open attachments.'):'<span style="color:#00e676">No common red flags found.</span>')+'</div>';
+html+=flags.join('')+ok.join('');
+html+=eflag('info','📚 Educational note','Attackers constantly invent new lures. This tool teaches <b>patterns</b> — your best defense is the habit: pause, verify the sender independently, and navigate to sites yourself.');
+out.innerHTML=html;}
+</script>
+<footer class="footer"><div class="container">
+<div class="footer-brand">🛡️ CyberSec <span class="green">Hub</span></div>
+<p>Learn cybersecurity the ethical, legal way.</p>
+<div class="footer-links">
+<a href="../index.html">Home</a><a href="../about.html">About</a><a href="../contact.html">Contact</a><a href="../privacy.html">Privacy Policy</a><a href="../disclaimer.html">Disclaimer</a><a href="../terms.html">Terms</a>
+</div>
+<p class="copyright">© 2026 CyberSec Hub by Anwaar Digital. All rights reserved. Educational content only — always test with written permission.</p>
+<p class="copyright">Developed by <strong style="color:#00e676">Malik Anwaar</strong></p>
+</div></footer><a href="https://wa.me/923288317526" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.6 6.1 1.6h.1c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.6 1.2 1.2-4.5-.3-.4c-1-1.6-1.6-3.5-1.6-5.5C5 9.6 10.6 5 16 5s11 4.6 11 10-5.4 9.8-11 9.8zm6.1-7.3c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.8.1-.3-.2-1.4-.5-2.7-1.6-.9-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6L13 9.5c-.3-.8-.7-.7-1-.7h-.8c-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.5s1.5 4 1.7 4.3c.2.3 2.9 4.4 7 6.2 1 .4 1.7.7 2.3.9.9.3 1.8.2 2.5.2.8-.1 2.3-1 2.7-1.9.3-.9.3-1.7.2-1.9-.1-.1-.3-.2-.7-.4z"/></svg></a>
+</body></html>
