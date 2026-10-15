@@ -108,6 +108,39 @@ table.cmp th{background:rgba(0,230,118,.08);color:var(--green)}
 <li>Use a <a href="phishing-url-analyzer.html" style="color:var(--green)">phishing URL analyzer</a> mindset on every link: read the real domain before clicking.</li>
 </ul>
 </div>
+<section class="related-box" style="margin-top:36px">
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">About This Tool</h2>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">What this tool does</h2>
+<p>The Email Security Analyzer helps you understand whether an email you received is likely legitimate. It explains the email authentication systems that protect inboxes — SPF, DKIM, and DMARC — and guides you through checking the headers and sender details of messages you receive, so you can spot spoofed or forged emails.</p>
+<p>Email spoofing is a common attack technique: criminals forge the "From" address to impersonate banks, employers, or government agencies. The analyzer is for anyone who wants to verify a suspicious message about their own inbox — for example, an unexpected "security alert" or invoice — before acting on it.</p>
+<p>The tool is educational and defensive. It analyzes messages you received; it does not send email, and it cannot be used to test other people's mail servers or to craft spoofed messages. Analysis happens with the information you paste, and nothing is uploaded to a server.</p>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">How to use it</h2>
+<ol>
+<li>Open the suspicious email in your mail app and find the option to view full headers or the original message.</li>
+<li>Look at the authentication results section of the headers for SPF, DKIM, and DMARC results.</li>
+<li>Compare the "From" address with the "Return-Path" and the domain in the DKIM signature. Mismatches are a warning sign.</li>
+<li>Check whether the sender's domain publishes a DMARC policy — domains with strict policies are harder to spoof.</li>
+<li>If the results are unclear or the message asks for sensitive action, contact the supposed sender through a known phone number or website instead of replying to the email.</li>
+</ol>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">Defensive security tips</h2>
+<ul>
+<li><strong>Publish SPF, DKIM, and DMARC for your own domain.</strong> If you run a website or business email, these records make it much harder for attackers to impersonate you.</li>
+<li><strong>Treat display names with suspicion.</strong> The name shown ("Your Bank") is easy to fake; the actual address and authentication results are what matter.</li>
+<li><strong>Be careful with attachments and links.</strong> Even from familiar senders, unexpected attachments deserve verification — accounts get compromised and used to spread malware.</li>
+<li><strong>Use a separate email for important accounts.</strong> Keeping banking and recovery email separate from the address you give out publicly reduces your exposure.</li>
+<li><strong>Enable 2FA on your email account.</strong> Your email is the key to password resets everywhere; protecting it protects everything linked to it.</li>
+</ul>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">FAQs</h2>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">What do SPF, DKIM, and DMARC actually do?</h3>
+<p>SPF lists which servers may send mail for a domain. DKIM adds a cryptographic signature proving the message was not altered. DMARC tells receiving servers what to do when the first two fail. Together they make spoofing much harder.</p>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">If an email passes all checks, is it definitely safe?</h3>
+<p>Not necessarily. A compromised legitimate account sends mail that passes every check. Authentication proves the message came from that domain's infrastructure — it does not prove the content is honest or the link is safe.</p>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">Can I use this to check someone else's email server?</h3>
+<p>No. This tool is for analyzing messages in your own inbox for your own protection. Testing other people's mail systems without permission is not something these tools support.</p>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">What should I do with a confirmed spoofed email?</h3>
+<p>Delete it, do not click anything in it, and report it to your email provider. If it impersonates a company you use, forward it to that company's published abuse or phishing address.</p>
+</section>
+
 </main>
 <script>
 
