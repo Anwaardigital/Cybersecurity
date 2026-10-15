@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/png" sizes="192x192" href="https://anwaardigital.github.io/Cybersecurity/cyber-icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="https://anwaardigital.github.io/Cybersecurity/cyber-icon-512.png">
+<link rel="apple-touch-icon" href="https://anwaardigital.github.io/Cybersecurity/cyber-icon-192.png">
+<!-- Cookie consent (GDPR): Google Analytics loads only after you press Accept -->
+<script src="../cookie-consent.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Secure Backup Checklist — The 3-2-1 Rule & Backup Planner</title>
+<meta name="description" content="Free interactive backup guide: understand the 3-2-1 rule, build a personal backup plan for your devices, and check your backups against a security checklist with live scoring.">
+<link rel="stylesheet" href="../styles.css">
+<link rel="canonical" href="https://anwaardigital.github.io/Cybersecurity/sectools/secure-backup-checklist.html">
+<meta property="og:title" content="Secure Backup Checklist — The 3-2-1 Rule & Backup Planner">
+<meta property="og:description" content="Free interactive backup guide: understand the 3-2-1 rule, build a personal backup plan for your devices, and check your backups against a security checklist with live scoring.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://anwaardigital.github.io/Cybersecurity/sectools/secure-backup-checklist.html">
+<meta property="og:site_name" content="CyberSec Hub">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Secure Backup Checklist",
+  "description": "Free interactive backup guide: understand the 3-2-1 rule, build a personal backup plan for your devices, and check your backups against a security checklist with live scoring.",
+  "url": "https://anwaardigital.github.io/Cybersecurity/sectools/secure-backup-checklist.html",
+  "applicationCategory": "SecurityApplication",
+  "operatingSystem": "Any",
+  "offers": {"@type": "Offer","price": "0"},
+  "author": {"@type": "Person","name": "Malik Muhammad Anwaar"}
+}
+</script>
+<style>
+.quiz-q{background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:10px;padding:16px;margin:14px 0}
+.quiz-q p{font-weight:600;margin-bottom:6px}
+.quiz-opts button{display:block;width:100%;text-align:left;margin:8px 0;padding:11px 14px;border-radius:9px;border:1px solid var(--border);background:rgba(255,255,255,.04);color:var(--text);cursor:pointer;font-size:.95rem;font-family:inherit}
+.quiz-opts button:hover:not(:disabled){border-color:var(--green)}
+.quiz-opts button.correct{border-color:#00e676;background:rgba(0,230,118,.12)}
+.quiz-opts button.wrong{border-color:#ff5252;background:rgba(255,82,82,.1)}
+.quiz-opts button:disabled{cursor:default}
+.quiz-why{font-size:.88rem;color:var(--muted);margin-top:8px;display:none}
+.chk{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border:1px solid var(--border);border-radius:10px;margin:9px 0;background:rgba(255,255,255,.02);cursor:pointer;font-size:.93rem}
+.chk:hover{border-color:var(--green)}
+.chk input{margin-top:5px;transform:scale(1.3);accent-color:#00e676;flex-shrink:0}
+.chk small{display:block;color:var(--muted);font-size:.85rem;margin-top:3px}
+.chk.done{opacity:.72;border-color:rgba(0,230,118,.45)}
+.pbar{height:12px;background:rgba(255,255,255,.07);border-radius:8px;overflow:hidden;margin:12px 0}
+.pbar>div{height:100%;width:0;background:linear-gradient(90deg,#00b35c,#00e676);transition:width .4s;border-radius:8px}
+.flag{border-left:4px solid;padding:12px 14px;border-radius:0 10px 10px 0;margin:10px 0;background:rgba(255,255,255,.03)}
+.flag.danger{border-color:#ff5252}.flag.warn{border-color:#ff9800}.flag.info{border-color:#29b6f6}.flag.safe{border-color:#00e676}
+.flag b{display:block;margin-bottom:4px;font-size:.95rem}
+.flag p{margin:0;font-size:.89rem;color:#c9d6e8}
+.step-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.step-tabs button{padding:9px 16px;border-radius:20px;border:1px solid var(--border);background:rgba(255,255,255,.04);color:var(--text);cursor:pointer;font-size:.9rem;font-family:inherit}
+.step-tabs button.active{background:rgba(0,230,118,.15);border-color:var(--green);color:#fff}
+.edu h3{color:var(--green);margin:24px 0 8px;font-size:1.05rem}
+.edu ul{margin:6px 0 6px 18px}.edu ol{margin:6px 0 6px 18px}
+.edu li{margin-bottom:6px;font-size:.94rem;color:#d4e0ee}
+.edu p{font-size:.94rem;color:#d4e0ee;margin-bottom:10px}
+table.cmp{width:100%;border-collapse:collapse;font-size:.89rem;margin:12px 0}
+table.cmp th,table.cmp td{border:1px solid var(--border);padding:9px 10px;text-align:left;vertical-align:top}
+table.cmp th{background:rgba(0,230,118,.08);color:var(--green)}
+.score-line{font-size:1.05rem;font-weight:700;margin:14px 0}
+.verdict{border-radius:10px;padding:16px;margin-top:14px;font-size:.95rem}
+</style>
+</head>
+<body>
+<nav class="navbar"><div class="nav-inner">
+<a href="../index.html" class="brand"><span class="brand-icon">🛡️</span><span>CyberSec <span class="green">Hub</span></span></a>
+<button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+<ul class="nav-links" id="navLinks">
+<li><a href="../index.html">Home</a></li>
+<li><a href="../index.html#basics">Basics</a></li>
+<li><a href="../index.html#hacking">Ethical Hacking</a></li>
+<li><a href="../index.html#tools">Tools</a></li>
+<li><a href="../index.html#career">Career</a></li>
+<li><a href="../about.html">About</a></li>
+</ul></div></nav>
+<main class="tool-wrap">
+<h1>💾 Secure Backup Checklist</h1>
+<p class="tool-sub">Ransomware, theft, spilled coffee — data loss is a matter of <i>when</i>, not <i>if</i>. The <b>3-2-1 rule</b> is the professional answer: <b>3</b> copies of your data, on <b>2</b> different media, with <b>1</b> copy offsite.</p>
+<div class="ethical-box"><strong>⚠️ Ethical Use Only:</strong> These tools are for <strong>defensive</strong> purposes — securing your own accounts and systems. Never use security knowledge against systems you do not own or lack written permission to test.</div>
+<div class="tool-card">
+<h3 style="margin-top:0">🗺️ Build your backup plan</h3>
+<p style="color:var(--muted);font-size:.93rem">Tick what you want to protect, then generate your plan:</p>
+<div id="bkdevices"></div>
+<div class="tool-field" style="margin-top:10px"><label for="bkfreq">How often does your important data change?</label>
+<select id="bkfreq"><option value="daily">Daily (work documents, active projects)</option><option value="weekly">Weekly (photos, general files)</option><option value="monthly">Monthly (archives, rarely change)</option></select></div>
+<button class="btn btn-green" onclick="bkPlan()">📋 Generate my backup plan</button>
+<div id="bkplan" style="margin-top:14px"></div>
+</div>
+<div class="tool-card" style="margin-top:20px">
+<h3 style="margin-top:0">🔒 Backup security checklist</h3>
+<div class="pbar"><div id="bkbar"></div></div>
+<div class="score-line" id="bkscore">0 of 8 completed</div>
+<div id="bklist"></div>
+</div>
+<div class="tip-box edu" style="margin-top:22px"><strong>💡 The rule everyone forgets:</strong>
+<p style="margin-top:8px">A backup you have never <b>restored from</b> is a hope, not a backup. Once per quarter, actually restore one file from each backup to prove it works — before the day you desperately need it.</p></div>
+</main>
+<script>
+
+var BKD=["📱 Phone (photos, chats, contacts)","💻 Computer (documents, projects)","☁️ Cloud accounts (email, drive)","🎮 Other (tablet, external drives)"];
+var bkSel=new Array(BKD.length).fill(false);
+(function(){var h='';
+BKD.forEach(function(d,i){h+='<label class="chk" id="bkd'+i+'"><input type="checkbox" onchange="bkSel['+i+']=this.checked"><span>'+d+'</span></label>';});
+document.getElementById('bkdevices').innerHTML=h;})();
+function bkPlan(){var chosen=BKD.filter(function(_,i){return bkSel[i];});
+var freq=document.getElementById('bkfreq');var f=freq.options[freq.selectedIndex].text;
+if(!chosen.length){document.getElementById('bkplan').innerHTML='<div class="flag warn"><b>⚠️ Nothing selected</b><p>Tick at least one device or data type above first.</p></div>';return;}
+var h='<div class="flag safe"><b>✅ Your 3-2-1 backup plan ('+f.split(' (')[0].toLowerCase()+' schedule)</b><p>';
+h+='<b>Protecting:</b> '+chosen.join(', ')+'.<br><br>';
+h+='<b>Copy 1 (working):</b> your devices, as now.<br>';
+h+='<b>Copy 2 (local):</b> an external drive or NAS at home, updated '+f.split(' (')[0].toLowerCase()+' — <b>disconnect it</b> when not backing up so ransomware can\'t reach it.<br>';
+h+='<b>Copy 3 (offsite):</b> encrypted cloud backup or a drive stored elsewhere (family member\'s house, office).<br><br>';
+h+='Encrypt every copy, protect cloud accounts with 2FA, and test a restore quarterly.</p></div>';
+document.getElementById('bkplan').innerHTML=h;}
+var BKC=[
+ ["Backups run automatically on a schedule","Manual backups get forgotten. Automate them so protection doesn't depend on memory."],
+ ["At least one copy is offline / disconnected","Ransomware encrypts everything it can reach — including connected drives. An unplugged drive can't be encrypted."],
+ ["Backup copies are encrypted","Especially cloud and portable drives: enable encryption so a lost drive doesn't mean exposed data."],
+ ["Cloud backup account has 2FA enabled","Your backup account is a master key to your data — protect it with two-factor authentication."],
+ ["I've tested restoring a file recently","Restore one file per backup, per quarter. Untested backups fail exactly when you need them."],
+ ["Old devices are wiped before disposal","Phones and drives you throw away still hold data — see our secure deletion guide before recycling."],
+ ["I know what's NOT backed up","Check: app data, authenticator seeds, crypto wallets, game saves. Fill the gaps deliberately."],
+ ["Someone I trust knows the recovery basics","If something happens to you, can a family member access essential documents? Plan for it."]];
+var bkDone=new Array(BKC.length).fill(false);
+(function(){var h='';
+BKC.forEach(function(c,i){h+='<label class="chk" id="bkchk'+i+'"><input type="checkbox" onchange="bkTgl('+i+',this)"><span><b>'+(i+1)+'. '+c[0]+'</b><small>'+c[1]+'</small></span></label>';});
+document.getElementById('bklist').innerHTML=h;})();
+function bkTgl(i,box){bkDone[i]=box.checked;document.getElementById('bkchk'+i).classList.toggle('done',box.checked);
+var n=bkDone.filter(Boolean).length;
+document.getElementById('bkbar').style.width=Math.round(n/BKC.length*100)+'%';
+document.getElementById('bkscore').textContent=n+' of '+BKC.length+' completed'+(n===BKC.length?' — 🏆 Backup champion!':'');}
+</script>
+<footer class="footer"><div class="container">
+<div class="footer-brand">🛡️ CyberSec <span class="green">Hub</span></div>
+<p>Learn cybersecurity the ethical, legal way.</p>
+<div class="footer-links">
+<a href="../index.html">Home</a><a href="../about.html">About</a><a href="../contact.html">Contact</a><a href="../privacy.html">Privacy Policy</a><a href="../disclaimer.html">Disclaimer</a><a href="../terms.html">Terms</a>
+</div>
+<p class="copyright">© 2026 CyberSec Hub by Anwaar Digital. All rights reserved. Educational content only — always test with written permission.</p>
+<p class="copyright">Developed by <strong style="color:#00e676">Malik Anwaar</strong></p>
+</div></footer><a href="https://wa.me/923288317526" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.6 6.1 1.6h.1c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.6 1.2 1.2-4.5-.3-.4c-1-1.6-1.6-3.5-1.6-5.5C5 9.6 10.6 5 16 5s11 4.6 11 10-5.4 9.8-11 9.8zm6.1-7.3c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.8.1-.3-.2-1.4-.5-2.7-1.6-.9-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6L13 9.5c-.3-.8-.7-.7-1-.7h-.8c-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.5s1.5 4 1.7 4.3c.2.3 2.9 4.4 7 6.2 1 .4 1.7.7 2.3.9.9.3 1.8.2 2.5.2.8-.1 2.3-1 2.7-1.9.3-.9.3-1.7.2-1.9-.1-.1-.3-.2-.7-.4z"/></svg></a>
+</body></html>
