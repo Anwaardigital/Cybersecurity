@@ -17,6 +17,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://anwaardigital.github.io/Cybersecurity/sectools/phishing-url-analyzer.html">
 <meta property="og:site_name" content="CyberSec Hub">
+<meta property="og:image" content="https://anwaardigital.github.io/Cybersecurity/cyber-icon-512.png">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -97,6 +98,39 @@ table.cmp th{background:rgba(0,230,118,.08);color:var(--green)}
 <li><b>Check for HTTPS</b> — though note scammers can get HTTPS too, so it is not proof of safety.</li>
 <li><b>Be suspicious of urgency:</b> "verify in 24 hours or your account closes" is a classic pressure tactic.</li>
 </ol></div>
+<section class="related-box" style="margin-top:36px">
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">About This Tool</h2>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">What this tool does</h2>
+<p>The Phishing URL Analyzer helps you examine a suspicious link before you click it. Phishing attacks trick people into visiting fake websites that steal passwords, payment details, or personal information. This tool checks the link's structure for common warning signs: misleading subdomains, lookalike characters, suspicious top-level domains, URL shorteners hiding the real destination, and mismatches between the displayed text and the actual address.</p>
+<p>It is for anyone who receives unexpected links by email, SMS, or social media and wants a second opinion. The analyzer never visits the link on your behalf in a way that submits data — it inspects the address itself, which is the safe part of the check.</p>
+<p>No automated tool can catch every phishing attempt, and a clean result does not guarantee a link is safe. Use this analyzer as one layer of defense alongside your own judgment: consider who sent the link, whether you were expecting it, and what it is asking you to do.</p>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">How to use it</h2>
+<ol>
+<li>Copy the suspicious link <strong>without clicking it</strong>. On most devices, long-press or right-click the link and choose "Copy link address".</li>
+<li>Paste the link into the analyzer and run the check.</li>
+<li>Read the findings. Pay special attention to the real domain name — attackers rely on you reading only part of the address.</li>
+<li>If anything looks suspicious, do not click. Instead, open the official site yourself by typing its address, or contact the sender through a trusted channel to confirm.</li>
+<li>Report confirmed phishing attempts to the impersonated company and to your email provider's phishing report address.</li>
+</ol>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">Defensive security tips</h2>
+<ul>
+<li><strong>Read the domain from right to left.</strong> In <code>secure-login.example.com.evil.com</code>, the real domain is <code>evil.com</code>. Attackers bury the true domain after a familiar-looking name.</li>
+<li><strong>Hover before you click.</strong> On desktop, hovering over a link shows its real destination. On mobile, long-press to preview the address.</li>
+<li><strong>Beware of urgency.</strong> "Your account will be locked in 24 hours" is a classic pressure tactic. Legitimate companies rarely demand immediate action through links.</li>
+<li><strong>Check for lookalikes.</strong> Characters like <code>rn</code> can look like <code>m</code>, and some international characters mimic Latin letters. When in doubt, type the address yourself.</li>
+<li><strong>Never enter credentials from a link.</strong> Navigate to the site manually for anything involving passwords, payments, or personal data.</li>
+</ul>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">FAQs</h2>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">Does a clean result mean the link is definitely safe?</h3>
+<p>No. New phishing sites appear constantly, and some attacks use compromised legitimate sites that look clean to scanners. A clean result means no obvious red flags were found — you should still apply judgment and verify the sender.</p>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">What should I do if I already clicked a phishing link?</h3>
+<p>Do not enter any information. If you entered a password, change it immediately from the real site, enable two-factor authentication, and check your account for unauthorized activity. If you entered payment details, contact your bank.</p>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">Can the analyzer open the link safely for me?</h3>
+<p>The analyzer inspects the address text itself rather than loading the page, which avoids exposing your browser to the site. For deeper investigation, security professionals use isolated sandbox environments — not their everyday browser.</p>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">Should I forward suspicious emails to someone?</h3>
+<p>Yes. Most email providers have a phishing report address (for example, reportphishing@apwg.org), and companies being impersonated usually publish where to forward fakes. Reporting helps protect others.</p>
+</section>
+
 </main>
 <script>
 
