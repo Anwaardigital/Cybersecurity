@@ -17,6 +17,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://anwaardigital.github.io/Cybersecurity/hacking/web-application-security-basics.html">
 <meta property="og:site_name" content="CyberSec Hub">
+<meta property="og:image" content="https://anwaardigital.github.io/Cybersecurity/cyber-icon-512.png">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -60,11 +61,11 @@
 <p>Websites are attacked every day because they are reachable from anywhere on the internet. Automated bots constantly probe sites for known weaknesses — outdated software, weak login pages, misconfigured forms. Most small websites are not attacked by someone who picked them personally; they are attacked by scripts scanning millions of sites for the same handful of mistakes. That is actually good news: fixing those few common mistakes removes you from the easy-target list.</p>
 <p>Think of web security like locking your shop at night. You cannot stop a determined professional thief forever, but a strong lock, an alarm, and good lighting will stop nearly every opportunist. Web security works the same way — layers of sensible defenses.</p>
 
-<h2>Know the OWASP Top 10 (Awareness, Not Attack Guides)</h2>
+<h2>Know the <a href="../glossary.html#gl-owasp">OWASP</a> Top 10 (Awareness, Not Attack Guides)</h2>
 <p>The <strong>OWASP Top 10</strong> is a respected, publicly maintained list of the most critical security risks to web applications. Understanding it is essential for every website owner. Here are the key ones explained defensively:</p>
 <ul>
-<li><strong>Injection flaws (e.g., SQL injection):</strong> when an application blindly trusts user input and passes it to a database or command interpreter. <em>Defense:</em> use parameterized queries (prepared statements) and never build database queries by gluing text together.</li>
-<li><strong>Cross-site scripting (XSS):</strong> when an attacker stores or reflects malicious scripts that run in visitors' browsers. <em>Defense:</em> escape all user-supplied output (encode HTML), validate input, and set a Content Security Policy.</li>
+<li><strong>Injection flaws (e.g., <a href="../glossary.html#gl-sql-injection">SQL injection</a>):</strong> when an application blindly trusts user input and passes it to a database or command interpreter. <em>Defense:</em> use parameterized queries (prepared statements) and never build database queries by gluing text together.</li>
+<li><strong>Cross-site scripting (<a href="../glossary.html#gl-cross-site-scripting-xss">XSS</a>):</strong> when an attacker stores or reflects malicious scripts that run in visitors' browsers. <em>Defense:</em> escape all user-supplied output (encode HTML), validate input, and set a Content Security Policy.</li>
 <li><strong>Broken access control:</strong> when pages or functions meant for admins are reachable by ordinary users. <em>Defense:</em> enforce server-side checks on every request — never rely on hiding a button.</li>
 <li><strong>Broken authentication:</strong> weak logins, credential stuffing, session hijacking. <em>Defense:</em> enforce strong passwords, rate-limit login attempts, use multi-factor authentication (MFA), and invalidate sessions properly.</li>
 <li><strong>Security misconfiguration:</strong> default passwords, debug modes left on, verbose error messages revealing server details. <em>Defense:</em> review every default setting, disable debug output on production sites.</li>
