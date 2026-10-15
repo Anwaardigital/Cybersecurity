@@ -2,6 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://anwaardigital.github.io/Cybersecurity/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
   <url><loc>https://anwaardigital.github.io/Cybersecurity/about.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://anwaardigital.github.io/Cybersecurity/learning-path.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://anwaardigital.github.io/Cybersecurity/contact.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://anwaardigital.github.io/Cybersecurity/privacy.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://anwaardigital.github.io/Cybersecurity/disclaimer.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -38,6 +39,22 @@
   <url><loc>https://anwaardigital.github.io/Cybersecurity/sectools/hash-generator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://anwaardigital.github.io/Cybersecurity/sectools/password-generator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://anwaardigital.github.io/Cybersecurity/sectools/base64-encoder.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://anwaardigital.github.io/Cybersecurity/sectools/phishing-url-analyzer.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://anwaardigital.github.io/Cybersecurity/sectools/ssl-certificate-guide.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://anwaardigital.github.io/Cybersecurity/sectools/wifi-security-checklist.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://anwaardigital.github.io/Cybersecurity/sectools/firewall-rules-explainer.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://anwaardigital.github.io/Cybersecurity/sectools/vpn-comparison-guide.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://anwaardigital.github.io/Cybersecurity/sectools/twofa-setup-guide.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://anwaardigital.github.io/Cybersecurity/sectools/secure-backup-checklist.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://anwaardigital.github.io/Cybersecurity/sectools/incident-response-playbook.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://anwaardigital.github.io/Cybersecurity/sectools/password-manager-comparison.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://anwaardigital.github.io/Cybersecurity/sectools/social-engineering-quiz.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://anwaardigital.github.io/Cybersecurity/sectools/data-breach-response-guide.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://anwaardigital.github.io/Cybersecurity/sectools/secure-browsing-checklist.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://anwaardigital.github.io/Cybersecurity/sectools/email-security-analyzer.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://anwaardigital.github.io/Cybersecurity/sectools/ransomware-prevention-checklist.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://anwaardigital.github.io/Cybersecurity/sectools/privacy-settings-guide.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://anwaardigital.github.io/Cybersecurity/sectools/secure-deletion-guide.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://anwaardigital.github.io/Cybersecurity/glossary.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://anwaardigital.github.io/Cybersecurity/faq.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
