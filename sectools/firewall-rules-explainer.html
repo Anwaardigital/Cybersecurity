@@ -17,6 +17,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://anwaardigital.github.io/Cybersecurity/sectools/firewall-rules-explainer.html">
 <meta property="og:site_name" content="CyberSec Hub">
+<meta property="og:image" content="https://anwaardigital.github.io/Cybersecurity/cyber-icon-512.png">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -77,7 +78,7 @@ table.cmp th{background:rgba(0,230,118,.08);color:var(--green)}
 <li><a href="../about.html">About</a></li>
 </ul></div></nav>
 <main class="tool-wrap">
-<h1>🧱 Firewall Rules Explainer</h1>
+<h1>🧱 <a href="../glossary.html#gl-firewall">Firewall</a> Rules Explainer</h1>
 <p class="tool-sub">A firewall is a bouncer for your network traffic. Learn the core ideas, <b>simulate your own rules</b>, and see the defensive rules every home setup should have.</p>
 <div class="ethical-box"><strong>⚠️ Ethical Use Only:</strong> These tools are for <strong>defensive</strong> purposes — securing your own accounts and systems. Never use security knowledge against systems you do not own or lack written permission to test.</div>
 <div class="tool-card edu">
@@ -93,7 +94,7 @@ table.cmp th{background:rgba(0,230,118,.08);color:var(--green)}
 <h3 style="margin-top:0">🎮 Rule simulator — build a firewall rule</h3>
 <div class="tool-field"><label for="fdir">Direction</label>
 <select id="fdir"><option value="in">Inbound (someone connecting TO this device)</option><option value="out">Outbound (this device connecting OUT)</option></select></div>
-<div class="tool-field"><label for="fport">Service / port</label>
+<div class="tool-field"><label for="fport">Service / <a href="../glossary.html#gl-port">port</a></label>
 <select id="fport"><option value="web">Web browsing (80/443)</option><option value="dns">DNS lookups (53)</option><option value="rdp">Remote Desktop (3389)</option><option value="ssh">SSH (22)</option><option value="smb">File sharing SMB (445)</option><option value="game">Online game (27015)</option></select></div>
 <div class="tool-field"><label for="fact">Action</label>
 <select id="fact"><option value="allow">ALLOW</option><option value="deny">DENY</option></select></div>
@@ -115,6 +116,40 @@ table.cmp th{background:rgba(0,230,118,.08);color:var(--green)}
 </ul>
 <p><b>⚠️ Never</b> disable your firewall to "fix" a connection problem permanently — find the correct rule instead, and never change firewall settings on devices you don't own.</p>
 </div>
+<section class="related-box" style="margin-top:36px">
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">About This Tool</h2>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">What this tool does</h2>
+<p>The Firewall Rules Explainer teaches you how firewall rules work and what they mean for your own devices and home network. A firewall is a gatekeeper: it decides which network traffic is allowed in or out based on rules you (or your software) define. Every computer, phone, and router has one, but most people never look at its rules.</p>
+<p>The explainer breaks down the key concepts in plain language: allow vs. deny rules, inbound vs. outbound traffic, ports and protocols, and rule order — why the first matching rule wins. Understanding these ideas helps you make sense of firewall prompts ("allow this app through the firewall?") instead of clicking blindly.</p>
+<p>It is for home users, students, and anyone running a small server or smart-home devices. Everything is defensive: the goal is to understand and tighten the firewall protecting your own systems, following the principle of least privilege — allow only what is needed, deny everything else.</p>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">How to use it</h2>
+<ol>
+<li>Read the concept sections in order: what a rule is, then direction, then ports, then ordering.</li>
+<li>Open your own device's firewall settings and look at the existing rules with your new understanding.</li>
+<li>For each "allow" prompt or rule, ask: does this program genuinely need network access to do its job?</li>
+<li>Remove or disable allow rules for programs you no longer use.</li>
+<li>On your router, check that remote administration is off and that no port-forwarding rules exist that you did not create.</li>
+<li>Revisit the rules whenever you install new software that asks for network access.</li>
+</ol>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">Defensive security tips</h2>
+<ul>
+<li><strong>Default deny is the gold standard.</strong> The safest posture is to block everything and explicitly allow only what you need, rather than allowing everything and blocking known-bad items.</li>
+<li><strong>Understand before you allow.</strong> When a program asks for firewall access, pause and consider whether it needs it. A simple photo editor has no business opening network ports.</li>
+<li><strong>Review router port forwards.</strong> Each forwarded port is a door into your network. Delete any you did not set up yourself or no longer need.</li>
+<li><strong>Keep the firewall on.</strong> Disabling the firewall "to make something work" should be a temporary diagnostic step, never a permanent fix — find the correct rule instead.</li>
+<li><strong>Outbound rules matter too.</strong> Most people only think about inbound attacks, but controlling which programs can send data out helps contain malware that does get in.</li>
+</ul>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">FAQs</h2>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">Do I need a firewall if I have antivirus?</h3>
+<p>Yes — they do different jobs. Antivirus looks for malicious files; a firewall controls network traffic. You need both, and both are built into modern operating systems.</p>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">What is a port, in simple terms?</h3>
+<p>A port is a numbered channel that network services use to communicate — like apartment numbers in a building that shares one street address. Web browsing typically uses port 443, for example. Firewalls allow or block traffic per port.</p>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">Why does rule order matter?</h3>
+<p>Firewalls evaluate rules top to bottom and apply the first match. A broad "allow" rule placed above a specific "deny" rule will silently override it — which is why reviewing order matters, not just the rules themselves.</p>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">Should I run a personal firewall on my phone?</h3>
+<p>Mobile operating systems already include network protections and strict app sandboxing. Keeping the OS updated and being careful about which apps you install matters more than adding a third-party firewall app.</p>
+</section>
+
 </main>
 <script>
 
