@@ -17,6 +17,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://anwaardigital.github.io/Cybersecurity/sectools/ssl-certificate-guide.html">
 <meta property="og:site_name" content="CyberSec Hub">
+<meta property="og:image" content="https://anwaardigital.github.io/Cybersecurity/cyber-icon-512.png">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -77,8 +78,8 @@ table.cmp th{background:rgba(0,230,118,.08);color:var(--green)}
 <li><a href="../about.html">About</a></li>
 </ul></div></nav>
 <main class="tool-wrap">
-<h1>🔒 SSL Certificate Guide</h1>
-<p class="tool-sub">What does the padlock really mean? Learn how HTTPS and certificates work, how to inspect any site's certificate yourself, and test your knowledge with a short quiz.</p>
+<h1>🔒 <a href="../glossary.html#gl-ssl-tls">SSL</a> <a href="../glossary.html#gl-certificate-digital">Certificate</a> Guide</h1>
+<p class="tool-sub">What does the padlock really mean? Learn how <a href="../glossary.html#gl-https">HTTPS</a> and certificates work, how to inspect any site's certificate yourself, and test your knowledge with a short quiz.</p>
 <div class="ethical-box"><strong>⚠️ Ethical Use Only:</strong> These tools are for <strong>defensive</strong> purposes — securing your own accounts and systems. Never use security knowledge against systems you do not own or lack written permission to test.</div>
 <div class="tool-card edu">
 <h3 style="margin-top:0">🔐 HTTPS in 30 seconds</h3>
@@ -116,6 +117,40 @@ table.cmp th{background:rgba(0,230,118,.08);color:var(--green)}
 <button class="btn btn-green" onclick="sslScore()" style="margin-top:8px">Check my score</button>
 <div id="sslres" style="margin-top:12px"></div>
 </div>
+<section class="related-box" style="margin-top:36px">
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">About This Tool</h2>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">What this tool does</h2>
+<p>The SSL Certificate Guide explains what the padlock in your browser really means and, for site owners, how to get and maintain a certificate for your own website. SSL/TLS certificates enable HTTPS: they encrypt traffic between the browser and the server and prove the site is who it claims to be.</p>
+<p>For visitors, the guide explains how to interpret certificate warnings, what "not secure" means, and why you should never enter sensitive information on a page without HTTPS. For site owners, it covers obtaining a free certificate, installing it, setting up automatic renewal, and redirecting all traffic to HTTPS.</p>
+<p>It is for everyday web users and for bloggers, freelancers, and small businesses running their own sites. Certificates are a defensive technology: they protect your visitors' data in transit and are now a baseline expectation for any legitimate website.</p>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">How to use it</h2>
+<ol>
+<li><strong>As a visitor:</strong> learn what the padlock icon and certificate details show, and treat browser certificate warnings as stop signs, not annoyances to click through.</li>
+<li><strong>As a site owner:</strong> obtain a certificate from a trusted certificate authority — free automated options exist and are widely used.</li>
+<li>Install the certificate on your hosting following your provider's guide, then enable automatic renewal so it never expires unexpectedly.</li>
+<li>Redirect all HTTP traffic to HTTPS and check that every page, image, and script loads securely (no "mixed content").</li>
+<li>Test your setup with an independent SSL checker and fix any issues it reports.</li>
+<li>Set a calendar reminder to verify renewal is working, even with automation in place.</li>
+</ol>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">Defensive security tips</h2>
+<ul>
+<li><strong>Never bypass certificate warnings casually.</strong> A warning can mean an expired certificate — or an attacker intercepting your connection. On important sites, stop and investigate.</li>
+<li><strong>HTTPS is necessary but not sufficient.</strong> A phishing site can have a valid certificate. Encryption plus the correct domain is what makes a site trustworthy.</li>
+<li><strong>Automate renewal.</strong> Expired certificates take sites offline and erode trust. Automated renewal with monitoring is the reliable approach.</li>
+<li><strong>Secure the whole page.</strong> One insecure image or script on an HTTPS page ("mixed content") weakens the protection. Serve everything over HTTPS.</li>
+<li><strong>Keep private keys private.</strong> A certificate's private key must never be shared, emailed, or stored in public repositories. If it leaks, replace the certificate.</li>
+</ul>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">FAQs</h2>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">What is the difference between SSL and TLS?</h3>
+<p>SSL is the older name; TLS is the modern protocol that actually secures connections today. People still say "SSL certificate" out of habit, but what you get and use is a TLS certificate.</p>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">Are free certificates trustworthy?</h3>
+<p>Yes. Free automated certificate authorities are trusted by all major browsers and provide the same encryption as paid ones. Paid certificates mainly add organizational validation or warranties, which most small sites do not need.</p>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">Does HTTPS make my site rank better?</h3>
+<p>Search engines treat HTTPS as a positive signal, but the main reasons to use it are security and user trust: browsers now label non-HTTPS pages "not secure," which drives visitors away.</p>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">My browser says a site's certificate is invalid. What should I do?</h3>
+<p>Do not enter any information or log in. If it is a site you trust, contact the site owner about the expired or misconfigured certificate, and check that your device's date and time are correct — a wrong clock can cause false warnings.</p>
+</section>
+
 </main>
 <script>
 
