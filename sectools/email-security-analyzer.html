@@ -17,6 +17,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://anwaardigital.github.io/Cybersecurity/sectools/email-security-analyzer.html">
 <meta property="og:site_name" content="CyberSec Hub">
+<meta property="og:image" content="https://anwaardigital.github.io/Cybersecurity/cyber-icon-512.png">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -110,6 +111,7 @@ table.cmp th{background:rgba(0,230,118,.08);color:var(--green)}
 </main>
 <script>
 
+function esc(s){return String(s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
 function eflag(level,title,text){return '<div class="flag '+level+'"><b>'+title+'</b><p>'+text+'</p></div>';}
 function analyzeEmail(){
 var name=document.getElementById('efrom').value.trim(), addr=document.getElementById('eaddr').value.trim().toLowerCase(), subj=document.getElementById('esubj').value.trim();
@@ -117,19 +119,19 @@ var out=document.getElementById('eresult');
 if(!addr){out.innerHTML=eflag('info','⌨️ Enter the sender address','The sender email address is the most revealing part — copy it from the email (in most apps: tap/click the sender name to reveal it).');return;}
 var flags=[],ok=[];
 var m=addr.match(/@([^@\s>]+)/);
-if(!m){out.innerHTML=eflag('warn','⚠️ Invalid address format','This doesn\'t look like a valid email address ('+addr+'). Malformed sender data is itself suspicious.');return;}
+if(!m){out.innerHTML=eflag('warn','⚠️ Invalid address format','This doesn\'t look like a valid email address ('+esc(addr)+'). Malformed sender data is itself suspicious.');return;}
 var domain=m[1], labels=domain.split('.'), etld=labels.slice(-2).join('.');
 var OFFICIAL={paypal:"paypal.com",google:"google.com",facebook:"facebook.com",apple:"apple.com",microsoft:"microsoft.com",amazon:"amazon.com",netflix:"netflix.com",instagram:"instagram.com",whatsapp:"whatsapp.com",linkedin:"linkedin.com",ebay:"ebay.com",dhl:"dhl.com",fedex:"fedex.com"};
 var FREE=["gmail.com","yahoo.com","outlook.com","hotmail.com","aol.com","proton.me","protonmail.com","icloud.com","gmx.com","yandex.com"];
 var CORPWORDS=["bank","paypal","security","support","billing","verify","account","irs","tax","customs","delivery"];
 var claimed=null;
 for(var b in OFFICIAL){ if(name.toLowerCase().indexOf(b)>-1||subj.toLowerCase().indexOf(b)>-1){claimed=b;break;} }
-if(claimed&&etld!==OFFICIAL[claimed]) flags.push(eflag('danger','🚨 Impersonating "'+claimed+'"','The message claims to be about <b>'+claimed+'</b> but was sent from <b>'+domain+'</b> — not the official '+OFFICIAL[claimed]+'. This is the classic phishing pattern.'));
+if(claimed&&etld!==OFFICIAL[claimed]) flags.push(eflag('danger','🚨 Impersonating "'+esc(claimed)+'"','The message claims to be about <b>'+esc(claimed)+'</b> but was sent from <b>'+esc(domain)+'</b> — not the official '+OFFICIAL[claimed]+'. This is the classic phishing pattern.'));
 if(!claimed&&CORPWORDS.some(function(w){return name.toLowerCase().indexOf(w)>-1;})&&FREE.indexOf(etld)>-1)
- flags.push(eflag('danger','🚨 "Official" name from a free email provider','The sender name sounds corporate ('+name+') but the address is a free '+etld+' account. Real banks and companies send from their own domains.'));
-if(FREE.indexOf(etld)>-1&&claimed) flags.push(eflag('warn','⚠️ Free provider for a sensitive topic','Sent from '+etld+' while discussing "'+claimed+'". Possible, but treat with skepticism and verify independently.'));
-if(/[\d]{3,}/.test(domain)||/[-_]{2,}/.test(domain)) flags.push(eflag('warn','⚠️ Odd-looking domain','Random numbers or repeated dashes/hyphens in domains (like '+domain+') are common in throwaway phishing domains.'));
-if(labels.length>3) flags.push(eflag('warn','⚠️ Many subdomains','The real domain is the last two parts ('+etld+'). Attackers bury trusted names in subdomains: <b>secure.'+claimed||'bank'+'.'+domain+'</b> is still just '+domain+'.'));
+ flags.push(eflag('danger','🚨 "Official" name from a free email provider','The sender name sounds corporate ('+esc(name)+') but the address is a free '+esc(etld)+' account. Real banks and companies send from their own domains.'));
+if(FREE.indexOf(etld)>-1&&claimed) flags.push(eflag('warn','⚠️ Free provider for a sensitive topic','Sent from '+esc(etld)+' while discussing "'+esc(claimed)+'". Possible, but treat with skepticism and verify independently.'));
+if(/[\d]{3,}/.test(domain)||/[-_]{2,}/.test(domain)) flags.push(eflag('warn','⚠️ Odd-looking domain','Random numbers or repeated dashes/hyphens in domains (like '+esc(domain)+') are common in throwaway phishing domains.'));
+if(labels.length>3) flags.push(eflag('warn','⚠️ Many subdomains','The real domain is the last two parts ('+esc(etld)+'). Attackers bury trusted names in subdomains: <b>secure.'+esc(claimed||'bank')+'.'+esc(domain)+'</b> is still just '+esc(domain)+'.'));
 var URG=["urgent","immediately","within 24 hours","suspended","verify now","action required","limited time","final notice","account closed","unauthorized"];
 var found=URG.filter(function(w){return subj.toLowerCase().indexOf(w)>-1;});
 if(found.length) flags.push(eflag('warn','⚠️ Pressure language in subject','Words like "'+found.slice(0,3).join('", "')+'" are designed to make you act before thinking. Legitimate organizations rarely threaten account closure by email.'));
