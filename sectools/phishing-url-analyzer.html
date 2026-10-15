@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/png" sizes="192x192" href="https://anwaardigital.github.io/Cybersecurity/cyber-icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="https://anwaardigital.github.io/Cybersecurity/cyber-icon-512.png">
+<link rel="apple-touch-icon" href="https://anwaardigital.github.io/Cybersecurity/cyber-icon-192.png">
+<!-- Cookie consent (GDPR): Google Analytics loads only after you press Accept -->
+<script src="../cookie-consent.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Phishing URL Analyzer — Learn to Spot Suspicious Links</title>
+<meta name="description" content="Free educational phishing URL analyzer: paste a suspicious link and learn to spot red flags like lookalike domains, IP addresses and URL shorteners. Runs in your browser.">
+<link rel="stylesheet" href="../styles.css">
+<link rel="canonical" href="https://anwaardigital.github.io/Cybersecurity/sectools/phishing-url-analyzer.html">
+<meta property="og:title" content="Phishing URL Analyzer — Learn to Spot Suspicious Links">
+<meta property="og:description" content="Free educational phishing URL analyzer: paste a suspicious link and learn to spot red flags like lookalike domains, IP addresses and URL shorteners. Runs in your browser.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://anwaardigital.github.io/Cybersecurity/sectools/phishing-url-analyzer.html">
+<meta property="og:site_name" content="CyberSec Hub">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Phishing URL Analyzer",
+  "description": "Free educational phishing URL analyzer: paste a suspicious link and learn to spot red flags like lookalike domains, IP addresses and URL shorteners. Runs in your browser.",
+  "url": "https://anwaardigital.github.io/Cybersecurity/sectools/phishing-url-analyzer.html",
+  "applicationCategory": "SecurityApplication",
+  "operatingSystem": "Any",
+  "offers": {"@type": "Offer","price": "0"},
+  "author": {"@type": "Person","name": "Malik Muhammad Anwaar"}
+}
+</script>
+<style>
+.quiz-q{background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:10px;padding:16px;margin:14px 0}
+.quiz-q p{font-weight:600;margin-bottom:6px}
+.quiz-opts button{display:block;width:100%;text-align:left;margin:8px 0;padding:11px 14px;border-radius:9px;border:1px solid var(--border);background:rgba(255,255,255,.04);color:var(--text);cursor:pointer;font-size:.95rem;font-family:inherit}
+.quiz-opts button:hover:not(:disabled){border-color:var(--green)}
+.quiz-opts button.correct{border-color:#00e676;background:rgba(0,230,118,.12)}
+.quiz-opts button.wrong{border-color:#ff5252;background:rgba(255,82,82,.1)}
+.quiz-opts button:disabled{cursor:default}
+.quiz-why{font-size:.88rem;color:var(--muted);margin-top:8px;display:none}
+.chk{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border:1px solid var(--border);border-radius:10px;margin:9px 0;background:rgba(255,255,255,.02);cursor:pointer;font-size:.93rem}
+.chk:hover{border-color:var(--green)}
+.chk input{margin-top:5px;transform:scale(1.3);accent-color:#00e676;flex-shrink:0}
+.chk small{display:block;color:var(--muted);font-size:.85rem;margin-top:3px}
+.chk.done{opacity:.72;border-color:rgba(0,230,118,.45)}
+.pbar{height:12px;background:rgba(255,255,255,.07);border-radius:8px;overflow:hidden;margin:12px 0}
+.pbar>div{height:100%;width:0;background:linear-gradient(90deg,#00b35c,#00e676);transition:width .4s;border-radius:8px}
+.flag{border-left:4px solid;padding:12px 14px;border-radius:0 10px 10px 0;margin:10px 0;background:rgba(255,255,255,.03)}
+.flag.danger{border-color:#ff5252}.flag.warn{border-color:#ff9800}.flag.info{border-color:#29b6f6}.flag.safe{border-color:#00e676}
+.flag b{display:block;margin-bottom:4px;font-size:.95rem}
+.flag p{margin:0;font-size:.89rem;color:#c9d6e8}
+.step-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.step-tabs button{padding:9px 16px;border-radius:20px;border:1px solid var(--border);background:rgba(255,255,255,.04);color:var(--text);cursor:pointer;font-size:.9rem;font-family:inherit}
+.step-tabs button.active{background:rgba(0,230,118,.15);border-color:var(--green);color:#fff}
+.edu h3{color:var(--green);margin:24px 0 8px;font-size:1.05rem}
+.edu ul{margin:6px 0 6px 18px}.edu ol{margin:6px 0 6px 18px}
+.edu li{margin-bottom:6px;font-size:.94rem;color:#d4e0ee}
+.edu p{font-size:.94rem;color:#d4e0ee;margin-bottom:10px}
+table.cmp{width:100%;border-collapse:collapse;font-size:.89rem;margin:12px 0}
+table.cmp th,table.cmp td{border:1px solid var(--border);padding:9px 10px;text-align:left;vertical-align:top}
+table.cmp th{background:rgba(0,230,118,.08);color:var(--green)}
+.score-line{font-size:1.05rem;font-weight:700;margin:14px 0}
+.verdict{border-radius:10px;padding:16px;margin-top:14px;font-size:.95rem}
+</style>
+</head>
+<body>
+<nav class="navbar"><div class="nav-inner">
+<a href="../index.html" class="brand"><span class="brand-icon">🛡️</span><span>CyberSec <span class="green">Hub</span></span></a>
+<button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+<ul class="nav-links" id="navLinks">
+<li><a href="../index.html">Home</a></li>
+<li><a href="../index.html#basics">Basics</a></li>
+<li><a href="../index.html#hacking">Ethical Hacking</a></li>
+<li><a href="../index.html#tools">Tools</a></li>
+<li><a href="../index.html#career">Career</a></li>
+<li><a href="../about.html">About</a></li>
+</ul></div></nav>
+<main class="tool-wrap">
+<h1>🎣 Phishing URL Analyzer</h1>
+<p class="tool-sub">Paste a suspicious link below. This educational tool checks it against common phishing red flags and explains each one — so you learn to spot scams yourself. Everything runs in your browser; the link is never sent anywhere or visited.</p>
+<div class="ethical-box"><strong>⚠️ Ethical Use Only:</strong> These tools are for <strong>defensive</strong> purposes — securing your own accounts and systems. Never use security knowledge against systems you do not own or lack written permission to test.</div>
+<div class="tool-card">
+<div class="tool-field"><label for="purl">Suspicious URL</label>
+<input type="text" id="purl" placeholder="Paste the full link here, e.g. https://example.com/login" autocomplete="off" spellcheck="false"></div>
+<button class="btn btn-green" onclick="analyzeURL()">🔍 Analyze URL</button>
+<div id="uresult" style="margin-top:18px"></div>
+</div>
+<div class="tip-box edu" style="margin-top:22px"><strong>💡 Remember:</strong>
+<p style="margin-top:8px">This tool checks <b>patterns only</b> — it cannot prove a link is safe. A link with no red flags can still be dangerous. When in doubt: <b>do not click</b>. Instead, open your browser and type the official website address yourself, or use the organization's official app.</p></div>
+<div class="edu" style="margin-top:6px">
+<h3>🧠 The 5-second manual check</h3>
+<ol>
+<li><b>Read the domain backwards:</b> in <code>login.paypal.com.scam-site.tk</code>, the real domain is <code>scam-site.tk</code> — everything before it is just subdomains.</li>
+<li><b>Look for lookalikes:</b> <code>paypa1.com</code> (digit one), <code>rnicrosoft.com</code> (r+n), <code>faceb00k.com</code> (zeros).</li>
+<li><b>Hover before you click</b> (on desktop) to preview the real destination.</li>
+<li><b>Check for HTTPS</b> — though note scammers can get HTTPS too, so it is not proof of safety.</li>
+<li><b>Be suspicious of urgency:</b> "verify in 24 hours or your account closes" is a classic pressure tactic.</li>
+</ol></div>
+</main>
+<script>
+
+var OFFICIAL = {paypal:"paypal.com",google:"google.com",facebook:"facebook.com",apple:"apple.com",microsoft:"microsoft.com",amazon:"amazon.com",netflix:"netflix.com",instagram:"instagram.com",whatsapp:"whatsapp.com",linkedin:"linkedin.com",twitter:"twitter.com",x:"x.com",tiktok:"tiktok.com",ebay:"ebay.com",bank:"",irs:"irs.gov"};
+var SHORTENERS = ["bit.ly","tinyurl.com","t.co","goo.gl","ow.ly","is.gd","buff.ly","cutt.ly","rb.gy","shorturl.at","rebrand.ly","t.ly","shorte.st","adf.ly","tiny.cc","s.id"];
+var BAD_TLDS = ["tk","ml","ga","cf","gq","buzz","top","xyz","info","ru","cn","pw","cc","ws","rest","cam","zip","mov"];
+function flag(level,title,text){return '<div class="flag '+level+'"><b>'+title+'</b><p>'+text+'</p></div>';}
+function analyzeURL(){
+  var raw=document.getElementById('purl').value.trim(), out=document.getElementById('uresult');
+  if(!raw){out.innerHTML=flag('info','⌨️ Paste a URL','Paste the full suspicious link above and press Analyze.');return;}
+  var u;
+  try{ u=new URL(/^https?:\/\//i.test(raw)?raw:'https://'+raw); }
+  catch(e){ out.innerHTML=flag('warn','⚠️ Not a valid URL','This does not look like a valid web address. Phishing messages sometimes contain broken or disguised links — treat them with suspicion.'); return; }
+  var host=u.hostname.toLowerCase(), path=u.pathname+u.search+u.hash, flags=[], safe=[];
+  if(u.protocol!=='https:') flags.push(flag('warn','⚠️ Not using HTTPS','The link uses <b>'+u.protocol.replace(':','').toUpperCase()+'</b> instead of HTTPS. Any data you enter (passwords, card numbers) could be read by attackers on the network.'));
+  else safe.push(flag('safe','✅ Uses HTTPS','The connection would be encrypted. Note: scammers can also get HTTPS certificates, so this alone proves nothing.'));
+  if(/^\d+\.\d+\.\d+\.\d+$/.test(host)||/^\[?[0-9a-f:]+\]?$/.test(host)&&host.indexOf(':')>-1)
+    flags.push(flag('danger','🚨 IP address instead of a domain','Legitimate companies use domain names (like <b>example.com</b>), not raw IP addresses. Phishing pages very often hide behind IPs.'));
+  if(raw.indexOf('@')>-1) flags.push(flag('danger','🚨 Contains "@" in the link','Everything before the last <b>@</b> in a URL is ignored by the browser (it is treated as login info). Attackers use this to disguise the real destination, e.g. <b>https://real-bank.com@evil-site.com</b> actually goes to <b>evil-site.com</b>.'));
+  if(host.indexOf('xn--')>-1) flags.push(flag('warn','⚠️ Internationalized domain (xn--)','This domain uses special characters that can look identical to normal letters (homoglyph attack), e.g. a Cyrillic "а" instead of Latin "a".'));
+  var labels=host.split('.');
+  if(labels.length>4) flags.push(flag('warn','⚠️ Many subdomains ('+labels.length+' parts)','Phishing links often stack subdomains to bury a trusted name inside, e.g. <b>secure.login.bank.com.<i>attacker</i>.xyz</b> — the real domain is the last two parts.'));
+  if(SHORTENERS.indexOf(host.replace(/^www\./,''))>-1) flags.push(flag('warn','⚠️ URL shortener','Shortened links hide the real destination. Expand the link (or visit the official site directly) before trusting it.'));
+  var tld=labels[labels.length-1];
+  if(BAD_TLDS.indexOf(tld)>-1) flags.push(flag('warn','⚠️ High-abuse domain ending (.'+tld+')','This top-level domain is frequently abused for phishing because domains there are cheap or free. Legitimate banks and big brands rarely use it.'));
+  var etld=labels.slice(-2).join('.');
+  for(var brand in OFFICIAL){ if(host.indexOf(brand)>-1 && OFFICIAL[brand] && etld!==OFFICIAL[brand] && host.indexOf(OFFICIAL[brand])===-1){
+    flags.push(flag('danger','🚨 Lookalike of "'+brand+'"','The link mentions <b>'+brand+'</b> but is NOT on the official '+OFFICIAL[brand]+' domain. This is the #1 phishing trick: <b>'+host+'</b> is controlled by someone else.')); break; } }
+  if(u.port) flags.push(flag('info','ℹ️ Unusual port (:'+u.port+')','Normal websites use no port in the address. A port number can indicate a hastily set-up phishing server.'));
+  if(/%2e|%2f|%40/i.test(raw)) flags.push(flag('warn','⚠️ Encoded characters (%2E, %2F, %40)','Parts of the address are percent-encoded to confuse you or bypass simple filters.'));
+  if(/\.(exe|scr|bat|msi|zip|rar|js|vbs|ps1)(\?|#|$)/i.test(path)) flags.push(flag('warn','⚠️ Link points to a downloadable file','The link would download a file instead of opening a page. Never run unexpected downloads — they can install malware.'));
+  if(raw.length>75) flags.push(flag('info','ℹ️ Unusually long URL ('+raw.length+' characters)','Very long links are sometimes used to push the suspicious part out of view in messages and emails.'));
+  if(/(\d{4,})/.test(path)&&/\.(php|aspx?)$/i.test(path)) flags.push(flag('info','ℹ️ Suspicious script path','The path looks like an auto-generated phishing-kit page.'));
+  var html='<div class="score-line">'+(flags.length?('🚩 '+flags.length+' red flag'+(flags.length>1?'s':'')+' found — treat this link as <span style="color:#ff5252">suspicious</span>. Do NOT enter personal information.'):'<span style="color:#00e676">No common red flags found.</span>')+'</div>';
+  html+=flags.join('')+safe.join('');
+  html+=flag('info','📚 Educational note','Phishers invent new tricks constantly. This checker looks for <b>known patterns</b> — a "clean" result is not a safety certificate. Your best defense is habit: navigate to important sites yourself instead of clicking links.');
+  out.innerHTML=html;
+}
+</script>
+<footer class="footer"><div class="container">
+<div class="footer-brand">🛡️ CyberSec <span class="green">Hub</span></div>
+<p>Learn cybersecurity the ethical, legal way.</p>
+<div class="footer-links">
+<a href="../index.html">Home</a><a href="../about.html">About</a><a href="../contact.html">Contact</a><a href="../privacy.html">Privacy Policy</a><a href="../disclaimer.html">Disclaimer</a><a href="../terms.html">Terms</a>
+</div>
+<p class="copyright">© 2026 CyberSec Hub by Anwaar Digital. All rights reserved. Educational content only — always test with written permission.</p>
+<p class="copyright">Developed by <strong style="color:#00e676">Malik Anwaar</strong></p>
+</div></footer><a href="https://wa.me/923288317526" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.6 6.1 1.6h.1c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.6 1.2 1.2-4.5-.3-.4c-1-1.6-1.6-3.5-1.6-5.5C5 9.6 10.6 5 16 5s11 4.6 11 10-5.4 9.8-11 9.8zm6.1-7.3c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.8.1-.3-.2-1.4-.5-2.7-1.6-.9-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6L13 9.5c-.3-.8-.7-.7-1-.7h-.8c-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.5s1.5 4 1.7 4.3c.2.3 2.9 4.4 7 6.2 1 .4 1.7.7 2.3.9.9.3 1.8.2 2.5.2.8-.1 2.3-1 2.7-1.9.3-.9.3-1.7.2-1.9-.1-.1-.3-.2-.7-.4z"/></svg></a>
+</body></html>
