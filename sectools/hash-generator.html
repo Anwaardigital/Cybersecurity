@@ -17,6 +17,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://anwaardigital.github.io/Cybersecurity/sectools/hash-generator.html">
 <meta property="og:site_name" content="CyberSec Hub">
+<meta property="og:image" content="https://anwaardigital.github.io/Cybersecurity/cyber-icon-512.png">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -59,6 +60,39 @@
 <div class="tool-result"><span class="res-label">SHA-256 (256-bit)</span><span id="sha256">—</span><br><button class="copy-btn" onclick="copyRes('sha256')">Copy</button></div>
 </div>
 <div class="tip-box" style="margin-top:22px"><strong>💡 What are hashes?</strong> A hash is a one-way fingerprint of data. MD5 and SHA-1 are <strong>broken</strong> — never use them for passwords. SHA-256 is still secure for integrity checks. For password storage, professionals use bcrypt or Argon2.</div>
+<section class="related-box" style="margin-top:36px">
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">About This Tool</h2>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">What this tool does</h2>
+<p>The Hash Generator computes cryptographic hash values (digests) for any text you enter, using well-known algorithms such as SHA-256 and SHA-512. A hash function takes input of any length and produces a fixed-length fingerprint that is unique to that input: change one character and the hash changes completely.</p>
+<p>Hashes are a defensive building block of security. They are used to verify that a downloaded file has not been tampered with (you compare the published hash with the one you compute), to store passwords safely (sites store hashes, not the passwords themselves), and to confirm data integrity in backups and transfers.</p>
+<p>This tool is for students, developers, and curious users who want to understand what hashes look like and how they behave. Everything runs in your browser, so the text you hash never leaves your device. Hashing is not encryption — it cannot be reversed — which is exactly what makes it useful for integrity checks.</p>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">How to use it</h2>
+<ol>
+<li>Type or paste text into the input box. For file verification, use the text of a published checksum instead.</li>
+<li>Select the hash algorithm. SHA-256 is a good default for modern use.</li>
+<li>Copy the resulting hash.</li>
+<li>To verify a file, compute the hash of the file you downloaded and compare it character by character with the hash published by the official source. They must match exactly.</li>
+<li>For learning, try hashing the same text twice to confirm the result is identical, then change one letter to see how dramatically the output changes.</li>
+</ol>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">Defensive security tips</h2>
+<ul>
+<li><strong>Verify downloads.</strong> Before installing software, compare its published checksum with the one you compute. A mismatch means the file may be tampered with — do not install it.</li>
+<li><strong>A hash is not encryption.</strong> Hashing cannot hide data the way encryption does, and hashes of common passwords can be looked up in precomputed tables. Never treat a plain hash as a secret.</li>
+<li><strong>Prefer SHA-256 or SHA-512.</strong> MD5 and SHA-1 have known weaknesses and should not be used for security purposes, though you may still see them on old checksum pages.</li>
+<li><strong>Passwords need special hashing.</strong> Secure systems hash passwords with slow, salted algorithms (like bcrypt or Argon2), not plain SHA-256. If you are building software, follow that standard.</li>
+<li><strong>Protect the originals.</strong> A hash only proves integrity if you have a trustworthy published hash to compare against — always get checksums from the official source.</li>
+</ul>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">FAQs</h2>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">What is the difference between hashing and encryption?</h3>
+<p>Encryption is reversible with a key: it hides data so it can be read later. Hashing is one-way: it produces a fingerprint that cannot be turned back into the original text. That is why hashes verify integrity but cannot protect secrets.</p>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">Can two different inputs produce the same hash?</h3>
+<p>In theory, yes — this is called a collision. In practice, with SHA-256 it is so unlikely that it is not a concern for everyday integrity checking. Weak algorithms like MD5, however, have practical collision attacks and should be avoided.</p>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">Why does the hash change completely when I change one letter?</h3>
+<p>This is called the avalanche effect and it is by design. It means even a tiny, invisible change to a file produces a completely different hash, which makes tampering easy to detect.</p>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">Is this tool safe for sensitive text?</h3>
+<p>The hashing runs locally in your browser, so nothing is sent anywhere. Still, avoid pasting highly sensitive material into any web page as a general habit.</p>
+</section>
+
 </main>
 <script>
 function md5(s){function R(n,c){return(n<<c)|(n>>>(32-c))}function F(x,y,z){return(x&y)|(~x&z)}function G(x,y,z){return(x&z)|(y&~z)}function H(x,y,z){return x^y^z}function I(x,y,z){return y^(x|~z)}function FF(a,b,c,d,x,s,ac){a=(a+F(b,c,d)+x+ac)|0;return(R(a,s)+b)|0}function GG(a,b,c,d,x,s,ac){a=(a+G(b,c,d)+x+ac)|0;return(R(a,s)+b)|0}function HH(a,b,c,d,x,s,ac){a=(a+H(b,c,d)+x+ac)|0;return(R(a,s)+b)|0}function II(a,b,c,d,x,s,ac){a=(a+I(b,c,d)+x+ac)|0;return(R(a,s)+b)|0}

@@ -17,6 +17,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://anwaardigital.github.io/Cybersecurity/sectools/base64-encoder.html">
 <meta property="og:site_name" content="CyberSec Hub">
+<meta property="og:image" content="https://anwaardigital.github.io/Cybersecurity/cyber-icon-512.png">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -63,6 +64,39 @@
 <button class="copy-btn" onclick="copyB64()">Copy Output</button>
 </div>
 <div class="tip-box" style="margin-top:22px"><strong>💡 Note:</strong> Base64 is <strong>encoding, not encryption</strong> — anyone can decode it. Never use Base64 to "hide" passwords or secrets.</div>
+<section class="related-box" style="margin-top:36px">
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">About This Tool</h2>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">What this tool does</h2>
+<p>The Base64 Encoder/Decoder converts text to and from Base64 format. Base64 is a way of representing binary data using only plain ASCII text characters, which makes it safe to include in emails, URLs, configuration files, and web pages that cannot handle raw binary data.</p>
+<p>Common legitimate uses include embedding small images directly into HTML or CSS (data URIs), encoding credentials for the HTTP Basic authentication header, and packaging binary attachments for email. Developers also meet Base64 in JSON Web Tokens, certificates, and API payloads.</p>
+<p>This tool runs entirely in your browser — nothing you encode or decode is sent to a server. The most important thing to understand is what Base64 is <em>not</em>: it is not encryption. Base64-encoded data can be decoded by anyone instantly, so it must never be used to hide passwords, tokens, or private information.</p>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">How to use it</h2>
+<ol>
+<li>Paste or type your text into the input box.</li>
+<li>Choose <strong>Encode</strong> to convert text into Base64, or <strong>Decode</strong> to convert Base64 back into readable text.</li>
+<li>Copy the result with the copy button and use it wherever plain-text-safe data is needed.</li>
+<li>When decoding something you received from someone else, inspect the output before using it — decoded data can contain anything, including links or scripts.</li>
+<li>Never treat encoded output as protected. If it needs to stay secret, encrypt it properly instead.</li>
+</ol>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">Defensive security tips</h2>
+<ul>
+<li><strong>Base64 is not encryption.</strong> Anyone can decode it in seconds. Never store passwords, API keys, or personal data "protected" only by Base64.</li>
+<li><strong>Inspect before you trust.</strong> Attackers sometimes hide malicious URLs or scripts inside Base64 strings. Decode suspicious content in a safe context and examine it carefully.</li>
+<li><strong>Use real encryption for secrets.</strong> If data must stay confidential, use established encryption (for example, AES with a strong key) or a secrets manager — not encoding.</li>
+<li><strong>Watch for oversized payloads.</strong> Base64 inflates data by about 33%, so it is a poor choice for large files; use it for small snippets and tokens.</li>
+<li><strong>Validate decoded input.</strong> If your application accepts Base64 from users, decode it in a controlled way and validate the result before using it.</li>
+</ul>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">FAQs</h2>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">Is Base64 a form of encryption?</h3>
+<p>No. Encryption requires a secret key and is designed to be unreadable without it. Base64 is just an encoding — a different representation of the same data — and anyone can reverse it instantly with a free tool like this one.</p>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">Why do developers use Base64 if it is not secure?</h3>
+<p>For compatibility, not secrecy. It lets binary data travel safely through systems that only handle text, such as email, URLs, and JSON. Security, when needed, comes from a separate encryption layer.</p>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">Can Base64 be used to hide malware?</h3>
+<p>Yes, and that is why you should be cautious with encoded strings from untrusted sources. Decoding a suspicious string yourself is a safe way to see what it really contains before you trust it.</p>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">Does this tool upload my data anywhere?</h3>
+<p>No. Encoding and decoding happen locally in your browser, so your input never leaves your device.</p>
+</section>
+
 </main>
 <script>
 function b64enc(){try{document.getElementById('b64out').value=btoa(unescape(encodeURIComponent(document.getElementById('b64in').value)))}catch(e){document.getElementById('b64out').value="Error: "+e.message}}

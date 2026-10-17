@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/png" sizes="192x192" href="https://anwaardigital.github.io/Cybersecurity/cyber-icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="https://anwaardigital.github.io/Cybersecurity/cyber-icon-512.png">
+<link rel="apple-touch-icon" href="https://anwaardigital.github.io/Cybersecurity/cyber-icon-192.png">
+<!-- Cookie consent (GDPR): Google Analytics loads only after you press Accept -->
+<script src="../cookie-consent.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Secure Browsing Checklist — Harden Your Browser</title>
+<meta name="description" content="Free interactive secure browsing checklist: harden your browser step by step (updates, HTTPS-only, extensions, cookies, downloads) with live scoring, plus a browsing-myths quiz.">
+<link rel="stylesheet" href="../styles.css">
+<link rel="canonical" href="https://anwaardigital.github.io/Cybersecurity/sectools/secure-browsing-checklist.html">
+<meta property="og:title" content="Secure Browsing Checklist — Harden Your Browser">
+<meta property="og:description" content="Free interactive secure browsing checklist: harden your browser step by step (updates, HTTPS-only, extensions, cookies, downloads) with live scoring, plus a browsing-myths quiz.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://anwaardigital.github.io/Cybersecurity/sectools/secure-browsing-checklist.html">
+<meta property="og:site_name" content="CyberSec Hub">
+<meta property="og:image" content="https://anwaardigital.github.io/Cybersecurity/cyber-icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Secure Browsing Checklist",
+  "description": "Free interactive secure browsing checklist: harden your browser step by step (updates, HTTPS-only, extensions, cookies, downloads) with live scoring, plus a browsing-myths quiz.",
+  "url": "https://anwaardigital.github.io/Cybersecurity/sectools/secure-browsing-checklist.html",
+  "applicationCategory": "SecurityApplication",
+  "operatingSystem": "Any",
+  "offers": {"@type": "Offer","price": "0"},
+  "author": {"@type": "Person","name": "Malik Muhammad Anwaar"}
+}
+</script>
+<style>
+.quiz-q{background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:10px;padding:16px;margin:14px 0}
+.quiz-q p{font-weight:600;margin-bottom:6px}
+.quiz-opts button{display:block;width:100%;text-align:left;margin:8px 0;padding:11px 14px;border-radius:9px;border:1px solid var(--border);background:rgba(255,255,255,.04);color:var(--text);cursor:pointer;font-size:.95rem;font-family:inherit}
+.quiz-opts button:hover:not(:disabled){border-color:var(--green)}
+.quiz-opts button.correct{border-color:#00e676;background:rgba(0,230,118,.12)}
+.quiz-opts button.wrong{border-color:#ff5252;background:rgba(255,82,82,.1)}
+.quiz-opts button:disabled{cursor:default}
+.quiz-why{font-size:.88rem;color:var(--muted);margin-top:8px;display:none}
+.chk{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border:1px solid var(--border);border-radius:10px;margin:9px 0;background:rgba(255,255,255,.02);cursor:pointer;font-size:.93rem}
+.chk:hover{border-color:var(--green)}
+.chk input{margin-top:5px;transform:scale(1.3);accent-color:#00e676;flex-shrink:0}
+.chk small{display:block;color:var(--muted);font-size:.85rem;margin-top:3px}
+.chk.done{opacity:.72;border-color:rgba(0,230,118,.45)}
+.pbar{height:12px;background:rgba(255,255,255,.07);border-radius:8px;overflow:hidden;margin:12px 0}
+.pbar>div{height:100%;width:0;background:linear-gradient(90deg,#00b35c,#00e676);transition:width .4s;border-radius:8px}
+.flag{border-left:4px solid;padding:12px 14px;border-radius:0 10px 10px 0;margin:10px 0;background:rgba(255,255,255,.03)}
+.flag.danger{border-color:#ff5252}.flag.warn{border-color:#ff9800}.flag.info{border-color:#29b6f6}.flag.safe{border-color:#00e676}
+.flag b{display:block;margin-bottom:4px;font-size:.95rem}
+.flag p{margin:0;font-size:.89rem;color:#c9d6e8}
+.step-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.step-tabs button{padding:9px 16px;border-radius:20px;border:1px solid var(--border);background:rgba(255,255,255,.04);color:var(--text);cursor:pointer;font-size:.9rem;font-family:inherit}
+.step-tabs button.active{background:rgba(0,230,118,.15);border-color:var(--green);color:#fff}
+.edu h3{color:var(--green);margin:24px 0 8px;font-size:1.05rem}
+.edu ul{margin:6px 0 6px 18px}.edu ol{margin:6px 0 6px 18px}
+.edu li{margin-bottom:6px;font-size:.94rem;color:#d4e0ee}
+.edu p{font-size:.94rem;color:#d4e0ee;margin-bottom:10px}
+table.cmp{width:100%;border-collapse:collapse;font-size:.89rem;margin:12px 0}
+table.cmp th,table.cmp td{border:1px solid var(--border);padding:9px 10px;text-align:left;vertical-align:top}
+table.cmp th{background:rgba(0,230,118,.08);color:var(--green)}
+.score-line{font-size:1.05rem;font-weight:700;margin:14px 0}
+.verdict{border-radius:10px;padding:16px;margin-top:14px;font-size:.95rem}
+</style>
+</head>
+<body>
+<nav class="navbar"><div class="nav-inner">
+<a href="../index.html" class="brand"><span class="brand-icon">🛡️</span><span>CyberSec <span class="green">Hub</span></span></a>
+<button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+<ul class="nav-links" id="navLinks">
+<li><a href="../index.html">Home</a></li>
+<li><a href="../index.html#basics">Basics</a></li>
+<li><a href="../index.html#hacking">Ethical Hacking</a></li>
+<li><a href="../index.html#tools">Tools</a></li>
+<li><a href="../index.html#career">Career</a></li>
+<li><a href="../about.html">About</a></li>
+</ul></div></nav>
+<main class="tool-wrap">
+<h1>🌐 Secure Browsing Checklist</h1>
+<p class="tool-sub">Your browser is where passwords, banking, and personal data live. Harden it with this interactive checklist — then test yourself on common browsing myths.</p>
+<div class="ethical-box"><strong>⚠️ Ethical Use Only:</strong> These tools are for <strong>defensive</strong> purposes — securing your own accounts and systems. Never use security knowledge against systems you do not own or lack written permission to test.</div>
+<div class="tool-card">
+<div class="pbar"><div id="sbbar"></div></div>
+<div class="score-line" id="sbscore">0 of 10 completed</div>
+<div id="sblist"></div>
+</div>
+<div class="tool-card" style="margin-top:20px">
+<h3 style="margin-top:0">🧠 Browsing myths — true or false?</h3>
+<div id="sbquiz"></div>
+<button class="btn btn-green" onclick="sbScore()" style="margin-top:8px">Check my score</button>
+<div id="sbres" style="margin-top:12px"></div>
+</div>
+<section class="related-box" style="margin-top:36px">
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">About This Tool</h2>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">What this tool does</h2>
+<p>The Secure Browsing Checklist is a practical list of habits and settings that keep you safer on the web. Most attacks reach people through the browser — malicious ads, fake login pages, drive-by downloads, and tracking that builds detailed profiles of your behavior.</p>
+<p>The checklist covers everyday defenses: keeping your browser updated, using HTTPS, managing extensions, blocking third-party cookies, recognizing fake sites, and thinking before you download. Each item is small on its own; together they close the most common paths attackers use.</p>
+<p>It is for everyday internet users of all ages. You do not need technical knowledge — just work through the list once to harden your setup, then keep the habits. Parents can walk through it with children the first time they get their own device.</p>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">How to use it</h2>
+<ol>
+<li>Update your browser to the latest version and turn on automatic updates.</li>
+<li>Review your installed extensions. Remove any you do not recognize or no longer use, and keep only well-known ones from official stores.</li>
+<li>Turn on the browser's built-in protections: safe browsing, HTTPS-only mode, and tracking protection.</li>
+<li>Set the browser to block third-party cookies and to clear data on exit if you share the device.</li>
+<li>Before entering credentials or payment details, check the address bar: look for HTTPS and confirm the domain is exactly the real one.</li>
+<li>Download software only from official vendor sites or official app stores, never from pop-up ads or random download buttons.</li>
+</ol>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">Defensive security tips</h2>
+<ul>
+<li><strong>Update promptly.</strong> Browser updates patch actively exploited flaws. An out-of-date browser is one of the easiest targets there is.</li>
+<li><strong>Fewer extensions, fewer risks.</strong> Every extension can read the pages you visit. Install only what you need, from developers you trust.</li>
+<li><strong>Use separate profiles.</strong> Keep work, personal, and banking activity in separate browser profiles so a compromise in one does not reach the others.</li>
+<li><strong>Be skeptical of downloads.</strong> "Your computer is infected — download this cleaner" is a classic trap. Real security warnings never arrive as web pop-ups demanding downloads.</li>
+<li><strong>Log out on shared devices.</strong> Always sign out of accounts on public or shared computers, and prefer private browsing windows there.</li>
+</ul>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">FAQs</h2>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">Does HTTPS mean a site is safe?</h3>
+<p>HTTPS means the connection is encrypted, not that the site is honest. Attackers use HTTPS on phishing sites too. Encryption plus a verified, correct domain is what you want.</p>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">Are ad blockers a security tool?</h3>
+<p>They help. Malicious advertising has been used to deliver malware without any click from you. A reputable content blocker reduces that exposure as a side benefit of blocking ads.</p>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">Should I use private/incognito mode for banking?</h3>
+<p>It helps on shared computers by leaving no history or saved logins, but it does not make the connection itself more secure. On your own device, your normal updated browser with HTTPS is fine.</p>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">How do I know a download is legitimate?</h3>
+<p>Get it from the vendor's official site or your operating system's app store, and verify checksums when the vendor publishes them. Our hash generator guide explains how.</p>
+</section>
+
+</main>
+<script>
+
+var SBC=[
+ ["My browser and OS update automatically","Most attacks exploit known, patched holes. Auto-update removes the 'I'll do it later' gap."],
+ ["HTTPS-Only / 'Always use secure connections' is enabled","Modern browsers can auto-upgrade HTTP to HTTPS. Turn it on in settings."],
+ ["I use a password manager + 2FA, not memorized reused passwords","The browser is where credentials get typed — make them unique and phishing-resistant."],
+ ["I've reviewed my extensions and removed what I don't need","Extensions can read everything you browse. Keep few, from reputable developers, and check their permissions."],
+ ["Third-party cookies are blocked (or cleared regularly)","Cuts most cross-site ad tracking. First-party logins still work fine."],
+ ["I don't download or run unexpected attachments","'Invoice.pdf.exe' and cracked software are classic malware delivery. When in doubt, don't."],
+ ["Downloads go through a quick sanity check","Right file type? Expected sender? Scanned? Ten seconds of doubt prevents most infections."],
+ ["I use the official site/app for banking and shopping","Bookmarks or typed addresses — never links from messages, however convincing."],
+ ["Old saved passwords were replaced with generated ones","Browsers flag weak/reused/breached passwords — work through the list, most important first."],
+ ["I know private/incognito mode's limits","It hides history from people using your device — NOT from your ISP, employer, or websites. See the quiz."]];
+var sbDone=new Array(SBC.length).fill(false);
+(function(){var h='';
+SBC.forEach(function(c,i){h+='<label class="chk" id="sbchk'+i+'"><input type="checkbox" onchange="sbTgl('+i+',this)"><span><b>'+(i+1)+'. '+c[0]+'</b><small>'+c[1]+'</small></span></label>';});
+document.getElementById('sblist').innerHTML=h;})();
+function sbTgl(i,box){sbDone[i]=box.checked;document.getElementById('sbchk'+i).classList.toggle('done',box.checked);
+var n=sbDone.filter(Boolean).length;
+document.getElementById('sbbar').style.width=Math.round(n/SBC.length*100)+'%';
+document.getElementById('sbscore').textContent=n+' of '+SBC.length+' completed'+(n===SBC.length?' — 🏆 Hardened browser!':'');}
+var SBQ=[
+ ["Incognito/private mode hides your browsing from your internet provider.",false,"Private mode only prevents local history storage. Your ISP, employer, and visited websites still see your activity."],
+ ["A padlock icon guarantees a website is legitimate and safe.",false,"HTTPS only encrypts the connection and verifies the domain — scammers get certificates too. Check the actual domain name."],
+ ["Keeping your browser updated is one of the most effective security habits.",true,"Updates patch actively exploited vulnerabilities. Auto-update is the single highest-value setting."],
+ ["Browser extensions can read the content of the pages you visit.",true,"Many extensions request broad permissions. Install few, from reputable developers, and review them periodically."],
+ ["Downloading a file is always safe if your antivirus is up to date.",false,"Antivirus is a safety net, not a guarantee — new malware appears constantly. Caution with downloads matters more."]];
+var sbAns=new Array(SBQ.length).fill(null);
+(function(){var h='';
+SBQ.forEach(function(q,i){h+='<div class="quiz-q"><p>'+(i+1)+'. '+q[0]+'</p><div class="quiz-opts"><button onclick="sbPick('+i+',true,this)">✅ True</button><button onclick="sbPick('+i+',false,this)">❌ False</button></div><div class="quiz-why" id="sbwhy'+i+'">💡 '+q[2]+'</div></div>';});
+document.getElementById('sbquiz').innerHTML=h;})();
+function sbPick(i,v,btn){sbAns[i]=v;var q=btn.parentElement;
+Array.prototype.forEach.call(q.children,function(b){b.classList.remove('correct','wrong');});
+if(v===SBQ[i][1])btn.classList.add('correct');else{btn.classList.add('wrong');q.children[SBQ[i][1]?0:1].classList.add('correct');}
+document.getElementById('sbwhy'+i).style.display='block';
+Array.prototype.forEach.call(q.children,function(b){b.disabled=true;});}
+function sbScore(){var s=sbAns.filter(function(a,i){return a===SBQ[i][1];}).length;
+document.getElementById('sbres').innerHTML='<div class="verdict" style="background:rgba(0,230,118,.08);border:1px solid var(--border)">You scored <b>'+s+' / 5</b>. '+(s===5?'🏆 Myth-buster!':s>=3?'👍 Solid — review the explanations.':'📚 Re-read the myths above and try again.')+'</div>';}
+</script>
+<footer class="footer"><div class="container">
+<div class="footer-brand">🛡️ CyberSec <span class="green">Hub</span></div>
+<p>Learn cybersecurity the ethical, legal way.</p>
+<div class="footer-links">
+<a href="../index.html">Home</a><a href="../about.html">About</a><a href="../contact.html">Contact</a><a href="../privacy.html">Privacy Policy</a><a href="../disclaimer.html">Disclaimer</a><a href="../terms.html">Terms</a>
+</div>
+<p class="copyright">© 2026 CyberSec Hub by Anwaar Digital. All rights reserved. Educational content only — always test with written permission.</p>
+<p class="copyright">Developed by <strong style="color:#00e676">Malik Anwaar</strong></p>
+</div></footer><a href="https://wa.me/923288317526" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.6 6.1 1.6h.1c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.6 1.2 1.2-4.5-.3-.4c-1-1.6-1.6-3.5-1.6-5.5C5 9.6 10.6 5 16 5s11 4.6 11 10-5.4 9.8-11 9.8zm6.1-7.3c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.8.1-.3-.2-1.4-.5-2.7-1.6-.9-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6L13 9.5c-.3-.8-.7-.7-1-.7h-.8c-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.5s1.5 4 1.7 4.3c.2.3 2.9 4.4 7 6.2 1 .4 1.7.7 2.3.9.9.3 1.8.2 2.5.2.8-.1 2.3-1 2.7-1.9.3-.9.3-1.7.2-1.9-.1-.1-.3-.2-.7-.4z"/></svg></a>
+</body></html>

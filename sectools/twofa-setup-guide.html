@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/png" sizes="192x192" href="https://anwaardigital.github.io/Cybersecurity/cyber-icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="https://anwaardigital.github.io/Cybersecurity/cyber-icon-512.png">
+<link rel="apple-touch-icon" href="https://anwaardigital.github.io/Cybersecurity/cyber-icon-192.png">
+<!-- Cookie consent (GDPR): Google Analytics loads only after you press Accept -->
+<script src="../cookie-consent.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>2FA Setup Guide — Turn On Two-Factor Authentication Step by Step</title>
+<meta name="description" content="Free interactive 2FA setup guide: compare authenticator apps, SMS codes and security keys honestly, follow step-by-step setup with a progress checklist, and make a lost-phone backup plan.">
+<link rel="stylesheet" href="../styles.css">
+<link rel="canonical" href="https://anwaardigital.github.io/Cybersecurity/sectools/twofa-setup-guide.html">
+<meta property="og:title" content="2FA Setup Guide — Turn On Two-Factor Authentication Step by Step">
+<meta property="og:description" content="Free interactive 2FA setup guide: compare authenticator apps, SMS codes and security keys honestly, follow step-by-step setup with a progress checklist, and make a lost-phone backup plan.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://anwaardigital.github.io/Cybersecurity/sectools/twofa-setup-guide.html">
+<meta property="og:site_name" content="CyberSec Hub">
+<meta property="og:image" content="https://anwaardigital.github.io/Cybersecurity/cyber-icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "2FA Setup Guide",
+  "description": "Free interactive 2FA setup guide: compare authenticator apps, SMS codes and security keys honestly, follow step-by-step setup with a progress checklist, and make a lost-phone backup plan.",
+  "url": "https://anwaardigital.github.io/Cybersecurity/sectools/twofa-setup-guide.html",
+  "applicationCategory": "SecurityApplication",
+  "operatingSystem": "Any",
+  "offers": {"@type": "Offer","price": "0"},
+  "author": {"@type": "Person","name": "Malik Muhammad Anwaar"}
+}
+</script>
+<style>
+.quiz-q{background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:10px;padding:16px;margin:14px 0}
+.quiz-q p{font-weight:600;margin-bottom:6px}
+.quiz-opts button{display:block;width:100%;text-align:left;margin:8px 0;padding:11px 14px;border-radius:9px;border:1px solid var(--border);background:rgba(255,255,255,.04);color:var(--text);cursor:pointer;font-size:.95rem;font-family:inherit}
+.quiz-opts button:hover:not(:disabled){border-color:var(--green)}
+.quiz-opts button.correct{border-color:#00e676;background:rgba(0,230,118,.12)}
+.quiz-opts button.wrong{border-color:#ff5252;background:rgba(255,82,82,.1)}
+.quiz-opts button:disabled{cursor:default}
+.quiz-why{font-size:.88rem;color:var(--muted);margin-top:8px;display:none}
+.chk{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border:1px solid var(--border);border-radius:10px;margin:9px 0;background:rgba(255,255,255,.02);cursor:pointer;font-size:.93rem}
+.chk:hover{border-color:var(--green)}
+.chk input{margin-top:5px;transform:scale(1.3);accent-color:#00e676;flex-shrink:0}
+.chk small{display:block;color:var(--muted);font-size:.85rem;margin-top:3px}
+.chk.done{opacity:.72;border-color:rgba(0,230,118,.45)}
+.pbar{height:12px;background:rgba(255,255,255,.07);border-radius:8px;overflow:hidden;margin:12px 0}
+.pbar>div{height:100%;width:0;background:linear-gradient(90deg,#00b35c,#00e676);transition:width .4s;border-radius:8px}
+.flag{border-left:4px solid;padding:12px 14px;border-radius:0 10px 10px 0;margin:10px 0;background:rgba(255,255,255,.03)}
+.flag.danger{border-color:#ff5252}.flag.warn{border-color:#ff9800}.flag.info{border-color:#29b6f6}.flag.safe{border-color:#00e676}
+.flag b{display:block;margin-bottom:4px;font-size:.95rem}
+.flag p{margin:0;font-size:.89rem;color:#c9d6e8}
+.step-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.step-tabs button{padding:9px 16px;border-radius:20px;border:1px solid var(--border);background:rgba(255,255,255,.04);color:var(--text);cursor:pointer;font-size:.9rem;font-family:inherit}
+.step-tabs button.active{background:rgba(0,230,118,.15);border-color:var(--green);color:#fff}
+.edu h3{color:var(--green);margin:24px 0 8px;font-size:1.05rem}
+.edu ul{margin:6px 0 6px 18px}.edu ol{margin:6px 0 6px 18px}
+.edu li{margin-bottom:6px;font-size:.94rem;color:#d4e0ee}
+.edu p{font-size:.94rem;color:#d4e0ee;margin-bottom:10px}
+table.cmp{width:100%;border-collapse:collapse;font-size:.89rem;margin:12px 0}
+table.cmp th,table.cmp td{border:1px solid var(--border);padding:9px 10px;text-align:left;vertical-align:top}
+table.cmp th{background:rgba(0,230,118,.08);color:var(--green)}
+.score-line{font-size:1.05rem;font-weight:700;margin:14px 0}
+.verdict{border-radius:10px;padding:16px;margin-top:14px;font-size:.95rem}
+</style>
+</head>
+<body>
+<nav class="navbar"><div class="nav-inner">
+<a href="../index.html" class="brand"><span class="brand-icon">🛡️</span><span>CyberSec <span class="green">Hub</span></span></a>
+<button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+<ul class="nav-links" id="navLinks">
+<li><a href="../index.html">Home</a></li>
+<li><a href="../index.html#basics">Basics</a></li>
+<li><a href="../index.html#hacking">Ethical Hacking</a></li>
+<li><a href="../index.html#tools">Tools</a></li>
+<li><a href="../index.html#career">Career</a></li>
+<li><a href="../about.html">About</a></li>
+</ul></div></nav>
+<main class="tool-wrap">
+<h1>📱 2FA Setup Guide</h1>
+<p class="tool-sub">Two-factor authentication means a stolen password alone isn't enough to break into your account. Follow this interactive guide to enable it properly — and to make sure you never lock <i>yourself</i> out.</p>
+<div class="ethical-box"><strong>⚠️ Ethical Use Only:</strong> These tools are for <strong>defensive</strong> purposes — securing your own accounts and systems. Never use security knowledge against systems you do not own or lack written permission to test.</div>
+<div class="tool-card edu">
+<h3 style="margin-top:0">🔑 The methods, compared honestly</h3>
+<table class="cmp"><tr><th>Method</th><th>Security</th><th>Notes</th></tr>
+<tr><td><b>Authenticator app</b><br>(codes refresh every 30s)</td><td>⭐⭐⭐ Strong</td><td>Free, works offline. Best balance for most people.</td></tr>
+<tr><td><b>Hardware security key</b><br>(USB/NFC)</td><td>⭐⭐⭐⭐ Strongest</td><td>Resists phishing almost completely. Costs money; keep a spare.</td></tr>
+<tr><td><b>SMS codes</b></td><td>⭐ Basic</td><td>Better than nothing, but vulnerable to SIM-swap attacks. Use only if nothing else is offered.</td></tr>
+<tr><td><b>Email codes</b></td><td>⭐ Basic</td><td>Only as secure as your email account — which should itself have 2FA.</td></tr></table>
+</div>
+<div class="tool-card" style="margin-top:20px">
+<h3 style="margin-top:0">🚶 Step-by-step: enable app-based 2FA</h3>
+<div class="pbar"><div id="tfabar"></div></div>
+<div class="score-line" id="tfascore">Step 0 of 7</div>
+<div id="tfalist"></div>
+<div class="flag info" style="margin-top:14px"><b>📵 Lost your phone?</b><p>That's what backup codes are for (step 6). Without them, recovery means contacting each service's support and proving your identity — slow and painful. Generate and store backup codes <b>today</b>.</p></div>
+</div>
+<div class="tip-box edu" style="margin-top:22px"><strong>💡 Priority order:</strong>
+<p style="margin-top:8px">Enable 2FA first on: <b>1)</b> your email (the master key to password resets), <b>2)</b> banking &amp; payment apps, <b>3)</b> social media, <b>4)</b> cloud storage, <b>5)</b> everything else important.</p></div>
+<section class="related-box" style="margin-top:36px">
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">About This Tool</h2>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">What this tool does</h2>
+<p>The Two-Factor Authentication Setup Guide shows you how to add a second layer of protection to your online accounts. Two-factor authentication (2FA) means that even if someone steals your password, they still cannot log in without a second proof of identity — usually a time-based code from an app on your phone or a physical security key.</p>
+<p>The guide covers the main 2FA methods — authenticator apps, SMS codes, and hardware security keys — explains which is strongest, and walks you through enabling 2FA on the accounts that matter most: email, banking, social media, and cloud storage.</p>
+<p>It is for everyone with online accounts, which is to say everyone. Enabling 2FA is one of the highest-impact defensive steps you can take, and this guide prioritizes it: start with your email account, because email controls password resets for nearly everything else.</p>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">How to use it</h2>
+<ol>
+<li>Install a reputable authenticator app on your phone before you begin.</li>
+<li>Start with your email account: open its security settings and find "two-factor" or "two-step verification".</li>
+<li>Choose the authenticator-app option when offered. Scan the QR code with your app and enter the code to confirm.</li>
+<li>Save the backup or recovery codes the service shows you — print them or store them somewhere safe and offline.</li>
+<li>Repeat for your other important accounts: banking, social media, cloud storage, and any work accounts.</li>
+<li>Test the login once to make sure everything works before you close the settings page.</li>
+</ol>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">Defensive security tips</h2>
+<ul>
+<li><strong>Prefer authenticator apps over SMS.</strong> SMS codes can be intercepted through SIM-swapping attacks; app-based codes stay on your device.</li>
+<li><strong>Security keys are strongest.</strong> For your most important accounts, a hardware security key (FIDO2) resists phishing better than any code.</li>
+<li><strong>Save backup codes.</strong> If you lose your phone without backup codes, you can be locked out of your own accounts. Store them offline in a safe place.</li>
+<li><strong>Do not share 2FA codes.</strong> No legitimate company will ever call or message asking for your current code. Anyone asking is an attacker.</li>
+<li><strong>Protect the email first.</strong> Your email account can reset almost every other password you own, so it deserves 2FA before anything else.</li>
+</ul>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">FAQs</h2>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">What if I lose my phone with the authenticator app?</h3>
+<p>Use the backup codes you saved during setup to log in, then set up 2FA on your new phone. Some authenticator apps also offer encrypted cloud backup — enable it before you need it.</p>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">Is SMS two-factor better than nothing?</h3>
+<p>Yes. SMS 2FA is weaker than app-based codes, but it still blocks the vast majority of automated attacks. If SMS is the only option a site offers, use it rather than skipping 2FA entirely.</p>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">Do I need 2FA on every account?</h3>
+<p>Prioritize: email, banking and payment apps, social media, cloud storage, and work accounts. These are the accounts whose compromise causes the most damage.</p>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">Can 2FA be bypassed?</h3>
+<p>Determined attackers have techniques against some methods, particularly SMS. That is why authenticator apps and security keys are recommended — they raise the bar far beyond what most attackers can clear.</p>
+</section>
+
+</main>
+<script>
+
+var TFA=[
+ ["Install an authenticator app","Any reputable authenticator app on your phone. It generates 6-digit codes that change every 30 seconds — no internet needed."],
+ ["Open the account's security settings","On the website (not a link from an email — type the address yourself), go to Settings → Security → Two-factor authentication."],
+ ["Choose 'Authenticator app' and reveal the QR code","The site shows a QR code (and usually a text setup key). Keep this page open."],
+ ["Scan the QR code with your authenticator app","Point your phone at the code. The account appears in the app and starts showing 6-digit codes. Also save the text setup key somewhere safe."],
+ ["Enter the current code to confirm","Type the 6-digit code from the app into the website. If it accepts, 2FA is now ON."],
+ ["Generate and store BACKUP CODES","The site offers one-time backup codes — print them or save them somewhere safe and offline (not just on the same phone). These are your lifeline if you lose the phone."],
+ ["Test a logout/login","Log out and log back in to confirm the second factor is actually required."]];
+var tfaDone=new Array(TFA.length).fill(false);
+(function(){var h='';
+TFA.forEach(function(s,i){h+='<label class="chk" id="tfachk'+i+'"><input type="checkbox" onchange="tfaTgl('+i+',this)"><span><b>Step '+(i+1)+': '+s[0]+'</b><small>'+s[1]+'</small></span></label>';});
+document.getElementById('tfalist').innerHTML=h;})();
+function tfaTgl(i,box){tfaDone[i]=box.checked;document.getElementById('tfachk'+i).classList.toggle('done',box.checked);
+var n=tfaDone.filter(Boolean).length;
+document.getElementById('tfabar').style.width=Math.round(n/TFA.length*100)+'%';
+document.getElementById('tfascore').textContent='Step '+n+' of '+TFA.length+(n===TFA.length?' — 🎉 2FA is set up. Well done!':'');}
+</script>
+<footer class="footer"><div class="container">
+<div class="footer-brand">🛡️ CyberSec <span class="green">Hub</span></div>
+<p>Learn cybersecurity the ethical, legal way.</p>
+<div class="footer-links">
+<a href="../index.html">Home</a><a href="../about.html">About</a><a href="../contact.html">Contact</a><a href="../privacy.html">Privacy Policy</a><a href="../disclaimer.html">Disclaimer</a><a href="../terms.html">Terms</a>
+</div>
+<p class="copyright">© 2026 CyberSec Hub by Anwaar Digital. All rights reserved. Educational content only — always test with written permission.</p>
+<p class="copyright">Developed by <strong style="color:#00e676">Malik Anwaar</strong></p>
+</div></footer><a href="https://wa.me/923288317526" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.6 6.1 1.6h.1c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.6 1.2 1.2-4.5-.3-.4c-1-1.6-1.6-3.5-1.6-5.5C5 9.6 10.6 5 16 5s11 4.6 11 10-5.4 9.8-11 9.8zm6.1-7.3c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.8.1-.3-.2-1.4-.5-2.7-1.6-.9-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6L13 9.5c-.3-.8-.7-.7-1-.7h-.8c-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.5s1.5 4 1.7 4.3c.2.3 2.9 4.4 7 6.2 1 .4 1.7.7 2.3.9.9.3 1.8.2 2.5.2.8-.1 2.3-1 2.7-1.9.3-.9.3-1.7.2-1.9-.1-.1-.3-.2-.7-.4z"/></svg></a>
+</body></html>

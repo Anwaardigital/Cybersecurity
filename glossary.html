@@ -8,26 +8,37 @@
 <script src="cookie-consent.js" defer></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Cybersecurity Glossary: 60+ Terms Explained Simply</title>
-<meta name="description" content="Free cybersecurity glossary — 60+ essential terms (malware, phishing, ransomware, encryption...) explained in plain English with search.">
+<title>Cybersecurity Glossary: 200 Terms Explained Simply</title>
+<meta name="description" content="Free cybersecurity glossary — 200 essential terms (malware, phishing, ransomware, encryption...) explained in plain English with search.">
 <link rel="stylesheet" href="styles.css">
 <link rel="canonical" href="https://anwaardigital.github.io/Cybersecurity/glossary.html">
-<meta property="og:title" content="Cybersecurity Glossary: 60+ Terms Explained Simply">
-<meta property="og:description" content="Free cybersecurity glossary — 60+ essential terms (malware, phishing, ransomware, encryption...) explained in plain English with search.">
+<meta property="og:title" content="Cybersecurity Glossary: 200 Terms Explained Simply">
+<meta property="og:description" content="Free cybersecurity glossary — 200 essential terms (malware, phishing, ransomware, encryption...) explained in plain English with search.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://anwaardigital.github.io/Cybersecurity/glossary.html">
 <meta property="og:site_name" content="CyberSec Hub">
+<meta property="og:image" content="https://anwaardigital.github.io/Cybersecurity/cyber-icon-512.png">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "DefinedTermSet",
   "name": "Cybersecurity Glossary",
-  "description": "79 essential cybersecurity terms explained in plain English.",
+  "description": "200 essential cybersecurity terms explained in plain English.",
   "hasDefinedTerm": [
     {
       "@type": "DefinedTerm",
       "name": "2FA (Two-Factor Authentication)",
       "description": "An extra security layer requiring two proofs of identity — e.g. your password plus a code from your phone. Stops most account takeovers."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Access Control",
+      "description": "Rules that decide who or what can view or use resources in a system. Based on verified identity and permissions — enforced through logins, roles, and policies."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Access Control List (ACL)",
+      "description": "A list attached to a file or resource naming exactly which users or systems may access it, and what they may do. A fundamental enforcement tool for access control."
     },
     {
       "@type": "DefinedTerm",
@@ -41,8 +52,48 @@
     },
     {
       "@type": "DefinedTerm",
+      "name": "AES (Advanced Encryption Standard)",
+      "description": "The world’s most widely used symmetric encryption algorithm, with 128, 192, or 256-bit keys. Protects everything from WiFi (WPA2/WPA3) and files to messaging apps."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Air Gap",
+      "description": "Physically isolating a computer or network from all other networks, including the internet. Used for the most critical systems; data moves only through strictly controlled removable media."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Allowlist",
+      "description": "A list of approved programs, websites, or senders — everything else is blocked by default. Stricter than a blocklist and common in high-security environments."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Antimalware",
+      "description": "Software that detects and removes all kinds of malicious programs, not just viruses. Modern antimalware watches program behavior, not only known signatures."
+    },
+    {
+      "@type": "DefinedTerm",
       "name": "Antivirus",
       "description": "Software that detects and removes malicious programs using known signatures and behavior analysis."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Attack Surface",
+      "description": "All the possible points where an attacker could try to enter a system: open ports, apps, user accounts, and APIs. A smaller attack surface is easier to defend."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Attack Vector",
+      "description": "The path or method an attacker uses to reach a target — a phishing email, a malicious USB drive, or an unpatched web application. Defenders work to close every vector."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Authentication",
+      "description": "The process of verifying that someone really is who they claim to be — with a password, code, or fingerprint. Always comes before authorization."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Authorization",
+      "description": "Deciding what an authenticated user is allowed to do: which files they can open, which systems they can touch. Managed through permissions and roles."
     },
     {
       "@type": "DefinedTerm",
@@ -51,8 +102,28 @@
     },
     {
       "@type": "DefinedTerm",
+      "name": "Backup (3-2-1 Rule)",
+      "description": "Keep 3 copies of important data, on 2 different media types, with 1 copy offline or off-site. The most reliable defense against ransomware and hardware failure."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Baiting",
+      "description": "A social engineering trick that lures victims with something tempting — a free USB drive, a fake prize, or a ‘free’ download. Curiosity does the attacker’s work."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Biometric Authentication",
+      "description": "Verifying identity with a fingerprint, face, or voice instead of a password. Convenient and hard to forget — but unlike passwords, you cannot change biometrics if they are stolen."
+    },
+    {
+      "@type": "DefinedTerm",
       "name": "Black Hat Hacker",
       "description": "A hacker who breaks into systems illegally for personal gain or harm."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Blocklist",
+      "description": "A list of known-bad items — malicious IPs, domains, or senders — that are denied access. Easier to manage than allowlists but always one step behind new threats."
     },
     {
       "@type": "DefinedTerm",
@@ -71,13 +142,53 @@
     },
     {
       "@type": "DefinedTerm",
+      "name": "Buffer Overflow",
+      "description": "A bug where a program writes more data into memory than it can hold, spilling into neighboring areas. Attackers exploit this to crash programs or run their own code."
+    },
+    {
+      "@type": "DefinedTerm",
       "name": "Bug Bounty",
       "description": "A program where companies pay ethical hackers for finding and reporting security flaws legally."
     },
     {
       "@type": "DefinedTerm",
+      "name": "Business Email Compromise (BEC)",
+      "description": "Fraud where attackers impersonate a boss or supplier by email to trick staff into wiring money or sharing data. Among the costliest cybercrimes — always verify payment requests by phone."
+    },
+    {
+      "@type": "DefinedTerm",
       "name": "Certificate (Digital)",
       "description": "An electronic document proving a website's identity, enabling trusted HTTPS encryption."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Certificate Authority (CA)",
+      "description": "A trusted organization that issues digital certificates proving a website’s identity. Your browser relies on CAs to confirm that HTTPS sites are genuine."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Chain of Custody",
+      "description": "A documented record of who handled digital evidence and when, from collection to the courtroom. Any gap in the chain can make evidence inadmissible in court."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "CIA Triad",
+      "description": "The three core goals of information security: Confidentiality (only authorized access), Integrity (data stays accurate and unaltered), and Availability (systems keep working)."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Ciphertext",
+      "description": "Encrypted data in its scrambled, unreadable form. Only someone holding the correct key can turn ciphertext back into readable plaintext."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Clickjacking",
+      "description": "Tricking you into clicking something invisible — like a hidden button layered over a real webpage. Can hijack likes, purchases, or account settings."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Cloud Security",
+      "description": "Protecting data and applications hosted on cloud platforms such as AWS, Google Cloud, or Azure. Covers secure configuration, access control, and encryption of cloud resources."
     },
     {
       "@type": "DefinedTerm",
@@ -101,13 +212,53 @@
     },
     {
       "@type": "DefinedTerm",
+      "name": "CSIRT (Computer Security Incident Response Team)",
+      "description": "A dedicated team that handles security incidents: detection, containment, recovery, and learning lessons afterward. Larger organizations run their own CSIRT around the clock."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "CSRF (Cross-Site Request Forgery)",
+      "description": "An attack that tricks your logged-in browser into performing unwanted actions on a trusted site — like changing your email or password. Prevented with anti-CSRF tokens."
+    },
+    {
+      "@type": "DefinedTerm",
       "name": "CVE",
       "description": "Common Vulnerabilities and Exposures — a public ID system for known security flaws (e.g. CVE-2024-1234)."
     },
     {
       "@type": "DefinedTerm",
+      "name": "CVSS (Common Vulnerability Scoring System)",
+      "description": "A 0-to-10 score rating how severe a software vulnerability is, based on how easily it can be exploited and the damage it causes. Helps teams fix the worst flaws first."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Cyber Hygiene",
+      "description": "Everyday security habits: installing updates, using strong unique passwords, keeping backups, and treating unknown links with suspicion. The digital equivalent of washing your hands."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Cyber Kill Chain",
+      "description": "The seven stages of a typical attack: reconnaissance, weaponization, delivery, exploitation, installation, command and control, and actions on objectives. Defenders aim to break the chain as early as possible."
+    },
+    {
+      "@type": "DefinedTerm",
       "name": "Dark Web",
       "description": "Hidden websites reachable only with special software like Tor. Used for both privacy and crime."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Data Breach",
+      "description": "An incident where private data is stolen or exposed — by attackers or by mistake. Breaches can leak the passwords, IDs, and payment details of millions of people."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Data Exfiltration",
+      "description": "The unauthorized copying or transfer of data out of an organization — the end goal of most breaches. DLP tools and outbound-traffic monitoring aim to stop it."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Data Loss Prevention (DLP)",
+      "description": "Tools and policies that stop sensitive data from leaving an organization — blocking risky uploads, emails, or USB copies of confidential files."
     },
     {
       "@type": "DefinedTerm",
@@ -121,6 +272,21 @@
     },
     {
       "@type": "DefinedTerm",
+      "name": "Defense in Depth",
+      "description": "Protecting with multiple overlapping layers — firewall, antivirus, MFA, backups — so that one failure does not mean total compromise. No single layer is ever trusted alone."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Denial of Service (DoS)",
+      "description": "Flooding a system with requests from a single source until it slows down or crashes. Its larger cousin, DDoS, uses many sources at once."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Dictionary Attack",
+      "description": "Guessing passwords from lists of common words, phrases, and previously leaked passwords — far faster than pure brute force. Defeated by long, unique passphrases."
+    },
+    {
+      "@type": "DefinedTerm",
       "name": "Digital Forensics",
       "description": "Recovering and analyzing digital evidence after a cyber incident, following legal procedures."
     },
@@ -131,8 +297,28 @@
     },
     {
       "@type": "DefinedTerm",
+      "name": "DMZ (Demilitarized Zone)",
+      "description": "A separated network zone for public-facing servers (like web servers), sitting between the internet and the private internal network. Limits the damage if a public server gets hacked."
+    },
+    {
+      "@type": "DefinedTerm",
       "name": "DNS (Domain Name System)",
       "description": "The internet's phonebook — translates names like example.com into IP addresses."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Doxxing",
+      "description": "Publishing someone’s private details — home address, phone number, family info — online to harass or threaten them. A crime in many countries; tighten your social media privacy settings."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Drive-by Download",
+      "description": "Malware that installs itself simply because you visited a compromised website — no click required. Keeping your browser updated blocks most of these attacks."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Eavesdropping",
+      "description": "Secretly listening in on network traffic or conversations to steal information. Encryption through HTTPS and VPNs makes intercepted data unreadable."
     },
     {
       "@type": "DefinedTerm",
@@ -141,8 +327,18 @@
     },
     {
       "@type": "DefinedTerm",
+      "name": "Email Spoofing",
+      "description": "Faking the sender address so a message appears to come from your bank, boss, or a colleague. Never trust display names alone — check the real address and headers."
+    },
+    {
+      "@type": "DefinedTerm",
       "name": "Encryption",
       "description": "Scrambling data with a key so only authorized parties can read it. The foundation of online privacy."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "End-to-End Encryption (E2EE)",
+      "description": "Encryption where only the sender and receiver can read messages — not even the service provider in the middle. Used by WhatsApp and Signal."
     },
     {
       "@type": "DefinedTerm",
@@ -156,8 +352,18 @@
     },
     {
       "@type": "DefinedTerm",
+      "name": "Evil Twin",
+      "description": "A fake WiFi hotspot with a trustworthy name (like ‘Free Airport WiFi’) set up to steal your data. Always confirm the exact network name with staff before connecting."
+    },
+    {
+      "@type": "DefinedTerm",
       "name": "Exploit",
       "description": "Code or technique that takes advantage of a software vulnerability."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Fileless Malware",
+      "description": "Malware that runs entirely in memory without installing files on disk, making it hard for traditional antivirus to spot. Detected by behavior-monitoring tools like EDR."
     },
     {
       "@type": "DefinedTerm",
@@ -166,8 +372,23 @@
     },
     {
       "@type": "DefinedTerm",
+      "name": "Fuzzing",
+      "description": "Automatically feeding random or malformed data into software to trigger crashes and uncover vulnerabilities. A standard technique in security testing."
+    },
+    {
+      "@type": "DefinedTerm",
       "name": "Grey Hat Hacker",
       "description": "A hacker operating between legal and illegal — e.g. finding flaws without permission but reporting them."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Hacker",
+      "description": "Someone with deep computer skills who finds clever ways into systems. Hackers can be criminal (black hat), authorized (white hat), or somewhere in between (grey hat)."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Hardening",
+      "description": "Reducing a system’s attack surface: disabling unused services, removing default passwords, and applying secure settings. A standard first step when setting up any server."
     },
     {
       "@type": "DefinedTerm",
@@ -181,8 +402,18 @@
     },
     {
       "@type": "DefinedTerm",
+      "name": "HTTP",
+      "description": "The basic protocol browsers use to fetch web pages — sent in plain, readable text. Its secure encrypted version is HTTPS; never enter passwords on plain HTTP sites."
+    },
+    {
+      "@type": "DefinedTerm",
       "name": "HTTPS",
       "description": "The secure version of HTTP — encrypts data between your browser and a website."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "IAM (Identity and Access Management)",
+      "description": "Systems that manage who users are and what they can access across an organization. Includes single sign-on, multi-factor authentication, and role-based permissions."
     },
     {
       "@type": "DefinedTerm",
@@ -196,6 +427,21 @@
     },
     {
       "@type": "DefinedTerm",
+      "name": "Indicator of Compromise (IOC)",
+      "description": "A clue that a system has been breached — a malicious IP address, file hash, or domain name. Defenders share IOCs so others can detect the same attack."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Insider Threat",
+      "description": "A security risk coming from inside: employees or contractors who misuse their access, whether maliciously or through careless mistakes. Hard to stop with perimeter defenses alone."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "IoT Security",
+      "description": "Securing internet-connected devices — cameras, smart TVs, thermostats — which often ship with weak default passwords and rarely receive updates."
+    },
+    {
+      "@type": "DefinedTerm",
       "name": "IP Address",
       "description": "A unique number identifying every device on a network (e.g. 192.168.1.1)."
     },
@@ -206,8 +452,18 @@
     },
     {
       "@type": "DefinedTerm",
+      "name": "ISO 27001",
+      "description": "The international standard for managing information security inside organizations. Certification proves a company follows strict, audited security practices."
+    },
+    {
+      "@type": "DefinedTerm",
       "name": "Juice Jacking",
       "description": "Stealing data or installing malware through a compromised public USB charging port."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Key Management",
+      "description": "The secure creation, storage, rotation, and destruction of encryption keys. Even the strongest encryption fails if keys are lost, stolen, or hardcoded into software."
     },
     {
       "@type": "DefinedTerm",
@@ -221,8 +477,28 @@
     },
     {
       "@type": "DefinedTerm",
+      "name": "Least Privilege",
+      "description": "Giving users and programs only the minimum access they need to do their job — nothing more. Limits how much damage any single compromised account can cause."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "MAC Address",
+      "description": "A unique hardware identifier burned into every network device. Used for network access control, though attackers can fake (spoof) it."
+    },
+    {
+      "@type": "DefinedTerm",
       "name": "Malware",
       "description": "Malicious software — an umbrella term for viruses, ransomware, spyware, and trojans."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Malware Analysis",
+      "description": "Studying malware in a safe, isolated lab to learn what it does and how to detect it. Static analysis reads its code; dynamic analysis watches it run inside a sandbox."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Malware Signature",
+      "description": "A unique fingerprint — often a hash — of a known malware sample. Antivirus products match suspicious files against databases holding millions of signatures."
     },
     {
       "@type": "DefinedTerm",
@@ -231,8 +507,38 @@
     },
     {
       "@type": "DefinedTerm",
+      "name": "Metadata",
+      "description": "Data about data: a photo’s location, a document’s author, an email’s routing history. Attackers mine metadata for reconnaissance — strip it before sharing files publicly."
+    },
+    {
+      "@type": "DefinedTerm",
       "name": "MFA (Multi-Factor Authentication)",
       "description": "Like 2FA but with two or more verification factors. The single best account protection."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "MITRE ATT&CK",
+      "description": "A public knowledge base cataloging the real tactics and techniques attackers use, based on observed attacks. Defenders use it to map intrusions and plan detections."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "NAT (Network Address Translation)",
+      "description": "Technology that lets many devices share one public IP address by translating internal addresses. Used by home routers; it also hides the internal network layout."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Network Segmentation",
+      "description": "Dividing a network into separate sections so a breach in one area cannot easily spread to others. Directly limits an attacker’s lateral movement."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Next-Gen Firewall (NGFW)",
+      "description": "A firewall that goes beyond port filtering: it inspects applications, blocks malware, and filters malicious URLs in real time."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "OAuth",
+      "description": "An open standard that lets you log into apps with your Google or Apple account without sharing your password. Apps receive limited-permission tokens instead of your credentials."
     },
     {
       "@type": "DefinedTerm",
@@ -246,6 +552,16 @@
     },
     {
       "@type": "DefinedTerm",
+      "name": "Password Manager",
+      "description": "An app that generates and stores a strong, unique password for every site, protected by one master password. The practical fix for dangerous password reuse."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Password Policy",
+      "description": "An organization’s enforced rules for passwords: minimum length, complexity, rotation, and account lockouts. Strong policies are technically enforced, not just suggested."
+    },
+    {
+      "@type": "DefinedTerm",
       "name": "Password Spraying",
       "description": "Trying a few common passwords against many accounts to avoid lockouts. Defeated by MFA."
     },
@@ -253,6 +569,11 @@
       "@type": "DefinedTerm",
       "name": "Patch",
       "description": "A software update fixing bugs or security vulnerabilities. Install patches promptly."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Patch Management",
+      "description": "The organized process of finding, testing, and installing software updates across every device. Unpatched systems remain the most common entry point for attackers."
     },
     {
       "@type": "DefinedTerm",
@@ -266,6 +587,11 @@
     },
     {
       "@type": "DefinedTerm",
+      "name": "PGP (Pretty Good Privacy)",
+      "description": "A long-standing program for encrypting emails and files with public-key cryptography. Also lets you digitally sign messages to prove they truly came from you."
+    },
+    {
+      "@type": "DefinedTerm",
       "name": "Pharming",
       "description": "Redirecting you to a fake website even when you typed the correct address, via DNS tricks."
     },
@@ -276,8 +602,38 @@
     },
     {
       "@type": "DefinedTerm",
+      "name": "PII (Personally Identifiable Information)",
+      "description": "Data that can identify a person: name, national ID, address, or biometrics. Protecting PII is required by privacy laws in most countries."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Pivoting",
+      "description": "After compromising one machine, an attacker uses it as a stepping stone to reach deeper, hidden parts of a network. Detected by watching for unusual internal traffic."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "PKI (Public Key Infrastructure)",
+      "description": "The system of certificate authorities, digital certificates, and keys that makes HTTPS and secure email trustworthy at internet scale."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Plaintext",
+      "description": "Readable, unencrypted data. A basic security rule: never store passwords or secrets in plaintext where anyone with file access can read them."
+    },
+    {
+      "@type": "DefinedTerm",
       "name": "Port",
       "description": "A numbered doorway on a device for network services (e.g. port 443 for HTTPS)."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Pretexting",
+      "description": "Inventing a believable false scenario — ‘I’m from IT support’ — to trick someone into revealing information. A core social engineering technique."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Private Key",
+      "description": "The secret half of a cryptographic key pair, which must never be shared. Used to decrypt incoming data and to create digital signatures."
     },
     {
       "@type": "DefinedTerm",
@@ -286,13 +642,28 @@
     },
     {
       "@type": "DefinedTerm",
+      "name": "Privileged Access Management (PAM)",
+      "description": "Tools that tightly control powerful administrator accounts: vaulting their passwords, recording their sessions, and granting access only when needed."
+    },
+    {
+      "@type": "DefinedTerm",
       "name": "Proxy",
       "description": "A middleman server between you and the internet, hiding your IP or filtering traffic."
     },
     {
       "@type": "DefinedTerm",
+      "name": "Public Key",
+      "description": "The shareable half of a cryptographic key pair. Anyone can use your public key to send you encrypted messages or to verify your digital signatures."
+    },
+    {
+      "@type": "DefinedTerm",
       "name": "Purple Team",
       "description": "A combined red (attack) and blue (defense) team that improves both sides together."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Quishing",
+      "description": "Phishing through QR codes that lead to malicious websites. Scammers paste fake QR codes over real ones on parking meters and posters — always preview the URL before opening."
     },
     {
       "@type": "DefinedTerm",
@@ -311,8 +682,38 @@
     },
     {
       "@type": "DefinedTerm",
+      "name": "Replay Attack",
+      "description": "Capturing valid data — like a login request — and resending it later to gain unauthorized access. Prevented with nonces, timestamps, and one-time session tokens."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Reverse Engineering",
+      "description": "Taking apart software or malware to understand how it works, without access to its source code. Essential for malware analysis and for finding hidden vulnerabilities."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Risk Assessment",
+      "description": "Identifying what could go wrong, estimating how likely and how damaging it would be, then deciding which risks to fix, accept, or insure against."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Rogue Access Point",
+      "description": "An unauthorized WiFi access point on a network — planted by attackers, or set up carelessly by staff — that can intercept traffic. Found with wireless security scans."
+    },
+    {
+      "@type": "DefinedTerm",
       "name": "Rootkit",
       "description": "Deeply hidden malware designed to stay invisible while giving attackers control."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "RSA",
+      "description": "One of the first public-key cryptosystems, named after Rivest, Shamir, and Adleman. Still widely used for secure key exchange and digital signatures."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Salting",
+      "description": "Adding unique random data to each password before hashing it, so identical passwords produce different hashes. Defeats rainbow-table attacks against stolen password databases."
     },
     {
       "@type": "DefinedTerm",
@@ -321,8 +722,58 @@
     },
     {
       "@type": "DefinedTerm",
+      "name": "Script Kiddie",
+      "description": "An unskilled attacker who uses ready-made hacking tools without understanding how they work. Noisy and easy to catch — but still dangerous against poorly defended targets."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Secure Boot",
+      "description": "A startup feature that verifies software signatures before the operating system loads, blocking malware that tries to infect the boot process."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Secure Coding",
+      "description": "Writing software with security built in from the start: validating all input, handling errors safely, and avoiding known bug patterns. Prevents vulnerabilities at their source."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Security Audit",
+      "description": "A systematic, independent review of an organization’s security controls, policies, and legal compliance. Finds dangerous gaps before attackers — or regulators — do."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Security Awareness Training",
+      "description": "Teaching employees to recognize phishing, use strong passwords, and handle sensitive data safely. Necessary because humans remain the most frequently attacked layer."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Security Baseline",
+      "description": "The minimum agreed security settings every system must meet: password rules, logging, patching, and encryption. Each device is measured against the baseline."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Security Incident",
+      "description": "Any event that threatens confidentiality, integrity, or availability — from a malware alert to a full data breach. Every incident triggers the incident response process."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Security Token",
+      "description": "A physical or software device that generates login codes or cryptographic proof of identity — like a YubiKey or authenticator app. Stronger than SMS codes, which can be intercepted."
+    },
+    {
+      "@type": "DefinedTerm",
       "name": "Session Hijacking",
       "description": "Stealing someone's active login session to impersonate them online."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Shadow IT",
+      "description": "Hardware or software employees use without IT approval — personal cloud storage, unauthorized apps. Creates blind spots the security team cannot see or protect."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Shoulder Surfing",
+      "description": "Stealing passwords or PINs by watching over someone’s shoulder or through cameras. Defeated with privacy screens and shielded keypads."
     },
     {
       "@type": "DefinedTerm",
@@ -331,8 +782,33 @@
     },
     {
       "@type": "DefinedTerm",
+      "name": "Signature-Based Detection",
+      "description": "Identifying malware by matching it against fingerprints (signatures) of known threats. Fast and accurate for known malware, but blind to brand-new attacks."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "SIM Swapping",
+      "description": "Tricking a mobile carrier into transferring your phone number to the attacker’s SIM card, hijacking your SMS verification codes. Use app-based authenticators instead of SMS 2FA."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Single Sign-On (SSO)",
+      "description": "Logging in once to access many applications — for example, one company account opening email, docs, and HR portals. Convenient, but that single account must be strongly protected."
+    },
+    {
+      "@type": "DefinedTerm",
       "name": "Smishing",
       "description": "Phishing via SMS text messages, often with malicious links."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Sniffing",
+      "description": "Capturing network packets to read traffic that is not encrypted. On open WiFi, anyone nearby can sniff — HTTPS and VPNs make captured packets useless."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "SOAR (Security Orchestration, Automation and Response)",
+      "description": "Platforms that automate repetitive security work: enriching alerts, blocking malicious IPs, and guiding analysts through response playbooks step by step."
     },
     {
       "@type": "DefinedTerm",
@@ -343,6 +819,16 @@
       "@type": "DefinedTerm",
       "name": "Social Engineering",
       "description": "Manipulating people — not computers — to reveal secrets or grant access."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Spam",
+      "description": "Unsolicited bulk messages, usually email. Often carries phishing links or malware attachments; filters block most of it, but some always slips through."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Spear Phishing",
+      "description": "Phishing personalized for one specific target, using their name, job, or interests. Far more convincing than generic spam — verify unusual requests through a separate channel."
     },
     {
       "@type": "DefinedTerm",
@@ -361,8 +847,58 @@
     },
     {
       "@type": "DefinedTerm",
+      "name": "SSRF (Server-Side Request Forgery)",
+      "description": "Tricking a web server into making requests to internal systems on the attacker’s behalf — potentially reaching databases or cloud credentials that are not internet-facing."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Steganography",
+      "description": "Hiding secret data inside innocent-looking files, such as a message concealed in a photo. Used by spies — and by malware — to smuggle information past inspection."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Supply Chain Attack",
+      "description": "Compromising software by attacking its supplier: tainted updates, hijacked code libraries, or breached vendors. A single such attack can infect thousands of downstream users."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Symmetric Encryption",
+      "description": "Encryption where the same key both locks and unlocks data — AES is the leading example. Fast and simple, but both sides must exchange the key securely first."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Tailgating",
+      "description": "Following an authorized person through a secured door without swiping a badge yourself. Defeated by turnstiles, security guards, and employee awareness."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Threat",
+      "description": "Anything that could harm systems or data: attackers, malware, natural disasters, or human error. Risk exists wherever a threat meets a vulnerability."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Threat Actor",
+      "description": "Whoever is behind an attack: cybercriminals, hacktivists, malicious insiders, or nation-states. Knowing the actor helps defenders predict goals and methods."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Threat Hunting",
+      "description": "Proactively searching a network for hidden attackers instead of waiting for alerts to fire. Skilled hunters look for subtle anomalies that automated tools miss."
+    },
+    {
+      "@type": "DefinedTerm",
       "name": "Threat Intelligence",
       "description": "Collected knowledge about attackers' tools and tactics, used to defend proactively."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Threat Model",
+      "description": "A structured way of asking ‘what can go wrong?’ for a system: listing valuable assets, potential attackers, and likely attack paths before designing defenses."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Tokenization",
+      "description": "Replacing sensitive data — like credit card numbers — with random tokens that are worthless if stolen. The real data stays locked inside a secure vault."
     },
     {
       "@type": "DefinedTerm",
@@ -376,8 +912,43 @@
     },
     {
       "@type": "DefinedTerm",
+      "name": "TTP (Tactics, Techniques, and Procedures)",
+      "description": "The ‘how’ of an attack: tactics are the attacker’s goals, techniques are their methods, and procedures are the specific steps taken. Threat intelligence tracks TTPs to anticipate future attacks."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Typosquatting",
+      "description": "Registering misspelled domain names (like goggle.com) to catch mistyped visitors with phishing pages or malware. Always check URLs carefully before entering credentials."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "UEBA (User and Entity Behavior Analytics)",
+      "description": "Security tools that learn each user’s normal behavior and flag anomalies — like a 3 AM login from another country. Catches hijacked accounts and insider threats."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "USB Drop Attack",
+      "description": "Leaving infected USB drives in parking lots or offices, betting that curiosity will make someone plug one in. Never connect a USB device you found or received unexpectedly."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Virtual Machine (VM)",
+      "description": "Software that emulates an entire computer inside your computer. Used to safely analyze malware, build isolated test labs, and run servers efficiently."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Virus",
+      "description": "Malware that attaches itself to legitimate programs and spreads when those programs run. The classic malware type — still hunted by antivirus through signatures and behavior analysis."
+    },
+    {
+      "@type": "DefinedTerm",
       "name": "Vishing",
       "description": "Voice phishing — scam phone calls pretending to be banks, police, or tech support."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "VLAN (Virtual LAN)",
+      "description": "Logically dividing one physical network into separate virtual networks. Keeps departments or device types isolated from each other without buying extra hardware."
     },
     {
       "@type": "DefinedTerm",
@@ -391,8 +962,28 @@
     },
     {
       "@type": "DefinedTerm",
+      "name": "Vulnerability Assessment",
+      "description": "Systematically scanning systems to discover known weaknesses, then ranking them by severity. Usually the first step before deeper penetration testing."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Vulnerability Management",
+      "description": "The ongoing cycle of finding, prioritizing, fixing, and re-checking vulnerabilities. A mature security program treats it as continuous work, never a one-time task."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Vulnerability Scanning",
+      "description": "Using automated tools to probe systems for known flaws and misconfigurations. Fast and broad coverage, but can miss complex or brand-new issues."
+    },
+    {
+      "@type": "DefinedTerm",
       "name": "WAF (Web Application Firewall)",
       "description": "A firewall specialized in protecting websites from attacks like SQL injection."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Watering Hole Attack",
+      "description": "Compromising websites that your targets visit frequently, infecting them when they stop by. Named after predators that wait near watering holes."
     },
     {
       "@type": "DefinedTerm",
@@ -406,8 +997,23 @@
     },
     {
       "@type": "DefinedTerm",
+      "name": "Wi-Fi Security (WPA2/WPA3)",
+      "description": "The encryption standards that protect wireless networks. Use WPA3 — or WPA2 with a strong password — and avoid WEP and open networks entirely."
+    },
+    {
+      "@type": "DefinedTerm",
       "name": "Worm",
       "description": "Self-replicating malware that spreads across networks without user action."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "XDR (Extended Detection and Response)",
+      "description": "EDR’s bigger sibling: it pulls threat data from endpoints, networks, email, and cloud into one correlated view, so analysts can respond faster to complex attacks."
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "XXE (XML External Entity)",
+      "description": "An attack that abuses XML parsers to read files on the server or probe internal networks. Prevented by disabling external entities in the XML parser."
     },
     {
       "@type": "DefinedTerm",
@@ -435,88 +1041,209 @@
 <li><a href="index.html#career">Career</a></li>
 <li><a href="about.html">About</a></li>
 </ul></div></nav><div class="breadcrumb"><a href="index.html">Home</a> / 📚 Glossary</div>
-<header class="article-hero"><span class="section-tag">📚 Glossary</span><h1>Cybersecurity Glossary</h1><p class="hero-sub" style="margin-top:12px">79 essential terms explained in plain English.</p></header>
+<header class="article-hero"><span class="section-tag">📚 Glossary</span><h1>Cybersecurity Glossary</h1><p class="hero-sub" style="margin-top:12px">200 essential terms explained in plain English.</p></header>
 <main><section class="section"><div class="container">
 <input type="text" class="gloss-search" id="gsearch" placeholder="🔍 Search terms... (e.g. phishing)" oninput="filterGloss()">
-<div id="glosslist"><div class="gloss-term" data-name="2fa (two-factor authentication)"><h3>2FA (Two-Factor Authentication)</h3><p>An extra security layer requiring two proofs of identity — e.g. your password plus a code from your phone. Stops most account takeovers.</p></div>
-<div class="gloss-term" data-name="advanced persistent threat (apt)"><h3>Advanced Persistent Threat (APT)</h3><p>A long-term, targeted cyberattack by skilled actors (often state-backed) who quietly stay inside a network for months.</p></div>
-<div class="gloss-term" data-name="adware"><h3>Adware</h3><p>Software that shows unwanted ads. Often bundled with free programs; some adware also tracks your browsing.</p></div>
-<div class="gloss-term" data-name="antivirus"><h3>Antivirus</h3><p>Software that detects and removes malicious programs using known signatures and behavior analysis.</p></div>
-<div class="gloss-term" data-name="backdoor"><h3>Backdoor</h3><p>A hidden entry point into a system, left by malware or attackers to regain access later.</p></div>
-<div class="gloss-term" data-name="black hat hacker"><h3>Black Hat Hacker</h3><p>A hacker who breaks into systems illegally for personal gain or harm.</p></div>
-<div class="gloss-term" data-name="blue team"><h3>Blue Team</h3><p>The defensive security team that protects an organization's systems and detects attacks.</p></div>
-<div class="gloss-term" data-name="botnet"><h3>Botnet</h3><p>A network of infected computers controlled remotely by an attacker, used for spam, DDoS, or mining crypto.</p></div>
-<div class="gloss-term" data-name="brute force attack"><h3>Brute Force Attack</h3><p>Trying every possible password combination until one works. Defeated by long passwords and lockouts.</p></div>
-<div class="gloss-term" data-name="bug bounty"><h3>Bug Bounty</h3><p>A program where companies pay ethical hackers for finding and reporting security flaws legally.</p></div>
-<div class="gloss-term" data-name="certificate (digital)"><h3>Certificate (Digital)</h3><p>An electronic document proving a website's identity, enabling trusted HTTPS encryption.</p></div>
-<div class="gloss-term" data-name="command & control (c2)"><h3>Command & Control (C2)</h3><p>The server an attacker uses to send instructions to infected machines in a botnet.</p></div>
-<div class="gloss-term" data-name="credential stuffing"><h3>Credential Stuffing</h3><p>Using stolen username/password pairs from one breach to try logging into other sites. Blocked by unique passwords.</p></div>
-<div class="gloss-term" data-name="cross-site scripting (xss)"><h3>Cross-Site Scripting (XSS)</h3><p>An attack injecting malicious scripts into trusted websites, which then run in visitors' browsers.</p></div>
-<div class="gloss-term" data-name="cryptography"><h3>Cryptography</h3><p>The science of secure communication — encryption, hashing, and digital signatures.</p></div>
-<div class="gloss-term" data-name="cve"><h3>CVE</h3><p>Common Vulnerabilities and Exposures — a public ID system for known security flaws (e.g. CVE-2024-1234).</p></div>
-<div class="gloss-term" data-name="dark web"><h3>Dark Web</h3><p>Hidden websites reachable only with special software like Tor. Used for both privacy and crime.</p></div>
-<div class="gloss-term" data-name="ddos (distributed denial of service)"><h3>DDoS (Distributed Denial of Service)</h3><p>Overwhelming a website with traffic from many sources so real users cannot reach it.</p></div>
-<div class="gloss-term" data-name="decryption"><h3>Decryption</h3><p>Converting encrypted data back to readable form using the correct key.</p></div>
-<div class="gloss-term" data-name="digital forensics"><h3>Digital Forensics</h3><p>Recovering and analyzing digital evidence after a cyber incident, following legal procedures.</p></div>
-<div class="gloss-term" data-name="digital signature"><h3>Digital Signature</h3><p>A cryptographic proof that a message or file truly came from its claimed sender and was not altered.</p></div>
-<div class="gloss-term" data-name="dns (domain name system)"><h3>DNS (Domain Name System)</h3><p>The internet's phonebook — translates names like example.com into IP addresses.</p></div>
-<div class="gloss-term" data-name="edr (endpoint detection & response)"><h3>EDR (Endpoint Detection & Response)</h3><p>Advanced security software on devices that detects and responds to threats in real time.</p></div>
-<div class="gloss-term" data-name="encryption"><h3>Encryption</h3><p>Scrambling data with a key so only authorized parties can read it. The foundation of online privacy.</p></div>
-<div class="gloss-term" data-name="endpoint"><h3>Endpoint</h3><p>Any device connected to a network — laptop, phone, server — that needs protection.</p></div>
-<div class="gloss-term" data-name="ethical hacker"><h3>Ethical Hacker</h3><p>A security professional authorized to test systems for weaknesses so they can be fixed.</p></div>
-<div class="gloss-term" data-name="exploit"><h3>Exploit</h3><p>Code or technique that takes advantage of a software vulnerability.</p></div>
-<div class="gloss-term" data-name="firewall"><h3>Firewall</h3><p>A barrier that filters network traffic, blocking unauthorized connections while allowing legitimate ones.</p></div>
-<div class="gloss-term" data-name="grey hat hacker"><h3>Grey Hat Hacker</h3><p>A hacker operating between legal and illegal — e.g. finding flaws without permission but reporting them.</p></div>
-<div class="gloss-term" data-name="hashing"><h3>Hashing</h3><p>Converting data into a fixed-length fingerprint. One-way: you cannot reverse a hash to get the original.</p></div>
-<div class="gloss-term" data-name="honeypot"><h3>Honeypot</h3><p>A decoy system designed to attract attackers so defenders can study their methods.</p></div>
-<div class="gloss-term" data-name="https"><h3>HTTPS</h3><p>The secure version of HTTP — encrypts data between your browser and a website.</p></div>
-<div class="gloss-term" data-name="ids (intrusion detection system)"><h3>IDS (Intrusion Detection System)</h3><p>A system that monitors networks for malicious activity and raises alerts.</p></div>
-<div class="gloss-term" data-name="incident response"><h3>Incident Response</h3><p>The planned process of detecting, containing, and recovering from a security breach.</p></div>
-<div class="gloss-term" data-name="ip address"><h3>IP Address</h3><p>A unique number identifying every device on a network (e.g. 192.168.1.1).</p></div>
-<div class="gloss-term" data-name="ips (intrusion prevention system)"><h3>IPS (Intrusion Prevention System)</h3><p>Like an IDS, but it also blocks detected attacks automatically.</p></div>
-<div class="gloss-term" data-name="juice jacking"><h3>Juice Jacking</h3><p>Stealing data or installing malware through a compromised public USB charging port.</p></div>
-<div class="gloss-term" data-name="keylogger"><h3>Keylogger</h3><p>Malware that secretly records every keystroke to steal passwords and messages.</p></div>
-<div class="gloss-term" data-name="lateral movement"><h3>Lateral Movement</h3><p>An attacker's technique of moving from one compromised machine to others inside a network.</p></div>
-<div class="gloss-term" data-name="malware"><h3>Malware</h3><p>Malicious software — an umbrella term for viruses, ransomware, spyware, and trojans.</p></div>
-<div class="gloss-term" data-name="man-in-the-middle (mitm)"><h3>Man-in-the-Middle (MITM)</h3><p>An attack secretly intercepting communication between two parties, e.g. on unsafe WiFi.</p></div>
-<div class="gloss-term" data-name="mfa (multi-factor authentication)"><h3>MFA (Multi-Factor Authentication)</h3><p>Like 2FA but with two or more verification factors. The single best account protection.</p></div>
-<div class="gloss-term" data-name="osint (open-source intelligence)"><h3>OSINT (Open-Source Intelligence)</h3><p>Gathering intelligence from publicly available sources — legal and widely used by defenders.</p></div>
-<div class="gloss-term" data-name="owasp"><h3>OWASP</h3><p>Open Worldwide Application Security Project — publishes the famous Top 10 web security risks.</p></div>
-<div class="gloss-term" data-name="password spraying"><h3>Password Spraying</h3><p>Trying a few common passwords against many accounts to avoid lockouts. Defeated by MFA.</p></div>
-<div class="gloss-term" data-name="patch"><h3>Patch</h3><p>A software update fixing bugs or security vulnerabilities. Install patches promptly.</p></div>
-<div class="gloss-term" data-name="payload"><h3>Payload</h3><p>The malicious part of an attack — what the malware actually does once delivered.</p></div>
-<div class="gloss-term" data-name="penetration testing"><h3>Penetration Testing</h3><p>Authorized simulated attacks on a system to find weaknesses before criminals do.</p></div>
-<div class="gloss-term" data-name="pharming"><h3>Pharming</h3><p>Redirecting you to a fake website even when you typed the correct address, via DNS tricks.</p></div>
-<div class="gloss-term" data-name="phishing"><h3>Phishing</h3><p>Fake emails or messages pretending to be trusted senders to steal your credentials.</p></div>
-<div class="gloss-term" data-name="port"><h3>Port</h3><p>A numbered doorway on a device for network services (e.g. port 443 for HTTPS).</p></div>
-<div class="gloss-term" data-name="privilege escalation"><h3>Privilege Escalation</h3><p>An attacker gaining higher permissions than they started with — e.g. from user to admin.</p></div>
-<div class="gloss-term" data-name="proxy"><h3>Proxy</h3><p>A middleman server between you and the internet, hiding your IP or filtering traffic.</p></div>
-<div class="gloss-term" data-name="purple team"><h3>Purple Team</h3><p>A combined red (attack) and blue (defense) team that improves both sides together.</p></div>
-<div class="gloss-term" data-name="ransomware"><h3>Ransomware</h3><p>Malware that encrypts your files and demands payment for the key. Backups are the best defense.</p></div>
-<div class="gloss-term" data-name="rat (remote access trojan)"><h3>RAT (Remote Access Trojan)</h3><p>Malware giving an attacker full remote control of an infected device.</p></div>
-<div class="gloss-term" data-name="red team"><h3>Red Team</h3><p>The offensive security team that simulates real attackers to test defenses.</p></div>
-<div class="gloss-term" data-name="rootkit"><h3>Rootkit</h3><p>Deeply hidden malware designed to stay invisible while giving attackers control.</p></div>
-<div class="gloss-term" data-name="sandbox"><h3>Sandbox</h3><p>An isolated environment for safely running suspicious files or programs.</p></div>
-<div class="gloss-term" data-name="session hijacking"><h3>Session Hijacking</h3><p>Stealing someone's active login session to impersonate them online.</p></div>
-<div class="gloss-term" data-name="siem"><h3>SIEM</h3><p>Security Information and Event Management — software collecting and analyzing security logs centrally.</p></div>
-<div class="gloss-term" data-name="smishing"><h3>Smishing</h3><p>Phishing via SMS text messages, often with malicious links.</p></div>
-<div class="gloss-term" data-name="soc (security operations center)"><h3>SOC (Security Operations Center)</h3><p>The team/facility monitoring an organization's security around the clock.</p></div>
-<div class="gloss-term" data-name="social engineering"><h3>Social Engineering</h3><p>Manipulating people — not computers — to reveal secrets or grant access.</p></div>
-<div class="gloss-term" data-name="spyware"><h3>Spyware</h3><p>Malware secretly spying on your activity, messages, and location.</p></div>
-<div class="gloss-term" data-name="sql injection"><h3>SQL Injection</h3><p>An attack inserting malicious database commands into a website's input fields.</p></div>
-<div class="gloss-term" data-name="ssl/tls"><h3>SSL/TLS</h3><p>Encryption protocols securing data in transit (the 'S' in HTTPS).</p></div>
-<div class="gloss-term" data-name="threat intelligence"><h3>Threat Intelligence</h3><p>Collected knowledge about attackers' tools and tactics, used to defend proactively.</p></div>
-<div class="gloss-term" data-name="tor"><h3>Tor</h3><p>Privacy software routing traffic through volunteer relays to hide your identity and location.</p></div>
-<div class="gloss-term" data-name="trojan horse"><h3>Trojan Horse</h3><p>Malware disguised as legitimate software to trick you into installing it.</p></div>
-<div class="gloss-term" data-name="vishing"><h3>Vishing</h3><p>Voice phishing — scam phone calls pretending to be banks, police, or tech support.</p></div>
-<div class="gloss-term" data-name="vpn (virtual private network)"><h3>VPN (Virtual Private Network)</h3><p>An encrypted tunnel hiding your traffic from local snoopers, useful on public WiFi.</p></div>
-<div class="gloss-term" data-name="vulnerability"><h3>Vulnerability</h3><p>A weakness in software or systems that attackers can exploit.</p></div>
-<div class="gloss-term" data-name="waf (web application firewall)"><h3>WAF (Web Application Firewall)</h3><p>A firewall specialized in protecting websites from attacks like SQL injection.</p></div>
-<div class="gloss-term" data-name="whaling"><h3>Whaling</h3><p>Phishing targeted at high-profile victims like CEOs.</p></div>
-<div class="gloss-term" data-name="white hat hacker"><h3>White Hat Hacker</h3><p>An ethical hacker who tests systems with permission to improve security.</p></div>
-<div class="gloss-term" data-name="worm"><h3>Worm</h3><p>Self-replicating malware that spreads across networks without user action.</p></div>
-<div class="gloss-term" data-name="zero trust"><h3>Zero Trust</h3><p>A security model trusting nothing by default — every access request is verified.</p></div>
-<div class="gloss-term" data-name="zero-day"><h3>Zero-Day</h3><p>A vulnerability unknown to the vendor — with zero days of warning before attacks begin.</p></div></div>
+<div id="glosslist"><div class="gloss-term" id="gl-2fa-two-factor-authentication" data-name="2fa (two-factor authentication)"><h3>2FA (Two-Factor Authentication)</h3><p>An extra security layer requiring two proofs of identity — e.g. your password plus a code from your phone. Stops most account takeovers.</p><p class="gloss-more">Related: <a href="basics/two-factor-authentication-guide.html">Two-Factor Authentication (2FA): The Complete Guide (2026)</a></p></div>
+<div class="gloss-term" id="gl-access-control" data-name="access control"><h3>Access Control</h3><p>Rules that decide who or what can view or use resources in a system. Based on verified identity and permissions — enforced through logins, roles, and policies.</p></div>
+<div class="gloss-term" id="gl-access-control-list-acl" data-name="access control list (acl)"><h3>Access Control List (ACL)</h3><p>A list attached to a file or resource naming exactly which users or systems may access it, and what they may do. A fundamental enforcement tool for access control.</p></div>
+<div class="gloss-term" id="gl-advanced-persistent-threat-apt" data-name="advanced persistent threat (apt)"><h3>Advanced Persistent Threat (APT)</h3><p>A long-term, targeted cyberattack by skilled actors (often state-backed) who quietly stay inside a network for months.</p></div>
+<div class="gloss-term" id="gl-adware" data-name="adware"><h3>Adware</h3><p>Software that shows unwanted ads. Often bundled with free programs; some adware also tracks your browsing.</p></div>
+<div class="gloss-term" id="gl-aes-advanced-encryption-standard" data-name="aes (advanced encryption standard)"><h3>AES (Advanced Encryption Standard)</h3><p>The world’s most widely used symmetric encryption algorithm, with 128, 192, or 256-bit keys. Protects everything from WiFi (WPA2/WPA3) and files to messaging apps.</p></div>
+<div class="gloss-term" id="gl-air-gap" data-name="air gap"><h3>Air Gap</h3><p>Physically isolating a computer or network from all other networks, including the internet. Used for the most critical systems; data moves only through strictly controlled removable media.</p></div>
+<div class="gloss-term" id="gl-allowlist" data-name="allowlist"><h3>Allowlist</h3><p>A list of approved programs, websites, or senders — everything else is blocked by default. Stricter than a blocklist and common in high-security environments.</p></div>
+<div class="gloss-term" id="gl-antimalware" data-name="antimalware"><h3>Antimalware</h3><p>Software that detects and removes all kinds of malicious programs, not just viruses. Modern antimalware watches program behavior, not only known signatures.</p></div>
+<div class="gloss-term" id="gl-antivirus" data-name="antivirus"><h3>Antivirus</h3><p>Software that detects and removes malicious programs using known signatures and behavior analysis.</p></div>
+<div class="gloss-term" id="gl-attack-surface" data-name="attack surface"><h3>Attack Surface</h3><p>All the possible points where an attacker could try to enter a system: open ports, apps, user accounts, and APIs. A smaller attack surface is easier to defend.</p></div>
+<div class="gloss-term" id="gl-attack-vector" data-name="attack vector"><h3>Attack Vector</h3><p>The path or method an attacker uses to reach a target — a phishing email, a malicious USB drive, or an unpatched web application. Defenders work to close every vector.</p></div>
+<div class="gloss-term" id="gl-authentication" data-name="authentication"><h3>Authentication</h3><p>The process of verifying that someone really is who they claim to be — with a password, code, or fingerprint. Always comes before authorization.</p></div>
+<div class="gloss-term" id="gl-authorization" data-name="authorization"><h3>Authorization</h3><p>Deciding what an authenticated user is allowed to do: which files they can open, which systems they can touch. Managed through permissions and roles.</p></div>
+<div class="gloss-term" id="gl-backdoor" data-name="backdoor"><h3>Backdoor</h3><p>A hidden entry point into a system, left by malware or attackers to regain access later.</p></div>
+<div class="gloss-term" id="gl-backup-3-2-1-rule" data-name="backup (3-2-1 rule)"><h3>Backup (3-2-1 Rule)</h3><p>Keep 3 copies of important data, on 2 different media types, with 1 copy offline or off-site. The most reliable defense against ransomware and hardware failure.</p><p class="gloss-more">Related: <a href="sectools/secure-backup-checklist.html">Secure Backup Checklist — The 3-2-1 Rule & Backup Planner</a></p></div>
+<div class="gloss-term" id="gl-baiting" data-name="baiting"><h3>Baiting</h3><p>A social engineering trick that lures victims with something tempting — a free USB drive, a fake prize, or a ‘free’ download. Curiosity does the attacker’s work.</p><p class="gloss-more">Related: <a href="hacking/social-engineering-awareness.html">Social Engineering Awareness: Don't Get Manipulated</a></p></div>
+<div class="gloss-term" id="gl-biometric-authentication" data-name="biometric authentication"><h3>Biometric Authentication</h3><p>Verifying identity with a fingerprint, face, or voice instead of a password. Convenient and hard to forget — but unlike passwords, you cannot change biometrics if they are stolen.</p><p class="gloss-more">Related: <a href="sectools/twofa-setup-guide.html">2FA Setup Guide — Turn On Two-Factor Authentication Step by Step</a></p></div>
+<div class="gloss-term" id="gl-black-hat-hacker" data-name="black hat hacker"><h3>Black Hat Hacker</h3><p>A hacker who breaks into systems illegally for personal gain or harm.</p></div>
+<div class="gloss-term" id="gl-blocklist" data-name="blocklist"><h3>Blocklist</h3><p>A list of known-bad items — malicious IPs, domains, or senders — that are denied access. Easier to manage than allowlists but always one step behind new threats.</p></div>
+<div class="gloss-term" id="gl-blue-team" data-name="blue team"><h3>Blue Team</h3><p>The defensive security team that protects an organization's systems and detects attacks.</p><p class="gloss-more">Related: <a href="career/cybersecurity-career-roadmap.html">Cybersecurity Career Roadmap 2026: From Zero to Professional</a></p></div>
+<div class="gloss-term" id="gl-botnet" data-name="botnet"><h3>Botnet</h3><p>A network of infected computers controlled remotely by an attacker, used for spam, DDoS, or mining crypto.</p></div>
+<div class="gloss-term" id="gl-brute-force-attack" data-name="brute force attack"><h3>Brute Force Attack</h3><p>Trying every possible password combination until one works. Defeated by long passwords and lockouts.</p><p class="gloss-more">Related: <a href="tools/password-cracking-defense.html">Password Cracking Defense: How Attackers Guess Passwords (And How to Stop Them)</a></p></div>
+<div class="gloss-term" id="gl-buffer-overflow" data-name="buffer overflow"><h3>Buffer Overflow</h3><p>A bug where a program writes more data into memory than it can hold, spilling into neighboring areas. Attackers exploit this to crash programs or run their own code.</p></div>
+<div class="gloss-term" id="gl-bug-bounty" data-name="bug bounty"><h3>Bug Bounty</h3><p>A program where companies pay ethical hackers for finding and reporting security flaws legally.</p><p class="gloss-more">Related: <a href="career/bug-bounty-introduction.html">Bug Bounty Introduction: Earn Money Finding Bugs Legally</a></p></div>
+<div class="gloss-term" id="gl-business-email-compromise-bec" data-name="business email compromise (bec)"><h3>Business Email Compromise (BEC)</h3><p>Fraud where attackers impersonate a boss or supplier by email to trick staff into wiring money or sharing data. Among the costliest cybercrimes — always verify payment requests by phone.</p><p class="gloss-more">Related: <a href="sectools/email-security-analyzer.html">Email Security Analyzer — Learn to Spot Malicious Email</a></p></div>
+<div class="gloss-term" id="gl-certificate-digital" data-name="certificate (digital)"><h3>Certificate (Digital)</h3><p>An electronic document proving a website's identity, enabling trusted HTTPS encryption.</p></div>
+<div class="gloss-term" id="gl-certificate-authority-ca" data-name="certificate authority (ca)"><h3>Certificate Authority (CA)</h3><p>A trusted organization that issues digital certificates proving a website’s identity. Your browser relies on CAs to confirm that HTTPS sites are genuine.</p></div>
+<div class="gloss-term" id="gl-chain-of-custody" data-name="chain of custody"><h3>Chain of Custody</h3><p>A documented record of who handled digital evidence and when, from collection to the courtroom. Any gap in the chain can make evidence inadmissible in court.</p></div>
+<div class="gloss-term" id="gl-cia-triad" data-name="cia triad"><h3>CIA Triad</h3><p>The three core goals of information security: Confidentiality (only authorized access), Integrity (data stays accurate and unaltered), and Availability (systems keep working).</p></div>
+<div class="gloss-term" id="gl-ciphertext" data-name="ciphertext"><h3>Ciphertext</h3><p>Encrypted data in its scrambled, unreadable form. Only someone holding the correct key can turn ciphertext back into readable plaintext.</p></div>
+<div class="gloss-term" id="gl-clickjacking" data-name="clickjacking"><h3>Clickjacking</h3><p>Tricking you into clicking something invisible — like a hidden button layered over a real webpage. Can hijack likes, purchases, or account settings.</p></div>
+<div class="gloss-term" id="gl-cloud-security" data-name="cloud security"><h3>Cloud Security</h3><p>Protecting data and applications hosted on cloud platforms such as AWS, Google Cloud, or Azure. Covers secure configuration, access control, and encryption of cloud resources.</p></div>
+<div class="gloss-term" id="gl-command-control-c2" data-name="command & control (c2)"><h3>Command & Control (C2)</h3><p>The server an attacker uses to send instructions to infected machines in a botnet.</p></div>
+<div class="gloss-term" id="gl-credential-stuffing" data-name="credential stuffing"><h3>Credential Stuffing</h3><p>Using stolen username/password pairs from one breach to try logging into other sites. Blocked by unique passwords.</p><p class="gloss-more">Related: <a href="tools/password-cracking-defense.html">Password Cracking Defense: How Attackers Guess Passwords (And How to Stop Them)</a></p></div>
+<div class="gloss-term" id="gl-cross-site-scripting-xss" data-name="cross-site scripting (xss)"><h3>Cross-Site Scripting (XSS)</h3><p>An attack injecting malicious scripts into trusted websites, which then run in visitors' browsers.</p><p class="gloss-more">Related: <a href="hacking/web-application-security-basics.html">Web Application Security Basics: Protect Your Own Website</a></p></div>
+<div class="gloss-term" id="gl-cryptography" data-name="cryptography"><h3>Cryptography</h3><p>The science of secure communication — encryption, hashing, and digital signatures.</p></div>
+<div class="gloss-term" id="gl-csirt-computer-security-incident-response-team" data-name="csirt (computer security incident response team)"><h3>CSIRT (Computer Security Incident Response Team)</h3><p>A dedicated team that handles security incidents: detection, containment, recovery, and learning lessons afterward. Larger organizations run their own CSIRT around the clock.</p></div>
+<div class="gloss-term" id="gl-csrf-cross-site-request-forgery" data-name="csrf (cross-site request forgery)"><h3>CSRF (Cross-Site Request Forgery)</h3><p>An attack that tricks your logged-in browser into performing unwanted actions on a trusted site — like changing your email or password. Prevented with anti-CSRF tokens.</p><p class="gloss-more">Related: <a href="hacking/web-application-security-basics.html">Web Application Security Basics: Protect Your Own Website</a></p></div>
+<div class="gloss-term" id="gl-cve" data-name="cve"><h3>CVE</h3><p>Common Vulnerabilities and Exposures — a public ID system for known security flaws (e.g. CVE-2024-1234).</p></div>
+<div class="gloss-term" id="gl-cvss-common-vulnerability-scoring-system" data-name="cvss (common vulnerability scoring system)"><h3>CVSS (Common Vulnerability Scoring System)</h3><p>A 0-to-10 score rating how severe a software vulnerability is, based on how easily it can be exploited and the damage it causes. Helps teams fix the worst flaws first.</p></div>
+<div class="gloss-term" id="gl-cyber-hygiene" data-name="cyber hygiene"><h3>Cyber Hygiene</h3><p>Everyday security habits: installing updates, using strong unique passwords, keeping backups, and treating unknown links with suspicion. The digital equivalent of washing your hands.</p></div>
+<div class="gloss-term" id="gl-cyber-kill-chain" data-name="cyber kill chain"><h3>Cyber Kill Chain</h3><p>The seven stages of a typical attack: reconnaissance, weaponization, delivery, exploitation, installation, command and control, and actions on objectives. Defenders aim to break the chain as early as possible.</p></div>
+<div class="gloss-term" id="gl-dark-web" data-name="dark web"><h3>Dark Web</h3><p>Hidden websites reachable only with special software like Tor. Used for both privacy and crime.</p></div>
+<div class="gloss-term" id="gl-data-breach" data-name="data breach"><h3>Data Breach</h3><p>An incident where private data is stolen or exposed — by attackers or by mistake. Breaches can leak the passwords, IDs, and payment details of millions of people.</p><p class="gloss-more">Related: <a href="sectools/data-breach-response-guide.html">Data Breach Response Guide — What To Do If Your Data Leaks</a></p></div>
+<div class="gloss-term" id="gl-data-exfiltration" data-name="data exfiltration"><h3>Data Exfiltration</h3><p>The unauthorized copying or transfer of data out of an organization — the end goal of most breaches. DLP tools and outbound-traffic monitoring aim to stop it.</p><p class="gloss-more">Related: <a href="sectools/data-breach-response-guide.html">Data Breach Response Guide — What To Do If Your Data Leaks</a></p></div>
+<div class="gloss-term" id="gl-data-loss-prevention-dlp" data-name="data loss prevention (dlp)"><h3>Data Loss Prevention (DLP)</h3><p>Tools and policies that stop sensitive data from leaving an organization — blocking risky uploads, emails, or USB copies of confidential files.</p></div>
+<div class="gloss-term" id="gl-ddos-distributed-denial-of-service" data-name="ddos (distributed denial of service)"><h3>DDoS (Distributed Denial of Service)</h3><p>Overwhelming a website with traffic from many sources so real users cannot reach it.</p><p class="gloss-more">Related: <a href="basics/types-of-cyber-attacks.html">10 Types of Cyber Attacks Explained (With Real Examples)</a></p></div>
+<div class="gloss-term" id="gl-decryption" data-name="decryption"><h3>Decryption</h3><p>Converting encrypted data back to readable form using the correct key.</p></div>
+<div class="gloss-term" id="gl-defense-in-depth" data-name="defense in depth"><h3>Defense in Depth</h3><p>Protecting with multiple overlapping layers — firewall, antivirus, MFA, backups — so that one failure does not mean total compromise. No single layer is ever trusted alone.</p></div>
+<div class="gloss-term" id="gl-denial-of-service-dos" data-name="denial of service (dos)"><h3>Denial of Service (DoS)</h3><p>Flooding a system with requests from a single source until it slows down or crashes. Its larger cousin, DDoS, uses many sources at once.</p><p class="gloss-more">Related: <a href="basics/types-of-cyber-attacks.html">10 Types of Cyber Attacks Explained (With Real Examples)</a></p></div>
+<div class="gloss-term" id="gl-dictionary-attack" data-name="dictionary attack"><h3>Dictionary Attack</h3><p>Guessing passwords from lists of common words, phrases, and previously leaked passwords — far faster than pure brute force. Defeated by long, unique passphrases.</p><p class="gloss-more">Related: <a href="tools/password-cracking-defense.html">Password Cracking Defense: How Attackers Guess Passwords (And How to Stop Them)</a></p></div>
+<div class="gloss-term" id="gl-digital-forensics" data-name="digital forensics"><h3>Digital Forensics</h3><p>Recovering and analyzing digital evidence after a cyber incident, following legal procedures.</p></div>
+<div class="gloss-term" id="gl-digital-signature" data-name="digital signature"><h3>Digital Signature</h3><p>A cryptographic proof that a message or file truly came from its claimed sender and was not altered.</p></div>
+<div class="gloss-term" id="gl-dmz-demilitarized-zone" data-name="dmz (demilitarized zone)"><h3>DMZ (Demilitarized Zone)</h3><p>A separated network zone for public-facing servers (like web servers), sitting between the internet and the private internal network. Limits the damage if a public server gets hacked.</p></div>
+<div class="gloss-term" id="gl-dns-domain-name-system" data-name="dns (domain name system)"><h3>DNS (Domain Name System)</h3><p>The internet's phonebook — translates names like example.com into IP addresses.</p></div>
+<div class="gloss-term" id="gl-doxxing" data-name="doxxing"><h3>Doxxing</h3><p>Publishing someone’s private details — home address, phone number, family info — online to harass or threaten them. A crime in many countries; tighten your social media privacy settings.</p></div>
+<div class="gloss-term" id="gl-drive-by-download" data-name="drive-by download"><h3>Drive-by Download</h3><p>Malware that installs itself simply because you visited a compromised website — no click required. Keeping your browser updated blocks most of these attacks.</p></div>
+<div class="gloss-term" id="gl-eavesdropping" data-name="eavesdropping"><h3>Eavesdropping</h3><p>Secretly listening in on network traffic or conversations to steal information. Encryption through HTTPS and VPNs makes intercepted data unreadable.</p><p class="gloss-more">Related: <a href="tools/wireshark-basics.html">Wireshark Basics: See Your Network Traffic (Your Own Network)</a></p></div>
+<div class="gloss-term" id="gl-edr-endpoint-detection-response" data-name="edr (endpoint detection & response)"><h3>EDR (Endpoint Detection & Response)</h3><p>Advanced security software on devices that detects and responds to threats in real time.</p></div>
+<div class="gloss-term" id="gl-email-spoofing" data-name="email spoofing"><h3>Email Spoofing</h3><p>Faking the sender address so a message appears to come from your bank, boss, or a colleague. Never trust display names alone — check the real address and headers.</p><p class="gloss-more">Related: <a href="sectools/email-security-analyzer.html">Email Security Analyzer — Learn to Spot Malicious Email</a></p></div>
+<div class="gloss-term" id="gl-encryption" data-name="encryption"><h3>Encryption</h3><p>Scrambling data with a key so only authorized parties can read it. The foundation of online privacy.</p></div>
+<div class="gloss-term" id="gl-end-to-end-encryption-e2ee" data-name="end-to-end encryption (e2ee)"><h3>End-to-End Encryption (E2EE)</h3><p>Encryption where only the sender and receiver can read messages — not even the service provider in the middle. Used by WhatsApp and Signal.</p></div>
+<div class="gloss-term" id="gl-endpoint" data-name="endpoint"><h3>Endpoint</h3><p>Any device connected to a network — laptop, phone, server — that needs protection.</p></div>
+<div class="gloss-term" id="gl-ethical-hacker" data-name="ethical hacker"><h3>Ethical Hacker</h3><p>A security professional authorized to test systems for weaknesses so they can be fixed.</p><p class="gloss-more">Related: <a href="hacking/what-is-penetration-testing.html">What Is Penetration Testing? Ethical Hacking Explained</a></p></div>
+<div class="gloss-term" id="gl-evil-twin" data-name="evil twin"><h3>Evil Twin</h3><p>A fake WiFi hotspot with a trustworthy name (like ‘Free Airport WiFi’) set up to steal your data. Always confirm the exact network name with staff before connecting.</p><p class="gloss-more">Related: <a href="basics/wifi-security-guide.html">WiFi Security Guide: Secure Your Home Network (2026)</a></p></div>
+<div class="gloss-term" id="gl-exploit" data-name="exploit"><h3>Exploit</h3><p>Code or technique that takes advantage of a software vulnerability.</p><p class="gloss-more">Related: <a href="tools/metasploit-basics-ethical.html">Metasploit Basics: Understanding the Professional Framework (Ethical Use)</a></p></div>
+<div class="gloss-term" id="gl-fileless-malware" data-name="fileless malware"><h3>Fileless Malware</h3><p>Malware that runs entirely in memory without installing files on disk, making it hard for traditional antivirus to spot. Detected by behavior-monitoring tools like EDR.</p></div>
+<div class="gloss-term" id="gl-firewall" data-name="firewall"><h3>Firewall</h3><p>A barrier that filters network traffic, blocking unauthorized connections while allowing legitimate ones.</p><p class="gloss-more">Related: <a href="sectools/firewall-rules-explainer.html">Firewall Rules Explainer — Understand Network Defense</a></p></div>
+<div class="gloss-term" id="gl-fuzzing" data-name="fuzzing"><h3>Fuzzing</h3><p>Automatically feeding random or malformed data into software to trigger crashes and uncover vulnerabilities. A standard technique in security testing.</p></div>
+<div class="gloss-term" id="gl-grey-hat-hacker" data-name="grey hat hacker"><h3>Grey Hat Hacker</h3><p>A hacker operating between legal and illegal — e.g. finding flaws without permission but reporting them.</p></div>
+<div class="gloss-term" id="gl-hacker" data-name="hacker"><h3>Hacker</h3><p>Someone with deep computer skills who finds clever ways into systems. Hackers can be criminal (black hat), authorized (white hat), or somewhere in between (grey hat).</p></div>
+<div class="gloss-term" id="gl-hardening" data-name="hardening"><h3>Hardening</h3><p>Reducing a system’s attack surface: disabling unused services, removing default passwords, and applying secure settings. A standard first step when setting up any server.</p></div>
+<div class="gloss-term" id="gl-hashing" data-name="hashing"><h3>Hashing</h3><p>Converting data into a fixed-length fingerprint. One-way: you cannot reverse a hash to get the original.</p><p class="gloss-more">Related: <a href="sectools/hash-generator.html">Hash Generator — MD5, SHA-1, SHA-256 Online</a></p></div>
+<div class="gloss-term" id="gl-honeypot" data-name="honeypot"><h3>Honeypot</h3><p>A decoy system designed to attract attackers so defenders can study their methods.</p></div>
+<div class="gloss-term" id="gl-http" data-name="http"><h3>HTTP</h3><p>The basic protocol browsers use to fetch web pages — sent in plain, readable text. Its secure encrypted version is HTTPS; never enter passwords on plain HTTP sites.</p></div>
+<div class="gloss-term" id="gl-https" data-name="https"><h3>HTTPS</h3><p>The secure version of HTTP — encrypts data between your browser and a website.</p></div>
+<div class="gloss-term" id="gl-iam-identity-and-access-management" data-name="iam (identity and access management)"><h3>IAM (Identity and Access Management)</h3><p>Systems that manage who users are and what they can access across an organization. Includes single sign-on, multi-factor authentication, and role-based permissions.</p></div>
+<div class="gloss-term" id="gl-ids-intrusion-detection-system" data-name="ids (intrusion detection system)"><h3>IDS (Intrusion Detection System)</h3><p>A system that monitors networks for malicious activity and raises alerts.</p></div>
+<div class="gloss-term" id="gl-incident-response" data-name="incident response"><h3>Incident Response</h3><p>The planned process of detecting, containing, and recovering from a security breach.</p><p class="gloss-more">Related: <a href="sectools/incident-response-playbook.html">Incident Response Playbook — What To Do If You're Hacked</a></p></div>
+<div class="gloss-term" id="gl-indicator-of-compromise-ioc" data-name="indicator of compromise (ioc)"><h3>Indicator of Compromise (IOC)</h3><p>A clue that a system has been breached — a malicious IP address, file hash, or domain name. Defenders share IOCs so others can detect the same attack.</p></div>
+<div class="gloss-term" id="gl-insider-threat" data-name="insider threat"><h3>Insider Threat</h3><p>A security risk coming from inside: employees or contractors who misuse their access, whether maliciously or through careless mistakes. Hard to stop with perimeter defenses alone.</p></div>
+<div class="gloss-term" id="gl-iot-security" data-name="iot security"><h3>IoT Security</h3><p>Securing internet-connected devices — cameras, smart TVs, thermostats — which often ship with weak default passwords and rarely receive updates.</p></div>
+<div class="gloss-term" id="gl-ip-address" data-name="ip address"><h3>IP Address</h3><p>A unique number identifying every device on a network (e.g. 192.168.1.1).</p></div>
+<div class="gloss-term" id="gl-ips-intrusion-prevention-system" data-name="ips (intrusion prevention system)"><h3>IPS (Intrusion Prevention System)</h3><p>Like an IDS, but it also blocks detected attacks automatically.</p></div>
+<div class="gloss-term" id="gl-iso-27001" data-name="iso 27001"><h3>ISO 27001</h3><p>The international standard for managing information security inside organizations. Certification proves a company follows strict, audited security practices.</p></div>
+<div class="gloss-term" id="gl-juice-jacking" data-name="juice jacking"><h3>Juice Jacking</h3><p>Stealing data or installing malware through a compromised public USB charging port.</p><p class="gloss-more">Related: <a href="basics/mobile-security.html">Mobile Security Guide: Lock Down Your Phone (2026)</a></p></div>
+<div class="gloss-term" id="gl-key-management" data-name="key management"><h3>Key Management</h3><p>The secure creation, storage, rotation, and destruction of encryption keys. Even the strongest encryption fails if keys are lost, stolen, or hardcoded into software.</p></div>
+<div class="gloss-term" id="gl-keylogger" data-name="keylogger"><h3>Keylogger</h3><p>Malware that secretly records every keystroke to steal passwords and messages.</p></div>
+<div class="gloss-term" id="gl-lateral-movement" data-name="lateral movement"><h3>Lateral Movement</h3><p>An attacker's technique of moving from one compromised machine to others inside a network.</p></div>
+<div class="gloss-term" id="gl-least-privilege" data-name="least privilege"><h3>Least Privilege</h3><p>Giving users and programs only the minimum access they need to do their job — nothing more. Limits how much damage any single compromised account can cause.</p></div>
+<div class="gloss-term" id="gl-mac-address" data-name="mac address"><h3>MAC Address</h3><p>A unique hardware identifier burned into every network device. Used for network access control, though attackers can fake (spoof) it.</p></div>
+<div class="gloss-term" id="gl-malware" data-name="malware"><h3>Malware</h3><p>Malicious software — an umbrella term for viruses, ransomware, spyware, and trojans.</p><p class="gloss-more">Related: <a href="basics/types-of-cyber-attacks.html">10 Types of Cyber Attacks Explained (With Real Examples)</a></p></div>
+<div class="gloss-term" id="gl-malware-analysis" data-name="malware analysis"><h3>Malware Analysis</h3><p>Studying malware in a safe, isolated lab to learn what it does and how to detect it. Static analysis reads its code; dynamic analysis watches it run inside a sandbox.</p></div>
+<div class="gloss-term" id="gl-malware-signature" data-name="malware signature"><h3>Malware Signature</h3><p>A unique fingerprint — often a hash — of a known malware sample. Antivirus products match suspicious files against databases holding millions of signatures.</p></div>
+<div class="gloss-term" id="gl-man-in-the-middle-mitm" data-name="man-in-the-middle (mitm)"><h3>Man-in-the-Middle (MITM)</h3><p>An attack secretly intercepting communication between two parties, e.g. on unsafe WiFi.</p><p class="gloss-more">Related: <a href="basics/wifi-security-guide.html">WiFi Security Guide: Secure Your Home Network (2026)</a></p></div>
+<div class="gloss-term" id="gl-metadata" data-name="metadata"><h3>Metadata</h3><p>Data about data: a photo’s location, a document’s author, an email’s routing history. Attackers mine metadata for reconnaissance — strip it before sharing files publicly.</p></div>
+<div class="gloss-term" id="gl-mfa-multi-factor-authentication" data-name="mfa (multi-factor authentication)"><h3>MFA (Multi-Factor Authentication)</h3><p>Like 2FA but with two or more verification factors. The single best account protection.</p><p class="gloss-more">Related: <a href="sectools/twofa-setup-guide.html">2FA Setup Guide — Turn On Two-Factor Authentication Step by Step</a></p></div>
+<div class="gloss-term" id="gl-mitre-att-ck" data-name="mitre att&ck"><h3>MITRE ATT&CK</h3><p>A public knowledge base cataloging the real tactics and techniques attackers use, based on observed attacks. Defenders use it to map intrusions and plan detections.</p></div>
+<div class="gloss-term" id="gl-nat-network-address-translation" data-name="nat (network address translation)"><h3>NAT (Network Address Translation)</h3><p>Technology that lets many devices share one public IP address by translating internal addresses. Used by home routers; it also hides the internal network layout.</p></div>
+<div class="gloss-term" id="gl-network-segmentation" data-name="network segmentation"><h3>Network Segmentation</h3><p>Dividing a network into separate sections so a breach in one area cannot easily spread to others. Directly limits an attacker’s lateral movement.</p></div>
+<div class="gloss-term" id="gl-next-gen-firewall-ngfw" data-name="next-gen firewall (ngfw)"><h3>Next-Gen Firewall (NGFW)</h3><p>A firewall that goes beyond port filtering: it inspects applications, blocks malware, and filters malicious URLs in real time.</p></div>
+<div class="gloss-term" id="gl-oauth" data-name="oauth"><h3>OAuth</h3><p>An open standard that lets you log into apps with your Google or Apple account without sharing your password. Apps receive limited-permission tokens instead of your credentials.</p></div>
+<div class="gloss-term" id="gl-osint-open-source-intelligence" data-name="osint (open-source intelligence)"><h3>OSINT (Open-Source Intelligence)</h3><p>Gathering intelligence from publicly available sources — legal and widely used by defenders.</p></div>
+<div class="gloss-term" id="gl-owasp" data-name="owasp"><h3>OWASP</h3><p>Open Worldwide Application Security Project — publishes the famous Top 10 web security risks.</p><p class="gloss-more">Related: <a href="hacking/web-application-security-basics.html">Web Application Security Basics: Protect Your Own Website</a></p></div>
+<div class="gloss-term" id="gl-password-manager" data-name="password manager"><h3>Password Manager</h3><p>An app that generates and stores a strong, unique password for every site, protected by one master password. The practical fix for dangerous password reuse.</p><p class="gloss-more">Related: <a href="sectools/password-manager-comparison.html">Password Manager Guide — How to Choose One (Honest, No Fake Reviews)</a></p></div>
+<div class="gloss-term" id="gl-password-policy" data-name="password policy"><h3>Password Policy</h3><p>An organization’s enforced rules for passwords: minimum length, complexity, rotation, and account lockouts. Strong policies are technically enforced, not just suggested.</p><p class="gloss-more">Related: <a href="basics/password-security-guide.html">Password Security: The Complete Guide (2026)</a></p></div>
+<div class="gloss-term" id="gl-password-spraying" data-name="password spraying"><h3>Password Spraying</h3><p>Trying a few common passwords against many accounts to avoid lockouts. Defeated by MFA.</p><p class="gloss-more">Related: <a href="tools/password-cracking-defense.html">Password Cracking Defense: How Attackers Guess Passwords (And How to Stop Them)</a></p></div>
+<div class="gloss-term" id="gl-patch" data-name="patch"><h3>Patch</h3><p>A software update fixing bugs or security vulnerabilities. Install patches promptly.</p></div>
+<div class="gloss-term" id="gl-patch-management" data-name="patch management"><h3>Patch Management</h3><p>The organized process of finding, testing, and installing software updates across every device. Unpatched systems remain the most common entry point for attackers.</p></div>
+<div class="gloss-term" id="gl-payload" data-name="payload"><h3>Payload</h3><p>The malicious part of an attack — what the malware actually does once delivered.</p><p class="gloss-more">Related: <a href="tools/metasploit-basics-ethical.html">Metasploit Basics: Understanding the Professional Framework (Ethical Use)</a></p></div>
+<div class="gloss-term" id="gl-penetration-testing" data-name="penetration testing"><h3>Penetration Testing</h3><p>Authorized simulated attacks on a system to find weaknesses before criminals do.</p><p class="gloss-more">Related: <a href="hacking/what-is-penetration-testing.html">What Is Penetration Testing? Ethical Hacking Explained</a></p></div>
+<div class="gloss-term" id="gl-pgp-pretty-good-privacy" data-name="pgp (pretty good privacy)"><h3>PGP (Pretty Good Privacy)</h3><p>A long-standing program for encrypting emails and files with public-key cryptography. Also lets you digitally sign messages to prove they truly came from you.</p></div>
+<div class="gloss-term" id="gl-pharming" data-name="pharming"><h3>Pharming</h3><p>Redirecting you to a fake website even when you typed the correct address, via DNS tricks.</p><p class="gloss-more">Related: <a href="basics/phishing-protection.html">Phishing Protection: How to Spot Fake Emails, SMS & Calls</a></p></div>
+<div class="gloss-term" id="gl-phishing" data-name="phishing"><h3>Phishing</h3><p>Fake emails or messages pretending to be trusted senders to steal your credentials.</p><p class="gloss-more">Related: <a href="basics/phishing-protection.html">Phishing Protection: How to Spot Fake Emails, SMS & Calls</a></p></div>
+<div class="gloss-term" id="gl-pii-personally-identifiable-information" data-name="pii (personally identifiable information)"><h3>PII (Personally Identifiable Information)</h3><p>Data that can identify a person: name, national ID, address, or biometrics. Protecting PII is required by privacy laws in most countries.</p></div>
+<div class="gloss-term" id="gl-pivoting" data-name="pivoting"><h3>Pivoting</h3><p>After compromising one machine, an attacker uses it as a stepping stone to reach deeper, hidden parts of a network. Detected by watching for unusual internal traffic.</p></div>
+<div class="gloss-term" id="gl-pki-public-key-infrastructure" data-name="pki (public key infrastructure)"><h3>PKI (Public Key Infrastructure)</h3><p>The system of certificate authorities, digital certificates, and keys that makes HTTPS and secure email trustworthy at internet scale.</p></div>
+<div class="gloss-term" id="gl-plaintext" data-name="plaintext"><h3>Plaintext</h3><p>Readable, unencrypted data. A basic security rule: never store passwords or secrets in plaintext where anyone with file access can read them.</p></div>
+<div class="gloss-term" id="gl-port" data-name="port"><h3>Port</h3><p>A numbered doorway on a device for network services (e.g. port 443 for HTTPS).</p><p class="gloss-more">Related: <a href="hacking/nmap-guide.html">Nmap Beginner's Guide: Scan Your Own Network Safely</a></p></div>
+<div class="gloss-term" id="gl-pretexting" data-name="pretexting"><h3>Pretexting</h3><p>Inventing a believable false scenario — ‘I’m from IT support’ — to trick someone into revealing information. A core social engineering technique.</p><p class="gloss-more">Related: <a href="hacking/social-engineering-awareness.html">Social Engineering Awareness: Don't Get Manipulated</a></p></div>
+<div class="gloss-term" id="gl-private-key" data-name="private key"><h3>Private Key</h3><p>The secret half of a cryptographic key pair, which must never be shared. Used to decrypt incoming data and to create digital signatures.</p></div>
+<div class="gloss-term" id="gl-privilege-escalation" data-name="privilege escalation"><h3>Privilege Escalation</h3><p>An attacker gaining higher permissions than they started with — e.g. from user to admin.</p></div>
+<div class="gloss-term" id="gl-privileged-access-management-pam" data-name="privileged access management (pam)"><h3>Privileged Access Management (PAM)</h3><p>Tools that tightly control powerful administrator accounts: vaulting their passwords, recording their sessions, and granting access only when needed.</p></div>
+<div class="gloss-term" id="gl-proxy" data-name="proxy"><h3>Proxy</h3><p>A middleman server between you and the internet, hiding your IP or filtering traffic.</p></div>
+<div class="gloss-term" id="gl-public-key" data-name="public key"><h3>Public Key</h3><p>The shareable half of a cryptographic key pair. Anyone can use your public key to send you encrypted messages or to verify your digital signatures.</p></div>
+<div class="gloss-term" id="gl-purple-team" data-name="purple team"><h3>Purple Team</h3><p>A combined red (attack) and blue (defense) team that improves both sides together.</p></div>
+<div class="gloss-term" id="gl-quishing" data-name="quishing"><h3>Quishing</h3><p>Phishing through QR codes that lead to malicious websites. Scammers paste fake QR codes over real ones on parking meters and posters — always preview the URL before opening.</p><p class="gloss-more">Related: <a href="sectools/phishing-url-analyzer.html">Phishing URL Analyzer — Learn to Spot Suspicious Links</a></p></div>
+<div class="gloss-term" id="gl-ransomware" data-name="ransomware"><h3>Ransomware</h3><p>Malware that encrypts your files and demands payment for the key. Backups are the best defense.</p><p class="gloss-more">Related: <a href="basics/ransomware-protection-guide.html">Ransomware Protection Guide: Keep Your Files Safe (2026)</a></p></div>
+<div class="gloss-term" id="gl-rat-remote-access-trojan" data-name="rat (remote access trojan)"><h3>RAT (Remote Access Trojan)</h3><p>Malware giving an attacker full remote control of an infected device.</p></div>
+<div class="gloss-term" id="gl-red-team" data-name="red team"><h3>Red Team</h3><p>The offensive security team that simulates real attackers to test defenses.</p><p class="gloss-more">Related: <a href="career/cybersecurity-career-roadmap.html">Cybersecurity Career Roadmap 2026: From Zero to Professional</a></p></div>
+<div class="gloss-term" id="gl-replay-attack" data-name="replay attack"><h3>Replay Attack</h3><p>Capturing valid data — like a login request — and resending it later to gain unauthorized access. Prevented with nonces, timestamps, and one-time session tokens.</p></div>
+<div class="gloss-term" id="gl-reverse-engineering" data-name="reverse engineering"><h3>Reverse Engineering</h3><p>Taking apart software or malware to understand how it works, without access to its source code. Essential for malware analysis and for finding hidden vulnerabilities.</p></div>
+<div class="gloss-term" id="gl-risk-assessment" data-name="risk assessment"><h3>Risk Assessment</h3><p>Identifying what could go wrong, estimating how likely and how damaging it would be, then deciding which risks to fix, accept, or insure against.</p></div>
+<div class="gloss-term" id="gl-rogue-access-point" data-name="rogue access point"><h3>Rogue Access Point</h3><p>An unauthorized WiFi access point on a network — planted by attackers, or set up carelessly by staff — that can intercept traffic. Found with wireless security scans.</p><p class="gloss-more">Related: <a href="basics/wifi-security-guide.html">WiFi Security Guide: Secure Your Home Network (2026)</a></p></div>
+<div class="gloss-term" id="gl-rootkit" data-name="rootkit"><h3>Rootkit</h3><p>Deeply hidden malware designed to stay invisible while giving attackers control.</p></div>
+<div class="gloss-term" id="gl-rsa" data-name="rsa"><h3>RSA</h3><p>One of the first public-key cryptosystems, named after Rivest, Shamir, and Adleman. Still widely used for secure key exchange and digital signatures.</p></div>
+<div class="gloss-term" id="gl-salting" data-name="salting"><h3>Salting</h3><p>Adding unique random data to each password before hashing it, so identical passwords produce different hashes. Defeats rainbow-table attacks against stolen password databases.</p></div>
+<div class="gloss-term" id="gl-sandbox" data-name="sandbox"><h3>Sandbox</h3><p>An isolated environment for safely running suspicious files or programs.</p><p class="gloss-more">Related: <a href="tools/kali-linux-setup.html">Kali Linux Setup Guide: Build Your Ethical Hacking Lab</a></p></div>
+<div class="gloss-term" id="gl-script-kiddie" data-name="script kiddie"><h3>Script Kiddie</h3><p>An unskilled attacker who uses ready-made hacking tools without understanding how they work. Noisy and easy to catch — but still dangerous against poorly defended targets.</p></div>
+<div class="gloss-term" id="gl-secure-boot" data-name="secure boot"><h3>Secure Boot</h3><p>A startup feature that verifies software signatures before the operating system loads, blocking malware that tries to infect the boot process.</p></div>
+<div class="gloss-term" id="gl-secure-coding" data-name="secure coding"><h3>Secure Coding</h3><p>Writing software with security built in from the start: validating all input, handling errors safely, and avoiding known bug patterns. Prevents vulnerabilities at their source.</p><p class="gloss-more">Related: <a href="hacking/web-application-security-basics.html">Web Application Security Basics: Protect Your Own Website</a></p></div>
+<div class="gloss-term" id="gl-security-audit" data-name="security audit"><h3>Security Audit</h3><p>A systematic, independent review of an organization’s security controls, policies, and legal compliance. Finds dangerous gaps before attackers — or regulators — do.</p></div>
+<div class="gloss-term" id="gl-security-awareness-training" data-name="security awareness training"><h3>Security Awareness Training</h3><p>Teaching employees to recognize phishing, use strong passwords, and handle sensitive data safely. Necessary because humans remain the most frequently attacked layer.</p><p class="gloss-more">Related: <a href="hacking/social-engineering-awareness.html">Social Engineering Awareness: Don't Get Manipulated</a></p></div>
+<div class="gloss-term" id="gl-security-baseline" data-name="security baseline"><h3>Security Baseline</h3><p>The minimum agreed security settings every system must meet: password rules, logging, patching, and encryption. Each device is measured against the baseline.</p></div>
+<div class="gloss-term" id="gl-security-incident" data-name="security incident"><h3>Security Incident</h3><p>Any event that threatens confidentiality, integrity, or availability — from a malware alert to a full data breach. Every incident triggers the incident response process.</p></div>
+<div class="gloss-term" id="gl-security-token" data-name="security token"><h3>Security Token</h3><p>A physical or software device that generates login codes or cryptographic proof of identity — like a YubiKey or authenticator app. Stronger than SMS codes, which can be intercepted.</p></div>
+<div class="gloss-term" id="gl-session-hijacking" data-name="session hijacking"><h3>Session Hijacking</h3><p>Stealing someone's active login session to impersonate them online.</p></div>
+<div class="gloss-term" id="gl-shadow-it" data-name="shadow it"><h3>Shadow IT</h3><p>Hardware or software employees use without IT approval — personal cloud storage, unauthorized apps. Creates blind spots the security team cannot see or protect.</p></div>
+<div class="gloss-term" id="gl-shoulder-surfing" data-name="shoulder surfing"><h3>Shoulder Surfing</h3><p>Stealing passwords or PINs by watching over someone’s shoulder or through cameras. Defeated with privacy screens and shielded keypads.</p></div>
+<div class="gloss-term" id="gl-siem" data-name="siem"><h3>SIEM</h3><p>Security Information and Event Management — software collecting and analyzing security logs centrally.</p></div>
+<div class="gloss-term" id="gl-signature-based-detection" data-name="signature-based detection"><h3>Signature-Based Detection</h3><p>Identifying malware by matching it against fingerprints (signatures) of known threats. Fast and accurate for known malware, but blind to brand-new attacks.</p></div>
+<div class="gloss-term" id="gl-sim-swapping" data-name="sim swapping"><h3>SIM Swapping</h3><p>Tricking a mobile carrier into transferring your phone number to the attacker’s SIM card, hijacking your SMS verification codes. Use app-based authenticators instead of SMS 2FA.</p></div>
+<div class="gloss-term" id="gl-single-sign-on-sso" data-name="single sign-on (sso)"><h3>Single Sign-On (SSO)</h3><p>Logging in once to access many applications — for example, one company account opening email, docs, and HR portals. Convenient, but that single account must be strongly protected.</p></div>
+<div class="gloss-term" id="gl-smishing" data-name="smishing"><h3>Smishing</h3><p>Phishing via SMS text messages, often with malicious links.</p><p class="gloss-more">Related: <a href="basics/phishing-protection.html">Phishing Protection: How to Spot Fake Emails, SMS & Calls</a></p></div>
+<div class="gloss-term" id="gl-sniffing" data-name="sniffing"><h3>Sniffing</h3><p>Capturing network packets to read traffic that is not encrypted. On open WiFi, anyone nearby can sniff — HTTPS and VPNs make captured packets useless.</p><p class="gloss-more">Related: <a href="tools/wireshark-basics.html">Wireshark Basics: See Your Network Traffic (Your Own Network)</a></p></div>
+<div class="gloss-term" id="gl-soar-security-orchestration-automation-and-response" data-name="soar (security orchestration, automation and response)"><h3>SOAR (Security Orchestration, Automation and Response)</h3><p>Platforms that automate repetitive security work: enriching alerts, blocking malicious IPs, and guiding analysts through response playbooks step by step.</p></div>
+<div class="gloss-term" id="gl-soc-security-operations-center" data-name="soc (security operations center)"><h3>SOC (Security Operations Center)</h3><p>The team/facility monitoring an organization's security around the clock.</p><p class="gloss-more">Related: <a href="career/cybersecurity-career-roadmap.html">Cybersecurity Career Roadmap 2026: From Zero to Professional</a></p></div>
+<div class="gloss-term" id="gl-social-engineering" data-name="social engineering"><h3>Social Engineering</h3><p>Manipulating people — not computers — to reveal secrets or grant access.</p><p class="gloss-more">Related: <a href="hacking/social-engineering-awareness.html">Social Engineering Awareness: Don't Get Manipulated</a></p></div>
+<div class="gloss-term" id="gl-spam" data-name="spam"><h3>Spam</h3><p>Unsolicited bulk messages, usually email. Often carries phishing links or malware attachments; filters block most of it, but some always slips through.</p></div>
+<div class="gloss-term" id="gl-spear-phishing" data-name="spear phishing"><h3>Spear Phishing</h3><p>Phishing personalized for one specific target, using their name, job, or interests. Far more convincing than generic spam — verify unusual requests through a separate channel.</p><p class="gloss-more">Related: <a href="basics/phishing-protection.html">Phishing Protection: How to Spot Fake Emails, SMS & Calls</a></p></div>
+<div class="gloss-term" id="gl-spyware" data-name="spyware"><h3>Spyware</h3><p>Malware secretly spying on your activity, messages, and location.</p></div>
+<div class="gloss-term" id="gl-sql-injection" data-name="sql injection"><h3>SQL Injection</h3><p>An attack inserting malicious database commands into a website's input fields.</p><p class="gloss-more">Related: <a href="hacking/web-application-security-basics.html">Web Application Security Basics: Protect Your Own Website</a></p></div>
+<div class="gloss-term" id="gl-ssl-tls" data-name="ssl/tls"><h3>SSL/TLS</h3><p>Encryption protocols securing data in transit (the 'S' in HTTPS).</p><p class="gloss-more">Related: <a href="sectools/ssl-certificate-guide.html">SSL Certificate Guide — Learn to Verify Secure Websites</a></p></div>
+<div class="gloss-term" id="gl-ssrf-server-side-request-forgery" data-name="ssrf (server-side request forgery)"><h3>SSRF (Server-Side Request Forgery)</h3><p>Tricking a web server into making requests to internal systems on the attacker’s behalf — potentially reaching databases or cloud credentials that are not internet-facing.</p></div>
+<div class="gloss-term" id="gl-steganography" data-name="steganography"><h3>Steganography</h3><p>Hiding secret data inside innocent-looking files, such as a message concealed in a photo. Used by spies — and by malware — to smuggle information past inspection.</p></div>
+<div class="gloss-term" id="gl-supply-chain-attack" data-name="supply chain attack"><h3>Supply Chain Attack</h3><p>Compromising software by attacking its supplier: tainted updates, hijacked code libraries, or breached vendors. A single such attack can infect thousands of downstream users.</p></div>
+<div class="gloss-term" id="gl-symmetric-encryption" data-name="symmetric encryption"><h3>Symmetric Encryption</h3><p>Encryption where the same key both locks and unlocks data — AES is the leading example. Fast and simple, but both sides must exchange the key securely first.</p></div>
+<div class="gloss-term" id="gl-tailgating" data-name="tailgating"><h3>Tailgating</h3><p>Following an authorized person through a secured door without swiping a badge yourself. Defeated by turnstiles, security guards, and employee awareness.</p><p class="gloss-more">Related: <a href="hacking/social-engineering-awareness.html">Social Engineering Awareness: Don't Get Manipulated</a></p></div>
+<div class="gloss-term" id="gl-threat" data-name="threat"><h3>Threat</h3><p>Anything that could harm systems or data: attackers, malware, natural disasters, or human error. Risk exists wherever a threat meets a vulnerability.</p></div>
+<div class="gloss-term" id="gl-threat-actor" data-name="threat actor"><h3>Threat Actor</h3><p>Whoever is behind an attack: cybercriminals, hacktivists, malicious insiders, or nation-states. Knowing the actor helps defenders predict goals and methods.</p></div>
+<div class="gloss-term" id="gl-threat-hunting" data-name="threat hunting"><h3>Threat Hunting</h3><p>Proactively searching a network for hidden attackers instead of waiting for alerts to fire. Skilled hunters look for subtle anomalies that automated tools miss.</p></div>
+<div class="gloss-term" id="gl-threat-intelligence" data-name="threat intelligence"><h3>Threat Intelligence</h3><p>Collected knowledge about attackers' tools and tactics, used to defend proactively.</p></div>
+<div class="gloss-term" id="gl-threat-model" data-name="threat model"><h3>Threat Model</h3><p>A structured way of asking ‘what can go wrong?’ for a system: listing valuable assets, potential attackers, and likely attack paths before designing defenses.</p></div>
+<div class="gloss-term" id="gl-tokenization" data-name="tokenization"><h3>Tokenization</h3><p>Replacing sensitive data — like credit card numbers — with random tokens that are worthless if stolen. The real data stays locked inside a secure vault.</p></div>
+<div class="gloss-term" id="gl-tor" data-name="tor"><h3>Tor</h3><p>Privacy software routing traffic through volunteer relays to hide your identity and location.</p></div>
+<div class="gloss-term" id="gl-trojan-horse" data-name="trojan horse"><h3>Trojan Horse</h3><p>Malware disguised as legitimate software to trick you into installing it.</p></div>
+<div class="gloss-term" id="gl-ttp-tactics-techniques-and-procedures" data-name="ttp (tactics, techniques, and procedures)"><h3>TTP (Tactics, Techniques, and Procedures)</h3><p>The ‘how’ of an attack: tactics are the attacker’s goals, techniques are their methods, and procedures are the specific steps taken. Threat intelligence tracks TTPs to anticipate future attacks.</p></div>
+<div class="gloss-term" id="gl-typosquatting" data-name="typosquatting"><h3>Typosquatting</h3><p>Registering misspelled domain names (like goggle.com) to catch mistyped visitors with phishing pages or malware. Always check URLs carefully before entering credentials.</p><p class="gloss-more">Related: <a href="sectools/phishing-url-analyzer.html">Phishing URL Analyzer — Learn to Spot Suspicious Links</a></p></div>
+<div class="gloss-term" id="gl-ueba-user-and-entity-behavior-analytics" data-name="ueba (user and entity behavior analytics)"><h3>UEBA (User and Entity Behavior Analytics)</h3><p>Security tools that learn each user’s normal behavior and flag anomalies — like a 3 AM login from another country. Catches hijacked accounts and insider threats.</p></div>
+<div class="gloss-term" id="gl-usb-drop-attack" data-name="usb drop attack"><h3>USB Drop Attack</h3><p>Leaving infected USB drives in parking lots or offices, betting that curiosity will make someone plug one in. Never connect a USB device you found or received unexpectedly.</p><p class="gloss-more">Related: <a href="hacking/social-engineering-awareness.html">Social Engineering Awareness: Don't Get Manipulated</a></p></div>
+<div class="gloss-term" id="gl-virtual-machine-vm" data-name="virtual machine (vm)"><h3>Virtual Machine (VM)</h3><p>Software that emulates an entire computer inside your computer. Used to safely analyze malware, build isolated test labs, and run servers efficiently.</p><p class="gloss-more">Related: <a href="tools/kali-linux-setup.html">Kali Linux Setup Guide: Build Your Ethical Hacking Lab</a></p></div>
+<div class="gloss-term" id="gl-virus" data-name="virus"><h3>Virus</h3><p>Malware that attaches itself to legitimate programs and spreads when those programs run. The classic malware type — still hunted by antivirus through signatures and behavior analysis.</p></div>
+<div class="gloss-term" id="gl-vishing" data-name="vishing"><h3>Vishing</h3><p>Voice phishing — scam phone calls pretending to be banks, police, or tech support.</p><p class="gloss-more">Related: <a href="basics/phishing-protection.html">Phishing Protection: How to Spot Fake Emails, SMS & Calls</a></p></div>
+<div class="gloss-term" id="gl-vlan-virtual-lan" data-name="vlan (virtual lan)"><h3>VLAN (Virtual LAN)</h3><p>Logically dividing one physical network into separate virtual networks. Keeps departments or device types isolated from each other without buying extra hardware.</p></div>
+<div class="gloss-term" id="gl-vpn-virtual-private-network" data-name="vpn (virtual private network)"><h3>VPN (Virtual Private Network)</h3><p>An encrypted tunnel hiding your traffic from local snoopers, useful on public WiFi.</p><p class="gloss-more">Related: <a href="sectools/vpn-comparison-guide.html">VPN Guide — What VPNs Can and Can't Do (Honest)</a></p></div>
+<div class="gloss-term" id="gl-vulnerability" data-name="vulnerability"><h3>Vulnerability</h3><p>A weakness in software or systems that attackers can exploit.</p><p class="gloss-more">Related: <a href="hacking/vulnerability-assessment-guide.html">Vulnerability Assessment Guide: Find Weaknesses in Your Own Systems</a></p></div>
+<div class="gloss-term" id="gl-vulnerability-assessment" data-name="vulnerability assessment"><h3>Vulnerability Assessment</h3><p>Systematically scanning systems to discover known weaknesses, then ranking them by severity. Usually the first step before deeper penetration testing.</p><p class="gloss-more">Related: <a href="hacking/vulnerability-assessment-guide.html">Vulnerability Assessment Guide: Find Weaknesses in Your Own Systems</a></p></div>
+<div class="gloss-term" id="gl-vulnerability-management" data-name="vulnerability management"><h3>Vulnerability Management</h3><p>The ongoing cycle of finding, prioritizing, fixing, and re-checking vulnerabilities. A mature security program treats it as continuous work, never a one-time task.</p></div>
+<div class="gloss-term" id="gl-vulnerability-scanning" data-name="vulnerability scanning"><h3>Vulnerability Scanning</h3><p>Using automated tools to probe systems for known flaws and misconfigurations. Fast and broad coverage, but can miss complex or brand-new issues.</p><p class="gloss-more">Related: <a href="hacking/nmap-guide.html">Nmap Beginner's Guide: Scan Your Own Network Safely</a></p></div>
+<div class="gloss-term" id="gl-waf-web-application-firewall" data-name="waf (web application firewall)"><h3>WAF (Web Application Firewall)</h3><p>A firewall specialized in protecting websites from attacks like SQL injection.</p><p class="gloss-more">Related: <a href="hacking/web-application-security-basics.html">Web Application Security Basics: Protect Your Own Website</a></p></div>
+<div class="gloss-term" id="gl-watering-hole-attack" data-name="watering hole attack"><h3>Watering Hole Attack</h3><p>Compromising websites that your targets visit frequently, infecting them when they stop by. Named after predators that wait near watering holes.</p></div>
+<div class="gloss-term" id="gl-whaling" data-name="whaling"><h3>Whaling</h3><p>Phishing targeted at high-profile victims like CEOs.</p><p class="gloss-more">Related: <a href="basics/phishing-protection.html">Phishing Protection: How to Spot Fake Emails, SMS & Calls</a></p></div>
+<div class="gloss-term" id="gl-white-hat-hacker" data-name="white hat hacker"><h3>White Hat Hacker</h3><p>An ethical hacker who tests systems with permission to improve security.</p></div>
+<div class="gloss-term" id="gl-wi-fi-security-wpa2-wpa3" data-name="wi-fi security (wpa2/wpa3)"><h3>Wi-Fi Security (WPA2/WPA3)</h3><p>The encryption standards that protect wireless networks. Use WPA3 — or WPA2 with a strong password — and avoid WEP and open networks entirely.</p><p class="gloss-more">Related: <a href="basics/wifi-security-guide.html">WiFi Security Guide: Secure Your Home Network (2026)</a></p></div>
+<div class="gloss-term" id="gl-worm" data-name="worm"><h3>Worm</h3><p>Self-replicating malware that spreads across networks without user action.</p></div>
+<div class="gloss-term" id="gl-xdr-extended-detection-and-response" data-name="xdr (extended detection and response)"><h3>XDR (Extended Detection and Response)</h3><p>EDR’s bigger sibling: it pulls threat data from endpoints, networks, email, and cloud into one correlated view, so analysts can respond faster to complex attacks.</p></div>
+<div class="gloss-term" id="gl-xxe-xml-external-entity" data-name="xxe (xml external entity)"><h3>XXE (XML External Entity)</h3><p>An attack that abuses XML parsers to read files on the server or probe internal networks. Prevented by disabling external entities in the XML parser.</p></div>
+<div class="gloss-term" id="gl-zero-trust" data-name="zero trust"><h3>Zero Trust</h3><p>A security model trusting nothing by default — every access request is verified.</p></div>
+<div class="gloss-term" id="gl-zero-day" data-name="zero-day"><h3>Zero-Day</h3><p>A vulnerability unknown to the vendor — with zero days of warning before attacks begin.</p></div></div>
 <p id="noresult" style="display:none;text-align:center;color:var(--muted)">No terms found. Try another word.</p>
 </div></section></main>
 <script>

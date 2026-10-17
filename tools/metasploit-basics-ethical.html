@@ -17,6 +17,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://anwaardigital.github.io/Cybersecurity/tools/metasploit-basics-ethical.html">
 <meta property="og:site_name" content="CyberSec Hub">
+<meta property="og:image" content="https://anwaardigital.github.io/Cybersecurity/cyber-icon-512.png">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -72,19 +73,13 @@
 <p>Notice: the framework serves the methodology and the paperwork — not the other way around.</p>
 
 <h2>Exploring Safely in Your Own Lab</h2>
-<p>Set up first: your <a href="kali-linux-setup.html">Kali Linux VM</a> (Metasploit is preinstalled) plus an intentionally vulnerable target VM like <strong>Metasploitable</strong> on an isolated host-only virtual network. Then:</p>
-<pre><code>msfconsole
-search type:exploit platform:linux
-use exploit/unix/ftp/vsftpd_234_backdoor
-show options
-set RHOSTS 192.168.56.101
-check
-run</code></pre>
-<p>Commands to learn: <code>search</code> (find modules), <code>use</code> (select), <code>show options</code> (see required settings), <code>set</code> (configure), <code>check</code> (safely test if the target is vulnerable), <code>run</code>/<code>exploit</code> (execute against your own lab target). The <code>check</code> command deserves emphasis — professionals verify before acting.</p>
+<p>Set up first: your <a href="kali-linux-setup.html">Kali Linux VM</a> (Metasploit is preinstalled) plus an intentionally vulnerable target VM like <strong>Metasploitable</strong> on an isolated host-only virtual network — with <strong>no route to your home network or the internet</strong>. This isolation is non-negotiable: lab traffic must never leave the lab.</p>
+<p>Inside the lab, professionals practice the <em>workflow</em>, not memorized commands: open the framework console, search the module library for a module matching a vulnerability you already found on <strong>your own target VM</strong>, read its information page first, configure it for <strong>[YOUR-LAB-TARGET-IP]</strong> only, and run a non-destructive vulnerability <em>check</em> before anything else. The professional habit is verify-first — confirm the weakness exists, demonstrate it in a controlled way, then stop — with every action logged for the final report.</p>
+<div class="ethical-box"><strong>⚠️ Lab-only, written-permission-only:</strong> every module is used against your own isolated lab VMs, authorized training platforms, or explicitly in-scope engagement targets covered by signed written permission. Pointing any of this at systems you do not own is illegal, regardless of intent.</div>
 
 <h2>Key Concepts to Understand</h2>
 <ul>
-<li><strong>Exploit vs. payload:</strong> the exploit gets in; the payload is what it does afterward. In labs, payloads like <code>cmd/unix/reverse_bash</code> just demonstrate access.</li>
+<li><strong>Exploit vs. payload:</strong> the exploit gets in; the payload is what it does afterward. In labs, payloads are configured to do something harmless — typically just opening a basic command shell to <em>demonstrate</em> access, never to take real data or persist.</li>
 <li><strong>Meterpreter:</strong> an advanced payload with post-exploitation features — in authorized tests used to <em>demonstrate impact safely</em> (e.g., proving a file could be read, without exfiltrating real data).</li>
 <li><strong>Auxiliary modules:</strong> scanners and fuzzers that do not exploit — ideal for learning reconnaissance on your lab.</li>
 </ul>
@@ -101,7 +96,7 @@ run</code></pre>
 <h2>Module Anatomy: Reading Before Running</h2>
 <p>Professional habit: before using any module in your lab, read it. <code>info</code> shows description, authors, targets, and references; many modules link to the original vulnerability write-ups — reading those teaches more than running the exploit. Understanding <em>why</em> a module works (which protocol flaw? which misconfiguration?) builds the vulnerability intuition that separates technicians from professionals. In your lab journal, summarize each module in your own words: what it targets, what it proves, what the fix is.</p>
 <h2>Post-Modules and the "So What" Question</h2>
-<p>After initial access in your lab, Metasploit's <strong>post modules</strong> gather information — <code>post/linux/gather/enum_system</code> style enumeration of your own target VM. The professional question is always "so what?": what does this access <em>prove</em> about business risk? A shell on your lab VM proves the vulnerability is real; the report then translates that into impact language (data at risk, systems reachable) and fix priority. Practice writing that translation for every lab exercise.</p>
+<p>After initial access in your lab, Metasploit's <strong>post modules</strong> gather information — system-enumeration modules that document what your own target VM exposes. The professional question is always "so what?": what does this access <em>prove</em> about business risk? A shell on your lab VM proves the vulnerability is real; the report then translates that into impact language (data at risk, systems reachable) and fix priority. Practice writing that translation for every lab exercise.</p>
 <h2>Beyond Metasploit: The Bigger Toolkit</h2>
 <p>Metasploit is one instrument in an orchestra. Professionals combine it with Nmap (discovery), Burp (web), Wireshark (traffic analysis), BloodHound (Active Directory mapping, authorized tests), and above all <strong>manual thinking</strong> — the best findings still come from understanding systems, not from running tools. Let Metasploit handle the repetitive verification while your brain does the creative work: chaining findings, judging impact, and writing the report that actually fixes things.</p>
 

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/png" sizes="192x192" href="https://anwaardigital.github.io/Cybersecurity/cyber-icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="https://anwaardigital.github.io/Cybersecurity/cyber-icon-512.png">
+<link rel="apple-touch-icon" href="https://anwaardigital.github.io/Cybersecurity/cyber-icon-192.png">
+<!-- Cookie consent (GDPR): Google Analytics loads only after you press Accept -->
+<script src="../cookie-consent.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>SSL Certificate Guide — Learn to Verify Secure Websites</title>
+<meta name="description" content="Free interactive SSL/TLS certificate guide: learn what HTTPS really means, how to inspect a site's certificate in Chrome, Firefox, Safari and Edge, and test yourself with a quiz.">
+<link rel="stylesheet" href="../styles.css">
+<link rel="canonical" href="https://anwaardigital.github.io/Cybersecurity/sectools/ssl-certificate-guide.html">
+<meta property="og:title" content="SSL Certificate Guide — Learn to Verify Secure Websites">
+<meta property="og:description" content="Free interactive SSL/TLS certificate guide: learn what HTTPS really means, how to inspect a site's certificate in Chrome, Firefox, Safari and Edge, and test yourself with a quiz.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://anwaardigital.github.io/Cybersecurity/sectools/ssl-certificate-guide.html">
+<meta property="og:site_name" content="CyberSec Hub">
+<meta property="og:image" content="https://anwaardigital.github.io/Cybersecurity/cyber-icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "SSL Certificate Guide",
+  "description": "Free interactive SSL/TLS certificate guide: learn what HTTPS really means, how to inspect a site's certificate in Chrome, Firefox, Safari and Edge, and test yourself with a quiz.",
+  "url": "https://anwaardigital.github.io/Cybersecurity/sectools/ssl-certificate-guide.html",
+  "applicationCategory": "SecurityApplication",
+  "operatingSystem": "Any",
+  "offers": {"@type": "Offer","price": "0"},
+  "author": {"@type": "Person","name": "Malik Muhammad Anwaar"}
+}
+</script>
+<style>
+.quiz-q{background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:10px;padding:16px;margin:14px 0}
+.quiz-q p{font-weight:600;margin-bottom:6px}
+.quiz-opts button{display:block;width:100%;text-align:left;margin:8px 0;padding:11px 14px;border-radius:9px;border:1px solid var(--border);background:rgba(255,255,255,.04);color:var(--text);cursor:pointer;font-size:.95rem;font-family:inherit}
+.quiz-opts button:hover:not(:disabled){border-color:var(--green)}
+.quiz-opts button.correct{border-color:#00e676;background:rgba(0,230,118,.12)}
+.quiz-opts button.wrong{border-color:#ff5252;background:rgba(255,82,82,.1)}
+.quiz-opts button:disabled{cursor:default}
+.quiz-why{font-size:.88rem;color:var(--muted);margin-top:8px;display:none}
+.chk{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border:1px solid var(--border);border-radius:10px;margin:9px 0;background:rgba(255,255,255,.02);cursor:pointer;font-size:.93rem}
+.chk:hover{border-color:var(--green)}
+.chk input{margin-top:5px;transform:scale(1.3);accent-color:#00e676;flex-shrink:0}
+.chk small{display:block;color:var(--muted);font-size:.85rem;margin-top:3px}
+.chk.done{opacity:.72;border-color:rgba(0,230,118,.45)}
+.pbar{height:12px;background:rgba(255,255,255,.07);border-radius:8px;overflow:hidden;margin:12px 0}
+.pbar>div{height:100%;width:0;background:linear-gradient(90deg,#00b35c,#00e676);transition:width .4s;border-radius:8px}
+.flag{border-left:4px solid;padding:12px 14px;border-radius:0 10px 10px 0;margin:10px 0;background:rgba(255,255,255,.03)}
+.flag.danger{border-color:#ff5252}.flag.warn{border-color:#ff9800}.flag.info{border-color:#29b6f6}.flag.safe{border-color:#00e676}
+.flag b{display:block;margin-bottom:4px;font-size:.95rem}
+.flag p{margin:0;font-size:.89rem;color:#c9d6e8}
+.step-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.step-tabs button{padding:9px 16px;border-radius:20px;border:1px solid var(--border);background:rgba(255,255,255,.04);color:var(--text);cursor:pointer;font-size:.9rem;font-family:inherit}
+.step-tabs button.active{background:rgba(0,230,118,.15);border-color:var(--green);color:#fff}
+.edu h3{color:var(--green);margin:24px 0 8px;font-size:1.05rem}
+.edu ul{margin:6px 0 6px 18px}.edu ol{margin:6px 0 6px 18px}
+.edu li{margin-bottom:6px;font-size:.94rem;color:#d4e0ee}
+.edu p{font-size:.94rem;color:#d4e0ee;margin-bottom:10px}
+table.cmp{width:100%;border-collapse:collapse;font-size:.89rem;margin:12px 0}
+table.cmp th,table.cmp td{border:1px solid var(--border);padding:9px 10px;text-align:left;vertical-align:top}
+table.cmp th{background:rgba(0,230,118,.08);color:var(--green)}
+.score-line{font-size:1.05rem;font-weight:700;margin:14px 0}
+.verdict{border-radius:10px;padding:16px;margin-top:14px;font-size:.95rem}
+</style>
+</head>
+<body>
+<nav class="navbar"><div class="nav-inner">
+<a href="../index.html" class="brand"><span class="brand-icon">🛡️</span><span>CyberSec <span class="green">Hub</span></span></a>
+<button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+<ul class="nav-links" id="navLinks">
+<li><a href="../index.html">Home</a></li>
+<li><a href="../index.html#basics">Basics</a></li>
+<li><a href="../index.html#hacking">Ethical Hacking</a></li>
+<li><a href="../index.html#tools">Tools</a></li>
+<li><a href="../index.html#career">Career</a></li>
+<li><a href="../about.html">About</a></li>
+</ul></div></nav>
+<main class="tool-wrap">
+<h1>🔒 <a href="../glossary.html#gl-ssl-tls">SSL</a> <a href="../glossary.html#gl-certificate-digital">Certificate</a> Guide</h1>
+<p class="tool-sub">What does the padlock really mean? Learn how <a href="../glossary.html#gl-https">HTTPS</a> and certificates work, how to inspect any site's certificate yourself, and test your knowledge with a short quiz.</p>
+<div class="ethical-box"><strong>⚠️ Ethical Use Only:</strong> These tools are for <strong>defensive</strong> purposes — securing your own accounts and systems. Never use security knowledge against systems you do not own or lack written permission to test.</div>
+<div class="tool-card edu">
+<h3 style="margin-top:0">🔐 HTTPS in 30 seconds</h3>
+<p>When you see <b>https://</b> and a padlock, your browser has done three things:</p>
+<ol>
+<li><b>Encrypted</b> the connection — nobody on the network (café WiFi, your ISP) can read what you send.</li>
+<li><b>Authenticated</b> the site — the site proved it owns that domain name using a digital <b>certificate</b> issued by a trusted Certificate Authority (CA).</li>
+<li><b>Protected integrity</b> — the data cannot be secretly modified in transit.</li>
+</ol>
+<p><b>What the padlock does NOT mean:</b> that the site is honest. Scammers can get free certificates too. A padlock on <code>paypa1-login.tk</code> still means a scam — just an encrypted one. Always check <b>who</b> the site claims to be, not just the padlock.</p>
+<h3>🔍 How to inspect a certificate (try it on any site)</h3>
+<ul>
+<li><b>Chrome / Edge:</b> click the padlock (or "Not secure") left of the address bar → <i>Connection is secure</i> → <i>Certificate is valid</i>.</li>
+<li><b>Firefox:</b> click the padlock → <i>Connection secure</i> → <i>More information</i> → <i>View Certificate</i>.</li>
+<li><b>Safari:</b> click the padlock → <i>Show Certificate</i>.</li>
+</ul>
+<h3>📄 Certificate fields, explained</h3>
+<table class="cmp"><tr><th>Field</th><th>What it tells you</th></tr>
+<tr><td><b>Subject / Common Name</b></td><td>Who the certificate was issued to — should match the site's domain.</td></tr>
+<tr><td><b>Issuer (CA)</b></td><td>Which Certificate Authority vouches for the site (e.g. Let's Encrypt, DigiCert).</td></tr>
+<tr><td><b>Valid from / to</b></td><td>The dates the certificate is valid. Expired = browser warning.</td></tr>
+<tr><td><b>Subject Alternative Names</b></td><td>All domain names this certificate covers.</td></tr>
+<tr><td><b>Signature algorithm</b></td><td>The cryptography used (e.g. SHA-256 with RSA) — proves it wasn't forged.</td></tr></table>
+<h3>✅ Before entering sensitive info, verify</h3>
+<ul>
+<li>The address bar shows <b>https://</b> and a padlock with no warnings.</li>
+<li>The <b>domain name is exactly right</b> — no lookalikes (see our <a href="phishing-url-analyzer.html" style="color:var(--green)">phishing URL analyzer</a>).</li>
+<li>You <b>navigated there yourself</b> (typed it or used a bookmark), not via a link in a message.</li>
+<li>There are no browser warnings like "Your connection is not private".</li>
+</ul>
+</div>
+<div class="tool-card" style="margin-top:20px">
+<h3 style="margin-top:0">🧠 Test yourself — 5 questions</h3>
+<div id="sslquiz"></div>
+<button class="btn btn-green" onclick="sslScore()" style="margin-top:8px">Check my score</button>
+<div id="sslres" style="margin-top:12px"></div>
+</div>
+<section class="related-box" style="margin-top:36px">
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">About This Tool</h2>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">What this tool does</h2>
+<p>The SSL Certificate Guide explains what the padlock in your browser really means and, for site owners, how to get and maintain a certificate for your own website. SSL/TLS certificates enable HTTPS: they encrypt traffic between the browser and the server and prove the site is who it claims to be.</p>
+<p>For visitors, the guide explains how to interpret certificate warnings, what "not secure" means, and why you should never enter sensitive information on a page without HTTPS. For site owners, it covers obtaining a free certificate, installing it, setting up automatic renewal, and redirecting all traffic to HTTPS.</p>
+<p>It is for everyday web users and for bloggers, freelancers, and small businesses running their own sites. Certificates are a defensive technology: they protect your visitors' data in transit and are now a baseline expectation for any legitimate website.</p>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">How to use it</h2>
+<ol>
+<li><strong>As a visitor:</strong> learn what the padlock icon and certificate details show, and treat browser certificate warnings as stop signs, not annoyances to click through.</li>
+<li><strong>As a site owner:</strong> obtain a certificate from a trusted certificate authority — free automated options exist and are widely used.</li>
+<li>Install the certificate on your hosting following your provider's guide, then enable automatic renewal so it never expires unexpectedly.</li>
+<li>Redirect all HTTP traffic to HTTPS and check that every page, image, and script loads securely (no "mixed content").</li>
+<li>Test your setup with an independent SSL checker and fix any issues it reports.</li>
+<li>Set a calendar reminder to verify renewal is working, even with automation in place.</li>
+</ol>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">Defensive security tips</h2>
+<ul>
+<li><strong>Never bypass certificate warnings casually.</strong> A warning can mean an expired certificate — or an attacker intercepting your connection. On important sites, stop and investigate.</li>
+<li><strong>HTTPS is necessary but not sufficient.</strong> A phishing site can have a valid certificate. Encryption plus the correct domain is what makes a site trustworthy.</li>
+<li><strong>Automate renewal.</strong> Expired certificates take sites offline and erode trust. Automated renewal with monitoring is the reliable approach.</li>
+<li><strong>Secure the whole page.</strong> One insecure image or script on an HTTPS page ("mixed content") weakens the protection. Serve everything over HTTPS.</li>
+<li><strong>Keep private keys private.</strong> A certificate's private key must never be shared, emailed, or stored in public repositories. If it leaks, replace the certificate.</li>
+</ul>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">FAQs</h2>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">What is the difference between SSL and TLS?</h3>
+<p>SSL is the older name; TLS is the modern protocol that actually secures connections today. People still say "SSL certificate" out of habit, but what you get and use is a TLS certificate.</p>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">Are free certificates trustworthy?</h3>
+<p>Yes. Free automated certificate authorities are trusted by all major browsers and provide the same encryption as paid ones. Paid certificates mainly add organizational validation or warranties, which most small sites do not need.</p>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">Does HTTPS make my site rank better?</h3>
+<p>Search engines treat HTTPS as a positive signal, but the main reasons to use it are security and user trust: browsers now label non-HTTPS pages "not secure," which drives visitors away.</p>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">My browser says a site's certificate is invalid. What should I do?</h3>
+<p>Do not enter any information or log in. If it is a site you trust, contact the site owner about the expired or misconfigured certificate, and check that your device's date and time are correct — a wrong clock can cause false warnings.</p>
+</section>
+
+</main>
+<script>
+
+var SSLQ=[
+ ["A website shows a padlock and https://. What does this guarantee?",
+  ["The site is trustworthy and safe to use","Nobody on the network can read or modify your data in transit","The site will never be hacked","Your identity is hidden from the site"],1,
+  "HTTPS encrypts the connection and verifies the domain — it says nothing about whether the site owner is honest."],
+ ["Your browser shows 'Your connection is not private' on your bank's site. What should you do?",
+  ["Click 'Proceed anyway' — it's probably fine","Stop, do not enter anything, and verify you're on the real address","Disable your antivirus","Try again on public WiFi"],1,
+  "Never bypass certificate warnings on sensitive sites. It can mean an expired certificate — or an attacker intercepting you."],
+ ["What does a Certificate Authority (CA) do?",
+  ["It sells domain names","It verifies a site's identity and issues its certificate","It blocks hackers from the internet","It stores your passwords"],1,
+  "CAs are trusted organizations that check domain ownership before issuing certificates. Browsers ship with a list of CAs they trust."],
+ ["The certificate's 'Valid to' date is last month. This means…",
+  ["The site is definitely hacked","The certificate expired — browsers will warn and you should be cautious","Nothing, dates don't matter","The site is faster now"],1,
+  "Certificates expire (typically every ~1 year) and must be renewed. An expired certificate breaks the chain of trust."],
+ ["Which is the strongest habit before logging in anywhere important?",
+  ["Clicking the link from the email the site sent","Typing the address yourself or using a bookmark","Checking that the page looks professional","Logging in faster before the session expires"],1,
+  "Design can be copied in minutes. Typing the address yourself (or using a bookmark) defeats lookalike-domain phishing."]
+];
+var sslAns=new Array(SSLQ.length).fill(-1);
+(function(){var h='';
+SSLQ.forEach(function(q,i){h+='<div class="quiz-q"><p>Q'+(i+1)+'. '+q[0]+'</p><div class="quiz-opts">';
+q[1].forEach(function(o,j){h+='<button onclick="sslPick('+i+','+j+',this)">'+o+'</button>';});
+h+='</div><div class="quiz-why" id="sslwhy'+i+'">💡 '+q[3]+'</div></div>';});
+document.getElementById('sslquiz').innerHTML=h;})();
+function sslPick(i,j,btn){var q=btn.parentElement;sslAns[i]=j;
+Array.prototype.forEach.call(q.children,function(b){b.classList.remove('correct','wrong');});
+if(j===SSLQ[i][2])btn.classList.add('correct');else{btn.classList.add('wrong');q.children[SSLQ[i][2]].classList.add('correct');}
+document.getElementById('sslwhy'+i).style.display='block';
+Array.prototype.forEach.call(q.children,function(b){b.disabled=true;});}
+function sslScore(){var s=sslAns.filter(function(a,i){return a===SSLQ[i][2];}).length;
+var msg=s===5?'🏆 Perfect! You understand HTTPS.':s>=3?'👍 Good — review the explanations above.':'📚 Keep learning — re-read the guide and try again.';
+document.getElementById('sslres').innerHTML='<div class="verdict" style="background:rgba(0,230,118,.08);border:1px solid var(--border)">You scored <b>'+s+' / 5</b>. '+msg+'</div>';}
+</script>
+<footer class="footer"><div class="container">
+<div class="footer-brand">🛡️ CyberSec <span class="green">Hub</span></div>
+<p>Learn cybersecurity the ethical, legal way.</p>
+<div class="footer-links">
+<a href="../index.html">Home</a><a href="../about.html">About</a><a href="../contact.html">Contact</a><a href="../privacy.html">Privacy Policy</a><a href="../disclaimer.html">Disclaimer</a><a href="../terms.html">Terms</a>
+</div>
+<p class="copyright">© 2026 CyberSec Hub by Anwaar Digital. All rights reserved. Educational content only — always test with written permission.</p>
+<p class="copyright">Developed by <strong style="color:#00e676">Malik Anwaar</strong></p>
+</div></footer><a href="https://wa.me/923288317526" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.6 6.1 1.6h.1c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.6 1.2 1.2-4.5-.3-.4c-1-1.6-1.6-3.5-1.6-5.5C5 9.6 10.6 5 16 5s11 4.6 11 10-5.4 9.8-11 9.8zm6.1-7.3c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.8.1-.3-.2-1.4-.5-2.7-1.6-.9-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6L13 9.5c-.3-.8-.7-.7-1-.7h-.8c-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.5s1.5 4 1.7 4.3c.2.3 2.9 4.4 7 6.2 1 .4 1.7.7 2.3.9.9.3 1.8.2 2.5.2.8-.1 2.3-1 2.7-1.9.3-.9.3-1.7.2-1.9-.1-.1-.3-.2-.7-.4z"/></svg></a>
+</body></html>

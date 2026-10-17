@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/png" sizes="192x192" href="https://anwaardigital.github.io/Cybersecurity/cyber-icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="https://anwaardigital.github.io/Cybersecurity/cyber-icon-512.png">
+<link rel="apple-touch-icon" href="https://anwaardigital.github.io/Cybersecurity/cyber-icon-192.png">
+<!-- Cookie consent (GDPR): Google Analytics loads only after you press Accept -->
+<script src="../cookie-consent.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Data Breach Response Guide — What To Do If Your Data Leaks</title>
+<meta name="description" content="Free interactive data breach response guide: select what data was exposed (passwords, phone, ID, payment cards) and get exact action steps, plus a universal checklist with progress tracking.">
+<link rel="stylesheet" href="../styles.css">
+<link rel="canonical" href="https://anwaardigital.github.io/Cybersecurity/sectools/data-breach-response-guide.html">
+<meta property="og:title" content="Data Breach Response Guide — What To Do If Your Data Leaks">
+<meta property="og:description" content="Free interactive data breach response guide: select what data was exposed (passwords, phone, ID, payment cards) and get exact action steps, plus a universal checklist with progress tracking.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://anwaardigital.github.io/Cybersecurity/sectools/data-breach-response-guide.html">
+<meta property="og:site_name" content="CyberSec Hub">
+<meta property="og:image" content="https://anwaardigital.github.io/Cybersecurity/cyber-icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Data Breach Response Guide",
+  "description": "Free interactive data breach response guide: select what data was exposed (passwords, phone, ID, payment cards) and get exact action steps, plus a universal checklist with progress tracking.",
+  "url": "https://anwaardigital.github.io/Cybersecurity/sectools/data-breach-response-guide.html",
+  "applicationCategory": "SecurityApplication",
+  "operatingSystem": "Any",
+  "offers": {"@type": "Offer","price": "0"},
+  "author": {"@type": "Person","name": "Malik Muhammad Anwaar"}
+}
+</script>
+<style>
+.quiz-q{background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:10px;padding:16px;margin:14px 0}
+.quiz-q p{font-weight:600;margin-bottom:6px}
+.quiz-opts button{display:block;width:100%;text-align:left;margin:8px 0;padding:11px 14px;border-radius:9px;border:1px solid var(--border);background:rgba(255,255,255,.04);color:var(--text);cursor:pointer;font-size:.95rem;font-family:inherit}
+.quiz-opts button:hover:not(:disabled){border-color:var(--green)}
+.quiz-opts button.correct{border-color:#00e676;background:rgba(0,230,118,.12)}
+.quiz-opts button.wrong{border-color:#ff5252;background:rgba(255,82,82,.1)}
+.quiz-opts button:disabled{cursor:default}
+.quiz-why{font-size:.88rem;color:var(--muted);margin-top:8px;display:none}
+.chk{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border:1px solid var(--border);border-radius:10px;margin:9px 0;background:rgba(255,255,255,.02);cursor:pointer;font-size:.93rem}
+.chk:hover{border-color:var(--green)}
+.chk input{margin-top:5px;transform:scale(1.3);accent-color:#00e676;flex-shrink:0}
+.chk small{display:block;color:var(--muted);font-size:.85rem;margin-top:3px}
+.chk.done{opacity:.72;border-color:rgba(0,230,118,.45)}
+.pbar{height:12px;background:rgba(255,255,255,.07);border-radius:8px;overflow:hidden;margin:12px 0}
+.pbar>div{height:100%;width:0;background:linear-gradient(90deg,#00b35c,#00e676);transition:width .4s;border-radius:8px}
+.flag{border-left:4px solid;padding:12px 14px;border-radius:0 10px 10px 0;margin:10px 0;background:rgba(255,255,255,.03)}
+.flag.danger{border-color:#ff5252}.flag.warn{border-color:#ff9800}.flag.info{border-color:#29b6f6}.flag.safe{border-color:#00e676}
+.flag b{display:block;margin-bottom:4px;font-size:.95rem}
+.flag p{margin:0;font-size:.89rem;color:#c9d6e8}
+.step-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.step-tabs button{padding:9px 16px;border-radius:20px;border:1px solid var(--border);background:rgba(255,255,255,.04);color:var(--text);cursor:pointer;font-size:.9rem;font-family:inherit}
+.step-tabs button.active{background:rgba(0,230,118,.15);border-color:var(--green);color:#fff}
+.edu h3{color:var(--green);margin:24px 0 8px;font-size:1.05rem}
+.edu ul{margin:6px 0 6px 18px}.edu ol{margin:6px 0 6px 18px}
+.edu li{margin-bottom:6px;font-size:.94rem;color:#d4e0ee}
+.edu p{font-size:.94rem;color:#d4e0ee;margin-bottom:10px}
+table.cmp{width:100%;border-collapse:collapse;font-size:.89rem;margin:12px 0}
+table.cmp th,table.cmp td{border:1px solid var(--border);padding:9px 10px;text-align:left;vertical-align:top}
+table.cmp th{background:rgba(0,230,118,.08);color:var(--green)}
+.score-line{font-size:1.05rem;font-weight:700;margin:14px 0}
+.verdict{border-radius:10px;padding:16px;margin-top:14px;font-size:.95rem}
+</style>
+</head>
+<body>
+<nav class="navbar"><div class="nav-inner">
+<a href="../index.html" class="brand"><span class="brand-icon">🛡️</span><span>CyberSec <span class="green">Hub</span></span></a>
+<button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+<ul class="nav-links" id="navLinks">
+<li><a href="../index.html">Home</a></li>
+<li><a href="../index.html#basics">Basics</a></li>
+<li><a href="../index.html#hacking">Ethical Hacking</a></li>
+<li><a href="../index.html#tools">Tools</a></li>
+<li><a href="../index.html#career">Career</a></li>
+<li><a href="../about.html">About</a></li>
+</ul></div></nav>
+<main class="tool-wrap">
+<h1>💥 Data Breach Response Guide</h1>
+<p class="tool-sub">Data breaches happen to big companies regularly — your defense is <b>how fast and correctly you react</b>. Select what was exposed to get targeted actions, then work the universal checklist.</p>
+<div class="ethical-box"><strong>⚠️ Ethical Use Only:</strong> These tools are for <strong>defensive</strong> purposes — securing your own accounts and systems. Never use security knowledge against systems you do not own or lack written permission to test.</div>
+<div class="tool-card">
+<h3 style="margin-top:0">🎯 What was exposed?</h3>
+<div class="step-tabs" id="dbrtabs"></div>
+<div id="dbrdetail" style="margin-top:6px"></div>
+</div>
+<div class="tool-card" style="margin-top:20px">
+<h3 style="margin-top:0">✅ Universal breach checklist</h3>
+<div class="pbar"><div id="dbrbar"></div></div>
+<div class="score-line" id="dbrscore">0 of 8 completed</div>
+<div id="dbrlist"></div>
+</div>
+<div class="tool-card edu" style="margin-top:20px">
+<h3 style="margin-top:0">🔎 How to find out about breaches</h3>
+<ul>
+<li>Reputable <b>breach-notification services</b> (e.g. Have I Been Pwned) let you check if your email appears in known breach datasets. Use well-known services only.</li>
+<li>Many <b>password managers and browsers</b> now warn you automatically when a saved login appears in a breach — turn those alerts on.</li>
+<li>Companies <b>must notify</b> affected users under laws like GDPR — don't ignore those emails (but verify them: navigate to the site yourself rather than clicking).</li>
+</ul>
+<h3>🛡️ Make the next breach boring</h3>
+<ul>
+<li><b>Unique password per site</b> (password manager) — one breach can't cascade.</li>
+<li><b>2FA everywhere</b> — stolen passwords alone become useless.</li>
+<li><b>Share less:</b> every optional field you fill is future breach fuel. Skip what isn't required.</li>
+<li><b>Delete old accounts</b> you no longer use — fewer copies of your data, fewer targets.</li>
+</ul>
+</div>
+<section class="related-box" style="margin-top:36px">
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">About This Tool</h2>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">What this tool does</h2>
+<p>The Data Breach Response Guide tells you what to do when your personal information has been exposed in a breach — for example, when a company emails you saying attackers accessed customer data, or when a breach-checking service shows your email in a leaked database.</p>
+<p>It organizes your response by priority: securing the accounts most at risk first, then working outward to everything that shared a password or recovery email with the breached service. The guide also explains what the breached company should be doing and what to watch for in the months after a breach, when stolen data is most often abused.</p>
+<p>It is for anyone with online accounts. Breaches are common enough that responding calmly and correctly is now a basic life skill. The tone throughout is practical and defensive: protect yourself, document what happened, and use the event to strengthen your setup.</p>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">How to use it</h2>
+<ol>
+<li>Confirm the breach is real. Check the company's official site or a reputable breach-notification service rather than trusting an alarming email alone.</li>
+<li>Change the password on the breached account immediately, from a device you trust, and enable 2FA if you have not already.</li>
+<li>Change the password on <strong>every other account</strong> where you reused the same or a similar password.</li>
+<li>Review the breached account for unauthorized activity: new email rules, changed recovery addresses, unknown orders or messages.</li>
+<li>Watch for follow-up phishing. Breach news triggers waves of fake "security alert" emails exploiting the same event.</li>
+<li>If financial data was involved, notify your bank, consider a credit freeze or fraud alert where available, and monitor statements closely.</li>
+</ol>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">Defensive security tips</h2>
+<ul>
+<li><strong>Assume breach data lives forever.</strong> Leaked emails and passwords circulate for years. Unique passwords per site contain the damage to one account.</li>
+<li><strong>Treat breach news as phishing season.</strong> Attackers send fake breach notifications with malicious links within hours of real announcements. Navigate to sites manually.</li>
+<li><strong>Freeze or monitor credit where possible.</strong> If identity documents or financial data were exposed, proactive monitoring limits the damage from identity theft.</li>
+<li><strong>Keep a breach log.</strong> Note which service, what data was exposed, and what you changed. It helps you answer "was my password from that breach?" months later.</li>
+<li><strong>Use the breach as a prompt.</strong> Every breach is a good moment to adopt a password manager and 2FA if you have been postponing them.</li>
+</ul>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">FAQs</h2>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">How do I know if my data was in a breach?</h3>
+<p>Reputable breach-notification services let you search your email address against known breach databases. Companies are also generally required to notify affected customers directly — verify such notices through the company's official channels.</p>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">I reused the breached password elsewhere. How urgent is this?</h3>
+<p>Very. Attackers automate "credential stuffing": trying stolen email-password pairs on hundreds of other sites within hours of a leak. Change those passwords immediately, starting with email and banking.</p>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">What if the breached company offers free credit monitoring?</h3>
+<p>Accept it — it is part of what they owe you — but do not rely on it alone. Monitoring detects misuse; unique passwords and 2FA prevent it.</p>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">Can I get my data removed from breach databases?</h3>
+<p>Generally no. Once data is copied and traded, it cannot be recalled. Your defense is making the stolen data useless: changed passwords, 2FA, and vigilance against phishing that uses the leaked details.</p>
+</section>
+
+</main>
+<script>
+
+var DBR={
+ "📧 Email + password":["Change that password everywhere you reused it — start with email and banking.",
+  "Enable 2FA on every important account (email first).",
+  "Watch for phishing: breached emails get targeted scam mail for years."],
+ "📱 Phone number":["Expect spam calls/SMS and SIM-swap attempts — never approve logins you didn't request.",
+  "Add a SIM PIN and ask your carrier about number-port protection.",
+  "Be extra skeptical of 'bank' calls — callers may know your number and name."],
+ "🪪 ID documents / national ID":["File a report with police / cybercrime unit and keep the reference number.",
+  "Monitor for accounts opened in your name; consider a credit freeze/monitoring where available.",
+  "Never send ID scans over email or chat unless you verified the recipient independently."],
+ "💳 Payment card":["Contact your bank immediately to block/replace the card.",
+  "Review statements for small 'test' charges — thieves try tiny amounts first.",
+  "Update the card everywhere it was saved (subscriptions, stores)."],
+ "🏠 Home address":["Be alert to targeted phishing and physical risks — don't post travel plans publicly.",
+  "Shred sensitive mail; consider a lockable mailbox.",
+  "Review who can see your address on social media and data-broker sites."]};
+var dbrKeys=Object.keys(DBR), dbrCur=0;
+function dbrRenderTabs(){var h='';dbrKeys.forEach(function(k,i){h+='<button class="'+(i===dbrCur?'active':'')+'" onclick="dbrGo('+i+')">'+k+'</button>';});
+document.getElementById('dbrtabs').innerHTML=h;}
+function dbrGo(i){dbrCur=i;dbrRenderTabs();
+var h='<div class="flag warn"><b>🚨 If this data of yours was exposed:</b><p><ol style="margin:6px 0 0 18px">';
+DBR[dbrKeys[dbrCur]].forEach(function(s){h+='<li style="margin-bottom:6px">'+s+'</li>';});
+h+='</ol></p></div>';document.getElementById('dbrdetail').innerHTML=h;}
+var DBRC=[
+ ["Change the breached password — and everywhere it was reused","Attackers automate login attempts across hundreds of sites within hours of a breach."],
+ ["Enable 2FA on the affected service and your email","Blocks the stolen credentials from being enough."],
+ ["Check for unauthorized activity","Logins from new locations, changed settings, sent messages, new devices — revert what you didn't do."],
+ ["Remove saved payment methods if card data was involved","And ask your bank about a replacement card."],
+ ["Warn of phishing using the leaked data","Expect convincing scams referencing real details (order numbers, partial card digits). Tell family too."],
+ ["Document everything","Dates, what was exposed, confirmation emails — needed for disputes and reports."],
+ ["Report to the company and authorities if sensitive data leaked","ID theft and financial fraud should be officially reported."],
+ ["Reduce future exposure: unique passwords, 2FA, fewer accounts","The checklist in the section above — make the next breach harmless."]];
+var dbrDone=new Array(DBRC.length).fill(false);
+(function(){var h='';
+DBRC.forEach(function(c,i){h+='<label class="chk" id="dbrchk'+i+'"><input type="checkbox" onchange="dbrTgl('+i+',this)"><span><b>'+(i+1)+'. '+c[0]+'</b><small>'+c[1]+'</small></span></label>';});
+document.getElementById('dbrlist').innerHTML=h;})();
+function dbrTgl(i,box){dbrDone[i]=box.checked;document.getElementById('dbrchk'+i).classList.toggle('done',box.checked);
+var n=dbrDone.filter(Boolean).length;
+document.getElementById('dbrbar').style.width=Math.round(n/DBRC.length*100)+'%';
+document.getElementById('dbrscore').textContent=n+' of '+DBRC.length+' completed'+(n===DBRC.length?' — ✅ Breach contained. Stay alert for targeted phishing.':'');}
+dbrRenderTabs();dbrGo(0);
+</script>
+<footer class="footer"><div class="container">
+<div class="footer-brand">🛡️ CyberSec <span class="green">Hub</span></div>
+<p>Learn cybersecurity the ethical, legal way.</p>
+<div class="footer-links">
+<a href="../index.html">Home</a><a href="../about.html">About</a><a href="../contact.html">Contact</a><a href="../privacy.html">Privacy Policy</a><a href="../disclaimer.html">Disclaimer</a><a href="../terms.html">Terms</a>
+</div>
+<p class="copyright">© 2026 CyberSec Hub by Anwaar Digital. All rights reserved. Educational content only — always test with written permission.</p>
+<p class="copyright">Developed by <strong style="color:#00e676">Malik Anwaar</strong></p>
+</div></footer><a href="https://wa.me/923288317526" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.6 6.1 1.6h.1c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.6 1.2 1.2-4.5-.3-.4c-1-1.6-1.6-3.5-1.6-5.5C5 9.6 10.6 5 16 5s11 4.6 11 10-5.4 9.8-11 9.8zm6.1-7.3c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.8.1-.3-.2-1.4-.5-2.7-1.6-.9-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6L13 9.5c-.3-.8-.7-.7-1-.7h-.8c-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.5s1.5 4 1.7 4.3c.2.3 2.9 4.4 7 6.2 1 .4 1.7.7 2.3.9.9.3 1.8.2 2.5.2.8-.1 2.3-1 2.7-1.9.3-.9.3-1.7.2-1.9-.1-.1-.3-.2-.7-.4z"/></svg></a>
+</body></html>
