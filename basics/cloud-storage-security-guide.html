@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/png" sizes="192x192" href="https://anwaardigital.github.io/Cybersecurity/cyber-icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="https://anwaardigital.github.io/Cybersecurity/cyber-icon-512.png">
+<link rel="apple-touch-icon" href="https://anwaardigital.github.io/Cybersecurity/cyber-icon-512.png">
+<!-- Cookie consent (GDPR): Google Analytics loads only after you press Accept -->
+<script src="../cookie-consent.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Cloud Storage Security: Keep Your Google Drive, Dropbox & OneDrive Files Safe (2026 Guide)</title>
+<meta name="description" content="Your cloud storage holds tax returns, ID scans and family photos. This defensive 2026 guide shows how to lock down Google Drive, Dropbox and OneDrive — 2FA, sharing controls, encryption and breach response.">
+<link rel="stylesheet" href="../styles.css">
+<link rel="canonical" href="https://anwaardigital.github.io/Cybersecurity/basics/cloud-storage-security-guide.html">
+<meta property="og:title" content="Cloud Storage Security: Keep Your Google Drive, Dropbox & OneDrive Files Safe (2026 Guide)">
+<meta property="og:description" content="Lock down your cloud storage: 2FA, sharing controls, encryption, app permissions and what to do after a breach. A fully defensive 2026 guide.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://anwaardigital.github.io/Cybersecurity/basics/cloud-storage-security-guide.html">
+<meta property="og:site_name" content="CyberSec Hub">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://anwaardigital.github.io/Cybersecurity/cyber-icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Cloud Storage Security: Keep Your Google Drive, Dropbox & OneDrive Files Safe (2026 Guide)",
+  "description": "A defensive guide to securing cloud storage accounts: two-factor authentication, sharing controls, encryption, third-party app permissions, and breach response.",
+  "author": {
+    "@type": "Person",
+    "name": "Malik Muhammad Anwaar"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "CyberSec Hub",
+    "url": "https://anwaardigital.github.io/Cybersecurity/"
+  },
+  "datePublished": "2026-10-19",
+  "dateModified": "2026-10-19",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://anwaardigital.github.io/Cybersecurity/basics/cloud-storage-security-guide.html"
+  }
+}
+</script>
+</head>
+<body>
+<nav class="navbar"><div class="nav-inner">
+<a href="../index.html" class="brand"><span class="brand-icon">🛡️</span><span>CyberSec <span class="green">Hub</span></span></a>
+<button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+<ul class="nav-links" id="navLinks">
+<li><a href="../index.html">Home</a></li>
+<li><a href="../index.html#basics">Basics</a></li>
+<li><a href="../index.html#hacking">Ethical Hacking</a></li>
+<li><a href="../index.html#tools">Tools</a></li>
+<li><a href="../index.html#career">Career</a></li>
+<li><a href="../about.html">About</a></li>
+</ul></div></nav><div class="breadcrumb"><a href="../index.html">Home</a> / 🛡️ Cybersecurity Basics / Cloud Storage Security</div>
+<header class="article-hero"><span class="section-tag">🛡️ Cybersecurity Basics</span><h1>Cloud Storage Security: Keep Your Google Drive, Dropbox &amp; OneDrive Files Safe (2026 Guide)</h1><div class="article-meta">By CyberSec Hub · 12 min read</div></header>
+<main class="article-body">
+<p>Your cloud storage account is a treasure chest: tax returns, ID scans, contracts, family photos, maybe a lifetime of documents. Attackers know this, which is why cloud accounts are among the most targeted assets on the internet. The good news is that securing them takes about twenty minutes of settings changes — this guide walks through every one, defensively and legally.</p>
+
+<h2>How Cloud Accounts Get Compromised</h2>
+<p>Most cloud breaches aren't sophisticated hacks. They follow familiar patterns:</p>
+<ul>
+<li><strong>Password reuse:</strong> your Drive password was leaked in an unrelated breach, and attackers simply try it everywhere.</li>
+<li><strong>Phishing:</strong> a fake "storage full" or "shared document" email steals your login on a lookalike page.</li>
+<li><strong>Old sessions:</strong> you signed in on a friend's laptop in 2023 and never signed out.</li>
+<li><strong>Over-shared links:</strong> a "anyone with the link" document gets forwarded, indexed or scraped far beyond its intended audience.</li>
+<li><strong>Rogue third-party apps:</strong> a quiz app or PDF tool you authorized years ago still has full read access to your files.</li>
+</ul>
+<p>Every defense below maps directly to one of these attack paths.</p>
+
+<h2>Step 1: Lock the Front Door — Strong Password + 2FA</h2>
+<p>Your cloud account password should be long, unique and stored in a password manager — never reused from anywhere else. Then enable two-factor authentication, the single highest-impact change you can make:</p>
+<ul>
+<li><strong>Google Drive:</strong> myaccount.google.com → Security → 2-Step Verification → use an <a href="../basics/two-factor-authentication-guide.html">authenticator app</a> or hardware key, not SMS alone.</li>
+<li><strong>Dropbox:</strong> Settings → Security → Two-step verification → choose authenticator app.</li>
+<li><strong>OneDrive (Microsoft):</strong> account.microsoft.com → Security → Advanced security options → turn on two-step verification.</li>
+</ul>
+<p>Authenticator apps beat SMS codes because SIM-swap attacks can't intercept them. If your provider offers passkeys, enable those too — they're phishing-resistant by design.</p>
+
+<h2>Step 2: Audit Who You're Sharing With</h2>
+<p>Sharing is the quietest way files leak. Open your cloud storage and review:</p>
+<ul>
+<li><strong>"Anyone with the link" files:</strong> these are effectively public. Change sensitive ones to "Restricted" (named people only), or add expiry dates and passwords where the service supports them.</li>
+<li><strong>Shared folders you forgot:</strong> that folder you shared with an ex-colleague three years ago still syncs to their devices. Remove people who no longer need access.</li>
+<li><strong>Public links in emails and chats:</strong> remember that anyone who received the link can forward it. For sensitive documents, share with specific email addresses instead.</li>
+</ul>
+<p>Make this a quarterly habit — five minutes, four times a year, prevents most sharing accidents.</p>
+
+<h2>Step 3: Revoke Third-Party App Access</h2>
+<p>Over the years you've probably granted file access to editors, converters, games and utilities. Each one is a potential breach point:</p>
+<ul>
+<li><strong>Google:</strong> myaccount.google.com → Security → Third-party access → remove anything you don't recognize or no longer use.</li>
+<li><strong>Dropbox:</strong> Settings → Connected apps → disconnect unused apps.</li>
+<li><strong>Microsoft:</strong> account.microsoft.com → Privacy → Apps and services → remove what you don't need.</li>
+</ul>
+<p>Be especially strict with apps requesting <em>full</em> drive access when they only needed one file. Re-authorize only when you actually use them.</p>
+
+<h2>Step 4: Review Signed-In Devices and Sessions</h2>
+<ul>
+<li><strong>Google:</strong> myaccount.google.com → Security → Your devices → sign out of old phones, sold laptops and borrowed computers.</li>
+<li><strong>Dropbox:</strong> Settings → Security → Devices → unlink old ones.</li>
+<li><strong>Microsoft:</strong> account.microsoft.com → Devices → remove what you sold or lost.</li>
+</ul>
+<p>A device you no longer own with an active session is an open door. Check this list after any phone upgrade or repair-shop visit.</p>
+
+<h2>Step 5: Encrypt What Truly Matters</h2>
+<p>Cloud providers encrypt files on their servers, but they hold the keys — which means a provider breach or a lawful data request can expose your content. For your most sensitive files (ID scans, financial records, private keys), add your own layer:</p>
+<ul>
+<li>Encrypt files <strong>before</strong> uploading using tools like VeraCrypt (containers) or 7-Zip with AES-256 passwords.</li>
+<li>Use a strong, unique archive password stored in your password manager.</li>
+<li>Never store the password in the same cloud account as the encrypted files.</li>
+</ul>
+<p>This is the difference between "the provider protects my files" and "only I can read my files." For everyday photos and documents it's overkill; for identity documents it isn't.</p>
+
+<h2>Step 6: Turn On Alerts and Versioning</h2>
+<ul>
+<li><strong>Login alerts:</strong> enable security notifications for new sign-ins on all three services — early warning of unauthorized access.</li>
+<li><strong>Ransomware protection:</strong> OneDrive's Personal Vault and version history let you roll back files encrypted by ransomware. Google Drive keeps 30 days of version history (longer on paid plans). Know where your rollback button is <em>before</em> you need it.</li>
+<li><strong>Activity dashboards:</strong> Google Drive's activity panel shows who viewed or edited shared files — worth a glance when something feels off.</li>
+</ul>
+
+<h2>What To Do If Your Cloud Account Is Breached</h2>
+<ol>
+<li><strong>Change the password immediately</strong> from a clean device, and sign out all sessions everywhere.</li>
+<li><strong>Enable or re-verify 2FA</strong> — attackers often disable it first.</li>
+<li><strong>Check sharing settings</strong> for files the attacker may have re-shared or made public.</li>
+<li><strong>Review the trash and version history</strong> for deleted or altered files; restore clean versions.</li>
+<li><strong>Check connected email</strong> — cloud and email compromises travel together. Secure the email account too.</li>
+<li><strong>Notify affected people</strong> if shared documents contained their personal data, and consider reporting identity-theft risk per our <a href="../basics/identity-theft-protection-guide.html">identity theft guide</a>.</li>
+</ol>
+
+<h2>The 20-Minute Hardening Checklist</h2>
+<ul>
+<li>☐ Unique, strong password in a password manager</li>
+<li>☐ 2FA with authenticator app (not SMS-only)</li>
+<li>☐ "Anyone with the link" shares reviewed and restricted</li>
+<li>☐ Third-party apps revoked</li>
+<li>☐ Old devices signed out</li>
+<li>☐ Login alerts enabled</li>
+<li>☐ Sensitive files encrypted before upload</li>
+<li>☐ Backup of the most important files kept offline</li>
+</ul>
+<p>Cloud storage is one of the safest places for your files — <em>after</em> these settings are in place. Twenty minutes today buys you years of quiet confidence.</p>
+
+<p><em>This guide is defensive and educational only. Never attempt to access anyone else's cloud account — unauthorized access is illegal in virtually every jurisdiction. Learn more about the legal side in our <a href="../hacking/what-is-penetration-testing.html">penetration testing ethics guide</a>.</em></p>
+
+</main>
+<footer class="footer"><div class="container">
+<div class="footer-brand">🛡️ CyberSec <span class="green">Hub</span></div>
+<p>Learn cybersecurity the ethical, legal way.</p>
+<div class="footer-links">
+<a href="../index.html">Home</a><a href="../about.html">About</a><a href="../contact.html">Contact</a><a href="../privacy.html">Privacy Policy</a><a href="../disclaimer.html">Disclaimer</a><a href="../terms.html">Terms</a>
+</div>
+<p class="copyright">Developed by <strong style="color:#00e676">Malik Anwaar</strong></p>
+<p class="copyright">© 2026 CyberSec Hub by Anwaar Digital. All rights reserved. Educational content only — always test with written permission.</p>
+</div></footer><a href="https://wa.me/923288317526" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.6 6.1 1.6h.1c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.6 1.2 1.2-4.5-.3-.4c-1-1.6-1.6-3.5-1.6-5.5C5 9.6 10.6 5 16 5s11 4.6 11 10-5.4 9.8-11 9.8zm6.1-7.3c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.8.1-.3-.2-1.4-.5-2.7-1.6-.9-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6L13 9.5c-.3-.8-.7-.7-1-.7h-.8c-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.5s1.5 4 1.7 4.3c.2.3 2.9 4.4 7 6.2 1 .4 1.7.7 2.3.9.9.3 1.8.2 2.5.2.8-.1 2.3-1 2.7-1.9.3-.9.3-1.7.2-1.9-.1-.1-.3-.2-.7-.4z"/></svg></a>
+<!-- Back to top button -->
+<button id="backToTop" aria-label="Back to top" title="Back to top"
+style="position:fixed;bottom:24px;right:24px;width:48px;height:48px;border-radius:50%;border:none;background:#00e676;color:#050b14;font-size:22px;line-height:1;cursor:pointer;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s,transform .2s;box-shadow:0 4px 12px rgba(0,0,0,.35);z-index:9999;padding:0;">&#8593;</button>
+<script>
+(function(){var b=document.getElementById('backToTop');if(!b)return;
+window.addEventListener('scroll',function(){var s=window.pageYOffset||document.documentElement.scrollTop;
+if(s>300){b.style.opacity='1';b.style.visibility='visible';}else{b.style.opacity='0';b.style.visibility='hidden';}},{passive:true});
+b.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+b.addEventListener('mouseenter',function(){b.style.transform='scale(1.12)';});
+b.addEventListener('mouseleave',function(){b.style.transform='scale(1)';});})();
+</script>
+
+</body></html>
