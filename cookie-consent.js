@@ -67,4 +67,9 @@
   }
 
   init();
+
+  window.showCookieBanner = function () {
+    try { localStorage.removeItem("ad_cookie_consent_v1"); } catch (e) {}
+    showBanner();
+  };
 })();
