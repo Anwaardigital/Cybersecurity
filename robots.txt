@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://anwaardigital.github.io/Cybersecurity/sitemap.xml
+Sitemap: https://anwaardigital.com/Cybersecurity/sitemap.xml
