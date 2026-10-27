@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>CyberSec Hub — Mission 3: Password Cracker</title>
+<meta name="description" content="Mission 3: Password Cracker — a simulated attack on weak passwords that teaches what actually stays strong. Educational CyberSec Hub mission.">
+<link rel="canonical" href="https://anwaardigital.com/Cybersecurity/missions/mission-3.html">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:#05080a;color:#dbe7e0;line-height:1.6}
+a{color:inherit;text-decoration:none}
+.navbar{background:#0a1210;border-bottom:1px solid #16211c;padding:14px 18px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.brand{font-weight:800;font-size:18px;color:#fff}.brand .g{color:#00e676}
+.navbar a.nav{color:#8fa39a;font-weight:700}.navbar a.nav:hover{color:#00e676}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px 40px}
+h1{font-size:clamp(26px,6vw,36px);color:#fff;margin:22px 0 6px}
+h1 .g{color:#00e676}
+.sub{color:#8fa39a;margin-bottom:20px}
+.badge{display:inline-block;font-size:12px;font-weight:800;padding:3px 10px;border-radius:999px;background:#3b2f05;color:#fde68a}
+.pts{font-weight:800;color:#00e676}
+.howto{background:#0a1210;border:1px solid #16211c;border-radius:16px;padding:18px;margin-bottom:20px}
+.howto h3{color:#fff;margin-bottom:8px}
+.howto ol{margin-left:20px;color:#8fa39a;font-size:15px}
+.howto li{margin-bottom:4px}
+.warn{background:#3f0d0d;border:1px solid #7f1d1d;border-radius:12px;padding:12px 16px;font-size:14px;color:#fecaca;margin-bottom:20px}
+.pwcard{background:#0a1210;border:1px solid #24382f;border-radius:16px;padding:16px;margin-bottom:12px}
+.pwcard .pw{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:19px;color:#fff;word-break:break-all}
+.pwcard .mark{color:#5b6f66;font-size:13px;margin-top:4px}
+.pwbtns{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.pwbtns button{flex:1;min-width:130px;padding:11px;border-radius:10px;font-size:15px;font-weight:800;cursor:pointer;border:1px solid #24382f;background:#0b1a12;color:#dbe7e0}
+.pwbtns button.sel-red{background:#dc2626;color:#fff;border-color:#dc2626}
+.pwbtns button.sel-green{background:#00e676;color:#04120a;border-color:#00e676}
+.simbtn{background:#00e676;color:#04120a;font-weight:800;border:0;padding:14px 26px;border-radius:12px;font-size:16px;cursor:pointer;margin-top:8px;width:100%}
+.simbtn:disabled{opacity:.5;cursor:default}
+.log{background:#020503;border:1px solid #1d3a2a;border-radius:16px;padding:16px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:14.5px;line-height:1.8;color:#a7f3d0;min-height:120px;white-space:pre-wrap;display:none;margin-top:16px}
+.log .bad{color:#fca5a5}.log .good{color:#4ade80}
+.verdict{border-radius:16px;padding:18px;margin-top:16px;display:none}
+.verdict.ok{background:#052e16;border:1px solid #14532d}
+.verdict.bad{background:#3f0d0d;border:1px solid #7f1d1d}
+.verdict h3{color:#fff;margin-bottom:6px}
+.win{background:#052e16;border:1px solid #00e676;border-radius:16px;padding:20px;margin-top:16px;display:none;text-align:center}
+.win h2{color:#4ade80;margin-bottom:8px}
+.win .flag{font-family:ui-monospace,Menlo,Consolas,monospace;color:#fde68a;font-size:18px;word-break:break-all}
+.btn-next,.btn-retry{background:#00e676;color:#04120a;font-weight:800;border:0;padding:13px 26px;border-radius:12px;font-size:16px;cursor:pointer;margin-top:14px}
+.back{display:inline-block;margin-top:24px;color:#00e676;font-weight:700}
+footer{text-align:center;color:#5b6f66;font-size:13.5px;margin-top:28px}
+</style>
+</head>
+<body>
+<nav class="navbar"><a class="brand" href="../index.html">🛡️ CyberSec <span class="g">Hub</span></a><a class="nav" href="../index.html">Home</a><a class="nav" href="index.html">Missions</a><a class="nav" href="../learning-path.html">Learning Paths</a></nav>
+<div class="wrap">
+<h1>🔐 Mission 3: <span class="g">Password Cracker</span></h1>
+<p class="sub"><span class="badge">MEDIUM</span> &nbsp;<span class="pts">400 pts</span> &nbsp;·&nbsp; Simulate an attack on weak passwords — and learn what actually stays strong.</p>
+<div class="warn">⚠️ Educational simulation with fake passwords. Never try to crack a real account — that is illegal. Only test passwords you own.</div>
+<div class="howto">
+<h3>How to play</h3>
+<ol>
+<li>For each password below, guess: does it <b style="color:#fca5a5">crack fast</b> or <b style="color:#86efac">stay strong</b>?</li>
+<li>Tap your guess on all 4 passwords, then run the simulation.</li>
+<li>Watch the simulated attacker work — then see if your guesses were right.</li>
+<li>All 4 correct = flag captured.</li>
+</ol>
+</div>
+<div id="cards"></div>
+<button class="simbtn" id="simBtn" onclick="simulate()" disabled>▶ Run simulation</button>
+<div class="log" id="log"></div>
+<div class="verdict" id="verdict"></div>
+<div class="win" id="winBox"></div>
+<a class="back" href="index.html">← All Missions</a>
+<footer>CyberSec Hub — 100% ethical training. Simulation only — no real passwords are tested.</footer>
+</div>
+<script>
+var pws=[
+{pw:'123456',truth:'fast',note:'"123456" is the first guess in every wordlist. Cracked instantly.'},
+{pw:'P@ssw0rd!',truth:'fast',note:'"P@ssw0rd!" looks clever, but it is one of the most common patterns. Wordlists with simple substitutions crack it in seconds.'},
+{pw:'purple-monkey-dances-wisely',truth:'strong',note:'Four random words = very long. Even a fast computer needs centuries.'},
+{pw:'X9#mQ2$vL8!zR4&w',truth:'strong',note:'18 random characters with mixed types. Brute force would take far longer than a lifetime.'}
+];
+var marks=[null,null,null,null];
+function renderCards(){
+var html='';
+pws.forEach(function(p,i){
+html+='<div class="pwcard"><div class="pw">'+p.pw+'</div><div class="mark" id="mark'+i+'">Your guess: —</div><div class="pwbtns"><button id="b'+i+'f" onclick="mark('+i+',\'fast\')">⚡ Cracks fast</button><button id="b'+i+'s" onclick="mark('+i+',\'strong\')">🛡️ Stays strong</button></div></div>';
+});
+document.getElementById('cards').innerHTML=html;
+}
+function mark(i,choice){
+marks[i]=choice;
+document.getElementById('b'+i+'f').className=(choice==='fast')?'sel-red':'';
+document.getElementById('b'+i+'s').className=(choice==='strong')?'sel-green':'';
+document.getElementById('mark'+i).textContent='Your guess: '+(choice==='fast'?'Cracks fast':'Stays strong');
+document.getElementById('simBtn').disabled=marks.indexOf(null)!==-1;
+}
+function simulate(){
+document.getElementById('simBtn').disabled=true;
+var log=document.getElementById('log');log.style.display='block';log.innerHTML='';
+var lines=[
+['Trying "123456"... ', 'CRACKED in 0.01 seconds (first word in the list).', 'bad'],
+['Trying "P@ssw0rd!"... ', 'CRACKED in 4 seconds (common pattern + substitutions).', 'bad'],
+['Trying "purple-monkey-dances-wisely"... ', 'NOT CRACKED. Estimated time: 400+ years.', 'good'],
+['Trying "X9#mQ2$vL8!zR4&w"... ', 'NOT CRACKED. Estimated time: 1000+ years.', 'good']
+];
+var step=0;
+function nextLine(){
+if(step>=lines.length){showVerdict();return;}
+var l=lines[step];
+var d=document.createElement('div');
+d.innerHTML=l[0]+'<span class="'+l[2]+'">'+l[1]+'</span>';
+log.appendChild(d);step++;
+setTimeout(nextLine,700);
+}
+nextLine();
+}
+function showVerdict(){
+var correct=0, wrong=[];
+pws.forEach(function(p,i){if(marks[i]===p.truth)correct++;else wrong.push(i);});
+var v=document.getElementById('verdict');
+var html='';
+if(correct===4){
+v.className='verdict ok';
+html='<h3>✅ Perfect! 4 / 4 correct — 400 points</h3><p>Lesson: length beats cleverness. A long passphrase or a random password stays strong; short and common ones fall fast.</p>';
+v.innerHTML=html;v.style.display='block';
+var w=document.getElementById('winBox');
+w.innerHTML='<h2>🎉 MISSION COMPLETE!</h2><p class="flag">FLAG{strong_pass_2026}</p><p style="margin-top:10px;color:#8fa39a">Next mission: <a href="mission-4.html" style="color:#00e676;text-decoration:underline">Mission 4 — Spot the Vulnerability →</a></p>';
+w.style.display='block';
+}else{
+v.className='verdict bad';
+html='<h3>Score: '+correct+' / 4 correct</h3><p>You missed:</p><ul style="margin-left:20px">';
+wrong.forEach(function(i){html+='<li><b>'+pws[i].pw+'</b> — '+pws[i].note+'</li>';});
+html+='</ul><button class="btn-retry" onclick="retry()">↻ Try again</button>';
+v.innerHTML=html;v.style.display='block';
+}
+}
+function retry(){
+marks=[null,null,null,null];
+document.getElementById('log').style.display='none';document.getElementById('log').innerHTML='';
+document.getElementById('verdict').style.display='none';
+document.getElementById('winBox').style.display='none';
+renderCards();document.getElementById('simBtn').disabled=true;
+}
+renderCards();
+</script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>CyberSec Hub — Mission 2: Phishing Hunter</title>
+<meta name="description" content="Mission 2: Phishing Hunter — spot the fake email before it steals data. A beginner-friendly CyberSec Hub mission.">
+<link rel="canonical" href="https://anwaardigital.com/Cybersecurity/missions/mission-2.html">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:#05080a;color:#dbe7e0;line-height:1.6}
+a{color:inherit;text-decoration:none}
+.navbar{background:#0a1210;border-bottom:1px solid #16211c;padding:14px 18px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.brand{font-weight:800;font-size:18px;color:#fff}.brand .g{color:#00e676}
+.navbar a.nav{color:#8fa39a;font-weight:700}.navbar a.nav:hover{color:#00e676}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px 40px}
+h1{font-size:clamp(26px,6vw,36px);color:#fff;margin:22px 0 6px}
+h1 .g{color:#00e676}
+.sub{color:#8fa39a;margin-bottom:20px}
+.badge{display:inline-block;font-size:12px;font-weight:800;padding:3px 10px;border-radius:999px;background:#052e16;color:#86efac}
+.pts{font-weight:800;color:#00e676}
+.scorebar{font-family:ui-monospace,Menlo,Consolas,monospace;color:#00e676;font-weight:700;margin-bottom:14px}
+.howto{background:#0a1210;border:1px solid #16211c;border-radius:16px;padding:18px;margin-bottom:20px}
+.howto h3{color:#fff;margin-bottom:8px}
+.howto ol{margin-left:20px;color:#8fa39a;font-size:15px}
+.howto li{margin-bottom:4px}
+.email{background:#0a1210;border:1px solid #24382f;border-radius:16px;padding:18px}
+.email .row{margin-bottom:10px}.email .lbl{color:#5b6f66;font-size:13px;text-transform:uppercase;letter-spacing:1px}
+.email .val{color:#fff;font-weight:600;word-break:break-all}
+.email .body{white-space:pre-wrap;color:#dbe7e0;background:#020503;border:1px solid #16211c;border-radius:12px;padding:14px;margin-top:6px}
+.btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.btns button{flex:1;min-width:150px;padding:14px;border-radius:12px;font-size:16px;font-weight:800;cursor:pointer;border:0}
+.btn-phish{background:#dc2626;color:#fff}
+.btn-safe{background:#00e676;color:#04120a}
+.btn-next{background:#00e676;color:#04120a;font-weight:800;border:0;padding:13px 26px;border-radius:12px;font-size:16px;cursor:pointer;margin-top:14px}
+.btn-retry{background:#00e676;color:#04120a;font-weight:800;border:0;padding:13px 26px;border-radius:12px;font-size:16px;cursor:pointer;margin-top:14px}
+.verdict{border-radius:16px;padding:18px;margin-top:16px;display:none}
+.verdict.ok{background:#052e16;border:1px solid #14532d}
+.verdict.bad{background:#3f0d0d;border:1px solid #7f1d1d}
+.verdict h3{color:#fff;margin-bottom:6px}
+.verdict ul{margin-left:20px;color:#dbe7e0;font-size:15px}
+.win{background:#052e16;border:1px solid #00e676;border-radius:16px;padding:20px;margin-top:16px;display:none;text-align:center}
+.win h2{color:#4ade80;margin-bottom:8px}
+.win .flag{font-family:ui-monospace,Menlo,Consolas,monospace;color:#fde68a;font-size:18px;word-break:break-all}
+.back{display:inline-block;margin-top:24px;color:#00e676;font-weight:700}
+footer{text-align:center;color:#5b6f66;font-size:13.5px;margin-top:28px}
+</style>
+</head>
+<body>
+<nav class="navbar"><a class="brand" href="../index.html">🛡️ CyberSec <span class="g">Hub</span></a><a class="nav" href="../index.html">Home</a><a class="nav" href="index.html">Missions</a><a class="nav" href="../learning-path.html">Learning Paths</a></nav>
+<div class="wrap">
+<h1>🎣 Mission 2: <span class="g">Phishing Hunter</span></h1>
+<p class="sub"><span class="badge">EASY</span> &nbsp;<span class="pts">300 pts</span> &nbsp;·&nbsp; Spot the fake email before it steals data.</p>
+<div class="scorebar" id="scorebar">Score: 0 / 300 · Email 1 of 3</div>
+<div class="howto">
+<h3>How to play</h3>
+<ol>
+<li>Read each email carefully — sender, subject, and message.</li>
+<li>Decide: is it <b style="color:#fca5a5">Phishing</b> (a trap) or <b style="color:#86efac">Safe</b> (a normal email)?</li>
+<li>Tap your answer. Correct answers earn 100 points each.</li>
+<li>Get all 3 right to capture the flag.</li>
+</ol>
+</div>
+<div class="email" id="emailBox"></div>
+<div class="btns" id="answerBtns">
+<button class="btn-phish" onclick="answer('phish')">🚨 Phishing</button>
+<button class="btn-safe" onclick="answer('safe')">✅ Safe</button>
+</div>
+<div class="verdict" id="verdict"></div>
+<div class="win" id="winBox"></div>
+<a class="back" href="index.html">← All Missions</a>
+<footer>CyberSec Hub — 100% ethical training. These are fictional practice emails, not real messages.</footer>
+</div>
+<script>
+var rounds=[
+{from:'support@paypa1-secure.com',subject:'Urgent: Your account will be closed in 24 hours!',body:'Dear Customer,\nWe noticed unusual activity on your account. Verify your account now or it will be closed.\nClick here to verify: http://paypa1-secure.com/login\nAttachment: invoice.zip',answer:'phish',why:['Sender domain is misspelled: "paypa1" instead of "paypal".','Creates urgency ("24 hours") to stop you thinking.','Generic greeting ("Dear Customer") — real services use your name.','Suspicious link that does not match the real website.','Unexpected attachment (invoice.zip) you never asked for.']},
+{from:'hello@learnsafe.app',subject:'Your weekly security tip',body:'Hi Alex,\nThis week: turn on automatic updates for your phone. It takes 2 minutes and blocks most known attacks.\nNo action needed — just a tip. See you next week!\n— The LearnSafe Team',answer:'safe',why:['Sender matches the service you signed up for.','No password, payment, or personal data requested.','No urgency, threat, or pressure.','No suspicious link or unexpected attachment.']},
+{from:'boss@company-support.net',subject:'Quick task — gift cards needed',body:'Hi,\nI am in a meeting and need your help. Please buy 4 gift cards ($100 each) and send me the codes here.\nThis is urgent. Do not call me, just reply to this email.\n— Your Boss',answer:'phish',why:['Unusual request: gift cards are a classic scam payment method.','Pressure plus "do not call me" — blocks you from verifying.','Sender domain (company-support.net) is not the real company domain.','A real boss never asks for gift card codes by email.']}
+];
+var idx=0, score=0;
+function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function render(){
+var r=rounds[idx];
+document.getElementById('emailBox').innerHTML='<div class="row"><div class="lbl">From</div><div class="val">'+esc(r.from)+'</div></div><div class="row"><div class="lbl">Subject</div><div class="val">'+esc(r.subject)+'</div></div><div class="lbl">Message</div><div class="body">'+esc(r.body)+'</div>';
+document.getElementById('scorebar').textContent='Score: '+score+' / 300 · Email '+(idx+1)+' of 3';
+document.getElementById('answerBtns').style.display='flex';
+var v=document.getElementById('verdict');v.style.display='none';v.innerHTML='';
+document.getElementById('winBox').style.display='none';
+}
+function answer(choice){
+var r=rounds[idx];
+var ok=(choice===r.answer);
+if(ok)score+=100;
+document.getElementById('scorebar').textContent='Score: '+score+' / 300 · Email '+(idx+1)+' of 3';
+document.getElementById('answerBtns').style.display='none';
+var v=document.getElementById('verdict');
+v.className='verdict '+(ok?'ok':'bad');
+var head=ok?'✅ Correct! +100 points':'❌ Not quite.';
+var truth=r.answer==='phish'?'This email WAS phishing.':'This email WAS safe.';
+var html='<h3>'+head+'</h3><p>'+truth+'</p><p style="margin-top:10px"><b>Why:</b></p><ul>';
+r.why.forEach(function(w){html+='<li>'+esc(w)+'</li>';});
+html+='</ul>';
+if(idx<rounds.length-1){html+='<button class="btn-next" onclick="next()">Next email →</button>';}
+else{html+='<button class="btn-next" onclick="finish()">See result →</button>';}
+v.innerHTML=html;v.style.display='block';
+}
+function next(){idx++;render();}
+function finish(){
+var v=document.getElementById('verdict');v.style.display='none';
+var w=document.getElementById('winBox');
+if(score===300){
+w.innerHTML='<h2>🎉 MISSION COMPLETE!</h2><p>You spotted every trap. Score: 300 / 300</p><p class="flag">FLAG{phish_hunter_2026}</p><p style="margin-top:10px;color:#8fa39a">Next mission: <a href="mission-3.html" style="color:#00e676;text-decoration:underline">Mission 3 — Password Cracker →</a></p>';
+}else{
+w.innerHTML='<h2 style="color:#fca5a5">Score: '+score+' / 300</h2><p>You missed one or more. Review the red flags and try again — phishing hunters never give up.</p><button class="btn-retry" onclick="retry()">↻ Try again</button>';
+}
+w.style.display='block';
+}
+function retry(){idx=0;score=0;render();}
+render();
+</script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>CyberSec Hub — Mission 4: Spot the Vulnerability</title>
+<meta name="description" content="Mission 4: Spot the Vulnerability — read short code snippets and find the security flaw in each one. A CyberSec Hub mission.">
+<link rel="canonical" href="https://anwaardigital.com/Cybersecurity/missions/mission-4.html">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:#05080a;color:#dbe7e0;line-height:1.6}
+a{color:inherit;text-decoration:none}
+.navbar{background:#0a1210;border-bottom:1px solid #16211c;padding:14px 18px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.brand{font-weight:800;font-size:18px;color:#fff}.brand .g{color:#00e676}
+.navbar a.nav{color:#8fa39a;font-weight:700}.navbar a.nav:hover{color:#00e676}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px 40px}
+h1{font-size:clamp(26px,6vw,36px);color:#fff;margin:22px 0 6px}
+h1 .g{color:#00e676}
+.sub{color:#8fa39a;margin-bottom:20px}
+.badge{display:inline-block;font-size:12px;font-weight:800;padding:3px 10px;border-radius:999px;background:#3b2f05;color:#fde68a}
+.pts{font-weight:800;color:#00e676}
+.scorebar{font-family:ui-monospace,Menlo,Consolas,monospace;color:#00e676;font-weight:700;margin-bottom:14px}
+.howto{background:#0a1210;border:1px solid #16211c;border-radius:16px;padding:18px;margin-bottom:20px}
+.howto h3{color:#fff;margin-bottom:8px}
+.howto ol{margin-left:20px;color:#8fa39a;font-size:15px}
+.howto li{margin-bottom:4px}
+.code{background:#020503;border:1px solid #1d3a2a;border-radius:16px;padding:16px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:14.5px;line-height:1.7;color:#a7f3d0;white-space:pre-wrap;word-break:break-all}
+.opts{display:grid;gap:10px;margin-top:14px}
+.opts button{background:#0b1a12;border:1px solid #24382f;color:#dbe7e0;padding:14px 16px;border-radius:12px;font-size:15px;font-weight:700;cursor:pointer;text-align:left}
+.opts button:active{background:#00e676;color:#04120a}
+.verdict{border-radius:16px;padding:18px;margin-top:16px;display:none}
+.verdict.ok{background:#052e16;border:1px solid #14532d}
+.verdict.bad{background:#3f0d0d;border:1px solid #7f1d1d}
+.verdict h3{color:#fff;margin-bottom:6px}
+.btn-next,.btn-retry{background:#00e676;color:#04120a;font-weight:800;border:0;padding:13px 26px;border-radius:12px;font-size:16px;cursor:pointer;margin-top:14px}
+.win{background:#052e16;border:1px solid #00e676;border-radius:16px;padding:20px;margin-top:16px;display:none;text-align:center}
+.win h2{color:#4ade80;margin-bottom:8px}
+.win .flag{font-family:ui-monospace,Menlo,Consolas,monospace;color:#fde68a;font-size:18px;word-break:break-all}
+.back{display:inline-block;margin-top:24px;color:#00e676;font-weight:700}
+footer{text-align:center;color:#5b6f66;font-size:13.5px;margin-top:28px}
+</style>
+</head>
+<body>
+<nav class="navbar"><a class="brand" href="../index.html">🛡️ CyberSec <span class="g">Hub</span></a><a class="nav" href="../index.html">Home</a><a class="nav" href="index.html">Missions</a><a class="nav" href="../learning-path.html">Learning Paths</a></nav>
+<div class="wrap">
+<h1>🐛 Mission 4: <span class="g">Spot the Vulnerability</span></h1>
+<p class="sub"><span class="badge">MEDIUM</span> &nbsp;<span class="pts">300 pts</span> &nbsp;·&nbsp; Read short code snippets and find the security flaw in each one.</p>
+<div class="scorebar" id="scorebar">Score: 0 / 300 · Snippet 1 of 3</div>
+<div class="howto">
+<h3>How to play</h3>
+<ol>
+<li>Read the code snippet carefully.</li>
+<li>Pick the security flaw from the 3 options.</li>
+<li>Correct answers earn 100 points each. Get all 3 right to capture the flag.</li>
+</ol>
+</div>
+<div class="code" id="codeBox"></div>
+<div class="opts" id="optsBox"></div>
+<div class="verdict" id="verdict"></div>
+<div class="win" id="winBox"></div>
+<a class="back" href="index.html">← All Missions</a>
+<footer>CyberSec Hub — 100% ethical training. Practice code only — never test code you do not own.</footer>
+</div>
+<script>
+var rounds=[
+{code:'query = "SELECT * FROM users WHERE id = \'" + userInput + "\'";',
+options:['SQL Injection — user input goes straight into the query','Weak password','Missing HTTPS'],
+correct:0,
+why:'An attacker can type: \' OR \'1\'=\'1 — and read every user in the database. Fix: use parameterized queries, never build SQL from raw input.'},
+{code:'const API_KEY = "sk-live-9f8e7d6c5b4a"; // used in every request',
+options:['Slow database','Secret key hardcoded in source code','Missing backup'],
+correct:1,
+why:'Anyone who sees this code owns the key. Fix: keep secrets in environment variables, never in code — and rotate a key that was ever exposed.'},
+{code:'app.get(\'/admin/delete-user\', (req, res) => { deleteUser(req.query.id); });',
+options:['No login or permission check on a dangerous action','Typo in the URL','Missing log file'],
+correct:0,
+why:'Anyone can open this URL and delete users — no login, no admin check. Fix: require an admin login and a permission check before any dangerous action.'}
+];
+var idx=0, score=0;
+function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function render(){
+var r=rounds[idx];
+document.getElementById('codeBox').textContent=r.code;
+var html='';
+r.options.forEach(function(o,i){html+='<button onclick="pick('+i+')">'+esc(o)+'</button>';});
+document.getElementById('optsBox').innerHTML=html;
+document.getElementById('scorebar').textContent='Score: '+score+' / 300 · Snippet '+(idx+1)+' of 3';
+var v=document.getElementById('verdict');v.style.display='none';v.innerHTML='';
+document.getElementById('winBox').style.display='none';
+}
+function pick(i){
+var r=rounds[idx];
+var ok=(i===r.correct);
+if(ok)score+=100;
+document.getElementById('scorebar').textContent='Score: '+score+' / 300 · Snippet '+(idx+1)+' of 3';
+document.getElementById('optsBox').innerHTML='';
+var v=document.getElementById('verdict');
+v.className='verdict '+(ok?'ok':'bad');
+var html='<h3>'+(ok?'✅ Correct! +100 points':'❌ Not quite.')+'</h3><p>'+esc(r.why)+'</p>';
+if(idx<rounds.length-1){html+='<button class="btn-next" onclick="next()">Next snippet →</button>';}
+else{html+='<button class="btn-next" onclick="finish()">See result →</button>';}
+v.innerHTML=html;v.style.display='block';
+}
+function next(){idx++;render();}
+function finish(){
+var v=document.getElementById('verdict');v.style.display='none';
+var w=document.getElementById('winBox');
+if(score===300){
+w.innerHTML='<h2>🎉 MISSION COMPLETE!</h2><p>You found every flaw. Score: 300 / 300</p><p class="flag">FLAG{bug_hunter_2026}</p><p style="margin-top:10px;color:#8fa39a">Next mission: <a href="mission-5.html" style="color:#00e676;text-decoration:underline">Mission 5 — Decode the Secret →</a></p>';
+}else{
+w.innerHTML='<h2 style="color:#fca5a5">Score: '+score+' / 300</h2><p>Review the explanations and try again — good hunters check every line.</p><button class="btn-retry" onclick="retry()">↻ Try again</button>';
+}
+w.style.display='block';
+}
+function retry(){idx=0;score=0;render();}
+render();
+</script>
+</body>
+</html>

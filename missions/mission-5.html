@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>CyberSec Hub — Mission 5: Decode the Secret</title>
+<meta name="description" content="Mission 5: Decode the Secret — decode hidden messages step by step and reveal the flag. A beginner-friendly CyberSec Hub mission.">
+<link rel="canonical" href="https://anwaardigital.com/Cybersecurity/missions/mission-5.html">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:#05080a;color:#dbe7e0;line-height:1.6}
+a{color:inherit;text-decoration:none}
+.navbar{background:#0a1210;border-bottom:1px solid #16211c;padding:14px 18px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.brand{font-weight:800;font-size:18px;color:#fff}.brand .g{color:#00e676}
+.navbar a.nav{color:#8fa39a;font-weight:700}.navbar a.nav:hover{color:#00e676}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px 40px}
+h1{font-size:clamp(26px,6vw,36px);color:#fff;margin:22px 0 6px}
+h1 .g{color:#00e676}
+.sub{color:#8fa39a;margin-bottom:20px}
+.badge{display:inline-block;font-size:12px;font-weight:800;padding:3px 10px;border-radius:999px;background:#052e16;color:#86efac}
+.pts{font-weight:800;color:#00e676}
+.howto{background:#0a1210;border:1px solid #16211c;border-radius:16px;padding:18px;margin-bottom:20px}
+.howto h3{color:#fff;margin-bottom:8px}
+.howto ol{margin-left:20px;color:#8fa39a;font-size:15px}
+.howto li{margin-bottom:4px}
+.stage{background:#0a1210;border:1px solid #24382f;border-radius:16px;padding:18px;margin-bottom:14px}
+.stage h3{color:#fff;margin-bottom:6px}
+.stage p{color:#8fa39a;font-size:15px}
+.codebox{background:#020503;border:1px solid #1d3a2a;border-radius:12px;padding:14px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:16px;color:#fde68a;word-break:break-all;margin:10px 0}
+.input-row{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.input-row input{flex:1;min-width:180px;background:#0b1a12;border:1px solid #24382f;color:#fff;border-radius:10px;padding:12px 14px;font-size:16px;font-family:ui-monospace,Menlo,Consolas,monospace;outline:none}
+.input-row button{background:#00e676;color:#04120a;font-weight:800;border:0;padding:12px 20px;border-radius:10px;font-size:15px;cursor:pointer}
+.tool{background:#020503;border:1px solid #16211c;border-radius:12px;padding:14px;margin-top:10px}
+.tool .lbl{color:#5b6f66;font-size:13px;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.tool .out{font-family:ui-monospace,Menlo,Consolas,monospace;color:#a7f3d0;word-break:break-all;min-height:22px}
+.msg{margin-top:10px;font-weight:700;display:none}
+.msg.ok{color:#4ade80}.msg.bad{color:#fca5a5}
+.locked{opacity:.55}
+.win{background:#052e16;border:1px solid #00e676;border-radius:16px;padding:20px;margin-top:16px;display:none;text-align:center}
+.win h2{color:#4ade80;margin-bottom:8px}
+.win .flag{font-family:ui-monospace,Menlo,Consolas,monospace;color:#fde68a;font-size:18px;word-break:break-all}
+.back{display:inline-block;margin-top:24px;color:#00e676;font-weight:700}
+footer{text-align:center;color:#5b6f66;font-size:13.5px;margin-top:28px}
+</style>
+</head>
+<body>
+<nav class="navbar"><a class="brand" href="../index.html">🛡️ CyberSec <span class="g">Hub</span></a><a class="nav" href="../index.html">Home</a><a class="nav" href="index.html">Missions</a><a class="nav" href="../learning-path.html">Learning Paths</a></nav>
+<div class="wrap">
+<h1>🔓 Mission 5: <span class="g">Decode the Secret</span></h1>
+<p class="sub"><span class="badge">EASY</span> &nbsp;<span class="pts">200 pts</span> &nbsp;·&nbsp; Decode hidden messages step by step and reveal the flag.</p>
+<div class="howto">
+<h3>How to play</h3>
+<ol>
+<li><b>Stage 1:</b> Decode the Base64 message. Use the decoder tool below if you need it.</li>
+<li><b>Stage 2:</b> The decoded word tells you the Caesar shift. Shift the secret text back to read the flag.</li>
+<li>Type the flag to complete the mission.</li>
+</ol>
+</div>
+<div class="stage" id="stage1">
+<h3>Stage 1 — Base64</h3>
+<p>Base64 turns text into a different alphabet of letters, numbers, + and /. Decode this message:</p>
+<div class="codebox">U0hJRlQz</div>
+<div class="tool">
+<div class="lbl">Decoder tool (Base64)</div>
+<div class="input-row"><input id="b64in" type="text" value="U0hJRlQz" autocomplete="off" autocapitalize="off"><button onclick="decodeB64()">Decode</button></div>
+<div class="out" id="b64out"></div>
+</div>
+<div class="input-row"><input id="ans1" type="text" placeholder="What does it decode to?" autocomplete="off" autocapitalize="off"><button onclick="check1()">Check →</button></div>
+<div class="msg" id="msg1"></div>
+</div>
+<div class="stage locked" id="stage2">
+<h3>Stage 2 — Caesar shift</h3>
+<p>Caesar shift moves every letter forward by a number. Stage 1 told you the shift. Move every letter <b style="color:#dbe7e0">back</b> by that shift to read the secret:</p>
+<div class="codebox">IODJ{ghfrghg_2026}</div>
+<div class="tool">
+<div class="lbl">Caesar tool (shift back by 3)</div>
+<div class="input-row"><input id="caesarIn" type="text" value="IODJ{ghfrghg_2026}" autocomplete="off" autocapitalize="off"><button onclick="decodeCaesar()">Shift back by 3</button></div>
+<div class="out" id="caesarOut"></div>
+</div>
+<div class="input-row"><input id="ans2" type="text" placeholder="Type the decoded flag here" autocomplete="off" autocapitalize="off"><button onclick="check2()">Submit flag →</button></div>
+<div class="msg" id="msg2"></div>
+</div>
+<div class="win" id="winBox"></div>
+<a class="back" href="index.html">← All Missions</a>
+<footer>CyberSec Hub — 100% ethical training. Decoding practice only.</footer>
+</div>
+<script>
+function showMsg(id,ok,text){
+var m=document.getElementById(id);
+m.className='msg '+(ok?'ok':'bad');
+m.textContent=text;m.style.display='block';
+}
+function decodeB64(){
+var v=(document.getElementById('b64in').value||'').trim();
+try{var d=atob(v);document.getElementById('b64out').textContent=d;}
+catch(e){document.getElementById('b64out').textContent='Not valid Base64 — check the text and try again.';}
+}
+function check1(){
+var v=(document.getElementById('ans1').value||'').trim().toUpperCase();
+if(v==='SHIFT3'){
+showMsg('msg1',true,'✅ Correct! SHIFT3 means: shift every letter by 3. Stage 2 unlocked.');
+document.getElementById('stage2').className='stage';
+}else{
+showMsg('msg1',false,'❌ Not quite. Tip: use the decoder tool above on U0hJRlQz.');
+}
+}
+function caesarBack(s,shift){
+return s.replace(/[A-Za-z]/g,function(ch){
+var base=(ch>='a'&&ch<='z')?97:65;
+return String.fromCharCode(((ch.charCodeAt(0)-base-shift+26)%26)+base);
+});
+}
+function decodeCaesar(){
+var v=(document.getElementById('caesarIn').value||'').trim();
+document.getElementById('caesarOut').textContent=caesarBack(v,3);
+}
+function check2(){
+var v=(document.getElementById('ans2').value||'').trim().toUpperCase();
+if(v==='FLAG{DECODED_2026}'){
+var w=document.getElementById('winBox');
+w.innerHTML='<h2>🎉 MISSION COMPLETE!</h2><p>You decoded every layer. Score: 200 / 200</p><p class="flag">FLAG{decoded_2026}</p><p style="margin-top:10px;color:#8fa39a"><a href="index.html" style="color:#00e676;text-decoration:underline">Back to all missions →</a></p>';
+w.style.display='block';
+showMsg('msg2',true,'✅ Correct flag!');
+}else{
+showMsg('msg2',false,'❌ Wrong flag. Tip: use the Caesar tool — shift IODJ{ghfrghg_2026} back by 3.');
+}
+}
+</script>
+</body>
+</html>

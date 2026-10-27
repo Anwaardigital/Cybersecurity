@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>CyberSec Hub — Mission 1: First Blood</title>
+<meta name="description" content="Mission 1: First Blood — find the hidden flag on a training server using terminal commands. A beginner-friendly CyberSec Hub mission.">
+<link rel="canonical" href="https://anwaardigital.com/Cybersecurity/missions/mission-1.html">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:#05080a;color:#dbe7e0;line-height:1.6}
+a{color:inherit;text-decoration:none}
+.navbar{background:#0a1210;border-bottom:1px solid #16211c;padding:14px 18px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.brand{font-weight:800;font-size:18px;color:#fff}.brand .g{color:#00e676}
+.navbar a.nav{color:#8fa39a;font-weight:700}.navbar a.nav:hover{color:#00e676}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px 40px}
+h1{font-size:clamp(26px,6vw,36px);color:#fff;margin:22px 0 6px}
+h1 .g{color:#00e676}
+.sub{color:#8fa39a;margin-bottom:20px}
+.badge{display:inline-block;font-size:12px;font-weight:800;padding:3px 10px;border-radius:999px;background:#052e16;color:#86efac}
+.pts{font-weight:800;color:#00e676}
+.terminal{background:#020503;border:1px solid #1d3a2a;border-radius:16px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.5)}
+.term-bar{background:#0a1710;padding:10px 14px;display:flex;gap:7px;align-items:center}
+.dot{width:12px;height:12px;border-radius:50%}.dot.r{background:#ff5f56}.dot.y{background:#ffbd2e}.dot.gr{background:#27c93f}
+.term-title{margin-left:8px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.5px;color:#5b6f66}
+.term-score{margin-left:auto;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;color:#00e676;font-weight:700}
+.term-body{padding:16px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:14.5px;line-height:1.7;min-height:280px;max-height:420px;overflow-y:auto;white-space:pre-wrap;color:#a7f3d0}
+.term-body .cmd{color:#00e676}.term-body .dim{color:#5b6f66}.term-body .gold{color:#fde68a}.term-body .win{color:#4ade80;font-weight:700}
+.term-body a{color:#00e676;text-decoration:underline}
+.chips{display:flex;gap:8px;flex-wrap:wrap;padding:12px 14px;border-top:1px solid #16211c}
+.chips button{background:#0b1a12;border:1px solid #24382f;color:#dbe7e0;padding:9px 16px;border-radius:999px;font-size:14px;font-weight:700;cursor:pointer}
+.chips button:active{background:#00e676;color:#04120a}
+.input-row{display:flex;gap:8px;padding:12px 14px;border-top:1px solid #16211c}
+.input-row input{flex:1;background:#0b1a12;border:1px solid #24382f;color:#fff;border-radius:10px;padding:12px 14px;font-size:16px;font-family:ui-monospace,Menlo,Consolas,monospace;outline:none;min-width:0}
+.input-row button{background:#00e676;color:#04120a;font-weight:800;border:0;padding:12px 22px;border-radius:10px;font-size:16px;cursor:pointer}
+.howto{background:#0a1210;border:1px solid #16211c;border-radius:16px;padding:18px;margin-top:20px}
+.howto h3{color:#fff;margin-bottom:8px}
+.howto ol{margin-left:20px;color:#8fa39a;font-size:15px}
+.howto li{margin-bottom:4px}
+.back{display:inline-block;margin-top:24px;color:#00e676;font-weight:700}
+footer{text-align:center;color:#5b6f66;font-size:13.5px;margin-top:28px}
+</style>
+</head>
+<body>
+<nav class="navbar"><a class="brand" href="../index.html">🛡️ CyberSec <span class="g">Hub</span></a><a class="nav" href="../index.html">Home</a><a class="nav" href="index.html">Missions</a><a class="nav" href="../learning-path.html">Learning Paths</a></nav>
+<div class="wrap">
+<h1>🎯 Mission 1: <span class="g">First Blood</span></h1>
+<p class="sub"><span class="badge">EASY</span> &nbsp;<span class="pts">100 pts</span> &nbsp;·&nbsp; Find the hidden flag on a training server.</p>
+<div class="terminal">
+<div class="term-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot gr"></span><span class="term-title">trainee@hub: ~/mission1</span><span class="term-score" id="score">Score: 100</span></div>
+<div class="term-body" id="term"></div>
+<div class="chips">
+<button onclick="runCmd('ls')">ls</button>
+<button onclick="runCmd('scan')">scan</button>
+<button onclick="runCmd('help')">help</button>
+<button onclick="runCmd('hint')">hint</button>
+<button onclick="runCmd('clear')">clear</button>
+</div>
+<form class="input-row" onsubmit="sendCmd(event)">
+<input id="cmdInput" type="text" placeholder="Type a command... (try: ls)" autocomplete="off" autocapitalize="off">
+<button type="submit">Send ⏎</button>
+</form>
+</div>
+<div class="howto">
+<h3>How to play Mission 1</h3>
+<ol>
+<li>Type <b style="color:#a7f3d0">ls</b> to see the files on the server.</li>
+<li>Read the files with <b style="color:#a7f3d0">cat &lt;filename&gt;</b> — follow the clues.</li>
+<li>When you find the flag, submit it: <b style="color:#a7f3d0">submit FLAG{...}</b></li>
+<li>Stuck? Type <b style="color:#a7f3d0">hint</b> (each hint costs 10 points).</li>
+</ol>
+</div>
+<a class="back" href="index.html">← All Missions</a>
+<footer>CyberSec Hub — 100% ethical training. This is a simulated server, not a real system.</footer>
+</div>
+<script>
+var term=document.getElementById('term');
+var score=100, hintsUsed=0, won=false;
+var files={
+'readme.txt':'Welcome to the training server.\nSomeone left an old backup behind.\nThe server log knows more. Check it.',
+'server.log':'[10:02] user guest logged in\n[10:05] WARNING: old backup file "old-config.bak" still on server — contains credentials?\n[10:09] user guest logged out',
+'users.txt':'admin\nguest\ntest'
+};
+function print(html){var d=document.createElement('div');d.innerHTML=html;term.appendChild(d);term.scrollTop=term.scrollHeight;}
+function printCmd(c){print('<span class="cmd">➜ ~ </span>'+c);}
+function setScore(){document.getElementById('score').textContent='Score: '+score;}
+function runCmd(raw){
+var c=(raw||'').trim();
+if(!c)return;
+printCmd(c);
+var low=c.toLowerCase();
+if(low==='clear'){term.innerHTML='';return;}
+if(low==='help'){
+print('<span class="dim">Commands: ls · scan · cat &lt;file&gt; · hint · clear · submit FLAG{...}</span>');
+print('<span class="dim">Files here: readme.txt · server.log · users.txt</span>');
+return;
+}
+if(low==='ls'){
+print('readme.txt   server.log   users.txt');
+return;
+}
+if(low==='scan'){
+print('<span class="dim">Scanning training server...</span>');
+print('22/tcp  open  ssh\n80/tcp  open  http\n<span class="dim">Tip: open services are not the flag. Read the files.</span>');
+return;
+}
+if(low==='hint'){
+hintsUsed++;
+score=Math.max(0,score-10);setScore();
+if(hintsUsed===1)print('<span class="gold">Hint 1 (-10 pts): Log files often mention forgotten files. Try: cat server.log</span>');
+else if(hintsUsed===2)print('<span class="gold">Hint 2 (-10 pts): The log mentions an old backup file. Its name ends with .bak</span>');
+else print('<span class="gold">Hint 3 (-10 pts): Try: cat old-config.bak</span>');
+return;
+}
+if(low.indexOf('cat ')===0){
+var f=low.slice(4).trim();
+if(f==='old-config.bak'){
+print('<span class="gold">FLAG{first_blood_2026}</span>');
+print('<span class="dim">You found it! Submit it to complete the mission:</span>');
+print('<span class="cmd">submit FLAG{first_blood_2026}</span>');
+return;
+}
+if(files[f]){print(files[f].replace(/\n/g,'<br>'));return;}
+print('<span class="dim">No such file: '+f+'. Type ls to see files.</span>');
+return;
+}
+if(low.indexOf('submit')===0 || low.indexOf('flag{')!==-1){
+if(low.indexOf('flag{first_blood_2026}')!==-1 && !won){
+won=true;
+print('<span class="win">🎉 MISSION COMPLETE!</span>');
+print('<span class="win">+'+score+' points earned · You are now a hacker hunter, not a victim.</span>');
+print('<span class="dim">Next mission: <a href="mission-2.html">Mission 2 — Phishing Hunter →</a></span>');
+}else if(won){
+print('<span class="dim">Mission already complete. Great work!</span>');
+}else{
+print('<span class="dim">Wrong flag. Keep looking — the flag is hidden in a file.</span>');
+}
+return;
+}
+print('<span class="dim">Command not found. Type help.</span>');
+}
+function sendCmd(e){
+e.preventDefault();
+var i=document.getElementById('cmdInput');
+runCmd(i.value);i.value='';i.focus();
+}
+print('<span class="dim">Connected to training server. Your mission:</span>');
+print('<span class="gold">Find the hidden flag on this server.</span>');
+print('<span class="dim">Type ls to begin, or help for commands.</span>');
+document.getElementById('cmdInput').focus();
+</script>
+</body>
+</html>
