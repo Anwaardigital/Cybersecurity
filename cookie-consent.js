@@ -1,7 +1,7 @@
 /* Cookie consent + consent-gated Google Analytics (GDPR) */
 (function () {
   'use strict';
-  var GA_ID = 'G-T6WVGJVD4J';
+  var GA_ID = 'G-V8YRBCM0L9';
   var KEY = 'ad_cookie_consent_v1';
 
   function loadGA() {
