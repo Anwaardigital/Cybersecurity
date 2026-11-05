@@ -175,6 +175,13 @@ function analyzeURL(){
   html+=flag('info',' Educational note','Phishers invent new tricks constantly. This checker looks for <b>known patterns</b> — a "clean" result is not a safety certificate. Your best defense is habit: navigate to important sites yourself instead of clicking links.');
   out.innerHTML=html;
 }
+/* Auto-run from ?url= (linked from the homepage "Is This Link Safe?" box). */
+(function(){
+  try{
+    var q=new URLSearchParams(window.location.search).get('url');
+    if(q){document.getElementById('purl').value=q;analyzeURL();}
+  }catch(e){}
+})();
 </script>
 <footer class="footer"><div class="container">
 <div class="footer-brand"> CyberSec <span class="green">Hub</span></div>

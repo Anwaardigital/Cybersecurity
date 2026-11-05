@@ -110,6 +110,7 @@ var v=document.getElementById('verdict');v.style.display='none';
 var w=document.getElementById('winBox');
 if(score===300){
 w.innerHTML='<h2> MISSION COMPLETE!</h2><p>You spotted every trap. Score: 300 / 300</p><p class="flag">FLAG{phish_hunter_2026}</p><p style="margin-top:10px;color:#8fa39a">Next mission: <a href="mission-3.html" style="color:#00e676;text-decoration:underline">Mission 3 — Password Cracker →</a></p>';
+if(window.HubProgress)HubProgress.completeMission('mission-2');
 }else{
 w.innerHTML='<h2 style="color:#fca5a5">Score: '+score+' / 300</h2><p>You missed one or more. Review the red flags and try again — phishing hunters never give up.</p><button class="btn-retry" onclick="retry()">↻ Try again</button>';
 }

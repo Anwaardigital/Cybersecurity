@@ -127,6 +127,7 @@ return;
 if(low.indexOf('submit')===0 || low.indexOf('flag{')!==-1){
 if(low.indexOf('flag{first_blood_2026}')!==-1 && !won){
 won=true;
+if(window.HubProgress)HubProgress.completeMission('mission-1');
 print('<span class="win"> MISSION COMPLETE!</span>');
 print('<span class="win">+'+score+' points earned · You are now a hacker hunter, not a victim.</span>');
 print('<span class="dim">Next mission: <a href="mission-2.html">Mission 2 — Phishing Hunter →</a></span>');

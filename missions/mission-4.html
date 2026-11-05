@@ -107,6 +107,7 @@ var v=document.getElementById('verdict');v.style.display='none';
 var w=document.getElementById('winBox');
 if(score===300){
 w.innerHTML='<h2> MISSION COMPLETE!</h2><p>You found every flaw. Score: 300 / 300</p><p class="flag">FLAG{bug_hunter_2026}</p><p style="margin-top:10px;color:#8fa39a">Next mission: <a href="mission-5.html" style="color:#00e676;text-decoration:underline">Mission 5 — Decode the Secret →</a></p>';
+if(window.HubProgress)HubProgress.completeMission('mission-4');
 }else{
 w.innerHTML='<h2 style="color:#fca5a5">Score: '+score+' / 300</h2><p>Review the explanations and try again — good hunters check every line.</p><button class="btn-retry" onclick="retry()">↻ Try again</button>';
 }

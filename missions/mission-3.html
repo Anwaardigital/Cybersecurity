@@ -123,6 +123,7 @@ html='<h3> Perfect! 4 / 4 correct — 400 points</h3><p>Lesson: length beats cle
 v.innerHTML=html;v.style.display='block';
 var w=document.getElementById('winBox');
 w.innerHTML='<h2> MISSION COMPLETE!</h2><p class="flag">FLAG{strong_pass_2026}</p><p style="margin-top:10px;color:#8fa39a">Next mission: <a href="mission-4.html" style="color:#00e676;text-decoration:underline">Mission 4 — Spot the Vulnerability →</a></p>';
+if(window.HubProgress)HubProgress.completeMission('mission-3');
 w.style.display='block';
 }else{
 v.className='verdict bad';

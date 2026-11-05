@@ -236,3 +236,45 @@ body.light .related-box{background:#eef2f8;border-color:#cbd5e1}
 body.light .related-box h3{color:#00994d}
 body.light .related-box a{color:#0369a1}
 body.light .related-box a:hover{color:#0284c7}
+
+/* ---------- Wave 2 additions (5 Nov 2026): progress, tip of the day, link check, leaderboard, certificate, breach news ---------- */
+.progress-box{margin:28px 0}
+.progress-box .hub-complete-done{color:var(--green);font-weight:600}
+.hub-progress{background:linear-gradient(160deg,var(--card),var(--card2));border:1px solid var(--border);border-radius:var(--radius);padding:22px 24px;margin:26px auto;max-width:1120px}
+.hub-progress h3{margin:0 0 8px;font-size:1.15rem}
+.hub-progress-line{color:var(--muted);margin:0 0 10px}
+.hub-progress-line strong{color:var(--text)}
+.hub-progress-note{color:var(--muted);font-size:.93rem;margin:0 0 10px}
+.hub-progress-links{margin:6px 0 0;font-size:.95rem}
+.hub-progress-links a{color:var(--green);font-weight:700}
+.pbar{height:12px;border-radius:8px;background:rgba(255,255,255,.08);overflow:hidden;margin:4px 0 12px}
+.pbar-fill{height:100%;background:linear-gradient(90deg,#00e676,#00b35c);border-radius:8px;transition:width .4s}
+body.light .pbar{background:rgba(0,0,0,.1)}
+.tip-day{background:linear-gradient(160deg,var(--card),var(--card2));border:1px solid var(--border);border-radius:var(--radius);padding:22px 24px;margin:26px auto;max-width:1120px}
+.tip-day h3{margin:0 0 8px;font-size:1.15rem}
+.tip-day p{color:var(--muted);margin:0}
+.tip-day p strong{color:var(--text)}
+.linkcheck-promo{background:linear-gradient(160deg,var(--card),var(--card2));border:1px solid var(--border);border-radius:var(--radius);padding:22px 24px;margin:26px auto;max-width:1120px}
+.linkcheck-promo h3{margin:0 0 8px;font-size:1.15rem}
+.linkcheck-promo p{color:var(--muted);margin:0 0 14px}
+.linkcheck-promo .tool-field input[type=text]{max-width:640px}
+.lb-table{width:100%;border-collapse:collapse;margin:18px 0}
+.lb-table th,.lb-table td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--border);font-size:.95rem}
+.lb-table th{color:var(--green)}
+.lb-table td{color:var(--text)}
+.lb-rank{display:inline-block;min-width:110px;padding:4px 14px;border-radius:20px;background:rgba(0,230,118,.1);border:1px solid var(--border);color:var(--green);font-weight:700;text-align:center}
+.cert-frame{border:3px solid var(--green);border-radius:16px;padding:36px 28px;text-align:center;margin:26px 0;background:linear-gradient(160deg,var(--card),var(--card2))}
+.cert-frame h2{color:var(--green);margin:0 0 6px}
+.cert-frame .cert-name{font-size:1.9rem;font-weight:800;margin:14px 0}
+.cert-frame .cert-path{font-size:1.15rem;font-weight:700}
+.cert-frame p{color:var(--muted)}
+.breach-item{background:linear-gradient(160deg,var(--card),var(--card2));border:1px solid var(--border);border-radius:var(--radius);padding:20px 22px;margin:18px 0}
+.breach-item h3{margin:0 0 6px;font-size:1.1rem}
+.breach-item .breach-meta{color:var(--muted);font-size:.88rem;margin:0 0 10px}
+.breach-item ul{margin:8px 0 0}
+@media print{
+  .navbar,.footer,.wa-float,#backToTop,#anwaar-ai-btn,.no-print{display:none !important}
+  body{background:#fff;color:#000}
+  .cert-frame{border-color:#000;background:#fff}
+  .cert-frame h2,.cert-frame .cert-name{color:#000}
+}

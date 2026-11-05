@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/png" sizes="192x192" href="https://anwaardigital.com/Cybersecurity/cyber-icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="https://anwaardigital.com/Cybersecurity/cyber-icon-512.png">
+<link rel="apple-touch-icon" href="https://anwaardigital.com/Cybersecurity/cyber-icon-192.png">
+<!-- Cookie consent (GDPR): Google Analytics loads only after you press Accept -->
+<script src="cookie-consent.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Monthly Breach News — November 2026 — CyberSec Hub</title>
+<meta name="description" content="Real, publicly reported data breaches and security incidents for November 2026 — what happened, who is affected, and what to do. Only verified reports, claims labelled as claims.">
+<link rel="stylesheet" href="styles.css">
+<link rel="canonical" href="https://anwaardigital.com/Cybersecurity/breach-news.html">
+<meta property="og:title" content="Monthly Breach News — November 2026 — CyberSec Hub">
+<meta property="og:description" content="Real, publicly reported data breaches and security incidents for November 2026 — what happened, who is affected, and what to do. Only verified reports, claims labelled as claims.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://anwaardigital.com/Cybersecurity/breach-news.html">
+<meta property="og:site_name" content="CyberSec Hub">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://anwaardigital.com/Cybersecurity/cyber-icon-512.png">
+</head>
+<body>
+<nav class="navbar"><div class="nav-inner">
+<a href="index.html" class="brand"><span class="brand-icon"></span><span>CyberSec <span class="green">Hub</span></span></a>
+<div class="nav-actions"><button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark and light theme"><span class="theme-icon"></span><span class="theme-label">Light</span></button><button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button></div>
+<ul class="nav-links" id="navLinks">
+<li><a href="index.html">Home</a></li>
+<li><a href="index.html#basics">Basics</a></li>
+<li><a href="index.html#hacking">Ethical Hacking</a></li>
+<li><a href="index.html#tools">Tools Guide</a></li>
+<li><a href="index.html#career">Career</a></li>
+<li><a href="about.html">About</a></li>
+</ul></div></nav>
+<script>
+(function(){try{if(localStorage.getItem('hubTheme')==='light'){document.body.classList.add('light');}}catch(e){}})();
+function toggleTheme(){var b=document.body;var light=b.classList.toggle('light');try{localStorage.setItem('hubTheme',light?'light':'dark');}catch(e){}var btn=document.querySelector('.theme-toggle');if(btn){var ic=btn.querySelector('.theme-icon');var lb=btn.querySelector('.theme-label');if(ic)ic.textContent=light?'':'';if(lb)lb.textContent=light?'Dark':'Light';}}
+(function(){var btn=document.querySelector('.theme-toggle');if(!btn)return;var light=document.body.classList.contains('light');var ic=btn.querySelector('.theme-icon');var lb=btn.querySelector('.theme-label');if(ic)ic.textContent=light?'':'';if(lb)lb.textContent=light?'Dark':'Light';})();
+</script><main class="page-wrap">
+<h1> Monthly Breach News — November 2026</h1><p><em>Last updated: 5 November 2026 · Updated monthly</em></p>
+<p>Real, publicly reported data breaches and security incidents — with what happened, who is affected, and what to do. Every item below was reported by the company involved or by a reputable news outlet. Claims that are <strong>not confirmed are labelled as claims</strong>, not facts. Next update: December 2026.</p>
+<h2>What to do if you are affected by any breach</h2>
+<ul>
+<li>Change the password of the affected account — and of any other account that reused the same password.</li>
+<li>Turn on two-factor authentication (authenticator app) — see our <a href="basics/two-factor-authentication-guide.html" style="color:#00e676">2FA guide</a>.</li>
+<li>Expect phishing: attackers use leaked names, emails and phone numbers to send convincing scam messages. Check every link with our <a href="sectools/phishing-url-analyzer.html" style="color:#00e676">link safety checker</a>.</li>
+<li>Check whether your email appeared in a breach at <a href="https://haveibeenpwned.com/" target="_blank" rel="noopener" style="color:#00e676">haveibeenpwned.com</a>.</li>
+<li>If financial data was involved, contact your bank and watch your statements.</li>
+</ul>
+
+<div class="breach-item"><h3>Amadeus booking system — airlines affected (Singapore Airlines, Cathay Pacific, Japan Airlines and others)</h3>
+<p class="breach-meta">Reported 4 November 2026 · Source: Reuters</p>
+<p>A vulnerability in travel technology provider Amadeus exposed airline booking records. Singapore Airlines said about <strong>46,000 booking records</strong> may have been affected; Cathay Pacific reported about 53,000 bookings and Japan Airlines about 92,000 customers. Other airlines including Asiana and Malaysia Airlines also reported customer data may have been affected.</p>
+<ul><li><strong>Data exposed:</strong> names, booking reference numbers, travel itineraries and booking classes. For about 620 Singapore Airlines records, email addresses, phone numbers, travel document details and KrisFlyer membership numbers may also have been accessed.</li>
+<li><strong>Not leaked:</strong> Amadeus confirmed bank account and credit card information was not leaked, and bookings were not modified. Singapore Airlines confirmed its own IT systems were not breached.</li>
+<li><strong>What to do:</strong> expect phishing emails or calls that quote your real booking details — verify any message through the airline's official app or website, never through a link in the message.</li></ul>
+<p class="small">Source: <a href="https://wncy.com/2026/11/03/singapore-airlines-says-46000-booking-records-affected-by-amadeus-breach/" target="_blank" rel="noopener">Reuters via WNCY, 4 November 2026</a></p></div>
+
+<div class="breach-item"><h3>Arara (Japan email provider) — about 77 million email addresses potentially exposed</h3>
+<p class="breach-meta">Company update 2 November 2026 · Source: Arara incident report</p>
+<p>Japanese email-delivery provider Arara disclosed that attackers reached client-company environments through 97 servers, expanding an incident first disclosed on 29 October. The company estimates approximately <strong>77 million email addresses</strong> were taken or potentially exposed across as many as 380 client companies. The figure is still being refined and does not represent 77 million confirmed unique individuals; the shared-environment estimate is about 3.39 million unique email addresses.</p>
+<ul><li><strong>Also abused:</strong> attackers used Arara's own email-delivery infrastructure to send up to about 7.13 million phishing messages impersonating credit-card companies.</li>
+<li><strong>Not held:</strong> Arara says it does not hold payment-card numbers.</li>
+<li><strong>What to do:</strong> be extra suspicious of emails claiming to be from your credit-card company — check through the bank's official app, never through an email link.</li></ul>
+<p class="small">Source: <a href="https://undercodenews.com/japans-arara-data-breach-expands-to-77-million-email-addresses-across-380-client-companies-video/" target="_blank" rel="noopener">Undercode News, 2 November 2026</a></p></div>
+
+<div class="breach-item"><h3>DreamHost — File Manager hack exposed FTP and webmail logins</h3>
+<p class="breach-meta">Disclosed 29 October 2026, reported 4 November 2026 · Source: TechCrunch / DreamHost</p>
+<p>Web host DreamHost said an unauthorized party exploited a vulnerability in third-party software behind its web File Manager (files.dreamhost.com). The company found the problem on the afternoon of Friday 23 October, took the File Manager servers offline and fixed the vulnerability. The attack reportedly began in August 2026.</p>
+<ul><li><strong>Data exposed:</strong> FTP and SFTP usernames and passwords for users who logged in to File Manager before 23 October, and login credentials for a limited number of webmail users. DreamHost says "well under approximately 10%" of its about 400,000 paying customers were affected.</li>
+<li><strong>Not accessed (so far):</strong> DreamHost says it has no evidence that control panel logins or billing details were accessed.</li>
+<li><strong>What to do:</strong> if you use DreamHost, change your FTP/SFTP and webmail passwords and turn on two-factor authentication.</li></ul>
+<p class="small">Source: <a href="https://rrtechpulse.com/stories/dreamhost-file-manager-breach/" target="_blank" rel="noopener">RR TechPulse (reporting TechCrunch), 5 November 2026</a></p></div>
+
+<div class="breach-item"><h3>NSW Health Oral Health Fee For Service Scheme (Australia) — provider data stolen</h3>
+<p class="breach-meta">Declared 4 November 2026 · Source: NSW Police</p>
+<p>NSW Police declared a "major" data breach after an attack on the NSW Health Oral Health Fee For Service Scheme website. Police estimate about <strong>4 GB of data</strong> was stolen. A hacker claims the haul is closer to 70 GB and roughly 100,000 documents — <strong>that claim is unverified and was rejected by NSW Police</strong>.</p>
+<ul><li><strong>Data involved:</strong> officials say no patient data was involved. What may have leaked is a small number of third-party provider details, mostly tied to private dentists, including significant personal-identification information.</li>
+<li><strong>What to do:</strong> affected providers should watch for identity-theft attempts and report suspicious contact to police.</li></ul>
+<p class="small">Source: <a href="https://tech-insider.org/au/nsw-health-dental-provider-data-breach-4gb-2026/" target="_blank" rel="noopener">Tech Insider, 4 November 2026</a></p></div>
+
+<div class="breach-item"><h3>Star Media Group (Malaysia) — StarSearch and ESG Awards databases breached</h3>
+<p class="breach-meta">Affected people notified 4 November 2026 · Source: Star Media Group</p>
+<p>Star Media Group confirmed a breach of its StarSearch (classifieds) and ESG Awards databases — the only databases affected. The company confirmed the exfiltration of personal data on 27 October 2026 and notified the Personal Data Protection Commissioner on 30 October, and filed a police report.</p>
+<ul><li><strong>Data exfiltrated:</strong> first name, last name, address, state, country, phone, email, and NRIC (national identity card number).</li>
+<li><strong>What to do:</strong> affected people should watch for identity theft and phishing using their real details, and never share one-time codes with callers claiming to be from the company.</li></ul>
+<p class="small">Source: <a href="https://www.starmediagroup.my/helpcenter/" target="_blank" rel="noopener">Star Media Group Help Center, 5 November 2026</a></p></div>
+
+<div class="breach-item"><h3>Chainstack — production systems breached, customer data and password hashes exposed</h3>
+<p class="breach-meta">Disclosed 3 November 2026 · Source: The Hacker News / Chainstack</p>
+<p>Blockchain infrastructure provider Chainstack disclosed a cyber attack in which an unauthorized party gained access to a development environment on 26 October 2026 and then escalated into parts of its production environment. The intrusion was detected on 31 October and the attacker's access was cut off the same day.</p>
+<ul><li><strong>Data accessed:</strong> a database containing customer account information — organization names, account holder names, email addresses of organization members, and password hashes. The attacker also had access to systems holding node credentials.</li>
+<li><strong>Context:</strong> the incident is assessed to be part of a large-scale, AI-powered attack campaign (ARTEX) that also targeted other firms, including API platform WorkOS (limited to its sales/marketing systems — no production or customer platform data) and the Dutch Institute for Vulnerability Disclosure.</li>
+<li><strong>What to do:</strong> Chainstack customers should change passwords, rotate credentials and API keys, and turn on two-factor authentication.</li></ul>
+<p class="small">Source: <a href="https://thehackernews.com/2026/11/chainstack-reports-production-systems.html" target="_blank" rel="noopener">The Hacker News, 3 November 2026</a></p></div>
+
+<div class="breach-item"><h3>CSX (US transportation) — employee information exposed, including Social Security numbers</h3>
+<p class="breach-meta">Reported 3 November 2026 · Source: DataBreaches.net</p>
+<p>CSX, one of the largest transportation companies in the United States, suffered a data breach that exposed employee information including Social Security numbers. The company has not disclosed how many employees were affected or the full scope of the stolen data.</p>
+<ul><li><strong>What to do:</strong> affected employees should place fraud alerts with credit bureaus, watch for identity theft, and be alert to phishing that uses their real employment details.</li></ul>
+<p class="small">Source: <a href="https://www.acidpeak.com/threats/csx-data-breach-exposes-employee-information-2026-11-03/" target="_blank" rel="noopener">Acid Peak (reporting DataBreaches.net), 3 November 2026</a></p></div>
+
+<h2>How we choose what to list</h2>
+<p>We list only incidents reported by the company involved or by a reputable news outlet, with a named source and a date. Rumours, unverified hacker claims and incidents we cannot confirm are not listed — or are clearly labelled as unconfirmed claims. If a detail on this page is corrected by the source later, we update it.</p>
+<p><a href="index.html" style="color:#00e676">Back to the homepage →</a> &nbsp;·&nbsp; <a href="basics/password-security-guide.html" style="color:#00e676">Password Security Guide →</a> &nbsp;·&nbsp; <a href="basics/phishing-protection.html" style="color:#00e676">Phishing Protection Guide →</a></p>
+</main>
+<footer class="footer"><div class="container">
+<div class="footer-brand"> CyberSec <span class="green">Hub</span></div>
+<p>Learn cybersecurity the ethical, legal way.</p>
+<div class="footer-links">
+<a href="index.html">Home</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy Policy</a><a href="disclaimer.html">Disclaimer</a><a href="terms.html">Terms</a>
+</div>
+<p class="foot-email"> <a href="mailto:contact@anwaardigital.com">contact@anwaardigital.com</a></p>
+<p class="copyright">Developed by <strong style="color:#00e676">Malik Anwaar</strong></p>
+<p class="copyright">© 2026 CyberSec Hub by Anwaar Digital. All rights reserved. Educational content only — always test with written permission.</p>
+</div></footer><a href="https://wa.me/923288317526" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.6 6.1 1.6h.1c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.6 1.2 1.2-4.5-.3-.4c-1-1.6-1.6-3.5-1.6-5.5C5 9.6 10.6 5 16 5s11 4.6 11 10-5.4 9.8-11 9.8zm6.1-7.3c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.8.1-.3-.2-1.4-.5-2.7-1.6-.9-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6L13 9.5c-.3-.8-.7-.7-1-.7h-.8c-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.5s1.5 4 1.7 4.3c.2.3 2.9 4.4 7 6.2 1 .4 1.7.7 2.3.9.9.3 1.8.2 2.5.2.8-.1 2.3-1 2.7-1.9.3-.9.3-1.7.2-1.9-.1-.1-.3-.2-.7-.4z"/></svg></a>
+<!-- Back to top button -->
+<button id="backToTop" aria-label="Back to top" title="Back to top"
+style="position:fixed;bottom:24px;right:24px;width:48px;height:48px;border-radius:50%;border:none;background:#00e676;color:#050b14;font-size:22px;line-height:1;cursor:pointer;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s,transform .2s;box-shadow:0 4px 12px rgba(0,0,0,.35);z-index:9999;padding:0;">&#8593;</button>
+<script>
+(function(){var b=document.getElementById('backToTop');if(!b)return;
+window.addEventListener('scroll',function(){var s=window.pageYOffset||document.documentElement.scrollTop;
+if(s>300){b.style.opacity='1';b.style.visibility='visible';}else{b.style.opacity='0';b.style.visibility='hidden';}},{passive:true});
+b.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+b.addEventListener('mouseenter',function(){b.style.transform='scale(1.12)';});
+b.addEventListener('mouseleave',function(){b.style.transform='scale(1)';});})();
+</script>
+
+<a id="anwaar-ai-btn" href="https://anwaardigital.com/ai/?site=hub" target="_blank" rel="noopener" aria-label="Anwaar AI" style="position:fixed;right:16px;bottom:16px;z-index:9999;display:flex;align-items:center;background:#1a2b4a;color:#fff;text-decoration:none;font-family:system-ui,-apple-system,sans-serif;font-size:15px;font-weight:600;padding:12px 16px;border-radius:999px;box-shadow:0 4px 16px rgba(0,0,0,.35)">✦ Anwaar AI</a>
+</body></html>
