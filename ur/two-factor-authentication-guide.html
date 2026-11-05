@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<link rel="icon" type="image/png" sizes="192x192" href="https://anwaardigital.com/Cybersecurity/cyber-icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="https://anwaardigital.com/Cybersecurity/cyber-icon-512.png">
+<link rel="apple-touch-icon" href="https://anwaardigital.com/Cybersecurity/cyber-icon-192.png">
+<!-- Cookie consent (GDPR): Google Analytics loads only after you press Accept -->
+<script src="../cookie-consent.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>ٹو فیکٹر تصدیق (2FA): مکمل گائیڈ</title>
+<meta name="description" content="مضبوط ترین پاس ورڈ بھی چوری ہو سکتا ہے — فشنگ، ڈیٹا بریچ یا میلویئر کے ذریعے۔ ٹو فیکٹر تصدیق ہی چوری شدہ پاس ورڈ کو چوری شدہ اکاؤنٹ بننے سے روکتی ہے۔ یہ گائیڈ بتاتی ہے کہ یہ کیسے کام کرتی ہے اور اسے صحیح طریقے سے کیسے سیٹ کریں۔">
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="ur.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+<link rel="canonical" href="https://anwaardigital.com/Cybersecurity/ur/two-factor-authentication-guide.html">
+<meta property="og:title" content="ٹو فیکٹر تصدیق (2FA): مکمل گائیڈ">
+<meta property="og:description" content="مضبوط ترین پاس ورڈ بھی چوری ہو سکتا ہے — فشنگ، ڈیٹا بریچ یا میلویئر کے ذریعے۔ ٹو فیکٹر تصدیق ہی چوری شدہ پاس ورڈ کو چوری شدہ اکاؤنٹ بننے سے روکتی ہے۔ یہ گائیڈ بتاتی ہے کہ یہ کیسے کام کرتی ہے اور اسے صحیح طریقے سے کیسے سیٹ کریں۔">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://anwaardigital.com/Cybersecurity/ur/two-factor-authentication-guide.html">
+<meta property="og:site_name" content="CyberSec Hub">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://anwaardigital.com/Cybersecurity/cyber-icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "ٹو فیکٹر تصدیق (2FA): مکمل گائیڈ",
+  "description": "مضبوط ترین پاس ورڈ بھی چوری ہو سکتا ہے — فشنگ، ڈیٹا بریچ یا میلویئر کے ذریعے۔ ٹو فیکٹر تصدیق ہی چوری شدہ پاس ورڈ کو چوری شدہ اکاؤنٹ بننے سے روکتی ہے۔ یہ گائیڈ بتاتی ہے کہ یہ کیسے کام کرتی ہے اور اسے صحیح طریقے سے کیسے سیٹ کریں۔",
+  "author": {
+    "@type": "Person",
+    "name": "Malik Muhammad Anwaar"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "CyberSec Hub",
+    "url": "https://anwaardigital.com/Cybersecurity/"
+  },
+  "datePublished": "2026-11-05",
+  "dateModified": "2026-11-05",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://anwaardigital.com/Cybersecurity/ur/two-factor-authentication-guide.html"
+  }
+}
+</script>
+</head>
+<body>
+<nav class="navbar"><div class="nav-inner">
+<a href="../index.html" class="brand"><span class="brand-icon"></span><span>CyberSec <span class="green">Hub</span></span></a>
+<div class="nav-actions"><button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark and light theme"><span class="theme-icon"></span><span class="theme-label">Light</span></button><button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button></div>
+<ul class="nav-links" id="navLinks">
+<li><a href="index.html">ہوم</a></li>
+<li><a href="../index.html#basics">بنیادی باتیں</a></li>
+<li><a href="../index.html#hacking">اخلاقی ہیکنگ</a></li>
+<li><a href="../index.html#tools">ٹولز گائیڈ</a></li>
+<li><a href="../index.html#career">کیریئر</a></li>
+<li><a href="../missions/index.html">مشنز</a></li>
+<li><a href="../learning-path.html">سیکھنے کے راستے</a></li>
+<li><a href="../sectools/index.html">ٹولز</a></li>
+<li><a href="../glossary.html">لغت</a></li>
+<li><a href="../faq.html">سوالات</a></li>
+<li><a href="../about.html">ہمارے بارے میں</a></li>
+<li><a href="../index.html">English</a></li>
+</ul></div></nav>
+<script>
+(function(){try{if(localStorage.getItem('hubTheme')==='light'){document.body.classList.add('light');}}catch(e){}})();
+function toggleTheme(){var b=document.body;var light=b.classList.toggle('light');try{localStorage.setItem('hubTheme',light?'light':'dark');}catch(e){}var btn=document.querySelector('.theme-toggle');if(btn){var ic=btn.querySelector('.theme-icon');var lb=btn.querySelector('.theme-label');if(ic)ic.textContent=light?'':'';if(lb)lb.textContent=light?'Dark':'Light';}}
+(function(){var btn=document.querySelector('.theme-toggle');if(!btn)return;var light=document.body.classList.contains('light');var ic=btn.querySelector('.theme-icon');var lb=btn.querySelector('.theme-label');if(ic)ic.textContent=light?'':'';if(lb)lb.textContent=light?'Dark':'Light';})();
+</script><div class="breadcrumb"><a href="index.html">ہوم</a> / سائبر سیکیورٹی کی بنیادی باتیں / ٹو فیکٹر تصدیق</div>
+<header class="article-hero"><span class="section-tag"> سائبر سیکیورٹی کی بنیادی باتیں</span><h1>ٹو فیکٹر تصدیق (2FA): مکمل گائیڈ</h1>
+<p class="small">آخری اپ ڈیٹ: 5 نومبر 2026</p><div class="article-meta">CyberSec Hub کی طرف سے · 9 منٹ مطالعہ</div></header>
+<main class="article-body">
+<p>مضبوط ترین پاس ورڈ بھی چوری ہو سکتا ہے — فشنگ، ڈیٹا بریچ یا میلویئر کے ذریعے۔ ٹو فیکٹر تصدیق (2FA) ہی چوری شدہ پاس ورڈ کو چوری شدہ اکاؤنٹ بننے سے روکتی ہے۔ سیکیورٹی ماہرین اسے سب سے اہم سیکیورٹی بہتری کہتے ہیں جو آپ کر سکتے ہیں۔ یہ گائیڈ بالکل بتاتی ہے کہ یہ کیسے کام کرتی ہے اور اسے صحیح طریقے سے کیسے سیٹ کریں۔</p>
+
+<h2>ٹو فیکٹر تصدیق کیا ہے؟</h2>
+<p>ٹو فیکٹر تصدیق لاگ ان کے لیے دو مختلف ثبوت مانگتی ہے: کوئی چیز جو آپ جانتے ہیں (آپ کا پاس ورڈ) کے ساتھ کوئی چیز جو آپ کے پاس ہے (آپ کا فون) یا کوئی چیز جو آپ ہیں (آپ کی انگلی کا نشان)۔ صرف پاس ورڈ اب کافی نہیں۔</p>
+<p>اسے بینک کے والٹ کی طرح سمجھیں جس کے لیے چابی اور کمبی نیشن دونوں چاہئیں۔ چابی (آپ کا پاس ورڈ) چوری کرنا حملہ آور کو کہیں نہیں پہنچاتا بغیر کمبی نیشن (آپ کے دوسرے عنصر) کے۔</p>
+
+<h2>صرف پاس ورڈ کافی کیوں نہیں</h2>
+<p>پاس ورڈز مسلسل لیک ہوتے ہیں۔ بریچ ڈیٹا بیسز میں اربوں یوزر نیم پاس ورڈ جوڑے گردش کرتے ہیں جو حملہ آور سستے خریدتے ہیں۔ اگر آپ پاس ورڈ دوبارہ استعمال کرتے ہیں — یا آپ کی بھروسہ مند کمپنی ہیک ہو جائے — تو حملہ آور بغیر کسی محنت کے آپ بن کر لاگ ان کر سکتے ہیں۔ 2FA اس سلسلے کو توڑ دیتی ہے: آپ کا بالکل درست پاس ورڈ ہونے کے باوجود وہ آپ کی ڈیوائس کے بغیر دوسری جانچ پاس نہیں کر سکتے۔</p>
+<p><strong>اہم نکتہ:</strong> 2FA آپ کا پاس ورڈ مضبوط نہیں بناتی — یہ آپ کے پاس ورڈ کو کم اہم بنا دیتی ہے۔ اسی لیے یہ آپ کی حفاظت کرتی ہے یہاں تک کہ جب کوئی بریچ آپ کی لاگ ان تفصیل ظاہر کر دے۔</p>
+
+<h2>دوسرے عنصر کی اقسام (بہترین سے کمزور تک)</h2>
+<p>2FA کے تمام طریقے برابر نہیں ہیں۔ مضبوط ترین سے کمزور ترین تک:</p>
+
+<h2>1۔ تصدیقی ایپس (زیادہ تر لوگوں کے لیے تجویز کردہ)</h2>
+<p>Google Authenticator، Microsoft Authenticator یا Authy جیسی ایپس ہر 30 سیکنڈ میں ایک تازہ چھ ہندسوں والا کوڈ بناتی ہیں۔ آپ سیٹ اپ کے دوران ایک بار کیو آر کوڈ اسکین کرتے ہیں، اور ایپ ہمیشہ کوڈ بناتی رہتی ہے — انٹرنیٹ کی ضرورت نہیں۔ کوڈز مشترکہ راز اور موجودہ وقت پر مبنی ہوتے ہیں، اس لیے دنیا بھر کا کوئی حملہ آور انہیں اندازہ نہیں لگا سکتا۔</p>
+<ul>
+<li><strong>فائدے:</strong> مفت، آف لائن کام کرتی ہے، اضافی ہارڈویئر نہیں، عملی طور پر فشنگ سے محفوظ۔</li>
+<li><strong>نقصانات:</strong> اگر آپ کے فون میں میلویئر ہو تو کوڈز چوری ہو سکتے ہیں؛ بیک اپ کے بغیر فون کھو دینے کا مطلب لاک آؤٹ ہے۔</li>
+</ul>
+
+<h2>2۔ ہارڈویئر سیکیورٹی کیز (سنہری معیار)</h2>
+<p>YubiKey جیسی فزیکل کیز آپ کے یو ایس بی پورٹ میں لگتی ہیں (یا این ایف سی سے ٹیپ ہوتی ہیں)۔ وہ آپ کی شناخت ثابت کرنے کے لیے کرپٹوگرافی استعمال کرتی ہیں — کی سائٹ کی طرف سے بھیجے گئے چیلنج پر دستخط کرتی ہے، اور نجی کی کبھی ڈیوائس سے باہر نہیں جاتی۔ کوڈز کے برعکس انہیں فش نہیں کیا جا سکتا: کی صرف اصلی ویب سائٹ کو جواب دیتی ہے۔</p>
+<ul>
+<li><strong>فائدے:</strong> دستیاب مضبوط ترین حفاظت، فشنگ اور سم سویپ حملوں سے محفوظ۔</li>
+<li><strong>نقصانات:</strong> پیسے لگتے ہیں (دو خریدیں — ایک بنیادی، ایک بیک اپ محفوظ جگہ پر)۔</li>
+</ul>
+<p>اگر آپ پیسے سنبھالتے ہیں، کاروبار چلاتے ہیں، یا عوامی شخصیت ہیں تو ہارڈویئر کیز ہر پیسے کے قابل ہیں۔</p>
+
+<h2>3۔ ایس ایم ایس کوڈز (کچھ نہ ہونے سے بہتر)</h2>
+<p>سائٹ آپ کو کوڈ ٹیکسٹ کرتی ہے۔ یہ آسان ہے — ہر کسی کے پاس فون ہے — لیکن یہ کمزور ترین آپشن ہے۔ حملہ آور سم سویپ حملوں (آپ کے کیریئر کو قائل کر کے آپ کا نمبر اپنی سم پر منتقل کروانا) یا موبائل نیٹ ورک کی کمزوریوں کا فائدہ اٹھا کر ایس ایم ایس روک سکتے ہیں۔</p>
+<p><strong>اصول:</strong> ایس ایم ایس صرف تب استعمال کریں جب کوئی مضبوط آپشن موجود نہ ہو۔ تصدیقی ایپس ہمیشہ بہتر ہیں۔</p>
+
+<h2>4۔ ای میل کوڈز</h2>
+<p>کچھ سائٹس آپ کی ای میل پر کوڈ بھیجتی ہیں۔ یہ صرف اتنا ہی محفوظ ہے جتنا آپ کا ای میل اکاؤنٹ — اور یہی وجہ ہے کہ آپ کی ای میل پر خود مضبوط 2FA ہونا چاہیے (ترجیحاً ہارڈویئر کی)۔ کمزور ان باکس پر ای میل 2FA ایک دائرہ وار کمزوری ہے۔</p>
+
+<h2>کون سے اکاؤنٹس پہلے محفوظ کریں</h2>
+<p>آج ہی ہر چیز پر 2FA سیٹ کرنے کی ضرورت نہیں۔ اس ترتیب میں ترجیح دیں:</p>
+<ul>
+<li><strong>آپ کی ای میل</strong> — یہ ہر جگہ پاس ورڈ ری سیٹ کر سکتی ہے۔ اس کی حفاظت ماسٹر چابی کی طرح کریں۔</li>
+<li><strong>بینکنگ اور ادائیگی کی ایپس</strong> — آپ کے پیسے تک براہ راست رسائی۔</li>
+<li><strong>کلاؤڈ اسٹوریج</strong> — آپ کی تصاویر، دستاویزات اور بیک اپ یہیں ہیں۔</li>
+<li><strong>سوشل میڈیا</strong> — یہاں اکاؤنٹ چوری آپ کے دوستوں اور خاندان کے خلاف فراڈ کا راستہ کھولتی ہے۔</li>
+<li><strong>کام کے اکاؤنٹس</strong> — آپ کے آجر کی سیکیورٹی بھی آپ پر منحصر ہے۔</li>
+</ul>
+
+<h2>2FA سیٹ کرنا: قدم بہ قدم</h2>
+<ul>
+<li>تصدیقی ایپ انسٹال کریں (Authy یا Microsoft Authenticator نئے لوگوں کے لیے آسان ہیں؛ Authy ڈیوائسز کے درمیان سنک ہوتی ہے، جو بیک اپ میں مدد کرتی ہے)۔</li>
+<li>اپنے اکاؤنٹ کی سیکیورٹی سیٹنگز کھولیں اور "Two-factor authentication" یا "2-Step Verification" ڈھونڈیں۔</li>
+<li>"Authenticator app" چنیں۔ سائٹ کیو آر کوڈ دکھاتی ہے۔</li>
+<li>اپنی تصدیقی ایپ سے کیو آر کوڈ اسکین کریں۔ یہ کوڈ بنانا شروع کر دیتی ہے۔</li>
+<li>سیٹ اپ کی تصدیق کے لیے موجودہ کوڈ درج کریں۔</li>
+<li>سائٹ جو بیک اپ کوڈز دے انہیں محفوظ کریں — پرنٹ کریں اور محفوظ جگہ رکھیں (نیچے دیکھیں)۔</li>
+</ul>
+
+<h2>بیک اپ کوڈز: آپ کی حفاظتی جال</h2>
+<p>جب آپ 2FA آن کرتے ہیں تو زیادہ تر سائٹس 8 سے 10 ایک بار استعمال ہونے والے بیک اپ کوڈز دیتی ہیں۔ ہر ایک ایک بار دوسرے عنصر کی جگہ کام کرتا ہے۔ اگر آپ کا فون کھو جائے تو انہی کوڈز سے آپ واپس اندر جاتے ہیں۔</p>
+<ul>
+<li>انہیں پرنٹ کریں اور جسمانی طور پر محفوظ جگہ رکھیں — بند دراز، تجوری۔</li>
+<li>انہیں اپنے پاس ورڈز والی جگہ پر نہ رکھیں (اس سے مقصد ختم ہو جاتا ہے)۔</li>
+<li>بیک اپ کوڈز کسی کے ساتھ بھی، کسی بھی وجہ سے شیئر نہ کریں۔</li>
+</ul>
+<p><strong>سب سے عام 2FA تباہی:</strong> بغیر بیک اپ کوڈز محفوظ کیے فون کھو دینا۔ لوگ سالوں کی ای میل اور تصاویر سے ہمیشہ کے لیے بند ہو جاتے ہیں۔ بیک اپ کوڈز ضرورت پڑنے سے پہلے محفوظ کریں۔</p>
+
+<h2>"اس ڈیوائس کو یاد رکھیں" کا کیا مطلب ہے؟</h2>
+<p>زیادہ تر سائٹس "اس ڈیوائس پر بھروسہ کریں" پیش کرتی ہیں تاکہ آپ اپنے کمپیوٹر پر 2FA چھوڑ سکیں۔ یہ صرف آپ کی استعمال کردہ ڈیوائسز پر ٹھیک ہے — یہ تھوڑی سی سیکیورٹی کے بدلے بہت سہولت دیتی ہے۔ عوامی یا شیئر شدہ کمپیوٹرز پر کبھی بھروسہ نہ کریں، اور اپنے اکاؤنٹ کی سیکیورٹی سیٹنگز میں بھروسہ مند ڈیوائسز کی فہرست وقتاً فوقتاً چیک کریں۔</p>
+
+<h2>2FA بمقابلہ MFA بمقابلہ پاس کیز</h2>
+<p>آپ یہ اصطلاحات ایک دوسرے کی جگہ استعمال ہوتے دیکھیں گے، لیکن ان میں تھوڑا فرق ہے:</p>
+<ul>
+<li><strong>2FA</strong> = بالکل دو عوامل (پاس ورڈ + کوڈ)۔</li>
+<li><strong>MFA</strong> (ملٹی فیکٹر تصدیق) = دو یا زیادہ عوامل؛ وسیع اصطلاح۔</li>
+<li><strong>پاس کیز</strong> = اگلی نسل۔ پاس ورڈ اور کوڈ کی بجائے آپ کی ڈیوائس ایک کرپٹوگرافک کی جوڑا بناتی ہے جو آپ کی انگلی کے نشان یا چہرے سے کھلتا ہے۔ فشنگ کے لیے کوئی پاس ورڈ نہیں، روکنے کے لیے کوئی کوڈ نہیں۔ جب کوئی سائٹ پاس کیز پیش کرے تو انہیں استعمال کریں — وہ 2FA سے آسان اور مضبوط ہیں۔</li>
+</ul>
+
+<h2>عام غلطیاں جن سے بچیں</h2>
+<ul>
+<li>ایپ دستیاب ہونے پر ایس ایم ایس استعمال کرنا — سم سویپ حملے حقیقی اور عام ہیں۔</li>
+<li>بیک اپ کوڈز چھوڑ دینا — "بعد میں محفوظ کر لوں گا" لاک آؤٹ پر ختم ہوتا ہے۔</li>
+<li>ای میل کے سوا ہر جگہ 2FA — آپ کی ای میل تمام پاس ورڈ ری سیٹس کی ماسٹر چابی ہے۔</li>
+<li>شیئر شدہ کمپیوٹرز پر بھروسہ کرنا — ہوٹل اور لائبریری کے کمپیوٹر کبھی "بھروسہ مند ڈیوائس" نہیں ہونے چاہئیں۔</li>
+<li>یہ ماننا کہ 2FA آپ کو ناقابل شکست بنا دیتا ہے — یہ چوری شدہ پاس ورڈ کے حملے روکتا ہے، ہر حملہ نہیں۔ فشنگ پھر بھی آپ کو جعلی لاگ ان منظور کرنے پر دھوکہ دے سکتی ہے ("MFA تھکاوٹ" حملے منظوری کی درخواستیں بھیجتے رہتے ہیں یہاں تک کہ آپ ہاں دبا دیں)۔ ہوشیار رہیں۔</li>
+</ul>
+
+<h2>آپ کا عملی منصوبہ</h2>
+<ul>
+<li>آج ہی تصدیقی ایپ انسٹال کریں۔</li>
+<li>پہلے اپنی ای میل پر 2FA آن کریں، بیک اپ کوڈز محفوظ کریں۔</li>
+<li>پھر بینکنگ، کلاؤڈ اسٹوریج اور سوشل میڈیا — ضرورت ہو تو روز ایک۔</li>
+<li>ایک مہینے میں جائزہ لیں: ہر اکاؤنٹ کا سیکیورٹی صفحہ چیک کریں اور تصدیق کریں کہ 2FA آن ہے۔</li>
+</ul>
+<p>اسے ہماری پاس ورڈ سیکیورٹی گائیڈ کے مضبوط، منفرد پاس ورڈز کے ساتھ جوڑیں، اور ان حملوں کو پہچاننا سیکھیں جن سے 2FA بچاتی ہے — ہماری فشنگ سے حفاظت والی گائیڈ میں۔</p>
+<div class="related-box"><h3>متعلقہ گائیڈز</h3><ul><li><a href="password-security-guide.html">پاس ورڈ سیکیورٹی: مکمل گائیڈ (2026)</a></li><li><a href="phishing-protection.html">فشنگ سے حفاظت: جعلی ای میل، ایس ایم ایس اور کالز کی پہچان</a></li><li><a href="secure-google-account-guide.html">گوگل اکاؤنٹ محفوظ کریں: مکمل گائیڈ</a></li><li><a href="two-factor-authentication-youtubers-guide.html">یوٹیوبرز کے لیے ٹو فیکٹر تصدیق</a></li></ul></div>
+
+<div class="progress-box tip-box" data-guide="basics/two-factor-authentication-guide.html" data-title="ٹو فیکٹر تصدیق (2FA): مکمل گائیڈ"><strong>اپنی پیش رفت محفوظ کریں:</strong> گائیڈ مکمل کر لی؟ <button class="btn btn-green hub-complete-btn" type="button">مکمل نشان زد کریں</button><span class="hub-complete-done" style="display:none">مکمل ہو گیا — صرف آپ کے براؤزر میں محفوظ ہے۔ اپنی <a href="../leaderboard.html">پیش رفت اور لیڈر بورڈ</a> دیکھیں۔</span></div>
+
+</main>
+
+<footer class="footer"><div class="container">
+<div class="footer-brand"> سائبر سیک <span class="green">ہب</span></div>
+<p>سائبر سیکیورٹی سیکھیں — اخلاقی اور قانونی طریقے سے۔</p>
+<div class="footer-links">
+<a href="index.html">ہوم</a><a href="../about.html">ہمارے بارے میں</a><a href="../contact.html">رابطہ</a><a href="../privacy.html">پرائیویسی پالیسی</a><a href="../disclaimer.html">ڈسکلیمر</a><a href="../terms.html">شرائط</a><a href="../leaderboard.html">لیڈر بورڈ</a><a href="../certificate.html">سرٹیفکیٹ</a><a href="../breach-news.html">بریچ نیوز</a>
+</div>
+<p class="foot-email"> <a href="mailto:contact@anwaardigital.com">contact@anwaardigital.com</a></p>
+<p class="copyright">تیار کردہ <strong style="color:#00e676">ملک محمد انوار</strong></p>
+<p class="copyright">© 2026 CyberSec Hub by Anwaar Digital. جملہ حقوق محفوظ ہیں۔ صرف تعلیمی مواد — ہمیشہ تحریری اجازت سے ٹیسٹ کریں۔</p>
+</div></footer><a href="https://wa.me/923288317526" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.6 6.1 1.6h.1c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.6 1.2 1.2-4.5-.3-.4c-1-1.6-1.6-3.5-1.6-5.5C5 9.6 10.6 5 16 5s11 4.6 11 10-5.4 9.8-11 9.8zm6.1-7.3c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.8.1-.3-.2-1.4-.5-2.7-1.6-.9-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6L13 9.5c-.3-.8-.7-.7-1-.7h-.8c-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.5s1.5 4 1.7 4.3c.2.3 2.9 4.4 7 6.2 1 .4 1.7.7 2.3.9.9.3 1.8.2 2.5.2.8-.1 2.3-1 2.7-1.9.3-.9.3-1.7.2-1.9-.1-.1-.3-.2-.7-.4z"/></svg></a>
+<!-- Back to top button -->
+<button id="backToTop" aria-label="Back to top" title="Back to top"
+style="position:fixed;bottom:24px;right:24px;width:48px;height:48px;border-radius:50%;border:none;background:#00e676;color:#050b14;font-size:22px;line-height:1;cursor:pointer;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s,transform .2s;box-shadow:0 4px 12px rgba(0,0,0,.35);z-index:9999;padding:0;">&#8593;</button>
+<script>
+(function(){var b=document.getElementById('backToTop');if(!b)return;
+window.addEventListener('scroll',function(){var s=window.pageYOffset||document.documentElement.scrollTop;
+if(s>300){b.style.opacity='1';b.style.visibility='visible';}else{b.style.opacity='0';b.style.visibility='hidden';}},{passive:true});
+b.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+b.addEventListener('mouseenter',function(){b.style.transform='scale(1.12)';});
+b.addEventListener('mouseleave',function(){b.style.transform='scale(1)';});})();
+</script>
+
+<a id="anwaar-ai-btn" href="https://anwaardigital.com/ai/?site=hub" target="_blank" rel="noopener" aria-label="Anwaar AI" style="position:fixed;right:16px;bottom:16px;z-index:9999;display:flex;align-items:center;background:#1a2b4a;color:#fff;text-decoration:none;font-family:system-ui,-apple-system,sans-serif;font-size:15px;font-weight:600;padding:12px 16px;border-radius:999px;box-shadow:0 4px 16px rgba(0,0,0,.35)">✦ Anwaar AI</a>
+<script src="../progress.js"></script>
+<script src="../progress.js"></script>
+</body></html>

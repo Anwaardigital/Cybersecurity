@@ -1,0 +1,14 @@
+/* CyberSec Hub — Urdu pages (RTL, Nastaliq font) */
+body{direction:rtl;text-align:right;font-family:'Noto Nastaliq Urdu','Noto Naskh Arabic',Tahoma,serif}
+.article-body p,.article-body li,.page-wrap p,.page-wrap li,.tip-box p,.ethical-box p,.breach-item p{line-height:2.2}
+.article-body ul,.article-body ol,.page-wrap ul,.page-wrap ol{padding-right:24px;padding-left:0}
+.article-body h2,.page-wrap h2{line-height:2}
+.article-hero h1,.page-wrap h1{line-height:1.9}
+.article-hero .article-meta,.article-hero .small{line-height:2}
+.nav-links{direction:rtl}
+.breadcrumb{direction:rtl;text-align:right}
+.cat-card p,.art-card p{line-height:2}
+.tool-field input[type=text],.tool-field input[type=email],.tool-field select{text-align:right}
+.hub-progress-line,.hub-progress-note{line-height:2}
+.lb-table th,.lb-table td{text-align:right}
+.cert-frame .cert-name{line-height:1.8}

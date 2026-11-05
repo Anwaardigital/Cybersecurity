@@ -94,6 +94,7 @@ function renderWidget(){
   var d=load();
   var g=guideCount(d), m=missionCount(d), p=points(d);
   var pct=TOTAL_GUIDES?Math.round(g/TOTAL_GUIDES*100):0;
+  var base=w.getAttribute('data-base')||'';
   var L={
     title:w.getAttribute('data-label-title')||'Your Learning Progress',
     guides:w.getAttribute('data-label-guides')||'guides completed',
@@ -110,7 +111,7 @@ function renderWidget(){
     '<p class="hub-progress-line"><strong>'+g+' / '+TOTAL_GUIDES+'</strong> '+L.guides+' &nbsp;·&nbsp; <strong>'+m+' / '+TOTAL_MISSIONS+'</strong> '+L.missions+' &nbsp;·&nbsp; <strong>'+p+'</strong> '+L.points+' &nbsp;·&nbsp; '+L.rank+': <strong>'+rank(p)+'</strong></p>'+
     '<div class="pbar" role="progressbar" aria-valuenow="'+pct+'" aria-valuemin="0" aria-valuemax="100"><div class="pbar-fill" style="width:'+pct+'%"></div></div>'+
     (g===0&&m===0?'<p class="hub-progress-note">'+L.start+'</p>':'')+
-    '<p class="hub-progress-links"><a href="leaderboard.html">'+L.view+' →</a> &nbsp;·&nbsp; <a href="certificate.html">'+L.cert+' →</a> &nbsp;·&nbsp; <a href="learning-path.html">'+L.paths+' →</a></p>';
+    '<p class="hub-progress-links"><a href="'+base+'leaderboard.html">'+L.view+' →</a> &nbsp;·&nbsp; <a href="'+base+'certificate.html">'+L.cert+' →</a> &nbsp;·&nbsp; <a href="'+base+'learning-path.html">'+L.paths+' →</a></p>';
 }
 
 function init(){
