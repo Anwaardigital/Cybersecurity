@@ -8,4 +8,4 @@ Live at https://anwaardigital.com/Cybersecurity/
 
 - Anwaar Digital — https://anwaardigital.com/
 - Anwaar Free Tools — https://anwaardigital.com/Freetools/
-- GlobalStream — http://globalstream.anwaardigital.com/
+- GlobalStream — https://globalstream.anwaardigital.com/
