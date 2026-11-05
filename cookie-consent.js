@@ -46,11 +46,11 @@
     document.body.appendChild(b);
     document.getElementById('adCookieAccept').onclick = function () {
       try { localStorage.setItem(KEY, 'accepted'); } catch (e) {}
-      hideBanner(); loadGA();
+      hideBanner(); loadGA(); placeFloats();
     };
     document.getElementById('adCookieDecline').onclick = function () {
       try { localStorage.setItem(KEY, 'declined'); } catch (e) {}
-      hideBanner();
+      hideBanner(); placeFloats();
     };
   }
 
@@ -67,6 +67,28 @@
   }
 
   init();
+
+  /* Floating-button stack (2026-11-05): AI, WhatsApp and back-to-top must never cover each other,
+     and must sit above the cookie banner while it is visible. Base = banner height + 16, else 16. */
+  function placeFloats() {
+    var b = document.getElementById('adCookieBanner');
+    var base = (b ? b.offsetHeight : 0) + 16;
+    var ai = document.getElementById('anwaar-ai-btn');
+    if (ai) { ai.style.bottom = base + 'px'; ai.style.right = '16px'; }
+    var wa = document.querySelector('.wa-float');
+    if (wa) { wa.style.bottom = (base + 60) + 'px'; wa.style.right = '16px'; }
+    var tp = document.getElementById('backToTop');
+    if (tp) { tp.style.bottom = (base + 132) + 'px'; tp.style.right = '16px'; }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', placeFloats);
+  } else {
+    placeFloats();
+  }
+  if (window.MutationObserver && document.body) {
+    new MutationObserver(placeFloats).observe(document.body, { childList: true });
+  }
+  window.addEventListener('resize', placeFloats);
 
   window.showCookieBanner = function () {
     try { localStorage.removeItem("ad_cookie_consent_v1"); } catch (e) {}
