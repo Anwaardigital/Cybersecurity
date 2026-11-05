@@ -33,9 +33,8 @@
       'background:#0d2818;color:#ffffff;padding:14px 18px;display:flex;flex-wrap:wrap;' +
       'gap:12px;align-items:center;justify-content:center;font-size:14px;line-height:1.5;' +
       'box-shadow:0 -2px 18px rgba(0,0,0,.35);font-family:inherit';
-    var cookieEmoji = String.fromCharCode(0xD83C, 0xDF6A);
     b.innerHTML =
-      '<span style="max-width:640px">' + cookieEmoji + ' We use cookies for analytics (Google Analytics) ' +
+      '<span style="max-width:640px">We use cookies for analytics (Google Analytics) ' +
       'to understand visits and improve our website. Accept to allow analytics cookies, or decline.</span>' +
       '<span style="display:flex;gap:10px;flex-wrap:wrap">' +
       '<button type="button" id="adCookieAccept" style="background:#d4af37;color:#0A3D2E;border:0;' +
