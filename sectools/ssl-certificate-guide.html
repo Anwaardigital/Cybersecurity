@@ -68,8 +68,8 @@ table.cmp th{background:rgba(0,230,118,.08);color:var(--green)}
 </head>
 <body>
 <nav class="navbar"><div class="nav-inner">
-<a href="../index.html" class="brand"><span class="brand-icon">🛡️</span><span>CyberSec <span class="green">Hub</span></span></a>
-<div class="nav-actions"><button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark and light theme"><span class="theme-icon">☀️</span><span class="theme-label">Light</span></button><button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button></div>
+<a href="../index.html" class="brand"><span class="brand-icon"></span><span>CyberSec <span class="green">Hub</span></span></a>
+<div class="nav-actions"><button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark and light theme"><span class="theme-icon"></span><span class="theme-label">Light</span></button><button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button></div>
 <ul class="nav-links" id="navLinks">
 <li><a href="../index.html">Home</a></li>
 <li><a href="../index.html#basics">Basics</a></li>
@@ -80,15 +80,15 @@ table.cmp th{background:rgba(0,230,118,.08);color:var(--green)}
 </ul></div></nav>
 <script>
 (function(){try{if(localStorage.getItem('hubTheme')==='light'){document.body.classList.add('light');}}catch(e){}})();
-function toggleTheme(){var b=document.body;var light=b.classList.toggle('light');try{localStorage.setItem('hubTheme',light?'light':'dark');}catch(e){}var btn=document.querySelector('.theme-toggle');if(btn){var ic=btn.querySelector('.theme-icon');var lb=btn.querySelector('.theme-label');if(ic)ic.textContent=light?'🌙':'☀️';if(lb)lb.textContent=light?'Dark':'Light';}}
-(function(){var btn=document.querySelector('.theme-toggle');if(!btn)return;var light=document.body.classList.contains('light');var ic=btn.querySelector('.theme-icon');var lb=btn.querySelector('.theme-label');if(ic)ic.textContent=light?'🌙':'☀️';if(lb)lb.textContent=light?'Dark':'Light';})();
+function toggleTheme(){var b=document.body;var light=b.classList.toggle('light');try{localStorage.setItem('hubTheme',light?'light':'dark');}catch(e){}var btn=document.querySelector('.theme-toggle');if(btn){var ic=btn.querySelector('.theme-icon');var lb=btn.querySelector('.theme-label');if(ic)ic.textContent=light?'':'';if(lb)lb.textContent=light?'Dark':'Light';}}
+(function(){var btn=document.querySelector('.theme-toggle');if(!btn)return;var light=document.body.classList.contains('light');var ic=btn.querySelector('.theme-icon');var lb=btn.querySelector('.theme-label');if(ic)ic.textContent=light?'':'';if(lb)lb.textContent=light?'Dark':'Light';})();
 </script>
 <main class="tool-wrap">
-<h1>🔒 <a href="../glossary.html#gl-ssl-tls">SSL</a> <a href="../glossary.html#gl-certificate-digital">Certificate</a> Guide</h1>
+<h1> <a href="../glossary.html#gl-ssl-tls">SSL</a> <a href="../glossary.html#gl-certificate-digital">Certificate</a> Guide</h1>
 <p class="tool-sub">What does the padlock really mean? Learn how <a href="../glossary.html#gl-https">HTTPS</a> and certificates work, how to inspect any site's certificate yourself, and test your knowledge with a short quiz.</p>
-<div class="ethical-box"><strong>⚠️ Ethical Use Only:</strong> These tools are for <strong>defensive</strong> purposes — securing your own accounts and systems. Never use security knowledge against systems you do not own or lack written permission to test.</div>
+<div class="ethical-box"><strong> Ethical Use Only:</strong> These tools are for <strong>defensive</strong> purposes — securing your own accounts and systems. Never use security knowledge against systems you do not own or lack written permission to test.</div>
 <div class="tool-card edu">
-<h3 style="margin-top:0">🔐 HTTPS in 30 seconds</h3>
+<h3 style="margin-top:0"> HTTPS in 30 seconds</h3>
 <p>When you see <b>https://</b> and a padlock, your browser has done three things:</p>
 <ol>
 <li><b>Encrypted</b> the connection — nobody on the network (café WiFi, your ISP) can read what you send.</li>
@@ -96,20 +96,20 @@ function toggleTheme(){var b=document.body;var light=b.classList.toggle('light')
 <li><b>Protected integrity</b> — the data cannot be secretly modified in transit.</li>
 </ol>
 <p><b>What the padlock does NOT mean:</b> that the site is honest. Scammers can get free certificates too. A padlock on <code>paypa1-login.tk</code> still means a scam — just an encrypted one. Always check <b>who</b> the site claims to be, not just the padlock.</p>
-<h3>🔍 How to inspect a certificate (try it on any site)</h3>
+<h3> How to inspect a certificate (try it on any site)</h3>
 <ul>
 <li><b>Chrome / Edge:</b> click the padlock (or "Not secure") left of the address bar → <i>Connection is secure</i> → <i>Certificate is valid</i>.</li>
 <li><b>Firefox:</b> click the padlock → <i>Connection secure</i> → <i>More information</i> → <i>View Certificate</i>.</li>
 <li><b>Safari:</b> click the padlock → <i>Show Certificate</i>.</li>
 </ul>
-<h3>📄 Certificate fields, explained</h3>
+<h3> Certificate fields, explained</h3>
 <table class="cmp"><tr><th>Field</th><th>What it tells you</th></tr>
 <tr><td><b>Subject / Common Name</b></td><td>Who the certificate was issued to — should match the site's domain.</td></tr>
 <tr><td><b>Issuer (CA)</b></td><td>Which Certificate Authority vouches for the site (e.g. Let's Encrypt, DigiCert).</td></tr>
 <tr><td><b>Valid from / to</b></td><td>The dates the certificate is valid. Expired = browser warning.</td></tr>
 <tr><td><b>Subject Alternative Names</b></td><td>All domain names this certificate covers.</td></tr>
 <tr><td><b>Signature algorithm</b></td><td>The cryptography used (e.g. SHA-256 with RSA) — proves it wasn't forged.</td></tr></table>
-<h3>✅ Before entering sensitive info, verify</h3>
+<h3> Before entering sensitive info, verify</h3>
 <ul>
 <li>The address bar shows <b>https://</b> and a padlock with no warnings.</li>
 <li>The <b>domain name is exactly right</b> — no lookalikes (see our <a href="phishing-url-analyzer.html" style="color:var(--green)">phishing URL analyzer</a>).</li>
@@ -118,7 +118,7 @@ function toggleTheme(){var b=document.body;var light=b.classList.toggle('light')
 </ul>
 </div>
 <div class="tool-card" style="margin-top:20px">
-<h3 style="margin-top:0">🧠 Test yourself — 5 questions</h3>
+<h3 style="margin-top:0"> Test yourself — 5 questions</h3>
 <div id="sslquiz"></div>
 <button class="btn btn-green" onclick="sslScore()" style="margin-top:8px">Check my score</button>
 <div id="sslres" style="margin-top:12px"></div>
@@ -181,7 +181,7 @@ var sslAns=new Array(SSLQ.length).fill(-1);
 (function(){var h='';
 SSLQ.forEach(function(q,i){h+='<div class="quiz-q"><p>Q'+(i+1)+'. '+q[0]+'</p><div class="quiz-opts">';
 q[1].forEach(function(o,j){h+='<button onclick="sslPick('+i+','+j+',this)">'+o+'</button>';});
-h+='</div><div class="quiz-why" id="sslwhy'+i+'">💡 '+q[3]+'</div></div>';});
+h+='</div><div class="quiz-why" id="sslwhy'+i+'"> '+q[3]+'</div></div>';});
 document.getElementById('sslquiz').innerHTML=h;})();
 function sslPick(i,j,btn){var q=btn.parentElement;sslAns[i]=j;
 Array.prototype.forEach.call(q.children,function(b){b.classList.remove('correct','wrong');});
@@ -189,16 +189,16 @@ if(j===SSLQ[i][2])btn.classList.add('correct');else{btn.classList.add('wrong');q
 document.getElementById('sslwhy'+i).style.display='block';
 Array.prototype.forEach.call(q.children,function(b){b.disabled=true;});}
 function sslScore(){var s=sslAns.filter(function(a,i){return a===SSLQ[i][2];}).length;
-var msg=s===5?'🏆 Perfect! You understand HTTPS.':s>=3?'👍 Good — review the explanations above.':'📚 Keep learning — re-read the guide and try again.';
+var msg=s===5?' Perfect! You understand HTTPS.':s>=3?' Good — review the explanations above.':' Keep learning — re-read the guide and try again.';
 document.getElementById('sslres').innerHTML='<div class="verdict" style="background:rgba(0,230,118,.08);border:1px solid var(--border)">You scored <b>'+s+' / 5</b>. '+msg+'</div>';}
 </script>
 <footer class="footer"><div class="container">
-<div class="footer-brand">🛡️ CyberSec <span class="green">Hub</span></div>
+<div class="footer-brand"> CyberSec <span class="green">Hub</span></div>
 <p>Learn cybersecurity the ethical, legal way.</p>
 <div class="footer-links">
 <a href="../index.html">Home</a><a href="../about.html">About</a><a href="../contact.html">Contact</a><a href="../privacy.html">Privacy Policy</a><a href="../disclaimer.html">Disclaimer</a><a href="../terms.html">Terms</a>
 </div>
-<p class="foot-email">📧 <a href="mailto:contact@anwaardigital.com">contact@anwaardigital.com</a></p>
+<p class="foot-email"> <a href="mailto:contact@anwaardigital.com">contact@anwaardigital.com</a></p>
 <p class="copyright">© 2026 CyberSec Hub by Anwaar Digital. All rights reserved. Educational content only — always test with written permission.</p>
 <p class="copyright">Developed by <strong style="color:#00e676">Malik Anwaar</strong></p>
 </div></footer><a href="https://wa.me/923288317526" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.6 6.1 1.6h.1c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.6 1.2 1.2-4.5-.3-.4c-1-1.6-1.6-3.5-1.6-5.5C5 9.6 10.6 5 16 5s11 4.6 11 10-5.4 9.8-11 9.8zm6.1-7.3c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.8.1-.3-.2-1.4-.5-2.7-1.6-.9-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6L13 9.5c-.3-.8-.7-.7-1-.7h-.8c-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.5s1.5 4 1.7 4.3c.2.3 2.9 4.4 7 6.2 1 .4 1.7.7 2.3.9.9.3 1.8.2 2.5.2.8-.1 2.3-1 2.7-1.9.3-.9.3-1.7.2-1.9-.1-.1-.3-.2-.7-.4z"/></svg></a>

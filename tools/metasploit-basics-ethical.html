@@ -45,7 +45,7 @@
 </head>
 <body>
 <nav class="navbar"><div class="nav-inner">
-<a href="../index.html" class="brand"><span class="brand-icon">🛡️</span><span>CyberSec <span class="green">Hub</span></span></a>
+<a href="../index.html" class="brand"><span class="brand-icon"></span><span>CyberSec <span class="green">Hub</span></span></a>
 <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
 <ul class="nav-links" id="navLinks">
 <li><a href="../index.html">Home</a></li>
@@ -59,9 +59,10 @@
 <li><a href="../glossary.html">Glossary</a></li>
 <li><a href="../faq.html">FAQ</a></li>
 <li><a href="../about.html">About</a></li>
-</ul></div></nav><div class="breadcrumb"><a href="../index.html">Home</a> / 🔧 Tools & Techniques / Metasploit Basics</div>
-<header class="article-hero"><span class="section-tag">🔧 Tools & Techniques</span><h1>Metasploit Basics: Understanding the Professional Framework (Ethical Use)</h1><div class="article-meta">By CyberSec Hub · 10 min read</div></header>
-<main class="article-body"><div class="ethical-box"><strong>⚠️ Ethical Use Only:</strong> Only test systems you own or have <strong>written permission</strong> to test. Unauthorized hacking is illegal in Pakistan and worldwide. Everything here is for defensive security education and authorized testing only.</div>
+</ul></div></nav><div class="breadcrumb"><a href="../index.html">Home</a> /  Tools & Techniques / Metasploit Basics</div>
+<header class="article-hero"><span class="section-tag"> Tools & Techniques</span><h1>Metasploit Basics: Understanding the Professional Framework (Ethical Use)</h1>
+<p class="small">Last updated: 5 November 2026</p><div class="article-meta">By CyberSec Hub · 10 min read</div></header>
+<main class="article-body"><div class="ethical-box"><strong> Ethical Use Only:</strong> Only test systems you own or have <strong>written permission</strong> to test. Unauthorized hacking is illegal in Pakistan and worldwide. Everything here is for defensive security education and authorized testing only.</div>
 <p><strong>Metasploit</strong> is the most famous exploitation framework in cybersecurity — a vast, modular toolkit professionals use during <em>authorized</em> penetration tests to verify vulnerabilities efficiently. Because it is genuinely dual-use, this guide focuses on <strong>understanding the framework</strong> and exploring it <strong>only inside your own isolated lab</strong>.</p>
 
 <h2>What Metasploit Actually Is</h2>
@@ -81,7 +82,7 @@
 <h2>Exploring Safely in Your Own Lab</h2>
 <p>Set up first: your <a href="kali-linux-setup.html">Kali Linux VM</a> (Metasploit is preinstalled) plus an intentionally vulnerable target VM like <strong>Metasploitable</strong> on an isolated host-only virtual network — with <strong>no route to your home network or the internet</strong>. This isolation is non-negotiable: lab traffic must never leave the lab.</p>
 <p>Inside the lab, professionals practice the <em>workflow</em>, not memorized commands: open the framework console, search the module library for a module matching a vulnerability you already found on <strong>your own target VM</strong>, read its information page first, configure it for <strong>[YOUR-LAB-TARGET-IP]</strong> only, and run a non-destructive vulnerability <em>check</em> before anything else. The professional habit is verify-first — confirm the weakness exists, demonstrate it in a controlled way, then stop — with every action logged for the final report.</p>
-<div class="ethical-box"><strong>⚠️ Lab-only, written-permission-only:</strong> every module is used against your own isolated lab VMs, authorized training platforms, or explicitly in-scope engagement targets covered by signed written permission. Pointing any of this at systems you do not own is illegal, regardless of intent.</div>
+<div class="ethical-box"><strong> Lab-only, written-permission-only:</strong> every module is used against your own isolated lab VMs, authorized training platforms, or explicitly in-scope engagement targets covered by signed written permission. Pointing any of this at systems you do not own is illegal, regardless of intent.</div>
 
 <h2>Key Concepts to Understand</h2>
 <ul>
@@ -97,7 +98,7 @@
 <li>Keep Kali and Metasploit updated (<code>msfupdate</code>); outdated frameworks miss the point of current defense.</li>
 </ul>
 
-<div class="tip-box"><strong>💡 The professional lesson:</strong> Metasploit's real value is making authorized verification <em>efficient and documented</em>. Anyone can run a module; professionals scope it, control it, evidence it, and report it. That discipline is what our <a href="../career/how-to-become-pentester.html">career guide</a> builds toward.</div>
+<div class="tip-box"><strong> The professional lesson:</strong> Metasploit's real value is making authorized verification <em>efficient and documented</em>. Anyone can run a module; professionals scope it, control it, evidence it, and report it. That discipline is what our <a href="../career/how-to-become-pentester.html">career guide</a> builds toward.</div>
 
 <h2>Module Anatomy: Reading Before Running</h2>
 <p>Professional habit: before using any module in your lab, read it. <code>info</code> shows description, authors, targets, and references; many modules link to the original vulnerability write-ups — reading those teaches more than running the exploit. Understanding <em>why</em> a module works (which protocol flaw? which misconfiguration?) builds the vulnerability intuition that separates technicians from professionals. In your lab journal, summarize each module in your own words: what it targets, what it proves, what the fix is.</p>
@@ -112,7 +113,7 @@
 <h2>Metasploit vs. Manual Testing</h2>
 <p>A professional secret: the best testers use Metasploit <em>sparingly</em>. Automated exploitation proves known issues fast, but novel findings — logic flaws, chained misconfigurations, business-process abuses — come from manual thinking with Burp, custom scripts, and deep reading. Use the framework for what it is best at (efficient verification of known vulnerability classes) and reserve your brain for what only brains do. Clients pay for judgment, not tool output.</p>
 
-<div class="related-box"><h3>📚 Related Articles</h3><ul>
+<div class="related-box"><h3> Related Articles</h3><ul>
 <li><a href="../hacking/penetration-testing-methodology.html">Penetration Testing Methodology: The Professional Workflow</a></li>
 <li><a href="kali-linux-setup.html">Kali Linux Setup Guide: Build Your Ethical Hacking Lab</a></li>
 <li><a href="../hacking/vulnerability-assessment-guide.html">Vulnerability Assessment Guide: Find Weaknesses in Your Own Systems</a></li>
@@ -120,7 +121,7 @@
 </ul></div>
 </main>
 <footer class="footer"><div class="container">
-<div class="footer-brand">🛡️ CyberSec <span class="green">Hub</span></div>
+<div class="footer-brand"> CyberSec <span class="green">Hub</span></div>
 <p>Learn cybersecurity the ethical, legal way.</p>
 <div class="footer-links">
 <a href="../index.html">Home</a><a href="../about.html">About</a><a href="../contact.html">Contact</a><a href="../privacy.html">Privacy Policy</a><a href="../disclaimer.html">Disclaimer</a><a href="../terms.html">Terms</a>

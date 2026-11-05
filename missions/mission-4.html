@@ -41,9 +41,9 @@ footer{text-align:center;color:#5b6f66;font-size:13.5px;margin-top:28px}
 </style>
 </head>
 <body>
-<nav class="navbar"><a class="brand" href="../index.html">🛡️ CyberSec <span class="g">Hub</span></a><a class="nav" href="../index.html">Home</a><a class="nav" href="index.html">Missions</a><a class="nav" href="../learning-path.html">Learning Paths</a></nav>
+<nav class="navbar"><a class="brand" href="../index.html"> CyberSec <span class="g">Hub</span></a><a class="nav" href="../index.html">Home</a><a class="nav" href="index.html">Missions</a><a class="nav" href="../learning-path.html">Learning Paths</a></nav>
 <div class="wrap">
-<h1>🐛 Mission 4: <span class="g">Spot the Vulnerability</span></h1>
+<h1> Mission 4: <span class="g">Spot the Vulnerability</span></h1>
 <p class="sub"><span class="badge">MEDIUM</span> &nbsp;<span class="pts">300 pts</span> &nbsp;·&nbsp; Read short code snippets and find the security flaw in each one.</p>
 <div class="scorebar" id="scorebar">Score: 0 / 300 · Snippet 1 of 3</div>
 <div class="howto">
@@ -96,7 +96,7 @@ document.getElementById('scorebar').textContent='Score: '+score+' / 300 · Snipp
 document.getElementById('optsBox').innerHTML='';
 var v=document.getElementById('verdict');
 v.className='verdict '+(ok?'ok':'bad');
-var html='<h3>'+(ok?'✅ Correct! +100 points':'❌ Not quite.')+'</h3><p>'+esc(r.why)+'</p>';
+var html='<h3>'+(ok?' Correct! +100 points':' Not quite.')+'</h3><p>'+esc(r.why)+'</p>';
 if(idx<rounds.length-1){html+='<button class="btn-next" onclick="next()">Next snippet →</button>';}
 else{html+='<button class="btn-next" onclick="finish()">See result →</button>';}
 v.innerHTML=html;v.style.display='block';
@@ -106,7 +106,7 @@ function finish(){
 var v=document.getElementById('verdict');v.style.display='none';
 var w=document.getElementById('winBox');
 if(score===300){
-w.innerHTML='<h2>🎉 MISSION COMPLETE!</h2><p>You found every flaw. Score: 300 / 300</p><p class="flag">FLAG{bug_hunter_2026}</p><p style="margin-top:10px;color:#8fa39a">Next mission: <a href="mission-5.html" style="color:#00e676;text-decoration:underline">Mission 5 — Decode the Secret →</a></p>';
+w.innerHTML='<h2> MISSION COMPLETE!</h2><p>You found every flaw. Score: 300 / 300</p><p class="flag">FLAG{bug_hunter_2026}</p><p style="margin-top:10px;color:#8fa39a">Next mission: <a href="mission-5.html" style="color:#00e676;text-decoration:underline">Mission 5 — Decode the Secret →</a></p>';
 }else{
 w.innerHTML='<h2 style="color:#fca5a5">Score: '+score+' / 300</h2><p>Review the explanations and try again — good hunters check every line.</p><button class="btn-retry" onclick="retry()">↻ Try again</button>';
 }

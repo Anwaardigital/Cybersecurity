@@ -45,7 +45,7 @@
 </head>
 <body>
 <nav class="navbar"><div class="nav-inner">
-<a href="../index.html" class="brand"><span class="brand-icon">🛡️</span><span>CyberSec <span class="green">Hub</span></span></a>
+<a href="../index.html" class="brand"><span class="brand-icon"></span><span>CyberSec <span class="green">Hub</span></span></a>
 <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
 <ul class="nav-links" id="navLinks">
 <li><a href="../index.html">Home</a></li>
@@ -59,9 +59,10 @@
 <li><a href="../glossary.html">Glossary</a></li>
 <li><a href="../faq.html">FAQ</a></li>
 <li><a href="../about.html">About</a></li>
-</ul></div></nav><div class="breadcrumb"><a href="../index.html">Home</a> / 🎯 Ethical Hacking / Nmap Beginner's Guide</div>
-<header class="article-hero"><span class="section-tag">🎯 Ethical Hacking</span><h1>Nmap Beginner's Guide: Scan Your Own Network Safely</h1><div class="article-meta">By CyberSec Hub · 11 min read</div></header>
-<main class="article-body"><div class="ethical-box"><strong>⚠️ Ethical Use Only:</strong> Only test systems you own or have <strong>written permission</strong> to test. Unauthorized hacking is illegal in Pakistan and worldwide. Everything here is for defensive security education and authorized testing only.</div>
+</ul></div></nav><div class="breadcrumb"><a href="../index.html">Home</a> /  Ethical Hacking / Nmap Beginner's Guide</div>
+<header class="article-hero"><span class="section-tag"> Ethical Hacking</span><h1>Nmap Beginner's Guide: Scan Your Own Network Safely</h1>
+<p class="small">Last updated: 5 November 2026</p><div class="article-meta">By CyberSec Hub · 11 min read</div></header>
+<main class="article-body"><div class="ethical-box"><strong> Ethical Use Only:</strong> Only test systems you own or have <strong>written permission</strong> to test. Unauthorized hacking is illegal in Pakistan and worldwide. Everything here is for defensive security education and authorized testing only.</div>
 <p><strong>Nmap</strong> (Network Mapper) is the most famous network scanning tool in cybersecurity — free, open source, and used by professionals worldwide. Its legitimate purpose is simple: it tells you <strong>what is on your own network</strong>. Which devices are connected? Which ports are open? What software is running? Knowing this about your own home or office network is the first step to securing it.</p>
 
 <h2>Why Scan Your Own Network?</h2>
@@ -97,7 +98,7 @@
 <h2>What NOT To Do</h2>
 <p>Never scan networks, websites, or IP addresses you do not own or lack written permission to test. Unauthorized scanning is illegal in many jurisdictions and can be interpreted as the start of an attack. Keep every scan on your own equipment and your own lab.</p>
 
-<div class="tip-box"><strong>💡 Next step:</strong> pair Nmap with our <a href="../tools/wireshark-basics.html">Wireshark basics guide</a> to see your network traffic visually, and our <a href="../basics/mobile-security.html">mobile security guide</a> to lock down the devices you discovered.</div>
+<div class="tip-box"><strong> Next step:</strong> pair Nmap with our <a href="../tools/wireshark-basics.html">Wireshark basics guide</a> to see your network traffic visually, and our <a href="../basics/mobile-security.html">mobile security guide</a> to lock down the devices you discovered.</div>
 
 <h2>Service Detection Deep Dive (Your Lab)</h2>
 <p>The <code>-sV</code> flag does more than name services — it probes them and reports versions, like "Apache httpd 2.4.49." In your lab, compare the versions on your own VMs against public vulnerability databases to understand <em>why</em> patching matters: an old version number maps directly to known, documented flaws. This is the defensive lesson — attackers do exactly this mapping, so your job is to ensure there is nothing outdated left to map. Try it: spin up an old Linux VM in your isolated lab, scan it with <code>nmap -sV</code>, and research what you find. Then patch the VM and rescan — watch the findings disappear.</p>
@@ -112,7 +113,7 @@
 <h2>Nmap Scripting Engine (Safe Introduction)</h2>
 <p>Nmap ships with <strong>NSE scripts</strong> that automate checks — many are purely informational and safe on your own systems, like <code>--script=banner</code> or <code>--script=http-titles</code> against your own lab web server. Rule: use only clearly non-intrusive scripts, only on your own equipment, and read what a script does (<code>--script-help</code>) before running it. When in doubt, do not run it.</p>
 
-<div class="related-box"><h3>📚 Related Articles</h3><ul>
+<div class="related-box"><h3> Related Articles</h3><ul>
 <li><a href="../tools/nmap-advanced-techniques.html">Nmap Advanced Techniques: Deep Scans of Your Own Network</a></li>
 <li><a href="../tools/wireshark-basics.html">Wireshark Basics: See Your Network Traffic (Your Own Network)</a></li>
 <li><a href="penetration-testing-methodology.html">Penetration Testing Methodology: The Professional Workflow</a></li>
@@ -120,7 +121,7 @@
 </ul></div>
 </main>
 <footer class="footer"><div class="container">
-<div class="footer-brand">🛡️ CyberSec <span class="green">Hub</span></div>
+<div class="footer-brand"> CyberSec <span class="green">Hub</span></div>
 <p>Learn cybersecurity the ethical, legal way.</p>
 <div class="footer-links">
 <a href="../index.html">Home</a><a href="../about.html">About</a><a href="../contact.html">Contact</a><a href="../privacy.html">Privacy Policy</a><a href="../disclaimer.html">Disclaimer</a><a href="../terms.html">Terms</a>

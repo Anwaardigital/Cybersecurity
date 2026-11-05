@@ -45,7 +45,7 @@
 </head>
 <body>
 <nav class="navbar"><div class="nav-inner">
-<a href="../index.html" class="brand"><span class="brand-icon">🛡️</span><span>CyberSec <span class="green">Hub</span></span></a>
+<a href="../index.html" class="brand"><span class="brand-icon"></span><span>CyberSec <span class="green">Hub</span></span></a>
 <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
 <ul class="nav-links" id="navLinks">
 <li><a href="../index.html">Home</a></li>
@@ -59,9 +59,10 @@
 <li><a href="../glossary.html">Glossary</a></li>
 <li><a href="../faq.html">FAQ</a></li>
 <li><a href="../about.html">About</a></li>
-</ul></div></nav><div class="breadcrumb"><a href="../index.html">Home</a> / 🔧 Tools & Techniques / Wireshark Basics</div>
-<header class="article-hero"><span class="section-tag">🔧 Tools & Techniques</span><h1>Wireshark Basics: See Your Network Traffic (Your Own Network)</h1><div class="article-meta">By CyberSec Hub · 10 min read</div></header>
-<main class="article-body"><div class="ethical-box"><strong>⚠️ Ethical Use Only:</strong> Only test systems you own or have <strong>written permission</strong> to test. Unauthorized hacking is illegal in Pakistan and worldwide. Everything here is for defensive security education and authorized testing only.</div>
+</ul></div></nav><div class="breadcrumb"><a href="../index.html">Home</a> /  Tools & Techniques / Wireshark Basics</div>
+<header class="article-hero"><span class="section-tag"> Tools & Techniques</span><h1>Wireshark Basics: See Your Network Traffic (Your Own Network)</h1>
+<p class="small">Last updated: 5 November 2026</p><div class="article-meta">By CyberSec Hub · 10 min read</div></header>
+<main class="article-body"><div class="ethical-box"><strong> Ethical Use Only:</strong> Only test systems you own or have <strong>written permission</strong> to test. Unauthorized hacking is illegal in Pakistan and worldwide. Everything here is for defensive security education and authorized testing only.</div>
 <p><strong>Wireshark</strong> is the world's most widely used network protocol analyzer — free, open source, and standard equipment for network engineers and security professionals. It captures the packets flowing through <em>your own</em> network interface and displays them in readable form. This guide teaches legitimate uses: understanding your own traffic, diagnosing your own network issues, and learning how protocols work.</p>
 
 <h2>What Wireshark Shows You</h2>
@@ -103,7 +104,7 @@
 <li>Encrypted traffic (HTTPS) is unreadable by design — tools claiming to "decrypt others' traffic" are either scams or attack tools. Do not go there.</li>
 </ul>
 
-<div class="tip-box"><strong>💡 Pair with Nmap:</strong> use our <a href="../hacking/nmap-guide.html">Nmap guide</a> to map your own network's devices, then Wireshark to watch what those devices actually say. Together they teach you more about networking than any course.</div>
+<div class="tip-box"><strong> Pair with Nmap:</strong> use our <a href="../hacking/nmap-guide.html">Nmap guide</a> to map your own network's devices, then Wireshark to watch what those devices actually say. Together they teach you more about networking than any course.</div>
 
 <h2>Following a TCP Stream (Your Own Traffic)</h2>
 <p>Right-click any TCP packet from your own browsing session and choose <strong>Follow → TCP Stream</strong>. Wireshark reconstructs the entire conversation — you will see your browser's request and the server's response as readable text (for unencrypted HTTP on your own lab server). This is the single best way to understand what "a web request" actually is. Try it against your own lab web server running plain HTTP, then compare with an HTTPS site where you will see only encrypted gibberish — a visceral lesson in why encryption matters.</p>
@@ -125,7 +126,7 @@
 <h2>Exporting Evidence From Your Own Captures</h2>
 <p>File → Export Objects → HTTP lets you save files transferred in your own capture — handy for analyzing what your own lab server sent. <strong>Statistics → Protocol Hierarchy</strong> exports nicely into reports. And remember: capture files can contain sensitive data (even your own), so store them securely and delete when done. Professionals treat pcaps like evidence — because they are.</p>
 
-<div class="related-box"><h3>📚 Related Articles</h3><ul>
+<div class="related-box"><h3> Related Articles</h3><ul>
 <li><a href="../hacking/nmap-guide.html">Nmap Beginner's Guide: Scan Your Own Network Safely</a></li>
 <li><a href="kali-linux-setup.html">Kali Linux Setup Guide: Build Your Ethical Hacking Lab</a></li>
 <li><a href="nmap-advanced-techniques.html">Nmap Advanced Techniques: Deep Scans of Your Own Network</a></li>
@@ -133,7 +134,7 @@
 </ul></div>
 </main>
 <footer class="footer"><div class="container">
-<div class="footer-brand">🛡️ CyberSec <span class="green">Hub</span></div>
+<div class="footer-brand"> CyberSec <span class="green">Hub</span></div>
 <p>Learn cybersecurity the ethical, legal way.</p>
 <div class="footer-links">
 <a href="../index.html">Home</a><a href="../about.html">About</a><a href="../contact.html">Contact</a><a href="../privacy.html">Privacy Policy</a><a href="../disclaimer.html">Disclaimer</a><a href="../terms.html">Terms</a>

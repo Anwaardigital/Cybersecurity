@@ -68,8 +68,8 @@ table.cmp th{background:rgba(0,230,118,.08);color:var(--green)}
 </head>
 <body>
 <nav class="navbar"><div class="nav-inner">
-<a href="../index.html" class="brand"><span class="brand-icon">🛡️</span><span>CyberSec <span class="green">Hub</span></span></a>
-<div class="nav-actions"><button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark and light theme"><span class="theme-icon">☀️</span><span class="theme-label">Light</span></button><button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button></div>
+<a href="../index.html" class="brand"><span class="brand-icon"></span><span>CyberSec <span class="green">Hub</span></span></a>
+<div class="nav-actions"><button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark and light theme"><span class="theme-icon"></span><span class="theme-label">Light</span></button><button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button></div>
 <ul class="nav-links" id="navLinks">
 <li><a href="../index.html">Home</a></li>
 <li><a href="../index.html#basics">Basics</a></li>
@@ -80,20 +80,20 @@ table.cmp th{background:rgba(0,230,118,.08);color:var(--green)}
 </ul></div></nav>
 <script>
 (function(){try{if(localStorage.getItem('hubTheme')==='light'){document.body.classList.add('light');}}catch(e){}})();
-function toggleTheme(){var b=document.body;var light=b.classList.toggle('light');try{localStorage.setItem('hubTheme',light?'light':'dark');}catch(e){}var btn=document.querySelector('.theme-toggle');if(btn){var ic=btn.querySelector('.theme-icon');var lb=btn.querySelector('.theme-label');if(ic)ic.textContent=light?'🌙':'☀️';if(lb)lb.textContent=light?'Dark':'Light';}}
-(function(){var btn=document.querySelector('.theme-toggle');if(!btn)return;var light=document.body.classList.contains('light');var ic=btn.querySelector('.theme-icon');var lb=btn.querySelector('.theme-label');if(ic)ic.textContent=light?'🌙':'☀️';if(lb)lb.textContent=light?'Dark':'Light';})();
+function toggleTheme(){var b=document.body;var light=b.classList.toggle('light');try{localStorage.setItem('hubTheme',light?'light':'dark');}catch(e){}var btn=document.querySelector('.theme-toggle');if(btn){var ic=btn.querySelector('.theme-icon');var lb=btn.querySelector('.theme-label');if(ic)ic.textContent=light?'':'';if(lb)lb.textContent=light?'Dark':'Light';}}
+(function(){var btn=document.querySelector('.theme-toggle');if(!btn)return;var light=document.body.classList.contains('light');var ic=btn.querySelector('.theme-icon');var lb=btn.querySelector('.theme-label');if(ic)ic.textContent=light?'':'';if(lb)lb.textContent=light?'Dark':'Light';})();
 </script>
 <main class="tool-wrap">
-<h1>👁️ Privacy Settings Guide</h1>
+<h1> Privacy Settings Guide</h1>
 <p class="tool-sub">Default social-media settings usually favor <b>sharing</b>, not privacy. Pick a platform below and work through what to review. <i>Note: apps rename menus often — if a setting moved, search the app's settings for the keyword.</i></p>
-<div class="ethical-box"><strong>⚠️ Ethical Use Only:</strong> These tools are for <strong>defensive</strong> purposes — securing your own accounts and systems. Never use security knowledge against systems you do not own or lack written permission to test.</div>
+<div class="ethical-box"><strong> Ethical Use Only:</strong> These tools are for <strong>defensive</strong> purposes — securing your own accounts and systems. Never use security knowledge against systems you do not own or lack written permission to test.</div>
 <div class="tool-card">
 <div class="step-tabs" id="prvtabs"></div>
 <div class="pbar"><div id="prvbar"></div></div>
 <div class="score-line" id="prvscore"></div>
 <div id="prvlist"></div>
 </div>
-<div class="tip-box edu" style="margin-top:22px"><strong>💡 The mindset:</strong>
+<div class="tip-box edu" style="margin-top:22px"><strong> The mindset:</strong>
 <p style="margin-top:8px">Ask three questions about everything you post: <b>who</b> can see this, <b>what</b> could a stranger infer from it (location, routine, contacts), and <b>how long</b> will it exist? Attackers build spear-phishing profiles from exactly these public crumbs — birthday posts, pet names (common passwords!), check-ins, and workplace details.</p></div>
 <section class="related-box" style="margin-top:36px">
 <h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">About This Tool</h2>
@@ -133,40 +133,40 @@ function toggleTheme(){var b=document.body;var light=b.classList.toggle('light')
 <script>
 
 var PRV={
- "📘 Facebook":[
+ " Facebook":[
   ["Profile & posts visible to 'Friends', not 'Public'","Check Settings → Privacy → who can see your posts, friends list, and profile details."],
   ["Review tags before they appear","Turn on tag review so embarrassing or revealing photos need your approval."],
   ["Limit who can find you by phone/email","Strangers shouldn't be able to look you up by your number."],
   ["Turn off location history / precise location for the app","Your movements are valuable data — share only while using, or never."],
   ["Review ad preferences & off-Facebook activity","See what advertisers know; clear history and limit ad personalization."],
   ["Enable 2FA","Settings → Accounts Center → Password and security."]],
- "📸 Instagram":[
+ " Instagram":[
   ["Consider a private account","Private = you approve followers. Public = anyone, including scrapers and strangers."],
   ["Hide your activity status & read receipts if you prefer","Settings → Privacy → Activity status / Messages."],
   ["Turn off precise location","Photos with location tags reveal home, work, and routines."],
   ["Review tagged photos & mentions","Approve tags manually; remove unwanted ones."],
   ["Limit story sharing and close-friends lists","Use Close Friends for personal content instead of all followers."],
   ["Enable 2FA","Accounts Center → Password and security."]],
- "🐦 X (Twitter)":[
+ " X (Twitter)":[
   ["Protect your posts (private account) if you don't need public reach","Settings → Privacy → Audience."],
   ["Disable precise location on posts","Never broadcast real-time location publicly."],
   ["Control who can message & tag you","Limit DMs to people you follow; require tag approval mindset."],
   ["Review ad personalization & data sharing","Privacy → Ads preferences; turn off what you're uncomfortable with."],
   ["Enable 2FA (authenticator app, not just SMS)","Security → Two-factor authentication."]],
- "🎵 TikTok":[
+ " TikTok":[
   ["Private account + approve followers","Settings → Privacy → Private account."],
   ["Turn off 'suggest to others' via contacts/location if unwanted","Limits discovery by strangers."],
   ["Disable precise location","Especially important given video + location combos."],
   ["Restrict comments, duets, downloads","Set to Friends or Only me for personal videos."],
   ["Review ad personalization","Privacy → Ads personalization."],
   ["Enable 2FA","Security → 2-step verification."]],
- "💼 LinkedIn":[
+ " LinkedIn":[
   ["Remember: it's public-by-design","Treat everything as visible to recruiters, colleagues — and scammers building pretexts."],
   ["Limit profile viewing options sensibly","Decide who sees your connections and activity broadcasts."],
   ["Turn off 'share profile updates' when job-hunting quietly","Avoid broadcasting every edit to your network."],
   ["Be picky with connection requests","Fake recruiter profiles harvest data and launch phishing. Verify before accepting."],
   ["Enable 2FA","Settings → Sign in & security."]],
- "💬 WhatsApp":[
+ " WhatsApp":[
   ["Last seen / online / profile photo → 'My contacts' (not Everybody)","Settings → Privacy. Strangers shouldn't track your activity."],
   ["Turn off read receipts if you prefer (note: group chats unaffected)","Same Privacy screen."],
   ["Enable disappearing messages for sensitive chats","24h/7d/90d options per chat."],
@@ -184,16 +184,16 @@ function prvTgl(i,box){prvDone[prvCur][i]=box.checked;prvRender();}
 function prvUpd(){var total=0,done=0;
 prvKeys.forEach(function(k){var s=PRV[k],d=prvDone[k]||s.map(function(){return false;});total+=s.length;done+=d.filter(Boolean).length;});
 document.getElementById('prvbar').style.width=Math.round(done/total*100)+'%';
-document.getElementById('prvscore').textContent='Overall: '+done+' of '+total+' reviewed'+(done===total?' — 🏆 Privacy champion!':'');}
+document.getElementById('prvscore').textContent='Overall: '+done+' of '+total+' reviewed'+(done===total?' —  Privacy champion!':'');}
 prvRenderTabs();prvRender();
 </script>
 <footer class="footer"><div class="container">
-<div class="footer-brand">🛡️ CyberSec <span class="green">Hub</span></div>
+<div class="footer-brand"> CyberSec <span class="green">Hub</span></div>
 <p>Learn cybersecurity the ethical, legal way.</p>
 <div class="footer-links">
 <a href="../index.html">Home</a><a href="../about.html">About</a><a href="../contact.html">Contact</a><a href="../privacy.html">Privacy Policy</a><a href="../disclaimer.html">Disclaimer</a><a href="../terms.html">Terms</a>
 </div>
-<p class="foot-email">📧 <a href="mailto:contact@anwaardigital.com">contact@anwaardigital.com</a></p>
+<p class="foot-email"> <a href="mailto:contact@anwaardigital.com">contact@anwaardigital.com</a></p>
 <p class="copyright">© 2026 CyberSec Hub by Anwaar Digital. All rights reserved. Educational content only — always test with written permission.</p>
 <p class="copyright">Developed by <strong style="color:#00e676">Malik Anwaar</strong></p>
 </div></footer><a href="https://wa.me/923288317526" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.6 6.1 1.6h.1c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.6 1.2 1.2-4.5-.3-.4c-1-1.6-1.6-3.5-1.6-5.5C5 9.6 10.6 5 16 5s11 4.6 11 10-5.4 9.8-11 9.8zm6.1-7.3c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.8.1-.3-.2-1.4-.5-2.7-1.6-.9-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6L13 9.5c-.3-.8-.7-.7-1-.7h-.8c-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.5s1.5 4 1.7 4.3c.2.3 2.9 4.4 7 6.2 1 .4 1.7.7 2.3.9.9.3 1.8.2 2.5.2.8-.1 2.3-1 2.7-1.9.3-.9.3-1.7.2-1.9-.1-.1-.3-.2-.7-.4z"/></svg></a>

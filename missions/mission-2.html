@@ -47,9 +47,9 @@ footer{text-align:center;color:#5b6f66;font-size:13.5px;margin-top:28px}
 </style>
 </head>
 <body>
-<nav class="navbar"><a class="brand" href="../index.html">🛡️ CyberSec <span class="g">Hub</span></a><a class="nav" href="../index.html">Home</a><a class="nav" href="index.html">Missions</a><a class="nav" href="../learning-path.html">Learning Paths</a></nav>
+<nav class="navbar"><a class="brand" href="../index.html"> CyberSec <span class="g">Hub</span></a><a class="nav" href="../index.html">Home</a><a class="nav" href="index.html">Missions</a><a class="nav" href="../learning-path.html">Learning Paths</a></nav>
 <div class="wrap">
-<h1>🎣 Mission 2: <span class="g">Phishing Hunter</span></h1>
+<h1> Mission 2: <span class="g">Phishing Hunter</span></h1>
 <p class="sub"><span class="badge">EASY</span> &nbsp;<span class="pts">300 pts</span> &nbsp;·&nbsp; Spot the fake email before it steals data.</p>
 <div class="scorebar" id="scorebar">Score: 0 / 300 · Email 1 of 3</div>
 <div class="howto">
@@ -63,8 +63,8 @@ footer{text-align:center;color:#5b6f66;font-size:13.5px;margin-top:28px}
 </div>
 <div class="email" id="emailBox"></div>
 <div class="btns" id="answerBtns">
-<button class="btn-phish" onclick="answer('phish')">🚨 Phishing</button>
-<button class="btn-safe" onclick="answer('safe')">✅ Safe</button>
+<button class="btn-phish" onclick="answer('phish')"> Phishing</button>
+<button class="btn-safe" onclick="answer('safe')"> Safe</button>
 </div>
 <div class="verdict" id="verdict"></div>
 <div class="win" id="winBox"></div>
@@ -95,7 +95,7 @@ document.getElementById('scorebar').textContent='Score: '+score+' / 300 · Email
 document.getElementById('answerBtns').style.display='none';
 var v=document.getElementById('verdict');
 v.className='verdict '+(ok?'ok':'bad');
-var head=ok?'✅ Correct! +100 points':'❌ Not quite.';
+var head=ok?' Correct! +100 points':' Not quite.';
 var truth=r.answer==='phish'?'This email WAS phishing.':'This email WAS safe.';
 var html='<h3>'+head+'</h3><p>'+truth+'</p><p style="margin-top:10px"><b>Why:</b></p><ul>';
 r.why.forEach(function(w){html+='<li>'+esc(w)+'</li>';});
@@ -109,7 +109,7 @@ function finish(){
 var v=document.getElementById('verdict');v.style.display='none';
 var w=document.getElementById('winBox');
 if(score===300){
-w.innerHTML='<h2>🎉 MISSION COMPLETE!</h2><p>You spotted every trap. Score: 300 / 300</p><p class="flag">FLAG{phish_hunter_2026}</p><p style="margin-top:10px;color:#8fa39a">Next mission: <a href="mission-3.html" style="color:#00e676;text-decoration:underline">Mission 3 — Password Cracker →</a></p>';
+w.innerHTML='<h2> MISSION COMPLETE!</h2><p>You spotted every trap. Score: 300 / 300</p><p class="flag">FLAG{phish_hunter_2026}</p><p style="margin-top:10px;color:#8fa39a">Next mission: <a href="mission-3.html" style="color:#00e676;text-decoration:underline">Mission 3 — Password Cracker →</a></p>';
 }else{
 w.innerHTML='<h2 style="color:#fca5a5">Score: '+score+' / 300</h2><p>You missed one or more. Review the red flags and try again — phishing hunters never give up.</p><button class="btn-retry" onclick="retry()">↻ Try again</button>';
 }

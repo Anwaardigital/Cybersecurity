@@ -68,8 +68,8 @@ table.cmp th{background:rgba(0,230,118,.08);color:var(--green)}
 </head>
 <body>
 <nav class="navbar"><div class="nav-inner">
-<a href="../index.html" class="brand"><span class="brand-icon">🛡️</span><span>CyberSec <span class="green">Hub</span></span></a>
-<div class="nav-actions"><button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark and light theme"><span class="theme-icon">☀️</span><span class="theme-label">Light</span></button><button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button></div>
+<a href="../index.html" class="brand"><span class="brand-icon"></span><span>CyberSec <span class="green">Hub</span></span></a>
+<div class="nav-actions"><button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark and light theme"><span class="theme-icon"></span><span class="theme-label">Light</span></button><button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button></div>
 <ul class="nav-links" id="navLinks">
 <li><a href="../index.html">Home</a></li>
 <li><a href="../index.html#basics">Basics</a></li>
@@ -80,15 +80,15 @@ table.cmp th{background:rgba(0,230,118,.08);color:var(--green)}
 </ul></div></nav>
 <script>
 (function(){try{if(localStorage.getItem('hubTheme')==='light'){document.body.classList.add('light');}}catch(e){}})();
-function toggleTheme(){var b=document.body;var light=b.classList.toggle('light');try{localStorage.setItem('hubTheme',light?'light':'dark');}catch(e){}var btn=document.querySelector('.theme-toggle');if(btn){var ic=btn.querySelector('.theme-icon');var lb=btn.querySelector('.theme-label');if(ic)ic.textContent=light?'🌙':'☀️';if(lb)lb.textContent=light?'Dark':'Light';}}
-(function(){var btn=document.querySelector('.theme-toggle');if(!btn)return;var light=document.body.classList.contains('light');var ic=btn.querySelector('.theme-icon');var lb=btn.querySelector('.theme-label');if(ic)ic.textContent=light?'🌙':'☀️';if(lb)lb.textContent=light?'Dark':'Light';})();
+function toggleTheme(){var b=document.body;var light=b.classList.toggle('light');try{localStorage.setItem('hubTheme',light?'light':'dark');}catch(e){}var btn=document.querySelector('.theme-toggle');if(btn){var ic=btn.querySelector('.theme-icon');var lb=btn.querySelector('.theme-label');if(ic)ic.textContent=light?'':'';if(lb)lb.textContent=light?'Dark':'Light';}}
+(function(){var btn=document.querySelector('.theme-toggle');if(!btn)return;var light=document.body.classList.contains('light');var ic=btn.querySelector('.theme-icon');var lb=btn.querySelector('.theme-label');if(ic)ic.textContent=light?'':'';if(lb)lb.textContent=light?'Dark':'Light';})();
 </script>
 <main class="tool-wrap">
-<h1>🧱 <a href="../glossary.html#gl-firewall">Firewall</a> Rules Explainer</h1>
+<h1> <a href="../glossary.html#gl-firewall">Firewall</a> Rules Explainer</h1>
 <p class="tool-sub">A firewall is a bouncer for your network traffic. Learn the core ideas, <b>simulate your own rules</b>, and see the defensive rules every home setup should have.</p>
-<div class="ethical-box"><strong>⚠️ Ethical Use Only:</strong> These tools are for <strong>defensive</strong> purposes — securing your own accounts and systems. Never use security knowledge against systems you do not own or lack written permission to test.</div>
+<div class="ethical-box"><strong> Ethical Use Only:</strong> These tools are for <strong>defensive</strong> purposes — securing your own accounts and systems. Never use security knowledge against systems you do not own or lack written permission to test.</div>
 <div class="tool-card edu">
-<h3 style="margin-top:0">🧠 The 4 ideas behind every firewall</h3>
+<h3 style="margin-top:0"> The 4 ideas behind every firewall</h3>
 <ul>
 <li><b>Inbound vs outbound:</b> <i>inbound</i> = someone trying to reach you; <i>outbound</i> = you (or your apps) reaching out. Most attacks arrive as inbound traffic.</li>
 <li><b>Allow vs deny:</b> every rule either permits traffic or blocks it. Rules are checked top to bottom — the first match wins.</li>
@@ -97,30 +97,30 @@ function toggleTheme(){var b=document.body;var light=b.classList.toggle('light')
 </ul>
 </div>
 <div class="tool-card" style="margin-top:20px">
-<h3 style="margin-top:0">🎮 Rule simulator — build a firewall rule</h3>
+<h3 style="margin-top:0"> Rule simulator — build a firewall rule</h3>
 <div class="tool-field"><label for="fdir">Direction</label>
 <select id="fdir"><option value="in">Inbound (someone connecting TO this device)</option><option value="out">Outbound (this device connecting OUT)</option></select></div>
 <div class="tool-field"><label for="fport">Service / <a href="../glossary.html#gl-port">port</a></label>
 <select id="fport"><option value="web">Web browsing (80/443)</option><option value="dns">DNS lookups (53)</option><option value="rdp">Remote Desktop (3389)</option><option value="ssh">SSH (22)</option><option value="smb">File sharing SMB (445)</option><option value="game">Online game (27015)</option></select></div>
 <div class="tool-field"><label for="fact">Action</label>
 <select id="fact"><option value="allow">ALLOW</option><option value="deny">DENY</option></select></div>
-<button class="btn btn-green" onclick="simRule()">⚙️ Simulate this rule</button>
+<button class="btn btn-green" onclick="simRule()"> Simulate this rule</button>
 <div id="simout" style="margin-top:14px"></div>
 </div>
 <div class="tool-card edu" style="margin-top:20px">
-<h3 style="margin-top:0">🛡️ Sensible default rules (home devices)</h3>
+<h3 style="margin-top:0"> Sensible default rules (home devices)</h3>
 <table class="cmp"><tr><th>Rule</th><th>Why</th></tr>
 <tr><td><b>Deny all unsolicited inbound</b></td><td>Nothing on the internet should be able to initiate connections to your laptop. This single rule stops most network attacks.</td></tr>
 <tr><td><b>Allow established/related traffic</b></td><td>Replies to connections <i>you</i> started (web pages loading) must get back in.</td></tr>
 <tr><td><b>Allow outbound web + DNS</b></td><td>Browsing and name lookups need to go out. Everything else outbound can stay restricted on strict setups.</td></tr>
 <tr><td><b>Deny inbound file sharing (445) &amp; RDP (3389) from the internet</b></td><td>These are favorite attacker targets. Only allow them on trusted local networks — or better, through a VPN.</td></tr></table>
-<h3>💻 Turn on your firewall (your own device)</h3>
+<h3> Turn on your firewall (your own device)</h3>
 <ul>
 <li><b>Windows:</b> Settings → Privacy &amp; security → Windows Security → Firewall &amp; network protection → make sure it's <b>On</b> for all profiles.</li>
 <li><b>macOS:</b> System Settings → Network → Firewall → turn <b>On</b>.</li>
 <li><b>Linux (Ubuntu):</b> open a terminal on your own machine and run <code>sudo ufw enable</code>, then <code>sudo ufw default deny incoming</code>.</li>
 </ul>
-<p><b>⚠️ Never</b> disable your firewall to "fix" a connection problem permanently — find the correct rule instead, and never change firewall settings on devices you don't own.</p>
+<p><b> Never</b> disable your firewall to "fix" a connection problem permanently — find the correct rule instead, and never change firewall settings on devices you don't own.</p>
 </div>
 <section class="related-box" style="margin-top:36px">
 <h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">About This Tool</h2>
@@ -164,22 +164,22 @@ var dir=document.getElementById('fdir').value, port=document.getElementById('fpo
 var svc={web:"web browsing (ports 80/443)",dns:"DNS lookups (port 53)",rdp:"Remote Desktop (port 3389)",ssh:"SSH (port 22)",smb:"Windows file sharing (port 445)",game:"online gaming (port 27015)"}[port];
 var dTxt=dir==='in'?"INBOUND — traffic from the network toward this device":"OUTBOUND — traffic from this device toward the network";
 var verdict="",col="";
-if(dir==='in'&&act==='allow'&&(port==='rdp'||port==='smb'||port==='ssh')){verdict="🚨 <b>Risky:</b> exposing "+svc+" to inbound connections lets attackers on the network probe and brute-force it. Only allow this on networks you fully trust — never from the whole internet.";col="#ff5252";}
-else if(dir==='in'&&act==='deny'){verdict="✅ <b>Safe default:</b> denying unsolicited "+svc+" inbound follows the default-deny principle. Nothing can initiate "+svc+" connections to you.";col="#00e676";}
-else if(dir==='in'&&act==='allow'){verdict="⚠️ <b>Use with care:</b> allowing inbound "+svc+" opens a door into your device. Fine for a game server you intentionally host; make sure the application itself is updated and password-protected.";col="#ff9800";}
-else if(dir==='out'&&act==='allow'&&(port==='web'||port==='dns')){verdict="✅ <b>Normal:</b> allowing outbound "+svc+" is what every browsing device needs.";col="#00e676";}
-else if(dir==='out'&&act==='deny'){verdict="ℹ️ <b>Strict:</b> blocking outbound "+svc+" can break apps that need it. Useful on locked-down systems, but expect to allowlist as things break.";col="#29b6f6";}
-else{verdict="✅ <b>Fine:</b> allowing outbound "+svc+" is normal for apps that need it.";col="#00e676";}
+if(dir==='in'&&act==='allow'&&(port==='rdp'||port==='smb'||port==='ssh')){verdict=" <b>Risky:</b> exposing "+svc+" to inbound connections lets attackers on the network probe and brute-force it. Only allow this on networks you fully trust — never from the whole internet.";col="#ff5252";}
+else if(dir==='in'&&act==='deny'){verdict=" <b>Safe default:</b> denying unsolicited "+svc+" inbound follows the default-deny principle. Nothing can initiate "+svc+" connections to you.";col="#00e676";}
+else if(dir==='in'&&act==='allow'){verdict=" <b>Use with care:</b> allowing inbound "+svc+" opens a door into your device. Fine for a game server you intentionally host; make sure the application itself is updated and password-protected.";col="#ff9800";}
+else if(dir==='out'&&act==='allow'&&(port==='web'||port==='dns')){verdict=" <b>Normal:</b> allowing outbound "+svc+" is what every browsing device needs.";col="#00e676";}
+else if(dir==='out'&&act==='deny'){verdict="ℹ <b>Strict:</b> blocking outbound "+svc+" can break apps that need it. Useful on locked-down systems, but expect to allowlist as things break.";col="#29b6f6";}
+else{verdict=" <b>Fine:</b> allowing outbound "+svc+" is normal for apps that need it.";col="#00e676";}
 document.getElementById('simout').innerHTML='<div class="flag" style="border-color:'+col+'"><b>Rule: '+act.toUpperCase()+' '+dTxt+'</b><p>Service: '+svc+'<br><br>'+verdict+'</p></div><p style="font-size:.85rem;color:var(--muted)">Educational simulator — it explains concepts; it does not change any real settings.</p>';
 }
 </script>
 <footer class="footer"><div class="container">
-<div class="footer-brand">🛡️ CyberSec <span class="green">Hub</span></div>
+<div class="footer-brand"> CyberSec <span class="green">Hub</span></div>
 <p>Learn cybersecurity the ethical, legal way.</p>
 <div class="footer-links">
 <a href="../index.html">Home</a><a href="../about.html">About</a><a href="../contact.html">Contact</a><a href="../privacy.html">Privacy Policy</a><a href="../disclaimer.html">Disclaimer</a><a href="../terms.html">Terms</a>
 </div>
-<p class="foot-email">📧 <a href="mailto:contact@anwaardigital.com">contact@anwaardigital.com</a></p>
+<p class="foot-email"> <a href="mailto:contact@anwaardigital.com">contact@anwaardigital.com</a></p>
 <p class="copyright">© 2026 CyberSec Hub by Anwaar Digital. All rights reserved. Educational content only — always test with written permission.</p>
 <p class="copyright">Developed by <strong style="color:#00e676">Malik Anwaar</strong></p>
 </div></footer><a href="https://wa.me/923288317526" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.6 6.1 1.6h.1c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.6 1.2 1.2-4.5-.3-.4c-1-1.6-1.6-3.5-1.6-5.5C5 9.6 10.6 5 16 5s11 4.6 11 10-5.4 9.8-11 9.8zm6.1-7.3c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.8.1-.3-.2-1.4-.5-2.7-1.6-.9-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6L13 9.5c-.3-.8-.7-.7-1-.7h-.8c-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.5s1.5 4 1.7 4.3c.2.3 2.9 4.4 7 6.2 1 .4 1.7.7 2.3.9.9.3 1.8.2 2.5.2.8-.1 2.3-1 2.7-1.9.3-.9.3-1.7.2-1.9-.1-.1-.3-.2-.7-.4z"/></svg></a>

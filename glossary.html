@@ -1032,7 +1032,7 @@
 </head>
 <body>
 <nav class="navbar"><div class="nav-inner">
-<a href="index.html" class="brand"><span class="brand-icon">🛡️</span><span>CyberSec <span class="green">Hub</span></span></a>
+<a href="index.html" class="brand"><span class="brand-icon"></span><span>CyberSec <span class="green">Hub</span></span></a>
 <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
 <ul class="nav-links" id="navLinks">
 <li><a href="index.html">Home</a></li>
@@ -1046,10 +1046,11 @@
 <li><a href="glossary.html">Glossary</a></li>
 <li><a href="faq.html">FAQ</a></li>
 <li><a href="about.html">About</a></li>
-</ul></div></nav><div class="breadcrumb"><a href="index.html">Home</a> / 📚 Glossary</div>
-<header class="article-hero"><span class="section-tag">📚 Glossary</span><h1>Cybersecurity Glossary</h1><p class="hero-sub" style="margin-top:12px">200 essential terms explained in plain English.</p></header>
+</ul></div></nav><div class="breadcrumb"><a href="index.html">Home</a> /  Glossary</div>
+<header class="article-hero"><span class="section-tag"> Glossary</span><h1>Cybersecurity Glossary</h1>
+<p class="small">Last updated: 5 November 2026</p><p class="hero-sub" style="margin-top:12px">200 essential terms explained in plain English.</p></header>
 <main><section class="section"><div class="container">
-<input type="text" class="gloss-search" id="gsearch" placeholder="🔍 Search terms... (e.g. phishing)" oninput="filterGloss()">
+<input type="text" class="gloss-search" id="gsearch" placeholder=" Search terms... (e.g. phishing)" oninput="filterGloss()">
 <div id="glosslist"><div class="gloss-term" id="gl-2fa-two-factor-authentication" data-name="2fa (two-factor authentication)"><h3>2FA (Two-Factor Authentication)</h3><p>An extra security layer requiring two proofs of identity — e.g. your password plus a code from your phone. Stops most account takeovers.</p><p class="gloss-more">Related: <a href="basics/two-factor-authentication-guide.html">Two-Factor Authentication (2FA): The Complete Guide (2026)</a></p></div>
 <div class="gloss-term" id="gl-access-control" data-name="access control"><h3>Access Control</h3><p>Rules that decide who or what can view or use resources in a system. Based on verified identity and permissions — enforced through logins, roles, and policies.</p></div>
 <div class="gloss-term" id="gl-access-control-list-acl" data-name="access control list (acl)"><h3>Access Control List (ACL)</h3><p>A list attached to a file or resource naming exactly which users or systems may access it, and what they may do. A fundamental enforcement tool for access control.</p></div>
@@ -1257,7 +1258,7 @@ function filterGloss(){var q=document.getElementById('gsearch').value.toLowerCas
 terms.forEach(function(t){var show=t.getAttribute('data-name').indexOf(q)!==-1||t.textContent.toLowerCase().indexOf(q)!==-1;t.style.display=show?'block':'none';if(show)n++;});
 document.getElementById('noresult').style.display=n===0?'block':'none';}
 </script><footer class="footer"><div class="container">
-<div class="footer-brand">🛡️ CyberSec <span class="green">Hub</span></div>
+<div class="footer-brand"> CyberSec <span class="green">Hub</span></div>
 <p>Learn cybersecurity the ethical, legal way.</p>
 <div class="footer-links">
 <a href="index.html">Home</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy Policy</a><a href="disclaimer.html">Disclaimer</a><a href="terms.html">Terms</a>

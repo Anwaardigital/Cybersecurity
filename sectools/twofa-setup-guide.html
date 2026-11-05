@@ -68,8 +68,8 @@ table.cmp th{background:rgba(0,230,118,.08);color:var(--green)}
 </head>
 <body>
 <nav class="navbar"><div class="nav-inner">
-<a href="../index.html" class="brand"><span class="brand-icon">🛡️</span><span>CyberSec <span class="green">Hub</span></span></a>
-<div class="nav-actions"><button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark and light theme"><span class="theme-icon">☀️</span><span class="theme-label">Light</span></button><button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button></div>
+<a href="../index.html" class="brand"><span class="brand-icon"></span><span>CyberSec <span class="green">Hub</span></span></a>
+<div class="nav-actions"><button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark and light theme"><span class="theme-icon"></span><span class="theme-label">Light</span></button><button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button></div>
 <ul class="nav-links" id="navLinks">
 <li><a href="../index.html">Home</a></li>
 <li><a href="../index.html#basics">Basics</a></li>
@@ -80,29 +80,29 @@ table.cmp th{background:rgba(0,230,118,.08);color:var(--green)}
 </ul></div></nav>
 <script>
 (function(){try{if(localStorage.getItem('hubTheme')==='light'){document.body.classList.add('light');}}catch(e){}})();
-function toggleTheme(){var b=document.body;var light=b.classList.toggle('light');try{localStorage.setItem('hubTheme',light?'light':'dark');}catch(e){}var btn=document.querySelector('.theme-toggle');if(btn){var ic=btn.querySelector('.theme-icon');var lb=btn.querySelector('.theme-label');if(ic)ic.textContent=light?'🌙':'☀️';if(lb)lb.textContent=light?'Dark':'Light';}}
-(function(){var btn=document.querySelector('.theme-toggle');if(!btn)return;var light=document.body.classList.contains('light');var ic=btn.querySelector('.theme-icon');var lb=btn.querySelector('.theme-label');if(ic)ic.textContent=light?'🌙':'☀️';if(lb)lb.textContent=light?'Dark':'Light';})();
+function toggleTheme(){var b=document.body;var light=b.classList.toggle('light');try{localStorage.setItem('hubTheme',light?'light':'dark');}catch(e){}var btn=document.querySelector('.theme-toggle');if(btn){var ic=btn.querySelector('.theme-icon');var lb=btn.querySelector('.theme-label');if(ic)ic.textContent=light?'':'';if(lb)lb.textContent=light?'Dark':'Light';}}
+(function(){var btn=document.querySelector('.theme-toggle');if(!btn)return;var light=document.body.classList.contains('light');var ic=btn.querySelector('.theme-icon');var lb=btn.querySelector('.theme-label');if(ic)ic.textContent=light?'':'';if(lb)lb.textContent=light?'Dark':'Light';})();
 </script>
 <main class="tool-wrap">
-<h1>📱 2FA Setup Guide</h1>
+<h1> 2FA Setup Guide</h1>
 <p class="tool-sub">Two-factor authentication means a stolen password alone isn't enough to break into your account. Follow this interactive guide to enable it properly — and to make sure you never lock <i>yourself</i> out.</p>
-<div class="ethical-box"><strong>⚠️ Ethical Use Only:</strong> These tools are for <strong>defensive</strong> purposes — securing your own accounts and systems. Never use security knowledge against systems you do not own or lack written permission to test.</div>
+<div class="ethical-box"><strong> Ethical Use Only:</strong> These tools are for <strong>defensive</strong> purposes — securing your own accounts and systems. Never use security knowledge against systems you do not own or lack written permission to test.</div>
 <div class="tool-card edu">
-<h3 style="margin-top:0">🔑 The methods, compared honestly</h3>
+<h3 style="margin-top:0"> The methods, compared honestly</h3>
 <table class="cmp"><tr><th>Method</th><th>Security</th><th>Notes</th></tr>
-<tr><td><b>Authenticator app</b><br>(codes refresh every 30s)</td><td>⭐⭐⭐ Strong</td><td>Free, works offline. Best balance for most people.</td></tr>
-<tr><td><b>Hardware security key</b><br>(USB/NFC)</td><td>⭐⭐⭐⭐ Strongest</td><td>Resists phishing almost completely. Costs money; keep a spare.</td></tr>
-<tr><td><b>SMS codes</b></td><td>⭐ Basic</td><td>Better than nothing, but vulnerable to SIM-swap attacks. Use only if nothing else is offered.</td></tr>
-<tr><td><b>Email codes</b></td><td>⭐ Basic</td><td>Only as secure as your email account — which should itself have 2FA.</td></tr></table>
+<tr><td><b>Authenticator app</b><br>(codes refresh every 30s)</td><td> Strong</td><td>Free, works offline. Best balance for most people.</td></tr>
+<tr><td><b>Hardware security key</b><br>(USB/NFC)</td><td> Strongest</td><td>Resists phishing almost completely. Costs money; keep a spare.</td></tr>
+<tr><td><b>SMS codes</b></td><td> Basic</td><td>Better than nothing, but vulnerable to SIM-swap attacks. Use only if nothing else is offered.</td></tr>
+<tr><td><b>Email codes</b></td><td> Basic</td><td>Only as secure as your email account — which should itself have 2FA.</td></tr></table>
 </div>
 <div class="tool-card" style="margin-top:20px">
-<h3 style="margin-top:0">🚶 Step-by-step: enable app-based 2FA</h3>
+<h3 style="margin-top:0"> Step-by-step: enable app-based 2FA</h3>
 <div class="pbar"><div id="tfabar"></div></div>
 <div class="score-line" id="tfascore">Step 0 of 7</div>
 <div id="tfalist"></div>
-<div class="flag info" style="margin-top:14px"><b>📵 Lost your phone?</b><p>That's what backup codes are for (step 6). Without them, recovery means contacting each service's support and proving your identity — slow and painful. Generate and store backup codes <b>today</b>.</p></div>
+<div class="flag info" style="margin-top:14px"><b> Lost your phone?</b><p>That's what backup codes are for (step 6). Without them, recovery means contacting each service's support and proving your identity — slow and painful. Generate and store backup codes <b>today</b>.</p></div>
 </div>
-<div class="tip-box edu" style="margin-top:22px"><strong>💡 Priority order:</strong>
+<div class="tip-box edu" style="margin-top:22px"><strong> Priority order:</strong>
 <p style="margin-top:8px">Enable 2FA first on: <b>1)</b> your email (the master key to password resets), <b>2)</b> banking &amp; payment apps, <b>3)</b> social media, <b>4)</b> cloud storage, <b>5)</b> everything else important.</p></div>
 <section class="related-box" style="margin-top:36px">
 <h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">About This Tool</h2>
@@ -156,15 +156,15 @@ document.getElementById('tfalist').innerHTML=h;})();
 function tfaTgl(i,box){tfaDone[i]=box.checked;document.getElementById('tfachk'+i).classList.toggle('done',box.checked);
 var n=tfaDone.filter(Boolean).length;
 document.getElementById('tfabar').style.width=Math.round(n/TFA.length*100)+'%';
-document.getElementById('tfascore').textContent='Step '+n+' of '+TFA.length+(n===TFA.length?' — 🎉 2FA is set up. Well done!':'');}
+document.getElementById('tfascore').textContent='Step '+n+' of '+TFA.length+(n===TFA.length?' —  2FA is set up. Well done!':'');}
 </script>
 <footer class="footer"><div class="container">
-<div class="footer-brand">🛡️ CyberSec <span class="green">Hub</span></div>
+<div class="footer-brand"> CyberSec <span class="green">Hub</span></div>
 <p>Learn cybersecurity the ethical, legal way.</p>
 <div class="footer-links">
 <a href="../index.html">Home</a><a href="../about.html">About</a><a href="../contact.html">Contact</a><a href="../privacy.html">Privacy Policy</a><a href="../disclaimer.html">Disclaimer</a><a href="../terms.html">Terms</a>
 </div>
-<p class="foot-email">📧 <a href="mailto:contact@anwaardigital.com">contact@anwaardigital.com</a></p>
+<p class="foot-email"> <a href="mailto:contact@anwaardigital.com">contact@anwaardigital.com</a></p>
 <p class="copyright">© 2026 CyberSec Hub by Anwaar Digital. All rights reserved. Educational content only — always test with written permission.</p>
 <p class="copyright">Developed by <strong style="color:#00e676">Malik Anwaar</strong></p>
 </div></footer><a href="https://wa.me/923288317526" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.6 6.1 1.6h.1c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.6 1.2 1.2-4.5-.3-.4c-1-1.6-1.6-3.5-1.6-5.5C5 9.6 10.6 5 16 5s11 4.6 11 10-5.4 9.8-11 9.8zm6.1-7.3c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.8.1-.3-.2-1.4-.5-2.7-1.6-.9-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6L13 9.5c-.3-.8-.7-.7-1-.7h-.8c-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.5s1.5 4 1.7 4.3c.2.3 2.9 4.4 7 6.2 1 .4 1.7.7 2.3.9.9.3 1.8.2 2.5.2.8-.1 2.3-1 2.7-1.9.3-.9.3-1.7.2-1.9-.1-.1-.3-.2-.7-.4z"/></svg></a>

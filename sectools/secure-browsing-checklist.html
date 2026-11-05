@@ -68,8 +68,8 @@ table.cmp th{background:rgba(0,230,118,.08);color:var(--green)}
 </head>
 <body>
 <nav class="navbar"><div class="nav-inner">
-<a href="../index.html" class="brand"><span class="brand-icon">🛡️</span><span>CyberSec <span class="green">Hub</span></span></a>
-<div class="nav-actions"><button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark and light theme"><span class="theme-icon">☀️</span><span class="theme-label">Light</span></button><button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button></div>
+<a href="../index.html" class="brand"><span class="brand-icon"></span><span>CyberSec <span class="green">Hub</span></span></a>
+<div class="nav-actions"><button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark and light theme"><span class="theme-icon"></span><span class="theme-label">Light</span></button><button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button></div>
 <ul class="nav-links" id="navLinks">
 <li><a href="../index.html">Home</a></li>
 <li><a href="../index.html#basics">Basics</a></li>
@@ -80,20 +80,20 @@ table.cmp th{background:rgba(0,230,118,.08);color:var(--green)}
 </ul></div></nav>
 <script>
 (function(){try{if(localStorage.getItem('hubTheme')==='light'){document.body.classList.add('light');}}catch(e){}})();
-function toggleTheme(){var b=document.body;var light=b.classList.toggle('light');try{localStorage.setItem('hubTheme',light?'light':'dark');}catch(e){}var btn=document.querySelector('.theme-toggle');if(btn){var ic=btn.querySelector('.theme-icon');var lb=btn.querySelector('.theme-label');if(ic)ic.textContent=light?'🌙':'☀️';if(lb)lb.textContent=light?'Dark':'Light';}}
-(function(){var btn=document.querySelector('.theme-toggle');if(!btn)return;var light=document.body.classList.contains('light');var ic=btn.querySelector('.theme-icon');var lb=btn.querySelector('.theme-label');if(ic)ic.textContent=light?'🌙':'☀️';if(lb)lb.textContent=light?'Dark':'Light';})();
+function toggleTheme(){var b=document.body;var light=b.classList.toggle('light');try{localStorage.setItem('hubTheme',light?'light':'dark');}catch(e){}var btn=document.querySelector('.theme-toggle');if(btn){var ic=btn.querySelector('.theme-icon');var lb=btn.querySelector('.theme-label');if(ic)ic.textContent=light?'':'';if(lb)lb.textContent=light?'Dark':'Light';}}
+(function(){var btn=document.querySelector('.theme-toggle');if(!btn)return;var light=document.body.classList.contains('light');var ic=btn.querySelector('.theme-icon');var lb=btn.querySelector('.theme-label');if(ic)ic.textContent=light?'':'';if(lb)lb.textContent=light?'Dark':'Light';})();
 </script>
 <main class="tool-wrap">
-<h1>🌐 Secure Browsing Checklist</h1>
+<h1> Secure Browsing Checklist</h1>
 <p class="tool-sub">Your browser is where passwords, banking, and personal data live. Harden it with this interactive checklist — then test yourself on common browsing myths.</p>
-<div class="ethical-box"><strong>⚠️ Ethical Use Only:</strong> These tools are for <strong>defensive</strong> purposes — securing your own accounts and systems. Never use security knowledge against systems you do not own or lack written permission to test.</div>
+<div class="ethical-box"><strong> Ethical Use Only:</strong> These tools are for <strong>defensive</strong> purposes — securing your own accounts and systems. Never use security knowledge against systems you do not own or lack written permission to test.</div>
 <div class="tool-card">
 <div class="pbar"><div id="sbbar"></div></div>
 <div class="score-line" id="sbscore">0 of 10 completed</div>
 <div id="sblist"></div>
 </div>
 <div class="tool-card" style="margin-top:20px">
-<h3 style="margin-top:0">🧠 Browsing myths — true or false?</h3>
+<h3 style="margin-top:0"> Browsing myths — true or false?</h3>
 <div id="sbquiz"></div>
 <button class="btn btn-green" onclick="sbScore()" style="margin-top:8px">Check my score</button>
 <div id="sbres" style="margin-top:12px"></div>
@@ -153,7 +153,7 @@ document.getElementById('sblist').innerHTML=h;})();
 function sbTgl(i,box){sbDone[i]=box.checked;document.getElementById('sbchk'+i).classList.toggle('done',box.checked);
 var n=sbDone.filter(Boolean).length;
 document.getElementById('sbbar').style.width=Math.round(n/SBC.length*100)+'%';
-document.getElementById('sbscore').textContent=n+' of '+SBC.length+' completed'+(n===SBC.length?' — 🏆 Hardened browser!':'');}
+document.getElementById('sbscore').textContent=n+' of '+SBC.length+' completed'+(n===SBC.length?' —  Hardened browser!':'');}
 var SBQ=[
  ["Incognito/private mode hides your browsing from your internet provider.",false,"Private mode only prevents local history storage. Your ISP, employer, and visited websites still see your activity."],
  ["A padlock icon guarantees a website is legitimate and safe.",false,"HTTPS only encrypts the connection and verifies the domain — scammers get certificates too. Check the actual domain name."],
@@ -162,7 +162,7 @@ var SBQ=[
  ["Downloading a file is always safe if your antivirus is up to date.",false,"Antivirus is a safety net, not a guarantee — new malware appears constantly. Caution with downloads matters more."]];
 var sbAns=new Array(SBQ.length).fill(null);
 (function(){var h='';
-SBQ.forEach(function(q,i){h+='<div class="quiz-q"><p>'+(i+1)+'. '+q[0]+'</p><div class="quiz-opts"><button onclick="sbPick('+i+',true,this)">✅ True</button><button onclick="sbPick('+i+',false,this)">❌ False</button></div><div class="quiz-why" id="sbwhy'+i+'">💡 '+q[2]+'</div></div>';});
+SBQ.forEach(function(q,i){h+='<div class="quiz-q"><p>'+(i+1)+'. '+q[0]+'</p><div class="quiz-opts"><button onclick="sbPick('+i+',true,this)"> True</button><button onclick="sbPick('+i+',false,this)"> False</button></div><div class="quiz-why" id="sbwhy'+i+'"> '+q[2]+'</div></div>';});
 document.getElementById('sbquiz').innerHTML=h;})();
 function sbPick(i,v,btn){sbAns[i]=v;var q=btn.parentElement;
 Array.prototype.forEach.call(q.children,function(b){b.classList.remove('correct','wrong');});
@@ -170,15 +170,15 @@ if(v===SBQ[i][1])btn.classList.add('correct');else{btn.classList.add('wrong');q.
 document.getElementById('sbwhy'+i).style.display='block';
 Array.prototype.forEach.call(q.children,function(b){b.disabled=true;});}
 function sbScore(){var s=sbAns.filter(function(a,i){return a===SBQ[i][1];}).length;
-document.getElementById('sbres').innerHTML='<div class="verdict" style="background:rgba(0,230,118,.08);border:1px solid var(--border)">You scored <b>'+s+' / 5</b>. '+(s===5?'🏆 Myth-buster!':s>=3?'👍 Solid — review the explanations.':'📚 Re-read the myths above and try again.')+'</div>';}
+document.getElementById('sbres').innerHTML='<div class="verdict" style="background:rgba(0,230,118,.08);border:1px solid var(--border)">You scored <b>'+s+' / 5</b>. '+(s===5?' Myth-buster!':s>=3?' Solid — review the explanations.':' Re-read the myths above and try again.')+'</div>';}
 </script>
 <footer class="footer"><div class="container">
-<div class="footer-brand">🛡️ CyberSec <span class="green">Hub</span></div>
+<div class="footer-brand"> CyberSec <span class="green">Hub</span></div>
 <p>Learn cybersecurity the ethical, legal way.</p>
 <div class="footer-links">
 <a href="../index.html">Home</a><a href="../about.html">About</a><a href="../contact.html">Contact</a><a href="../privacy.html">Privacy Policy</a><a href="../disclaimer.html">Disclaimer</a><a href="../terms.html">Terms</a>
 </div>
-<p class="foot-email">📧 <a href="mailto:contact@anwaardigital.com">contact@anwaardigital.com</a></p>
+<p class="foot-email"> <a href="mailto:contact@anwaardigital.com">contact@anwaardigital.com</a></p>
 <p class="copyright">© 2026 CyberSec Hub by Anwaar Digital. All rights reserved. Educational content only — always test with written permission.</p>
 <p class="copyright">Developed by <strong style="color:#00e676">Malik Anwaar</strong></p>
 </div></footer><a href="https://wa.me/923288317526" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.6 6.1 1.6h.1c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.6 1.2 1.2-4.5-.3-.4c-1-1.6-1.6-3.5-1.6-5.5C5 9.6 10.6 5 16 5s11 4.6 11 10-5.4 9.8-11 9.8zm6.1-7.3c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.8.1-.3-.2-1.4-.5-2.7-1.6-.9-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6L13 9.5c-.3-.8-.7-.7-1-.7h-.8c-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.5s1.5 4 1.7 4.3c.2.3 2.9 4.4 7 6.2 1 .4 1.7.7 2.3.9.9.3 1.8.2 2.5.2.8-.1 2.3-1 2.7-1.9.3-.9.3-1.7.2-1.9-.1-.1-.3-.2-.7-.4z"/></svg></a>

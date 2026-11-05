@@ -44,9 +44,9 @@ footer{text-align:center;color:#5b6f66;font-size:13.5px;margin-top:28px}
 </style>
 </head>
 <body>
-<nav class="navbar"><a class="brand" href="../index.html">🛡️ CyberSec <span class="g">Hub</span></a><a class="nav" href="../index.html">Home</a><a class="nav" href="index.html">Missions</a><a class="nav" href="../learning-path.html">Learning Paths</a></nav>
+<nav class="navbar"><a class="brand" href="../index.html"> CyberSec <span class="g">Hub</span></a><a class="nav" href="../index.html">Home</a><a class="nav" href="index.html">Missions</a><a class="nav" href="../learning-path.html">Learning Paths</a></nav>
 <div class="wrap">
-<h1>🔓 Mission 5: <span class="g">Decode the Secret</span></h1>
+<h1> Mission 5: <span class="g">Decode the Secret</span></h1>
 <p class="sub"><span class="badge">EASY</span> &nbsp;<span class="pts">200 pts</span> &nbsp;·&nbsp; Decode hidden messages step by step and reveal the flag.</p>
 <div class="howto">
 <h3>How to play</h3>
@@ -98,10 +98,10 @@ catch(e){document.getElementById('b64out').textContent='Not valid Base64 — che
 function check1(){
 var v=(document.getElementById('ans1').value||'').trim().toUpperCase();
 if(v==='SHIFT3'){
-showMsg('msg1',true,'✅ Correct! SHIFT3 means: shift every letter by 3. Stage 2 unlocked.');
+showMsg('msg1',true,' Correct! SHIFT3 means: shift every letter by 3. Stage 2 unlocked.');
 document.getElementById('stage2').className='stage';
 }else{
-showMsg('msg1',false,'❌ Not quite. Tip: use the decoder tool above on U0hJRlQz.');
+showMsg('msg1',false,' Not quite. Tip: use the decoder tool above on U0hJRlQz.');
 }
 }
 function caesarBack(s,shift){
@@ -118,11 +118,11 @@ function check2(){
 var v=(document.getElementById('ans2').value||'').trim().toUpperCase();
 if(v==='FLAG{DECODED_2026}'){
 var w=document.getElementById('winBox');
-w.innerHTML='<h2>🎉 MISSION COMPLETE!</h2><p>You decoded every layer. Score: 200 / 200</p><p class="flag">FLAG{decoded_2026}</p><p style="margin-top:10px;color:#8fa39a"><a href="index.html" style="color:#00e676;text-decoration:underline">Back to all missions →</a></p>';
+w.innerHTML='<h2> MISSION COMPLETE!</h2><p>You decoded every layer. Score: 200 / 200</p><p class="flag">FLAG{decoded_2026}</p><p style="margin-top:10px;color:#8fa39a"><a href="index.html" style="color:#00e676;text-decoration:underline">Back to all missions →</a></p>';
 w.style.display='block';
-showMsg('msg2',true,'✅ Correct flag!');
+showMsg('msg2',true,' Correct flag!');
 }else{
-showMsg('msg2',false,'❌ Wrong flag. Tip: use the Caesar tool — shift IODJ{ghfrghg_2026} back by 3.');
+showMsg('msg2',false,' Wrong flag. Tip: use the Caesar tool — shift IODJ{ghfrghg_2026} back by 3.');
 }
 }
 </script>

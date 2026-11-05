@@ -48,11 +48,11 @@ footer{text-align:center;color:#5b6f66;font-size:13.5px;margin-top:28px}
 </style>
 </head>
 <body>
-<nav class="navbar"><a class="brand" href="../index.html">🛡️ CyberSec <span class="g">Hub</span></a><a class="nav" href="../index.html">Home</a><a class="nav" href="index.html">Missions</a><a class="nav" href="../learning-path.html">Learning Paths</a></nav>
+<nav class="navbar"><a class="brand" href="../index.html"> CyberSec <span class="g">Hub</span></a><a class="nav" href="../index.html">Home</a><a class="nav" href="index.html">Missions</a><a class="nav" href="../learning-path.html">Learning Paths</a></nav>
 <div class="wrap">
-<h1>🔐 Mission 3: <span class="g">Password Cracker</span></h1>
+<h1> Mission 3: <span class="g">Password Cracker</span></h1>
 <p class="sub"><span class="badge">MEDIUM</span> &nbsp;<span class="pts">400 pts</span> &nbsp;·&nbsp; Simulate an attack on weak passwords — and learn what actually stays strong.</p>
-<div class="warn">⚠️ Educational simulation with fake passwords. Never try to crack a real account — that is illegal. Only test passwords you own.</div>
+<div class="warn"> Educational simulation with fake passwords. Never try to crack a real account — that is illegal. Only test passwords you own.</div>
 <div class="howto">
 <h3>How to play</h3>
 <ol>
@@ -81,7 +81,7 @@ var marks=[null,null,null,null];
 function renderCards(){
 var html='';
 pws.forEach(function(p,i){
-html+='<div class="pwcard"><div class="pw">'+p.pw+'</div><div class="mark" id="mark'+i+'">Your guess: —</div><div class="pwbtns"><button id="b'+i+'f" onclick="mark('+i+',\'fast\')">⚡ Cracks fast</button><button id="b'+i+'s" onclick="mark('+i+',\'strong\')">🛡️ Stays strong</button></div></div>';
+html+='<div class="pwcard"><div class="pw">'+p.pw+'</div><div class="mark" id="mark'+i+'">Your guess: —</div><div class="pwbtns"><button id="b'+i+'f" onclick="mark('+i+',\'fast\')"> Cracks fast</button><button id="b'+i+'s" onclick="mark('+i+',\'strong\')"> Stays strong</button></div></div>';
 });
 document.getElementById('cards').innerHTML=html;
 }
@@ -119,10 +119,10 @@ var v=document.getElementById('verdict');
 var html='';
 if(correct===4){
 v.className='verdict ok';
-html='<h3>✅ Perfect! 4 / 4 correct — 400 points</h3><p>Lesson: length beats cleverness. A long passphrase or a random password stays strong; short and common ones fall fast.</p>';
+html='<h3> Perfect! 4 / 4 correct — 400 points</h3><p>Lesson: length beats cleverness. A long passphrase or a random password stays strong; short and common ones fall fast.</p>';
 v.innerHTML=html;v.style.display='block';
 var w=document.getElementById('winBox');
-w.innerHTML='<h2>🎉 MISSION COMPLETE!</h2><p class="flag">FLAG{strong_pass_2026}</p><p style="margin-top:10px;color:#8fa39a">Next mission: <a href="mission-4.html" style="color:#00e676;text-decoration:underline">Mission 4 — Spot the Vulnerability →</a></p>';
+w.innerHTML='<h2> MISSION COMPLETE!</h2><p class="flag">FLAG{strong_pass_2026}</p><p style="margin-top:10px;color:#8fa39a">Next mission: <a href="mission-4.html" style="color:#00e676;text-decoration:underline">Mission 4 — Spot the Vulnerability →</a></p>';
 w.style.display='block';
 }else{
 v.className='verdict bad';

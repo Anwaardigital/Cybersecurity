@@ -45,8 +45,8 @@
 </head>
 <body>
 <nav class="navbar"><div class="nav-inner">
-<a href="../index.html" class="brand"><span class="brand-icon">🛡️</span><span>CyberSec <span class="green">Hub</span></span></a>
-<div class="nav-actions"><button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark and light theme"><span class="theme-icon">☀️</span><span class="theme-label">Light</span></button><button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button></div>
+<a href="../index.html" class="brand"><span class="brand-icon"></span><span>CyberSec <span class="green">Hub</span></span></a>
+<div class="nav-actions"><button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark and light theme"><span class="theme-icon"></span><span class="theme-label">Light</span></button><button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button></div>
 <ul class="nav-links" id="navLinks">
 <li><a href="../index.html">Home</a></li>
 <li><a href="../index.html#basics">Basics</a></li>
@@ -62,12 +62,13 @@
 </ul></div></nav>
 <script>
 (function(){try{if(localStorage.getItem('hubTheme')==='light'){document.body.classList.add('light');}}catch(e){}})();
-function toggleTheme(){var b=document.body;var light=b.classList.toggle('light');try{localStorage.setItem('hubTheme',light?'light':'dark');}catch(e){}var btn=document.querySelector('.theme-toggle');if(!btn)return;var ic=btn.querySelector('.theme-icon');var lb=btn.querySelector('.theme-label');if(ic)ic.textContent=light?'🌙':'☀️';if(lb)lb.textContent=light?'Dark':'Light';}
-(function(){var btn=document.querySelector('.theme-toggle');if(!btn)return;var light=document.body.classList.contains('light');var ic=btn.querySelector('.theme-icon');var lb=btn.querySelector('.theme-label');if(ic)ic.textContent=light?'🌙':'☀️';if(lb)lb.textContent=light?'Dark':'Light';})();
-</script><div class="breadcrumb"><a href="../index.html">Home</a> / 🛡️ Cybersecurity Basics / Wipe Your Old Phone Safely Before Selling</div>
-<header class="article-hero"><span class="section-tag">🛡️ Cybersecurity Basics</span><h1>How to Wipe Your Old Phone Safely Before Selling or Giving It Away (2026 Guide)</h1><div class="article-meta">By CyberSec Hub · 9 min read</div></header>
+function toggleTheme(){var b=document.body;var light=b.classList.toggle('light');try{localStorage.setItem('hubTheme',light?'light':'dark');}catch(e){}var btn=document.querySelector('.theme-toggle');if(!btn)return;var ic=btn.querySelector('.theme-icon');var lb=btn.querySelector('.theme-label');if(ic)ic.textContent=light?'':'';if(lb)lb.textContent=light?'Dark':'Light';}
+(function(){var btn=document.querySelector('.theme-toggle');if(!btn)return;var light=document.body.classList.contains('light');var ic=btn.querySelector('.theme-icon');var lb=btn.querySelector('.theme-label');if(ic)ic.textContent=light?'':'';if(lb)lb.textContent=light?'Dark':'Light';})();
+</script><div class="breadcrumb"><a href="../index.html">Home</a> /  Cybersecurity Basics / Wipe Your Old Phone Safely Before Selling</div>
+<header class="article-hero"><span class="section-tag"> Cybersecurity Basics</span><h1>How to Wipe Your Old Phone Safely Before Selling or Giving It Away (2026 Guide)</h1>
+<p class="small">Last updated: 5 November 2026</p><div class="article-meta">By CyberSec Hub · 9 min read</div></header>
 <main class="article-body">
-<div class="ethical-box"><strong>⚠️ Ethical Use Only:</strong> This guide is for <strong>defensive protection only</strong> — how to remove your own data from your own device before you sell it, give it away, or recycle it. It does not teach recovering other people's data, bypassing locks, or accessing a device that is not yours.</div>
+<div class="ethical-box"><strong> Ethical Use Only:</strong> This guide is for <strong>defensive protection only</strong> — how to remove your own data from your own device before you sell it, give it away, or recycle it. It does not teach recovering other people's data, bypassing locks, or accessing a device that is not yours.</div>
 <p>Selling or giving away an old phone feels simple: back it up, reset it, hand it over. But a factory reset alone is not always the end of the story. On older phones, or phones where storage was not encrypted, traces of photos, messages, logins and documents can sometimes still be recovered from the storage after a reset. On modern phones the risk is much lower, because storage encryption is standard — but only if you follow the steps in the right order, sign out properly, and check the things a reset does not touch, like the memory card and your accounts.</p>
 <p>This guide gives you the full defensive checklist: back up first, sign out before you reset, handle encryption and the memory card, verify the reset, and know what to do if you already handed a phone over without doing all of this.</p>
 <h2>Step 1: Back up — and verify the backup</h2>
@@ -97,13 +98,13 @@ function toggleTheme(){var b=document.body;var light=b.classList.toggle('light')
 </ul>
 <h2>Step 6: Before you hand it over — the final check</h2>
 <ul>
-<li>☐ Backup verified on another device; authenticator accounts moved to the new phone</li>
-<li>☐ Main account and manufacturer account removed; banking, payment and messaging apps signed out</li>
-<li>☐ Find-my-device removed for this phone; linked devices list cleaned up</li>
-<li>☐ Storage encrypted (or overwrite step done on an older phone)</li>
-<li>☐ Factory reset completed; phone left at the first-time setup screen</li>
-<li>☐ SIM and memory card removed</li>
-<li>☐ Phone removed from your account's device list on the web, if it still appears there</li>
+<li> Backup verified on another device; authenticator accounts moved to the new phone</li>
+<li> Main account and manufacturer account removed; banking, payment and messaging apps signed out</li>
+<li> Find-my-device removed for this phone; linked devices list cleaned up</li>
+<li> Storage encrypted (or overwrite step done on an older phone)</li>
+<li> Factory reset completed; phone left at the first-time setup screen</li>
+<li> SIM and memory card removed</li>
+<li> Phone removed from your account's device list on the web, if it still appears there</li>
 </ul>
 <p>Be honest with the buyer about the phone's condition, battery health and any faults. A truthful sale protects you as well: a buyer who discovers a hidden fault later is far more likely to come back with a complaint than one who knew exactly what they were buying.</p>
 <h2>What if you already sold or gave it away?</h2>
@@ -112,12 +113,12 @@ function toggleTheme(){var b=document.body;var light=b.classList.toggle('light')
 </main>
 
 <footer class="footer"><div class="container">
-<div class="footer-brand">🛡️ CyberSec <span class="green">Hub</span></div>
+<div class="footer-brand"> CyberSec <span class="green">Hub</span></div>
 <p>Learn cybersecurity the ethical, legal way.</p>
 <div class="footer-links">
 <a href="../index.html">Home</a><a href="../about.html">About</a><a href="../contact.html">Contact</a><a href="../privacy.html">Privacy Policy</a><a href="../disclaimer.html">Disclaimer</a><a href="../terms.html">Terms</a>
 </div>
-<p class="foot-email">📧 <a href="mailto:contact@anwaardigital.com">contact@anwaardigital.com</a></p>
+<p class="foot-email"> <a href="mailto:contact@anwaardigital.com">contact@anwaardigital.com</a></p>
 <p class="copyright">Developed by <strong style="color:#00e676">Malik Anwaar</strong></p>
 <p class="copyright">© 2026 CyberSec Hub by Anwaar Digital. All rights reserved. Educational content only — always test with written permission.</p>
 </div></footer><a href="https://wa.me/923288317526" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.6 6.1 1.6h.1c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.6 1.2 1.2-4.5-.3-.4c-1-1.6-1.6-3.5-1.6-5.5C5 9.6 10.6 5 16 5s11 4.6 11 10-5.4 9.8-11 9.8zm6.1-7.3c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.8.1-.3-.2-1.4-.5-2.7-1.6-.9-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6L13 9.5c-.3-.8-.7-.7-1-.7h-.8c-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.5s1.5 4 1.7 4.3c.2.3 2.9 4.4 7 6.2 1 .4 1.7.7 2.3.9.9.3 1.8.2 2.5.2.8-.1 2.3-1 2.7-1.9.3-.9.3-1.7.2-1.9-.1-.1-.3-.2-.7-.4z" /></svg></a>
