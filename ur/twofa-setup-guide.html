@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<link rel="icon" type="image/png" sizes="192x192" href="https://anwaardigital.com/Cybersecurity/cyber-icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="https://anwaardigital.com/Cybersecurity/cyber-icon-512.png">
+<link rel="apple-touch-icon" href="https://anwaardigital.com/Cybersecurity/cyber-icon-192.png">
+<!-- Cookie consent (GDPR): Google Analytics loads only after you press Accept -->
+<script src="../cookie-consent.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>2FA سیٹ اپ گائیڈ — مرحلہ وار ٹو فیکٹر آتھنٹیکیشن آن کریں</title>
+<meta name="description" content="مفت انٹرایکٹو 2FA سیٹ اپ گائیڈ: آتھنٹیکیٹر ایپس، SMS کوڈز اور سیکیورٹی کیز کا ایماندارانہ موازنہ، پیش رفت چیک لسٹ کے ساتھ مرحلہ وار سیٹ اپ،">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="ur.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&amp;display=swap" rel="stylesheet">
+<link rel="canonical" href="https://anwaardigital.com/Cybersecurity/ur/twofa-setup-guide.html">
+<meta property="og:title" content="2FA سیٹ اپ گائیڈ — مرحلہ وار ٹو فیکٹر آتھنٹیکیشن آن کریں">
+<meta property="og:description" content="مفت انٹرایکٹو 2FA سیٹ اپ گائیڈ: آتھنٹیکیٹر ایپس، SMS کوڈز اور سیکیورٹی کیز کا ایماندارانہ موازنہ، پیش رفت چیک لسٹ کے ساتھ مرحلہ وار سیٹ اپ،">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://anwaardigital.com/Cybersecurity/ur/twofa-setup-guide.html">
+<meta property="og:site_name" content="CyberSec Hub">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://anwaardigital.com/Cybersecurity/cyber-icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "2FA سیٹ اپ گائیڈ",
+  "description": "مفت انٹرایکٹو 2FA سیٹ اپ گائیڈ: آتھنٹیکیٹر ایپس، SMS کوڈز اور سیکیورٹی کیز کا ایماندارانہ موازنہ، پیش رفت چیک لسٹ کے ساتھ مرحلہ وار سیٹ اپ، اور گم شدہ فون کا بیک اپ منصوبہ بنائیں۔",
+  "url": "https://anwaardigital.com/Cybersecurity/ur/twofa-setup-guide.html",
+  "applicationCategory": "SecurityApplication",
+  "operatingSystem": "Any",
+  "offers": {"@type": "Offer","price": "0"},
+  "author": {"@type": "Person","name": "Malik Muhammad Anwaar"}
+}
+</script>
+</head>
+<body class="page-sectool">
+<nav class="navbar"><div class="nav-inner">
+<a href="index.html" class="brand"><span class="brand-icon"></span><span>CyberSec <span class="green">Hub</span></span></a>
+<div class="nav-actions"><button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark and light theme"><span class="theme-icon"></span><span class="theme-label">Light</span></button><button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button></div>
+<ul class="nav-links" id="navLinks">
+<li><a href="index.html">ہوم</a></li>
+<li><a href="index.html#basics">بنیادی باتیں</a></li>
+<li><a href="index.html#hacking">اخلاقی ہیکنگ</a></li>
+<li><a href="index.html#tools">ٹولز گائیڈ</a></li>
+<li><a href="index.html#career">کیریئر</a></li>
+<li><a href="about.html">ہمارے بارے میں</a></li>
+</ul></div></nav>
+<script>
+(function(){try{if(localStorage.getItem('hubTheme')==='light'){document.body.classList.add('light');}}catch(e){}})();
+function toggleTheme(){var b=document.body;var light=b.classList.toggle('light');try{localStorage.setItem('hubTheme',light?'light':'dark');}catch(e){}var btn=document.querySelector('.theme-toggle');if(btn){var ic=btn.querySelector('.theme-icon');var lb=btn.querySelector('.theme-label');if(ic)ic.textContent=light?'':'';if(lb)lb.textContent=light?'Dark':'Light';}}
+(function(){var btn=document.querySelector('.theme-toggle');if(!btn)return;var light=document.body.classList.contains('light');var ic=btn.querySelector('.theme-icon');var lb=btn.querySelector('.theme-label');if(ic)ic.textContent=light?'':'';if(lb)lb.textContent=light?'Dark':'Light';})();
+</script>
+<main class="tool-wrap">
+<h1> 2FA سیٹ اپ گائیڈ</h1>
+<p class="tool-sub">ٹو فیکٹر آتھنٹیکیشن کا مطلب ہے کہ صرف چوری شدہ پاس ورڈ آپ کے اکاؤنٹ میں داخل ہونے کے لیے کافی نہیں۔ اس انٹرایکٹو گائیڈ پر عمل کر کے اسے درست طریقے سے فعال کریں — اور یقینی بنائیں کہ آپ خود کو کبھی باہر نہ کر لیں۔</p>
+<div class="ethical-box"><strong> صرف اخلاقی استعمال:</strong> یہ ٹولز صرف <strong>دفاعی</strong> مقاصد کے لیے ہیں — اپنے اکاؤنٹس اور سسٹمز کو محفوظ کرنے کے لیے۔ سیکیورٹی کا علم کبھی ان سسٹمز کے خلاف استعمال نہ کریں جو آپ کے نہیں ہیں یا جن کی جانچ کی تحریری اجازت آپ کے پاس نہیں ہے۔</div>
+<div class="tool-card edu">
+<h3 style="margin-top:0"> طریقے، ایماندارانہ موازنہ</h3>
+<table class="cmp"><tr><th>طریقہ</th><th>سیکیورٹی</th><th>نوٹس</th></tr>
+<tr><td><b>آتھنٹیکیٹر ایپ</b><br>(کوڈز ہر 30 سیکنڈ میں تازہ ہوتے ہیں)</td><td> مضبوط</td><td>مفت، آف لائن کام کرتی ہے۔ زیادہ تر لوگوں کے لیے بہترین توازن۔</td></tr>
+<tr><td><b>ہارڈ ویئر سیکیورٹی کی</b><br>(USB/NFC)</td><td> سب سے مضبوط</td><td>فشنگ کا تقریباً مکمل مقابلہ کرتی ہے۔ پیسے لگتے ہیں؛ ایک اضافی رکھیں۔</td></tr>
+<tr><td><b>SMS کوڈز</b></td><td> بنیادی</td><td>کچھ نہ ہونے سے بہتر، لیکن SIM-swap حملوں کا شکار۔ صرف اس صورت میں استعمال کریں جب کچھ اور نہ ملے۔</td></tr>
+<tr><td><b>ای میل کوڈز</b></td><td> بنیادی</td><td>صرف اتنا محفوظ جتنا آپ کا ای میل اکاؤنٹ — جس پر خود 2FA ہونا چاہیے۔</td></tr></table>
+</div>
+<div class="tool-card" style="margin-top:20px">
+<h3 style="margin-top:0"> مرحلہ وار: ایپ پر مبنی 2FA فعال کریں</h3>
+<div class="pbar"><div id="tfabar"></div></div>
+<div class="score-line" id="tfascore">7 میں سے مرحلہ 0</div>
+<div id="tfalist"></div>
+<div class="flag info" style="margin-top:14px"><b> فون گم ہو گیا؟</b><p>بیک اپ کوڈز اسی لیے ہیں (مرحلہ 6)۔ ان کے بغیر، بحالی کا مطلب ہر سروس کی سپورٹ سے رابطہ کرنا اور اپنی شناخت ثابت کرنا ہے — سست اور تکلیف دہ۔ بیک اپ کوڈز <b>آج ہی</b> بنائیں اور محفوظ کریں۔</p></div>
+</div>
+<div class="tip-box edu" style="margin-top:22px"><strong> ترجیح کی ترتیب:</strong>
+<p style="margin-top:8px">2FA پہلے ان پر فعال کریں: <b>1)</b> آپ کا ای میل (پاس ورڈ ری سیٹ کی ماسٹر چابی)، <b>2)</b> بینکنگ اور ادائیگی ایپس، <b>3)</b> سوشل میڈیا، <b>4)</b> کلاؤڈ اسٹوریج، <b>5)</b> باقی سب اہم چیزیں۔</p></div>
+<section class="related-box" style="margin-top:36px">
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">اس ٹول کے بارے میں</h2>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">یہ ٹول کیا کرتا ہے</h2>
+<p>ٹو فیکٹر آتھنٹیکیشن سیٹ اپ گائیڈ آپ کو دکھاتی ہے کہ اپنے آن لائن اکاؤنٹس میں تحفظ کی دوسری تہہ کیسے شامل کریں۔ ٹو فیکٹر آتھنٹیکیشن (2FA) کا مطلب ہے کہ اگر کوئی آپ کا پاس ورڈ چوری بھی کر لے، تو وہ شناخت کے دوسرے ثبوت کے بغیر لاگ ان نہیں کر سکتا — عام طور پر آپ کے فون کی ایپ سے وقت پر مبنی کوڈ یا جسمانی سیکیورٹی کی۔</p>
+<p>یہ گائیڈ 2FA کے اہم طریقے بتاتی ہے — آتھنٹیکیٹر ایپس، SMS کوڈز، اور ہارڈ ویئر سیکیورٹی کیز — بتاتی ہے کہ کون سا سب سے مضبوط ہے، اور آپ کو ان اکاؤنٹس پر 2FA فعال کرنے میں رہنمائی کرتی ہے جو سب سے اہم ہیں: ای میل، بینکنگ، سوشل میڈیا، اور کلاؤڈ اسٹوریج۔</p>
+<p>یہ ہر اس شخص کے لیے ہے جس کے آن لائن اکاؤنٹس ہیں، یعنی سب کے لیے۔ 2FA فعال کرنا سب سے زیادہ اثر والے دفاعی اقدامات میں سے ایک ہے، اور یہ گائیڈ اسے ترجیح دیتی ہے: اپنے ای میل اکاؤنٹ سے شروع کریں، کیونکہ ای میل تقریباً ہر چیز کے پاس ورڈ ری سیٹ کو کنٹرول کرتا ہے۔</p>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">اسے کیسے استعمال کریں</h2>
+<ol>
+<li>شروع کرنے سے پہلے اپنے فون پر معتبر آتھنٹیکیٹر ایپ انسٹال کریں۔</li>
+<li>اپنے ای میل اکاؤنٹ سے شروع کریں: اس کی سیکیورٹی سیٹنگز کھولیں اور "two-factor" یا "two-step verification" تلاش کریں۔</li>
+<li>جب پیش کیا جائے تو آتھنٹیکیٹر ایپ والا آپشن چنیں۔ اپنی ایپ سے QR کوڈ اسکین کریں اور تصدیق کے لیے کوڈ داخل کریں۔</li>
+<li>بیک اپ یا ریکوری کوڈز جو سروس آپ کو دکھائے محفوظ کریں — انہیں پرنٹ کریں یا کہیں محفوظ اور آف لائن جگہ رکھیں۔</li>
+<li>اپنے دیگر اہم اکاؤنٹس کے لیے دہرائیں: بینکنگ، سوشل میڈیا، کلاؤڈ اسٹوریج، اور کوئی بھی کام کے اکاؤنٹس۔</li>
+<li>سیٹنگز صفحہ بند کرنے سے پہلے ایک بار لاگ ان جانچیں تاکہ یقینی ہو کہ سب کچھ کام کرتا ہے۔</li>
+</ol>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">دفاعی سیکیورٹی تجاویز</h2>
+<ul>
+<li><strong>SMS پر آتھنٹیکیٹر ایپس کو ترجیح دیں۔</strong> SMS کوڈز SIM-swapping حملوں سے روکے جا سکتے ہیں؛ ایپ پر مبنی کوڈز آپ کے آلے پر رہتے ہیں۔</li>
+<li><strong>سیکیورٹی کیز سب سے مضبوط ہیں۔</strong> اپنے اہم ترین اکاؤنٹس کے لیے، ہارڈ ویئر سیکیورٹی کی (FIDO2) کسی بھی کوڈ سے بہتر فشنگ کا مقابلہ کرتی ہے۔</li>
+<li><strong>بیک اپ کوڈز محفوظ کریں۔</strong> اگر آپ بیک اپ کوڈز کے بغیر فون گم کر دیں تو آپ اپنے ہی اکاؤنٹس سے باہر ہو سکتے ہیں۔ انہیں آف لائن محفوظ جگہ رکھیں۔</li>
+<li><strong>2FA کوڈز شیئر نہ کریں۔</strong> کوئی جائز کمپنی آپ کے موجودہ کوڈ کے لیے کبھی کال یا پیغام نہیں کرے گی۔ جو بھی مانگے وہ حملہ آور ہے۔</li>
+<li><strong>پہلے ای میل کی حفاظت کریں۔</strong> آپ کا ای میل اکاؤنٹ آپ کے تقریباً ہر دوسرے پاس ورڈ کو ری سیٹ کر سکتا ہے، اس لیے یہ کسی بھی چیز سے پہلے 2FA کا مستحق ہے۔</li>
+</ul>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">اکثر پوچھے جانے والے سوالات</h2>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">اگر میں آتھنٹیکیٹر ایپ والا فون گم کر دوں تو کیا ہوگا؟</h3>
+<p>سیٹ اپ کے دوران محفوظ کیے گئے بیک اپ کوڈز سے لاگ ان کریں، پھر اپنے نئے فون پر 2FA سیٹ کریں۔ کچھ آتھنٹیکیٹر ایپس خفیہ شدہ کلاؤڈ بیک اپ بھی دیتی ہیں — ضرورت پڑنے سے پہلے اسے فعال کریں۔</p>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">کیا SMS ٹو فیکٹر کچھ نہ ہونے سے بہتر ہے؟</h3>
+<p>جی ہاں۔ SMS 2FA ایپ پر مبنی کوڈز سے کمزور ہے، لیکن یہ پھر بھی خودکار حملوں کی بڑی اکثریت کو روکتا ہے۔ اگر SMS ہی واحد آپشن ہے جو سائٹ دیتی ہے، تو 2FA کو مکمل چھوڑنے کے بجائے اسے استعمال کریں۔</p>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">کیا مجھے ہر اکاؤنٹ پر 2FA چاہیے؟</h3>
+<p>ترجیح دیں: ای میل، بینکنگ اور ادائیگی ایپس، سوشل میڈیا، کلاؤڈ اسٹوریج، اور کام کے اکاؤنٹس۔ یہ وہ اکاؤنٹس ہیں جن کے سمجھوتے سے سب سے زیادہ نقصان ہوتا ہے۔</p>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">کیا 2FA کو نظرانداز کیا جا سکتا ہے؟</h3>
+<p>پرعزم حملہ آوروں کے پاس کچھ طریقوں کے خلاف تکنیکیں ہیں، خاص طور پر SMS۔ یہی وجہ ہے کہ آتھنٹیکیٹر ایپس اور سیکیورٹی کیز کی سفارش کی جاتی ہے — یہ معیار کو زیادہ تر حملہ آوروں کی پہنچ سے کہیں اوپر اٹھا دیتی ہیں۔</p>
+</section>
+
+</main>
+<script>
+
+var TFA=[
+ ["آتھنٹیکیٹر ایپ انسٹال کریں","اپنے فون پر کوئی بھی معتبر آتھنٹیکیٹر ایپ۔ یہ 6 ہندسوں والے کوڈز بناتی ہے جو ہر 30 سیکنڈ میں بدلتے ہیں — انٹرنیٹ کی ضرورت نہیں۔"],
+ ["اکاؤنٹ کی سیکیورٹی سیٹنگز کھولیں","ویب سائٹ پر (ای میل کے لنک سے نہیں — پتہ خود ٹائپ کریں)، Settings → Security → Two-factor authentication پر جائیں۔"],
+ ["'Authenticator app' چنیں اور QR کوڈ ظاہر کریں","سائٹ QR کوڈ دکھاتی ہے (اور عام طور پر ٹیکسٹ سیٹ اپ کی)۔ یہ صفحہ کھلا رکھیں۔"],
+ ["اپنی آتھنٹیکیٹر ایپ سے QR کوڈ اسکین کریں","اپنا فون کوڈ کی طرف کریں۔ اکاؤنٹ ایپ میں ظاہر ہوتا ہے اور 6 ہندسوں والے کوڈز دکھانے لگتا ہے۔ ٹیکسٹ سیٹ اپ کی بھی کہیں محفوظ جگہ محفوظ کریں۔"],
+ ["تصدیق کے لیے موجودہ کوڈ داخل کریں","ایپ سے 6 ہندسوں والا کوڈ ویب سائٹ میں ٹائپ کریں۔ اگر قبول کر لے تو 2FA اب آن ہے۔"],
+ ["بیک اپ کوڈز بنائیں اور محفوظ کریں","سائٹ ایک بار استعمال ہونے والے بیک اپ کوڈز دیتی ہے — انہیں پرنٹ کریں یا کہیں محفوظ اور آف لائن جگہ محفوظ کریں (صرف اسی فون پر نہیں)۔ اگر فون گم ہو جائے تو یہی آپ کی زندگی کی ڈور ہیں۔"],
+ ["لاگ آؤٹ/لاگ ان جانچیں","لاگ آؤٹ کریں اور دوبارہ لاگ ان کریں تاکہ تصدیق ہو کہ دوسرا عنصر واقعی درکار ہے۔"]];
+var tfaDone=new Array(TFA.length).fill(false);
+(function(){var h='';
+TFA.forEach(function(s,i){h+='<label class="chk" id="tfachk'+i+'"><input type="checkbox" onchange="tfaTgl('+i+',this)"><span><b>مرحلہ '+(i+1)+': '+s[0]+'</b><small>'+s[1]+'</small></span></label>';});
+document.getElementById('tfalist').innerHTML=h;})();
+function tfaTgl(i,box){tfaDone[i]=box.checked;document.getElementById('tfachk'+i).classList.toggle('done',box.checked);
+var n=tfaDone.filter(Boolean).length;
+document.getElementById('tfabar').style.width=Math.round(n/TFA.length*100)+'%';
+document.getElementById('tfascore').textContent=TFA.length+' میں سے مرحلہ '+n+(n===TFA.length?' —  2FA سیٹ ہو گیا۔ شاباش!':'');}
+</script>
+<footer class="footer"><div class="container">
+<div class="footer-brand"> CyberSec <span class="green">Hub</span></div>
+<p>سائبر سیکیورٹی سیکھیں — اخلاقی اور قانونی طریقے سے۔</p>
+<div class="footer-links">
+<a href="index.html">ہوم</a><a href="about.html">ہمارے بارے میں</a><a href="contact.html">رابطہ</a><a href="privacy.html">پرائیویسی پالیسی</a><a href="disclaimer.html">ڈسکلیمر</a><a href="terms.html">شرائط</a>
+</div>
+<p class="foot-email"> <a href="mailto:contact@anwaardigital.com">contact@anwaardigital.com</a></p>
+<p class="copyright">© 2026 CyberSec Hub by Anwaar Digital. جملہ حقوق محفوظ ہیں۔ صرف تعلیمی مواد — ہمیشہ تحریری اجازت سے ٹیسٹ کریں۔</p>
+<p class="copyright">تیار کردہ <strong style="color:#00e676">ملک محمد انوار</strong></p>
+</div></footer><a href="https://wa.me/923288317526" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.6 6.1 1.6h.1c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.6 1.2 1.2-4.5-.3-.4c-1-1.6-1.6-3.5-1.6-5.5C5 9.6 10.6 5 16 5s11 4.6 11 10-5.4 9.8-11 9.8zm6.1-7.3c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.8.1-.3-.2-1.4-.5-2.7-1.6-.9-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6L13 9.5c-.3-.8-.7-.7-1-.7h-.8c-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.5s1.5 4 1.7 4.3c.2.3 2.9 4.4 7 6.2 1 .4 1.7.7 2.3.9.9.3 1.8.2 2.5.2.8-.1 2.3-1 2.7-1.9.3-.9.3-1.7.2-1.9-.1-.1-.3-.2-.7-.4z"/></svg></a>
+
+<!-- Back to top button -->
+<button id="backToTop" aria-label="Back to top" title="Back to top"
+style="position:fixed;bottom:24px;right:24px;width:48px;height:48px;border-radius:50%;border:none;background:#00e676;color:#050b14;font-size:22px;line-height:1;cursor:pointer;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s,transform .2s;box-shadow:0 4px 12px rgba(0,0,0,.35);z-index:9999;padding:0;">&#8593;</button>
+<script>
+(function(){var b=document.getElementById('backToTop');if(!b)return;
+window.addEventListener('scroll',function(){var s=window.pageYOffset||document.documentElement.scrollTop;
+if(s>300){b.style.opacity='1';b.style.visibility='visible';}else{b.style.opacity='0';b.style.visibility='hidden';}},{passive:true});
+b.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+b.addEventListener('mouseenter',function(){b.style.transform='scale(1.12)';});
+b.addEventListener('mouseleave',function(){b.style.transform='scale(1)';});})();
+</script>
+
+<a id="anwaar-ai-btn" href="https://anwaardigital.com/ai/?site=hub" target="_blank" rel="noopener" aria-label="Anwaar AI" style="position:fixed;right:16px;bottom:16px;z-index:9999;display:flex;align-items:center;background:#1a2b4a;color:#fff;text-decoration:none;font-family:system-ui,-apple-system,sans-serif;font-size:15px;font-weight:600;padding:12px 16px;border-radius:999px;box-shadow:0 4px 16px rgba(0,0,0,.35)">✦ Anwaar AI</a>
+</body></html>

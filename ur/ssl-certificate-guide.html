@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<link rel="icon" type="image/png" sizes="192x192" href="https://anwaardigital.com/Cybersecurity/cyber-icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="https://anwaardigital.com/Cybersecurity/cyber-icon-512.png">
+<link rel="apple-touch-icon" href="https://anwaardigital.com/Cybersecurity/cyber-icon-192.png">
+<!-- Cookie consent (GDPR): Google Analytics loads only after you press Accept -->
+<script src="../cookie-consent.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>SSL سرٹیفکیٹ گائیڈ — محفوظ ویب سائٹس کی تصدیق سیکھیں</title>
+<meta name="description" content="مفت انٹرایکٹو SSL/TLS سرٹیفکیٹ گائیڈ: سیکھیں کہ HTTPS کا واقعی کیا مطلب ہے، Chrome، Firefox، Safari اور Edge میں کسی سائٹ کا سرٹیفکیٹ کیسے چیک کریں، اور">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="ur.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&amp;display=swap" rel="stylesheet">
+<link rel="canonical" href="https://anwaardigital.com/Cybersecurity/ur/ssl-certificate-guide.html">
+<meta property="og:title" content="SSL سرٹیفکیٹ گائیڈ — محفوظ ویب سائٹس کی تصدیق سیکھیں">
+<meta property="og:description" content="مفت انٹرایکٹو SSL/TLS سرٹیفکیٹ گائیڈ: سیکھیں کہ HTTPS کا واقعی کیا مطلب ہے، Chrome، Firefox، Safari اور Edge میں کسی سائٹ کا سرٹیفکیٹ کیسے چیک کریں، اور">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://anwaardigital.com/Cybersecurity/ur/ssl-certificate-guide.html">
+<meta property="og:site_name" content="CyberSec Hub">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://anwaardigital.com/Cybersecurity/cyber-icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "SSL Certificate Guide",
+  "description": "مفت انٹرایکٹو SSL/TLS سرٹیفکیٹ گائیڈ: سیکھیں کہ HTTPS کا واقعی کیا مطلب ہے، Chrome، Firefox، Safari اور Edge میں کسی سائٹ کا سرٹیفکیٹ کیسے چیک کریں، اور کوئز سے خود کو آزمائیں۔",
+  "url": "https://anwaardigital.com/Cybersecurity/ur/ssl-certificate-guide.html",
+  "applicationCategory": "SecurityApplication",
+  "operatingSystem": "Any",
+  "offers": {"@type": "Offer","price": "0"},
+  "author": {"@type": "Person","name": "Malik Muhammad Anwaar"}
+}
+</script>
+</head>
+<body class="page-sectool">
+<nav class="navbar"><div class="nav-inner">
+<a href="index.html" class="brand"><span class="brand-icon"></span><span>CyberSec <span class="green">Hub</span></span></a>
+<div class="nav-actions"><button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark and light theme"><span class="theme-icon"></span><span class="theme-label">Light</span></button><button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button></div>
+<ul class="nav-links" id="navLinks">
+<li><a href="index.html">ہوم</a></li>
+<li><a href="index.html#basics">بنیادی باتیں</a></li>
+<li><a href="index.html#hacking">اخلاقی ہیکنگ</a></li>
+<li><a href="index.html#tools">ٹولز گائیڈ</a></li>
+<li><a href="index.html#career">کیریئر</a></li>
+<li><a href="about.html">ہمارے بارے میں</a></li>
+</ul></div></nav>
+<script>
+(function(){try{if(localStorage.getItem('hubTheme')==='light'){document.body.classList.add('light');}}catch(e){}})();
+function toggleTheme(){var b=document.body;var light=b.classList.toggle('light');try{localStorage.setItem('hubTheme',light?'light':'dark');}catch(e){}var btn=document.querySelector('.theme-toggle');if(btn){var ic=btn.querySelector('.theme-icon');var lb=btn.querySelector('.theme-label');if(ic)ic.textContent=light?'':'';if(lb)lb.textContent=light?'Dark':'Light';}}
+(function(){var btn=document.querySelector('.theme-toggle');if(!btn)return;var light=document.body.classList.contains('light');var ic=btn.querySelector('.theme-icon');var lb=btn.querySelector('.theme-label');if(ic)ic.textContent=light?'':'';if(lb)lb.textContent=light?'Dark':'Light';})();
+</script>
+<main class="tool-wrap">
+<h1> <a href="glossary.html#gl-ssl-tls">SSL</a> <a href="glossary.html#gl-certificate-digital">سرٹیفکیٹ</a> گائیڈ</h1>
+<p class="tool-sub">تالے کا واقعی کیا مطلب ہے؟ سیکھیں کہ <a href="glossary.html#gl-https">HTTPS</a> اور سرٹیفکیٹ کیسے کام کرتے ہیں، کسی بھی سائٹ کا سرٹیفکیٹ خود کیسے چیک کریں، اور مختصر کوئز سے اپنے علم کو آزمائیں۔</p>
+<div class="ethical-box"><strong> صرف اخلاقی استعمال:</strong> یہ ٹولز صرف <strong>دفاعی</strong> مقاصد کے لیے ہیں — اپنے اکاؤنٹس اور سسٹمز کو محفوظ کرنے کے لیے۔ سیکیورٹی کا علم کبھی ان سسٹمز کے خلاف استعمال نہ کریں جو آپ کے نہیں ہیں یا جن کی جانچ کی تحریری اجازت آپ کے پاس نہیں ہے۔</div>
+<div class="tool-card edu">
+<h3 style="margin-top:0"> 30 سیکنڈ میں HTTPS</h3>
+<p>جب آپ <b>https://</b> اور تالا دیکھیں، تو آپ کے براؤزر نے تین کام کیے ہیں:</p>
+<ol>
+<li><b>خفیہ</b> کنکشن — نیٹ ورک پر کوئی (کیفے WiFi، آپ کا ISP) یہ نہیں پڑھ سکتا جو آپ بھیجتے ہیں۔</li>
+<li><b>تصدیق</b> سائٹ کی — سائٹ نے ثابت کیا کہ وہ اس ڈومین نام کی مالک ہے، ایک قابلِ اعتماد سرٹیفکیٹ اتھارٹی (CA) کے جاری کردہ ڈیجیٹل <b>سرٹیفکیٹ</b> سے۔</li>
+<li><b>محفوظ سالمیت</b> — ڈیٹا کو منتقلی کے دوران خفیہ طور پر بدلا نہیں جا سکتا۔</li>
+</ol>
+<p><b>تالے کا مطلب یہ نہیں:</b> کہ سائٹ ایماندار ہے۔ دھوکے باز بھی مفت سرٹیفکیٹ حاصل کر سکتے ہیں۔ <code>paypa1-login.tk</code> پر تالا پھر بھی دھوکہ ہے — بس خفیہ شدہ۔ ہمیشہ چیک کریں کہ سائٹ <b>کون</b> ہونے کا دعویٰ کرتی ہے، صرف تالا نہیں۔</p>
+<h3> سرٹیفکیٹ کیسے چیک کریں (کسی بھی سائٹ پر آزمائیں)</h3>
+<ul>
+<li><b>Chrome / Edge:</b> ایڈریس بار کے بائیں طرف تالے پر کلک کریں (یا "Not secure") → <i>Connection is secure</i> → <i>Certificate is valid</i>۔</li>
+<li><b>Firefox:</b> تالے پر کلک کریں → <i>Connection secure</i> → <i>More information</i> → <i>View Certificate</i>۔</li>
+<li><b>Safari:</b> تالے پر کلک کریں → <i>Show Certificate</i>۔</li>
+</ul>
+<h3> سرٹیفکیٹ کے فیلڈز، وضاحت کے ساتھ</h3>
+<table class="cmp"><tr><th>فیلڈ</th><th>یہ آپ کو کیا بتاتا ہے</th></tr>
+<tr><td><b>مضمون / عام نام</b></td><td>سرٹیفکیٹ کس کو جاری کیا گیا — سائٹ کے ڈومین سے میل کھانا چاہیے۔</td></tr>
+<tr><td><b>جاری کنندہ (CA)</b></td><td>کون سی سرٹیفکیٹ اتھارٹی سائٹ کی ضمانت دیتی ہے (مثلاً Let's Encrypt، DigiCert)۔</td></tr>
+<tr><td><b>صحیح از / تا</b></td><td>وہ تاریخیں جن میں سرٹیفکیٹ صحیح ہے۔ ختم شدہ = براؤزر وارننگ۔</td></tr>
+<tr><td><b>مضمون کے متبادل نام</b></td><td>تمام ڈومین نام جن کا یہ سرٹیفکیٹ احاطہ کرتا ہے۔</td></tr>
+<tr><td><b>دستخط کا الگورتھم</b></td><td>استعمال شدہ خفیہ نگاری (مثلاً SHA-256 with RSA) — ثابت کرتی ہے کہ یہ جعلی نہیں۔</td></tr></table>
+<h3> حساس معلومات داخل کرنے سے پہلے، تصدیق کریں</h3>
+<ul>
+<li>ایڈریس بار <b>https://</b> اور تالا بغیر کسی وارننگ کے دکھاتا ہے۔</li>
+<li><b>ڈومین نام بالکل درست ہے</b> — کوئی مشابہ نام نہیں (ہمارا <a href="phishing-url-analyzer.html" style="color:var(--green)">فشنگ URL تجزیہ کار</a> دیکھیں)۔</li>
+<li>آپ <b>خود وہاں گئے</b> (ٹائپ کیا یا بک مارک استعمال کیا)، پیغام کے لنک سے نہیں۔</li>
+<li>کوئی براؤزر وارننگ نہیں جیسے "Your connection is not private"۔</li>
+</ul>
+</div>
+<div class="tool-card" style="margin-top:20px">
+<h3 style="margin-top:0"> خود کو آزمائیں — 5 سوالات</h3>
+<div id="sslquiz"></div>
+<button class="btn btn-green" onclick="sslScore()" style="margin-top:8px">میرا اسکور دیکھیں</button>
+<div id="sslres" style="margin-top:12px"></div>
+</div>
+<section class="related-box" style="margin-top:36px">
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">اس ٹول کے بارے میں</h2>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">یہ ٹول کیا کرتا ہے</h2>
+<p>SSL سرٹیفکیٹ گائیڈ بتاتی ہے کہ آپ کے براؤزر میں تالے کا واقعی کیا مطلب ہے اور، سائٹ مالکان کے لیے، اپنی ویب سائٹ کے لیے سرٹیفکیٹ کیسے حاصل اور برقرار رکھا جائے۔ SSL/TLS سرٹیفکیٹ HTTPS کو فعال کرتے ہیں: یہ براؤزر اور سرور کے درمیان ٹریفک کو خفیہ کرتے ہیں اور ثابت کرتے ہیں کہ سائٹ وہی ہے جو وہ ہونے کا دعویٰ کرتی ہے۔</p>
+<p>زائرین کے لیے، گائیڈ بتاتی ہے کہ سرٹیفکیٹ وارننگ کی تشریح کیسے کریں، "not secure" کا کیا مطلب ہے، اور HTTPS کے بغیر صفحے پر حساس معلومات کیوں کبھی داخل نہ کریں۔ سائٹ مالکان کے لیے، یہ مفت سرٹیفکیٹ حاصل کرنا، اسے انسٹال کرنا، خودکار تجدید بنانا، اور تمام ٹریفک کو HTTPS پر بھیجنا شامل ہے۔</p>
+<p>یہ روزمرہ کے ویب صارفین اور بلاگرز، فری لانسرز اور چھوٹے کاروباروں کے لیے ہے جو اپنی سائٹس چلاتے ہیں۔ سرٹیفکیٹ ایک دفاعی ٹیکنالوجی ہیں: یہ آپ کے زائرین کا ڈیٹا منتقلی میں محفوظ رکھتے ہیں اور اب کسی بھی جائز ویب سائٹ کے لیے بنیادی توقع ہیں۔</p>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">اسے کیسے استعمال کریں</h2>
+<ol>
+<li><strong>زائر کے طور پر:</strong> سیکھیں کہ تالے کا نشان اور سرٹیفکیٹ کی تفصیلات کیا دکھاتی ہیں، اور براؤزر سرٹیفکیٹ وارننگ کو رکنے کے نشان سمجھیں، نہ کہ کلک کر کے نظرانداز کرنے والی پریشانی۔</li>
+<li><strong>سائٹ مالک کے طور پر:</strong> قابلِ اعتماد سرٹیفکیٹ اتھارٹی سے سرٹیفکیٹ حاصل کریں — مفت خودکار آپشن موجود ہیں اور وسیع پیمانے پر استعمال ہوتے ہیں۔</li>
+<li>اپنے فراہم کنندہ کی گائیڈ کے مطابق سرٹیفکیٹ اپنی ہوسٹنگ پر انسٹال کریں، پھر خودکار تجدید فعال کریں تاکہ یہ کبھی غیر متوقع طور پر ختم نہ ہو۔</li>
+<li>تمام HTTP ٹریفک کو HTTPS پر بھیجیں اور چیک کریں کہ ہر صفحہ، تصویر اور اسکرپٹ محفوظ طریقے سے لوڈ ہو (کوئی "mixed content" نہیں)۔</li>
+<li>اپنے سیٹ اپ کو آزاد SSL چیکر سے جانچیں اور جو مسائل وہ بتائے انہیں درست کریں۔</li>
+<li>کیلنڈر یاد دہانی لگائیں کہ تجدید کام کر رہی ہے، خودکار نظام کے باوجود بھی۔</li>
+</ol>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">دفاعی سیکیورٹی تجاویز</h2>
+<ul>
+<li><strong>سرٹیفکیٹ وارننگ کو کبھی لاپرواہی سے نظرانداز نہ کریں۔</strong> وارننگ کا مطلب ختم شدہ سرٹیفکیٹ ہو سکتا ہے — یا کوئی حملہ آور آپ کا کنکشن روک رہا ہو۔ اہم سائٹس پر رکیں اور تحقیق کریں۔</li>
+<li><strong>HTTPS ضروری ہے لیکن کافی نہیں۔</strong> فشنگ سائٹ کا بھی درست سرٹیفکیٹ ہو سکتا ہے۔ خفیہ کاری اور درست ڈومین ہی سائٹ کو قابلِ اعتماد بناتے ہیں۔</li>
+<li><strong>تجدید خودکار کریں۔</strong> ختم شدہ سرٹیفکیٹ سائٹس کو آف لائن کر دیتے ہیں اور اعتماد ختم کرتے ہیں۔ نگرانی کے ساتھ خودکار تجدید قابلِ بھروسہ طریقہ ہے۔</li>
+<li><strong>پورا صفحہ محفوظ کریں۔</strong> HTTPS صفحے پر ایک غیر محفوظ تصویر یا اسکرپٹ ("mixed content") تحفظ کو کمزور کر دیتی ہے۔ سب کچھ HTTPS پر پیش کریں۔</li>
+<li><strong>نجی چابیاں نجی رکھیں۔</strong> سرٹیفکیٹ کی نجی چابی کبھی شیئر، ای میل یا عوامی ذخائر میں محفوظ نہیں کرنی چاہیے۔ اگر یہ لیک ہو جائے تو سرٹیفکیٹ بدل دیں۔</li>
+</ul>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">اکثر پوچھے جانے والے سوالات</h2>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">SSL اور TLS میں کیا فرق ہے؟</h3>
+<p>SSL پرانا نام ہے؛ TLS جدید پروٹوکول ہے جو آج واقعی کنکشن محفوظ کرتا ہے۔ لوگ عادت سے اب بھی "SSL سرٹیفکیٹ" کہتے ہیں، لیکن جو آپ حاصل کرتے اور استعمال کرتے ہیں وہ TLS سرٹیفکیٹ ہے۔</p>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">کیا مفت سرٹیفکیٹ قابلِ اعتماد ہیں؟</h3>
+<p>جی ہاں۔ مفت خودکار سرٹیفکیٹ اتھارٹیز پر تمام بڑے براؤزر بھروسہ کرتے ہیں اور یہ ادا شدہ والوں جیسی ہی خفیہ کاری دیتی ہیں۔ ادا شدہ سرٹیفکیٹ بنیادی طور پر تنظیمی تصدیق یا وارنٹی شامل کرتے ہیں، جن کی زیادہ تر چھوٹی سائٹس کو ضرورت نہیں۔</p>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">کیا HTTPS میری سائٹ کی درجہ بندی بہتر کرتا ہے؟</h3>
+<p>سرچ انجن HTTPS کو مثبت اشارہ سمجھتے ہیں، لیکن اسے استعمال کرنے کی اصل وجوہات سیکیورٹی اور صارف کا اعتماد ہیں: براؤزر اب غیر HTTPS صفحات کو "not secure" لیبل کرتے ہیں، جو زائرین کو دور کر دیتا ہے۔</p>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">میرا براؤزر کہتا ہے کہ سائٹ کا سرٹیفکیٹ غلط ہے۔ مجھے کیا کرنا چاہیے؟</h3>
+<p>کوئی معلومات داخل نہ کریں اور نہ لاگ ان کریں۔ اگر یہ ایسی سائٹ ہے جس پر آپ بھروسہ کرتے ہیں، تو سائٹ کے مالک سے ختم شدہ یا غلط ترتیب شدہ سرٹیفکیٹ کے بارے میں رابطہ کریں، اور چیک کریں کہ آپ کے آلے کی تاریخ اور وقت درست ہیں — غلط گھڑی جھوٹی وارننگ کا سبب بن سکتی ہے۔</p>
+</section>
+
+</main>
+<script>
+
+var SSLQ=[
+ ["ایک ویب سائٹ تالا اور https:// دکھاتی ہے۔ یہ کس کی ضمانت دیتا ہے؟",
+  ["سائٹ قابلِ اعتماد اور استعمال کے لیے محفوظ ہے","نیٹ ورک پر کوئی آپ کا ڈیٹا منتقلی کے دوران پڑھ یا بدل نہیں سکتا","سائٹ کبھی ہیک نہیں ہوگی","آپ کی شناخت سائٹ سے چھپی ہوئی ہے"],1,
+  "HTTPS کنکشن کو خفیہ کرتا ہے اور ڈومین کی تصدیق کرتا ہے — یہ کچھ نہیں کہتا کہ سائٹ کا مالک ایماندار ہے یا نہیں۔"],
+ ["آپ کا براؤزر آپ کے بینک کی سائٹ پر 'Your connection is not private' دکھاتا ہے۔ آپ کو کیا کرنا چاہیے؟",
+  ["'Proceed anyway' پر کلک کریں — شاید ٹھیک ہے","رکیں، کچھ داخل نہ کریں، اور تصدیق کریں کہ آپ اصلی پتے پر ہیں","اپنا اینٹی وائرس غیر فعال کریں","عوامی WiFi پر دوبارہ کوشش کریں"],1,
+  "حساس سائٹس پر سرٹیفکیٹ وارننگ کو کبھی نظرانداز نہ کریں۔ اس کا مطلب ختم شدہ سرٹیفکیٹ ہو سکتا ہے — یا کوئی حملہ آور آپ کو روک رہا ہو۔"],
+ ["سرٹیفکیٹ اتھارٹی (CA) کیا کرتی ہے؟",
+  ["یہ ڈومین نام بیچتی ہے","یہ سائٹ کی شناخت کی تصدیق کرتی ہے اور اس کا سرٹیفکیٹ جاری کرتی ہے","یہ ہیکرز کو انٹرنیٹ سے بلاک کرتی ہے","یہ آپ کے پاس ورڈز محفوظ کرتی ہے"],1,
+  "CAs قابلِ اعتماد تنظیمیں ہیں جو سرٹیفکیٹ جاری کرنے سے پہلے ڈومین ملکیت چیک کرتی ہیں۔ براؤزرز ان CAs کی فہرست کے ساتھ آتے ہیں جن پر وہ بھروسہ کرتے ہیں۔"],
+ ["سرٹیفکیٹ کی 'Valid to' تاریخ پچھلا مہینہ ہے۔ اس کا مطلب ہے…",
+  ["سائٹ یقینی طور پر ہیک ہو گئی ہے","سرٹیفکیٹ ختم ہو گیا — براؤزر وارننگ دیں گے اور آپ کو محتاط رہنا چاہیے","کچھ نہیں، تاریخیں اہم نہیں","سائٹ اب تیز ہے"],1,
+  "سرٹیفکیٹ ختم ہو جاتے ہیں (عام طور پر ہر ~1 سال) اور انہیں تجدید کرنا ضروری ہے۔ ختم شدہ سرٹیفکیٹ اعتماد کی زنجیر توڑ دیتا ہے۔"],
+ ["کسی اہم جگہ لاگ ان کرنے سے پہلے سب سے مضبوط عادت کون سی ہے؟",
+  ["سائٹ کی بھیجی ای میل کے لنک پر کلک کرنا","پتہ خود ٹائپ کرنا یا بک مارک استعمال کرنا","چیک کرنا کہ صفحہ پیشہ ورانہ لگتا ہے","سیشن ختم ہونے سے پہلے تیزی سے لاگ ان کرنا"],1,
+  "ڈیزائن منٹوں میں نقل کیا جا سکتا ہے۔ پتہ خود ٹائپ کرنا (یا بک مارک استعمال کرنا) مشابہ ڈومین فشنگ کو شکست دیتا ہے۔"]
+];
+var sslAns=new Array(SSLQ.length).fill(-1);
+(function(){var h='';
+SSLQ.forEach(function(q,i){h+='<div class="quiz-q"><p>سوال '+(i+1)+': '+q[0]+'</p><div class="quiz-opts">';
+q[1].forEach(function(o,j){h+='<button onclick="sslPick('+i+','+j+',this)">'+o+'</button>';});
+h+='</div><div class="quiz-why" id="sslwhy'+i+'"> '+q[3]+'</div></div>';});
+document.getElementById('sslquiz').innerHTML=h;})();
+function sslPick(i,j,btn){var q=btn.parentElement;sslAns[i]=j;
+Array.prototype.forEach.call(q.children,function(b){b.classList.remove('correct','wrong');});
+if(j===SSLQ[i][2])btn.classList.add('correct');else{btn.classList.add('wrong');q.children[SSLQ[i][2]].classList.add('correct');}
+document.getElementById('sslwhy'+i).style.display='block';
+Array.prototype.forEach.call(q.children,function(b){b.disabled=true;});}
+function sslScore(){var s=sslAns.filter(function(a,i){return a===SSLQ[i][2];}).length;
+var msg=s===5?' بہترین! آپ HTTPS کو سمجھتے ہیں۔':s>=3?' اچھا — اوپر دی گئی وضاحتیں دوبارہ پڑھیں۔':' سیکھتے رہیں — گائیڈ دوبارہ پڑھیں اور دوبارہ کوشش کریں۔';
+document.getElementById('sslres').innerHTML='<div class="verdict" style="background:rgba(0,230,118,.08);border:1px solid var(--border)">آپ کا اسکور <b>'+s+' / 5</b> ہے۔ '+msg+'</div>';}
+</script>
+<footer class="footer"><div class="container">
+<div class="footer-brand"> CyberSec <span class="green">Hub</span></div>
+<p>سائبر سیکیورٹی سیکھیں — اخلاقی اور قانونی طریقے سے۔</p>
+<div class="footer-links">
+<a href="index.html">ہوم</a><a href="about.html">ہمارے بارے میں</a><a href="contact.html">رابطہ</a><a href="privacy.html">پرائیویسی پالیسی</a><a href="disclaimer.html">ڈسکلیمر</a><a href="terms.html">شرائط</a>
+</div>
+<p class="foot-email"> <a href="mailto:contact@anwaardigital.com">contact@anwaardigital.com</a></p>
+<p class="copyright">© 2026 CyberSec Hub by Anwaar Digital. جملہ حقوق محفوظ ہیں۔ صرف تعلیمی مواد — ہمیشہ تحریری اجازت سے ٹیسٹ کریں۔</p>
+<p class="copyright">تیار کردہ <strong style="color:#00e676">ملک محمد انوار</strong></p>
+</div></footer><a href="https://wa.me/923288317526" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.6 6.1 1.6h.1c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.6 1.2 1.2-4.5-.3-.4c-1-1.6-1.6-3.5-1.6-5.5C5 9.6 10.6 5 16 5s11 4.6 11 10-5.4 9.8-11 9.8zm6.1-7.3c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.8.1-.3-.2-1.4-.5-2.7-1.6-.9-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6L13 9.5c-.3-.8-.7-.7-1-.7h-.8c-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.5s1.5 4 1.7 4.3c.2.3 2.9 4.4 7 6.2 1 .4 1.7.7 2.3.9.9.3 1.8.2 2.5.2.8-.1 2.3-1 2.7-1.9.3-.9.3-1.7.2-1.9-.1-.1-.3-.2-.7-.4z"/></svg></a>
+
+<!-- Back to top button -->
+<button id="backToTop" aria-label="Back to top" title="Back to top"
+style="position:fixed;bottom:24px;right:24px;width:48px;height:48px;border-radius:50%;border:none;background:#00e676;color:#050b14;font-size:22px;line-height:1;cursor:pointer;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s,transform .2s;box-shadow:0 4px 12px rgba(0,0,0,.35);z-index:9999;padding:0;">&#8593;</button>
+<script>
+(function(){var b=document.getElementById('backToTop');if(!b)return;
+window.addEventListener('scroll',function(){var s=window.pageYOffset||document.documentElement.scrollTop;
+if(s>300){b.style.opacity='1';b.style.visibility='visible';}else{b.style.opacity='0';b.style.visibility='hidden';}},{passive:true});
+b.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+b.addEventListener('mouseenter',function(){b.style.transform='scale(1.12)';});
+b.addEventListener('mouseleave',function(){b.style.transform='scale(1)';});})();
+</script>
+
+<a id="anwaar-ai-btn" href="https://anwaardigital.com/ai/?site=hub" target="_blank" rel="noopener" aria-label="Anwaar AI" style="position:fixed;right:16px;bottom:16px;z-index:9999;display:flex;align-items:center;background:#1a2b4a;color:#fff;text-decoration:none;font-family:system-ui,-apple-system,sans-serif;font-size:15px;font-weight:600;padding:12px 16px;border-radius:999px;box-shadow:0 4px 16px rgba(0,0,0,.35)">✦ Anwaar AI</a>
+</body></html>
