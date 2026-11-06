@@ -52,13 +52,13 @@
     var total = L.totalItems(exam);
     var need = L.passNeeded(exam);
     var meta = $("examMeta");
-    if (meta) meta.textContent = (exam.type === "terminal" ? total + " tasks" : total + " sawal") + " · 30 minute · Pass ke liye " + need + " zaroori";
+    if (meta) meta.textContent = (exam.type === "terminal" ? total + " tasks" : total + " questions") + " · 30 minutes · " + need + " needed to pass";
     if (!gate.ok) {
-      if (box) box.innerHTML = "<p><b>Ye exam abhi band hai.</b></p><p>" + esc(gate.message) + "</p>";
+      if (box) box.innerHTML = "<p><b>This exam is currently locked.</b></p><p>" + esc(gate.message) + "</p>";
       if (btn) btn.disabled = true;
       return;
     }
-    if (gate.retake && box) box.innerHTML = "<p class=\"lock-note\">Aap ye exam pehle pass kar chuke hain — dobara practice ke liye de sakte hain.</p>";
+    if (gate.retake && box) box.innerHTML = "<p class=\"lock-note\">You have already passed this exam — you can retake it for practice.</p>";
   }
 
   function show(id) {
@@ -86,13 +86,13 @@
     var html = "";
     exam.questions.forEach(function (q, i) {
       answers.push(exam.type === "mcq" ? -1 : "");
-      html += '<div class="qcard"><span class="qnum">SAWAL ' + (i + 1) + " / " + exam.questions.length + "</span><h3>" + esc(q.q) + "</h3>";
+      html += '<div class="qcard"><span class="qnum">QUESTION ' + (i + 1) + " / " + exam.questions.length + "</span><h3>" + esc(q.q) + "</h3>";
       if (exam.type === "mcq") {
         q.opts.forEach(function (o, j) {
           html += '<button class="opt" data-q="' + i + '" data-o="' + j + '" onclick="pickOpt(' + i + "," + j + ')">' + esc(o) + "</button>";
         });
       } else {
-        html += '<input type="text" class="short-input" id="short-' + i + '" placeholder="Apna jawab yahan likhen" autocomplete="off" oninput="window.countShort()">';
+        html += '<input type="text" class="short-input" id="short-' + i + '" placeholder="Write your answer here" autocomplete="off" oninput="window.countShort()">';
       }
       html += "</div>";
     });
@@ -114,14 +114,14 @@
       if (el && el.value.trim() !== "") done++;
     });
     var p = $("prog");
-    if (p) p.textContent = "Jawab diye: " + done + "/" + exam.questions.length;
+    if (p) p.textContent = "Answered: " + done + "/" + exam.questions.length;
   };
   function updateProg() {
     var done = 0;
     if (exam.type === "mcq") done = answers.filter(function (a) { return a !== -1; }).length;
     else done = answers.filter(function (a) { return String(a).trim() !== ""; }).length;
     var p = $("prog");
-    if (p) p.textContent = "Jawab diye: " + done + "/" + exam.questions.length;
+    if (p) p.textContent = "Answered: " + done + "/" + exam.questions.length;
   }
 
   // ---------- simulated terminal ----------
@@ -129,7 +129,7 @@
   var NMAP = exam.nmap || {};
   var cwd = "/home/student", historyArr = [], histIdx = -1;
   var tasks = [], events = [], examDone = false;
-  var HELP_TEXT = "Commands: help, pwd, ls, ls -a, ls -l, cd, cat, grep, find, nmap, whoami, echo, history, hint, clear\nMasalan: pwd | ls | cat notes.txt | grep Failed /var/log/auth.log";
+  var HELP_TEXT = "Commands: help, pwd, ls, ls -a, ls -l, cd, cat, grep, find, nmap, whoami, echo, history, hint, clear\nExample: pwd | ls | cat notes.txt | grep Failed /var/log/auth.log";
   function normPath(p) {
     var parts = p.split("/"), out = [];
     for (var i = 0; i < parts.length; i++) {
@@ -223,7 +223,7 @@
     recordEvent({ kind: countOnly ? "grepCount" : "grep", word: word, file: target });
     var lines = FS[target].content.split("\n").filter(function (l) { return l.indexOf(word) !== -1; });
     if (countOnly) return String(lines.length);
-    return lines.length ? lines.join("\n") : "Kuch nahi mila.";
+    return lines.length ? lines.join("\n") : "Nothing found.";
   }
   function doFind(args) {
     var dir = cwd, name = null;
@@ -237,19 +237,19 @@
     var found = Object.keys(FS).filter(function (k) {
       return (k === dir || k.indexOf(dir + "/") === 0) && baseName(k) === name;
     });
-    return found.length ? found.join("\n") : "Kuch nahi mila.";
+    return found.length ? found.join("\n") : "Nothing found.";
   }
   function doNmap(target) {
     if (!target) return "Usage: nmap <target>";
     recordEvent({ kind: "nmap", target: target });
     if (NMAP[target]) return NMAP[target];
-    return "Starting Nmap (simulated)...\nHost " + target + " is up\nNo open ports found.\n(simulated result — asli network scan nahi)";
+    return "Starting Nmap (simulated)...\nHost " + target + " is up\nNo open ports found.\n(simulated result — not a real network scan)";
   }
   function getHint() {
     for (var i = 0; i < tasks.length; i++) {
       if (!tasks[i]) return "Task " + (i + 1) + ": " + exam.tasks[i].hint;
     }
-    return "Tamam tasks mukammal ho gaye hain!";
+    return "All tasks are complete!";
   }
   function execCommand(raw) {
     var cmd = raw.trim();
@@ -269,14 +269,14 @@
     else if (base === "nmap") out = doNmap(parts[1]);
     else if (base === "whoami") out = "student";
     else if (base === "echo") {
-      if (cmd.indexOf(">") !== -1) out = "Redirection is practice terminal me supported nahi hai.";
+      if (cmd.indexOf(">") !== -1) out = "Redirection is not supported in the practice terminal.";
       else out = parts.slice(1).join(" ");
     }
     else if (base === "history") out = historyArr.join("\n");
     else if (base === "hint") out = getHint();
     else if (base === "clear") return "__CLEAR__";
-    else if (base === "sudo") out = "sudo is practice terminal me band hai (simulated environment).";
-    else out = "Command nahi mili: " + base + " — 'help' likhen.";
+    else if (base === "sudo") out = "sudo is disabled in the practice terminal (simulated environment).";
+    else out = "Command not found: " + base + " — type 'help'.";
     return out;
   }
   function printHtml(html) {
@@ -303,7 +303,7 @@
     var tl = $("tasksList");
     if (tl) tl.innerHTML = html;
     var pt = $("progText");
-    if (pt) pt.textContent = done + "/" + tasks.length + " mukammal";
+    if (pt) pt.textContent = done + "/" + tasks.length + " complete";
   }
   function startTerminal() {
     cwd = "/home/student"; historyArr = []; histIdx = -1; events = []; examDone = false;
@@ -311,8 +311,8 @@
     var to = $("termOut");
     if (to) to.innerHTML = "";
     printHtml('<div class="line sys">CyberSec Hub — Practice Terminal (Simulated)</div>');
-    printHtml('<div class="line sys">Ye asli Kali Linux nahi hai — seekhne ke liye banaya gaya naqli terminal hai.</div>');
-    printHtml('<div class="line sys">\'help\' likhen taake commands dekhen. Tasks panel me 5 tasks hain.</div>');
+    printHtml('<div class="line sys">This is not real Kali Linux — it is a simulated terminal built for learning.</div>');
+    printHtml('<div class="line sys">Type \'help\' to see the commands. There are 5 tasks in the Tasks panel.</div>');
     updatePrompt();
     renderTasks();
     var inp = $("termInput");
@@ -374,33 +374,33 @@
     if (rt) rt.textContent = exam.title + " — Result";
     var rs = $("resScore");
     if (rs) rs.innerHTML = "Score: <b>" + score + "/" + total + "</b> — " +
-      '<span class="' + (passed ? "pass" : "fail") + '">' + (passed ? "KAMYAB" : "NAKAM") + "</span>";
+      '<span class="' + (passed ? "pass" : "fail") + '">' + (passed ? "PASSED" : "FAILED") + "</span>";
     var rm = $("resMsg");
     if (rm) {
-      if (auto) rm.textContent = "Waqt khatam ho gaya — exam khud submit ho gaya. ";
+      if (auto) rm.textContent = "Time is up — the exam was submitted automatically. ";
       if (passed) {
-        rm.textContent += "Mubarak ho! Aap ne exam pass kar liya hai. " +
-          (EXAM_ID < 15 ? "Agla exam 1 din ke baad khulega." : "Tamam 15 exams mukammal — aap ka certificate tayar hai!");
+        rm.textContent += "Congratulations! You passed the exam. " +
+          (EXAM_ID < 15 ? "The next exam will open after 1 day." : "All 15 exams complete — your certificate is ready!");
       } else {
-        rm.textContent += "Afsos, is dafa kamyabi nahi hui — pass ke liye " + need + " zaroori thay. Dobara koshish 3 din ke baad hogi.";
+        rm.textContent += "Unfortunately, you did not pass this time — you needed " + need + " to pass. You can retry after 3 days.";
       }
     }
     var rev = "";
     if (exam.type === "terminal") {
       detail.forEach(function (d, i) {
         rev += "<p><b>Task " + (i + 1) + ":</b> " + esc(d.text) + "<br>" +
-          (d.ok ? '<span class="ok">✓ Mukammal</span>' : '<span class="bad">✗ Mukammal nahi hua</span>') + "</p>";
+          (d.ok ? '<span class="ok">✓ Complete</span>' : '<span class="bad">✗ Not complete</span>') + "</p>";
       });
-      rev += "<p class=\"lock-note\">Incident response ke 5 qadam yaad rakhen: Isolate, Preserve, Reset, Remove, Report.</p>";
+      rev += "<p class=\"lock-note\">Remember the 5 steps of incident response: Isolate, Preserve, Reset, Remove, Report.</p>";
     } else if (exam.type === "mcq") {
       detail.forEach(function (d, i) {
         rev += "<p><b>Sawal " + (i + 1) + ":</b> " + esc(exam.questions[i].q) + "<br>" +
-          (d.ok ? '<span class="ok">✓ Sahi</span>' : '<span class="bad">✗ Ghalat</span> — Sahi jawab: ' + esc(exam.questions[i].opts[d.correct])) + "</p>";
+          (d.ok ? '<span class="ok">✓ Correct</span>' : '<span class="bad">✗ Wrong</span> — Correct answer: ' + esc(exam.questions[i].opts[d.correct])) + "</p>";
       });
     } else {
       detail.forEach(function (d, i) {
         rev += "<p><b>Sawal " + (i + 1) + ":</b> " + esc(exam.questions[i].q) + "<br>" +
-          (d.ok ? '<span class="ok">✓ Sahi</span>' : '<span class="bad">✗ Ghalat</span> — Qabool jawab me ye alfaz hone chahie thay: ' + esc(d.accepted.join(", "))) + "</p>";
+          (d.ok ? '<span class="ok">✓ Correct</span>' : '<span class="bad">✗ Wrong</span> — The accepted answer should have contained: ' + esc(d.accepted.join(", "))) + "</p>";
       });
     }
     var rv = $("review");

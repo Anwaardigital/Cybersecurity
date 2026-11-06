@@ -30,14 +30,14 @@ var EXAM_LIB = (function () {
   // reason: "locked" (previous exam not passed yet) or "wait" (cool-down).
   function canStart(id, state, nowMs) {
     id = Number(id);
-    if (id < 1 || id > 15) return { ok: false, reason: "invalid", message: "Ghalat exam number." };
+    if (id < 1 || id > 15) return { ok: false, reason: "invalid", message: "Invalid exam number." };
     var rec = getExamRec(state, id);
     if (rec.status === "passed") return { ok: true, retake: true };
     if (rec.status === "failed" && rec.date) {
       var retryAt = new Date(rec.date).getTime() + RETRY_FAIL_MS;
       if (nowMs < retryAt) {
         return { ok: false, reason: "wait", availableAt: new Date(retryAt).toISOString(),
-          message: "Aap is exam me fail hue thay. Dobara koshish " + new Date(retryAt).toDateString() + " ke baad hogi (3 din ka waqfa)." };
+          message: "You failed this exam. You can retry after " + new Date(retryAt).toDateString() + " (a 3-day wait)." };
       }
       return { ok: true, retake: true };
     }
@@ -45,12 +45,12 @@ var EXAM_LIB = (function () {
     var prev = getExamRec(state, id - 1);
     if (prev.status !== "passed") {
       return { ok: false, reason: "locked",
-        message: "Pehle Exam " + (id - 1) + " pass karen — us ke baghair Exam " + id + " nahi khul sakta." };
+        message: "Pass Exam " + (id - 1) + " first — Exam " + id + " cannot open without it." };
     }
     var nextAt = new Date(prev.date).getTime() + NEXT_PASS_MS;
     if (nowMs < nextAt) {
       return { ok: false, reason: "wait", availableAt: new Date(nextAt).toISOString(),
-        message: "Exam " + (id - 1) + " pass ho gaya hai. Agla exam " + new Date(nextAt).toDateString() + " ke baad khulega (1 din ka waqfa)." };
+        message: "Exam " + (id - 1) + " is passed. The next exam will open after " + new Date(nextAt).toDateString() + " (a 1-day wait)." };
     }
     return { ok: true };
   }
