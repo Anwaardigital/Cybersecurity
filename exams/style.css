@@ -11,6 +11,11 @@ a{color:var(--red);text-decoration:none}
 .brand{font-weight:800;font-size:20px;letter-spacing:2px;color:#fff}.brand span{color:var(--red)}
 .nav-actions{display:flex;gap:10px;align-items:center}
 .theme-toggle{background:#111;border:1px solid #333;color:var(--text);padding:8px 14px;border-radius:999px;cursor:pointer;font-weight:700}
+.theme-toggle .theme-icon{display:inline-flex;line-height:0}
+.theme-toggle .theme-icon svg{width:20px;height:20px;display:block}
+.theme-toggle .theme-icon-moon{display:none}
+body.light .theme-toggle .theme-icon-sun{display:none}
+body.light .theme-toggle .theme-icon-moon{display:inline-flex}
 .nav-toggle{display:none;background:#111;border:1px solid #333;color:#fff;padding:8px 12px;border-radius:8px;cursor:pointer}
 .nav-links{list-style:none;display:flex;gap:4px;flex-wrap:wrap;margin:0;padding:0}
 .nav-links a{color:#d7d7de;padding:8px 10px;font-size:14.5px;font-weight:600}
