@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<link rel="icon" type="image/png" sizes="192x192" href="https://anwaardigital.com/Cybersecurity/cyber-icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="https://anwaardigital.com/Cybersecurity/cyber-icon-512.png">
+<link rel="apple-touch-icon" href="https://anwaardigital.com/Cybersecurity/cyber-icon-192.png">
+<!-- Cookie consent (GDPR): Google Analytics loads only after you press Accept -->
+<script src="../cookie-consent.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>انسیڈنٹ رسپانس پلے بک — اگر آپ ہیک ہو جائیں تو کیا کریں</title>
+<meta name="description" content="مفت انٹرایکٹو انسیڈنٹ رسپانس پلے بک: اپنا منظرنامہ چنیں (فشنگ کلک، میلویئر، ہیک شدہ اکاؤنٹ، رینسم ویئر) اور پیش رفت کے ساتھ واضح ترتیب والے بحالی کے مراحل پر عمل کریں۔">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="ur.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&amp;display=swap" rel="stylesheet">
+<link rel="canonical" href="https://anwaardigital.com/Cybersecurity/ur/incident-response-playbook.html">
+<meta property="og:title" content="انسیڈنٹ رسپانس پلے بک — اگر آپ ہیک ہو جائیں تو کیا کریں">
+<meta property="og:description" content="مفت انٹرایکٹو انسیڈنٹ رسپانس پلے بک: اپنا منظرنامہ چنیں (فشنگ کلک، میلویئر، ہیک شدہ اکاؤنٹ، رینسم ویئر) اور پیش رفت کے ساتھ واضح ترتیب والے بحالی کے مراحل پر عمل کریں۔">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://anwaardigital.com/Cybersecurity/ur/incident-response-playbook.html">
+<meta property="og:site_name" content="CyberSec Hub">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://anwaardigital.com/Cybersecurity/cyber-icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "انسیڈنٹ رسپانس پلے بک",
+  "description": "مفت انٹرایکٹو انسیڈنٹ رسپانس پلے بک: اپنا منظرنامہ چنیں (فشنگ کلک، میلویئر، ہیک شدہ اکاؤنٹ، رینسم ویئر) اور پیش رفت کے ساتھ واضح ترتیب والے بحالی کے مراحل پر عمل کریں۔",
+  "url": "https://anwaardigital.com/Cybersecurity/ur/incident-response-playbook.html",
+  "applicationCategory": "SecurityApplication",
+  "operatingSystem": "Any",
+  "offers": {"@type": "Offer","price": "0"},
+  "author": {"@type": "Person","name": "ملک محمد انوار"}
+}
+</script>
+</head>
+<body class="page-sectool">
+<nav class="navbar"><div class="nav-inner">
+<a href="index.html" class="brand"><span class="brand-icon"></span><span>CyberSec <span class="green">Hub</span></span></a>
+<div class="nav-actions"><button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark and light theme"><span class="theme-icon"></span><span class="theme-label">Light</span></button><button class="nav-toggle" onclick="document.getElementById(&#x27;navLinks&#x27;).classList.toggle(&#x27;open&#x27;)">☰</button></div>
+<ul class="nav-links" id="navLinks">
+<li><a href="index.html">ہوم</a></li>
+<li><a href="index.html#basics">بنیادی باتیں</a></li>
+<li><a href="index.html#hacking">اخلاقی ہیکنگ</a></li>
+<li><a href="index.html#tools">ٹولز گائیڈ</a></li>
+<li><a href="index.html#career">کیریئر</a></li>
+<li><a href="about.html">ہمارے بارے میں</a></li>
+</ul></div></nav>
+<script>
+(function(){try{if(localStorage.getItem('hubTheme')==='light'){document.body.classList.add('light');}}catch(e){}})();
+function toggleTheme(){var b=document.body;var light=b.classList.toggle('light');try{localStorage.setItem('hubTheme',light?'light':'dark');}catch(e){}var btn=document.querySelector('.theme-toggle');if(btn){var ic=btn.querySelector('.theme-icon');var lb=btn.querySelector('.theme-label');if(ic)ic.textContent=light?'':'';if(lb)lb.textContent=light?'Dark':'Light';}}
+(function(){var btn=document.querySelector('.theme-toggle');if(!btn)return;var light=document.body.classList.contains('light');var ic=btn.querySelector('.theme-icon');var lb=btn.querySelector('.theme-label');if(ic)ic.textContent=light?'':'';if(lb)lb.textContent=light?'Dark':'Light';})();
+</script>
+<main class="tool-wrap">
+<h1> انسیڈنٹ رسپانس پلے بک</h1>
+<p class="tool-sub"><b>پہلے: گھبرائیں نہیں۔</b> زیادہ تر واقعات ٹھیک ہو سکتے ہیں اگر آپ پرسکون رہ کر درست ترتیب سے عمل کریں۔ اپنی صورتحال کے قریب ترین منظرنامہ چنیں اور مراحل کو اوپر سے نیچے مکمل کریں۔</p>
+<div class="ethical-box"><strong> صرف اخلاقی استعمال:</strong> یہ ٹولز صرف <strong>دفاعی</strong> مقاصد کے لیے ہیں — اپنے اکاؤنٹس اور سسٹمز کو محفوظ کرنے کے لیے۔ سیکیورٹی کا علم کبھی ان سسٹمز کے خلاف استعمال نہ کریں جو آپ کے نہیں ہیں یا جن کی جانچ کی تحریری اجازت آپ کے پاس نہیں ہے۔</div>
+<div class="tool-card">
+<h3 style="margin-top:0"> کیا ہو رہا ہے؟</h3>
+<div class="step-tabs" id="irptabs"></div>
+<div class="pbar"><div id="irpbar"></div></div>
+<div class="score-line" id="irpscore"></div>
+<div id="irplist"></div>
+</div>
+<div class="tool-card edu" style="margin-top:20px">
+<h3 style="margin-top:0"> مدد کب لیں</h3>
+<ul>
+<li><b>پیسہ شامل ہو:</b> فوراً اپنے بینک کو کال کریں — جلد رپورٹ کرنے سے فراڈ واپس ہونے کا امکان بڑھ جاتا ہے۔</li>
+<li><b>کام کی ڈیوائس:</b> فوراً اپنی IT/سیکیورٹی ٹیم کو بتائیں۔ اسے چھپانا سب کچھ بدتر بنا دیتا ہے۔</li>
+<li><b>شناخت کی چوری:</b> اپنی مقامی پولیس / سائبر کرائم یونٹ کو رپورٹ درج کرائیں اور حوالہ نمبر سنبھال کر رکھیں۔</li>
+<li><b>یقین نہیں:</b> کوئی قابلِ بھروسہ ٹیک سیوی دوست یا پیشہ ور انسیڈنٹ رسپانس سروس — سرچ اشتہارات سے ملنے والے بے ترتیب "سپورٹ" نمبر نہیں (ان میں سے بہت سے دھوکہ ہیں)۔</li>
+</ul>
+<p><b>سب کچھ دستاویز کریں:</b> اسکرین شاٹس، اوقات، پیغامات، اور آپ نے کیا کلک کیا۔ یہ آپ کو بینکوں، سپورٹ ٹیموں اور رپورٹس کے لیے چاہیے ہوگا۔</p>
+</div>
+<section class="related-box" style="margin-top:36px">
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">اس ٹول کے بارے میں</h2>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">یہ ٹول کیا کرتا ہے</h2>
+<p>انسیڈنٹ رسپانس پلے بک سیکیورٹی واقعات سے نمٹنے کے لیے ایک منظم گائیڈ ہے — مشتبہ ہیک شدہ اکاؤنٹ سے لے کر خاندانی کمپیوٹر یا چھوٹے کاروباری نیٹ ورک پر میلویئر انفیکشن تک۔ جب کچھ غلط ہو جائے تو گھبراہٹ اور اندازے چیزیں بدتر بنا دیتے ہیں؛ پلے بک آپ کو پرسکون، ترتیب والے مراحل دیتی ہے۔</p>
+<p>یہ سیکیورٹی پیشہ ور افراد کے استعمال کردہ معیاری انسیڈنٹ رسپانس مراحل پر عمل کرتی ہے: تیاری، پکڑنا اور تجزیہ، قابو پانا، خاتمہ، بحالی، اور سبق سیکھنا۔ ہر مرحلے میں غیر ماہرین کے لیے واضح اقدامات ہیں، تاکہ آپ کو معلوم ہو کہ پہلے کیا کرنا ہے، کیا محفوظ رکھنا ہے، اور مدد کب بلانی ہے۔</p>
+<p>یہ گھریلو صارفین، فری لانسرز، والدین اور چھوٹی ٹیموں کے لیے ہے جن کے پاس مخصوص سیکیورٹی شعبہ نہیں ہے۔ یہ دفاعی کام ہے: اپنے سسٹمز کی حفاظت، ثبوت کو درست طریقے سے محفوظ کرنا، اور محفوظ طریقے سے بحالی۔ اگر کوئی جرم ہوا ہے تو پلے بک یہ بھی بتاتی ہے کہ قانون نافذ کرنے والے اداروں کو کب شامل کرنا ہے۔</p>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">اسے کیسے استعمال کریں</h2>
+<ol>
+<li><strong>ابھی تیاری کریں:</strong> اہم رابطے لکھ لیں (آپ کا ISP، بینک فراڈ لائن، کوئی قابلِ بھروسہ ٹیک سیوی شخص)، اور یقینی بنائیں کہ کسی بھی واقعے سے پہلے بیک اپ تازہ ہیں۔</li>
+<li><strong>پکڑیں:</strong> علامات سیکھیں — ناواقف لاگ ان، بدلے گئے پاس ورڈز، تاوان کے نوٹس، اینٹی وائرس الرٹس، یا ڈیوائسز کا عجیب برتاؤ۔</li>
+<li><strong>قابو پائیں:</strong> متاثرہ ڈیوائس کو نیٹ ورک سے الگ کر دیں تاکہ پھیلاؤ رکے، لیکن اسے بند کرنے سے گریز کریں اگر تفتیش کاروں کو اس کی میموری چاہیے ہو۔</li>
+<li><strong>تجزیہ کریں:</strong> نوٹ کریں کہ کیا ہوا اور کب ہوا۔ تاوان کے نوٹس یا غلطی کے پیغامات کی تصاویر دوسری ڈیوائس سے لیں۔</li>
+<li><strong>ختم کریں اور بحال کریں:</strong> وجہ ختم کریں (اکثر وائپ کر کے دوبارہ انسٹال کر کے)، تمام پاس ورڈز صاف ڈیوائس سے بدل لیں، اور ڈیٹا معلوم اچھے بیک اپس سے بحال کریں۔</li>
+<li><strong>سیکھیں:</strong> لکھیں کہ کیا ہوا اور آپ کیا بدلیں گے — پھر واقعی بدل لیں۔</li>
+</ol>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">دفاعی سیکیورٹی تجاویز</h2>
+<ul>
+<li><strong>ثبوت محفوظ رکھیں۔</strong> لاگز، تاوان کے نوٹس یا مشکوک ای میلز حذف نہ کریں۔ اسکرین شاٹس اور نوٹس آپ کی بحالی اور حکام کو رپورٹ دونوں میں مدد کرتے ہیں۔</li>
+<li><strong>پاس ورڈز صاف ڈیوائس سے بدل لیں۔</strong> ہیک شدہ مشین سے پاس ورڈز ری سیٹ کرنے سے نئے پاس ورڈز سیدھے حملہ آور کو مل سکتے ہیں۔</li>
+<li><strong>صفائی سے پہلے قابو پائیں۔</strong> پہلے الگ کرنے سے واقعہ دوسری ڈیوائسز تک پھیلنے سے رک جاتا ہے جب تک آپ سمجھ نہ لیں کہ کیا ہوا تھا۔</li>
+<li><strong>اپنی مدد کے راستے جانیں۔</strong> بینکوں کی فراڈ لائنز ہوتی ہیں، ای میل فراہم کنندگان کے اکاؤنٹ ریکوری کے راستے ہوتے ہیں، اور پولیس سائبر کرائم رپورٹس لیتی ہے۔ یہ نمبر ضرورت پڑنے سے پہلے محفوظ کر لیں۔</li>
+<li><strong>منصوبے کی مشق کریں۔</strong> ایک پلے بک جسے کسی نے پڑھا ہی نہیں وہ صرف ایک دستاویز ہے۔ اسے ایک بار اپنے خاندان یا ٹیم کے ساتھ چل کر دیکھیں تاکہ مراحل مانوس لگیں۔</li>
+</ul>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">اکثر پوچھے جانے والے سوالات</h2>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">سیکیورٹی واقعہ کسے کہتے ہیں؟</h3>
+<p>کوئی بھی واقعہ جو بتائے کہ آپ کی سیکیورٹی ٹوٹی ہے: ایسا اکاؤنٹ جس تک آپ رسائی نہ کر سکیں، تاوان کا پیغام، اینٹی وائرس کو میلویئر ملنا، آپ کی کارروائی کے بغیر پیسہ حرکت کرنا، یا آپ کے اکاؤنٹس سے آپ کے رابطوں کو عجیب پیغامات موصول ہونا۔</p>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">کیا مجھے متاثرہ کمپیوٹر بند کر دینا چاہیے؟</h3>
+<p>اگر رینسم ویئر فعال طور پر خفیہ کر رہا ہے تو نیٹ ورک سے الگ کرنا بجلی بند کرنے سے زیادہ اہم ہے۔ تفتیش کے لیے، بند کرنے پر میموری کا مواد ضائع ہو جاتا ہے، اس لیے پہلے الگ کریں اور اگر واقعہ سنگین ہے تو بجلی کے بارے میں مدد سے فیصلہ کریں۔</p>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">قانون نافذ کرنے والے اداروں سے کب رابطہ کروں؟</h3>
+<p>جب کوئی جرم ہوا ہو — چوری، فراڈ، بھتہ خوری، یا آپ کے سسٹمز تک غیر مجاز رسائی۔ رپورٹنگ سے حکام کو مجرمانہ مہمات کو ٹریک کرنے اور دوسروں کو خبردار کرنے میں بھی مدد ملتی ہے۔</p>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">کیا مجھے یہ چاہیے اگر میں 'صرف' ایک گھریلو صارف ہوں؟</h3>
+<p>جی ہاں۔ گھریلو صارفین کو بھی فشنگ، رینسم ویئر اور اکاؤنٹ قبضے کا سامنا ہوتا ہے، اور ایک مختصر تحریری منصوبہ گھبراہٹ بھری شام کو قابلِ انتظام طریقہ کار میں بدل دیتا ہے۔</p>
+</section>
+
+</main>
+
+<script>
+
+var IRP={
+ " میں نے فشنگ لنک پر کلک کیا / جعلی سائٹ پر تفصیلات درج کیں":[
+  ["اس ڈیوائس کو نیٹ ورک سے الگ کر دیں (وائی فائی بند / کیبل نکالیں)","کسی بھی میلویئر کو بات چیت سے روکتا ہے اور مزید نقصان محدود کرتا ہے۔"],
+  ["صاف ڈیوائس سے ہیک شدہ اکاؤنٹ کا پاس ورڈ بدل لیں","ایسی ڈیوائس استعمال کریں جس پر آپ بھروسہ کرتے ہیں۔ نیا پاس ورڈ لمبا، بے ترتیب اور منفرد بنائیں۔"],
+  ["ان اکاؤنٹس کے پاس ورڈز بدل لیں جنہوں نے پرانا پاس ورڈ شیئر کیا تھا","حملہ آور چوری شدہ پاس ورڈز کو منٹوں میں ای میل، بینکنگ اور سوشل میڈیا پر آزماتے ہیں۔"],
+  ["جہاں اہم ہو ہر جگہ 2FA آن کریں","پہلے ای میل سے شروع کریں، پھر بینکنگ، پھر باقی۔"],
+  ["اکاؤنٹ میں حملہ آور کی تبدیلیاں چیک کریں","شامل شدہ ریکوری ای میلز/فونز، فارورڈنگ رولز، نئی ڈیوائسز، اور بھیجے گئے پیغامات دیکھیں جو آپ نے نہیں لکھے تھے۔"],
+  ["چند ہفتوں تک بینک/کارڈ بیانات دیکھیں","جو کچھ بھی ناواقف ہو فوراً اپنے بینک کو رپورٹ کریں۔"],
+  ["قابلِ بھروسہ اینٹی وائرس سے ڈیوائس اسکین کریں","لنک نے میلویئر بھی ڈالا ہو سکتا ہے۔ ڈیوائس پر دوبارہ بھروسہ کرنے سے پہلے مکمل اسکین کریں۔"]],
+ " میرے خیال میں میری ڈیوائس میں میلویئر ہے":[
+  ["نیٹ ورک سے الگ کر دیں","پہلے الگ کریں — میلویئر اکثر نیٹ ورک پر پھیلتا ہے یا ڈیٹا باہر بھیجتا ہے۔"],
+  ["اس پر بینکنگ یا ای میل میں لاگ ان نہ کریں","کی لاگرز آپ کی ٹائپ کی گئی ہر چیز پکڑ لیتے ہیں۔ حساس اکاؤنٹس کے لیے صاف ڈیوائس استعمال کریں۔"],
+  ["سیف موڈ میں بوٹ کریں (اگر آپ جانتے ہیں کہ کیسے) اور مکمل اینٹی وائرس اسکین چلائیں","سیف موڈ بہت سے میلویئر کو شروع ہونے سے روکتا ہے، جس سے صفائی آسان ہو جاتی ہے۔"],
+  ["اسکین کو جو ملے اسے ہٹا دیں؛ اگر برقرار رہے تو ڈیٹا کا بیک اپ لیں اور OS دوبارہ انسٹال کریں","صاف دوبارہ انسٹال ہی گہرے انفیکشن کا واحد یقینی علاج ہے۔ پہلے دستاویزات (پروگرامز نہیں) کا بیک اپ لیں۔"],
+  ["اہم پاس ورڈز صاف ڈیوائس سے بدل لیں","سمجھیں کہ متاثرہ مشین پر ٹائپ کی گئی اسناد ہیک ہو چکی ہیں۔"],
+  ["نامعلوم پروگرامز، براؤزر ایکسٹینشنز اور اسٹارٹ اپ آئٹمز چیک کریں","جو کچھ آپ نہیں پہچانتے اسے ہٹا دیں — یہ تحقیق کرنے کے بعد کہ وہ کیا ہے۔"],
+  ["OS اور تمام سافٹ ویئر اپ ڈیٹ کریں","اس سوراخ کو بند کریں جس سے میلویئر ممکنہ طور پر آیا تھا۔"]],
+ " میرا ایک اکاؤنٹ ہیک ہو گیا":[
+  ["فوراً سرکاری اکاؤنٹ ریکوری کا طریقہ آزمائیں","سروس کا اپنا 'forgot password' / 'hacked account' صفحہ استعمال کریں — خود لکھ کر، لنک سے نہیں۔"],
+  ["پہلے اپنا ای میل محفوظ کریں","پاس ورڈ ری سیٹ ای میل پر جاتے ہیں۔ اگر حملہ آور آپ کا ای میل کنٹرول کرتا ہے تو ہر دوسری ریکوری ناکام ہو جاتی ہے۔"],
+  ["حملہ آور کی رسائی ہٹا دیں: سیشنز، ڈیوائسز، ایپ پاس ورڈز","زیادہ تر سروسز فعال سیشنز کی فہرست دیتی ہیں — سب کچھ سائن آؤٹ کریں، نامعلوم ڈیوائسز اور ایپ مخصوص پاس ورڈز منسوخ کریں۔"],
+  ["2FA آن کریں اور نئے بیک اپ کوڈز بنائیں","یہ ریکوری کے دوران کریں، 'بعد میں' نہیں۔"],
+  ["اپنے رابطوں کو خبردار کریں","حملہ آور ہیک شدہ اکاؤنٹس سے آپ کے رابطوں کو دھوکوں سے اسپام کرتے ہیں۔ ایک فوری پوسٹ/پیغام متاثرین کو روکتا ہے۔"],
+  ["چیک کریں کہ کیا بدلا یا چوری ہوا","پروفائل تفصیلات، منسلک ایپس، ادائیگی کے طریقے، نجی پیغامات — ہر ایک کا جائزہ لیں اور عمل کریں۔"]],
+ " رینسم ویئر: میری فائلیں خفیہ ہو گئی ہیں":[
+  ["ڈیوائس کو فوراً تمام نیٹ ورکس سے الگ کر دیں","رینسم ویئر کو بیک اپس، شیئر شدہ ڈرائیوز اور دوسری ڈیوائسز تک پہنچنے سے روکتا ہے۔"],
+  ["پہلے حل کے طور پر تاوان ادا نہ کریں","ادائیگی جرم کو فنڈ دیتی ہے اور اکثر فائلیں واپس نہیں ملتیں — ڈیکرپشن ٹولز ناکام ہو سکتے ہیں یا کبھی نہ آئیں۔ پہلے مفت ڈیکرپٹرز چیک کریں (مثلاً No More Ransom پروجیکٹ)۔"],
+  ["اگر ممکن ہو تو رینسم ویئر کی شناخت کریں","تاوان کے نوٹ کا نام مفت ڈیکرپشن ٹولز اور گائیڈز ڈھونڈنے میں مدد دیتا ہے۔"],
+  ["اپنی مقامی سائبر کرائم اتھارٹی کو رپورٹ کریں","وہ مہمات کو ٹریک کرتے ہیں اور ان کے پاس پہلے سے ڈیکرپشن کیز ہو سکتی ہیں۔"],
+  ["اپنے آف لائن بیک اپس سے بحال کریں","یہی وہ لمحہ ہے جس کے لیے بیک اپس ہوتے ہیں — مشین وائپ کریں اور صاف کاپیاں بحال کریں۔"],
+  ["اگر بیک اپس نہیں ہیں تو خفیہ شدہ ڈرائیو محفوظ رکھیں","اسے محفوظ رکھیں۔ مفت ڈیکرپٹرز وقت کے ساتھ ظاہر ہوتے ہیں جب محققین نئی اقسام کو توڑتے ہیں۔"],
+  ["دوبارہ جڑنے سے پہلے دفاع دوبارہ بنائیں","مکمل OS دوبارہ انسٹال، اپ ڈیٹس، آف لائن بیک اپس، اور رینسم ویئر سے بچاؤ کی چیک لسٹ — تاکہ یہ دوبارہ کبھی نہ ہو۔"]]};
+var irpKeys=Object.keys(IRP), irpCur=0, irpDone={};
+function irpRenderTabs(){var h='';irpKeys.forEach(function(k,i){h+='<button class="'+(i===irpCur?'active':'')+'" onclick="irpGo('+i+')">'+k+'</button>';});
+document.getElementById('irptabs').innerHTML=h;}
+function irpGo(i){irpCur=i;irpRenderTabs();irpRender();}
+function irpRender(){var steps=IRP[irpKeys[irpCur]],done=irpDone[irpCur]||steps.map(function(){return false;});irpDone[irpCur]=done;
+var h='';steps.forEach(function(s,i){h+='<label class="chk'+(done[i]?' done':'')+'"><input type="checkbox" '+(done[i]?'checked':'')+' onchange="irpTgl('+i+',this)"><span><b>مرحلہ '+(i+1)+': '+s[0]+'</b><small>'+s[1]+'</small></span></label>';});
+document.getElementById('irplist').innerHTML=h;irpUpd();}
+function irpTgl(i,box){irpDone[irpCur][i]=box.checked;irpRender();}
+function irpUpd(){var done=irpDone[irpCur],n=done.filter(Boolean).length;
+document.getElementById('irpbar').style.width=Math.round(n/done.length*100)+'%';
+document.getElementById('irpscore').textContent=done.length+' میں سے '+n+' مراحل مکمل'+(n===done.length?' —  منظرنامہ سنبھال لیا گیا۔ چند ہفتے چوکس رہیں۔':'');}
+irpRenderTabs();irpRender();
+</script>
+<footer class="footer"><div class="container">
+<div class="footer-brand"> CyberSec <span class="green">Hub</span></div>
+<p>سائبر سیکیورٹی سیکھیں — اخلاقی اور قانونی طریقے سے۔</p>
+<div class="footer-links">
+<a href="index.html">ہوم</a><a href="about.html">ہمارے بارے میں</a><a href="contact.html">رابطہ</a><a href="privacy.html">پرائیویسی پالیسی</a><a href="disclaimer.html">ڈسکلیمر</a><a href="terms.html">شرائط</a>
+</div>
+<p class="foot-email"> <a href="mailto:contact@anwaardigital.com">contact@anwaardigital.com</a></p>
+<p class="copyright">© 2026 CyberSec Hub by Anwaar Digital. جملہ حقوق محفوظ ہیں۔ صرف تعلیمی مواد — ہمیشہ تحریری اجازت سے ٹیسٹ کریں۔</p>
+<p class="copyright">تیار کردہ <strong style="color:#00e676">ملک محمد انوار</strong></p>
+</div></footer><a href="https://wa.me/923288317526" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.6 6.1 1.6h.1c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.6 1.2 1.2-4.5-.3-.4c-1-1.6-1.6-3.5-1.6-5.5C5 9.6 10.6 5 16 5s11 4.6 11 10-5.4 9.8-11 9.8zm6.1-7.3c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.8.1-.3-.2-1.4-.5-2.7-1.6-.9-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6L13 9.5c-.3-.8-.7-.7-1-.7h-.8c-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.5s1.5 4 1.7 4.3c.2.3 2.9 4.4 7 6.2 1 .4 1.7.7 2.3.9.9.3 1.8.2 2.5.2.8-.1 2.3-1 2.7-1.9.3-.9.3-1.7.2-1.9-.1-.1-.3-.2-.7-.4z"/></svg></a>
+
+<!-- Back to top button -->
+<button id="backToTop" aria-label="Back to top" title="Back to top"
+style="position:fixed;bottom:24px;right:24px;width:48px;height:48px;border-radius:50%;border:none;background:#00e676;color:#050b14;font-size:22px;line-height:1;cursor:pointer;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s,transform .2s;box-shadow:0 4px 12px rgba(0,0,0,.35);z-index:9999;padding:0;">&#8593;</button>
+<script>
+(function(){var b=document.getElementById('backToTop');if(!b)return;
+window.addEventListener('scroll',function(){var s=window.pageYOffset||document.documentElement.scrollTop;
+if(s>300){b.style.opacity='1';b.style.visibility='visible';}else{b.style.opacity='0';b.style.visibility='hidden';}},{passive:true});
+b.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+b.addEventListener('mouseenter',function(){b.style.transform='scale(1.12)';});
+b.addEventListener('mouseleave',function(){b.style.transform='scale(1)';});})();
+</script>
+
+<a id="anwaar-ai-btn" href="https://anwaardigital.com/ai/?site=hub" target="_blank" rel="noopener" aria-label="Anwaar AI" style="position:fixed;right:16px;bottom:16px;z-index:9999;display:flex;align-items:center;background:#1a2b4a;color:#fff;text-decoration:none;font-family:system-ui,-apple-system,sans-serif;font-size:15px;font-weight:600;padding:12px 16px;border-radius:999px;box-shadow:0 4px 16px rgba(0,0,0,.35)">✦ Anwaar AI</a>
+</body></html>

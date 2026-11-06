@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>CyberSec Hub — مشن 1: فرسٹ بلڈ</title>
+<meta name="description" content="مشن 1: فرسٹ بلڈ — ٹرمینل کمانڈز سے ٹریننگ سرور پر چھپا ہوا جھنڈا ڈھونڈیں۔ ابتدائی افراد کے لیے موزوں CyberSec Hub مشن۔">
+<link rel="canonical" href="https://anwaardigital.com/Cybersecurity/ur/mission-1.html">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="ur.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&amp;display=swap" rel="stylesheet">
+</head>
+<body class="page-mission">
+<nav class="navbar"><a class="brand" href="index.html"> CyberSec <span class="g">Hub</span></a><a class="nav" href="index.html">ہوم</a><a class="nav" href="missions.html">مشنز</a><a class="nav" href="learning-path.html">سیکھنے کے راستے</a></nav>
+<div class="wrap">
+<h1> مشن 1: <span class="g">فرسٹ بلڈ</span></h1>
+<p class="sub"><span class="badge">آسان</span>  <span class="pts">100 پوائنٹس</span>  ·  ٹریننگ سرور پر چھپا ہوا جھنڈا ڈھونڈیں۔</p>
+<div class="terminal">
+<div class="term-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot gr"></span><span class="term-title">trainee@hub: ~/mission1</span><span class="term-score" id="score">اسکور: 100</span></div>
+<div class="term-body" id="term"></div>
+<div class="chips">
+<button onclick="runCmd(&#x27;ls&#x27;)">ls</button>
+<button onclick="runCmd(&#x27;scan&#x27;)">scan</button>
+<button onclick="runCmd(&#x27;help&#x27;)">help</button>
+<button onclick="runCmd(&#x27;hint&#x27;)">hint</button>
+<button onclick="runCmd(&#x27;clear&#x27;)">clear</button>
+</div>
+<form class="input-row" onsubmit="sendCmd(event)">
+<input id="cmdInput" type="text" placeholder="کمانڈ لکھیں... (آزمائیں: ls)" autocomplete="off" autocapitalize="off">
+<button type="submit">بھیجیں ⏎</button>
+</form>
+</div>
+<div class="howto">
+<h3>مشن 1 کیسے کھیلیں</h3>
+<ol>
+<li>لکھیں <b style="color:#a7f3d0">ls</b> سرور پر فائلیں دیکھنے کے لیے۔</li>
+<li>فائلیں پڑھیں <b style="color:#a7f3d0">cat &lt;filename&gt;</b> — سراغوں پر عمل کریں۔</li>
+<li>جب جھنڈا مل جائے تو اسے جمع کرائیں: <b style="color:#a7f3d0">submit FLAG{...}</b></li>
+<li>پھنس گئے؟ لکھیں <b style="color:#a7f3d0">hint</b> (ہر اشارے کی قیمت 10 پوائنٹس ہے)۔</li>
+</ol>
+</div>
+<a class="back" href="missions.html">← تمام مشنز</a>
+<footer>CyberSec Hub — 100 فیصد اخلاقی تربیت۔ یہ ایک مصنوعی سرور ہے، اصلی سسٹم نہیں۔</footer>
+</div>
+<script>
+var term=document.getElementById('term');
+var score=100, hintsUsed=0, won=false;
+var files={
+'readme.txt':'ٹریننگ سرور میں خوش آمدید۔\nکوئی پرانا بیک اپ پیچھے چھوڑ گیا تھا۔\nسرور لاگ کو زیادہ معلوم ہے۔ اسے چیک کریں۔',
+'server.log':'[10:02] user guest logged in\n[10:05] WARNING: پرانی بیک اپ فائل "old-config.bak" ابھی سرور پر موجود ہے — اس میں اسناد ہو سکتی ہیں؟\n[10:09] user guest logged out',
+'users.txt':'admin\nguest\ntest'
+};
+function print(html){var d=document.createElement('div');d.innerHTML=html;term.appendChild(d);term.scrollTop=term.scrollHeight;}
+function printCmd(c){print('<span class="cmd">➜ ~ </span>'+c);}
+function setScore(){document.getElementById('score').textContent='اسکور: '+score;}
+function runCmd(raw){
+var c=(raw||'').trim();
+if(!c)return;
+printCmd(c);
+var low=c.toLowerCase();
+if(low==='clear'){term.innerHTML='';return;}
+if(low==='help'){
+print('<span class="dim">کمانڈز: ls · scan · cat &lt;file&gt; · hint · clear · submit FLAG{...}</span>');
+print('<span class="dim">یہاں فائلیں: readme.txt · server.log · users.txt</span>');
+return;
+}
+if(low==='ls'){
+print('readme.txt   server.log   users.txt');
+return;
+}
+if(low==='scan'){
+print('<span class="dim">ٹریننگ سرور اسکین ہو رہا ہے...</span>');
+print('22/tcp  open  ssh\n80/tcp  open  http\n<span class="dim">مشورہ: کھلی سروسز جھنڈا نہیں ہیں۔ فائلیں پڑھیں۔</span>');
+return;
+}
+if(low==='hint'){
+hintsUsed++;
+score=Math.max(0,score-10);setScore();
+if(hintsUsed===1)print('<span class="gold">اشارہ 1 (-10 پوائنٹس): لاگ فائلوں میں اکثر بھولی ہوئی فائلوں کا ذکر ہوتا ہے۔ آزمائیں: cat server.log</span>');
+else if(hintsUsed===2)print('<span class="gold">اشارہ 2 (-10 پوائنٹس): لاگ میں پرانی بیک اپ فائل کا ذکر ہے۔ اس کا نام .bak پر ختم ہوتا ہے</span>');
+else print('<span class="gold">اشارہ 3 (-10 پوائنٹس): آزمائیں: cat old-config.bak</span>');
+return;
+}
+if(low.indexOf('cat ')===0){
+var f=low.slice(4).trim();
+if(f==='old-config.bak'){
+print('<span class="gold">FLAG{first_blood_2026}</span>');
+print('<span class="dim">آپ کو مل گیا! مشن مکمل کرنے کے لیے اسے جمع کرائیں:</span>');
+print('<span class="cmd">submit FLAG{first_blood_2026}</span>');
+return;
+}
+if(files[f]){print(files[f].replace(/\n/g,'<br>'));return;}
+print('<span class="dim">ایسی کوئی فائل نہیں: '+f+'. Type ls to see files.</span>');
+return;
+}
+if(low.indexOf('submit')===0 || low.indexOf('flag{')!==-1){
+if(low.indexOf('flag{first_blood_2026}')!==-1 && !won){
+won=true;
+if(window.HubProgress)HubProgress.completeMission('mission-1');
+print('<span class="win"> مشن مکمل!</span>');
+print('<span class="win">+'+score+' پوائنٹس ملے · اب آپ ہیکر کے شکار نہیں، ہیکر کے شکاری ہیں۔</span>');
+print('<span class="dim">اگلا مشن: <a href="mission-2.html">مشن 2 — فشنگ ہنٹر →</a></span>');
+}else if(won){
+print('<span class="dim">مشن پہلے ہی مکمل ہے۔ شاندار کام!</span>');
+}else{
+print('<span class="dim">غلط جھنڈا۔ ڈھونڈتے رہیں — جھنڈا ایک فائل میں چھپا ہے۔</span>');
+}
+return;
+}
+print('<span class="dim">کمانڈ نہیں ملی۔ help لکھیں۔</span>');
+}
+function sendCmd(e){
+e.preventDefault();
+var i=document.getElementById('cmdInput');
+runCmd(i.value);i.value='';i.focus();
+}
+print('<span class="dim">ٹریننگ سرور سے منسلک۔ آپ کا مشن:</span>');
+print('<span class="gold">اس سرور پر چھپا ہوا جھنڈا ڈھونڈیں۔</span>');
+print('<span class="dim">شروع کرنے کے لیے ls لکھیں، یا کمانڈز کے لیے help۔</span>');
+document.getElementById('cmdInput').focus();
+</script>
+<a id="anwaar-ai-btn" href="https://anwaardigital.com/ai/?site=hub" target="_blank" rel="noopener" aria-label="Anwaar AI" style="position:fixed;right:16px;bottom:16px;z-index:9999;display:flex;align-items:center;background:#1a2b4a;color:#fff;text-decoration:none;font-family:system-ui,-apple-system,sans-serif;font-size:15px;font-weight:600;padding:12px 16px;border-radius:999px;box-shadow:0 4px 16px rgba(0,0,0,.35)">✦ Anwaar AI</a>
+<button id="backToTop" aria-label="Back to top" title="Back to top" style="position:fixed;bottom:148px;right:16px;width:48px;height:48px;border-radius:50%;border:none;background:#d4af37;color:#0A3D2E;font-size:22px;line-height:1;cursor:pointer;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s,transform .2s;box-shadow:0 4px 12px rgba(0,0,0,.35);z-index:9999;padding:0;">↑</button>
+<script>(function(){var b=document.getElementById('backToTop');if(!b)return;window.addEventListener('scroll',function(){var s=window.pageYOffset||document.documentElement.scrollTop;if(s>300){b.style.opacity='1';b.style.visibility='visible';}else{b.style.opacity='0';b.style.visibility='hidden';}},{passive:true});b.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});})();</script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<link rel="icon" type="image/png" sizes="192x192" href="https://anwaardigital.com/Cybersecurity/cyber-icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="https://anwaardigital.com/Cybersecurity/cyber-icon-512.png">
+<link rel="apple-touch-icon" href="https://anwaardigital.com/Cybersecurity/cyber-icon-192.png">
+<!-- Cookie consent (GDPR): Google Analytics loads only after you press Accept -->
+<script src="../cookie-consent.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Metasploit کی بنیادی باتیں: پیشہ ورانہ فریم ورک کو سمجھنا (اخلاقی استعمال)</title>
+<meta name="description" content="Metasploit کیا ہے، ماہرین اسے مجاز ٹیسٹوں میں کیسے استعمال کرتے ہیں، اور اسے اپنی الگ تھلگ لیب میں محفوظ طریقے سے کیسے دریافت کریں۔">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="ur.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+<link rel="canonical" href="https://anwaardigital.com/Cybersecurity/ur/metasploit-basics-ethical.html">
+<meta property="og:title" content="Metasploit کی بنیادی باتیں: پیشہ ورانہ فریم ورک کو سمجھنا (اخلاقی استعمال)">
+<meta property="og:description" content="Metasploit کیا ہے، ماہرین اسے مجاز ٹیسٹوں میں کیسے استعمال کرتے ہیں، اور اسے اپنی الگ تھلگ لیب میں محفوظ طریقے سے کیسے دریافت کریں۔">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://anwaardigital.com/Cybersecurity/ur/metasploit-basics-ethical.html">
+<meta property="og:site_name" content="CyberSec Hub">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://anwaardigital.com/Cybersecurity/cyber-icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Metasploit کی بنیادی باتیں: پیشہ ورانہ فریم ورک کو سمجھنا (اخلاقی استعمال)",
+  "description": "Metasploit کیا ہے، ماہرین اسے مجاز ٹیسٹوں میں کیسے استعمال کرتے ہیں، اور اسے اپنی الگ تھلگ لیب میں محفوظ طریقے سے کیسے دریافت کریں۔",
+  "author": {
+    "@type": "Person",
+    "name": "Malik Muhammad Anwaar"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "CyberSec Hub",
+    "url": "https://anwaardigital.com/Cybersecurity/"
+  },
+  "datePublished": "2026-11-06",
+  "dateModified": "2026-11-06",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://anwaardigital.com/Cybersecurity/ur/metasploit-basics-ethical.html"
+  }
+}
+</script>
+</head>
+<body class="page-ur">
+<nav class="navbar"><div class="nav-inner">
+<a href="../index.html" class="brand"><span class="brand-icon"></span><span>CyberSec <span class="green">Hub</span></span></a>
+<div class="nav-actions"><button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark and light theme"><span class="theme-icon"></span><span class="theme-label">Light</span></button><button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button></div>
+<ul class="nav-links" id="navLinks">
+<li><a href="index.html">ہوم</a></li>
+<li><a href="../index.html#basics">بنیادی باتیں</a></li>
+<li><a href="../index.html#hacking">اخلاقی ہیکنگ</a></li>
+<li><a href="../index.html#tools">ٹولز گائیڈ</a></li>
+<li><a href="../index.html#career">کیریئر</a></li>
+<li><a href="../missions/index.html">مشنز</a></li>
+<li><a href="../learning-path.html">سیکھنے کے راستے</a></li>
+<li><a href="../sectools/index.html">ٹولز</a></li>
+<li><a href="../glossary.html">لغت</a></li>
+<li><a href="../faq.html">سوالات</a></li>
+<li><a href="../about.html">ہمارے بارے میں</a></li>
+<li><a href="../index.html">English</a></li>
+</ul></div></nav>
+<script>
+(function(){try{if(localStorage.getItem('hubTheme')==='light'){document.body.classList.add('light');}}catch(e){}})();
+function toggleTheme(){var b=document.body;var light=b.classList.toggle('light');try{localStorage.setItem('hubTheme',light?'light':'dark');}catch(e){}var btn=document.querySelector('.theme-toggle');if(btn){var ic=btn.querySelector('.theme-icon');var lb=btn.querySelector('.theme-label');if(ic)ic.textContent=light?'':'';if(lb)lb.textContent=light?'Dark':'Light';}}
+(function(){var btn=document.querySelector('.theme-toggle');if(!btn)return;var light=document.body.classList.contains('light');var ic=btn.querySelector('.theme-icon');var lb=btn.querySelector('.theme-label');if(ic)ic.textContent=light?'':'';if(lb)lb.textContent=light?'Dark':'Light';})();
+</script><div class="breadcrumb"><a href="index.html">ہوم</a> / ٹولز گائیڈ / Metasploit کی بنیادی باتیں</div>
+<header class="article-hero"><span class="section-tag"> ٹولز گائیڈ</span><h1>Metasploit کی بنیادی باتیں: پیشہ ورانہ فریم ورک کو سمجھنا (اخلاقی استعمال)</h1>
+<p class="small">آخری اپ ڈیٹ: 6 نومبر 2026</p><div class="article-meta">CyberSec Hub کی طرف سے · 10 منٹ مطالعہ</div></header>
+<main class="article-body">
+<div class="ethical-box"><strong> صرف اخلاقی استعمال:</strong> صرف ان سسٹمز کو ٹیسٹ کریں جو آپ کے اپنے ہوں یا جن کی ٹیسٹنگ کی آپ کے پاس <strong>تحریری اجازت</strong> ہو۔ بغیر اجازت ہیکنگ پاکستان اور دنیا بھر میں غیر قانونی ہے۔ یہاں موجود ہر چیز صرف دفاعی سیکیورٹی تعلیم اور مجاز ٹیسٹنگ کے لیے ہے۔</div>
+<p><strong>Metasploit</strong> سائبر سیکیورٹی میں سب سے مشہور استحصال فریم ورک ہے — ایک وسیع، ماڈیولر ٹول کٹ جسے ماہرین <em>مجاز</em> پینٹریشن ٹیسٹوں کے دوران کمزوریوں کی موثر تصدیق کے لیے استعمال کرتے ہیں۔ چونکہ یہ واقعی دوہرا استعمال ہے، یہ گائیڈ فریم ورک کو <strong>سمجھنے</strong> اور اسے <strong>صرف اپنی الگ تھلگ لیب کے اندر</strong> دریافت کرنے پر مرکوز ہے۔</p>
+<h2>Metasploit دراصل کیا ہے</h2>
+<p>Metasploit کو لائبریری اور کنسول سمجھیں۔ لائبریری میں ہزاروں <strong>ماڈیولز</strong> ہیں: استحصال (کوڈ جو مخصوص کمزوری ثابت کرتا ہے)، معاون اسکینرز، اور پے لوڈز (کامیاب استحصال کے بعد کیا چلتا ہے — لیبز میں عام طور پر مظاہرے کے لیے بے ضرر شیل)۔ کنسول (<code>msfconsole</code>) ماہرین کو ماڈیول منتخب کرنے، متفقہ ہدف کے لیے اسے ترتیب دینے، اور چلانے دیتا ہے — ہر کارروائی حتمی رپورٹ کے لیے لاگ ہوتی ہے۔ اس کی طاقت تنظیم اور دہرائی جانے والی صلاحیت ہے، جادو نہیں۔</p>
+<h2>ماہرین اسے کیسے استعمال کرتے ہیں (صرف مجاز ٹیسٹ)</h2>
+<p>حقیقی مشغولیت میں Metasploit <a href="penetration-testing-methodology.html">طریقہ کار</a> میں اس طرح فٹ ہوتا ہے:</p>
+<ol>
+<li><strong>دائرہ دستخط شدہ</strong> — تحریری اجازت بالکل ہدفوں کی وضاحت کرتی ہے۔</li>
+<li><strong>جاسوسی اور اسکیننگ</strong> کلائنٹ کے اپنے سسٹمز پر ممکنہ کمزوریوں کی نشاندہی کرتی ہے۔</li>
+<li>مماثل <strong>استحصال ماڈیول</strong> منتخب کیا جاتا ہے اور دائرے میں ہدف کے لیے ترتیب دیا جاتا ہے۔</li>
+<li>استحصال <strong>کنٹرول شدہ</strong> طریقے سے چلتا ہے تاکہ کمزوری ثابت ہو — پھر رک جاتا ہے۔</li>
+<li>ثبوت اصلاح مشورے کے ساتھ <strong>رپورٹ</strong> میں جاتا ہے۔</li>
+</ol>
+<p>نوٹ کریں: فریم ورک طریقہ کار اور کاغذی کارروائی کی خدمت کرتا ہے — اس کے برعکس نہیں۔</p>
+<h2>اپنی لیب میں محفوظ طریقے سے دریافت کرنا</h2>
+<p>پہلے سیٹ اپ کریں: اپنی <a href="kali-linux-setup.html">کالی لینکس VM</a> (Metasploit پہلے سے انسٹال ہے) اور جان بوجھ کر کمزور ہدف VM جیسے <strong>Metasploitable</strong> الگ تھلگ host-only ورچوئل نیٹ ورک پر — آپ کے ہوم نیٹ ورک یا انٹرنیٹ کا <strong>کوئی راستہ نہیں</strong>۔ یہ علیحدگی ناقابل مذاکرات ہے: لیب ٹریفک کبھی لیب سے باہر نہیں جانا چاہیے۔</p>
+<p>لیب کے اندر ماہرین <em>ورک فلو</em> کی مشق کرتے ہیں، یاد کیے گئے کمانڈز کی نہیں: فریم ورک کنسول کھولیں، ماڈیول لائبریری میں اس کمزوری سے مماثل ماڈیول تلاش کریں جو آپ کو <strong>اپنے ہدف VM</strong> پر ملی تھی، پہلے اس کا معلوماتی صفحہ پڑھیں، اسے صرف <strong>[YOUR-LAB-TARGET-IP]</strong> کے لیے ترتیب دیں، اور کچھ بھی کرنے سے پہلے غیر تباہ کن کمزوری <em>چیک</em> چلائیں۔ پیشہ ورانہ عادت پہلے تصدیق کرنا ہے — تصدیق کریں کہ کمزوری موجود ہے، اسے کنٹرول شدہ طریقے سے ظاہر کریں، پھر رک جائیں — ہر کارروائی حتمی رپورٹ کے لیے لاگ ہوتی ہے۔</p>
+<div class="ethical-box"><strong> صرف لیب میں، صرف تحریری اجازت سے:</strong> ہر ماڈیول آپ کی اپنی الگ تھلگ لیب VMs، مجاز تربیتی پلیٹ فارمز، یا دستخط شدہ تحریری اجازت سے احاطہ شدہ واضح طور پر دائرے میں مشغولیت ہدفوں کے خلاف استعمال ہوتا ہے۔ ان میں سے کسی کو بھی ان سسٹمز کی طرف اشارہ کرنا جو آپ کے اپنے نہیں ہیں غیر قانونی ہے، چاہے ارادہ کچھ بھی ہو۔</div>
+<h2>سمجھنے کے لیے اہم تصورات</h2>
+<ul>
+<li><strong>استحصال بمقابلہ پے لوڈ:</strong> استحصال اندر جاتا ہے؛ پے لوڈ وہ ہے جو اس کے بعد کرتا ہے۔ لیبز میں پے لوڈز کچھ بے ضرر کرنے کے لیے ترتیب دیے جاتے ہیں — عام طور پر صرف رسائی <em>ظاہر</em> کرنے کے لیے بنیادی کمانڈ شیل کھولنا، کبھی اصل ڈیٹا لینے یا برقرار رکھنے کے لیے نہیں۔</li>
+<li><strong>Meterpreter:</strong> استحصال کے بعد کی خصوصیات والا اعلیٰ پے لوڈ — مجاز ٹیسٹوں میں <em>اثر محفوظ طریقے سے ظاہر</em> کرنے کے لیے استعمال ہوتا ہے (مثال کے طور پر، ثابت کرنا کہ فائل پڑھی جا سکتی تھی، اصل ڈیٹا نکالے بغیر)۔</li>
+<li><strong>معاون ماڈیولز:</strong> اسکینرز اور فزرز جو استحصال نہیں کرتے — آپ کی لیب پر جاسوسی سیکھنے کے لیے بہترین۔</li>
+</ul>
+<h2>سخت حدیں</h2>
+<ul>
+<li>Metasploit <strong>صرف</strong> اپنی لیب VMs، مجاز تربیتی پلیٹ فارمز، یا واضح طور پر دائرے میں مشغولیت ہدفوں کے خلاف چلائیں۔</li>
+<li>عوامی IPs، ویب سائٹس، یا نیٹ ورکس کو "یہ دیکھنے کے لیے کہ آیا یہ کام کرتا ہے" کبھی اسکین یا استحصال نہ کریں — زیادہ تر جگہوں میں یہ جرم ہے چاہے ارادہ کچھ بھی ہو۔</li>
+<li>کالی اور Metasploit کو اپ ڈیٹ رکھیں (<code>msfupdate</code>)؛ پرانے فریم ورکس موجودہ دفاع کا مطلب کھو دیتے ہیں۔</li>
+</ul>
+<div class="tip-box"><strong> پیشہ ورانہ سبق:</strong> Metasploit کی اصل قدر مجاز تصدیق کو <em>موثر اور دستاویز شدہ</em> بنانا ہے۔ کوئی بھی ماڈیول چلا سکتا ہے؛ ماہرین اس کا دائرہ بناتے ہیں، اسے کنٹرول کرتے ہیں، اس کا ثبوت دیتے ہیں، اور اس کی رپورٹ کرتے ہیں۔ یہ نظم وہ ہے جس کی طرف ہماری <a href="how-to-become-pentester.html">کیریئر گائیڈ</a> بنتی ہے۔</div>
+<h2>ماڈیول کی ساخت: چلانے سے پہلے پڑھنا</h2>
+<p>پیشہ ورانہ عادت: اپنی لیب میں کوئی بھی ماڈیول استعمال کرنے سے پہلے اسے پڑھیں۔ <code>info</code> وضاحت، مصنفین، ہدف، اور حوالے دکھاتا ہے؛ بہت سے ماڈیول اصل کمزوری تحریروں سے منسلک ہوتے ہیں — انہیں پڑھنا استحصال چلانے سے زیادہ سکھاتا ہے۔ یہ سمجھنا کہ ماڈیول <em>کیوں</em> کام کرتا ہے (کون سا پروٹوکول عیب؟ کون سی غلط ترتیب؟) وہ کمزوری بصیرت بناتا ہے جو تکنیکی ماہرین کو پیشہ ور افراد سے الگ کرتی ہے۔ اپنے لیب جرنل میں ہر ماڈیول کو اپنے الفاظ میں خلاصہ کریں: یہ کس کو نشانہ بناتا ہے، یہ کیا ثابت کرتا ہے، اصلاح کیا ہے۔</p>
+<h2>پوسٹ ماڈیولز اور "تو کیا" سوال</h2>
+<p>اپنی لیب میں ابتدائی رسائی کے بعد Metasploit کے <strong>پوسٹ ماڈیولز</strong> معلومات جمع کرتے ہیں — سسٹم شمار ماڈیولز جو دستاویز کرتے ہیں کہ آپ کا اپنا ہدف VM کیا ظاہر کرتا ہے۔ پیشہ ورانہ سوال ہمیشہ "تو کیا؟" ہوتا ہے: یہ رسائی کاروباری خطرے کے بارے میں کیا <em>ثابت</em> کرتی ہے؟ آپ کی لیب VM پر شیل ثابت کرتا ہے کہ کمزوری حقیقی ہے؛ رپورٹ پھر اسے اثر زبان (خطرے میں ڈیٹا، قابل رسائی سسٹمز) اور اصلاح ترجیح میں ترجمہ کرتی ہے۔ ہر لیب مشق کے لیے اس ترجمے کو لکھنے کی مشق کریں۔</p>
+<h2>Metasploit سے آگے: بڑا ٹول کٹ</h2>
+<p>Metasploit آرکسٹرا میں ایک آلہ ہے۔ ماہرین اسے Nmap (دریافت)، Burp (ویب)، Wireshark (ٹریفک تجزیہ)، BloodHound (Active Directory نقشہ سازی، مجاز ٹیسٹ) کے ساتھ جوڑتے ہیں، اور سب سے بڑھ کر <strong>دستی سوچ</strong> — بہترین نتائج ابھی بھی سسٹمز کو سمجھنے سے آتے ہیں، ٹولز چلانے سے نہیں۔ Metasploit کو دہرائی جانے والی تصدیق سنبھالنے دیں جبکہ آپ کا دماغ تخلیقی کام کرے: نتائج کو جوڑنا، اثر کا فیصلہ کرنا، اور رپورٹ لکھنا جو واقعی چیزیں درست کرے۔</p>
+<h2>اپنے سادہ ماڈیولز لکھنا (اعلیٰ لیب)</h2>
+<p>جب آپ سکون محسوس کریں تو اپنی کالی VM میں موجود معاون ماڈیولز کا Ruby کوڈ پڑھیں (<code>/usr/share/metasploit-framework/modules/</code>)۔ وہ حیران کن طور پر پڑھنے کے قابل ہیں: میٹا ڈیٹا، آپشنز، اور <code>run</code> طریقہ۔ اپنی لیب کے لیے اسکینر ماڈیول میں تبدیلی کرنے کی کوشش کریں — یہ کیا چیک کرتا ہے بدلیں، آؤٹ پٹ شامل کریں۔ اسی طرح ٹول ڈویلپرز پیدا ہوتے ہیں، اور اصل استحصال کوڈ پڑھنا (اپنے کمزور لیب ہدفوں کے لیے) کسی بھی کتاب سے بہتر کمزوری میکینکس سکھاتا ہے۔ جب آپ کو کیڑے ملیں تو اوپر کی طرف اصلاحات بھیجیں — کمیونٹی ایسی شراکتوں پر چلتی ہے۔</p>
+<h2>Metasploit بمقابلہ دستی ٹیسٹنگ</h2>
+<p>پیشہ ورانہ راز: بہترین ٹیسٹرز Metasploit <em>کم</em> استعمال کرتے ہیں۔ خودکار استحصال معروف مسائل کو تیزی سے ثابت کرتا ہے، لیکن نئے نتائج — منطق عیوب، جڑے ہوئے غلط ترتیبات، کاروباری عمل کا غلط استعمال — Burp، حسب ضرورت اسکرپٹس، اور گہری پڑھائی کے ساتھ دستی سوچ سے آتے ہیں۔ فریم ورک کو اس کے لیے استعمال کریں جس میں وہ بہترین ہے (معروف کمزوری اقسام کی موثر تصدیق) اور اپنا دماغ اس کے لیے محفوظ رکھیں جو صرف دماغ کرتے ہیں۔ کلائنٹس فیصلے کے لیے ادائیگی کرتے ہیں، ٹول آؤٹ پٹ کے لیے نہیں۔</p>
+<div class="related-box">
+<h3>متعلقہ گائیڈز</h3>
+<ul>
+<li><a href="penetration-testing-methodology.html">پینٹریشن ٹیسٹنگ طریقہ کار: پیشہ ورانہ ورک فلو</a></li>
+<li><a href="kali-linux-setup.html">کالی لینکس سیٹ اپ گائیڈ: اپنی اخلاقی ہیکنگ لیب بنائیں</a></li>
+<li><a href="vulnerability-assessment-guide.html">کمزوری جائزہ گائیڈ: اپنے سسٹمز میں کمزوریاں تلاش کریں</a></li>
+<li><a href="how-to-become-pentester.html">پینٹریشن ٹیسٹر کیسے بنیں: مرحلہ وار روڈ میپ</a></li>
+</ul>
+</div>
+<div class="progress-box tip-box" data-guide="tools/metasploit-basics-ethical.html" data-title="Metasploit کی بنیادی باتیں: پیشہ ورانہ فریم ورک کو سمجھنا (اخلاقی استعمال)"><strong>اپنی پیش رفت محفوظ کریں:</strong> گائیڈ مکمل کر لی؟ <button class="btn btn-green hub-complete-btn" type="button">مکمل نشان زد کریں</button><span class="hub-complete-done" style="display:none">مکمل ہو گیا — صرف آپ کے براؤزر میں محفوظ ہے۔ اپنی <a href="../leaderboard.html">پیش رفت اور لیڈر بورڈ</a> دیکھیں۔</span></div>
+</main>
+
+<footer class="footer"><div class="container">
+<div class="footer-brand"> سائبر سیک <span class="green">ہب</span></div>
+<p>سائبر سیکیورٹی سیکھیں — اخلاقی اور قانونی طریقے سے۔</p>
+<div class="footer-links">
+<a href="index.html">ہوم</a><a href="../about.html">ہمارے بارے میں</a><a href="../contact.html">رابطہ</a><a href="../privacy.html">پرائیویسی پالیسی</a><a href="../disclaimer.html">ڈسکلیمر</a><a href="../terms.html">شرائط</a><a href="../leaderboard.html">لیڈر بورڈ</a><a href="../certificate.html">سرٹیفکیٹ</a><a href="../breach-news.html">بریچ نیوز</a>
+</div>
+<p class="foot-email"> <a href="mailto:contact@anwaardigital.com">contact@anwaardigital.com</a></p>
+<p class="copyright">تیار کردہ <strong style="color:var(--red)">ملک محمد انوار</strong></p>
+<p class="copyright">© 2026 CyberSec Hub by Anwaar Digital. جملہ حقوق محفوظ ہیں۔ صرف تعلیمی مواد — ہمیشہ تحریری اجازت سے ٹیسٹ کریں۔</p>
+</div></footer><a href="https://wa.me/923288317526" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.6 6.1 1.6h.1c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.6 1.2 1.2-4.5-.3-.4c-1-1.6-1.6-3.5-1.6-5.5C5 9.6 10.6 5 16 5s11 4.6 11 10-5.4 9.8-11 9.8zm6.1-7.3c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.8.1-.3-.2-1.4-.5-2.7-1.6-.9-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6L13 9.5c-.3-.8-.7-.7-1-.7h-.8c-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.5s1.5 4 1.7 4.3c.2.3 2.9 4.4 7 6.2 1 .4 1.7.7 2.3.9.9.3 1.8.2 2.5.2.8-.1 2.3-1 2.7-1.9.3-.9.3-1.7.2-1.9-.1-.1-.3-.2-.7-.4z"/></svg></a>
+<!-- Back to top button -->
+<button id="backToTop" aria-label="Back to top" title="Back to top"
+style="position:fixed;bottom:24px;right:24px;width:48px;height:48px;border-radius:50%;border:none;background:var(--red);color:var(--bg);font-size:22px;line-height:1;cursor:pointer;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s,transform .2s;box-shadow:0 4px 12px rgba(0,0,0,.35);z-index:9999;padding:0;">&#8593;</button>
+<script>
+(function(){var b=document.getElementById('backToTop');if(!b)return;
+window.addEventListener('scroll',function(){var s=window.pageYOffset||document.documentElement.scrollTop;
+if(s>300){b.style.opacity='1';b.style.visibility='visible';}else{b.style.opacity='0';b.style.visibility='hidden';}},{passive:true});
+b.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+b.addEventListener('mouseenter',function(){b.style.transform='scale(1.12)';});
+b.addEventListener('mouseleave',function(){b.style.transform='scale(1)';});})();
+</script>
+
+<a id="anwaar-ai-btn" href="https://anwaardigital.com/ai/?site=hub" target="_blank" rel="noopener" aria-label="Anwaar AI" style="position:fixed;right:16px;bottom:16px;z-index:9999;display:flex;align-items:center;background:#1a2b4a;color:#fff;text-decoration:none;font-family:system-ui,-apple-system,sans-serif;font-size:15px;font-weight:600;padding:12px 16px;border-radius:999px;box-shadow:0 4px 16px rgba(0,0,0,.35)">✦ Anwaar AI</a>
+<script src="../progress.js"></script>
+<script src="../progress.js"></script>
+</body></html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>CyberSec Hub — مشن 4: کمزوری ڈھونڈیں</title>
+<meta name="description" content="مشن 4: کمزوری ڈھونڈیں — مختصر کوڈ ٹکڑے پڑھیں اور ہر ایک میں سیکیورٹی خامی ڈھونڈیں۔ ایک CyberSec Hub مشن۔">
+<link rel="canonical" href="https://anwaardigital.com/Cybersecurity/ur/mission-4.html">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="ur.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&amp;display=swap" rel="stylesheet">
+</head>
+<body class="page-mission">
+<nav class="navbar"><a class="brand" href="index.html"> CyberSec <span class="g">Hub</span></a><a class="nav" href="index.html">ہوم</a><a class="nav" href="missions.html">مشنز</a><a class="nav" href="learning-path.html">سیکھنے کے راستے</a></nav>
+<div class="wrap">
+<h1> مشن 4: <span class="g">کمزوری ڈھونڈیں</span></h1>
+<p class="sub"><span class="badge">درمیانہ</span>  <span class="pts">300 پوائنٹس</span>  ·  مختصر کوڈ ٹکڑے پڑھیں اور ہر ایک میں سیکیورٹی خامی ڈھونڈیں۔</p>
+<div class="scorebar" id="scorebar">اسکور: 0 / 300 · ٹکڑا 1 از 3</div>
+<div class="howto">
+<h3>کیسے کھیلیں</h3>
+<ol>
+<li>کوڈ ٹکڑا غور سے پڑھیں۔</li>
+<li>3 آپشنز میں سے سیکیورٹی خامی چنیں۔</li>
+<li>درست جواب پر 100 پوائنٹس ملتے ہیں۔ جھنڈا حاصل کرنے کے لیے تینوں درست کریں۔</li>
+</ol>
+</div>
+<div class="code" id="codeBox"></div>
+<div class="opts" id="optsBox"></div>
+<div class="verdict" id="verdict"></div>
+<div class="win" id="winBox"></div>
+<a class="back" href="missions.html">← تمام مشنز</a>
+<footer>CyberSec Hub — 100 فیصد اخلاقی تربیت۔ صرف مشقی کوڈ — کبھی وہ کوڈ ٹیسٹ نہ کریں جو آپ کا نہیں ہے۔</footer>
+</div>
+<script>
+var rounds=[
+{code:'query = "SELECT * FROM users WHERE id = \'" + userInput + "\'";',
+options:['SQL انجیکشن — صارف کا ان پٹ سیدھا کوئری میں جاتا ہے','کمزور پاس ورڈ','HTTPS غائب ہے'],
+correct:0,
+why:'حملہ آور لکھ سکتا ہے: \' OR \'1\'=\'1 — اور ڈیٹا بیس کا ہر صارف پڑھ سکتا ہے۔ حل: پیرامیٹرائزڈ کوئریز استعمال کریں، کبھی خام ان پٹ سے SQL نہ بنائیں۔'},
+{code:'const API_KEY = "sk-live-9f8e7d6c5b4a"; // used in every request',
+options:['سست ڈیٹا بیس','خفیہ کی سورس کوڈ میں لکھی ہوئی ہے','بیک اپ غائب ہے'],
+correct:1,
+why:'جو بھی یہ کوڈ دیکھے گا، کی اس کی ہو جائے گی۔ حل: رازوں کو انوائرنمنٹ ویری ایبلز میں رکھیں، کبھی کوڈ میں نہیں — اور جو کی کبھی سامنے آئی ہو اسے بدل دیں۔'},
+{code:'app.get(\'/admin/delete-user\', (req, res) => { deleteUser(req.query.id); });',
+options:['خطرناک عمل پر کوئی لاگ ان یا اجازت کی جانچ نہیں','یو آر ایل میں ٹائپو','لاگ فائل غائب ہے'],
+correct:0,
+why:'کوئی بھی یہ یو آر ایل کھول کر صارفین حذف کر سکتا ہے — کوئی لاگ ان نہیں، کوئی ایڈمن جانچ نہیں۔ حل: کسی بھی خطرناک عمل سے پہلے ایڈمن لاگ ان اور اجازت کی جانچ لازمی کریں۔'}
+];
+var idx=0, score=0;
+function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function render(){
+var r=rounds[idx];
+document.getElementById('codeBox').textContent=r.code;
+var html='';
+r.options.forEach(function(o,i){html+='<button onclick="pick('+i+')">'+esc(o)+'</button>';});
+document.getElementById('optsBox').innerHTML=html;
+document.getElementById('scorebar').textContent='اسکور: '+score+' / 300 · ٹکڑا '+(idx+1)+' میں سے 3';
+var v=document.getElementById('verdict');v.style.display='none';v.innerHTML='';
+document.getElementById('winBox').style.display='none';
+}
+function pick(i){
+var r=rounds[idx];
+var ok=(i===r.correct);
+if(ok)score+=100;
+document.getElementById('scorebar').textContent='اسکور: '+score+' / 300 · ٹکڑا '+(idx+1)+' میں سے 3';
+document.getElementById('optsBox').innerHTML='';
+var v=document.getElementById('verdict');
+v.className='verdict '+(ok?'ok':'bad');
+var html='<h3>'+(ok?' درست! +100 پوائنٹس':' بالکل نہیں۔')+'</h3><p>'+esc(r.why)+'</p>';
+if(idx<rounds.length-1){html+='<button class="btn-next" onclick="next()">اگلا ٹکڑا →</button>';}
+else{html+='<button class="btn-next" onclick="finish()">نتیجہ دیکھیں →</button>';}
+v.innerHTML=html;v.style.display='block';
+}
+function next(){idx++;render();}
+function finish(){
+var v=document.getElementById('verdict');v.style.display='none';
+var w=document.getElementById('winBox');
+if(score===300){
+w.innerHTML='<h2> مشن مکمل!</h2><p>آپ نے ہر خامی ڈھونڈ لی۔ اسکور: 300 / 300</p><p class="flag">FLAG{bug_hunter_2026}</p><p style="margin-top:10px;color:#8fa39a">اگلا مشن: <a href="mission-5.html" style="color:#00e676;text-decoration:underline">مشن 5 — راز ڈی کوڈ کریں →</a></p>';
+if(window.HubProgress)HubProgress.completeMission('mission-4');
+}else{
+w.innerHTML='<h2 style="color:#fca5a5">اسکور: '+score+' / 300</h2><p>وضاحتیں دوبارہ پڑھیں اور پھر آزمائیں — اچھے شکاری ہر لائن چیک کرتے ہیں۔</p><button class="btn-retry" onclick="retry()">↻ دوبارہ آزمائیں</button>';
+}
+w.style.display='block';
+}
+function retry(){idx=0;score=0;render();}
+render();
+</script>
+<a id="anwaar-ai-btn" href="https://anwaardigital.com/ai/?site=hub" target="_blank" rel="noopener" aria-label="Anwaar AI" style="position:fixed;right:16px;bottom:16px;z-index:9999;display:flex;align-items:center;background:#1a2b4a;color:#fff;text-decoration:none;font-family:system-ui,-apple-system,sans-serif;font-size:15px;font-weight:600;padding:12px 16px;border-radius:999px;box-shadow:0 4px 16px rgba(0,0,0,.35)">✦ Anwaar AI</a>
+<button id="backToTop" aria-label="Back to top" title="Back to top" style="position:fixed;bottom:148px;right:16px;width:48px;height:48px;border-radius:50%;border:none;background:#d4af37;color:#0A3D2E;font-size:22px;line-height:1;cursor:pointer;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s,transform .2s;box-shadow:0 4px 12px rgba(0,0,0,.35);z-index:9999;padding:0;">↑</button>
+<script>(function(){var b=document.getElementById('backToTop');if(!b)return;window.addEventListener('scroll',function(){var s=window.pageYOffset||document.documentElement.scrollTop;if(s>300){b.style.opacity='1';b.style.visibility='visible';}else{b.style.opacity='0';b.style.visibility='hidden';}},{passive:true});b.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});})();</script>
+</body>
+</html>

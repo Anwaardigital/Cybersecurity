@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>CyberSec Hub — مشن 2: فشنگ ہنٹر</title>
+<meta name="description" content="مشن 2: فشنگ ہنٹر — جعلی ای میل کو ڈیٹا چوری کرنے سے پہلے پہچانیں۔ ابتدائی افراد کے لیے موزوں CyberSec Hub مشن۔">
+<link rel="canonical" href="https://anwaardigital.com/Cybersecurity/ur/mission-2.html">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="ur.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&amp;display=swap" rel="stylesheet">
+</head>
+<body class="page-mission">
+<nav class="navbar"><a class="brand" href="index.html"> CyberSec <span class="g">Hub</span></a><a class="nav" href="index.html">ہوم</a><a class="nav" href="missions.html">مشنز</a><a class="nav" href="learning-path.html">سیکھنے کے راستے</a></nav>
+<div class="wrap">
+<h1> مشن 2: <span class="g">فشنگ ہنٹر</span></h1>
+<p class="sub"><span class="badge">آسان</span>  <span class="pts">300 پوائنٹس</span>  ·  جعلی ای میل کو ڈیٹا چوری کرنے سے پہلے پہچانیں۔</p>
+<div class="scorebar" id="scorebar">اسکور: 0 / 300 · ای میل 1 از 3</div>
+<div class="howto">
+<h3>کیسے کھیلیں</h3>
+<ol>
+<li>ہر ای میل غور سے پڑھیں — بھیجنے والا، موضوع، اور پیغام۔</li>
+<li>فیصلہ کریں: کیا یہ <b style="color:#fca5a5">فشنگ</b> (ایک جال) یا <b style="color:#86efac">محفوظ</b> (ایک عام ای میل)؟</li>
+<li>اپنا جواب دبائیں۔ درست جواب پر 100 پوائنٹس ملتے ہیں۔</li>
+<li>جھنڈا حاصل کرنے کے لیے تینوں درست کریں۔</li>
+</ol>
+</div>
+<div class="email" id="emailBox"></div>
+<div class="btns" id="answerBtns">
+<button class="btn-phish" onclick="answer(&#x27;phish&#x27;)"> فشنگ</button>
+<button class="btn-safe" onclick="answer(&#x27;safe&#x27;)"> محفوظ</button>
+</div>
+<div class="verdict" id="verdict"></div>
+<div class="win" id="winBox"></div>
+<a class="back" href="missions.html">← تمام مشنز</a>
+<footer>CyberSec Hub — 100 فیصد اخلاقی تربیت۔ یہ فرضی مشقی ای میلز ہیں، اصلی پیغامات نہیں۔</footer>
+</div>
+<script>
+var rounds=[
+{from:'support@paypa1-secure.com',subject:'فوری: آپ کا اکاؤنٹ 24 گھنٹوں میں بند کر دیا جائے گا!',body:'Dear Customer,\nWe noticed unusual activity on your account. Verify your account now or it will be closed.\nClick here to verify: http://paypa1-secure.com/login\nAttachment: invoice.zip',answer:'phish',why:['بھیجنے والے کا ڈومین غلط لکھا ہے: "paypal" کے بجائے "paypa1"۔','"24 گھنٹے" کہہ کر جلدی پیدا کرتا ہے تاکہ آپ سوچ نہ سکیں۔','عام سلام ("Dear Customer") — اصلی سروسز آپ کا نام استعمال کرتی ہیں۔','مشکوک لنک جو اصلی ویب سائٹ سے میل نہیں کھاتا۔','غیر متوقع منسلکہ (invoice.zip) جو آپ نے کبھی نہیں مانگا۔']},
+{from:'hello@learnsafe.app',subject:'آپ کی ہفتہ وار سیکیورٹی ٹپ',body:'Hi Alex,\nThis week: turn on automatic updates for your phone. It takes 2 minutes and blocks most known attacks.\nNo action needed — just a tip. See you next week!\n— The LearnSafe Team',answer:'safe',why:['بھیجنے والا اس سروس سے میل کھاتا ہے جس کے لیے آپ نے سائن اپ کیا تھا۔','کوئی پاس ورڈ، ادائیگی یا ذاتی ڈیٹا نہیں مانگا گیا۔','کوئی جلدی، دھمکی یا دباؤ نہیں۔','کوئی مشکوک لنک یا غیر متوقع منسلکہ نہیں۔']},
+{from:'boss@company-support.net',subject:'فوری کام — گفٹ کارڈز چاہئیں',body:'Hi,\nI am in a meeting and need your help. Please buy 4 gift cards ($100 each) and send me the codes here.\nThis is urgent. Do not call me, just reply to this email.\n— Your Boss',answer:'phish',why:['غیر معمولی درخواست: گفٹ کارڈز فراڈ کی ادائیگی کا کلاسیکی طریقہ ہیں۔','دباؤ اور "مجھے کال نہ کریں" — آپ کو تصدیق سے روکتا ہے۔','بھیجنے والے کا ڈومین (company-support.net) کمپنی کا اصلی ڈومین نہیں ہے۔','اصلی باس کبھی ای میل سے گفٹ کارڈ کوڈز نہیں مانگتا۔']}
+];
+var idx=0, score=0;
+function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function render(){
+var r=rounds[idx];
+document.getElementById('emailBox').innerHTML='<div class="row"><div class="lbl">منجانب</div><div class="val">'+esc(r.from)+'</div></div><div class="row"><div class="lbl">موضوع</div><div class="val">'+esc(r.subject)+'</div></div><div class="lbl">پیغام</div><div class="body">'+esc(r.body)+'</div>';
+document.getElementById('scorebar').textContent='اسکور: '+score+' / 300 · ای میل '+(idx+1)+' میں سے 3';
+document.getElementById('answerBtns').style.display='flex';
+var v=document.getElementById('verdict');v.style.display='none';v.innerHTML='';
+document.getElementById('winBox').style.display='none';
+}
+function answer(choice){
+var r=rounds[idx];
+var ok=(choice===r.answer);
+if(ok)score+=100;
+document.getElementById('scorebar').textContent='اسکور: '+score+' / 300 · ای میل '+(idx+1)+' میں سے 3';
+document.getElementById('answerBtns').style.display='none';
+var v=document.getElementById('verdict');
+v.className='verdict '+(ok?'ok':'bad');
+var head=ok?' درست! +100 پوائنٹس':' بالکل نہیں۔';
+var truth=r.answer==='phish'?'یہ ای میل فشنگ تھی۔':'یہ ای میل محفوظ تھی۔';
+var html='<h3>'+head+'</h3><p>'+truth+'</p><p style="margin-top:10px"><b>کیوں:</b></p><ul>';
+r.why.forEach(function(w){html+='<li>'+esc(w)+'</li>';});
+html+='</ul>';
+if(idx<rounds.length-1){html+='<button class="btn-next" onclick="next()">اگلی ای میل →</button>';}
+else{html+='<button class="btn-next" onclick="finish()">نتیجہ دیکھیں →</button>';}
+v.innerHTML=html;v.style.display='block';
+}
+function next(){idx++;render();}
+function finish(){
+var v=document.getElementById('verdict');v.style.display='none';
+var w=document.getElementById('winBox');
+if(score===300){
+w.innerHTML='<h2> مشن مکمل!</h2><p>آپ نے ہر جال پہچان لیا۔ اسکور: 300 / 300</p><p class="flag">FLAG{phish_hunter_2026}</p><p style="margin-top:10px;color:#8fa39a">اگلا مشن: <a href="mission-3.html" style="color:#00e676;text-decoration:underline">مشن 3 — پاس ورڈ کریکر →</a></p>';
+if(window.HubProgress)HubProgress.completeMission('mission-2');
+}else{
+w.innerHTML='<h2 style="color:#fca5a5">اسکور: '+score+' / 300</h2><p>آپ نے ایک یا زیادہ چھوڑ دیے۔ سرخ جھنڈے دوبارہ دیکھیں اور پھر آزمائیں — فشنگ ہنٹر کبھی ہار نہیں مانتے۔</p><button class="btn-retry" onclick="retry()">↻ دوبارہ آزمائیں</button>';
+}
+w.style.display='block';
+}
+function retry(){idx=0;score=0;render();}
+render();
+</script>
+<a id="anwaar-ai-btn" href="https://anwaardigital.com/ai/?site=hub" target="_blank" rel="noopener" aria-label="Anwaar AI" style="position:fixed;right:16px;bottom:16px;z-index:9999;display:flex;align-items:center;background:#1a2b4a;color:#fff;text-decoration:none;font-family:system-ui,-apple-system,sans-serif;font-size:15px;font-weight:600;padding:12px 16px;border-radius:999px;box-shadow:0 4px 16px rgba(0,0,0,.35)">✦ Anwaar AI</a>
+<button id="backToTop" aria-label="Back to top" title="Back to top" style="position:fixed;bottom:148px;right:16px;width:48px;height:48px;border-radius:50%;border:none;background:#d4af37;color:#0A3D2E;font-size:22px;line-height:1;cursor:pointer;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s,transform .2s;box-shadow:0 4px 12px rgba(0,0,0,.35);z-index:9999;padding:0;">↑</button>
+<script>(function(){var b=document.getElementById('backToTop');if(!b)return;window.addEventListener('scroll',function(){var s=window.pageYOffset||document.documentElement.scrollTop;if(s>300){b.style.opacity='1';b.style.visibility='visible';}else{b.style.opacity='0';b.style.visibility='hidden';}},{passive:true});b.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});})();</script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>CyberSec Hub — مشن 3: پاس ورڈ کریکر</title>
+<meta name="description" content="مشن 3: پاس ورڈ کریکر — کمزور پاس ورڈز پر مصنوعی حملہ جو سکھاتا ہے کہ اصل میں کیا مضبوط رہتا ہے۔ تعلیمی CyberSec Hub مشن۔">
+<link rel="canonical" href="https://anwaardigital.com/Cybersecurity/ur/mission-3.html">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="ur.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&amp;display=swap" rel="stylesheet">
+</head>
+<body class="page-mission">
+<nav class="navbar"><a class="brand" href="index.html"> CyberSec <span class="g">Hub</span></a><a class="nav" href="index.html">ہوم</a><a class="nav" href="missions.html">مشنز</a><a class="nav" href="learning-path.html">سیکھنے کے راستے</a></nav>
+<div class="wrap">
+<h1> مشن 3: <span class="g">پاس ورڈ کریکر</span></h1>
+<p class="sub"><span class="badge">درمیانہ</span>  <span class="pts">400 پوائنٹس</span>  ·  کمزور پاس ورڈز پر حملے کی مشق کریں — اور سیکھیں کہ اصل میں کیا مضبوط رہتا ہے۔</p>
+<div class="warn"> جعلی پاس ورڈز کے ساتھ تعلیمی مشق۔ کبھی اصلی اکاؤنٹ کریک کرنے کی کوشش نہ کریں — یہ غیر قانونی ہے۔ صرف وہ پاس ورڈز ٹیسٹ کریں جو آپ کے اپنے ہوں۔</div>
+<div class="howto">
+<h3>کیسے کھیلیں</h3>
+<ol>
+<li>نیچے دیے گئے ہر پاس ورڈ کے لیے اندازہ لگائیں: کیا یہ <b style="color:#fca5a5">جلدی ٹوٹتا ہے</b> یا <b style="color:#86efac">مضبوط رہتا ہے</b>?</li>
+<li>چاروں پاس ورڈز پر اپنا اندازہ دبائیں، پھر مشق چلائیں۔</li>
+<li>مصنوعی حملہ آور کو کام کرتے دیکھیں — پھر دیکھیں کہ آپ کے اندازے درست تھے یا نہیں۔</li>
+<li>چاروں درست = جھنڈا حاصل۔</li>
+</ol>
+</div>
+<div id="cards"></div>
+<button class="simbtn" id="simBtn" onclick="simulate()" disabled>▶ مشق چلائیں</button>
+<div class="log" id="log"></div>
+<div class="verdict" id="verdict"></div>
+<div class="win" id="winBox"></div>
+<a class="back" href="missions.html">← تمام مشنز</a>
+<footer>CyberSec Hub — 100 فیصد اخلاقی تربیت۔ صرف مشق — کوئی اصلی پاس ورڈ ٹیسٹ نہیں کیا جاتا۔</footer>
+</div>
+<script>
+var pws=[
+{pw:'123456',truth:'fast',note:'"123456" ہر ورڈ لسٹ میں پہلا اندازہ ہے۔ فوراً ٹوٹ گیا۔'},
+{pw:'P@ssw0rd!',truth:'fast',note:'"P@ssw0rd!" چالاک لگتا ہے، لیکن یہ سب سے عام پیٹرنز میں سے ایک ہے۔ سادہ تبدیلیوں والی ورڈ لسٹس اسے سیکنڈوں میں توڑ دیتی ہیں۔'},
+{pw:'purple-monkey-dances-wisely',truth:'strong',note:'چار بے ترتیب الفاظ = بہت لمبا۔ تیز ترین کمپیوٹر کو بھی صدیاں چاہئیں۔'},
+{pw:'X9#mQ2$vL8!zR4&w',truth:'strong',note:'18 بے ترتیب حروف، مختلف اقسام کے ساتھ۔ بروٹ فورس کو زندگی سے کہیں زیادہ وقت لگے گا۔'}
+];
+var marks=[null,null,null,null];
+function renderCards(){
+var html='';
+pws.forEach(function(p,i){
+html+='<div class="pwcard"><div class="pw">'+p.pw+'</div><div class="mark" id="mark'+i+'">Your guess: —</div><div class="pwbtns"><button id="b'+i+'f" onclick="mark('+i+',\'fast\')"> جلدی ٹوٹتا ہے</button><button id="b'+i+'s" onclick="mark('+i+',\'strong\')"> مضبوط رہتا ہے</button></div></div>';
+});
+document.getElementById('cards').innerHTML=html;
+}
+function mark(i,choice){
+marks[i]=choice;
+document.getElementById('b'+i+'f').className=(choice==='fast')?'sel-red':'';
+document.getElementById('b'+i+'s').className=(choice==='strong')?'sel-green':'';
+document.getElementById('mark'+i).textContent='آپ کا اندازہ: '+(choice==='fast'?'جلدی ٹوٹتا ہے':'مضبوط رہتا ہے');
+document.getElementById('simBtn').disabled=marks.indexOf(null)!==-1;
+}
+function simulate(){
+document.getElementById('simBtn').disabled=true;
+var log=document.getElementById('log');log.style.display='block';log.innerHTML='';
+var lines=[
+['"123456" آزمایا جا رہا ہے... ', '0.01 سیکنڈ میں ٹوٹ گیا (فہرست کا پہلا لفظ)۔', 'bad'],
+['"P@ssw0rd!" آزمایا جا رہا ہے... ', '4 سیکنڈ میں ٹوٹ گیا (عام پیٹرن + تبدیلیاں)۔', 'bad'],
+['"purple-monkey-dances-wisely" آزمایا جا رہا ہے... ', 'نہیں ٹوٹا۔ اندازاً وقت: 400+ سال۔', 'good'],
+['"X9#mQ2$vL8!zR4&w" آزمایا جا رہا ہے... ', 'نہیں ٹوٹا۔ اندازاً وقت: 1000+ سال۔', 'good']
+];
+var step=0;
+function nextLine(){
+if(step>=lines.length){showVerdict();return;}
+var l=lines[step];
+var d=document.createElement('div');
+d.innerHTML=l[0]+'<span class="'+l[2]+'">'+l[1]+'</span>';
+log.appendChild(d);step++;
+setTimeout(nextLine,700);
+}
+nextLine();
+}
+function showVerdict(){
+var correct=0, wrong=[];
+pws.forEach(function(p,i){if(marks[i]===p.truth)correct++;else wrong.push(i);});
+var v=document.getElementById('verdict');
+var html='';
+if(correct===4){
+v.className='verdict ok';
+html='<h3> بہترین! 4 / 4 درست — 400 پوائنٹس</h3><p>سبق: لمبائی چالاکی کو ہرا دیتی ہے۔ لمبا پاس فریز یا بے ترتیب پاس ورڈ مضبوط رہتا ہے؛ چھوٹے اور عام پاس ورڈز جلدی گر جاتے ہیں۔</p>';
+v.innerHTML=html;v.style.display='block';
+var w=document.getElementById('winBox');
+w.innerHTML='<h2> مشن مکمل!</h2><p class="flag">FLAG{strong_pass_2026}</p><p style="margin-top:10px;color:#8fa39a">اگلا مشن: <a href="mission-4.html" style="color:#00e676;text-decoration:underline">مشن 4 — کمزوری ڈھونڈیں →</a></p>';
+if(window.HubProgress)HubProgress.completeMission('mission-3');
+w.style.display='block';
+}else{
+v.className='verdict bad';
+html='<h3>اسکور: '+correct+' / 4 درست</h3><p>آپ نے چھوڑ دیے:</p><ul style="margin-left:20px">';
+wrong.forEach(function(i){html+='<li><b>'+pws[i].pw+'</b> — '+pws[i].note+'</li>';});
+html+='</ul><button class="btn-retry" onclick="retry()">↻ دوبارہ آزمائیں</button>';
+v.innerHTML=html;v.style.display='block';
+}
+}
+function retry(){
+marks=[null,null,null,null];
+document.getElementById('log').style.display='none';document.getElementById('log').innerHTML='';
+document.getElementById('verdict').style.display='none';
+document.getElementById('winBox').style.display='none';
+renderCards();document.getElementById('simBtn').disabled=true;
+}
+renderCards();
+</script>
+<a id="anwaar-ai-btn" href="https://anwaardigital.com/ai/?site=hub" target="_blank" rel="noopener" aria-label="Anwaar AI" style="position:fixed;right:16px;bottom:16px;z-index:9999;display:flex;align-items:center;background:#1a2b4a;color:#fff;text-decoration:none;font-family:system-ui,-apple-system,sans-serif;font-size:15px;font-weight:600;padding:12px 16px;border-radius:999px;box-shadow:0 4px 16px rgba(0,0,0,.35)">✦ Anwaar AI</a>
+<button id="backToTop" aria-label="Back to top" title="Back to top" style="position:fixed;bottom:148px;right:16px;width:48px;height:48px;border-radius:50%;border:none;background:#d4af37;color:#0A3D2E;font-size:22px;line-height:1;cursor:pointer;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s,transform .2s;box-shadow:0 4px 12px rgba(0,0,0,.35);z-index:9999;padding:0;">↑</button>
+<script>(function(){var b=document.getElementById('backToTop');if(!b)return;window.addEventListener('scroll',function(){var s=window.pageYOffset||document.documentElement.scrollTop;if(s>300){b.style.opacity='1';b.style.visibility='visible';}else{b.style.opacity='0';b.style.visibility='hidden';}},{passive:true});b.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});})();</script>
+</body>
+</html>

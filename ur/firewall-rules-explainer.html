@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<link rel="icon" type="image/png" sizes="192x192" href="https://anwaardigital.com/Cybersecurity/cyber-icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="https://anwaardigital.com/Cybersecurity/cyber-icon-512.png">
+<link rel="apple-touch-icon" href="https://anwaardigital.com/Cybersecurity/cyber-icon-192.png">
+<!-- Cookie consent (GDPR): Google Analytics loads only after you press Accept -->
+<script src="../cookie-consent.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>فائر وال رولز گائیڈ — نیٹ ورک دفاع سمجھیں</title>
+<meta name="description" content="مفت انٹرایکٹو فائر وال گائیڈ: ہاتھ سے رول سمیولیٹر کے ساتھ فائر وال رولز کیسے کام کرتے ہیں سیکھیں، عام دفاعی رولز کی وضاحت، اور Windows، macOS اور Linux پر فائر وال آن کرنے کا طریقہ۔">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="ur.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&amp;display=swap" rel="stylesheet">
+<link rel="canonical" href="https://anwaardigital.com/Cybersecurity/ur/firewall-rules-explainer.html">
+<meta property="og:title" content="فائر وال رولز گائیڈ — نیٹ ورک دفاع سمجھیں">
+<meta property="og:description" content="مفت انٹرایکٹو فائر وال گائیڈ: ہاتھ سے رول سمیولیٹر کے ساتھ فائر وال رولز کیسے کام کرتے ہیں سیکھیں، عام دفاعی رولز کی وضاحت، اور Windows، macOS اور Linux پر فائر وال آن کرنے کا طریقہ۔">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://anwaardigital.com/Cybersecurity/ur/firewall-rules-explainer.html">
+<meta property="og:site_name" content="CyberSec Hub">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://anwaardigital.com/Cybersecurity/cyber-icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "فائر وال رولز گائیڈ",
+  "description": "مفت انٹرایکٹو فائر وال گائیڈ: ہاتھ سے رول سمیولیٹر کے ساتھ فائر وال رولز کیسے کام کرتے ہیں سیکھیں، عام دفاعی رولز کی وضاحت، اور Windows، macOS اور Linux پر فائر وال آن کرنے کا طریقہ۔",
+  "url": "https://anwaardigital.com/Cybersecurity/ur/firewall-rules-explainer.html",
+  "applicationCategory": "SecurityApplication",
+  "operatingSystem": "Any",
+  "offers": {"@type": "Offer","price": "0"},
+  "author": {"@type": "Person","name": "ملک محمد انوار"}
+}
+</script>
+</head>
+<body class="page-sectool">
+<nav class="navbar"><div class="nav-inner">
+<a href="index.html" class="brand"><span class="brand-icon"></span><span>CyberSec <span class="green">Hub</span></span></a>
+<div class="nav-actions"><button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark and light theme"><span class="theme-icon"></span><span class="theme-label">Light</span></button><button class="nav-toggle" onclick="document.getElementById(&#x27;navLinks&#x27;).classList.toggle(&#x27;open&#x27;)">☰</button></div>
+<ul class="nav-links" id="navLinks">
+<li><a href="index.html">ہوم</a></li>
+<li><a href="index.html#basics">بنیادی باتیں</a></li>
+<li><a href="index.html#hacking">اخلاقی ہیکنگ</a></li>
+<li><a href="index.html#tools">ٹولز گائیڈ</a></li>
+<li><a href="index.html#career">کیریئر</a></li>
+<li><a href="about.html">ہمارے بارے میں</a></li>
+</ul></div></nav>
+<script>
+(function(){try{if(localStorage.getItem('hubTheme')==='light'){document.body.classList.add('light');}}catch(e){}})();
+function toggleTheme(){var b=document.body;var light=b.classList.toggle('light');try{localStorage.setItem('hubTheme',light?'light':'dark');}catch(e){}var btn=document.querySelector('.theme-toggle');if(btn){var ic=btn.querySelector('.theme-icon');var lb=btn.querySelector('.theme-label');if(ic)ic.textContent=light?'':'';if(lb)lb.textContent=light?'Dark':'Light';}}
+(function(){var btn=document.querySelector('.theme-toggle');if(!btn)return;var light=document.body.classList.contains('light');var ic=btn.querySelector('.theme-icon');var lb=btn.querySelector('.theme-label');if(ic)ic.textContent=light?'':'';if(lb)lb.textContent=light?'Dark':'Light';})();
+</script>
+<main class="tool-wrap">
+<h1> <a href="glossary.html#gl-firewall">فائر وال</a> رولز گائیڈ</h1>
+<p class="tool-sub">فائر وال آپ کے نیٹ ورک ٹریفک کا چوکیدار ہے۔ بنیادی خیالات سیکھیں، <b>اپنے رولز خود سمیولیٹ کریں</b>، اور وہ دفاعی رولز دیکھیں جو ہر گھریلو سیٹ اپ میں ہونے چاہییں۔</p>
+<div class="ethical-box"><strong> صرف اخلاقی استعمال:</strong> یہ ٹولز صرف <strong>دفاعی</strong> مقاصد کے لیے ہیں — اپنے اکاؤنٹس اور سسٹمز کو محفوظ کرنے کے لیے۔ سیکیورٹی کا علم کبھی ان سسٹمز کے خلاف استعمال نہ کریں جو آپ کے نہیں ہیں یا جن کی جانچ کی تحریری اجازت آپ کے پاس نہیں ہے۔</div>
+<div class="tool-card edu">
+<h3 style="margin-top:0"> ہر فائر وال کے پیچھے 4 خیالات</h3>
+<ul>
+<li><b>ان باؤنڈ بمقابلہ آؤٹ باؤنڈ:</b> <i>ان باؤنڈ</i> = کوئی آپ تک پہنچنے کی کوشش کر رہا ہے؛ <i>آؤٹ باؤنڈ</i> = آپ (یا آپ کی ایپس) باہر جا رہے ہیں۔ زیادہ تر حملے ان باؤنڈ ٹریفک کے طور پر آتے ہیں۔</li>
+<li><b>اجازت بمقابلہ انکار:</b> ہر رول ٹریفک کو یا تو اجازت دیتا ہے یا روکتا ہے۔ رولز اوپر سے نیچے جانچے جاتے ہیں — پہلا ملنے والا رول جیت جاتا ہے۔</li>
+<li><b>ڈیفالٹ انکار:</b> سنہری اصول — سب کچھ روک دیں، پھر صرف وہی اجازت دیں جو آپ کو چاہیے۔ یہ سب کچھ اجازت دے کر برا روکنے سے کہیں زیادہ محفوظ ہے۔</li>
+<li><b>اسٹیٹ فل:</b> جدید فائر والز آپ کے باہر جانے والے کنکشنز کو یاد رکھتے ہیں، اس لیے آپ کی اپنی درخواستوں کے جوابات خودکار طور پر اجازت پا جاتے ہیں۔</li>
+</ul>
+</div>
+<div class="tool-card" style="margin-top:20px">
+<h3 style="margin-top:0"> رول سمیولیٹر — فائر وال رول بنائیں</h3>
+<div class="tool-field"><label for="fdir">سمت</label>
+<select id="fdir"><option value="in">ان باؤنڈ (کوئی اس ڈیوائس سے جڑ رہا ہے)</option><option value="out">آؤٹ باؤنڈ (یہ ڈیوائس باہر جڑ رہی ہے)</option></select></div>
+<div class="tool-field"><label for="fport">سروس / <a href="glossary.html#gl-port">پورٹ</a></label>
+<select id="fport"><option value="web">ویب براؤزنگ (80/443)</option><option value="dns">DNS تلاش (53)</option><option value="rdp">ریموٹ ڈیسک ٹاپ (3389)</option><option value="ssh">SSH (22)</option><option value="smb">فائل شیئرنگ SMB (445)</option><option value="game">آن لائن گیم (27015)</option></select></div>
+<div class="tool-field"><label for="fact">عمل</label>
+<select id="fact"><option value="allow">ALLOW</option><option value="deny">DENY</option></select></div>
+<button class="btn btn-green" onclick="simRule()"> اس رول کو سمیولیٹ کریں</button>
+<div id="simout" style="margin-top:14px"></div>
+</div>
+<div class="tool-card edu" style="margin-top:20px">
+<h3 style="margin-top:0"> سمجھدارانہ ڈیفالٹ رولز (گھریلو ڈیوائسز)</h3>
+<table class="cmp"><tr><th>رول</th><th>کیوں</th></tr>
+<tr><td><b>تمام غیر مطلوب ان باؤنڈ روک دیں</b></td><td>انٹرنیٹ پر موجود کسی بھی چیز کو آپ کے لیپ ٹاپ سے کنکشن شروع نہیں کرنا چاہیے۔ یہ واحد رول زیادہ تر نیٹ ورک حملے روک دیتا ہے۔</td></tr>
+<tr><td><b>قائم شدہ / متعلقہ ٹریفک کی اجازت دیں</b></td><td>ان کنکشنز کے جوابات جو <i>آپ</i> نے شروع کیے تھے (ویب صفحات لوڈ ہو رہے ہیں) واپس آنے چاہییں۔</td></tr>
+<tr><td><b>آؤٹ باؤنڈ ویب + DNS کی اجازت دیں</b></td><td>براؤزنگ اور نام کی تلاش کے لیے باہر جانا ضروری ہے۔ سخت سیٹ اپس پر باقی سب آؤٹ باؤنڈ محدود رہ سکتا ہے۔</td></tr>
+<tr><td><b>انٹرنیٹ سے ان باؤنڈ فائل شیئرنگ (445) اور RDP (3389) روک دیں</b></td><td>یہ حملہ آوروں کے پسندیدہ اہداف ہیں۔ انہیں صرف قابلِ بھروسہ مقامی نیٹ ورکس پر اجازت دیں — یا بہتر، VPN کے ذریعے۔</td></tr></table>
+<h3> اپنا فائر وال آن کریں (اپنی ڈیوائس)</h3>
+<ul>
+<li><b>Windows:</b> Settings → Privacy &amp; security → Windows Security → Firewall &amp; network protection → یقینی بنائیں کہ تمام پروفائلز کے لیے <b>On</b> ہے۔</li>
+<li><b>macOS:</b> System Settings → Network → Firewall → <b>On</b> کر دیں۔</li>
+<li><b>Linux (Ubuntu):</b> اپنی مشین پر ٹرمینل کھولیں اور <code>sudo ufw enable</code> چلائیں، پھر <code>sudo ufw default deny incoming</code> چلائیں۔</li>
+</ul>
+<p><b> کبھی بھی</b> کنکشن کا مسئلہ "ٹھیک" کرنے کے لیے اپنا فائر وال مستقل طور پر بند نہ کریں — اس کے بجائے درست رول ڈھونڈیں، اور کبھی ان ڈیوائسز کی فائر وال سیٹنگز نہ بدلیں جو آپ کی نہیں ہیں۔</p>
+</div>
+<section class="related-box" style="margin-top:36px">
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">اس ٹول کے بارے میں</h2>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">یہ ٹول کیا کرتا ہے</h2>
+<p>فائر وال رولز گائیڈ آپ کو سکھاتی ہے کہ فائر وال رولز کیسے کام کرتے ہیں اور آپ کی اپنی ڈیوائسز اور گھریلو نیٹ ورک کے لیے ان کا کیا مطلب ہے۔ فائر وال ایک دربان ہے: یہ فیصلہ کرتا ہے کہ کون سی نیٹ ورک ٹریفک اندر یا باہر جانے کی اجازت ہے، ان رولز کی بنیاد پر جو آپ (یا آپ کا سافٹ ویئر) طے کرتے ہیں۔ ہر کمپیوٹر، فون اور راؤٹر میں ایک ہوتا ہے، لیکن زیادہ تر لوگ اس کے رولز کو کبھی دیکھتے نہیں۔</p>
+<p>یہ گائیڈ اہم تصورات کو سادہ زبان میں توڑتی ہے: اجازت بمقابلہ انکار کے رولز، ان باؤنڈ بمقابلہ آؤٹ باؤنڈ ٹریفک، پورٹس اور پروٹوکولز، اور رولز کی ترتیب — پہلا ملنے والا رول کیوں جیتتا ہے۔ ان خیالات کو سمجھنے سے آپ فائر وال کے پیغامات ("کیا اس ایپ کو فائر وال سے گزرنے کی اجازت دیں؟") کو اندھا کلک کرنے کے بجائے سمجھ سکتے ہیں۔</p>
+<p>یہ گھریلو صارفین، طلبہ اور ہر اس شخص کے لیے ہے جو چھوٹا سرور یا سمارٹ ہوم ڈیوائسز چلاتا ہے۔ سب کچھ دفاعی ہے: مقصد یہ ہے کہ آپ اپنے سسٹمز کی حفاظت کرنے والے فائر وال کو سمجھیں اور سخت کریں، کم از کم اجازت کے اصول پر عمل کرتے ہوئے — صرف وہی اجازت دیں جو ضروری ہے، باقی سب انکار کر دیں۔</p>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">اسے کیسے استعمال کریں</h2>
+<ol>
+<li>تصورات والے حصے ترتیب سے پڑھیں: پہلے رول کیا ہے، پھر سمت، پھر پورٹس، پھر ترتیب۔</li>
+<li>اپنی ڈیوائس کی فائر وال سیٹنگز کھولیں اور نئی سمجھ کے ساتھ موجودہ رولز کو دیکھیں۔</li>
+<li>ہر "اجازت" کے پیغام یا رول کے لیے پوچھیں: کیا اس پروگرام کو اپنا کام کرنے کے لیے واقعی نیٹ ورک رسائی چاہیے؟</li>
+<li>ان پروگرامز کے لیے اجازت والے رولز ہٹا دیں یا بند کر دیں جو آپ اب استعمال نہیں کرتے۔</li>
+<li>اپنے راؤٹر پر چیک کریں کہ ریموٹ ایڈمنسٹریشن بند ہے اور کوئی پورٹ فارورڈنگ رول موجود نہیں جو آپ نے نہیں بنایا تھا۔</li>
+<li>جب بھی نیا سافٹ ویئر انسٹال کریں جو نیٹ ورک رسائی مانگے تو رولز کو دوبارہ دیکھیں۔</li>
+</ol>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">دفاعی سیکیورٹی تجاویز</h2>
+<ul>
+<li><strong>ڈیفالٹ انکار سنہری معیار ہے۔</strong> سب سے محفوظ طریقہ یہ ہے کہ سب کچھ روک دیں اور صرف وہی واضح طور پر اجازت دیں جو آپ کو چاہیے، بجائے اس کے کہ سب کچھ اجازت دے کر معلوم برا روکا جائے۔</li>
+<li><strong>اجازت دینے سے پہلے سمجھیں۔</strong> جب کوئی پروگرام فائر وال رسائی مانگے تو رک کر سوچیں کہ آیا اسے واقعی چاہیے۔ ایک سادہ فوٹو ایڈیٹر کو نیٹ ورک پورٹس کھولنے کا کوئی کام نہیں۔</li>
+<li><strong>راؤٹر پورٹ فارورڈز کا جائزہ لیں۔</strong> ہر فارورڈ شدہ پورٹ آپ کے نیٹ ورک میں ایک دروازہ ہے۔ جو آپ نے خود نہیں بنایا یا جس کی اب ضرورت نہیں اسے حذف کر دیں۔</li>
+<li><strong>فائر وال آن رکھیں۔</strong> فائر وال کو "کچھ چلانے" کے لیے بند کرنا عارضی تشخیصی قدم ہونا چاہیے، مستقل حل کبھی نہیں — اس کے بجائے درست رول ڈھونڈیں۔</li>
+<li><strong>آؤٹ باؤنڈ رولز بھی اہم ہیں۔</strong> زیادہ تر لوگ صرف ان باؤنڈ حملوں کے بارے میں سوچتے ہیں، لیکن یہ کنٹرول کرنا کہ کون سے پروگرام ڈیٹا باہر بھیج سکتے ہیں، اس میلویئر کو قابو کرنے میں مدد دیتا ہے جو اندر آ جائے۔</li>
+</ul>
+<h2 style="color:var(--green);font-size:1.3rem;margin:26px 0 10px">اکثر پوچھے جانے والے سوالات</h2>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">اگر میرے پاس اینٹی وائرس ہے تو کیا مجھے فائر وال چاہیے؟</h3>
+<p>جی ہاں — یہ مختلف کام کرتے ہیں۔ اینٹی وائرس نقصان دہ فائلیں ڈھونڈتا ہے؛ فائر وال نیٹ ورک ٹریفک کو کنٹرول کرتا ہے۔ آپ کو دونوں چاہییں، اور دونوں جدید آپریٹنگ سسٹمز میں پہلے سے موجود ہیں۔</p>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">پورٹ کیا ہے، سادہ الفاظ میں؟</h3>
+<p>پورٹ ایک نمبر والا چینل ہے جسے نیٹ ورک سروسز بات چیت کے لیے استعمال کرتی ہیں — جیسے ایک عمارت میں اپارٹمنٹ نمبر جو ایک ہی گلی کا پتہ شیئر کرتی ہے۔ ویب براؤزنگ عام طور پر پورٹ 443 استعمال کرتی ہے، مثلاً۔ فائر والز ہر پورٹ کے حساب سے ٹریفک کی اجازت دیتے یا روکتے ہیں۔</p>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">رولز کی ترتیب کیوں اہم ہے؟</h3>
+<p>فائر والز رولز کو اوپر سے نیچے جانچتے ہیں اور پہلا ملنے والا رول لاگو کرتے ہیں۔ ایک وسیع "اجازت" والا رول جو کسی مخصوص "انکار" والے رول کے اوپر رکھا ہو اسے خاموشی سے ختم کر دے گا — اسی لیے صرف رولز نہیں، ان کی ترتیب کا جائزہ بھی اہم ہے۔</p>
+<h3 style="color:var(--text);font-size:1.05rem;margin:18px 0 6px">کیا مجھے اپنے فون پر ذاتی فائر وال چلانا چاہیے؟</h3>
+<p>موبائل آپریٹنگ سسٹمز میں پہلے سے نیٹ ورک تحفظات اور سخت ایپ سینڈ باکسنگ موجود ہے۔ OS کو اپ ڈیٹ رکھنا اور یہ دھیان رکھنا کہ آپ کون سی ایپس انسٹال کرتے ہیں، کسی تھرڈ پارٹی فائر وال ایپ شامل کرنے سے زیادہ اہم ہے۔</p>
+</section>
+
+</main>
+
+<script>
+
+function simRule(){
+var dir=document.getElementById('fdir').value, port=document.getElementById('fport').value, act=document.getElementById('fact').value;
+var svc={web:"ویب براؤزنگ (پورٹس 80/443)",dns:"DNS تلاش (پورٹ 53)",rdp:"ریموٹ ڈیسک ٹاپ (پورٹ 3389)",ssh:"SSH (پورٹ 22)",smb:"Windows فائل شیئرنگ (پورٹ 445)",game:"آن لائن گیمنگ (پورٹ 27015)"}[port];
+var dTxt=dir==='in'?"ان باؤنڈ — نیٹ ورک سے اس ڈیوائس کی طرف ٹریفک":"آؤٹ باؤنڈ — اس ڈیوائس سے نیٹ ورک کی طرف ٹریفک";
+var verdict="",col="";
+if(dir==='in'&&act==='allow'&&(port==='rdp'||port==='smb'||port==='ssh')){verdict=" <b>خطرناک:</b> "+svc+" کو ان باؤنڈ کنکشنز کے لیے کھولنے سے نیٹ ورک پر موجود حملہ آور اسے جانچ اور بروٹ فورس کر سکتے ہیں۔ اسے صرف ان نیٹ ورکس پر اجازت دیں جن پر آپ مکمل بھروسہ کرتے ہیں — پورے انٹرنیٹ سے کبھی نہیں۔";col="#ff5252";}
+else if(dir==='in'&&act==='deny'){verdict=" <b>محفوظ ڈیفالٹ:</b> غیر مطلوب "+svc+" ان باؤنڈ کو روکنا ڈیفالٹ انکار کے اصول پر عمل کرتا ہے۔ کوئی بھی "+svc+" کنکشنز آپ کی طرف شروع نہیں کر سکتا۔";col="#00e676";}
+else if(dir==='in'&&act==='allow'){verdict=" <b>احتیاط سے استعمال کریں:</b> ان باؤنڈ "+svc+" کی اجازت آپ کی ڈیوائس میں دروازہ کھول دیتی ہے۔ اس گیم سرور کے لیے ٹھیک ہے جسے آپ جان بوجھ کر ہوسٹ کرتے ہیں؛ یقینی بنائیں کہ ایپلیکیشن خود اپ ڈیٹ اور پاس ورڈ سے محفوظ ہے۔";col="#ff9800";}
+else if(dir==='out'&&act==='allow'&&(port==='web'||port==='dns')){verdict=" <b>عام:</b> آؤٹ باؤنڈ "+svc+" کی اجازت ہر براؤزنگ ڈیوائس کی ضرورت ہے۔";col="#00e676";}
+else if(dir==='out'&&act==='deny'){verdict="ℹ <b>سخت:</b> آؤٹ باؤنڈ "+svc+" کو روکنا ان ایپس کو توڑ سکتا ہے جنہیں اس کی ضرورت ہے۔ لاک ڈاؤن سسٹمز پر مفید ہے، لیکن جیسے چیزیں ٹوٹیں، اجازت دینے کی توقع رکھیں۔";col="#29b6f6";}
+else{verdict=" <b>ٹھیک ہے:</b> آؤٹ باؤنڈ "+svc+" کی اجازت ان ایپس کے لیے عام ہے جنہیں اس کی ضرورت ہے۔";col="#00e676";}
+document.getElementById('simout').innerHTML='<div class="flag" style="border-color:'+col+'"><b>رول: '+act.toUpperCase()+' '+dTxt+'</b><p>سروس: '+svc+'<br><br>'+verdict+'</p></div><p style="font-size:.85rem;color:var(--muted)">تعلیمی سمیولیٹر — یہ تصورات سمجھاتا ہے؛ یہ کوئی اصلی سیٹنگ نہیں بدلتا۔</p>';
+}
+</script>
+<footer class="footer"><div class="container">
+<div class="footer-brand"> CyberSec <span class="green">Hub</span></div>
+<p>سائبر سیکیورٹی سیکھیں — اخلاقی اور قانونی طریقے سے۔</p>
+<div class="footer-links">
+<a href="index.html">ہوم</a><a href="about.html">ہمارے بارے میں</a><a href="contact.html">رابطہ</a><a href="privacy.html">پرائیویسی پالیسی</a><a href="disclaimer.html">ڈسکلیمر</a><a href="terms.html">شرائط</a>
+</div>
+<p class="foot-email"> <a href="mailto:contact@anwaardigital.com">contact@anwaardigital.com</a></p>
+<p class="copyright">© 2026 CyberSec Hub by Anwaar Digital. جملہ حقوق محفوظ ہیں۔ صرف تعلیمی مواد — ہمیشہ تحریری اجازت سے ٹیسٹ کریں۔</p>
+<p class="copyright">تیار کردہ <strong style="color:#00e676">ملک محمد انوار</strong></p>
+</div></footer><a href="https://wa.me/923288317526" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.6 6.1 1.6h.1c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.6 1.2 1.2-4.5-.3-.4c-1-1.6-1.6-3.5-1.6-5.5C5 9.6 10.6 5 16 5s11 4.6 11 10-5.4 9.8-11 9.8zm6.1-7.3c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.8.1-.3-.2-1.4-.5-2.7-1.6-.9-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6L13 9.5c-.3-.8-.7-.7-1-.7h-.8c-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.5s1.5 4 1.7 4.3c.2.3 2.9 4.4 7 6.2 1 .4 1.7.7 2.3.9.9.3 1.8.2 2.5.2.8-.1 2.3-1 2.7-1.9.3-.9.3-1.7.2-1.9-.1-.1-.3-.2-.7-.4z"/></svg></a>
+
+<!-- Back to top button -->
+<button id="backToTop" aria-label="Back to top" title="Back to top"
+style="position:fixed;bottom:24px;right:24px;width:48px;height:48px;border-radius:50%;border:none;background:#00e676;color:#050b14;font-size:22px;line-height:1;cursor:pointer;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s,transform .2s;box-shadow:0 4px 12px rgba(0,0,0,.35);z-index:9999;padding:0;">&#8593;</button>
+<script>
+(function(){var b=document.getElementById('backToTop');if(!b)return;
+window.addEventListener('scroll',function(){var s=window.pageYOffset||document.documentElement.scrollTop;
+if(s>300){b.style.opacity='1';b.style.visibility='visible';}else{b.style.opacity='0';b.style.visibility='hidden';}},{passive:true});
+b.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+b.addEventListener('mouseenter',function(){b.style.transform='scale(1.12)';});
+b.addEventListener('mouseleave',function(){b.style.transform='scale(1)';});})();
+</script>
+
+<a id="anwaar-ai-btn" href="https://anwaardigital.com/ai/?site=hub" target="_blank" rel="noopener" aria-label="Anwaar AI" style="position:fixed;right:16px;bottom:16px;z-index:9999;display:flex;align-items:center;background:#1a2b4a;color:#fff;text-decoration:none;font-family:system-ui,-apple-system,sans-serif;font-size:15px;font-weight:600;padding:12px 16px;border-radius:999px;box-shadow:0 4px 16px rgba(0,0,0,.35)">✦ Anwaar AI</a>
+</body></html>

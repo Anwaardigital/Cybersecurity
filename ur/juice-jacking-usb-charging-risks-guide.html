@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<link rel="icon" type="image/png" sizes="192x192" href="https://anwaardigital.com/Cybersecurity/cyber-icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="https://anwaardigital.com/Cybersecurity/cyber-icon-512.png">
+<link rel="apple-touch-icon" href="https://anwaardigital.com/Cybersecurity/cyber-icon-192.png">
+<!-- Cookie consent (GDPR): Google Analytics loads only after you press Accept -->
+<script src="../cookie-consent.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>جوس جیکنگ: عوامی USB چارجنگ کے خطرات اور محفوظ رہنے کا طریقہ (2026 گائیڈ)</title>
+<meta name="description" content="جوس جیکنگ کیا ہے؟ عوامی USB چارجنگ اسٹیشنز ڈیٹا چرانے یا میلویئر انسٹال کرنے کے لیے کیسے استعمال ہو سکتے ہیں — اور سادہ دفاعی عادات (صرف چارج والی کیبل، ڈیٹا بلاکر) جو آپ کو محفوظ رکھتی ہیں۔">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="ur.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+<link rel="canonical" href="https://anwaardigital.com/Cybersecurity/ur/juice-jacking-usb-charging-risks-guide.html">
+<meta property="og:title" content="جوس جیکنگ: عوامی USB چارجنگ کے خطرات اور محفوظ رہنے کا طریقہ (2026 گائیڈ)">
+<meta property="og:description" content="جوس جیکنگ کیا ہے؟ عوامی USB چارجنگ اسٹیشنز ڈیٹا چرانے یا میلویئر انسٹال کرنے کے لیے کیسے استعمال ہو سکتے ہیں — اور سادہ دفاعی عادات (صرف چارج والی کیبل، ڈیٹا بلاکر) جو آپ کو محفوظ رکھتی ہیں۔">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://anwaardigital.com/Cybersecurity/ur/juice-jacking-usb-charging-risks-guide.html">
+<meta property="og:site_name" content="CyberSec Hub">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://anwaardigital.com/Cybersecurity/cyber-icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "جوس جیکنگ: عوامی USB چارجنگ کے خطرات اور محفوظ رہنے کا طریقہ (2026 گائیڈ)",
+  "description": "جوس جیکنگ کیا ہے؟ عوامی USB چارجنگ اسٹیشنز ڈیٹا چرانے یا میلویئر انسٹال کرنے کے لیے کیسے استعمال ہو سکتے ہیں — اور سادہ دفاعی عادات (صرف چارج والی کیبل، ڈیٹا بلاکر) جو آپ کو محفوظ رکھتی ہیں۔",
+  "author": {
+    "@type": "Person",
+    "name": "Malik Muhammad Anwaar"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "CyberSec Hub",
+    "url": "https://anwaardigital.com/Cybersecurity/"
+  },
+  "datePublished": "2026-11-06",
+  "dateModified": "2026-11-06",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://anwaardigital.com/Cybersecurity/ur/juice-jacking-usb-charging-risks-guide.html"
+  }
+}
+</script>
+</head>
+<body class="page-ur">
+<nav class="navbar"><div class="nav-inner">
+<a href="../index.html" class="brand"><span class="brand-icon"></span><span>CyberSec <span class="green">Hub</span></span></a>
+<div class="nav-actions"><button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark and light theme"><span class="theme-icon"></span><span class="theme-label">Light</span></button><button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button></div>
+<ul class="nav-links" id="navLinks">
+<li><a href="index.html">ہوم</a></li>
+<li><a href="../index.html#basics">بنیادی باتیں</a></li>
+<li><a href="../index.html#hacking">اخلاقی ہیکنگ</a></li>
+<li><a href="../index.html#tools">ٹولز گائیڈ</a></li>
+<li><a href="../index.html#career">کیریئر</a></li>
+<li><a href="../missions/index.html">مشنز</a></li>
+<li><a href="../learning-path.html">سیکھنے کے راستے</a></li>
+<li><a href="../sectools/index.html">ٹولز</a></li>
+<li><a href="../glossary.html">لغت</a></li>
+<li><a href="../faq.html">سوالات</a></li>
+<li><a href="../about.html">ہمارے بارے میں</a></li>
+<li><a href="../index.html">English</a></li>
+</ul></div></nav>
+<script>
+(function(){try{if(localStorage.getItem('hubTheme')==='light'){document.body.classList.add('light');}}catch(e){}})();
+function toggleTheme(){var b=document.body;var light=b.classList.toggle('light');try{localStorage.setItem('hubTheme',light?'light':'dark');}catch(e){}var btn=document.querySelector('.theme-toggle');if(btn){var ic=btn.querySelector('.theme-icon');var lb=btn.querySelector('.theme-label');if(ic)ic.textContent=light?'':'';if(lb)lb.textContent=light?'Dark':'Light';}}
+(function(){var btn=document.querySelector('.theme-toggle');if(!btn)return;var light=document.body.classList.contains('light');var ic=btn.querySelector('.theme-icon');var lb=btn.querySelector('.theme-label');if(ic)ic.textContent=light?'':'';if(lb)lb.textContent=light?'Dark':'Light';})();
+</script><div class="breadcrumb"><a href="index.html">ہوم</a> / سائبر سیکیورٹی کی بنیادی باتیں / جوس جیکنگ</div>
+<header class="article-hero"><span class="section-tag"> سائبر سیکیورٹی کی بنیادی باتیں</span><h1>جوس جیکنگ: عوامی USB چارجنگ کے خطرات اور محفوظ رہنے کا طریقہ (2026 گائیڈ)</h1>
+<p class="small">آخری اپ ڈیٹ: 6 نومبر 2026</p><div class="article-meta">CyberSec Hub کی طرف سے · 10 منٹ مطالعہ</div></header>
+<main class="article-body">
+<p>آپ کا فون ہوائی اڈے پر 4% پر ہے۔ قریب ہی مفت عوامی USB چارجنگ اسٹیشن چمک رہا ہے۔ آپ لگاتے ہیں — اور آپ کو بتائے بغیر پورٹ بجلی دینے سے زیادہ کچھ کر سکتا ہے۔ "جوس جیکنگ" ان حملوں کا نام ہے جو عوامی USB چارجنگ پورٹس اور کیبلز کا غلط استعمال کر کے ڈیٹا چراتے ہیں یا جڑے ہوئے فونز پر میلویئر انسٹال کرتے ہیں۔ یہ گائیڈ خطرے کو ایمانداری سے بتاتی ہے، افسانے کو حقیقت سے الگ کرتی ہے، اور سادہ دفاعی عادات دیتی ہے جو پورے مسئلے کو ختم کر دیتی ہیں۔</p>
+<h2>جوس جیکنگ کیا ہے؟</h2>
+<p>USB کیبل صرف بجلی کی نالی نہیں ہے۔ معیاری USB کنکشن الگ تاروں پر <strong>بجلی</strong> اور <strong>ڈیٹا</strong> دونوں لے جاتا ہے۔ جب آپ اپنا فون لیپ ٹاپ میں لگاتے ہیں تو یہ چارج بھی کر سکتا ہے <em>اور</em> فائلیں بھی منتقل کر سکتا ہے — یہ ڈیٹا چینل وہ خصوصیت ہے جس کا جوس جیکنگ فائدہ اٹھاتا ہے۔</p>
+<p>جوس جیکنگ حملے میں عوامی چارجنگ پورٹ یا کیبل سے چھیڑ چھاڑ کی گئی ہوتی ہے تاکہ آپ کا فون چارج ہوتے ہوئے وہ بھی کرے:</p>
+<ul>
+<li><strong>ڈیٹا نقل کرنا</strong> — تصاویر، پیغامات، رابطے، یا اسناد آلے سے نکالی جا سکتی ہیں اگر فون کا ڈیٹا کنکشن کھلا ہو۔</li>
+<li><strong>میلویئر انسٹال کرنا</strong> — فون پر دھکیلا گیا نقصان دہ سافٹ ویئر بعد میں پاس ورڈز چرا سکتا ہے یا سرگرمی پر جاسوسی کر سکتا ہے۔</li>
+<li><strong>آلے کو ٹریک کرنا</strong> — کچھ اقسام میں پورٹ صرف بعد میں نشانہ بنانے کے لیے آلے کی شناخت کرتا ہے۔</li>
+</ul>
+<p>سیکیورٹی محققین نے ایک دہائی سے زیادہ عرصے سے ان حملوں کا مظاہرہ کیا ہے، اور قانون نافذ کرنے والی ایجنسیوں نے مسافروں کو عوامی چارجنگ اسٹیشنز سے وقتاً فوقتاً خبردار کیا ہے۔ یہ حقیقی بنیاد ہے۔ اب توازن کی بات۔</p>
+<h2>یہ واقعی کتنا ممکن ہے؟ (افسانہ بمقابلہ حقیقت)</h2>
+<p>سیکیورٹی لکھنے میں ایمانداری اہم ہے، اس لیے یہ ہے مکمل تصویر:</p>
+<ul>
+<li><strong>حملہ تکنیکی طور پر حقیقی ہے۔</strong> سیکیورٹی محققین نے کئی بار کام کرنے والے ثبوت چارجرز بنائے ہیں۔ USB ڈیٹا چینل حقیقی حملہ سطح ہے۔</li>
+<li><strong>دستاویز شدہ حقیقی معاملات نایاب ہیں۔</strong> عام صارفین کو جنگل میں جوس جیکنگ سے نقصان پہنچنے کی بہت کم تصدیق شدہ رپورٹس ہیں۔ یہ کم تعدد، زیادہ اثر والا خطرہ ہے — روزمرہ والا نہیں۔</li>
+<li><strong>جدید فونز میں مضبوط حفاظتیں ہیں۔</strong> آج کے اینڈرائیڈ اور iOS آلات عام طور پر آپ سے مطالبہ کرتے ہیں کہ کوئی بھی ڈیٹا بہنے سے پہلے آپ فون انلاک کریں اور واضح طور پر USB موڈ چنیں (فائل ٹرانسفر، PTP، وغیرہ)۔ دشمن پورٹ میں لگا ہوا مقفل فون عام طور پر صرف چارج کرتا ہے۔</li>
+<li><strong>کیبلز بھی ذریعہ ہو سکتی ہیں۔</strong> استعمال کے لیے چھوڑی گئی چھیڑ چھاڑ شدہ "چارجنگ کیبل" میں چھپا چپ ہو سکتا ہے — وہی خطرہ کسی بھی نامعلوم کیبل پر لاگو ہوتا ہے، صرف عوامی پورٹس پر نہیں۔</li>
+</ul>
+<p>نتیجہ: گھبرائیں نہیں، لیکن نامعلوم USB پورٹس اور نامعلوم کیبلز کو <em>ناقابل بھروسہ</em> سمجھیں — اسی طرح جیسے آپ نامعلوم وائی فائی کو سمجھتے ہیں۔ چند سستی عادات خطرے کو مکمل ختم کر دیتی ہیں۔</p>
+<div class="tip-box"><strong> سنہری اصول:</strong> صرف بجلی والے کنکشن آپ کو جوس جیک نہیں کر سکتے۔ اگر آپ کے فون کو نامعلوم پورٹ سے جوڑنے والی کوئی ڈیٹا تار نہیں ہے تو حملہ سطح صفر ہو جاتی ہے۔ نیچے والی ہر چیز اسے حاصل کرنے کے بارے میں ہے۔</div>
+<h2>دفاع 1: اپنا چارجر اور کیبل ساتھ رکھیں</h2>
+<p>سب سے سادہ، مضبوط دفاع میں کوئی اضافی خرچ نہیں — صرف عادت کی تبدیلی:</p>
+<ul>
+<li><strong>اپنا وال چارجر AC ساکٹ میں لگائیں،</strong> اپنی کیبل عوامی USB پورٹ میں نہیں۔ وال چارجر مینز سے بجلی لیتا ہے؛ کسی نامعلوم آلے تک کوئی ڈیٹا چینل نہیں ہے۔ عوامی USB پورٹ مکمل نظرانداز ہو جاتا ہے۔</li>
+<li><strong>اپنی کیبل استعمال کریں،</strong> وہ نہیں جو "سہولت کے لیے" اسٹیشن میں لگی چھوڑی گئی ہو۔ نامعلوم کیبلز حملہ سطح کا دوسرا نصف ہیں۔</li>
+<li><strong>پورٹیبل پاور بینک ساتھ رکھیں۔</strong> چارج شدہ پاور بینک عوامی اسٹیشنز کو غیر متعلق بنا دیتا ہے — پروازوں، بازاروں، اسپتالوں اور کہیں بھی۔ اسے گھر پر چارج کریں۔</li>
+</ul>
+<h2>دفاع 2: صرف چارج والی کیبل یا USB ڈیٹا بلاکر استعمال کریں</h2>
+<p>جب آپ کو عوامی USB پورٹ استعمال کرنا <em>ہی</em> پڑے — AC ساکٹ لیا ہوا ہو، پاور بینک ختم ہو گیا ہو — تو کنکشن کو صرف بجلی والا بنائیں:</p>
+<ul>
+<li><strong>صرف چارج والی کیبلز</strong> میں جسمانی طور پر ڈیٹا تاریں نہیں ہوتیں۔ وہ عام USB کیبلز جیسی لگتی ہیں لیکن کبھی ڈیٹا منتقل نہیں کر سکتیں۔ سفر کے لیے ایک اپنے بیگ میں رکھیں۔</li>
+<li><strong>USB ڈیٹا بلاکرز</strong> ("USB کنڈوم" کہلاتے ہیں) چھوٹے اڈاپٹر ہیں جو آپ کی عام کیبل اور نامعلوم پورٹ کے درمیان بیٹھتے ہیں، بجلی گزارتے ہیں جبکہ ڈیٹا پنوں کو جسمانی طور پر روکتے ہیں۔ ان کی قیمت بہت کم ہوتی ہے اور چابی کی چین پر فٹ ہو جاتے ہیں۔</li>
+<li>کوئی بھی آپشن دشمن پورٹ کو بے وقوف بجلی ساکٹ میں بدل دیتا ہے — جوس جیکنگ جسمانی طور پر ناممکن ہو جاتی ہے۔</li>
+</ul>
+<h2>دفاع 3: اپنا فون مقفل اور اپ ڈیٹ رکھیں</h2>
+<p>خصوصی ہارڈویئر کے بغیر بھی آپ کے فون کی اپنی حفاظتیں بھاری کام کرتی ہیں — اگر آپ انہیں کرنے دیں:</p>
+<ul>
+<li><strong>چارج کرتے وقت اپنا فون مقفل رکھیں۔</strong> جدید فونز پر ڈیٹا ٹرانسفر کے لیے انلاک شدہ آلہ اور واضح USB موڈ انتخاب چاہیے ہوتا ہے۔ دشمن پورٹ میں لگا مقفل فون صرف چارج کرتا ہے۔</li>
+<li><strong>عوامی پورٹ پر USB موڈ پیغام کو کبھی منظور نہ کریں۔</strong> اگر "چارجنگ اسٹیشن" میں لگانے سے آپ کا فون فائل ٹرانسفر، MTP یا USB ٹیتھرنگ کے بارے میں پوچھے — نہیں کہیں، ان پلگ کریں، اور وہ پورٹ استعمال نہ کریں۔</li>
+<li><strong>سیکیورٹی اپ ڈیٹس فوراً انسٹال کریں۔</strong> USB اسٹیک کمزوریاں موجود ہیں، اور پیچ انہیں بند کرتے ہیں۔ مکمل اپ ڈیٹ شدہ فون بہت مشکل ہدف ہے۔</li>
+<li><strong>USB ڈیبگنگ / ڈویلپر آپشنز بند کر دیں</strong> جب تک آپ انہیں فعال طور پر استعمال نہ کریں۔ ڈویلپر موڈ طاقتور انٹرفیس کھولتا ہے جن کا دشمن کنکشن غلط استعمال کر سکتا ہے۔</li>
+</ul>
+<h2>دفاع 4: عوامی پورٹس کو عوامی وائی فائی سمجھیں</h2>
+<p>وسیع نظریہ: چارجنگ اسٹیشن ایک عام اصول کی مثال ہے — <strong>عوامی انفراسٹرکچر پہلے سے ناقابل بھروسہ ہے</strong>:</p>
+<ul>
+<li>نامعلوم پورٹس سے جڑے ہوئے پاس ورڈز ٹائپ کرنے یا بینکنگ ایپس کھولنے سے بچیں؛ انتظار کریں جب تک آپ اپنے چارجر یا بیٹری پر نہ ہوں۔</li>
+<li>چھیر چھاڑ پر نظر رکھیں: ڈھیلا پینل، شامل شدہ ڈونگل، یا ایسی کیبل جو دوسروں سے مختلف لگے، شک کے حقدار ہے — مقام کو رپورٹ کریں۔</li>
+<li>یہی احتیاط ہوٹلوں، کانفرنسوں اور مرمت کی دکانوں پر "مفت" کیبلز پر لاگو ہوتی ہے۔ اگر آپ نے اسے نہیں خریدا اور اس کی تصدیق نہیں کر سکتے تو اپنا انلاک شدہ فون اس سے نہ جوڑیں۔</li>
+</ul>
+<h2>اگر آپ پہلے سے مشکوک پورٹ استعمال کر چکے ہوں تو کیا کریں</h2>
+<p>یہ پڑھنے سے پہلے عوامی USB پورٹ استعمال کر لیا؟ گھبرائیں نہیں — یاد رکھیں بنیادی شرح بہت کم ہے۔ پھر بھی فوری صفائی جانچ سستی ہے:</p>
+<ul>
+<li><strong>نامعلوم ایپس چیک کریں</strong> سیٹنگز ← ایپس میں۔ جو کچھ آپ نہیں پہچانتے اسے ان انسٹال کر دیں۔</li>
+<li><strong>اسکین چلائیں</strong> گوگل پلے پروٹیکٹ (پلے اسٹور ← پروفائل ← پلے پروٹیکٹ ← اسکین) یا اپنے فون کے بلٹ ان سیکیورٹی اسکین سے۔</li>
+<li><strong>عجیب رویے پر نظر رکھیں</strong> — تیزی سے بیٹری ختم ہونا، بغیر کام کے گرم ہونا، ناواقف پاپ اپس۔ یہ کسی بھی ذریعے سے میلویئر کی نشاندہی کر سکتے ہیں، صرف چارجنگ پورٹس سے نہیں۔</li>
+<li><strong>اہم پاس ورڈز بدل لیں</strong> قابل بھروسہ آلے سے اور اگر کچھ غلط لگے تو اکاؤنٹ سرگرمی دیکھیں۔</li>
+<li><strong>جب شک ہو تو بیک اپ لیں اور فیکٹری ری سیٹ کریں۔</strong> یہ کسی بھی اصل کے فون میلویئر کا حتمی علاج ہے۔</li>
+</ul>
+<h2>اکثر پوچھے جانے والے سوالات</h2>
+<h3>کیا جوس جیکنگ وال چارجر سے ہو سکتی ہے جسے میں مینز میں لگاؤں؟</h3>
+<p>نہیں۔ معیاری AC وال چارجر کا کسی چیز سے کوئی ڈیٹا کنکشن نہیں ہوتا — ڈیٹا راستے کے لیے دوسرے سرے پر USB ہوسٹ چاہیے ہوتا ہے۔ خطرہ خاص طور پر USB پورٹس اور کیبلز کا ہے، مینز ساکٹس کا نہیں۔</p>
+<h3>کیا ہوائی جہاز موڈ میری حفاظت کرتا ہے؟</h3>
+<p>ہوائی جہاز موڈ ریڈیو (سیلولر، وائی فائی، بلوٹوتھ) بند کرتا ہے، USB ڈیٹا چینل نہیں۔ یہ جوس جیکنگ سے حفاظت نہیں کرتا۔ اس کے بجائے صرف بجلی والے کنکشن استعمال کریں۔</p>
+<h3>کیا وائرلیس چارجنگ پیڈز محفوظ ہیں؟</h3>
+<p>جی ہاں، بنیادی طور پر: وائرلیس چارجنگ برقی مقناطیسی انڈکشن استعمال کرتی ہے — کوئی ڈیٹا کنکشن بالکل نہیں ہوتا۔ عوامی Qi پیڈ چارجنگ انٹرفیس سے آپ کے فون کو جوس جیک نہیں کر سکتا۔ (یہ نظریاتی طور پر پھر بھی جسمانی اسکیمر جگہ ہو سکتی ہے، لیکن چارجنگ خود ڈیٹا سے پاک ہے۔)</p>
+<h3>کیا عوامی اسٹیشنز پر جوس جیکنگ ٹیسٹ کرنا قانونی ہے؟</h3>
+<p>نہیں۔ عوامی چارجنگ سامان سے چھیڑ چھاڑ کرنا یا کسی اور کے آلے تک بغیر اجازت رسائی تقریباً ہر جگہ غیر قانونی ہے۔ سیکیورٹی تحقیق آپ کی اپنی لیب میں، اپنے سامان کے ساتھ، تحریری اجازت کے ساتھ ہوتی ہے جہاں ضرورت ہو۔</p>
+<p>جوس جیکنگ سیکیورٹی علم کی مفید قسم میں آتی ہے: جنگل میں نایاب، سستی عادات سے آسانی سے شکست خوردہ۔ اپنا چارجر ساتھ رکھیں، اپنے سفر کٹ میں صرف چارج والی کیبل یا ڈیٹا بلاکر رکھیں، اور نامعلوم USB کو نامعلوم وائی فائی سمجھیں۔ ایسا کریں، اور چمکتا ہوا ہوائی اڈے کا چارجنگ اسٹیشن بالکل وہی بن جاتا ہے جو نظر آتا ہے — مفت بجلی، اور کچھ نہیں۔</p>
+<div class="related-box">
+<h3>متعلقہ گائیڈز</h3>
+<ul>
+<li><a href="wifi-security-guide.html">وائی فائی سیکیورٹی گائیڈ: اپنا ہوم نیٹ ورک محفوظ کریں (2026)</a></li>
+<li><a href="mobile-security.html">موبائل سیکیورٹی گائیڈ: اپنا فون بند کریں (2026)</a></li>
+<li><a href="social-engineering-awareness.html">سوشل انجینئرنگ سے آگاہی: حملہ آور لوگوں کو کیسے قابو کرتے ہیں</a></li>
+<li><a href="types-of-cyber-attacks.html">سائبر حملوں کی 10 اقسام کی وضاحت (حقیقی مثالوں کے ساتھ)</a></li>
+</ul>
+</div>
+<div class="progress-box tip-box" data-guide="basics/juice-jacking-usb-charging-risks-guide.html" data-title="جوس جیکنگ: عوامی USB چارجنگ کے خطرات اور محفوظ رہنے کا طریقہ (2026 گائیڈ)"><strong>اپنی پیش رفت محفوظ کریں:</strong> گائیڈ مکمل کر لی؟ <button class="btn btn-green hub-complete-btn" type="button">مکمل نشان زد کریں</button><span class="hub-complete-done" style="display:none">مکمل ہو گیا — صرف آپ کے براؤزر میں محفوظ ہے۔ اپنی <a href="../leaderboard.html">پیش رفت اور لیڈر بورڈ</a> دیکھیں۔</span></div>
+</main>
+
+<footer class="footer"><div class="container">
+<div class="footer-brand"> سائبر سیک <span class="green">ہب</span></div>
+<p>سائبر سیکیورٹی سیکھیں — اخلاقی اور قانونی طریقے سے۔</p>
+<div class="footer-links">
+<a href="index.html">ہوم</a><a href="../about.html">ہمارے بارے میں</a><a href="../contact.html">رابطہ</a><a href="../privacy.html">پرائیویسی پالیسی</a><a href="../disclaimer.html">ڈسکلیمر</a><a href="../terms.html">شرائط</a><a href="../leaderboard.html">لیڈر بورڈ</a><a href="../certificate.html">سرٹیفکیٹ</a><a href="../breach-news.html">بریچ نیوز</a>
+</div>
+<p class="foot-email"> <a href="mailto:contact@anwaardigital.com">contact@anwaardigital.com</a></p>
+<p class="copyright">تیار کردہ <strong style="color:var(--red)">ملک محمد انوار</strong></p>
+<p class="copyright">© 2026 CyberSec Hub by Anwaar Digital. جملہ حقوق محفوظ ہیں۔ صرف تعلیمی مواد — ہمیشہ تحریری اجازت سے ٹیسٹ کریں۔</p>
+</div></footer><a href="https://wa.me/923288317526" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.6 6.1 1.6h.1c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.6 1.2 1.2-4.5-.3-.4c-1-1.6-1.6-3.5-1.6-5.5C5 9.6 10.6 5 16 5s11 4.6 11 10-5.4 9.8-11 9.8zm6.1-7.3c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.8.1-.3-.2-1.4-.5-2.7-1.6-.9-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6L13 9.5c-.3-.8-.7-.7-1-.7h-.8c-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.5s1.5 4 1.7 4.3c.2.3 2.9 4.4 7 6.2 1 .4 1.7.7 2.3.9.9.3 1.8.2 2.5.2.8-.1 2.3-1 2.7-1.9.3-.9.3-1.7.2-1.9-.1-.1-.3-.2-.7-.4z"/></svg></a>
+<!-- Back to top button -->
+<button id="backToTop" aria-label="Back to top" title="Back to top"
+style="position:fixed;bottom:24px;right:24px;width:48px;height:48px;border-radius:50%;border:none;background:var(--red);color:var(--bg);font-size:22px;line-height:1;cursor:pointer;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s,transform .2s;box-shadow:0 4px 12px rgba(0,0,0,.35);z-index:9999;padding:0;">&#8593;</button>
+<script>
+(function(){var b=document.getElementById('backToTop');if(!b)return;
+window.addEventListener('scroll',function(){var s=window.pageYOffset||document.documentElement.scrollTop;
+if(s>300){b.style.opacity='1';b.style.visibility='visible';}else{b.style.opacity='0';b.style.visibility='hidden';}},{passive:true});
+b.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+b.addEventListener('mouseenter',function(){b.style.transform='scale(1.12)';});
+b.addEventListener('mouseleave',function(){b.style.transform='scale(1)';});})();
+</script>
+
+<a id="anwaar-ai-btn" href="https://anwaardigital.com/ai/?site=hub" target="_blank" rel="noopener" aria-label="Anwaar AI" style="position:fixed;right:16px;bottom:16px;z-index:9999;display:flex;align-items:center;background:#1a2b4a;color:#fff;text-decoration:none;font-family:system-ui,-apple-system,sans-serif;font-size:15px;font-weight:600;padding:12px 16px;border-radius:999px;box-shadow:0 4px 16px rgba(0,0,0,.35)">✦ Anwaar AI</a>
+<script src="../progress.js"></script>
+<script src="../progress.js"></script>
+</body></html>
