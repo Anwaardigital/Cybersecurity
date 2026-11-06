@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Phishing URL Analyzer — Learn to Spot Suspicious Links</title>
 <meta name="description" content="Free educational phishing URL analyzer: paste a suspicious link and learn to spot red flags like lookalike domains, IP addresses and URL shorteners.">
-<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../style.css">
 <link rel="canonical" href="https://anwaardigital.com/Cybersecurity/sectools/phishing-url-analyzer.html">
 <meta property="og:title" content="Phishing URL Analyzer — Learn to Spot Suspicious Links">
 <meta property="og:description" content="Free educational phishing URL analyzer: paste a suspicious link and learn to spot red flags like lookalike domains, IP addresses and URL shorteners.">
@@ -32,41 +32,8 @@
   "author": {"@type": "Person","name": "Malik Muhammad Anwaar"}
 }
 </script>
-<style>
-.quiz-q{background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:10px;padding:16px;margin:14px 0}
-.quiz-q p{font-weight:600;margin-bottom:6px}
-.quiz-opts button{display:block;width:100%;text-align:left;margin:8px 0;padding:11px 14px;border-radius:9px;border:1px solid var(--border);background:rgba(255,255,255,.04);color:var(--text);cursor:pointer;font-size:.95rem;font-family:inherit}
-.quiz-opts button:hover:not(:disabled){border-color:var(--green)}
-.quiz-opts button.correct{border-color:#00e676;background:rgba(0,230,118,.12)}
-.quiz-opts button.wrong{border-color:#ff5252;background:rgba(255,82,82,.1)}
-.quiz-opts button:disabled{cursor:default}
-.quiz-why{font-size:.88rem;color:var(--muted);margin-top:8px;display:none}
-.chk{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border:1px solid var(--border);border-radius:10px;margin:9px 0;background:rgba(255,255,255,.02);cursor:pointer;font-size:.93rem}
-.chk:hover{border-color:var(--green)}
-.chk input{margin-top:5px;transform:scale(1.3);accent-color:#00e676;flex-shrink:0}
-.chk small{display:block;color:var(--muted);font-size:.85rem;margin-top:3px}
-.chk.done{opacity:.72;border-color:rgba(0,230,118,.45)}
-.pbar{height:12px;background:rgba(255,255,255,.07);border-radius:8px;overflow:hidden;margin:12px 0}
-.pbar>div{height:100%;width:0;background:linear-gradient(90deg,#00b35c,#00e676);transition:width .4s;border-radius:8px}
-.flag{border-left:4px solid;padding:12px 14px;border-radius:0 10px 10px 0;margin:10px 0;background:rgba(255,255,255,.03)}
-.flag.danger{border-color:#ff5252}.flag.warn{border-color:#ff9800}.flag.info{border-color:#29b6f6}.flag.safe{border-color:#00e676}
-.flag b{display:block;margin-bottom:4px;font-size:.95rem}
-.flag p{margin:0;font-size:.89rem;color:#c9d6e8}
-.step-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
-.step-tabs button{padding:9px 16px;border-radius:20px;border:1px solid var(--border);background:rgba(255,255,255,.04);color:var(--text);cursor:pointer;font-size:.9rem;font-family:inherit}
-.step-tabs button.active{background:rgba(0,230,118,.15);border-color:var(--green);color:#fff}
-.edu h3{color:var(--green);margin:24px 0 8px;font-size:1.05rem}
-.edu ul{margin:6px 0 6px 18px}.edu ol{margin:6px 0 6px 18px}
-.edu li{margin-bottom:6px;font-size:.94rem;color:#d4e0ee}
-.edu p{font-size:.94rem;color:#d4e0ee;margin-bottom:10px}
-table.cmp{width:100%;border-collapse:collapse;font-size:.89rem;margin:12px 0}
-table.cmp th,table.cmp td{border:1px solid var(--border);padding:9px 10px;text-align:left;vertical-align:top}
-table.cmp th{background:rgba(0,230,118,.08);color:var(--green)}
-.score-line{font-size:1.05rem;font-weight:700;margin:14px 0}
-.verdict{border-radius:10px;padding:16px;margin-top:14px;font-size:.95rem}
-</style>
 </head>
-<body>
+<body class="page-sectool">
 <nav class="navbar"><div class="nav-inner">
 <a href="../index.html" class="brand"><span class="brand-icon"></span><span>CyberSec <span class="green">Hub</span></span></a>
 <div class="nav-actions"><button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark and light theme"><span class="theme-icon"></span><span class="theme-label">Light</span></button><button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button></div>
@@ -170,7 +137,7 @@ function analyzeURL(){
   if(/\.(exe|scr|bat|msi|zip|rar|js|vbs|ps1)(\?|#|$)/i.test(path)) flags.push(flag('warn',' Link points to a downloadable file','The link would download a file instead of opening a page. Never run unexpected downloads — they can install malware.'));
   if(raw.length>75) flags.push(flag('info','ℹ Unusually long URL ('+raw.length+' characters)','Very long links are sometimes used to push the suspicious part out of view in messages and emails.'));
   if(/(\d{4,})/.test(path)&&/\.(php|aspx?)$/i.test(path)) flags.push(flag('info','ℹ Suspicious script path','The path looks like an auto-generated phishing-kit page.'));
-  var html='<div class="score-line">'+(flags.length?(' '+flags.length+' red flag'+(flags.length>1?'s':'')+' found — treat this link as <span style="color:#ff5252">suspicious</span>. Do NOT enter personal information.'):'<span style="color:#00e676">No common red flags found.</span>')+'</div>';
+  var html='<div class="score-line">'+(flags.length?(' '+flags.length+' red flag'+(flags.length>1?'s':'')+' found — treat this link as <span style="color:#ff5252">suspicious</span>. Do NOT enter personal information.'):'<span style="color:var(--red)">No common red flags found.</span>')+'</div>';
   html+=flags.join('')+safe.join('');
   html+=flag('info',' Educational note','Phishers invent new tricks constantly. This checker looks for <b>known patterns</b> — a "clean" result is not a safety certificate. Your best defense is habit: navigate to important sites yourself instead of clicking links.');
   out.innerHTML=html;
@@ -191,12 +158,12 @@ function analyzeURL(){
 </div>
 <p class="foot-email"> <a href="mailto:contact@anwaardigital.com">contact@anwaardigital.com</a></p>
 <p class="copyright">© 2026 CyberSec Hub by Anwaar Digital. All rights reserved. Educational content only — always test with written permission.</p>
-<p class="copyright">Developed by <strong style="color:#00e676">Malik Anwaar</strong></p>
+<p class="copyright">Developed by <strong style="color:var(--red)">Malik Anwaar</strong></p>
 </div></footer><a href="https://wa.me/923288317526" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.6 6.1 1.6h.1c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.6 1.2 1.2-4.5-.3-.4c-1-1.6-1.6-3.5-1.6-5.5C5 9.6 10.6 5 16 5s11 4.6 11 10-5.4 9.8-11 9.8zm6.1-7.3c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.8.1-.3-.2-1.4-.5-2.7-1.6-.9-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6L13 9.5c-.3-.8-.7-.7-1-.7h-.8c-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.5s1.5 4 1.7 4.3c.2.3 2.9 4.4 7 6.2 1 .4 1.7.7 2.3.9.9.3 1.8.2 2.5.2.8-.1 2.3-1 2.7-1.9.3-.9.3-1.7.2-1.9-.1-.1-.3-.2-.7-.4z"/></svg></a>
 
 <!-- Back to top button -->
 <button id="backToTop" aria-label="Back to top" title="Back to top"
-style="position:fixed;bottom:24px;right:24px;width:48px;height:48px;border-radius:50%;border:none;background:#00e676;color:#050b14;font-size:22px;line-height:1;cursor:pointer;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s,transform .2s;box-shadow:0 4px 12px rgba(0,0,0,.35);z-index:9999;padding:0;">&#8593;</button>
+style="position:fixed;bottom:24px;right:24px;width:48px;height:48px;border-radius:50%;border:none;background:var(--red);color:var(--bg);font-size:22px;line-height:1;cursor:pointer;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s,transform .2s;box-shadow:0 4px 12px rgba(0,0,0,.35);z-index:9999;padding:0;">&#8593;</button>
 <script>
 (function(){var b=document.getElementById('backToTop');if(!b)return;
 window.addEventListener('scroll',function(){var s=window.pageYOffset||document.documentElement.scrollTop;

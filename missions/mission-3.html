@@ -6,57 +6,18 @@
 <title>CyberSec Hub — Mission 3: Password Cracker</title>
 <meta name="description" content="Mission 3: Password Cracker — a simulated attack on weak passwords that teaches what actually stays strong. Educational CyberSec Hub mission.">
 <link rel="canonical" href="https://anwaardigital.com/Cybersecurity/missions/mission-3.html">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:#05080a;color:#dbe7e0;line-height:1.6}
-a{color:inherit;text-decoration:none}
-.navbar{background:#0a1210;border-bottom:1px solid #16211c;padding:14px 18px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
-.brand{font-weight:800;font-size:18px;color:#fff}.brand .g{color:#00e676}
-.navbar a.nav{color:#8fa39a;font-weight:700}.navbar a.nav:hover{color:#00e676}
-.wrap{max-width:760px;margin:0 auto;padding:0 16px 40px}
-h1{font-size:clamp(26px,6vw,36px);color:#fff;margin:22px 0 6px}
-h1 .g{color:#00e676}
-.sub{color:#8fa39a;margin-bottom:20px}
-.badge{display:inline-block;font-size:12px;font-weight:800;padding:3px 10px;border-radius:999px;background:#3b2f05;color:#fde68a}
-.pts{font-weight:800;color:#00e676}
-.howto{background:#0a1210;border:1px solid #16211c;border-radius:16px;padding:18px;margin-bottom:20px}
-.howto h3{color:#fff;margin-bottom:8px}
-.howto ol{margin-left:20px;color:#8fa39a;font-size:15px}
-.howto li{margin-bottom:4px}
-.warn{background:#3f0d0d;border:1px solid #7f1d1d;border-radius:12px;padding:12px 16px;font-size:14px;color:#fecaca;margin-bottom:20px}
-.pwcard{background:#0a1210;border:1px solid #24382f;border-radius:16px;padding:16px;margin-bottom:12px}
-.pwcard .pw{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:19px;color:#fff;word-break:break-all}
-.pwcard .mark{color:#5b6f66;font-size:13px;margin-top:4px}
-.pwbtns{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
-.pwbtns button{flex:1;min-width:130px;padding:11px;border-radius:10px;font-size:15px;font-weight:800;cursor:pointer;border:1px solid #24382f;background:#0b1a12;color:#dbe7e0}
-.pwbtns button.sel-red{background:#dc2626;color:#fff;border-color:#dc2626}
-.pwbtns button.sel-green{background:#00e676;color:#04120a;border-color:#00e676}
-.simbtn{background:#00e676;color:#04120a;font-weight:800;border:0;padding:14px 26px;border-radius:12px;font-size:16px;cursor:pointer;margin-top:8px;width:100%}
-.simbtn:disabled{opacity:.5;cursor:default}
-.log{background:#020503;border:1px solid #1d3a2a;border-radius:16px;padding:16px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:14.5px;line-height:1.8;color:#a7f3d0;min-height:120px;white-space:pre-wrap;display:none;margin-top:16px}
-.log .bad{color:#fca5a5}.log .good{color:#4ade80}
-.verdict{border-radius:16px;padding:18px;margin-top:16px;display:none}
-.verdict.ok{background:#052e16;border:1px solid #14532d}
-.verdict.bad{background:#3f0d0d;border:1px solid #7f1d1d}
-.verdict h3{color:#fff;margin-bottom:6px}
-.win{background:#052e16;border:1px solid #00e676;border-radius:16px;padding:20px;margin-top:16px;display:none;text-align:center}
-.win h2{color:#4ade80;margin-bottom:8px}
-.win .flag{font-family:ui-monospace,Menlo,Consolas,monospace;color:#fde68a;font-size:18px;word-break:break-all}
-.btn-next,.btn-retry{background:#00e676;color:#04120a;font-weight:800;border:0;padding:13px 26px;border-radius:12px;font-size:16px;cursor:pointer;margin-top:14px}
-.back{display:inline-block;margin-top:24px;color:#00e676;font-weight:700}
-footer{text-align:center;color:#5b6f66;font-size:13.5px;margin-top:28px}
-</style>
+<link rel="stylesheet" href="../style.css">
 </head>
-<body>
+<body class="page-mission">
 <nav class="navbar"><a class="brand" href="../index.html"> CyberSec <span class="g">Hub</span></a><a class="nav" href="../index.html">Home</a><a class="nav" href="index.html">Missions</a><a class="nav" href="../learning-path.html">Learning Paths</a></nav>
 <div class="wrap">
 <h1> Mission 3: <span class="g">Password Cracker</span></h1>
-<p class="sub"><span class="badge">MEDIUM</span> &nbsp;<span class="pts">400 pts</span> &nbsp;·&nbsp; Simulate an attack on weak passwords — and learn what actually stays strong.</p>
+<p class="sub"><span class="badge med">MEDIUM</span> &nbsp;<span class="pts">400 pts</span> &nbsp;·&nbsp; Simulate an attack on weak passwords — and learn what actually stays strong.</p>
 <div class="warn"> Educational simulation with fake passwords. Never try to crack a real account — that is illegal. Only test passwords you own.</div>
 <div class="howto">
 <h3>How to play</h3>
 <ol>
-<li>For each password below, guess: does it <b style="color:#fca5a5">crack fast</b> or <b style="color:#86efac">stay strong</b>?</li>
+<li>For each password below, guess: does it <b style="color:#fca5a5">crack fast</b> or <b style="color:#fca5a5">stay strong</b>?</li>
 <li>Tap your guess on all 4 passwords, then run the simulation.</li>
 <li>Watch the simulated attacker work — then see if your guesses were right.</li>
 <li>All 4 correct = flag captured.</li>
@@ -122,7 +83,7 @@ v.className='verdict ok';
 html='<h3> Perfect! 4 / 4 correct — 400 points</h3><p>Lesson: length beats cleverness. A long passphrase or a random password stays strong; short and common ones fall fast.</p>';
 v.innerHTML=html;v.style.display='block';
 var w=document.getElementById('winBox');
-w.innerHTML='<h2> MISSION COMPLETE!</h2><p class="flag">FLAG{strong_pass_2026}</p><p style="margin-top:10px;color:#8fa39a">Next mission: <a href="mission-4.html" style="color:#00e676;text-decoration:underline">Mission 4 — Spot the Vulnerability →</a></p>';
+w.innerHTML='<h2> MISSION COMPLETE!</h2><p class="flag">FLAG{strong_pass_2026}</p><p style="margin-top:10px;color:#b5b5bc">Next mission: <a href="mission-4.html" style="color:var(--red);text-decoration:underline">Mission 4 — Spot the Vulnerability →</a></p>';
 if(window.HubProgress)HubProgress.completeMission('mission-3');
 w.style.display='block';
 }else{

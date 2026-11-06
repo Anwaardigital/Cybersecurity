@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Learning Paths — Step-by-Step Cybersecurity Roadmaps</title>
 <meta name="description" content="Three step-by-step learning paths: Complete Beginner, Ethical Hacking Career, and Home User Security. Follow the guides in order — 100% ethical and legal.">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="style.css">
 <link rel="canonical" href="https://anwaardigital.com/Cybersecurity/learning-path.html">
 <meta property="og:title" content="Learning Paths — Step-by-Step Cybersecurity Roadmaps">
 <meta property="og:description" content="Three step-by-step learning paths: Complete Beginner, Ethical Hacking Career, and Home User Security. Follow the guides in order — 100% ethical and legal.">
@@ -28,24 +28,8 @@
   "description": "Three step-by-step learning paths: Complete Beginner, Ethical Hacking Career, and Home User Security — ethical and legal."
 }
 </script>
-<style>
-.path-intro{background:rgba(0,230,118,.05);border:1px solid var(--border);border-radius:14px;padding:22px;margin:26px 0}
-.path-step{display:flex;gap:16px;background:rgba(255,255,255,.02);border:1px solid var(--border);border-radius:14px;padding:18px;margin:14px 0;transition:border-color .2s}
-.path-step:hover{border-color:rgba(0,230,118,.4)}
-.step-num{flex:0 0 44px;width:44px;height:44px;border-radius:50%;background:rgba(0,230,118,.1);border:2px solid var(--green);color:var(--green);font-weight:700;display:flex;align-items:center;justify-content:center;font-size:1.1rem}
-.step-body h3{margin:0 0 6px;font-size:1.08rem;line-height:1.4}
-.step-body h3 a:hover{color:var(--green)}
-.step-body p{margin:6px 0;color:var(--muted);font-size:.96rem}
-.step-learn{color:var(--text)}
-.step-learn strong{color:var(--green)}
-.step-act{color:var(--text)}
-.step-act strong{color:var(--green)}
-.step-tag{display:inline-block;font-size:.78rem;font-weight:600;color:var(--green);background:rgba(0,230,118,.08);border:1px solid var(--border);border-radius:20px;padding:2px 12px;margin-top:8px}
-.path-done{background:rgba(0,230,118,.05);border:1px solid var(--border);border-radius:14px;padding:20px;margin:26px 0;text-align:center;color:var(--muted)}
-.path-done strong{color:var(--green)}
-</style>
 </head>
-<body>
+<body class="page-learn">
 <nav class="navbar"><div class="nav-inner">
 <a href="index.html" class="brand"><span class="brand-icon"></span><span>CyberSec <span class="green">Hub</span></span></a>
 <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
@@ -65,11 +49,11 @@
 <div class="breadcrumb"><a href="index.html">Home</a> /  Learning Paths</div>
 
 <main class="page-wrap" style="max-width:860px;margin:0 auto;padding:24px 20px 60px">
-<header class="article-hero" style="text-align:left;margin-bottom:10px"><span class="section-tag"> Learning Paths</span><h1>Follow a Path, Step by Step</h1>
+<header class="article-hero" style="text-align:start;margin-bottom:10px"><span class="section-tag"> Learning Paths</span><h1>Follow a Path, Step by Step</h1>
 <p class="small">Last updated: 5 November 2026</p><div class="article-meta">By CyberSec Hub · Choose the path that fits your goal</div></header>
 
 <div class="path-intro">
-<p style="margin:0">Our guides are organized below into <strong style="color:#00e676">four ordered roadmaps</strong>. Don't read randomly — pick your path and follow the steps in order. Every step is a real guide on this site, and everything is <strong style="color:#00e676">100% ethical, defensive, and legal</strong>.</p>
+<p style="margin:0">Our guides are organized below into <strong style="color:var(--red)">four ordered roadmaps</strong>. Don't read randomly — pick your path and follow the steps in order. Every step is a real guide on this site, and everything is <strong style="color:var(--red)">100% ethical, defensive, and legal</strong>.</p>
 </div>
 
 <div class="cat-grid" style="margin-bottom:40px">
@@ -92,7 +76,7 @@
 <div class="path-step"><div class="step-num">7</div><div class="step-body"><h3><a href="basics/wifi-security-guide.html">WiFi Security Guide: Secure Your Home Network (2026)</a></h3><p class="step-learn"><strong>You'll learn:</strong> how to secure your home router — WPA3, guest networks, and spotting intruders on your own network.</p></div></div>
 <div class="path-step"><div class="step-num">8</div><div class="step-body"><h3><a href="basics/ransomware-protection-guide.html">Ransomware Protection Guide: Keep Your Files Safe (2026)</a></h3><p class="step-learn"><strong>You'll learn:</strong> backups, updates, and safe habits that protect your files — and what to do if a device ever gets infected.</p></div></div>
 
-<div class="path-done"> Finished all 8? You're no longer a beginner — try <a href="#home" style="color:#00e676"><strong>Home User Security</strong></a> for the action checklist, or <a href="#career" style="color:#00e676"><strong>Ethical Hacking Career</strong></a> if you want to go professional. Finished a path? Get your <a href="certificate.html" style="color:#00e676"><strong>certificate →</strong></a></div>
+<div class="path-done"> Finished all 8? You're no longer a beginner — try <a href="#home" style="color:var(--red)"><strong>Home User Security</strong></a> for the action checklist, or <a href="#career" style="color:var(--red)"><strong>Ethical Hacking Career</strong></a> if you want to go professional. Finished a path? Get your <a href="certificate.html" style="color:var(--red)"><strong>certificate →</strong></a></div>
 </section>
 
 <!-- ============ PATH 2: ETHICAL HACKING CAREER ============ -->
@@ -121,7 +105,7 @@
 <div class="path-step"><div class="step-num">18</div><div class="step-body"><h3><a href="career/cybersecurity-interview-preparation.html">Cybersecurity Interview Preparation: Land Your First Security Job</a></h3><p class="step-learn"><strong>You'll learn:</strong> common interview questions, technical topics, HR rounds, and portfolio tips for your first security job.</p></div></div>
 
 <div class="ethical-box"><strong> The rule that never changes:</strong> A professional ethical hacker never touches a system without <strong>written authorization</strong> or a clear bug-bounty scope. Keep that standard from day one — it's what separates a career from a crime.</div>
-<div class="path-done"> Finished all 18? You're on the professional track — review the <a href="career/how-to-become-pentester.html" style="color:#00e676"><strong>pentester roadmap</strong></a> again and start applying. Finished a path? Get your <a href="certificate.html" style="color:#00e676"><strong>certificate →</strong></a></div>
+<div class="path-done"> Finished all 18? You're on the professional track — review the <a href="career/how-to-become-pentester.html" style="color:var(--red)"><strong>pentester roadmap</strong></a> again and start applying. Finished a path? Get your <a href="certificate.html" style="color:var(--red)"><strong>certificate →</strong></a></div>
 </section>
 
 <!-- ============ PATH 3: HOME USER SECURITY ============ -->
@@ -129,7 +113,7 @@
 <div class="section-head" style="margin-bottom:8px"><span class="section-tag"> Path 3</span><h2>Home User Security</h2><p>Not studying for a career — just want your phone, WiFi, and family safe? Work through this action list.</p></div>
 
 <div class="path-intro">
-<p style="margin:0">This is a <strong style="color:#00e676">"do this, not just read"</strong> checklist. Read each guide, then complete the action before moving to the next step.</p>
+<p style="margin:0">This is a <strong style="color:var(--red)">"do this, not just read"</strong> checklist. Read each guide, then complete the action before moving to the next step.</p>
 </div>
 
 <div class="path-step"><div class="step-num">1</div><div class="step-body"><h3><a href="basics/password-security-guide.html">Password Security: The Complete Guide (2026)</a></h3><p class="step-act"><strong> Do this:</strong> Install a password manager and replace every reused password with a unique passphrase — start with your email and bank.</p></div></div>
@@ -143,7 +127,7 @@
 <div class="path-step"><div class="step-num">9</div><div class="step-body"><h3><a href="tools/password-security-testing.html">Password Security Testing: Audit Your Own Passwords</a></h3><p class="step-act"><strong> Do this:</strong> Audit the strength of your own passwords with the guide's methods and replace any weak ones you find.</p></div></div>
 <div class="path-step"><div class="step-num">10</div><div class="step-body"><h3><a href="tools/password-cracking-defense.html">Password Cracking Defense: How Attackers Guess Passwords (And How to Stop Them)</a></h3><p class="step-act"><strong> Do this:</strong> Learn how attackers guess passwords — brute force, dictionary attacks — so your defenses actually work. <span class="step-tag"> Defensive guide — no attack instructions</span></p></div></div>
 
-<div class="path-done"> All 10 actions done? Your home is far safer than average. Revisit the <a href="#beginner" style="color:#00e676"><strong>Beginner path</strong></a> anytime for deeper understanding — and keep your backups running. Finished a path? Get your <a href="certificate.html" style="color:#00e676"><strong>certificate →</strong></a></div>
+<div class="path-done"> All 10 actions done? Your home is far safer than average. Revisit the <a href="#beginner" style="color:var(--red)"><strong>Beginner path</strong></a> anytime for deeper understanding — and keep your backups running. Finished a path? Get your <a href="certificate.html" style="color:var(--red)"><strong>certificate →</strong></a></div>
 </section>
 
 
@@ -157,10 +141,10 @@
 <div class="path-step"><div class="step-num">4</div><div class="step-body"><h3><a href="basics/youtube-channel-hack-recovery-guide.html">YouTube Channel Hacked? Step-by-Step Recovery Guide (2026)</a></h3><p class="step-learn"><strong>You'll learn:</strong> how to recover a hacked YouTube channel — secure the Google Account, use YouTube's troubleshooter, and clean the channel.</p></div></div>
 <div class="path-step"><div class="step-num">5</div><div class="step-body"><h3><a href="basics/instagram-tiktok-hack-recovery-guide.html">Instagram or TikTok Account Hacked? Step-by-Step Recovery Guide (2026)</a></h3><p class="step-learn"><strong>You'll learn:</strong> how to recover a hacked Instagram or TikTok account through the official flows — and lock both accounts down afterwards.</p></div></div>
 
-<div class="path-done"> Finished all 5? Your creator accounts are far harder to steal now. Get your <a href="certificate.html" style="color:#00e676"><strong>certificate →</strong></a></div>
+<div class="path-done"> Finished all 5? Your creator accounts are far harder to steal now. Get your <a href="certificate.html" style="color:var(--red)"><strong>certificate →</strong></a></div>
 </section>
 
-<div class="tip-box" style="margin-top:40px"><strong> Bonus:</strong> Try our free browser-based <a href="sectools/index.html" style="color:#00e676"><strong>security tools</strong></a> — password strength checker, password generator, hash generator, and Base64 encoder. All run privately in your browser.</div>
+<div class="tip-box" style="margin-top:40px"><strong> Bonus:</strong> Try our free browser-based <a href="sectools/index.html" style="color:var(--red)"><strong>security tools</strong></a> — password strength checker, password generator, hash generator, and Base64 encoder. All run privately in your browser.</div>
 
 </main>
 
@@ -171,11 +155,11 @@
 <a href="index.html">Home</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy Policy</a><a href="disclaimer.html">Disclaimer</a><a href="terms.html">Terms</a><a href="leaderboard.html">Leaderboard</a><a href="certificate.html">Certificate</a><a href="breach-news.html">Breach News</a>
 </div>
 <p class="copyright">© 2026 CyberSec Hub by Anwaar Digital. All rights reserved. Educational content only — always test with written permission.</p>
-<p class="copyright">Developed by <strong style="color:#00e676">Malik Anwaar</strong></p>
+<p class="copyright">Developed by <strong style="color:var(--red)">Malik Anwaar</strong></p>
 </div></footer><a href="https://wa.me/923288317526" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.6 6.1 1.6h.1c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.6 1.2 1.2-4.5-.3-.4c-1-1.6-1.6-3.5-1.6-5.5C5 9.6 10.6 5 16 5s11 4.6 11 10-5.4 9.8-11 9.8zm6.1-7.3c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.8.1-.3-.2-1.4-.5-2.7-1.6-.9-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6L13 9.5c-.3-.8-.7-.7-1-.7h-.8c-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.5s1.5 4 1.7 4.3c.2.3 2.9 4.4 7 6.2 1 .4 1.7.7 2.3.9.9.3 1.8.2 2.5.2.8-.1 2.3-1 2.7-1.9.3-.9.3-1.7.2-1.9-.1-.1-.3-.2-.7-.4z"/></svg></a>
 <!-- Back to top button -->
 <button id="backToTop" aria-label="Back to top" title="Back to top"
-style="position:fixed;bottom:24px;right:24px;width:48px;height:48px;border-radius:50%;border:none;background:#00e676;color:#050b14;font-size:22px;line-height:1;cursor:pointer;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s,transform .2s;box-shadow:0 4px 12px rgba(0,0,0,.35);z-index:9999;padding:0;">&#8593;</button>
+style="position:fixed;bottom:24px;right:24px;width:48px;height:48px;border-radius:50%;border:none;background:var(--red);color:var(--bg);font-size:22px;line-height:1;cursor:pointer;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s,transform .2s;box-shadow:0 4px 12px rgba(0,0,0,.35);z-index:9999;padding:0;">&#8593;</button>
 <script>
 (function(){var b=document.getElementById('backToTop');if(!b)return;
 window.addEventListener('scroll',function(){var s=window.pageYOffset||document.documentElement.scrollTop;
