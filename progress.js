@@ -7,7 +7,7 @@
 var KEY='hubProgressV1';
 var GUIDE_POINTS=10;
 var MISSION_POINTS={'mission-1':100,'mission-2':300,'mission-3':400,'mission-4':300,'mission-5':200};
-var TOTAL_GUIDES=68;
+var TOTAL_GUIDES=70;
 var TOTAL_MISSIONS=5;
 
 function load(){
