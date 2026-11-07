@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/png" sizes="192x192" href="https://cybersechub.anwaardigital.com/cyber-icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="https://cybersechub.anwaardigital.com/cyber-icon-512.png">
+<link rel="apple-touch-icon" href="https://cybersechub.anwaardigital.com/cyber-icon-192.png">
+<!-- Cookie consent (GDPR): Google Analytics loads only after you press Accept -->
+<script src="../cookie-consent.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Nmap Beginner's Guide: Scan Your Own Network Safely</title>
+<meta name="description" content="Learn Nmap the safe way — what it is, how to scan your own home network, understand open ports, and improve your defenses.">
+<link rel="stylesheet" href="../styles.css">
+<link rel="canonical" href="https://anwaardigital.com/Cybersecurity/hacking/nmap-guide.html">
+<meta property="og:title" content="Nmap Beginner's Guide: Scan Your Own Network Safely">
+<meta property="og:description" content="Learn Nmap the safe way — what it is, how to scan your own home network, understand open ports, and improve your defenses.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://anwaardigital.com/Cybersecurity/hacking/nmap-guide.html">
+<meta property="og:site_name" content="CyberSec Hub">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://cybersechub.anwaardigital.com/cyber-icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Nmap Beginner's Guide: Scan Your Own Network Safely",
+  "description": "Learn Nmap the safe way — what it is, how to scan your own home network, understand open ports, and improve your defenses.",
+  "author": {
+    "@type": "Person",
+    "name": "Malik Muhammad Anwaar"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "CyberSec Hub",
+    "url": "https://anwaardigital.com/Cybersecurity/"
+  },
+  "datePublished": "2026-10-14",
+  "dateModified": "2026-10-15",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://anwaardigital.com/Cybersecurity/hacking/nmap-guide.html"
+  }
+}
+</script>
+</head>
+<body>
+<nav class="navbar"><div class="nav-inner">
+<a href="../index.html" class="brand"><span class="brand-icon"></span><span>CyberSec <span class="green">Hub</span></span></a>
+<button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+<ul class="nav-links" id="navLinks">
+<li><a href="../index.html">Home</a></li>
+<li><a href="../index.html#basics">Basics</a></li>
+<li><a href="../index.html#hacking">Ethical Hacking</a></li>
+<li><a href="../index.html#tools">Tools Guide</a></li>
+<li><a href="../index.html#career">Career</a></li>
+<li><a href="../missions/index.html">Missions</a></li>
+<li><a href="../learning-path.html">Learning Paths</a></li>
+<li><a href="../sectools/index.html">Tools</a></li>
+<li><a href="../glossary.html">Glossary</a></li>
+<li><a href="../faq.html">FAQ</a></li>
+<li><a href="../about.html">About</a></li>
+</ul></div></nav><div class="breadcrumb"><a href="../index.html">Home</a> /  Ethical Hacking / Nmap Beginner's Guide</div>
+<header class="article-hero"><span class="section-tag"> Ethical Hacking</span><h1>Nmap Beginner's Guide: Scan Your Own Network Safely</h1>
+<p class="small">Last updated: 5 November 2026</p><div class="article-meta">By CyberSec Hub · 11 min read</div></header>
+<main class="article-body"><div class="ethical-box"><strong> Ethical Use Only:</strong> Only test systems you own or have <strong>written permission</strong> to test. Unauthorized hacking is illegal in Pakistan and worldwide. Everything here is for defensive security education and authorized testing only.</div>
+<p><strong>Nmap</strong> (Network Mapper) is the most famous network scanning tool in cybersecurity — free, open source, and used by professionals worldwide. Its legitimate purpose is simple: it tells you <strong>what is on your own network</strong>. Which devices are connected? Which ports are open? What software is running? Knowing this about your own home or office network is the first step to securing it.</p>
+
+<h2>Why Scan Your Own Network?</h2>
+<p>Most people have no idea what is actually on their WiFi — phones, laptops, smart TVs, maybe an old camera with a default password, possibly even a neighbor leeching the connection. Scanning your own network answers critical defensive questions: are there unknown devices? Is my router exposing management ports? Penetration testers use Nmap in every engagement's scanning phase; learning it on your own network teaches you exactly what an attacker would see — so you can close the gaps first.</p>
+
+<h2>Installing Nmap</h2>
+<p>Nmap runs on Windows, macOS, and Linux. On Windows, download the installer from the official nmap.org site (the graphical version is called Zenmap). On Linux: <code>sudo apt install nmap</code> on Ubuntu/Debian. On macOS: <code>brew install nmap</code>. Always download from the official site to avoid fake versions bundled with malware.</p>
+
+<h2>Your First Safe Scan: Your Own Computer</h2>
+<p>The safest possible target is your own machine, using the address <code>127.0.0.1</code> ("localhost" — always means "this computer"):</p>
+<pre><code>nmap 127.0.0.1</code></pre>
+<p>Nmap checks the 1,000 most common ports and reports each as <strong>open</strong> (a program is listening), <strong>closed</strong> (reachable, nothing listening), or <strong>filtered</strong> (a firewall blocked the probe). This scan harms nothing — it is the equivalent of checking which doors of your own house are unlocked.</p>
+
+<h2>Understanding Ports and Services</h2>
+<p>A <strong>port</strong> is a numbered doorway (0–65535) for network programs. Common ones: 80 and 443 (web), 22 (SSH), 21 (FTP), 3389 (Windows Remote Desktop). When Nmap reports "80/tcp open http," a web server is running there. Each open port is a potential entry point — the defensive goal is simple: <strong>every open port should be intentional and necessary</strong>.</p>
+
+<h2>Scanning Your Home Network (Your WiFi Only)</h2>
+<p>Find your network range first: on Windows run <code>ipconfig</code>; on Linux/macOS run <code>ip addr</code> — look for your IPv4 address, e.g. 192.168.1.5, making your network probably 192.168.1.0/24. A safe discovery scan:</p>
+<pre><code>nmap -sn 192.168.1.0/24</code></pre>
+<p>The <code>-sn</code> flag means "ping scan only — don't scan ports." It lists which devices are online. Compare against devices you recognize. An unknown device might be a forgotten gadget — or a neighbor on your WiFi, in which case change your WiFi password immediately.</p>
+
+<h2>Reading Results Like a Defender</h2>
+<p>When you scan one of your own devices more deeply — e.g. <code>nmap -sV 192.168.1.1</code> against your own router (<code>-sV</code> detects software versions) — ask defensive questions about every open port: Do I know what this service is? Did I enable it? Can I disable it? Is it updated? If your router shows Telnet (port 23) open with old firmware, log in, update the firmware, disable remote management, and change the default admin password.</p>
+
+<h2>Useful Beginner Options</h2>
+<ul>
+<li><code>nmap -sV &lt;target&gt;</code> — detect service versions on your own host.</li>
+<li><code>nmap -O &lt;target&gt;</code> — guess the operating system of your own device.</li>
+<li><code>nmap -A &lt;target&gt;</code> — aggressive scan combining several techniques (use only on your own systems).</li>
+<li><code>nmap --top-ports 100 &lt;target&gt;</code> — scan just the 100 most common ports for a quick check.</li>
+</ul>
+
+<h2>What NOT To Do</h2>
+<p>Never scan networks, websites, or IP addresses you do not own or lack written permission to test. Unauthorized scanning is illegal in many jurisdictions and can be interpreted as the start of an attack. Keep every scan on your own equipment and your own lab.</p>
+
+<div class="tip-box"><strong> Next step:</strong> pair Nmap with our <a href="../tools/wireshark-basics.html">Wireshark basics guide</a> to see your network traffic visually, and our <a href="../basics/mobile-security.html">mobile security guide</a> to lock down the devices you discovered.</div>
+
+<h2>Service Detection Deep Dive (Your Lab)</h2>
+<p>The <code>-sV</code> flag does more than name services — it probes them and reports versions, like "Apache httpd 2.4.49." In your lab, compare the versions on your own VMs against public vulnerability databases to understand <em>why</em> patching matters: an old version number maps directly to known, documented flaws. This is the defensive lesson — attackers do exactly this mapping, so your job is to ensure there is nothing outdated left to map. Try it: spin up an old Linux VM in your isolated lab, scan it with <code>nmap -sV</code>, and research what you find. Then patch the VM and rescan — watch the findings disappear.</p>
+<h2>Output Formats for Your Notes</h2>
+<p>Professionals save scan results for reports. Useful options on your own systems:</p>
+<ul>
+<li><code>-oN scan.txt</code> — normal human-readable output to a file.</li>
+<li><code>-oX scan.xml</code> — XML output for tooling and records.</li>
+<li><code>-oA myscan</code> — all three major formats at once.</li>
+</ul>
+<p>Keeping dated scan records of your own network lets you spot changes over time — a new open port that was not there last month deserves investigation.</p>
+<h2>Nmap Scripting Engine (Safe Introduction)</h2>
+<p>Nmap ships with <strong>NSE scripts</strong> that automate checks — many are purely informational and safe on your own systems, like <code>--script=banner</code> or <code>--script=http-titles</code> against your own lab web server. Rule: use only clearly non-intrusive scripts, only on your own equipment, and read what a script does (<code>--script-help</code>) before running it. When in doubt, do not run it.</p>
+
+<div class="related-box"><h3> Related Articles</h3><ul>
+<li><a href="../tools/nmap-advanced-techniques.html">Nmap Advanced Techniques: Deep Scans of Your Own Network</a></li>
+<li><a href="../tools/wireshark-basics.html">Wireshark Basics: See Your Network Traffic (Your Own Network)</a></li>
+<li><a href="penetration-testing-methodology.html">Penetration Testing Methodology: The Professional Workflow</a></li>
+<li><a href="../tools/kali-linux-setup.html">Kali Linux Setup Guide: Build Your Ethical Hacking Lab</a></li>
+</ul></div>
+
+<div class="progress-box tip-box" data-guide="hacking/nmap-guide.html" data-title="Nmap Beginner's Guide: Scan Your Own Network Safely"><strong>Track your progress:</strong> finished this guide? <button class="btn btn-green hub-complete-btn" type="button">Mark as complete</button><span class="hub-complete-done" style="display:none">Completed — saved in your browser only. See your <a href="../leaderboard.html">progress and leaderboard</a>.</span></div>
+</main>
+<footer class="footer"><div class="container">
+<div class="footer-brand"> CyberSec <span class="green">Hub</span></div>
+<p>Learn cybersecurity the ethical, legal way.</p>
+<div class="footer-links">
+<a href="../index.html">Home</a><a href="../about.html">About</a><a href="../contact.html">Contact</a><a href="../privacy.html">Privacy Policy</a><a href="../disclaimer.html">Disclaimer</a><a href="../terms.html">Terms</a>
+</div>
+<p class="copyright">Developed by <strong style="color:#00e676">Malik Anwaar</strong></p>
+<p class="copyright">© 2026 CyberSec Hub by Anwaar Digital. All rights reserved. Educational content only — always test with written permission.</p>
+</div></footer><a href="https://wa.me/923288317526" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.6 6.1 1.6h.1c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.6 1.2 1.2-4.5-.3-.4c-1-1.6-1.6-3.5-1.6-5.5C5 9.6 10.6 5 16 5s11 4.6 11 10-5.4 9.8-11 9.8zm6.1-7.3c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.8.1-.3-.2-1.4-.5-2.7-1.6-.9-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6L13 9.5c-.3-.8-.7-.7-1-.7h-.8c-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.5s1.5 4 1.7 4.3c.2.3 2.9 4.4 7 6.2 1 .4 1.7.7 2.3.9.9.3 1.8.2 2.5.2.8-.1 2.3-1 2.7-1.9.3-.9.3-1.7.2-1.9-.1-.1-.3-.2-.7-.4z"/></svg></a>
+<!-- Back to top button -->
+<button id="backToTop" aria-label="Back to top" title="Back to top"
+style="position:fixed;bottom:24px;right:24px;width:48px;height:48px;border-radius:50%;border:none;background:#00e676;color:#050b14;font-size:22px;line-height:1;cursor:pointer;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s,transform .2s;box-shadow:0 4px 12px rgba(0,0,0,.35);z-index:9999;padding:0;">&#8593;</button>
+<script>
+(function(){var b=document.getElementById('backToTop');if(!b)return;
+window.addEventListener('scroll',function(){var s=window.pageYOffset||document.documentElement.scrollTop;
+if(s>300){b.style.opacity='1';b.style.visibility='visible';}else{b.style.opacity='0';b.style.visibility='hidden';}},{passive:true});
+b.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+b.addEventListener('mouseenter',function(){b.style.transform='scale(1.12)';});
+b.addEventListener('mouseleave',function(){b.style.transform='scale(1)';});})();
+</script>
+
+<a id="anwaar-ai-btn" href="https://anwaardigital.com/ai/?site=hub" target="_blank" rel="noopener" aria-label="Anwaar AI" style="position:fixed;right:16px;bottom:16px;z-index:9999;display:flex;align-items:center;background:#1a2b4a;color:#fff;text-decoration:none;font-family:system-ui,-apple-system,sans-serif;font-size:15px;font-weight:600;padding:12px 16px;border-radius:999px;box-shadow:0 4px 16px rgba(0,0,0,.35)">✦ Anwaar AI</a>
+<script src="../progress.js"></script>
+</body></html>
