@@ -519,3 +519,11 @@ body.page-ur .ph-room .go, body.page-ur .ph-mis .go{display:inline-block;margin-
 body.page-mission .input-row{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
 body.page-mission .input-row input{flex:1;min-width:180px;background:#12121a;border:1px solid #2a2a32;color:#fff;border-radius:10px;padding:12px 14px;font-size:16px;font-family:ui-monospace,Menlo,Consolas,monospace;outline:none}
 body.page-mission .input-row button{background:var(--red);color:#04120a;font-weight:800;border:0;padding:12px 20px;border-radius:10px;font-size:15px;cursor:pointer}
+
+/* ---- Our Websites card icons (2026-11-06 fix) ---- */
+.cat-card .site-icon{width:56px;height:56px;border-radius:50%;object-fit:cover;display:block}
+/* ---- Footer social icons (2026-11-06 fix) ---- */
+.footer-links{align-items:center}
+.footer-links a.social-icon{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid var(--border);border-radius:50%}
+.footer-links a.social-icon:hover{border-color:var(--red)}
+.footer-links a.social-icon svg{width:20px;height:20px;fill:currentColor;display:block}
