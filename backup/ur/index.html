@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<link rel="icon" type="image/png" sizes="192x192" href="https://anwaardigital.com/Cybersecurity/cyber-icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="https://anwaardigital.com/Cybersecurity/cyber-icon-512.png">
+<link rel="apple-touch-icon" href="https://anwaardigital.com/Cybersecurity/cyber-icon-192.png">
+<script src="../cookie-consent.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>سائبر سیکیورٹی ہب از انوار ڈیجیٹل — اخلاقی طریقے سے سائبر سیکیورٹی سیکھیں</title>
+<meta name="description" content="انوار ڈیجیٹل کی طرف سے سائبر سیکیورٹی، اخلاقی ہیکنگ، سیکیورٹی ٹولز سیکھیں اور سیکیورٹی کیریئر بنائیں — 70 تفصیلی گائیڈز اور 20 مفت ٹولز، 100% اخلاقی اور قانونی۔ اردو میں 15 گائیڈز دستیاب ہیں۔">
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="ur.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+<style>
+.ph-hero{max-width:1120px;margin:0 auto;padding:44px 18px 10px;display:grid;grid-template-columns:1.1fr .9fr;gap:26px;align-items:center}
+.ph-eyebrow{display:inline-block;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;letter-spacing:1.5px;color:#00e676;border:1px solid #14532d;background:#06130c;padding:6px 12px;border-radius:999px}
+.ph-hero h1{font-size:clamp(32px,6vw,52px);line-height:1.1;margin:16px 0 12px;color:#fff;letter-spacing:-.5px}
+.ph-hero h1 .g{color:#00e676}
+.ph-sub{font-size:clamp(16px,3vw,19px);color:#8fa39a;max-width:560px}
+.ph-cta{margin:22px 0 8px;display:flex;gap:12px;flex-wrap:wrap}
+.ph-btn{display:inline-block;padding:14px 26px;border-radius:12px;font-weight:800;font-size:16px}
+.ph-green{background:#00e676;color:#04120a}
+.ph-ghost{border:2px solid #24382f;color:#dbe7e0}
+.ph-trust{font-size:14px;color:#5b6f66}
+.ph-stats{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:20px}
+.ph-stats div{background:#0a1210;border:1px solid #16211c;border-radius:14px;padding:14px 8px;text-align:center}
+.ph-stats b{display:block;font-size:24px;color:#00e676}.ph-stats span{font-size:13px;color:#8fa39a}
+.ph-term{background:#020503;border:1px solid #1d3a2a;border-radius:16px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.5)}
+.ph-termbar{background:#0a1710;padding:10px 14px;display:flex;gap:7px;align-items:center}
+.dot{width:12px;height:12px;border-radius:50%}.dot.r{background:#ff5f56}.dot.y{background:#ffbd2e}.dot.gr{background:#27c93f}
+.ph-termtitle{margin-left:8px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.5px;color:#5b6f66}
+.ph-termbody{padding:16px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:14px;line-height:1.7;min-height:220px;white-space:pre-wrap;color:#a7f3d0}
+.ph-termbody .cmd{color:#00e676}.ph-termbody .dim{color:#5b6f66}.ph-termbody .ok{color:#4ade80}
+.ph-cursor{display:inline-block;width:9px;height:17px;background:#00e676;vertical-align:-2px;animation:phblink 1s steps(1) infinite}
+@keyframes phblink{50%{opacity:0}}
+.ph-quiz,.ph-paths,.ph-missions{max-width:1120px;margin:30px auto 0;padding:0 18px}
+.ph-quizbox{background:linear-gradient(180deg,#0a1a12,#071009);border:1px solid #14532d;border-radius:20px;padding:24px}
+.ph-quizbox h2{font-size:23px;color:#fff}.ph-quizbox .sub{color:#8fa39a;margin:6px 0 16px}
+.ph-quizbox .q{margin-bottom:14px}.ph-quizbox .q p{font-weight:700;margin-bottom:8px;color:#dbe7e0}
+.ph-quizbox .q button{border:1px solid #24382f;background:#0b1a12;color:#dbe7e0;padding:10px 22px;border-radius:999px;font-size:15px;font-weight:700;margin-right:8px;cursor:pointer}
+.ph-quizbox .q button.sel{background:#00e676;color:#04120a;border-color:#00e676}
+.ph-quizbox .q button:disabled{opacity:.55;cursor:default}
+.ph-qres{display:none;margin-top:8px;background:#04120a;border:1px solid #14532d;border-radius:14px;padding:16px}
+.ph-qres .score{font-size:24px;font-weight:800;color:#00e676}
+.ph-qres p{color:#8fa39a;margin:6px 0 10px}.ph-qres a{color:#00e676;font-weight:800}
+.ph-paths h2,.ph-missions h2{font-size:26px;color:#fff;margin-bottom:6px}
+.ph-paths .sub,.ph-missions .sub{color:#8fa39a;margin-bottom:16px}
+.ph-roomgrid,.ph-misgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.ph-misgrid{grid-template-columns:repeat(3,1fr)}
+.ph-room,.ph-mis{background:#0a1210;border:1px solid #16211c;border-radius:18px;padding:22px;display:block}
+.ph-room:hover,.ph-mis.play:hover{transform:translateY(-4px);border-color:#00e676}
+.ph-mis.play{border-color:#00e676}.ph-mis.locked{opacity:.65}
+.ph-room .lvl,.ph-mis .lvl{display:inline-block;font-size:12px;font-weight:800;padding:3px 10px;border-radius:999px;background:#052e16;color:#86efac}
+.ph-room .lvl.med,.ph-mis .lvl.med{background:#3b2f05;color:#fde68a}
+.ph-room h3,.ph-mis h3{margin:10px 0 6px;font-size:18px;color:#fff}
+.ph-room p,.ph-mis p{color:#8fa39a;font-size:14.5px}
+.ph-room .go,.ph-mis .go{display:inline-block;margin-top:12px;color:#00e676;font-weight:800;font-size:14.5px}
+.ph-sticky{display:none}
+@media(max-width:820px){
+.ph-stats{grid-template-columns:repeat(3,1fr)}
+.ph-hero{grid-template-columns:1fr;padding-top:30px}
+.ph-eyebrow{font-size:11px;letter-spacing:.5px;padding:5px 10px;line-height:1.6}
+.ph-roomgrid{grid-template-columns:1fr 1fr}
+.ph-misgrid{grid-template-columns:1fr}
+.ph-sticky{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:60;background:#00e676;color:#04120a;font-weight:800;justify-content:center;padding:15px;border-radius:14px;font-size:17px;box-shadow:0 8px 24px rgba(0,0,0,.5)}
+}
+</style>
+<link rel="canonical" href="https://anwaardigital.com/Cybersecurity/ur/">
+<link rel="alternate" hreflang="en" href="https://anwaardigital.com/Cybersecurity/">
+<link rel="alternate" hreflang="ur" href="https://anwaardigital.com/Cybersecurity/ur/">
+<meta property="og:title" content="سائبر سیکیورٹی ہب از انوار ڈیجیٹل — اخلاقی طریقے سے سائبر سیکیورٹی سیکھیں">
+<meta property="og:description" content="انوار ڈیجیٹل کی طرف سے سائبر سیکیورٹی، اخلاقی ہیکنگ، سیکیورٹی ٹولز سیکھیں — 70 تفصیلی گائیڈز اور 20 مفت ٹولز، 100% اخلاقی اور قانونی۔ اردو میں 15 گائیڈز دستیاب ہیں۔">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://anwaardigital.com/Cybersecurity/ur/">
+<meta property="og:site_name" content="CyberSec Hub">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://anwaardigital.com/Cybersecurity/cyber-icon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": "CyberSec Hub by Anwaar Digital — اردو",
+      "url": "https://anwaardigital.com/Cybersecurity/ur/",
+      "description": "انوار ڈیجیٹل کی طرف سے سائبر سیکیورٹی، اخلاقی ہیکنگ، سیکیورٹی ٹولز سیکھیں — 70 تفصیلی گائیڈز اور 20 مفت ٹولز، 100% اخلاقی اور قانونی۔",
+      "inLanguage": "ur"
+    },
+    {
+      "@type": "Organization",
+      "name": "Anwaar Digital",
+      "alternateName": "Anwar Digital",
+      "url": "https://anwaardigital.com/",
+      "logo": "https://anwaardigital.com/anwaar-icon-512.png",
+      "description": "Anwaar Digital offers free Android apps, Windows software, free online tools, cybersecurity guides and the Anwaar AI assistant, by Malik Muhammad Anwaar.",
+      "founder": {
+        "@type": "Person",
+        "name": "Malik Muhammad Anwaar"
+      },
+      "sameAs": [
+        "https://www.youtube.com/@ajoobaJahan",
+        "https://www.youtube.com/@TareekhKayRaaz-y9h",
+        "https://www.facebook.com/profile.php?id=61595795009514",
+        "https://www.instagram.com/anwaardigital/",
+        "https://github.com/Anwaardigital",
+        "https://anwaardigital.com/",
+        "https://freetools.anwaardigital.com/",
+        "https://globalstream.anwaardigital.com/"
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<nav class="navbar"><div class="nav-inner">
+<a href="index.html" class="brand"><span class="brand-icon"></span><span>CyberSec <span class="green">Hub</span></span></a>
+<div class="nav-actions"><button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark and light theme"><span class="theme-icon theme-icon-sun" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></span><span class="theme-icon theme-icon-moon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span><span class="theme-label">Light</span></button><button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button></div>
+<ul class="nav-links" id="navLinks">
+<li><a href="index.html">ہوم</a></li>
+<li><a href="index.html#basics">بنیادی باتیں</a></li>
+<li><a href="index.html#creator">کریئیٹر سیکیورٹی</a></li>
+<li><a href="index.html#hacking">اخلاقی ہیکنگ</a></li>
+<li><a href="index.html#tools">ٹولز گائیڈ</a></li>
+<li><a href="index.html#career">کیریئر</a></li>
+<li><a href="missions.html">مشنز</a></li><li><a href="#exams">امتحانات</a></li><li><a href="leaderboard.html">لیڈر بورڈ</a></li>
+<li><a href="learning-path.html">سیکھنے کے راستے</a></li>
+<li><a href="sectools.html">ٹولز</a></li>
+<li><a href="glossary.html">لغت</a></li>
+<li><a href="faq.html">سوالات</a></li>
+<li><a href="about.html">ہمارے بارے میں</a></li>
+<li><a href="../index.html">English</a></li>
+</ul></div></nav>
+<script>
+(function(){try{if(localStorage.getItem('hubTheme')==='light'){document.body.classList.add('light');}}catch(e){}})();
+function toggleTheme(){var b=document.body;var light=b.classList.toggle('light');try{localStorage.setItem('hubTheme',light?'light':'dark');}catch(e){}var lb=document.querySelector('.theme-label');if(lb)lb.textContent=light?'Dark':'Light';}
+(function(){var btn=document.querySelector('.theme-toggle');if(!btn)return;var light=document.body.classList.contains('light');var lb=btn.querySelector('.theme-label');if(lb)lb.textContent=light?'Dark':'Light';})();
+</script>
+<header class="ph-hero"><div>
+<span class="ph-eyebrow">اخلاقی ہیکنگ · دفاعی سیکیورٹی</span>
+<h1>ہیکر کی طرح سوچیں۔<br>پیشہ ور کی طرح <span class="g">دفاع کریں۔</span></h1>
+<p class="ph-sub">سیکیورٹی سیکھنے والوں کے لیے عملی گائیڈز اور مفت ٹولز — پہلے پاس ورڈ آڈٹ سے لے کر پہلی پین ٹیسٹ لیب تک۔ 100% قانونی، براہ راست آپ کے براؤزر میں۔</p>
+<div class="ph-cta">
+<a class="ph-btn ph-green" href="#quiz">سیکھنا شروع کریں (قانونی طریقے سے) ←</a>
+<a class="ph-btn ph-ghost" href="#paths">70 گائیڈز دیکھیں</a>
+</div>
+<p class="ph-trust">کوئی سائن اپ نہیں · کوئی ڈاؤن لوڈ نہیں · ابتدائی سے پیشہ ور تک</p>
+<div class="ph-stats"><div><b>70</b><span>گائیڈز</span></div><div><b>4</b><span>راستے</span></div><div><b>20</b><span>مفت ٹولز</span></div><div><b>100%</b><span>اخلاقی</span></div><div><b>5</b><span>مشنز</span></div><div><b>15</b><span>امتحانات</span></div></div>
+</div>
+<div class="ph-term"><div class="ph-termbar"><span class="dot r"></span><span class="dot y"></span><span class="dot gr"></span><span class="ph-termtitle">kali@hub: ~/training</span></div>
+<div class="ph-termbody" id="phTerm"></div></div></header>
+<section class="section" id="exams"><div class="sec-head"><span class="kicker">امتحانات</span><h2>سائبر سیکیورٹی حب امتحانات</h2><p>15 امتحانات، 3 مراحل میں — سب پاس کریں اور اپنا سرٹیفکیٹ حاصل کریں۔ مفت، آپ کے براؤزر میں، بغیر سائن اپ کے۔</p></div>
+<div class="grid3">
+<a class="exam-phase" href="https://anwaardigital.com/Cybersecurity/exams/exam-01.html"><span class="lvl">مرحلہ 1</span><h3>امتحانات 1–5: کثیر الانتخابی سوالات</h3><p>ہر امتحان میں 20 سوالات — سائبر سیکیورٹی کی بنیادی باتیں، پاس ورڈ، نیٹ ورک، مالویئر اور پرائیویسی۔</p><span class="go">امتحان 1 شروع کریں ←</span></a>
+<a class="exam-phase" href="https://anwaardigital.com/Cybersecurity/exams/exam-06.html"><span class="lvl med">مرحلہ 2</span><h3>امتحانات 6–10: مختصر جوابات</h3><p>ہر امتحان میں 20 سوالات — جواب اپنے الفاظ میں لکھیں، کلیدی الفاظ سے جانچا جاتا ہے۔</p><span class="go">امتحان 6 شروع کریں ←</span></a>
+<a class="exam-phase" href="https://anwaardigital.com/Cybersecurity/exams/exam-11.html"><span class="lvl med">مرحلہ 3</span><h3>امتحانات 11–15: پریکٹس ٹرمینل</h3><p>ہر امتحان میں 5 نقلی ٹرمینل کام — محفوظ پریکٹس ٹرمینل میں اصلی کمانڈز (اصلی کالی لینکس نہیں)۔</p><span class="go">امتحان 11 شروع کریں ←</span></a>
+</div>
+<p style="max-width:1120px;margin:14px auto 0;padding:0 18px">ہر امتحان 30 منٹ · 60% پر پاس · فیل ← 3 دن بعد دوبارہ دیں · پاس ← اگلا امتحان 1 دن بعد · تمام 15 امتحانات کے بعد سرٹیفکیٹ۔ <a href="https://anwaardigital.com/Cybersecurity/exams/">تمام 15 امتحانات دیکھیں ←</a></p></section>
+<div class="hub-search-wrap"><input type="text" id="hubSearch" class="hub-search" placeholder=" گائیڈز تلاش کریں... (مثلاً پاس ورڈ، وائی فائی، کالی)" aria-label="Search guides"><p id="hubResultCount" class="hub-result-count"></p><p id="hubNoResult" class="hub-no-result">کوئی گائیڈ نہیں ملی۔ کوئی اور لفظ آزمائیں</p></div>
+
+<div class="tip-day"><h3>دن کی سیکیورٹی ٹپ</h3><p id="hubTipText">آج ہی اپنی ای میل کے لیے تصدیقی ایپ کے ساتھ ٹو فیکٹر تصدیق آن کریں — یہ پاس ورڈ لیک ہونے کے باوجود زیادہ تر اکاؤنٹ چوری روک دیتی ہے۔</p><p class="hub-progress-note">ہر دن نئی ٹپ — کل دوبارہ آئیں۔</p></div>
+<div class="linkcheck-promo"><h3>کیا یہ لنک محفوظ ہے؟</h3><p>کلک کرنے سے پہلے کوئی بھی مشکوک لنک چیک کریں — چیکر مکمل طور پر آپ کے براؤزر میں چلتا ہے اور لنک کہیں بھی نہیں بھیجا جاتا۔</p><form onsubmit="var u=document.getElementById('hubLinkInput').value.trim();if(u){window.location.href='phishing-url-analyzer.html?url='+encodeURIComponent(u);}return false;"><div class="tool-field"><input type="text" id="hubLinkInput" placeholder="لنک یہاں لکھیں، مثلاً https://example.com/offer" aria-label="Link to check"></div><button class="btn btn-green" type="submit">اس لنک کو چیک کریں</button></form><p class="hub-progress-note">بنیادی جانچ ہے — صاف نتیجہ اس بات کی ضمانت نہیں کہ لنک محفوظ ہے۔ <a href="phishing-url-analyzer.html" style="color:#00e676">مکمل چیکر کھولیں ←</a></p></div>
+<div class="hub-progress" id="hubProgressWidget" data-base="../" data-label-title="آپ کی سیکھنے کی پیشرفت" data-label-guides="گائیڈز مکمل" data-label-missions="مشنز مکمل" data-label-points="پوائنٹس" data-label-rank="رینک" data-label-start="کسی بھی گائیڈ کو مکمل کے طور پر نشان زد کریں — آپ کی پیشرفت صرف آپ کے براؤزر میں محفوظ ہوتی ہے، کہیں بھی نہیں بھیجی جاتی۔" data-label-view="لیڈر بورڈ دیکھیں" data-label-cert="اپنا سرٹیفکیٹ لیں" data-label-paths="سیکھنے کا راستہ جاری رکھیں"></div>
+<section class="ph-quiz" id="quiz"><div class="ph-quizbox">
+<h2>30 سیکنڈ کا سیکیورٹی چیک</h2>
+<p class="sub">3 سوالات — اپنی اصلی سیکیورٹی سطح جانیں، اور پہلی اصلاح سے شروع کریں۔</p>
+<div class="q" data-fix="password"><p>1۔ کیا آپ کئی اکاؤنٹس پر ایک ہی پاس ورڈ استعمال کرتے ہیں؟</p><button onclick="phAns(this,0)">ہاں</button><button onclick="phAns(this,1)">نہیں</button></div>
+<div class="q" data-fix="2fa"><p>2۔ کیا آپ کے اہم اکاؤنٹس (ای میل، بینک) پر 2FA آن ہے؟</p><button onclick="phAns(this,1)">ہاں</button><button onclick="phAns(this,0)">نہیں</button></div>
+<div class="q" data-fix="phishing"><p>3۔ کیا آپ کلک کرنے سے پہلے لنک چیک کرتے ہیں؟</p><button onclick="phAns(this,1)">ہاں</button><button onclick="phAns(this,0)">نہیں</button></div>
+<div class="ph-qres" id="phQres"></div>
+</div></section>
+<section class="ph-paths" id="paths">
+<h2>اپنا راستہ چنیں</h2>
+<p class="sub">قدم بہ قدم نقشے — صفر سے کیریئر تک گائیڈز ترتیب سے پڑھیں۔</p>
+<div class="ph-roomgrid">
+<a class="ph-room" href="learning-path.html#beginner"><span class="lvl">آسان</span><h3>مکمل ابتدائی</h3><p>صفر سے شروع کریں — سیکیورٹی کیا ہے، حملے کیسے کام کرتے ہیں، اور اپنا دفاع کیسے کریں۔</p><span class="go">راستہ شروع کریں ←</span></a>
+<a class="ph-room" href="learning-path.html#home"><span class="lvl">آسان</span><h3>گھر کے صارف کی سیکیورٹی</h3><p>عملی فہرست: آج ہی اپنا فون، وائی فائی اور خاندان کے اکاؤنٹس محفوظ کریں۔</p><span class="go">راستہ شروع کریں ←</span></a>
+<a class="ph-room" href="learning-path.html#career"><span class="lvl med">درمیانہ</span><h3>اخلاقی ہیکنگ کیریئر</h3><p>بنیادی باتوں سے نوکری کے لیے تیار پینٹریشن ٹیسٹر تک — قانونی، پیشہ ورانہ راستہ۔</p><span class="go">راستہ شروع کریں ←</span></a>
+<a class="ph-room" href="learning-path.html#creator"><span class="lvl">آسان</span><h3>کریئیٹر سیکیورٹی</h3><p>ہیک شدہ چینلز واپس لیں، جعلی اسپانسرز پہچانیں اور فراڈ ای میلز — یوٹیوبرز اور کریئیٹرز کی سیکیورٹی۔</p><span class="go">راستہ شروع کریں ←</span></a>
+</div>
+</section>
+<section class="ph-missions" id="missions">
+<h2>سائبر سیکیورٹی مشنز</h2>
+<p class="sub">اپنے براؤزر میں اصلی سیکیورٹی چیلنجز حل کریں۔ کوئی ڈاؤن لوڈ نہیں، کوئی سیٹ اپ نہیں — صرف آپ اور چیلنج۔</p>
+<div class="ph-misgrid">
+<a class="ph-mis play" href="mission-1.html"><span class="lvl">آسان</span><h3>مشن 1: پہلا خون</h3><p>ٹریننگ سرور پر چھپا ہوا جھنڈا ڈھونڈیں۔</p><span class="go">ابھی کھیلیں · 100 پوائنٹس ←</span></a>
+<a class="ph-mis play" href="mission-2.html"><span class="lvl">آسان</span><h3>مشن 2: فشنگ شکاری</h3><p>جعلی ای میل کو ڈیٹا چوری کرنے سے پہلے پہچانیں۔</p><span class="go">ابھی کھیلیں · 300 پوائنٹس ←</span></a>
+<a class="ph-mis play" href="mission-3.html"><span class="lvl med">درمیانہ</span><h3>مشن 3: پاس ورڈ توڑنے والا</h3><p>کمزور پاس ورڈز پر حملے کی نقل کریں — اور سیکھیں کہ واقعی مضبوط کیا رہتا ہے۔</p><span class="go">ابھی کھیلیں · 400 پوائنٹس ←</span></a>
+<a class="ph-mis play" href="mission-4.html"><span class="lvl med">درمیانہ</span><h3>مشن 4: کمزوری ڈھونڈیں</h3><p>مختصر کوڈ کے ٹکڑے پڑھیں اور ہر ایک میں سیکیورٹی خامی ڈھونڈیں۔</p><span class="go">ابھی کھیلیں · 300 پوائنٹس ←</span></a>
+<a class="ph-mis play" href="mission-5.html"><span class="lvl">آسان</span><h3>مشن 5: خفیہ پیغام کھولیں</h3><p>چھپے ہوئے پیغامات قدم بہ قدم ڈی کوڈ کریں اور جھنڈا ظاہر کریں۔</p><span class="go">ابھی کھیلیں · 200 پوائنٹس ←</span></a>
+</div>
+<p style="margin-top:14px"><a href="missions.html" style="color:#00e676;font-weight:800">تمام مشنز دیکھیں ←</a></p>
+</section>
+<section class="section" id="categories"><div class="container">
+<div class="section-head"><span class="section-tag">اقسام</span><h2>اپنا <span class="green">راستہ</span> چنیں</h2><p>پانچ سیکھنے کے راستے، مکمل ابتدائی سے کیریئر کے لیے تیار پیشہ ور تک۔</p></div>
+<div class="cat-grid"><a href="#basics" class="cat-card"><span class="cat-emoji"></span><h3>سائبر سیکیورٹی کی بنیادی باتیں</h3><p>بنیادی باتوں میں مہارت حاصل کریں — سائبر سیکیورٹی کیا ہے، حملے کیسے کام کرتے ہیں، اور اپنی حفاظت کیسے کریں۔</p><span class="cat-count">46 گائیڈز</span></a><a href="index.html#hacking" class="cat-card"><span class="cat-emoji"></span><h3>اخلاقی ہیکنگ</h3><p>اخلاقی ہیکنگ قانونی طریقے سے سیکھیں — طریقہ کار، ٹولز اور پیشہ ورانہ پینٹریشن ٹیسٹنگ۔</p><span class="cat-count">7 گائیڈز</span></a><a href="index.html#tools" class="cat-card"><span class="cat-emoji"></span><h3>ٹولز اور تکنیکیں</h3><p>ضروری سیکیورٹی ٹولز کی عملی گائیڈز — سب آپ کی اپنی لیب اور مجاز نظاموں کے لیے۔</p><span class="cat-count">7 گائیڈز</span></a><a href="index.html#career" class="cat-card"><span class="cat-emoji"></span><h3>کیریئر گائیڈ</h3><p>سائبر سیکیورٹی میں آپ کا راستہ — نقشے، سرٹیفکیشنز اور نوکری پانا۔</p><span class="cat-count">5 گائیڈز</span></a><a href="#creator" class="cat-card"><span class="cat-emoji"></span><h3>کریئیٹر سیکیورٹی</h3><p>یوٹیوبرز اور کریئیٹرز کی سیکیورٹی — ہیک شدہ چینلز واپس لیں، جعلی اسپانسرز پہچانیں اور فراڈ ای میلز۔</p><span class="cat-count">5 گائیڈز</span></a></div>
+</div></section>
+
+<section class="section" id="basics"><div class="container">
+<div class="section-head"><span class="section-tag">سائبر سیکیورٹی کی بنیادی باتیں</span>
+<h2>سائبر سیکیورٹی کی بنیادی باتیں</h2>
+<p>بنیادی باتوں میں مہارت حاصل کریں — سائبر سیکیورٹی کیا ہے، حملے کیسے کام کرتے ہیں، اور اپنی حفاظت کیسے کریں۔</p></div>
+<div class="art-grid">
+<a href="what-is-cybersecurity.html" class="art-card"><span class="art-cat">سائبر سیکیورٹی کی بنیادی باتیں</span><h3>سائبر سیکیورٹی کیا ہے؟ مکمل ابتدائی گائیڈ</h3><p>سائبر سیکیورٹی کیا ہے، یہ کیوں اہم ہے، اور ہر ابتدائی کو کن بنیادی تصورات کا علم ہونا چاہیے۔ اخلاقی، آسان تعارف۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="types-of-cyber-attacks.html" class="art-card"><span class="art-cat">سائبر سیکیورٹی کی بنیادی باتیں</span><h3>10 اقسام کے سائبر حملے — حقیقی مثالوں کے ساتھ وضاحت</h3><p>دس عام حملوں کی اقسام سادہ زبان میں جانیں: فشنگ، میلویئر، رینسم ویئر، ڈی ڈاس اور مزید۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="password-security-guide.html" class="art-card"><span class="art-cat">سائبر سیکیورٹی کی بنیادی باتیں</span><h3>پاس ورڈ سیکیورٹی: مکمل گائیڈ (2026)</h3><p>پاس ورڈ آپ کی ڈیجیٹل زندگی کی چابیاں ہیں — انہیں قدم بہ قدم محفوظ کریں۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="two-factor-authentication-guide.html" class="art-card"><span class="art-cat">سائبر سیکیورٹی کی بنیادی باتیں</span><h3>ٹو فیکٹر تصدیق (2FA): مکمل گائیڈ</h3><p>مضبوط ترین پاس ورڈ بھی چوری ہو سکتا ہے — 2FA ہی چوری شدہ پاس ورڈ کو چوری شدہ اکاؤنٹ بننے سے روکتی ہے۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="phishing-protection.html" class="art-card"><span class="art-cat">سائبر سیکیورٹی کی بنیادی باتیں</span><h3>فشنگ سے حفاظت: جعلی ای میل، ایس ایم ایس اور کالز کی پہچان</h3><p>فشنگ نمونوں پر چلتی ہے — ایک بار سیکھ لیں تو جعلی صاف نظر آنے لگتے ہیں۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="mobile-security.html" class="art-card"><span class="art-cat">سائبر سیکیورٹی کی بنیادی باتیں</span><h3>موبائل سیکیورٹی: مکمل گائیڈ</h3><p>آپ کے فون میں آپ کا بینک، تصاویر، بات چیت اور ای میل کی چابیاں ہیں — اسے صحیح طریقے سے محفوظ کریں۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="wifi-security-guide.html" class="art-card"><span class="art-cat">سائبر سیکیورٹی کی بنیادی باتیں</span><h3>وائی فائی سیکیورٹی: مکمل گائیڈ</h3><p>آپ کا گھر کا وائی فائی آپ کی ہر چیز کا ڈیجیٹل سامنے والا دروازہ ہے — اسے ایک گھنٹے سے کم میں محفوظ کریں۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="ransomware-protection-guide.html" class="art-card"><span class="art-cat">سائبر سیکیورٹی کی بنیادی باتیں</span><h3>رینسم ویئر سے حفاظت: اپنی فائلیں محفوظ رکھیں</h3><p>چند سادہ دفاعی عادتیں آپ کو بہت مشکل ہدف بنا دیتی ہیں — کوئی تکنیکی پس منظر ضروری نہیں۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="secure-google-account-guide.html" class="art-card"><span class="art-cat">سائبر سیکیورٹی کی بنیادی باتیں</span><h3>گوگل اکاؤنٹ محفوظ کریں: مکمل گائیڈ</h3><p>آپ کا گوگل اکاؤنٹ ماسٹر چابی ہے — اسے محفوظ کرنا سب سے زیادہ قیمتی دفاعی قدم ہے۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="hacked-social-media-account-recovery-guide.html" class="art-card"><span class="art-cat">سائبر سیکیورٹی کی بنیادی باتیں</span><h3>ہیک شدہ سوشل میڈیا اکاؤنٹ کی بازیابی: مکمل گائیڈ</h3><p>ہیک کی نشانیاں پہچانیں، اکاؤنٹ واپس لیں، رابطوں کو خبردار کریں، اور اسے دوبارہ کبھی نہ ہونے دیں۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="public-wifi-safety-guide.html" class="art-card"><span class="art-cat">سائبر سیکیورٹی کی بنیادی باتیں</span><h3>عوامی وائی فائی پر محفوظ رہنا: مکمل 2026 گائیڈ</h3><p>کیفے، ہوٹلوں اور ہوائی اڈوں میں مفت وائی فائی آسان ہے — اور خطرناک۔ عوامی وائی فائی حملے کیسے کام کرتے ہیں، 10 اصول جو آپ کے اکاؤنٹس محفوظ رکھتے ہیں، اور اگر آپ پہلے سے جڑ چکے ہوں تو کیا کریں۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="clicked-phishing-link-recovery-guide.html" class="art-card"><span class="art-cat">سائبر سیکیورٹی کی بنیادی باتیں</span><h3>میں نے فشنگ لنک پر کلک کر دیا — اب کیا کریں: قدم بہ قدم بحالی گائیڈ (2026)</h3><p>فشنگ لنک پر کلک کر دیا؟ گھبرائیں نہیں اور کچھ اور نہ لکھیں۔ پہلے گھنٹے کی بحالی کے اقدامات: منقطع ہوں، درست ترتیب میں پاس ورڈز بدل لیں، اکاؤنٹس بند کریں، رابطوں کو خبردار کریں اور رپورٹ کریں۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="biometric-security-fingerprint-face-unlock-guide.html" class="art-card"><span class="art-cat">سائبر سیکیورٹی کی بنیادی باتیں</span><h3>کیا فنگر پرنٹ اور فیس انلاک محفوظ ہیں؟ بایومیٹرک سیکیورٹی کی عملی گائیڈ (2026)</h3><p>فنگر پرنٹ اور فیس انلاک بے حد آسان لگتے ہیں — جانیں کہ یہ دراصل کیسے کام کرتے ہیں، کس چیز سے آپ کی حفاظت کرتے ہیں، کہاں کمزور پڑتے ہیں، اور انہیں محفوظ طریقے سے کیسے سیٹ کریں۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="how-to-spot-misinformation-fake-news-online-guide.html" class="art-card"><span class="art-cat">سائبر سیکیورٹی کی بنیادی باتیں</span><h3>غلط معلومات اور جعلی خبریں آن لائن کیسے پہچانیں: عملی تصدیق گائیڈ (2026)</h3><p>جھوٹی پوسٹس جذبات اور رفتار پر پھیلتی ہیں — 4 قدموں والا تصدیق معمول سیکھیں: رکیں، ذریعہ تلاش کریں، ثبوت جانچیں اور کہیں آزادانہ چیک کریں، شیئر کرنے سے پہلے۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="family-digital-safety-plan-guide.html" class="art-card"><span class="art-cat">سائبر سیکیورٹی کی بنیادی باتیں</span><h3>خاندانی ڈیجیٹل حفاظتی منصوبہ کیسے بنائیں (2026 گائیڈ)</h3><p>ایک خاندان، ایک منصوبہ: پاس ورڈز، فراڈ اصول، خاندانی کوڈ لفظ، بچوں کے اصول، بزرگوں کی حفاظت اور پرسکون بحالی معمول — دفاعی خاندانی ڈیجیٹل حفاظتی منصوبہ۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="deepfake-scams-protection-guide.html" class="art-card"><span class="art-cat">سائبر سیکیورٹی کی بنیادی باتیں</span><h3>ڈیپ فیک فراڈ: جعلی ویڈیوز، کالز اور پیغامات کیسے پہچانیں (2026 گائیڈ)</h3><p>ڈیپ فیک فراڈ AI سے نقل شدہ چہرے اور آوازیں استعمال کر کے آپ کو جلدی میں پیسے بھیجنے پر مجبور کرتے ہیں۔ انتباہی نشانیاں اور 3 قدموں والا تصدیق اصول سیکھیں جو انہیں روکتا ہے — اور اگر آپ پہلے سے پیسے بھیج چکے ہوں تو کیا…</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="how-to-report-cybercrime-online-scams-guide.html" class="art-card"><span class="art-cat">سائبر سیکیورٹی کی بنیادی باتیں</span><h3>سائبر کرائم اور آن لائن فراڈ کیسے رپورٹ کریں: عملی گائیڈ (2026)</h3><p>فراڈ ہوا، ہیک ہوئے یا آن لائن ہراساں ہوئے؟ سائبر کرائم رپورٹ کرنا قدم بہ قدم سیکھیں — ثبوت محفوظ کریں، پلیٹفارم، اپنے بینک اور حکام کو رپورٹ کریں، اور بعد میں اپنی حفاظت کریں۔ دفاعی، قانونی گائیڈ۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="wipe-old-phone-safely-before-selling-guide.html" class="art-card"><span class="art-cat">سائبر سیکیورٹی کی بنیادی باتیں</span><h3>اپنا پرانا فون بیچنے یا دینے سے پہلے محفوظ طریقے سے کیسے صاف کریں (2026 گائیڈ)</h3><p>صرف فیکٹری ری سیٹ ہمیشہ کافی نہیں ہوتا۔ یہ دفاعی گائیڈ دکھاتی ہے کہ اپنا پرانا فون بیک اپ، سائن آؤٹ، خفیہ، ری سیٹ اور تصدیق کیسے کریں — اور سم اور میموری کارڈ چیکس — اس سے پہلے کہ یہ آپ کے ہاتھوں سے جائے۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="nfc-contactless-payment-safety-guide.html" class="art-card"><span class="art-cat">سائبر سیکیورٹی کی بنیادی باتیں</span><h3>NFC اور کانٹیکٹ لیس ادائیگی کی سیفٹی: خطرے کے بغیر ٹیپ ٹو پے (2026 گائیڈ)</h3><p>ٹیپ ٹو پے تیز اور آسان ہے — اور زیادہ تر محفوظ۔ یہ دفاعی گائیڈ بتاتی ہے کہ NFC ادائیگیاں کیسے کام کرتی ہیں، اصل خطرات (اسکیمنگ، گم شدہ فونز، جعلی ٹرمینلز)، اور سیٹنگز جو آپ کے پیسے محفوظ رکھتی ہیں۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="public-computer-safety-guide.html" class="art-card"><span class="art-cat">سائبر سیکیورٹی کی بنیادی باتیں</span><h3>عوامی اور مشترکہ کمپیوٹرز پر محفوظ رہنا (2026 گائیڈ)</h3><p>لائبریری، دفتر یا ہوٹل کمپیوٹر استعمال کر رہے ہیں؟ عوامی اور مشترکہ کمپیوٹرز پر اپنے اکاؤنٹس کی حفاظت کیسے کریں — نجی براؤزنگ کی حدود، لاگ آؤٹ، 2FA، USB خطرات اور استعمال کے بعد کی چیک لسٹ۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="safe-online-gaming-guide.html" class="art-card"><span class="art-cat">سائبر سیکیورٹی کی بنیادی باتیں</span><h3>محفوظ آن لائن گیمنگ: اپنے اکاؤنٹس، پرائیویسی اور بچوں کی حفاظت کریں (2026 گائیڈ)</h3><p>گیمنگ اکاؤنٹس قیمتی ہدف ہیں: چوری شدہ اکاؤنٹس، جعلی موڈز، گیم چیٹ میں فشنگ اور وائس چیٹ خطرات — کھلاڑیوں اور والدین کے لیے محفوظ آن لائن گیمنگ کی دفاعی گائیڈ۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="vishing-phone-scams-guide.html" class="art-card"><span class="art-cat">سائبر سیکیورٹی کی بنیادی باتیں</span><h3>وشنگ فون فراڈ: جعلی بینک، پولیس اور خاندانی ایمرجنسی کالز کی پہچان (2026 گائیڈ)</h3><p>وشنگ فون فراڈ جعلی کالر ID، جلدی اور اختیار استعمال کر کے پیسے اور کوڈز چراتے ہیں — 5 عام اسکرپٹس، 10 سیکنڈ سرخ جھنڈا چیک، اور فون بند کر کے واپس کال کرنے کا اصول جو انہیں روکتا ہے۔ مکمل دفاعی گائیڈ۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="romance-scams-protection-guide.html" class="art-card"><span class="art-cat">سائبر سیکیورٹی کی بنیادی باتیں</span><h3>رومانس فراڈ: جعلی آن لائن تعلق کی پہچان اور اپنی حفاظت کیسے کریں (2026 گائیڈ)</h3><p>رومانس فراڈیے پیسے اور شناخت چرانے کے لیے جعلی تعلقات بناتے ہیں — انتباہی نشانیاں، تصدیق چیکس، اور اگر آپ نشانہ بنیں تو کیا کریں۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="fake-job-offers-employment-scams-guide.html" class="art-card"><span class="art-cat">سائبر سیکیورٹی کی بنیادی باتیں</span><h3>جعلی نوکری کی پیشکشیں اور ملازمت فراڈ آن لائن کیسے پہچانیں (2026 گائیڈ)</h3><p>جعلی نوکری کی پیشکشیں نوکری تلاش کرنے والوں سے پیسے اور شناخت چراتی ہیں — نشانیاں، تصدیق کے اقدامات، اور اگر آپ پہلے سے جواب دے چکے ہوں تو کیا کریں۔ مکمل دفاعی گائیڈ۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="bluetooth-security-guide.html" class="art-card"><span class="art-cat">سائبر سیکیورٹی کی بنیادی باتیں</span><h3>بلوٹوتھ سیکیورٹی: چھپے ہوئے خطرات اور محفوظ رہنے کا طریقہ (2026 گائیڈ)</h3><p>بلوٹوتھ آپ کی جیب میں ہمیشہ آن رہتا ہے — دراصل کیا غلط ہو سکتا ہے، اور وہ سادہ دفاعی عادات (دریافت، پیئرنگ کی صفائی، اپ ڈیٹس) جو آپ کے آلات کو محفوظ رکھتی ہیں۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="crypto-investment-scams-guide.html" class="art-card"><span class="art-cat">سائبر سیکیورٹی کی بنیادی باتیں</span><h3>کرپٹو کرنسی اور سرمایہ کاری فراڈ: انہیں کیسے پہچانیں اور محفوظ رہیں (2026)</h3><p>یقینی منافع، جعلی ٹریڈنگ ایپس اور مشہور شخصیات کی حمایت — کرپٹو اور سرمایہ کاری فراڈ کیسے کام کرتے ہیں، ان کی نشانیاں، اور دفاعی اصول جو آپ کے پیسے کی حفاظت کرتے ہیں۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="ai-chatbot-privacy-guide.html" class="art-card"><span class="art-cat">سائبر سیکیورٹی کی بنیادی باتیں</span><h3>AI چیٹ بوٹ پرائیویسی: AI اسسٹنٹ کے ساتھ کیا کبھی شیئر نہ کریں (2026 گائیڈ)</h3><p>AI چیٹ بوٹس آپ کی سوچ سے زیادہ کچھ یاد رکھتے ہیں۔ جانیں کہ AI اسسٹنٹ میں کیا کبھی پیسٹ نہ کریں — پاس ورڈز، شناختی نمبر، کام کے راز، صحت کی تفصیلات — اور محفوظ استعمال کے وہ اصول جو آپ کی نجی زندگی کو نجی رکھتے ہیں۔ دف…</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="tech-support-scams-guide.html" class="art-card"><span class="art-cat">سائبر سیکیورٹی کی بنیادی باتیں</span><h3>ٹیک سپورٹ فراڈ: جعلی کالز، پاپ اپس اور ای میلز کی پہچان (2026 گائیڈ)</h3><p>جانیں کہ ٹیک سپورٹ فراڈ کیسے کام کرتے ہیں — جعلی کالز، وائرس انتباہ پاپ اپس اور فشنگ ای میلز — تاکہ آپ انہیں پہچان سکیں اور اپنے خاندان کی حفاظت کر سکیں۔ دفاعی گائیڈ۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="smart-home-security-guide.html" class="art-card"><span class="art-cat">سائبر سیکیورٹی کی بنیادی باتیں</span><h3>اسمارٹ ہوم سیکیورٹی گائیڈ: اپنے IoT آلات کی حفاظت کریں (2026)</h3><p>2026 میں اپنا اسمارٹ ہوم محفوظ کریں — کیمرے، اسپیکرز، ڈور بیلز اور راؤٹرز۔ ڈیفالٹ پاس ورڈز، فرم ویئر اپ ڈیٹس، نیٹ ورک الگ کرنا اور پرائیویسی سیٹنگز، سب دفاعی طور پر بتائی گئی ہیں۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="ai-voice-clone-scams-guide.html" class="art-card"><span class="art-cat">سائبر سیکیورٹی کی بنیادی باتیں</span><h3>AI وائس کلوننگ فراڈ: اپنے خاندان کو ڈیپ فیک دھوکے سے کیسے بچائیں (2026 گائیڈ)</h3><p>فراڈیے اب AI سے آوازیں کلون کر کے خاندان کی جعلی ایمرجنسی بناتے ہیں۔ جانیں کہ وائس کلون فراڈ کیسے کام کرتا ہے، اس کی نشانیاں کیا ہیں، اور خاندان کی تصدیق کا وہ معمول جو اسے روک دیتا ہے۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="data-breach-recovery-guide.html" class="art-card"><span class="art-cat">سائبر سیکیورٹی کی بنیادی باتیں</span><h3>ڈیٹا چوری کی بحالی: جب آپ کی معلومات لیک ہوں تو کیا کریں (2026)</h3><p>آپ کا ڈیٹا چوری میں لیک ہو گیا — اب کیا؟ دفاعی قدم بہ قدم بحالی منصوبہ: پہلا گھنٹہ، پہلا دن، پہلا ہفتہ، اور طویل مدتی حفاظت۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="qr-code-scams-quishing-guide.html" class="art-card"><span class="art-cat">سائبر سیکیورٹی کی بنیادی باتیں</span><h3>QR کوڈ فراڈ (کوئشنگ): QR کوڈز محفوظ طریقے سے کیسے اسکین کریں (2026 گائیڈ)</h3><p>QR کوڈ فشنگ (کوئشنگ) تیزی سے بڑھ رہی ہے — جعلی ادائیگی کوڈز، پارکنگ فراڈ اور اسٹیکر اوورلے۔ جانیں کہ یہ فراڈ کیسے کام کرتے ہیں اور QR کوڈز محفوظ طریقے سے، دفاعی اور قانونی طور پر کیسے اسکین کریں۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="email-security-guide.html" class="art-card"><span class="art-cat">سائبر سیکیورٹی کی بنیادی باتیں</span><h3>اپنا ای میل اکاؤنٹ محفوظ کریں: مکمل ای میل سیکیورٹی گائیڈ (2026)</h3><p>آپ کی ای میل آپ کے ہر اکاؤنٹ کی ماسٹر چابی ہے۔ اسے بند کریں — مضبوط پاس ورڈز، 2FA، بحالی آپشنز، فشنگ دفاع، اور اکاؤنٹ قبضے کی نشانیاں۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="kids-online-safety-guide.html" class="art-card"><span class="art-cat">سائبر سیکیورٹی کی بنیادی باتیں</span><h3>بچوں کو آن لائن کیسے محفوظ رکھیں: والدین کی سیفٹی گائیڈ (2026)</h3><p>والدین کے لیے عملی، دفاعی 2026 گائیڈ: والدین کے کنٹرول جو واقعی کام کرتے ہیں، بچوں سے آن لائن خطرات کے بارے میں بات کیسے کریں، گیمنگ اور سوشل میڈیا سیفٹی اصول، اور اگر کچھ غلط ہو جائے تو کیا کریں۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="safe-online-shopping-guide.html" class="art-card"><span class="art-cat">سائبر سیکیورٹی کی بنیادی باتیں</span><h3>محفوظ آن لائن خریداری: فراڈ سے بچیں اور اپنی ادائیگیوں کی حفاظت کریں</h3><p>آن لائن محفوظ خریداری کریں — خریداری فراڈ کیسے کام کرتے ہیں، اسٹور اصلی ہے کیسے چیک کریں، محفوظ طریقے سے ادائیگی، سرخ جھنڈے، اور اگر آپ فراڈ کا شکار ہوئے تو کیا کریں۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="identity-theft-protection-guide.html" class="art-card"><span class="art-cat">سائبر سیکیورٹی کی بنیادی باتیں</span><h3>شناخت کی چوری سے حفاظت: اپنی ذاتی معلومات کیسے محفوظ رکھیں (2026 گائیڈ)</h3><p>شناخت کی چوری خاموشی سے ہوتی ہے — یہاں لیک شدہ شناختی نمبر، وہاں زیادہ شیئر شدہ تصویر۔ جانیں کہ چور شناختیں کیسے چراتے ہیں اور عملی، قانونی اقدامات جو آپ کی حفاظت کرتے ہیں۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="social-media-privacy-guide.html" class="art-card"><span class="art-cat">سائبر سیکیورٹی کی بنیادی باتیں</span><h3>سوشل میڈیا پرائیویسی: اپنے اکاؤنٹس کیسے بند کریں (2026 گائیڈ)</h3><p>سوشل میڈیا پرائیویسی کی عملی، دفاعی گائیڈ: پلیٹ فارمز کیا جمع کرتے ہیں، پرائیویسی سیٹنگز جو واقعی اہم ہیں، زیادہ شیئر کرنے کے جال جن سے بچنا ہے، اور طویل عوامی پروفائل کو کیسے صاف کریں۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="vpn-explained-guide.html" class="art-card"><span class="art-cat">سائبر سیکیورٹی کی بنیادی باتیں</span><h3>VPNs کی وضاحت: وہ واقعی کیا حفاظت کرتے ہیں (اور کیا نہیں) — 2026 گائیڈ</h3><p>VPNs کی ایماندارانہ، بغیر ہائپ 2026 گائیڈ: VPN واقعی کیا خفیہ کرتا ہے، وہ آپ کو کس چیز سے کبھی حفاظت نہیں کر سکتا، 'مفت' VPNs کی چھپی قیمتیں، آپ کو کب اس کی ضرورت ہے، اور فراہم کنندہ کیسے چنیں۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="juice-jacking-usb-charging-risks-guide.html" class="art-card"><span class="art-cat">سائبر سیکیورٹی کی بنیادی باتیں</span><h3>جوس جیکنگ: عوامی USB چارجنگ کے خطرات اور محفوظ رہنے کا طریقہ (2026 گائیڈ)</h3><p>جوس جیکنگ کیا ہے؟ عوامی USB چارجنگ اسٹیشنز ڈیٹا چرانے یا میلویئر انسٹال کرنے کے لیے کیسے استعمال ہو سکتے ہیں — اور سادہ دفاعی عادات (صرف چارج والی کیبل، ڈیٹا بلاکر) جو آپ کو محفوظ رکھتی ہیں۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="sim-swapping-protection-guide.html" class="art-card"><span class="art-cat">سائبر سیکیورٹی کی بنیادی باتیں</span><h3>سم سویپنگ: حملہ آور آپ کا فون نمبر کیسے چراتے ہیں — اور انہیں کیسے روکا جائے (2026)</h3><p>سم سویپنگ مجرموں کو آپ کا فون نمبر ہائی جیک کرنے دیتی ہے تاکہ SMS کوڈز کو بائی پاس کریں اور آپ کے اکاؤنٹس پر قبضہ کریں۔ جانیں کہ حملہ کیسے کام کرتا ہے، انتباہی نشانیاں، اور دفاعی اقدامات جو آپ کو محفوظ رکھتے ہیں۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="cloud-storage-security-guide.html" class="art-card"><span class="art-cat">سائبر سیکیورٹی کی بنیادی باتیں</span><h3>کلاؤڈ اسٹوریج سیکیورٹی: اپنی گوگل ڈرائیو، ڈراپ باکس اور ون ڈرائیو فائلیں محفوظ رکھیں (2026 گائیڈ)</h3><p>آپ کی کلاؤڈ اسٹوریج میں ٹیکس ریٹرنز، شناختی اسکین اور خاندانی تصاویر ہیں۔ یہ دفاعی 2026 گائیڈ بتاتی ہے کہ گوگل ڈرائیو، ڈراپ باکس اور ون ڈرائیو کو کیسے بند کریں — 2FA، شیئرنگ کنٹرولز، خفیہ کاری اور چوری کا جواب۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="browser-security-guide.html" class="art-card"><span class="art-cat">سائبر سیکیورٹی کی بنیادی باتیں</span><h3>براؤزر سیکیورٹی گائیڈ: کروم، ایج اور فائر فاکس بند کریں (2026)</h3><p>آپ کا براؤزر نمبر 1 حملہ سطح ہے۔ جانیں کہ کروم، ایج اور فائر فاکس کو کیسے سخت کریں — اپ ڈیٹس، ایکسٹینشن کی صفائی، محفوظ براؤزنگ، پاس ورڈ حفاظت، HTTPS، پروفائلز، سنک اور عوامی کمپیوٹر کے اصول۔ مکمل دفاعی گائیڈ۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="secure-messaging-guide.html" class="art-card"><span class="art-cat">سائبر سیکیورٹی کی بنیادی باتیں</span><h3>محفوظ پیغام رسانی گائیڈ: اپنی چیٹس نجی کیسے رکھیں (2026)</h3><p>اینڈ ٹو اینڈ خفیہ کاری سادہ وضاحت، کون سا میٹا ڈیٹا ابھی بھی لیک ہوتا ہے، غائب ہونے والے پیغامات، رابطہ تصدیق، بیک اپ خفیہ کاری اور عادات جو آپ کی چیٹس نجی رکھتی ہیں۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="remove-personal-info-from-google-search-guide.html" class="art-card"><span class="art-cat">سائبر سیکیورٹی کی بنیادی باتیں</span><h3>اپنی ذاتی معلومات گوگل سرچ سے کیسے ہٹائیں (2026)</h3><p>آپ کا فون نمبر، پتہ یا تصاویر گوگل پر ظاہر ہو رہی ہیں؟ اپنی ذاتی معلومات مرحلہ وار تلاش نتائج سے ہٹائیں — گوگل کے اپنے ٹولز اور عادات جو اسے آف لائن رکھتی ہیں۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="safe-online-banking-guide.html" class="art-card"><span class="art-cat">سائبر سیکیورٹی کی بنیادی باتیں</span><h3>محفوظ آن لائن بینکنگ: اپنے پیسے کی حفاظت کیسے کریں (2026 گائیڈ)</h3><p>اپنے پیسے آن لائن محفوظ کریں: بینکنگ فراڈ کیسے کام کرتے ہیں، سرکاری ایپ کی تصدیق کیسے کریں، مضبوط لاگ انز، لین دین الرٹس، اور جس لمحے آپ فراڈ دیکھیں تو بالکل کیا کریں۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="fake-apps-play-store-guide.html" class="art-card"><span class="art-cat">سائبر سیکیورٹی کی بنیادی باتیں</span><h3>گوگل پلے اسٹور پر جعلی ایپس کیسے پہچانیں (2026)</h3><p>جعلی ایپس ڈیٹا اور پیسے چراتی ہیں۔ 7 عملی جانچیں سیکھیں — ڈویلپر کے نام، جائزے، اجازتیں، اپ ڈیٹ تاریخ — تاکہ جعلی پلے اسٹور ایپس کو انسٹال کرنے سے پہلے پہچان سکیں۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+</div>
+<p style="margin-top:16px;color:#8fa39a">اردو میں تمام 46 بنیادی گائیڈز دستیاب ہیں۔</p>
+</div></section>
+
+<section class="section" id="hacking"><div class="container">
+<div class="section-head"><span class="section-tag">اخلاقی ہیکنگ</span>
+<h2>اخلاقی ہیکنگ</h2>
+<p>اخلاقی ہیکنگ قانونی طریقے سے سیکھیں — طریقہ کار، ٹولز اور پیشہ ورانہ پینٹریشن ٹیسٹنگ۔</p></div>
+<div class="art-grid">
+<a href="what-is-penetration-testing.html" class="art-card"><span class="art-cat">اخلاقی ہیکنگ</span><h3>پینٹریشن ٹیسٹنگ کیا ہے؟ اخلاقی ہیکنگ کی وضاحت</h3><p>پینٹریشن ٹیسٹنگ سمجھیں — اخلاقی ہیکرز کیا کرتے ہیں، ٹیسٹوں کی اقسام، اور مجاز ٹیسٹنگ سسٹمز کو کیسے محفوظ بناتی ہے۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="penetration-testing-methodology.html" class="art-card"><span class="art-cat">اخلاقی ہیکنگ</span><h3>پینٹریشن ٹیسٹنگ طریقہ کار: پیشہ ورانہ ورک فلو</h3><p>معیاری پینٹریشن ٹیسٹنگ طریقہ کار سیکھیں — دائرہ بندی سے رپورٹنگ تک PTES مراحل — جو پیشہ ور اخلاقی ہیکرز استعمال کرتے ہیں۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="nmap-guide.html" class="art-card"><span class="art-cat">اخلاقی ہیکنگ</span><h3>Nmap شروعاتی گائیڈ: اپنا نیٹ ورک محفوظ طریقے سے اسکین کریں</h3><p>Nmap محفوظ طریقے سے سیکھیں — یہ کیا ہے، اپنا ہوم نیٹ ورک کیسے اسکین کریں، کھلی پورٹس کو سمجھیں، اور اپنے دفاع کو بہتر بنائیں۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="burp-suite-basics.html" class="art-card"><span class="art-cat">اخلاقی ہیکنگ</span><h3>برپ سوٹ کی بنیادی باتیں: اپنی ویب ایپس محفوظ طریقے سے ٹیسٹ کریں</h3><p>برپ سوٹ کا تعارف — پیشہ ورانہ ویب سیکیورٹی ٹول کٹ — اپنی ایپلیکیشنز اور لیبز کو اخلاقی اور قانونی طریقے سے ٹیسٹ کرنے کے لیے۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="social-engineering-awareness.html" class="art-card"><span class="art-cat">اخلاقی ہیکنگ</span><h3>سوشل انجینئرنگ سے آگاہی: قابو میں نہ آئیں</h3><p>جانیں کہ سوشل انجینئرنگ حملے لوگوں کو کیسے قابو کرتے ہیں — فشنگ، پری ٹیکسٹنگ، بیٹنگ — اور اپنی اور اپنے خاندان کی حفاظت کیسے کریں۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="web-application-security-basics.html" class="art-card"><span class="art-cat">اخلاقی ہیکنگ</span><h3>ویب ایپلیکیشن سیکیورٹی کی بنیادی باتیں: اپنی ویب سائٹ کی حفاظت کریں</h3><p>ویب ایپ سیکیورٹی کی بنیادی باتیں سیکھیں — OWASP Top 10 آگاہی، HTTPS، ان پٹ تصدیق — اپنی سائٹس کے دفاع کے لیے۔ صرف اخلاقی۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="vulnerability-assessment-guide.html" class="art-card"><span class="art-cat">اخلاقی ہیکنگ</span><h3>کمزوری جائزہ گائیڈ: اپنے سسٹمز میں کمزوریاں تلاش کریں</h3><p>کمزوری جائزہ طریقہ کار سیکھیں — اپنے سسٹمز اسکین کرنا، اصلاحات کو ترجیح دینا، اور رپورٹنگ۔ صرف مجاز ٹیسٹنگ۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+</div>
+</div></section>
+
+<section class="section" id="tools"><div class="container">
+<div class="section-head"><span class="section-tag">ٹولز اور تکنیکیں</span>
+<h2>ٹولز اور تکنیکیں</h2>
+<p>ضروری سیکیورٹی ٹولز کی عملی گائیڈز — سب آپ کی اپنی لیب اور مجاز نظاموں کے لیے۔</p></div>
+<div class="art-grid">
+<a href="kali-linux-setup.html" class="art-card"><span class="art-cat">ٹولز اور تکنیکیں</span><h3>کالی لینکس سیٹ اپ گائیڈ: اپنی اخلاقی ہیکنگ لیب بنائیں</h3><p>کالی لینکس کو ورچوئل مشین میں محفوظ طریقے سے انسٹال کریں اور قانونی، اخلاقی مشق کے لیے اپنی الگ تھلگ سیکیورٹی لیب بنائیں۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="wireshark-basics.html" class="art-card"><span class="art-cat">ٹولز اور تکنیکیں</span><h3>Wireshark کی بنیادی باتیں: اپنا نیٹ ورک ٹریفک دیکھیں (اپنا نیٹ ورک)</h3><p>Wireshark سیکھیں — دنیا کا سب سے بڑا نیٹ ورک تجزیہ کار — اپنے نیٹ ورک ٹریفک کا معائنہ کرنے، مسائل کی تشخیص کرنے، اور پروٹوکولز سمجھنے کے لیے۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="password-security-testing.html" class="art-card"><span class="art-cat">ٹولز اور تکنیکیں</span><h3>پاس ورڈ سیکیورٹی ٹیسٹنگ: اپنے پاس ورڈز کا آڈٹ کریں</h3><p>اپنے اکاؤنٹس اور سسٹمز پر پاس ورڈ کی طاقت ٹیسٹ کرنا سیکھیں — ہیشنگ تصورات، طاقت میٹر، اور دفاعی آڈٹنگ۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="wireless-security-basics.html" class="art-card"><span class="art-cat">ٹولز اور تکنیکیں</span><h3>وائرلیس سیکیورٹی کی بنیادی باتیں: اپنا وائی فائی محفوظ کریں</h3><p>اپنا ہوم وائی فائی صحیح طریقے سے محفوظ کریں — WPA3، راؤٹر سخت کرنا، مہمان نیٹ ورکس، اور اپنے نیٹ ورک پر گھسنے والوں کو پہچاننا۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="metasploit-basics-ethical.html" class="art-card"><span class="art-cat">ٹولز اور تکنیکیں</span><h3>Metasploit کی بنیادی باتیں: پیشہ ورانہ فریم ورک کو سمجھنا (اخلاقی استعمال)</h3><p>Metasploit کیا ہے، ماہرین اسے مجاز ٹیسٹوں میں کیسے استعمال کرتے ہیں، اور اسے اپنی الگ تھلگ لیب میں محفوظ طریقے سے کیسے دریافت کریں۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="nmap-advanced-techniques.html" class="art-card"><span class="art-cat">ٹولز اور تکنیکیں</span><h3>Nmap کی اعلیٰ تکنیکیں: اپنے نیٹ ورک کی گہری اسکیننگ</h3><p>Nmap کے ساتھ بنیادی باتوں سے آگے بڑھیں — OS شناخت، سروس ورژنز، NSE اسکرپٹس — صرف اپنے نیٹ ورک پر۔ دفاعی استعمال۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="password-cracking-defense.html" class="art-card"><span class="art-cat">ٹولز اور تکنیکیں</span><h3>پاس ورڈ کراکنگ سے دفاع: حملہ آور پاس ورڈز کیسے اندازہ لگاتے ہیں (اور انہیں کیسے روکا جائے)</h3><p>سمجھیں کہ پاس ورڈ حملے کیسے کام کرتے ہیں — بروٹ فورس، ڈکشنری، رینبو ٹیبلز — تاکہ آپ اپنے اکاؤنٹس کا دفاع کر سکیں۔ دفاعی گائیڈ۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+</div>
+</div></section>
+
+<section class="section" id="career"><div class="container">
+<div class="section-head"><span class="section-tag">کیریئر گائیڈ</span>
+<h2>کیریئر گائیڈ</h2>
+<p>سائبر سیکیورٹی میں آپ کا راستہ — نقشے، سرٹیفکیشنز اور نوکری پانا۔</p></div>
+<div class="art-grid">
+<a href="how-to-become-pentester.html" class="art-card"><span class="art-cat">کیریئر گائیڈ</span><h3>پینیٹریشن ٹیسٹر کیسے بنیں: قدم بہ قدم روڈ میپ</h3><p>پینیٹریشن ٹیسٹر بننے کا مکمل روڈ میپ — مہارتیں، سیکھنے کے وسائل، لیبز، سرٹیفکیٹس، اور نوکری حاصل کرنا۔ صرف اخلاقی راستہ۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="cybersecurity-certifications-guide.html" class="art-card"><span class="art-cat">کیریئر گائیڈ</span><h3>سائبر سیکیورٹی سرٹیفکیٹس گائیڈ: آپ کو کون سا لینا چاہیے؟</h3><p>اعلیٰ سائبر سیکیورٹی سرٹیفکیٹس کا موازنہ کریں — Security+، CEH، OSCP، eJPT، CISSP — قیمتیں، مشکل، اور آپ کے کیریئر مرحلے کے لیے کون سا موزوں ہے۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="cybersecurity-career-roadmap.html" class="art-card"><span class="art-cat">کیریئر گائیڈ</span><h3>سائبر سیکیورٹی کیریئر روڈ میپ 2026: صفر سے پیشہ ور تک</h3><p>آپ کا مکمل سائبر سیکیورٹی کیریئر روڈ میپ — کردار، تنخواہیں، مہارتوں کی ٹائم لائن، اور مکمل ابتدائی سے ملازمت یافتہ پیشہ ور تک جانے کا طریقہ۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="cybersecurity-interview-preparation.html" class="art-card"><span class="art-cat">کیریئر گائیڈ</span><h3>سائبر سیکیورٹی انٹرویو کی تیاری: اپنی پہلی سیکیورٹی نوکری حاصل کریں</h3><p>سائبر سیکیورٹی انٹرویوز کی تیاری کریں — عام سوالات، تکنیکی موضوعات، HR مراحل، اور پورٹ فولیو نکات۔ مکمل 2026 گائیڈ۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="bug-bounty-introduction.html" class="art-card"><span class="art-cat">کیریئر گائیڈ</span><h3>بگ باؤنٹی کا تعارف: قانونی طریقے سے بگز ڈھونڈ کر پیسے کمائیں</h3><p>بگ باؤنٹی ہنٹنگ قانونی طریقے سے شروع کریں — پلیٹفارمز، دائرے کے اصول، طریقہ کار، اور پہلی بگ کے نکات۔ 100% اخلاقی گائیڈ۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+</div>
+</div></section>
+
+<section class="section" id="creator"><div class="container">
+<div class="section-head"><span class="section-tag">کریئیٹر سیکیورٹی</span><h2>کریئیٹرز کی <span class="green">سیکیورٹی</span></h2><p>یوٹیوبرز، ٹک ٹاکرز اور انسٹاگرام کریئیٹرز اہم ہدف ہیں — ہیک شدہ چینل واپس لیں، جعلی اسپانسر پہچانیں، اور ہر اکاؤنٹ بند کر لیں۔</p></div>
+<div class="art-grid">
+<a href="youtube-channel-hack-recovery-guide.html" class="art-card"><span class="art-cat">کریئیٹر سیکیورٹی</span><h3>یوٹیوب چینل ہیک ریکوری: مکمل گائیڈ</h3><p>اپنا گوگل اکاؤنٹ محفوظ کریں، یوٹیوب کا ٹربل شوٹر استعمال کریں، چینل صاف کریں اور اسے بند کر لیں۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="instagram-tiktok-hack-recovery-guide.html" class="art-card"><span class="art-cat">کریئیٹر سیکیورٹی</span><h3>انسٹاگرام / ٹک ٹاک ہیک ریکوری: مکمل گائیڈ</h3><p>ہیک شدہ انسٹاگرام یا ٹک ٹاک اکاؤنٹ صرف سرکاری طریقے سے واپس لیں — اور بعد میں دونوں اکاؤنٹس بند کر لیں۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="brand-deal-scams-guide.html" class="art-card"><span class="art-cat">کریئیٹر سیکیورٹی</span><h3>برانڈ ڈیل فراڈ: جعلی اسپانسرز کریئیٹرز کو کیسے نشانہ بناتے ہیں</h3><p>جعلی اسپانسرز چھوٹی ویڈیو کے لیے بڑے پیسے کا وعدہ کرتے ہیں — پھر چینل چوری کر لیتے ہیں۔ سرخ جھنڈیاں اور اصلی پیشکش کی جانچ۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="fake-copyright-strike-emails-guide.html" class="art-card"><span class="art-cat">کریئیٹر سیکیورٹی</span><h3>جعلی کاپی رائٹ اسٹرائیک ای میلز: پہچان اور کیا کریں</h3><p>فراڈی کریئیٹرز کو ڈرانے کے لیے جعلی کاپی رائٹ اسٹرائیک ای میلز بھیجتے ہیں۔ اصلی نوٹس کیسا لگتا ہے، اور کیا کرنا ہے۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="two-factor-authentication-youtubers-guide.html" class="art-card"><span class="art-cat">کریئیٹر سیکیورٹی</span><h3>یوٹیوبرز کے لیے ٹو فیکٹر تصدیق (2FA)</h3><p>گوگل/یوٹیوب، انسٹاگرام اور ٹک ٹاک پر مضبوط 2FA قدم بہ قدم سیٹ کریں — تصدیقی ایپس، سیکیورٹی کیز اور بیک اپ کوڈز۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+</div>
+</div></section>
+
+<section class="section" id="sectools"><div class="container">
+<div class="section-head"><span class="section-tag">سیکیورٹی ٹولز</span>
+<h2>مفت سیکیورٹی ٹولز</h2>
+<p>مفت براؤزر ٹولز — پاس ورڈ ٹولز، فشنگ اور ای میل تجزیہ کار، سیکیورٹی چیک لسٹس، کوئزز، بیک اپ اور واقعہ ردعمل گائیڈز۔ 100% نجی۔</p></div>
+<div class="art-grid">
+<a href="password-strength-checker.html" class="art-card"><span class="art-cat">سیکیورٹی ٹول</span><h3>پاس ورڈ مضبوطی چیکر</h3><p>جانچیں کہ آپ کا پاس ورڈ واقعی کتنا مضبوط ہے — اسکور، کریک وقت کا اندازہ، اور بہتری کی تجاویز پائیں۔</p><span class="read-more">ٹول کھولیں ←</span></a>
+<a href="hash-generator.html" class="art-card"><span class="art-cat">سیکیورٹی ٹول</span><h3>ہیش جنریٹر</h3><p>کسی بھی متن کے MD5، SHA-1 اور SHA-256 ہیش فوراً بنائیں، سیدھا اپنے براؤزر میں۔</p><span class="read-more">ٹول کھولیں ←</span></a>
+<a href="password-generator.html" class="art-card"><span class="art-cat">سیکیورٹی ٹول</span><h3>پاس ورڈ جنریٹر</h3><p>اپنی مرضی کی لمبائی اور حروف کے آپشنز کے ساتھ مضبوط، بے ترتیب پاس ورڈز بنائیں۔ ایک کلک۔</p><span class="read-more">ٹول کھولیں ←</span></a>
+<a href="base64-encoder.html" class="art-card"><span class="art-cat">سیکیورٹی ٹول</span><h3>Base64 انکوڈر / ڈی کوڈر</h3><p>متن کو Base64 میں انکوڈ کریں یا Base64 کو واپس پڑھنے کے قابل متن میں ڈی کوڈ کریں۔ تیز اور نجی۔</p><span class="read-more">ٹول کھولیں ←</span></a>
+<a href="phishing-url-analyzer.html" class="art-card"><span class="art-cat">سیکیورٹی ٹول</span><h3>فشنگ یو آر ایل تجزیہ کار</h3><p>مشکوک لنک چسپاں کریں اور فشنگ کے سرخ جھنڈے پہچاننا سیکھیں — ملتے جلتے ڈومینز، آئی پی پتے، شارٹنرز اور مزید۔</p><span class="read-more">ٹول کھولیں ←</span></a>
+<a href="ssl-certificate-guide.html" class="art-card"><span class="art-cat">سیکیورٹی ٹول</span><h3>SSL سرٹیفکیٹ گائیڈ</h3><p>سیکھیں کہ HTTPS اور SSL/TLS سرٹیفکیٹس کا اصل مطلب کیا ہے — کسی بھی براؤزر میں سائٹ کا سرٹیفکیٹ کیسے چیک کریں، اور 5 سوالات کا کوئز بھی۔</p><span class="read-more">ٹول کھولیں ←</span></a>
+<a href="wifi-security-checklist.html" class="art-card"><span class="art-cat">سیکیورٹی ٹول</span><h3>وائی فائی سیکیورٹی چیک لسٹ</h3><p>اپنے گھر کے وائی فائی کا قدم بہ قدم آڈٹ کریں — خفیہ کاری، راؤٹر پاس ورڈ، گیسٹ نیٹ ورک، WPS اور مزید۔ انٹرایکٹو اسکور شامل ہے۔</p><span class="read-more">ٹول کھولیں ←</span></a>
+<a href="firewall-rules-explainer.html" class="art-card"><span class="art-cat">سیکیورٹی ٹول</span><h3>فائر وال رولز وضاحت کار</h3><p>سمجھیں کہ فائر والز کیسے کام کرتے ہیں — ان باؤنڈ بمقابلہ آؤٹ باؤنڈ، اجازت بمقابلہ انکار — انٹرایکٹو رول سمیولیٹر اور ہر OS کے سیٹ اپ مراحل کے ساتھ۔</p><span class="read-more">ٹول کھولیں ←</span></a>
+<a href="vpn-comparison-guide.html" class="art-card"><span class="art-cat">سیکیورٹی ٹول</span><h3>VPN گائیڈ</h3><p>ایماندارانہ، بغیر مبالغے کی VPN تعلیم — VPNs اصل میں کیا کرتے ہیں، کیا نہیں کر سکتے، 'کیا مجھے ایک چاہیے؟' کوئز، اور فراہم کنندگان کا جائزہ کیسے لیں۔</p><span class="read-more">ٹول کھولیں ←</span></a>
+<a href="twofa-setup-guide.html" class="art-card"><span class="art-cat">سیکیورٹی ٹول</span><h3>2FA سیٹ اپ گائیڈ</h3><p>ٹو فیکٹر تصدیق آن کرنے کی قدم بہ قدم انٹرایکٹو گائیڈ — طریقوں کا ایماندارانہ موازنہ، بیک اپ کوڈز، اور فون گم ہونے کا منصوبہ۔</p><span class="read-more">ٹول کھولیں ←</span></a>
+<a href="secure-backup-checklist.html" class="art-card"><span class="art-cat">سیکیورٹی ٹول</span><h3>محفوظ بیک اپ چیک لسٹ</h3><p>3-2-1 بیک اپ اصول سیکھیں، ذاتی بیک اپ منصوبہ بنائیں، اور انٹرایکٹو سیکیورٹی چیک لسٹ سے اپنے بیک اپ کا آڈٹ کریں۔</p><span class="read-more">ٹول کھولیں ←</span></a>
+<a href="incident-response-playbook.html" class="art-card"><span class="art-cat">سیکیورٹی ٹول</span><h3>واقعہ رسپانس پلے بک</h3><p>لگتا ہے آپ ہیک ہو گئے؟ اپنا منظرنامہ چنیں — فشنگ، میلویئر، ہیک شدہ اکاؤنٹ، رینسم ویئر — اور پیش رفت ٹریکر کے ساتھ ترتیب شدہ مراحل پر عمل کریں۔</p><span class="read-more">ٹول کھولیں ←</span></a>
+<a href="password-manager-comparison.html" class="art-card"><span class="art-cat">سیکیورٹی ٹول</span><h3>پاس ورڈ مینیجر گائیڈ</h3><p>پاس ورڈ مینیجر چننے کی ایماندارانہ، بغیر جائزے کی گائیڈ — کون سی خصوصیات اصل میں اہم ہیں، اعتماد کا جائزہ کیسے لیں، اور محفوظ تبدیلی کے مراحل۔</p><span class="read-more">ٹول کھولیں ←</span></a>
+<a href="social-engineering-quiz.html" class="art-card"><span class="art-cat">سیکیورٹی ٹول</span><h3>سوشل انجینئرنگ کوئز</h3><p>فشنگ، پری ٹیکسٹنگ، بیٹنگ، ٹیل گیٹنگ اور مزید پر 10 سوالات کا انٹرایکٹو کوئز — ہر جواب کی وضاحت کے ساتھ۔</p><span class="read-more">ٹول کھولیں ←</span></a>
+<a href="data-breach-response-guide.html" class="art-card"><span class="art-cat">سیکیورٹی ٹول</span><h3>ڈیٹا بریچ رسپانس گائیڈ</h3><p>کیا آپ کا ڈیٹا کسی بریچ میں تھا؟ چنیں کہ کیا سامنے آیا اور درست اقدامات پائیں، اور پیش رفت ٹریکنگ کے ساتھ عالمگیر رسپانس چیک لسٹ بھی۔</p><span class="read-more">ٹول کھولیں ←</span></a>
+<a href="secure-browsing-checklist.html" class="art-card"><span class="art-cat">سیکیورٹی ٹول</span><h3>محفوظ براؤزنگ چیک لسٹ</h3><p>انٹرایکٹو چیک لسٹ سے اپنا براؤزر مضبوط کریں — اپ ڈیٹس، HTTPS، ایکسٹینشنز، کوکیز — اور براؤزنگ کی غلط فہمیوں پر 5 سوالات کا کوئز بھی۔</p><span class="read-more">ٹول کھولیں ←</span></a>
+<a href="email-security-analyzer.html" class="art-card"><span class="art-cat">سیکیورٹی ٹول</span><h3>ای میل سیکیورٹی تجزیہ کار</h3><p>مشکوک ای میل کا بھیجنے والا اور موضوع چسپاں کریں — سادہ وضاحتوں کے ساتھ اسپوفنگ، ملتے جلتے ڈومینز اور جلدی کے حربے پہچاننا سیکھیں۔</p><span class="read-more">ٹول کھولیں ←</span></a>
+<a href="ransomware-prevention-checklist.html" class="art-card"><span class="art-cat">سیکیورٹی ٹول</span><h3>رینسم ویئر سے بچاؤ چیک لسٹ</h3><p>انٹرایکٹو رینسم ویئر دفاع چیک لسٹ — آف لائن بیک اپ، پیچنگ، ای میل عادات، RDP مضبوطی — اور اگر آپ متاثر ہو جائیں تو بالکل کیا کرنا ہے۔</p><span class="read-more">ٹول کھولیں ←</span></a>
+<a href="privacy-settings-guide.html" class="art-card"><span class="art-cat">سیکیورٹی ٹول</span><h3>پرائیویسی سیٹنگز گائیڈ</h3><p>Facebook، Instagram، X، TikTok، LinkedIn اور WhatsApp کے لیے پلیٹ فارم بہ پلیٹ فارم پرائیویسی چیک لسٹس — بالکل جانیں کہ کون سی سیٹنگز دیکھنی ہیں۔</p><span class="read-more">ٹول کھولیں ←</span></a>
+<a href="secure-deletion-guide.html" class="art-card"><span class="art-cat">سیکیورٹی ٹول</span><h3>محفوظ حذف گائیڈ</h3><p>ڈیوائس بیچ رہے ہیں یا ری سائیکل کر رہے ہیں؟ ڈیوائس کی قسم چنیں اور درست وائپ مراحل پر عمل کریں — اور جانیں کہ صرف 'حذف' کافی کیوں نہیں۔</p><span class="read-more">ٹول کھولیں ←</span></a>
+</div>
+<p style="margin-top:16px"><a href="sectools.html" style="color:#00e676;font-weight:800">تمام ٹولز دیکھیں ←</a></p>
+</div></section>
+
+<section class="section section-dark" id="explore"><div class="container">
+<div class="section-head"><span class="section-tag">مزید دیکھیں</span>
+<h2>سیکھنے کے مزید <span class="green">طریقے</span></h2>
+<p>انٹرایکٹو ٹولز، سادہ انگریزی لغت، اور ایماندار جوابات — سب مفت۔</p></div>
+<div class="cat-grid">
+<a href="learning-path.html" class="cat-card"><span class="cat-emoji"></span><h3>سیکھنے کے راستے</h3><p>بے ترتیب نہ پڑھیں — قدم بہ قدم نقشہ اپنائیں: مکمل ابتدائی، اخلاقی ہیکنگ کیریئر، گھر کے صارف کی سیکیورٹی، یا کریئیٹر سیکیورٹی۔</p><span class="cat-count">4 رہنمائی والے راستے</span></a>
+<a href="sectools.html" class="cat-card"><span class="cat-emoji"></span><h3>سیکیورٹی ٹولز</h3><p>مفت براؤزر ٹولز — پاس ورڈ ٹولز، فشنگ اور ای میل تجزیہ کار، سیکیورٹی چیک لسٹس، کوئزز، بیک اپ اور واقعہ ردعمل گائیڈز۔ 100% نجی۔</p><span class="cat-count">20 ٹولز</span></a>
+<a href="glossary.html" class="cat-card"><span class="cat-emoji"></span><h3>سائبر سیکیورٹی لغت</h3><p>200 ضروری سائبر سیکیورٹی اصطلاحات سادہ انگریزی میں، فوری تلاش کے ساتھ۔</p><span class="cat-count">200 اصطلاحات</span></a>
+<a href="faq.html" class="cat-card"><span class="cat-emoji"></span><h3>سوالات</h3><p>ابتدائی افراد کے سب سے زیادہ پوچھے گئے سوالات کے 20 ایماندار جوابات — کیریئر، سیکیورٹی اور شروعات۔</p><span class="cat-count">20 جوابات</span></a>
+<a href="breach-news.html" class="cat-card"><span class="cat-emoji"></span><h3>ماہانہ بریچ خبریں</h3><p>ہر مہینے اصلی، تصدیق شدہ ڈیٹا بریچز — کیا ہوا، کون متاثر ہے، اور کیا کرنا ہے۔ دعوے دعووں کے طور پر لیبل شدہ۔</p><span class="cat-count">نومبر 2026</span></a>
+<a href="leaderboard.html" class="cat-card"><span class="cat-emoji"></span><h3>لیڈر بورڈ اور پیشرفت</h3><p>اپنی مکمل شدہ گائیڈز اور مشنز ٹریک کریں، پوائنٹس اور رینکس کمائیں — صرف آپ کے براؤزر میں محفوظ، کہیں بھی نہیں بھیجا جاتا۔</p><span class="cat-count">آپ کا اسکور</span></a>
+<a href="certificate.html" class="cat-card"><span class="cat-emoji"></span><h3>سرٹیفکیٹ</h3><p>15 امتحانات مکمل کریں اور اپنا سائبر سیکیورٹی سرٹیفکیٹ حاصل کریں — مفت، آپ کے براؤزر میں۔</p><span class="cat-count">مفت سرٹیفکیٹ</span></a>
+</div>
+<p style="margin-top:16px;color:#8fa39a">یہ تمام صفحات اردو میں دستیاب ہیں۔</p>
+</div></section>
+
+<section class="section dev-section" id="developer"><div class="container">
+<div class="section-head"><span class="section-tag">ڈویلپر کے بارے میں</span><h2>ملیں <span class="green">ملک محمد انوار</span> سے</h2><p><strong>ملک محمد انوار</strong> (پیدائش 1 جنوری 2006) پنجاب، پاکستان کے ایک گاؤں سے پرجوش ڈویلپر، سائبر سیکیورٹی کے شوقین اور مصنوعی ذہانت کے ماہر ہیں۔ گھر سے لگن اور محنت کے ساتھ کام کرتے ہوئے انہوں نے یہ سب بنایا ہے — 28+ اینڈرائیڈ ایپس، 4 ویب سائٹس اور 63 مفت آن لائن ٹولز — دنیا بھر کے لوگوں کی خدمت کر رہے ہیں۔</p></div>
+<div class="dev-grid">
+<div class="dev-card"><div class="dev-info"><h3>تکنیکی مہارت</h3><p>مصنوعی ذہانت • سائبر سیکیورٹی • اخلاقی ہیکنگ • پینٹریشن ٹیسٹنگ • اینڈرائیڈ ایپ ڈویلپمنٹ • ویب سائٹ ڈویلپمنٹ</p></div></div>
+<div class="dev-card"><div class="dev-info"><h3>اسلامی تعلیم</h3><p>درس نظامی، دورہ حدیث (ایم اے عربی اور اسلامی علوم) — تنظیم المدارس اہل سنت پاکستان</p></div></div>
+</div>
+<div class="dev-name">ملک محمد <span class="green">انوار</span></div>
+<p class="dev-tagline"><strong>میری کہانی:</strong> میں 2 سال کی عمر سے نیفروٹک سنڈروم کا مریض رہا ہوں، اور اللہ کے فضل سے 18 سال بعد مکمل صحت یاب ہوا۔ جو بھی ہوا، میں نے کبھی ہمت نہیں ہاری۔ 2017 سے میں آن لائن فیلڈ میں کام کر رہا ہوں — یہ ثابت کرتے ہوئے کہ ایمان اور محنت سے کچھ بھی ناممکن نہیں۔</p>
+<p class="dev-tagline"><strong>میرا مشن:</strong> صرف قانونی کام کرنا — قانونی کام سے کمانا — اور دوسروں کو صرف قانونی کام سکھانا اور دینا۔</p>
+<p class="dev-tagline">واٹس ایپ: <a href="https://wa.me/923288317526">+92 328 8317526</a></p>
+<p class="dev-tagline"><strong>"Developed by Malik Muhammad Anwaar"</strong></p>
+</div></section>
+
+<section class="section section-dark"><div class="container">
+<div class="section-head"><span class="section-tag">نمایاں</span><h2>یہاں سے <span class="green">شروع کریں</span></h2><p>ہر ابتدائی کے لیے سب سے اہم گائیڈز۔</p></div>
+<div class="art-grid">
+<a href="what-is-cybersecurity.html" class="art-card"><span class="art-cat">سائبر سیکیورٹی کی بنیادی باتیں</span><h3>سائبر سیکیورٹی کیا ہے؟ مکمل ابتدائی گائیڈ</h3><p>سائبر سیکیورٹی کیا ہے، یہ کیوں اہم ہے، اور ہر ابتدائی کو کن بنیادی تصورات کا علم ہونا چاہیے۔ اخلاقی، آسان تعارف۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="password-security-guide.html" class="art-card"><span class="art-cat">سائبر سیکیورٹی کی بنیادی باتیں</span><h3>پاس ورڈ سیکیورٹی: مکمل گائیڈ (2026)</h3><p>پاس ورڈ آپ کی ڈیجیٹل زندگی کی چابیاں ہیں — انہیں قدم بہ قدم محفوظ کریں۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="two-factor-authentication-guide.html" class="art-card"><span class="art-cat">سائبر سیکیورٹی کی بنیادی باتیں</span><h3>ٹو فیکٹر تصدیق (2FA): مکمل گائیڈ</h3><p>مضبوط ترین پاس ورڈ بھی چوری ہو سکتا ہے — 2FA ہی چوری شدہ پاس ورڈ کو چوری شدہ اکاؤنٹ بننے سے روکتی ہے۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+<a href="phishing-protection.html" class="art-card"><span class="art-cat">سائبر سیکیورٹی کی بنیادی باتیں</span><h3>فشنگ سے حفاظت: جعلی ای میل، ایس ایم ایس اور کالز کی پہچان</h3><p>فشنگ نمونوں پر چلتی ہے — ایک بار سیکھ لیں تو جعلی صاف نظر آنے لگتے ہیں۔</p><span class="read-more">گائیڈ پڑھیں ←</span></a>
+</div>
+</div></section>
+
+<section class="section"><div class="container">
+<div class="newsletter">
+<h2>ہفتہ وار سیکیورٹی ٹپس حاصل کریں</h2>
+<p>ای میل اپ ڈیٹس جلد آ رہی ہیں — اپنی ای میل نیچے محفوظ کریں اور یہ آپ کے اپنے براؤزر میں محفوظ رہے گی۔ کوئی اسپیم نہیں، کبھی نہیں۔</p>
+<form class="news-form" id="cyberNlForm">
+<input type="email" id="cyberNlEmail" placeholder="آپ کا ای میل پتہ" required>
+<button type="submit" class="btn btn-green">سبسکرائب کریں</button>
+</form>
+<p id="cyberNlMsg" style="display:none;color:#16a34a;font-weight:700;margin-top:10px"></p>
+</div>
+<script>
+(function(){
+  var f=document.getElementById('cyberNlForm');if(!f)return;
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var em=document.getElementById('cyberNlEmail'),v=(em.value||'').trim();
+    if(/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)){em.focus();return;}
+    try{localStorage.setItem('cyb_newsletter_email',v);}catch(err){}
+    var m=document.getElementById('cyberNlMsg');
+    m.textContent='ای میل اس ڈیوائس پر محفوظ ہو گئی — ای میل اپ ڈیٹس جلد آ رہی ہیں!';
+    m.style.display='';
+    em.value='';
+  });
+})();
+</script>
+</div></section>
+
+<section class="section" id="our-websites"><div class="container">
+<div class="section-head"><span class="section-tag">ہماری ویب سائٹس</span>
+<h2><span class="green">انوار ڈیجیٹل</span> سے مزید</h2>
+<p>مفت ٹولز، ایپس اور وسائل — سب ایک ہی ڈویلپر کی طرف سے۔</p></div>
+<div class="cat-grid">
+<a href="https://anwaardigital.com/" class="cat-card" target="_blank" rel="noopener"><span class="cat-emoji">&#127769;</span><h3>Anwaar Digital</h3><p>28+ اینڈرائیڈ ایپس، ونڈوز سافٹ ویئر اور مفت ڈاؤن لوڈز۔</p><span class="cat-count">دیکھیں &rarr;</span></a>
+<a href="https://freetools.anwaardigital.com/" class="cat-card" target="_blank" rel="noopener"><span class="cat-emoji">&#128736;&#65039;</span><h3>Free Privacy Tools</h3><p>63 مفت براؤزر ٹولز — پی ڈی ایف، تصویر، متن، سیکیورٹی اور مزید۔</p><span class="cat-count">دیکھیں &rarr;</span></a><a href="https://globalstream.anwaardigital.com/" class="cat-card" target="_blank" rel="noopener"><span class="cat-emoji">&#127758;</span><h3>GlobalStream</h3><p>لائیو ورلڈ ہب — خبریں، پیسہ، موسم، نماز کے اوقات اور ٹولز۔</p><span class="cat-count">دیکھیں &rarr;</span></a>
+</div>
+</div></section>
+
+<footer class="footer"><div class="container">
+<div class="footer-brand">CyberSec <span class="green">Hub</span></div>
+<p>اخلاقی، قانونی طریقے سے سائبر سیکیورٹی سیکھیں۔</p>
+<div class="footer-links">
+<a href="index.html">ہوم</a><a href="about.html">ہمارے بارے میں</a><a href="contact.html">رابطہ</a><a href="privacy.html">پرائیویسی پالیسی</a><a href="disclaimer.html">ڈس کلیمر</a><a href="terms.html">شرائط</a><a href="leaderboard.html">لیڈر بورڈ</a><a href="certificate.html">سرٹیفکیٹ</a><a href="breach-news.html">بریچ خبریں</a><a href="https://anwaardigital.com/" target="_blank" rel="noopener">Anwaar Digital</a><a href="https://freetools.anwaardigital.com/" target="_blank" rel="noopener">Free Privacy Tools</a><a href="https://globalstream.anwaardigital.com/" target="_blank" rel="noopener">GlobalStream</a><a href="https://www.facebook.com/profile.php?id=61595795009514" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/anwaardigital/" target="_blank" rel="noopener">Instagram</a>
+</div>
+<p class="badges-row"><a href="https://thelaunchdirectory.com/launch/cybersec-hub" rel="nofollow" target="_blank"><img src="https://thelaunchdirectory.com/badge/cybersec-hub.svg?kind=listed&shape=standard&mode=auto&size=m&v=2" alt="Listed on The Launch Directory" width="250" height="54" loading="lazy" decoding="async" style="max-width:100%;height:auto"></a><script async src="https://thelaunchdirectory.com/badge/cybersec-hub.js"></script></p>
+<p class="foot-email"><a href="mailto:contact@anwaardigital.com">contact@anwaardigital.com</a></p>
+<p class="copyright">Developed by <strong style="color:#00e676">Malik Muhammad Anwaar</strong></p>
+<p class="copyright">© 2026 CyberSec Hub by Anwaar Digital. جملہ حقوق محفوظ ہیں۔ صرف تعلیمی مواد — ہمیشہ تحریری اجازت سے جانچ کریں۔</p>
+</div></footer><a href="https://wa.me/923288317526" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.6 6.1 1.6h.1c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.6 1.2 1.2-4.5-.3-.4c-1-1.6-1.6-3.5-1.6-5.5C5 9.6 10.6 5 16 5s11 4.6 11 10-5.4 9.8-11 9.8zm6.1-7.3c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.8.1-.3-.2-1.4-.5-2.7-1.6-.9-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6L13 9.5c-.3-.8-.7-.7-1-.7h-.8c-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.5s1.5 4 1.7 4.3c.2.3 2.9 4.4 7 6.2 1 .4 1.7.7 2.3.9.9.3 1.8.2 2.5.2.8-.1 2.3-1 2.7-1.9.3-.9.3-1.7.2-1.9-.1-.1-.3-.2-.7-.4z"/></svg></a>
+<button id="backToTop" aria-label="Back to top" title="Back to top"
+style="position:fixed;bottom:24px;right:24px;width:48px;height:48px;border-radius:50%;border:none;background:#00e676;color:#050b14;font-size:22px;line-height:1;cursor:pointer;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s,transform .2s;box-shadow:0 4px 12px rgba(0,0,0,.35);z-index:9999;padding:0;">&#8593;</button>
+<script>
+(function(){var b=document.getElementById('backToTop');if(!b)return;
+window.addEventListener('scroll',function(){var s=window.pageYOffset||document.documentElement.scrollTop;
+if(s>300){b.style.opacity='1';b.style.visibility='visible';}else{b.style.opacity='0';b.style.visibility='hidden';}},{passive:true});
+b.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+b.addEventListener('mouseenter',function(){b.style.transform='scale(1.12)';});
+b.addEventListener('mouseleave',function(){b.style.transform='scale(1)';});})();
+</script>
+
+<script>
+(function(){var inp=document.getElementById('hubSearch');if(!inp)return;var msg=document.getElementById('hubNoResult');var cnt=document.getElementById('hubResultCount');function runFilter(){var q=inp.value.trim().toLowerCase();var total=0;document.querySelectorAll('.art-grid').forEach(function(g){var vis=0;g.querySelectorAll('.art-card').forEach(function(c){var ok=!q||c.textContent.toLowerCase().indexOf(q)>-1;c.style.display=ok?'':'none';if(ok)vis++;});total+=vis;var sec=g.closest('.section');if(sec){sec.style.display=vis?'':'none';}});if(msg){msg.style.display=(q&&!total)?'block':'none';}if(cnt){if(q&&total){cnt.textContent=total+' گائیڈز ملیں';cnt.style.display='block';}else{cnt.style.display='none';}}return total;}inp.addEventListener('input',runFilter);inp.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();runFilter();var cards=document.querySelectorAll('.art-card');for(var i=0;i<cards.length;i++){if(cards[i].style.display!=='none'){cards[i].scrollIntoView({behavior:'smooth',block:'center'});break;}}}});})();
+</script>
+<script>
+var phLines=[
+'<span class="cmd">$ whoami</span>',
+'future-pentester',
+'<span class="cmd">$ nmap -sV 192.168.1.1</span>',
+'<span class="dim">PORT    STATE  SERVICE</span>',
+'22/tcp  open   ssh',
+'80/tcp  open   http',
+'<span class="cmd">$ start-learning --path beginner</span>',
+'<span class="ok">\u2713 70 guides unlocked \u00b7 20 free tools ready</span>',
+'<span class="ok">\u2713 Your lab is legal. Your skills are real.</span>'
+];
+var phTi=0,phBox=document.getElementById('phTerm');
+function phTypeLine(){
+if(phTi>=phLines.length){phBox.innerHTML+='<span class="ph-cursor"></span>';return;}
+var line=phLines[phTi];
+var tmp=document.createElement('div');tmp.innerHTML=line;var txt=tmp.textContent;
+var cur=document.createElement('div');phBox.appendChild(cur);
+var j=0;
+var iv=setInterval(function(){
+cur.textContent=txt.slice(0,j+1);j++;
+if(j>txt.length){clearInterval(iv);cur.innerHTML=line;phTi++;setTimeout(phTypeLine,220);}
+},14);
+}
+if(phBox)phTypeLine();
+var phScore=0,phAnswered=0,phFixes=[];
+function phAns(btn,pts){
+var q=btn.parentElement;
+q.querySelectorAll('button').forEach(function(b){b.disabled=true;});
+btn.classList.add('sel');
+if(pts===0)phFixes.push(q.getAttribute('data-fix'));
+phScore+=pts;phAnswered++;
+if(phAnswered===3){
+var r=document.getElementById('phQres');r.style.display='block';
+var guide={password:['پاس ورڈ سیکیورٹی گائیڈ','password-security-guide.html'],'2fa':['2FA مکمل گائیڈ','two-factor-authentication-guide.html'],phishing:['فشنگ سے حفاظت گائیڈ','phishing-protection.html']};
+var next=phFixes.length?guide[phFixes[0]]:['سائبر سیکیورٹی کیریئر روڈ میپ','../career/cybersecurity-career-roadmap.html'];
+r.innerHTML='<div class="score">سیکیورٹی اسکور: '+phScore+'/3 '+(phScore===3?' مضبوط!':phScore===2?' اچھا، 1 اصلاح باقی':' اصلاح کی ضرورت')+'</div><p>آپ کی پہلی اصلاح:</p><a href="'+next[1]+'">'+next[0]+' \u2192</a>';
+}
+}
+</script>
+<a class="ph-sticky" href="#quiz">سیکھنا شروع کریں (قانونی طریقے سے) ←</a>
+<a id="anwaar-ai-btn" href="https://anwaardigital.com/ai/?site=hub" target="_blank" rel="noopener" aria-label="Anwaar AI" style="position:fixed;right:16px;bottom:16px;z-index:9999;display:flex;align-items:center;background:#1a2b4a;color:#fff;text-decoration:none;font-family:system-ui,-apple-system,sans-serif;font-size:15px;font-weight:600;padding:12px 16px;border-radius:999px;box-shadow:0 4px 16px rgba(0,0,0,.35)">✦ Anwaar AI</a>
+<script>
+(function(){
+var TIPS=[
+"آج ہی اپنی ای میل کے لیے تصدیقی ایپ کے ساتھ ٹو فیکٹر تصدیق آن کریں — یہ پاس ورڈ لیک ہونے کے باوجود زیادہ تر اکاؤنٹ چوری روک دیتی ہے۔",
+"اپنا ای میل پاس ورڈ کہیں اور دوبارہ استعمال نہ کریں۔ آپ کی ای میل آپ کے باقی تمام اکاؤنٹس ری سیٹ کر سکتی ہے، اس لیے اسے اپنا الگ پاس ورڈ چاہیے۔",
+"کسی بھی 'فوری' پیغام میں لنک پر کلک کرنے سے پہلے بھیجنے والے کا اصلی ای میل پتہ چیک کریں — ڈسپلے نام جعلی ہو سکتا ہے۔",
+"اپنے فون اور ایپس کو اپ ڈیٹس آتے ہی اپ ڈیٹ کریں۔ زیادہ تر اپ ڈیٹس ان سیکیورٹی سوراخوں کو ٹھیک کرتی ہیں جنہیں حملہ آور پہلے سے جانتے ہیں۔",
+"چھوٹے پاس ورڈ کی بجائے چار بے ترتیب الفاظ کا پاس فریز استعمال کریں — لمبا مضبوط ہوتا ہے اور یاد رکھنا آسان۔",
+"اپنی تصاویر اور فائلوں کا بیک اپ لیں۔ رینسم ویئر کے خلاف بیک اپ ہی واحد یقینی دفاع ہے۔",
+"پبلک وائی فائی نجی نہیں ہوتا۔ اس پر بینکنگ یا حساس لاگ ان سے بچیں، یا قابل بھروسہ VPN استعمال کریں۔",
+"ایپ اجازتیں چیک کریں۔ ٹارچ ایپ کو آپ کے رابطوں یا آپ کی لوکیشن کی ضرورت نہیں۔",
+"اپنی اسکرین پن یا انگلی کے نشان سے لاک کریں، اور 30 سیکنڈ بعد لاک ہونے کی سیٹنگ کریں۔",
+"اگر 'آپ نے انعام جیتا' والا پیغام فیس یا بینک تفصیل مانگے تو یہ فراڈ ہے۔ اصلی انعامات کبھی پہلے ادائیگی نہیں مانگتے۔"
+];
+var now=new Date();
+var day=Math.floor((now-new Date(now.getFullYear(),0,0))/86400000);
+var el=document.getElementById('hubTipText');
+if(el)el.textContent=TIPS[day%TIPS.length];
+})();
+</script>
+<script src="../progress.js"></script>
+</body></html>
