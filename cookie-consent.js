@@ -6,6 +6,13 @@
 
   function loadGA() {
     if (window.__gaLoaded) return;
+    /* Direct gtag snippet is now on every page: if gtag.js is already
+       present, GA is already tracking — do not load/config a second time
+       (avoids double page_view). */
+    if (document.querySelector('script[src*="googletagmanager.com/gtag/js"]')) {
+      window.__gaLoaded = true;
+      return;
+    }
     window.__gaLoaded = true;
     window.dataLayer = window.dataLayer || [];
     window.gtag = function () { window.dataLayer.push(arguments); };
