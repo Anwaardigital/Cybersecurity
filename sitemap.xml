@@ -1,556 +1,546 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://anwaardigital.com/Cybersecurity/</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/</loc>
     <lastmod>2026-10-27</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/about.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/about.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/learning-path.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/learning-path.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/contact.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/contact.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/privacy.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/privacy.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/disclaimer.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/disclaimer.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/terms.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/terms.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/basics/secure-google-account-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/basics/secure-google-account-guide.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/basics/what-is-cybersecurity.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/basics/what-is-cybersecurity.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/basics/types-of-cyber-attacks.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/basics/types-of-cyber-attacks.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/basics/password-security-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/basics/password-security-guide.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/basics/two-factor-authentication-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/basics/two-factor-authentication-guide.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/basics/phishing-protection.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/basics/phishing-protection.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/basics/mobile-security.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/basics/mobile-security.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/hacking/what-is-penetration-testing.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/hacking/what-is-penetration-testing.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/hacking/penetration-testing-methodology.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/hacking/penetration-testing-methodology.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/hacking/nmap-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/hacking/nmap-guide.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/hacking/burp-suite-basics.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/hacking/burp-suite-basics.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/hacking/social-engineering-awareness.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/hacking/social-engineering-awareness.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/basics/smart-home-security-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/basics/smart-home-security-guide.html</loc>
     <lastmod>2026-10-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/tools/kali-linux-setup.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/tools/kali-linux-setup.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/tools/wireshark-basics.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/tools/wireshark-basics.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/tools/password-security-testing.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/tools/password-security-testing.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/tools/wireless-security-basics.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/tools/wireless-security-basics.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/tools/metasploit-basics-ethical.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/tools/metasploit-basics-ethical.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/career/how-to-become-pentester.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/career/how-to-become-pentester.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/career/cybersecurity-certifications-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/career/cybersecurity-certifications-guide.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/career/cybersecurity-career-roadmap.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/career/cybersecurity-career-roadmap.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/basics/ransomware-protection-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/basics/ransomware-protection-guide.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/basics/wifi-security-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/basics/wifi-security-guide.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/hacking/web-application-security-basics.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/hacking/web-application-security-basics.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/hacking/vulnerability-assessment-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/hacking/vulnerability-assessment-guide.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/tools/nmap-advanced-techniques.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/tools/nmap-advanced-techniques.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/tools/password-cracking-defense.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/tools/password-cracking-defense.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/career/cybersecurity-interview-preparation.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/career/cybersecurity-interview-preparation.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/career/bug-bounty-introduction.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/career/bug-bounty-introduction.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/sectools/index.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/sectools/index.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/sectools/password-strength-checker.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/sectools/password-strength-checker.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/sectools/hash-generator.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/sectools/hash-generator.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/sectools/password-generator.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/sectools/password-generator.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/sectools/base64-encoder.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/sectools/base64-encoder.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/sectools/phishing-url-analyzer.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/sectools/phishing-url-analyzer.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/sectools/ssl-certificate-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/sectools/ssl-certificate-guide.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/sectools/wifi-security-checklist.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/sectools/wifi-security-checklist.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/sectools/firewall-rules-explainer.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/sectools/firewall-rules-explainer.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/sectools/vpn-comparison-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/sectools/vpn-comparison-guide.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/sectools/twofa-setup-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/sectools/twofa-setup-guide.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/sectools/secure-backup-checklist.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/sectools/secure-backup-checklist.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/sectools/incident-response-playbook.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/sectools/incident-response-playbook.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/sectools/password-manager-comparison.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/sectools/password-manager-comparison.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/sectools/social-engineering-quiz.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/sectools/social-engineering-quiz.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/sectools/data-breach-response-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/sectools/data-breach-response-guide.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/sectools/secure-browsing-checklist.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/sectools/secure-browsing-checklist.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/sectools/email-security-analyzer.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/sectools/email-security-analyzer.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/sectools/ransomware-prevention-checklist.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/sectools/ransomware-prevention-checklist.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/sectools/privacy-settings-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/sectools/privacy-settings-guide.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/sectools/secure-deletion-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/sectools/secure-deletion-guide.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/glossary.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/glossary.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/faq.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/faq.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/basics/safe-online-shopping-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/basics/safe-online-shopping-guide.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/basics/kids-online-safety-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/basics/kids-online-safety-guide.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/basics/identity-theft-protection-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/basics/identity-theft-protection-guide.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/basics/social-media-privacy-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/basics/social-media-privacy-guide.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/basics/email-security-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/basics/email-security-guide.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/basics/vpn-explained-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/basics/vpn-explained-guide.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/basics/juice-jacking-usb-charging-risks-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/basics/juice-jacking-usb-charging-risks-guide.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/basics/sim-swapping-protection-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/basics/sim-swapping-protection-guide.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/basics/cloud-storage-security-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/basics/cloud-storage-security-guide.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/basics/browser-security-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/basics/browser-security-guide.html</loc>
     <lastmod>2026-10-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/basics/secure-messaging-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/basics/secure-messaging-guide.html</loc>
     <lastmod>2026-10-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/basics/remove-personal-info-from-google-search-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/basics/remove-personal-info-from-google-search-guide.html</loc>
     <lastmod>2026-10-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/basics/safe-online-banking-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/basics/safe-online-banking-guide.html</loc>
     <lastmod>2026-10-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/basics/qr-code-scams-quishing-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/basics/qr-code-scams-quishing-guide.html</loc>
     <lastmod>2026-10-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/basics/data-breach-recovery-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/basics/data-breach-recovery-guide.html</loc>
     <lastmod>2026-10-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/basics/ai-voice-clone-scams-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/basics/ai-voice-clone-scams-guide.html</loc>
     <lastmod>2026-10-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/basics/tech-support-scams-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/basics/tech-support-scams-guide.html</loc>
     <lastmod>2026-10-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/basics/ai-chatbot-privacy-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/basics/ai-chatbot-privacy-guide.html</loc>
     <lastmod>2026-10-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url>
-    <loc>https://anwaardigital.com/Cybersecurity/basics/crypto-investment-scams-guide.html</loc>
+    <loc>https://cybersechub.anwaardigital.com/basics/crypto-investment-scams-guide.html</loc>
     <lastmod>2026-10-25</lastmod>
   </url>
   <url>
-    <loc>https://anwaardigital.com/Cybersecurity/basics/bluetooth-security-guide.html</loc>
+    <loc>https://cybersechub.anwaardigital.com/basics/bluetooth-security-guide.html</loc>
     <lastmod>2026-10-25</lastmod>
   </url>
   <url>
-    <loc>https://anwaardigital.com/Cybersecurity/basics/fake-job-offers-employment-scams-guide.html</loc>
+    <loc>https://cybersechub.anwaardigital.com/basics/fake-job-offers-employment-scams-guide.html</loc>
     <lastmod>2026-10-26</lastmod>
   </url>
   <url>
-    <loc>https://anwaardigital.com/Cybersecurity/basics/fake-apps-play-store-guide.html</loc>
+    <loc>https://cybersechub.anwaardigital.com/basics/fake-apps-play-store-guide.html</loc>
     <lastmod>2026-10-15</lastmod>
   </url>
   <url>
-    <loc>https://anwaardigital.com/Cybersecurity/basics/romance-scams-protection-guide.html</loc>
+    <loc>https://cybersechub.anwaardigital.com/basics/romance-scams-protection-guide.html</loc>
     <lastmod>2026-10-26</lastmod>
   </url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/missions/index.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/missions/index.html</loc>
     <lastmod>2026-10-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/missions/mission-1.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/missions/mission-1.html</loc>
     <lastmod>2026-10-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/missions/mission-2.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/missions/mission-2.html</loc>
     <lastmod>2026-10-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/missions/mission-3.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/missions/mission-3.html</loc>
     <lastmod>2026-10-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/missions/mission-4.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/missions/mission-4.html</loc>
     <lastmod>2026-10-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/missions/mission-5.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/missions/mission-5.html</loc>
     <lastmod>2026-10-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url>
-    <loc>https://anwaardigital.com/Cybersecurity/basics/vishing-phone-scams-guide.html</loc>
+    <loc>https://cybersechub.anwaardigital.com/basics/vishing-phone-scams-guide.html</loc>
     <lastmod>2026-10-27</lastmod>
   </url>
   <url>
-    <loc>https://anwaardigital.com/Cybersecurity/basics/how-to-spot-fake-website-guide.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://anwaardigital.com/Cybersecurity/basics/password-manager-guide.html</loc>
-    <lastmod>2026-11-08</lastmod>
-  </url>
-  <url>
-    <loc>https://anwaardigital.com/Cybersecurity/basics/passkeys-explained-passwordless-login-guide.html</loc>
-    <lastmod>2026-11-09</lastmod>
-  </url>
-  <url>
-    <loc>https://anwaardigital.com/Cybersecurity/basics/public-wifi-safety-guide.html</loc>
+    <loc>https://cybersechub.anwaardigital.com/basics/public-wifi-safety-guide.html</loc>
     <lastmod>2026-11-06</lastmod>
   </url>
   <url>
-    <loc>https://anwaardigital.com/Cybersecurity/basics/hacked-social-media-account-recovery-guide.html</loc>
+    <loc>https://cybersechub.anwaardigital.com/basics/hacked-social-media-account-recovery-guide.html</loc>
     <lastmod>2026-10-27</lastmod>
   </url>
   <url>
-    <loc>https://anwaardigital.com/Cybersecurity/basics/safe-online-gaming-guide.html</loc>
+    <loc>https://cybersechub.anwaardigital.com/basics/safe-online-gaming-guide.html</loc>
     <lastmod>2026-10-28</lastmod>
   </url>
   <url>
-    <loc>https://anwaardigital.com/Cybersecurity/basics/public-computer-safety-guide.html</loc>
+    <loc>https://cybersechub.anwaardigital.com/basics/public-computer-safety-guide.html</loc>
     <lastmod>2026-10-28</lastmod>
   </url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/basics/nfc-contactless-payment-safety-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/basics/nfc-contactless-payment-safety-guide.html</loc>
     <lastmod>2026-10-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://anwaardigital.com/Cybersecurity/basics/wipe-old-phone-safely-before-selling-guide.html</loc>
+<url><loc>https://cybersechub.anwaardigital.com/basics/wipe-old-phone-safely-before-selling-guide.html</loc>
     <lastmod>2026-10-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://anwaardigital.com/Cybersecurity/basics/how-to-report-cybercrime-online-scams-guide.html</loc>
+<url><loc>https://cybersechub.anwaardigital.com/basics/how-to-report-cybercrime-online-scams-guide.html</loc>
     <lastmod>2026-10-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://anwaardigital.com/Cybersecurity/basics/deepfake-scams-protection-guide.html</loc>
+<url><loc>https://cybersechub.anwaardigital.com/basics/deepfake-scams-protection-guide.html</loc>
     <lastmod>2026-11-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://anwaardigital.com/Cybersecurity/basics/family-digital-safety-plan-guide.html</loc>
+<url><loc>https://cybersechub.anwaardigital.com/basics/family-digital-safety-plan-guide.html</loc>
     <lastmod>2026-11-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://anwaardigital.com/Cybersecurity/basics/how-to-spot-misinformation-fake-news-online-guide.html</loc>
+<url><loc>https://cybersechub.anwaardigital.com/basics/how-to-spot-misinformation-fake-news-online-guide.html</loc>
     <lastmod>2026-11-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>   <url>
-    <loc>https://anwaardigital.com/Cybersecurity/basics/biometric-security-fingerprint-face-unlock-guide.html</loc>
+    <loc>https://cybersechub.anwaardigital.com/basics/biometric-security-fingerprint-face-unlock-guide.html</loc>
     <lastmod>2026-11-04</lastmod>
   </url>
   <url>
-    <loc>https://anwaardigital.com/Cybersecurity/basics/clicked-phishing-link-recovery-guide.html</loc>
+    <loc>https://cybersechub.anwaardigital.com/basics/clicked-phishing-link-recovery-guide.html</loc>
     <lastmod>2026-11-05</lastmod>
   </url>
   <url>
-    <loc>https://anwaardigital.com/Cybersecurity/basics/youtube-channel-hack-recovery-guide.html</loc>
+    <loc>https://cybersechub.anwaardigital.com/basics/youtube-channel-hack-recovery-guide.html</loc>
     <lastmod>2026-11-05</lastmod>
   </url>
   <url>
-    <loc>https://anwaardigital.com/Cybersecurity/basics/instagram-tiktok-hack-recovery-guide.html</loc>
+    <loc>https://cybersechub.anwaardigital.com/basics/instagram-tiktok-hack-recovery-guide.html</loc>
     <lastmod>2026-11-05</lastmod>
   </url>
   <url>
-    <loc>https://anwaardigital.com/Cybersecurity/basics/brand-deal-scams-guide.html</loc>
+    <loc>https://cybersechub.anwaardigital.com/basics/brand-deal-scams-guide.html</loc>
     <lastmod>2026-11-05</lastmod>
   </url>
   <url>
-    <loc>https://anwaardigital.com/Cybersecurity/basics/fake-copyright-strike-emails-guide.html</loc>
+    <loc>https://cybersechub.anwaardigital.com/basics/fake-copyright-strike-emails-guide.html</loc>
     <lastmod>2026-11-05</lastmod>
   </url>
   <url>
-    <loc>https://anwaardigital.com/Cybersecurity/basics/two-factor-authentication-youtubers-guide.html</loc>
+    <loc>https://cybersechub.anwaardigital.com/basics/two-factor-authentication-youtubers-guide.html</loc>
     <lastmod>2026-11-05</lastmod>
   </url>
   <url>
-    <loc>https://anwaardigital.com/Cybersecurity/leaderboard.html</loc>
+    <loc>https://cybersechub.anwaardigital.com/leaderboard.html</loc>
     <lastmod>2026-11-05</lastmod>
   </url>
   <url>
-    <loc>https://anwaardigital.com/Cybersecurity/certificate.html</loc>
+    <loc>https://cybersechub.anwaardigital.com/certificate.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/verify.html</loc>
+    <lastmod>2026-11-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
     <lastmod>2026-11-05</lastmod>
   </url>
   <url>
-    <loc>https://anwaardigital.com/Cybersecurity/breach-news.html</loc>
+    <loc>https://cybersechub.anwaardigital.com/breach-news.html</loc>
     <lastmod>2026-11-05</lastmod>
   </url>
   <url>
-    <loc>https://anwaardigital.com/Cybersecurity/ur/index.html</loc>
+    <loc>https://cybersechub.anwaardigital.com/ur/index.html</loc>
     <lastmod>2026-11-05</lastmod>
   </url>
   <url>
-    <loc>https://anwaardigital.com/Cybersecurity/ur/youtube-channel-hack-recovery-guide.html</loc>
+    <loc>https://cybersechub.anwaardigital.com/ur/youtube-channel-hack-recovery-guide.html</loc>
     <lastmod>2026-11-05</lastmod>
   </url>
   <url>
-    <loc>https://anwaardigital.com/Cybersecurity/ur/instagram-tiktok-hack-recovery-guide.html</loc>
+    <loc>https://cybersechub.anwaardigital.com/ur/instagram-tiktok-hack-recovery-guide.html</loc>
     <lastmod>2026-11-05</lastmod>
   </url>
   <url>
-    <loc>https://anwaardigital.com/Cybersecurity/ur/brand-deal-scams-guide.html</loc>
+    <loc>https://cybersechub.anwaardigital.com/ur/brand-deal-scams-guide.html</loc>
     <lastmod>2026-11-05</lastmod>
   </url>
   <url>
-    <loc>https://anwaardigital.com/Cybersecurity/ur/fake-copyright-strike-emails-guide.html</loc>
+    <loc>https://cybersechub.anwaardigital.com/ur/fake-copyright-strike-emails-guide.html</loc>
     <lastmod>2026-11-05</lastmod>
   </url>
   <url>
-    <loc>https://anwaardigital.com/Cybersecurity/ur/two-factor-authentication-youtubers-guide.html</loc>
+    <loc>https://cybersechub.anwaardigital.com/ur/two-factor-authentication-youtubers-guide.html</loc>
     <lastmod>2026-11-05</lastmod>
   </url>
   <url>
-    <loc>https://anwaardigital.com/Cybersecurity/ur/what-is-cybersecurity.html</loc>
+    <loc>https://cybersechub.anwaardigital.com/ur/what-is-cybersecurity.html</loc>
     <lastmod>2026-11-05</lastmod>
   </url>
   <url>
-    <loc>https://anwaardigital.com/Cybersecurity/ur/types-of-cyber-attacks.html</loc>
+    <loc>https://cybersechub.anwaardigital.com/ur/types-of-cyber-attacks.html</loc>
     <lastmod>2026-11-05</lastmod>
   </url>
   <url>
-    <loc>https://anwaardigital.com/Cybersecurity/ur/password-security-guide.html</loc>
+    <loc>https://cybersechub.anwaardigital.com/ur/password-security-guide.html</loc>
     <lastmod>2026-11-05</lastmod>
   </url>
   <url>
-    <loc>https://anwaardigital.com/Cybersecurity/ur/two-factor-authentication-guide.html</loc>
+    <loc>https://cybersechub.anwaardigital.com/ur/two-factor-authentication-guide.html</loc>
     <lastmod>2026-11-05</lastmod>
   </url>
   <url>
-    <loc>https://anwaardigital.com/Cybersecurity/ur/phishing-protection.html</loc>
+    <loc>https://cybersechub.anwaardigital.com/ur/phishing-protection.html</loc>
     <lastmod>2026-11-05</lastmod>
   </url>
   <url>
-    <loc>https://anwaardigital.com/Cybersecurity/ur/mobile-security.html</loc>
+    <loc>https://cybersechub.anwaardigital.com/ur/mobile-security.html</loc>
     <lastmod>2026-11-05</lastmod>
   </url>
   <url>
-    <loc>https://anwaardigital.com/Cybersecurity/ur/wifi-security-guide.html</loc>
+    <loc>https://cybersechub.anwaardigital.com/ur/wifi-security-guide.html</loc>
     <lastmod>2026-11-05</lastmod>
   </url>
   <url>
-    <loc>https://anwaardigital.com/Cybersecurity/ur/ransomware-protection-guide.html</loc>
+    <loc>https://cybersechub.anwaardigital.com/ur/ransomware-protection-guide.html</loc>
     <lastmod>2026-11-05</lastmod>
   </url>
   <url>
-    <loc>https://anwaardigital.com/Cybersecurity/ur/secure-google-account-guide.html</loc>
+    <loc>https://cybersechub.anwaardigital.com/ur/secure-google-account-guide.html</loc>
     <lastmod>2026-11-05</lastmod>
   </url>
   <url>
-    <loc>https://anwaardigital.com/Cybersecurity/ur/hacked-social-media-account-recovery-guide.html</loc>
+    <loc>https://cybersechub.anwaardigital.com/ur/hacked-social-media-account-recovery-guide.html</loc>
     <lastmod>2026-11-05</lastmod>
   </url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/public-wifi-safety-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/public-wifi-safety-guide.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/clicked-phishing-link-recovery-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/clicked-phishing-link-recovery-guide.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/biometric-security-fingerprint-face-unlock-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/biometric-security-fingerprint-face-unlock-guide.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/how-to-spot-misinformation-fake-news-online-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/how-to-spot-misinformation-fake-news-online-guide.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/family-digital-safety-plan-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/family-digital-safety-plan-guide.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/deepfake-scams-protection-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/deepfake-scams-protection-guide.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/how-to-report-cybercrime-online-scams-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/how-to-report-cybercrime-online-scams-guide.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/wipe-old-phone-safely-before-selling-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/wipe-old-phone-safely-before-selling-guide.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/nfc-contactless-payment-safety-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/nfc-contactless-payment-safety-guide.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/public-computer-safety-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/public-computer-safety-guide.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/safe-online-gaming-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/safe-online-gaming-guide.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/vishing-phone-scams-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/vishing-phone-scams-guide.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/romance-scams-protection-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/romance-scams-protection-guide.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/fake-job-offers-employment-scams-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/fake-job-offers-employment-scams-guide.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/bluetooth-security-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/bluetooth-security-guide.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/crypto-investment-scams-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/crypto-investment-scams-guide.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/ai-chatbot-privacy-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/ai-chatbot-privacy-guide.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/tech-support-scams-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/tech-support-scams-guide.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/smart-home-security-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/smart-home-security-guide.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/ai-voice-clone-scams-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/ai-voice-clone-scams-guide.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/data-breach-recovery-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/data-breach-recovery-guide.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/qr-code-scams-quishing-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/qr-code-scams-quishing-guide.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/email-security-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/email-security-guide.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/kids-online-safety-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/kids-online-safety-guide.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/safe-online-shopping-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/safe-online-shopping-guide.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/identity-theft-protection-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/identity-theft-protection-guide.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/social-media-privacy-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/social-media-privacy-guide.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/vpn-explained-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/vpn-explained-guide.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/juice-jacking-usb-charging-risks-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/juice-jacking-usb-charging-risks-guide.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/sim-swapping-protection-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/sim-swapping-protection-guide.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/cloud-storage-security-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/cloud-storage-security-guide.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/browser-security-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/browser-security-guide.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/secure-messaging-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/secure-messaging-guide.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/remove-personal-info-from-google-search-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/remove-personal-info-from-google-search-guide.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/safe-online-banking-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/safe-online-banking-guide.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/fake-apps-play-store-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/fake-apps-play-store-guide.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/what-is-penetration-testing.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/what-is-penetration-testing.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/penetration-testing-methodology.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/penetration-testing-methodology.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/nmap-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/nmap-guide.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/burp-suite-basics.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/burp-suite-basics.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/social-engineering-awareness.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/social-engineering-awareness.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/web-application-security-basics.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/web-application-security-basics.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/vulnerability-assessment-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/vulnerability-assessment-guide.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/kali-linux-setup.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/kali-linux-setup.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/wireshark-basics.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/wireshark-basics.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/password-security-testing.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/password-security-testing.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/wireless-security-basics.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/wireless-security-basics.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/metasploit-basics-ethical.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/metasploit-basics-ethical.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/nmap-advanced-techniques.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/nmap-advanced-techniques.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/password-cracking-defense.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/password-cracking-defense.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/how-to-become-pentester.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/how-to-become-pentester.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/cybersecurity-certifications-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/cybersecurity-certifications-guide.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/cybersecurity-career-roadmap.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/cybersecurity-career-roadmap.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/cybersecurity-interview-preparation.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/cybersecurity-interview-preparation.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/bug-bounty-introduction.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/bug-bounty-introduction.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/password-strength-checker.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/password-strength-checker.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/hash-generator.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/hash-generator.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/password-generator.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/password-generator.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/base64-encoder.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/base64-encoder.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/phishing-url-analyzer.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/phishing-url-analyzer.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/ssl-certificate-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/ssl-certificate-guide.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/wifi-security-checklist.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/wifi-security-checklist.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/firewall-rules-explainer.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/firewall-rules-explainer.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/vpn-comparison-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/vpn-comparison-guide.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/twofa-setup-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/twofa-setup-guide.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/secure-backup-checklist.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/secure-backup-checklist.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/incident-response-playbook.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/incident-response-playbook.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/password-manager-comparison.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/password-manager-comparison.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/social-engineering-quiz.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/social-engineering-quiz.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/data-breach-response-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/data-breach-response-guide.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/secure-browsing-checklist.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/secure-browsing-checklist.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/email-security-analyzer.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/email-security-analyzer.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/ransomware-prevention-checklist.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/ransomware-prevention-checklist.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/privacy-settings-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/privacy-settings-guide.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/secure-deletion-guide.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/secure-deletion-guide.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/mission-1.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/mission-1.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/mission-2.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/mission-2.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/mission-3.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/mission-3.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/mission-4.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/mission-4.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/mission-5.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/mission-5.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/glossary.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/glossary.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/faq.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/faq.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/about.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/about.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/contact.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/contact.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/privacy.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/privacy.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/terms.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/terms.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/disclaimer.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/disclaimer.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/leaderboard.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/leaderboard.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/certificate.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/certificate.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/breach-news.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/breach-news.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/learning-path.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/learning-path.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/sectools.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/sectools.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/ur/missions.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/ur/missions.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/exams/</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/exams/</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/exams/exam-01.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/exams/exam-01.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/exams/exam-02.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/exams/exam-02.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/exams/exam-03.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/exams/exam-03.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/exams/exam-04.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/exams/exam-04.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/exams/exam-05.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/exams/exam-05.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/exams/exam-06.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/exams/exam-06.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/exams/exam-07.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/exams/exam-07.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/exams/exam-08.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/exams/exam-08.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/exams/exam-09.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/exams/exam-09.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/exams/exam-10.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/exams/exam-10.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/exams/exam-11.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/exams/exam-11.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/exams/exam-12.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/exams/exam-12.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/exams/exam-13.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/exams/exam-13.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/exams/exam-14.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/exams/exam-14.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/exams/exam-15.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/exams/exam-15.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://anwaardigital.com/Cybersecurity/exams/certificate.html</loc>
+  <url><loc>https://cybersechub.anwaardigital.com/exams/certificate.html</loc>
     <lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>

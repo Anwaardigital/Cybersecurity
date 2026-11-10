@@ -68,10 +68,12 @@
 <path d="M60.00,37.00 L63.23,45.55 L72.36,45.98 L65.23,51.70 L67.64,60.52 L60.00,55.50 L52.36,60.52 L54.77,51.70 L47.64,45.98 L56.77,45.55 Z" fill="#8a6d1a" stroke="#5c430a" stroke-width="0.8"/>
 <text x="60" y="76" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="8" font-weight="700" fill="#5c430a">EST. 2026</text>
 <g clip-path="url(#sealClip)"><ellipse cx="42" cy="34" rx="36" ry="13" fill="url(#shineGrad)" transform="rotate(-28 42 34)"/></g>
-</svg><div class="ribbon"></div></div><div class="sigs"><div><div class="sig-name">Director, CyberSec Hub</div>Director</div><div><div class="sig-name">Registrar</div>Registrar</div></div><div class="verifyline">VERIFY AT ANWAARDIGITAL.COM/CYBERSECURITY</div><div class="fineprint">This certificate is issued by CyberSec Hub (Anwaar Digital) for completing its private training program. It is not a government-recognized qualification.</div></div></div></div></main><script src="exam-lib.js"></script>
+</svg><div class="ribbon"></div></div><div class="sigs"><div><div class="sig-name">Director, CyberSec Hub</div>Director</div><div><div class="sig-name">Registrar</div>Registrar</div></div><div class="verifyline">VERIFY AT CYBERSECHUB.ANWAARDIGITAL.COM/VERIFY.HTML</div><div class="fineprint">This certificate is issued by CyberSec Hub (Anwaar Digital) for completing its private training program. It is not a government-recognized qualification.</div></div></div></div></main><script src="exam-lib.js"></script>
 <script>
 (function(){
   var L = EXAM_LIB, KEY = L.KEY;
+  var WORKER = 'https://hub-cert-verify.malikanwaarapps.workers.dev';
+  var VERIFY_PAGE = 'https://cybersechub.anwaardigital.com/verify.html';
   function load(){ try{ var r=localStorage.getItem(KEY); if(r){ var s=JSON.parse(r); if(s&&s.exams) return s; } }catch(e){} return L.blankState(); }
   function save(s){ try{ localStorage.setItem(KEY, JSON.stringify(s)); }catch(e){} }
   var state = load();
@@ -84,14 +86,70 @@
       'The certificate is awarded only after passing all 15 exams. ' + rem.length + ' exam(s) still remain: Exam ' + rem.join(', Exam ') + '.';
     return;
   }
-  if (!state.certId) { state.certId = 'CSH-' + String(100000 + Math.floor(Math.random() * 900000)); save(state); }
   wrap.style.display = '';
   document.getElementById('certDate').textContent = L.fmtDate(state.completedDate);
-  document.getElementById('certId').textContent = state.certId;
+  if (state.certId) { document.getElementById('certId').textContent = state.certId; }
+  else { document.getElementById('certId').textContent = 'Issuing…'; }
   var nameInput = document.getElementById('certName');
   var nameOut = document.getElementById('certNameOut');
   nameInput.value = state.name || '';
-  function syncName(){ var v = nameInput.value.trim(); nameOut.textContent = v; state.name = v; save(state); }
+  // --- verification registration (server-side, via Worker + KV) ---
+  var statusEl = document.createElement('p');
+  statusEl.id = 'certVerifyStatus';
+  statusEl.className = 'no-print';
+  statusEl.style.cssText = 'text-align:center;margin-top:10px';
+  wrap.parentNode.insertBefore(statusEl, wrap);
+  function verifyLink(){ return VERIFY_PAGE + '?id=' + encodeURIComponent(state.certId); }
+  function setVerifyLine(){ var v = document.querySelector('.verifyline'); if (v && state.certId) v.textContent = 'VERIFY AT CYBERSECHUB.ANWAARDIGITAL.COM/VERIFY.HTML?ID=' + state.certId; }
+  function showRegistered(){
+    setVerifyLine();
+    statusEl.innerHTML = '&#10003; Registered for verification — <a href="' + verifyLink() + '" target="_blank" rel="noopener">Verify this certificate</a>';
+  }
+  var registering = false;
+  function maybeRegister(){
+    if (state.certRegistered) { showRegistered(); return; }
+    var name = (state.name || '').trim();
+    if (!name) {
+      statusEl.textContent = 'Enter your name above — your certificate will be registered for verification once your name is set.';
+      return;
+    }
+    if (registering) return;
+    registering = true;
+    statusEl.textContent = 'Registering your certificate for verification…';
+    var payload = { name: name, program: 'exams-15', completedDate: state.completedDate };
+    if (state.certId) payload.legacyId = state.certId;
+    fetch(WORKER + '/issue', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
+      .then(function (r) { return r.json(); })
+      .then(function (j) {
+        registering = false;
+        if (j && j.ok) {
+          state.certId = j.certId; state.certRegistered = true; state.certName = name; save(state);
+          document.getElementById('certId').textContent = state.certId;
+          showRegistered();
+        } else if (j && j.error === 'id_taken') {
+          statusEl.innerHTML = 'This certificate ID is already registered to another name. <a href="' + VERIFY_PAGE + '">Check it on the verification page</a>.';
+        } else {
+          statusEl.innerHTML = 'Verification registration did not complete (' + ((j && j.error) || 'unknown error') + '). Your certificate is still valid on this device — it will be registered when you open this page again. <a href="' + VERIFY_PAGE + '">Verify a certificate</a>';
+        }
+      })
+      .catch(function () {
+        registering = false;
+        if (!state.certId) {
+          state.certId = 'CSH-' + String(100000 + Math.floor(Math.random() * 900000)); save(state);
+          document.getElementById('certId').textContent = state.certId;
+        }
+        statusEl.innerHTML = 'Could not reach the verification service right now. Your certificate is still valid on this device — it will be registered when you open this page again. <a href="' + verifyLink() + '" target="_blank" rel="noopener">Try verifying it here</a>';
+      });
+  }
+  function syncName(){
+    var v = nameInput.value.trim(); nameOut.textContent = v; state.name = v; save(state);
+    if (state.certRegistered && state.certName && v !== state.certName) {
+      var cn = state.certName.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+      statusEl.innerHTML = '&#10003; Registered for verification under the name it was issued with (<b>' + cn + '</b>). The name on the certificate can still be edited here, but verification always shows the issued name. — <a href="' + verifyLink() + '" target="_blank" rel="noopener">Verify this certificate</a>';
+    } else {
+      maybeRegister();
+    }
+  }
   nameInput.addEventListener('input', syncName);
   syncName();
 })();
