@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Revoke a Certificate (Admin) — CyberSec Hub</title>
+<meta name="description" content="Admin only: revoke a CyberSec Hub certificate so it no longer verifies as valid.">
+<link rel="stylesheet" href="../style.css">
+<link rel="canonical" href="https://cybersechub.anwaardigital.com/admin/revoke.html">
+</head>
+<body>
+<nav class="navbar"><div class="nav-inner">
+<a href="../index.html" class="brand"><span class="brand-icon"></span><span>CyberSec <span class="green">Hub</span></span></a>
+<div class="nav-actions"><button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark and light theme"><span class="theme-label">Light</span></button></div>
+<ul class="nav-links" id="navLinks">
+<li><a href="../index.html">Home</a></li>
+<li><a href="../verify.html">Verify a Certificate</a></li>
+</ul></div></nav>
+<script>
+(function(){try{if(localStorage.getItem('hubTheme')==='light'){document.body.classList.add('light');}}catch(e){}})();
+function toggleTheme(){var b=document.body;var light=b.classList.toggle('light');try{localStorage.setItem('hubTheme',light?'light':'dark');}catch(e){}var lb=document.querySelector('.theme-label');if(lb)lb.textContent=light?'Dark':'Light';}
+(function(){var btn=document.querySelector('.theme-toggle');if(!btn)return;var light=document.body.classList.contains('light');var lb=btn.querySelector('.theme-label');if(lb)lb.textContent=light?'Dark':'Light';})();
+</script><main class="page-wrap">
+<h1>Revoke a Certificate</h1><p><em>Admin only — this page is not linked from the site navigation.</em></p>
+<p>Revoking a certificate makes it show as <strong>REVOKED</strong> on the <a href="../verify.html" style="color:var(--red)">verification page</a>. Revocation cannot be undone from this page. Keep this URL and the admin secret private.</p>
+<div class="tool-card">
+<div class="tool-field"><label for="revokeId">Certificate ID</label>
+<input type="text" id="revokeId" placeholder="e.g. CSH-2026-123456-42 or CSH-LP-2026-123456-42" maxlength="30" autocomplete="off"></div>
+<div class="tool-field"><label for="revokeReason">Reason (optional, shown only in our records)</label>
+<input type="text" id="revokeReason" placeholder="e.g. issued by mistake" maxlength="200" autocomplete="off"></div>
+<div class="tool-field"><label for="revokeSecret">Admin secret</label>
+<input type="password" id="revokeSecret" placeholder="Enter the admin secret" autocomplete="off"></div>
+<div class="tool-row"><button class="btn btn-green" type="button" onclick="revokeCert()">Revoke certificate</button></div>
+</div>
+<div id="revokeResult"></div>
+</main>
+<footer class="footer"><div class="container">
+<div class="footer-brand"> CyberSec <span class="green">Hub</span></div>
+<p>Learn cybersecurity the ethical, legal way.</p>
+<p class="copyright">© 2026 CyberSec Hub by Anwaar Digital. All rights reserved.</p>
+</div></footer>
+<script>
+var REVOKE_WORKER = 'https://hub-cert-verify.malikanwaarapps.workers.dev';
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+function showResult(html){ document.getElementById('revokeResult').innerHTML = html; }
+function revokeCert(){
+  var id = document.getElementById('revokeId').value.trim().toUpperCase();
+  var reason = document.getElementById('revokeReason').value.trim();
+  var secret = document.getElementById('revokeSecret').value;
+  if(!id){ showResult('<div class="tip-box">Please enter a certificate ID first.</div>'); return; }
+  if(!secret){ showResult('<div class="tip-box">Please enter the admin secret.</div>'); return; }
+  document.getElementById('revokeId').value = id;
+  showResult('<div class="tip-box">Revoking…</div>');
+  fetch(REVOKE_WORKER + '/revoke', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id: id, reason: reason, secret: secret }) })
+    .then(function(r){ return r.json(); })
+    .then(function(j){
+      if(j && j.ok && j.revoked && j.already){
+        showResult('<div class="tip-box"><strong>ALREADY REVOKED.</strong> The certificate <b>' + esc(id) + '</b> was already revoked.</div>');
+      } else if(j && j.ok && j.revoked){
+        showResult('<div class="tip-box"><strong>REVOKED.</strong> The certificate <b>' + esc(id) + '</b> is now revoked and will show as REVOKED on the verification page.</div>');
+      } else if(j && j.error === 'not_found'){
+        showResult('<div class="tip-box"><strong>NOT FOUND.</strong> No certificate with the ID <b>' + esc(id) + '</b> exists.</div>');
+      } else if(j && j.error === 'wrong_secret'){
+        showResult('<div class="tip-box"><strong>WRONG SECRET.</strong> The admin secret is incorrect. Check it and try again.</div>');
+      } else if(j && j.error === 'invalid_format'){
+        showResult('<div class="tip-box"><strong>INVALID ID.</strong> <b>' + esc(id) + '</b> does not look like a CyberSec Hub certificate ID.</div>');
+      } else if(j && j.error === 'revoke_not_configured'){
+        showResult('<div class="tip-box"><strong>NOT CONFIGURED.</strong> Revocation is not set up on the server yet.</div>');
+      } else if(j && j.error === 'rate_limited'){
+        showResult('<div class="tip-box">Too many failed attempts. Please try again tomorrow.</div>');
+      } else {
+        showResult('<div class="tip-box">Could not revoke this ID right now (' + esc((j && j.error) || 'unknown error') + '). Please try again in a moment.</div>');
+      }
+    })
+    .catch(function(){
+      showResult('<div class="tip-box">Could not reach the verification service. Please check your connection and try again.</div>');
+    });
+}
+document.getElementById('revokeId').addEventListener('keydown', function(e){ if(e.key === 'Enter'){ revokeCert(); } });
+document.getElementById('revokeSecret').addEventListener('keydown', function(e){ if(e.key === 'Enter'){ revokeCert(); } });
+</script>
+</body></html>

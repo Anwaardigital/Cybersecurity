@@ -47,7 +47,7 @@ function toggleTheme(){var b=document.body;var light=b.classList.toggle('light')
 (function(){var btn=document.querySelector('.theme-toggle');if(!btn)return;var light=document.body.classList.contains('light');var lb=btn.querySelector('.theme-label');if(lb)lb.textContent=light?'Dark':'Light';})();
 </script><main class="page-wrap">
 <h1>Verify a Certificate</h1><p><em>Last updated: 10 November 2026</em></p>
-<p>Enter a CyberSec Hub certificate ID to check whether it is genuine. A real certificate was issued only after passing all 15 exams of the CyberSec Hub Complete Training Program.</p>
+<p>Enter a CyberSec Hub certificate ID to check whether it is genuine. A real certificate was issued by CyberSec Hub — either after passing all 15 exams of the Complete Training Program, or after finishing a CyberSec Hub learning path.</p>
 <div class="tool-card">
 <div class="tool-field"><label for="verifyId">Certificate ID</label>
 <input type="text" id="verifyId" placeholder="e.g. CSH-2026-123456-42" maxlength="30" autocomplete="off"></div>
@@ -55,7 +55,7 @@ function toggleTheme(){var b=document.body;var light=b.classList.toggle('light')
 </div>
 <div id="verifyResult"></div>
 <div class="ethical-box"><strong>Please note:</strong> this check confirms the certificate ID was issued by CyberSec Hub with the name and date shown. The certificate confirms completion of a free self-paced training program. It is <strong>not a government-recognized qualification</strong> and not a professional certification.</div>
-<p class="small">Finished all 15 exams? Your certificate is on the <a href="exams/certificate.html" style="color:var(--red)">certificate page</a>. Certificates are registered for verification automatically when you open your certificate page.</p>
+<p class="small">Finished all 15 exams? Your certificate is on the <a href="exams/certificate.html" style="color:var(--red)">certificate page</a>. Finished a learning path? Your certificate is on the <a href="certificate.html" style="color:var(--red)">learning path certificate page</a>. Certificates are registered for verification automatically when you open your certificate page.</p>
 </main>
 <footer class="footer"><div class="container">
 <div class="footer-brand"> CyberSec <span class="green">Hub</span></div>
@@ -93,15 +93,17 @@ function verifyCert(){
     .then(function(r){ return r.json(); })
     .then(function(j){
       if(j && j.valid){
+        var typeLine = j.certType ? '<p>Certificate type: <b>' + esc(j.certType === 'learning-path' ? 'Learning Path' : '15-Exam Program') + '</b></p>' : '';
         showResult('<div class="cert-frame"><p style="letter-spacing:2px;font-weight:700;color:var(--green)">✓ VALID CERTIFICATE</p>'
           + '<p>This certificate was issued by CyberSec Hub.</p>'
           + '<div class="cert-name">' + esc(j.name) + '</div>'
           + '<p>' + esc(j.program) + '</p>'
+          + typeLine
           + '<p>Issued on ' + esc(j.issued) + ' &middot; Certificate ID: <b>' + esc(j.certId) + '</b></p></div>');
       } else if(j && j.reason === 'not_found'){
         showResult('<div class="tip-box"><strong>NOT FOUND.</strong> No certificate with the ID <b>' + esc(id) + '</b> was issued by CyberSec Hub. Check the ID and try again — it may be a typing mistake or a forged certificate.</div>');
       } else if(j && j.reason === 'invalid_format'){
-        showResult('<div class="tip-box"><strong>INVALID ID.</strong> <b>' + esc(id) + '</b> does not look like a CyberSec Hub certificate ID. Real IDs look like <b>CSH-2026-123456-42</b> or <b>CSH-123456</b>.</div>');
+        showResult('<div class="tip-box"><strong>INVALID ID.</strong> <b>' + esc(id) + '</b> does not look like a CyberSec Hub certificate ID. Real IDs look like <b>CSH-2026-123456-42</b>, <b>CSH-LP-2026-123456-42</b> or <b>CSH-123456</b>.</div>');
       } else if(j && j.reason === 'revoked'){
         showResult('<div class="tip-box"><strong>REVOKED.</strong> The certificate <b>' + esc(id) + '</b> was issued by CyberSec Hub but has been revoked and is no longer valid.</div>');
       } else {

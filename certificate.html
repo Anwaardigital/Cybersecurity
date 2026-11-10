@@ -18,11 +18,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Certificate of Completion — CyberSec Hub</title>
-<meta name="description" content="Finish a CyberSec Hub learning path and earn a printable certificate with your name on it. Your name is stored in your browser only.">
+<meta name="description" content="Finish a CyberSec Hub learning path and earn a printable, verifiable certificate with your name on it. Progress is stored in your browser; issuing a verifiable certificate sends your name, path and completion date to our verification service.">
 <link rel="stylesheet" href="style.css">
 <link rel="canonical" href="https://cybersechub.anwaardigital.com/certificate.html">
 <meta property="og:title" content="Certificate of Completion — CyberSec Hub">
-<meta property="og:description" content="Finish a CyberSec Hub learning path and earn a printable certificate with your name on it. Your name is stored in your browser only.">
+<meta property="og:description" content="Finish a CyberSec Hub learning path and earn a printable, verifiable certificate with your name on it. Progress is stored in your browser; issuing a verifiable certificate sends your name, path and completion date to our verification service.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://cybersechub.anwaardigital.com/certificate.html">
 <meta property="og:site_name" content="CyberSec Hub">
@@ -47,7 +47,7 @@ function toggleTheme(){var b=document.body;var light=b.classList.toggle('light')
 (function(){var btn=document.querySelector('.theme-toggle');if(!btn)return;var light=document.body.classList.contains('light');var lb=btn.querySelector('.theme-label');if(lb)lb.textContent=light?'Dark':'Light';})();
 </script><main class="page-wrap">
 <h1> Certificate of Completion</h1><p><em>Last updated: 5 November 2026</em></p>
-<p>Finish every guide in a learning path and earn a printable certificate with your name on it. Your name is stored <strong>only in your own browser</strong> — nothing is sent to any server.</p>
+<p>Finish every guide in a learning path and earn a printable certificate with your name on it. Your progress is stored <strong>only in your own browser</strong>. If you generate a verifiable certificate, your name, the learning path and the completion date are sent to our verification service so the certificate can be checked — nothing else is sent.</p>
 <div class="ethical-box"><strong> Please read:</strong> this certificate confirms you completed a self-paced learning path on CyberSec Hub. It is <strong>not a government-recognized qualification</strong> and not a professional certification. Do not present it as a formal credential.</div>
 <div class="tool-card">
 <div class="tool-field"><label for="certName">Your name (as it should appear on the certificate)</label>
@@ -120,8 +120,68 @@ function checkCert(){
     +'<p>for completing the self-paced learning path</p>'
     +'<div class="cert-path">'+esc(path.name)+' ('+path.steps.length+' guides)</div>'
     +'<p>Completed on '+esc(today)+'</p>'
+    +'<p>Certificate ID: <b id="lpCertId">Registering…</b></p>'
     +'<p style="font-size:.88rem">This certificate confirms completion of a free self-paced learning path on CyberSec Hub. It is not a government-recognized qualification.</p></div>'
-    +'<p class="no-print" style="text-align:center"><button class="btn btn-green" type="button" onclick="window.print()">Print / Save as PDF</button></p>';
+    +'<p class="no-print" style="text-align:center"><button class="btn btn-green" type="button" onclick="window.print()">Print / Save as PDF</button></p>'
+    +'<div id="lpVerifyStatus" class="no-print" style="text-align:center;margin-top:10px"></div>';
+  registerLpCert(name, key, path.name);
+}
+// --- verification registration (server-side, via Worker + KV) ---
+// Mirrors the 15-exam certificate: the certificate is registered once, with
+// a unique verifiable ID (CSH-LP-YYYY-NNNNNN-CC). One record per path, kept
+// in localStorage under hubLpCertV1. If the Worker is unreachable, a local
+// ID is generated (valid checksum) and registration retries next visit.
+var LP_WORKER = 'https://hub-cert-verify.malikanwaarapps.workers.dev';
+var LP_VERIFY_PAGE = 'https://cybersechub.anwaardigital.com/verify.html';
+var LP_STORE_KEY = 'hubLpCertV1';
+var LP_WEIGHTS = [7, 3, 11, 5, 13, 2];
+function lpChecksum(digits){ var s=0; for(var i=0;i<6;i++){ s += Number(digits[i]) * LP_WEIGHTS[i]; } return String(s % 97).padStart(2, '0'); }
+function lpLocalId(){
+  var d=''; for(var i=0;i<6;i++){ d += String(Math.floor(Math.random()*10)); }
+  return 'CSH-LP-' + new Date().getUTCFullYear() + '-' + d + '-' + lpChecksum(d);
+}
+function lpLoadStore(){ try{ var r=localStorage.getItem(LP_STORE_KEY); if(r){ var s=JSON.parse(r); if(s&&typeof s==='object') return s; } }catch(e){} return {}; }
+function lpSaveStore(s){ try{ localStorage.setItem(LP_STORE_KEY, JSON.stringify(s)); }catch(e){} }
+function registerLpCert(name, pathKey, pathName){
+  var statusEl = document.getElementById('lpVerifyStatus');
+  var idEl = document.getElementById('lpCertId');
+  if(!statusEl) return;
+  var store = lpLoadStore();
+  var rec = store[pathKey] || {};
+  var verifyLink = function(){ return LP_VERIFY_PAGE + '?id=' + encodeURIComponent(rec.certId); };
+  function showRegistered(){
+    if(idEl) idEl.textContent = rec.certId;
+    statusEl.innerHTML = '&#10003; Registered for verification — <a href="' + verifyLink() + '" target="_blank" rel="noopener">Verify this certificate</a>';
+  }
+  if(rec.certRegistered && rec.certId){
+    if(rec.certName && rec.certName !== name){
+      if(idEl) idEl.textContent = rec.certId;
+      statusEl.innerHTML = '&#10003; Registered for verification under the name it was issued with (<b>' + esc(rec.certName) + '</b>). Verification always shows the issued name. — <a href="' + verifyLink() + '" target="_blank" rel="noopener">Verify this certificate</a>';
+    } else {
+      showRegistered();
+    }
+    return;
+  }
+  statusEl.textContent = 'Registering your certificate for verification…';
+  var payload = { name: name, program: 'lp-' + pathKey, completedDate: new Date().toISOString().slice(0, 10) };
+  if(rec.certId) payload.legacyId = rec.certId;
+  fetch(LP_WORKER + '/issue', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
+    .then(function(r){ return r.json(); })
+    .then(function(j){
+      if(j && j.ok){
+        rec.certId = j.certId; rec.certRegistered = true; rec.certName = name; store[pathKey] = rec; lpSaveStore(store);
+        showRegistered();
+      } else if(j && j.error === 'id_taken'){
+        statusEl.innerHTML = 'This certificate ID is already registered to another name. <a href="' + LP_VERIFY_PAGE + '">Check it on the verification page</a>.';
+      } else {
+        statusEl.innerHTML = 'Verification registration did not complete (' + ((j && j.error) || 'unknown error') + '). Your certificate is still valid on this device — it will be registered when you open this page again. <a href="' + LP_VERIFY_PAGE + '">Verify a certificate</a>';
+      }
+    })
+    .catch(function(){
+      if(!rec.certId){ rec.certId = lpLocalId(); store[pathKey] = rec; lpSaveStore(store); }
+      if(idEl) idEl.textContent = rec.certId;
+      statusEl.innerHTML = 'Could not reach the verification service right now. Your certificate is still valid on this device — it will be registered when you open this page again. <a href="' + LP_VERIFY_PAGE + '?id=' + encodeURIComponent(rec.certId) + '" target="_blank" rel="noopener">Try verifying it here</a>';
+    });
 }
 </script>
 </body></html>
