@@ -61,8 +61,9 @@ var files={
 'server.log':'[10:02] user guest logged in\n[10:05] WARNING: old backup file "old-config.bak" still on server — contains credentials?\n[10:09] user guest logged out',
 'users.txt':'admin\nguest\ntest'
 };
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
 function print(html){var d=document.createElement('div');d.innerHTML=html;term.appendChild(d);term.scrollTop=term.scrollHeight;}
-function printCmd(c){print('<span class="cmd">➜ ~ </span>'+c);}
+function printCmd(c){print('<span class="cmd">➜ ~ </span>'+esc(c));}
 function setScore(){document.getElementById('score').textContent='Score: '+score;}
 function runCmd(raw){
 var c=(raw||'').trim();
@@ -101,7 +102,7 @@ print('<span class="cmd">submit FLAG{first_blood_2026}</span>');
 return;
 }
 if(files[f]){print(files[f].replace(/\n/g,'<br>'));return;}
-print('<span class="dim">No such file: '+f+'. Type ls to see files.</span>');
+print('<span class="dim">No such file: '+esc(f)+'. Type ls to see files.</span>');
 return;
 }
 if(low.indexOf('submit')===0 || low.indexOf('flag{')!==-1){
