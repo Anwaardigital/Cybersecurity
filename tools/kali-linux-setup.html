@@ -20,11 +20,11 @@
 <title>Kali Linux Setup Guide: Build Your Ethical Hacking Lab</title>
 <meta name="description" content="Install Kali Linux safely in a virtual machine and build your own isolated security lab for legal, ethical practice.">
 <link rel="stylesheet" href="../style.css">
-<link rel="canonical" href="https://anwaardigital.com/Cybersecurity/tools/kali-linux-setup.html">
+<link rel="canonical" href="https://cybersechub.anwaardigital.com/tools/kali-linux-setup.html">
 <meta property="og:title" content="Kali Linux Setup Guide: Build Your Ethical Hacking Lab">
 <meta property="og:description" content="Install Kali Linux safely in a virtual machine and build your own isolated security lab for legal, ethical practice.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://anwaardigital.com/Cybersecurity/tools/kali-linux-setup.html">
+<meta property="og:url" content="https://cybersechub.anwaardigital.com/tools/kali-linux-setup.html">
 <meta property="og:site_name" content="CyberSec Hub">
 <meta name="twitter:card" content="summary_large_image">
 <meta property="og:image" content="https://cybersechub.anwaardigital.com/cyber-icon-512.png">
@@ -41,13 +41,13 @@
   "publisher": {
     "@type": "Organization",
     "name": "CyberSec Hub",
-    "url": "https://anwaardigital.com/Cybersecurity/"
+    "url": "https://cybersechub.anwaardigital.com/"
   },
   "datePublished": "2026-10-14",
   "dateModified": "2026-10-15",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://anwaardigital.com/Cybersecurity/tools/kali-linux-setup.html"
+    "@id": "https://cybersechub.anwaardigital.com/tools/kali-linux-setup.html"
   }
 }
 </script>
@@ -73,6 +73,15 @@
 <p class="small">Last updated: 5 November 2026</p><div class="article-meta">By CyberSec Hub · 10 min read</div></header>
 <main class="article-body"><div class="ethical-box"><strong> Ethical Use Only:</strong> Only test systems you own or have <strong>written permission</strong> to test. Unauthorized hacking is illegal in Pakistan and worldwide. Everything here is for defensive security education and authorized testing only.</div>
 <p><strong>Kali Linux</strong> is the most famous operating system for security professionals — a Linux distribution pre-loaded with hundreds of security testing tools. This guide shows you how to set it up <strong>safely in a virtual machine</strong> so you can learn on an isolated lab without risking your main computer or touching anyone else's systems.</p>
+<div class="tip-box"><h2>What You Will Learn</h2>
+<ul>
+<li>Understand why a Virtual Machine (Not Your Main System)</li>
+<li>Understand what You Need</li>
+<li>Understand step-by-Step Setup</li>
+<li>Configure Your Lab Network Safely</li>
+<li>Understand essential First Tools to Explore (On Your Lab Only)</li>
+</ul></div>
+
 
 <h2>Why a Virtual Machine (Not Your Main System)</h2>
 <p>Security tools are powerful, and mistakes happen while learning. A <strong>virtual machine (VM)</strong> runs Kali as a guest inside your normal operating system — completely isolated. If something breaks, you delete the VM and start over; your real computer is untouched. This isolation is non-negotiable for ethical practice.</p>
@@ -99,13 +108,13 @@
 <ul>
 <li>Use VirtualBox's <strong>Host-only</strong> or <strong>internal network</strong> mode for practice targets, so lab traffic never reaches your real network or the internet.</li>
 <li>Never bridge your attack VM directly to networks you do not fully control.</li>
-<li>Install your practice targets (like OWASP Juice Shop or Metasploitable) as separate VMs on the same isolated virtual network.</li>
+<li>Install your practice targets (like OWASP Juice Shop or <a href="/tools/metasploit-basics-ethical.html">Metasploit</a>able) as separate VMs on the same isolated virtual network.</li>
 </ul>
 
 <h2>Essential First Tools to Explore (On Your Lab Only)</h2>
 <ul>
-<li><strong>Nmap</strong> — network discovery on your own virtual network (see our <a href="../hacking/nmap-guide.html">Nmap guide</a>).</li>
-<li><strong>Wireshark</strong> — watch your lab's traffic (see our <a href="wireshark-basics.html">Wireshark guide</a>).</li>
+<li><strong><a href="/hacking/nmap-guide.html">Nmap</a></strong> — network discovery on your own virtual network (see our <a href="../hacking/nmap-guide.html">Nmap guide</a>).</li>
+<li><strong><a href="/tools/wireshark-basics.html">Wireshark</a></strong> — watch your lab's traffic (see our <a href="wireshark-basics.html">Wireshark guide</a>).</li>
 <li><strong>Burp Suite</strong> — web app testing against your own lab apps (see our <a href="../hacking/burp-suite-basics.html">Burp guide</a>).</li>
 <li><strong>Terminal basics</strong> — learn <code>ls</code>, <code>cd</code>, <code>ip a</code>, <code>ping</code>, and <code>man</code>; comfort with the command line underpins everything.</li>
 </ul>
@@ -141,6 +150,15 @@ sudo apt autoremove -y</code></pre>
 <h2>Essential Linux Commands for Security Work</h2>
 <p>Comfort with these pays off daily: <code>ls -la</code>, <code>cd</code>, <code>pwd</code>, <code>cat</code>/<code>less</code>, <code>grep -r</code>, <code>find</code>, <code>chmod</code>, <code>ps aux</code>, <code>netstat -tulpn</code> (or <code>ss -tulpn</code>), <code>ip a</code>, <code>ping</code>, <code>curl</code>, <code>wget</code>, <code>tar</code>, <code>ssh</code>, and <code>man &lt;command&gt;</code> for everything else. Practice them on your Kali VM until they are reflexes — every advanced guide assumes this fluency.</p>
 
+
+<h2>References</h2>
+<p>Sources and further reading for this guide:</p>
+<ul>
+<li><a href="https://nmap.org/docs.html" target="_blank" rel="noopener">Nmap Documentation</a> — Official Nmap reference guide and documentation</li>
+<li><a href="https://www.wireshark.org/docs/" target="_blank" rel="noopener">Wireshark Documentation</a> — Official Wireshark user guide and documentation</li>
+<li><a href="https://www.kali.org/docs/" target="_blank" rel="noopener">Kali Linux Documentation</a> — Official Kali Linux documentation</li>
+<li><a href="https://docs.rapid7.com/metasploit" target="_blank" rel="noopener">Metasploit Documentation (Rapid7)</a> — Official Metasploit documentation</li>
+</ul>
 <div class="related-box"><h3> Related Articles</h3><ul>
 <li><a href="../hacking/nmap-guide.html">Nmap Beginner's Guide: Scan Your Own Network Safely</a></li>
 <li><a href="../hacking/what-is-penetration-testing.html">What Is Penetration Testing? Ethical Hacking Explained</a></li>

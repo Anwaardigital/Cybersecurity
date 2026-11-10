@@ -20,11 +20,11 @@
 <title>Burp Suite Basics: Test Your Own Web Apps Safely</title>
 <meta name="description" content="Introduction to Burp Suite — the professional web security toolkit — for testing your own applications and labs, ethically and legally.">
 <link rel="stylesheet" href="../style.css">
-<link rel="canonical" href="https://anwaardigital.com/Cybersecurity/hacking/burp-suite-basics.html">
+<link rel="canonical" href="https://cybersechub.anwaardigital.com/hacking/burp-suite-basics.html">
 <meta property="og:title" content="Burp Suite Basics: Test Your Own Web Apps Safely">
 <meta property="og:description" content="Introduction to Burp Suite — the professional web security toolkit — for testing your own applications and labs, ethically and legally.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://anwaardigital.com/Cybersecurity/hacking/burp-suite-basics.html">
+<meta property="og:url" content="https://cybersechub.anwaardigital.com/hacking/burp-suite-basics.html">
 <meta property="og:site_name" content="CyberSec Hub">
 <meta name="twitter:card" content="summary_large_image">
 <meta property="og:image" content="https://cybersechub.anwaardigital.com/cyber-icon-512.png">
@@ -41,13 +41,13 @@
   "publisher": {
     "@type": "Organization",
     "name": "CyberSec Hub",
-    "url": "https://anwaardigital.com/Cybersecurity/"
+    "url": "https://cybersechub.anwaardigital.com/"
   },
   "datePublished": "2026-10-14",
   "dateModified": "2026-10-15",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://anwaardigital.com/Cybersecurity/hacking/burp-suite-basics.html"
+    "@id": "https://cybersechub.anwaardigital.com/hacking/burp-suite-basics.html"
   }
 }
 </script>
@@ -72,7 +72,16 @@
 <header class="article-hero"><span class="section-tag"> Ethical Hacking</span><h1>Burp Suite Basics: Test Your Own Web Apps Safely</h1>
 <p class="small">Last updated: 5 November 2026</p><div class="article-meta">By CyberSec Hub · 10 min read</div></header>
 <main class="article-body"><div class="ethical-box"><strong> Ethical Use Only:</strong> Only test systems you own or have <strong>written permission</strong> to test. Unauthorized hacking is illegal in Pakistan and worldwide. Everything here is for defensive security education and authorized testing only.</div>
-<p><strong>Burp Suite</strong> is the industry-standard toolkit for web application security testing, used by professional penetration testers worldwide. It works as an intercepting proxy: it sits between your browser and the web server, letting you inspect and modify every request. This guide introduces it for the only legitimate uses — your own applications, your own lab, and authorized training targets.</p>
+<p><strong>Burp Suite</strong> is the industry-standard toolkit for web application security testing, used by professional <a href="/hacking/what-is-penetration-testing.html">penetration test</a>ers worldwide. It works as an intercepting proxy: it sits between your browser and the web server, letting you inspect and modify every request. This guide introduces it for the only legitimate uses — your own applications, your own lab, and authorized training targets.</p>
+<div class="tip-box"><h2>What You Will Learn</h2>
+<ul>
+<li>Understand what Burp Suite Does</li>
+<li>Understand getting Started (Community Edition)</li>
+<li>Understand your First Exercise: Inspect Your Own Lab Traffic</li>
+<li>Understand key Tools Inside Burp</li>
+<li>Understand learning Path With Burp</li>
+</ul></div>
+
 
 <h2>What Burp Suite Does</h2>
 <p>When you browse normally, requests flow straight from browser to server. With Burp running, traffic flows browser → Burp → server, and Burp shows you everything: headers, cookies, parameters, and responses. This visibility is how professionals find flaws like missing protections, exposed data, and weak session handling — in systems they are authorized to test.</p>
@@ -108,12 +117,12 @@
 <ol>
 <li>Master the proxy and HTTP history on your lab apps.</li>
 <li>Work through PortSwigger's free <strong>Web Security Academy</strong> — excellent labs, all authorized by design.</li>
-<li>Study the <strong>OWASP Top 10</strong> (see our <a href="../basics/types-of-cyber-attacks.html">cyber attacks guide</a>) and reproduce each category in your lab.</li>
+<li>Study the <strong><a href="/hacking/web-application-security-basics.html">OWASP Top 10</a></strong> (see our <a href="../basics/types-of-cyber-attacks.html">cyber attacks guide</a>) and reproduce each category in your lab.</li>
 <li>Practice writing clear findings — what you found, where, why it matters, how to fix it.</li>
 </ol>
 
 <h2>Strict Boundaries</h2>
-<p>Burp is a dual-use tool: everything above is legitimate on your own systems and authorized targets — and illegal anywhere else. Never point it at websites, APIs, or networks without explicit written permission. Employers, bug bounty programs with clear scope, and your own lab are the only valid targets.</p>
+<p>Burp is a dual-use tool: everything above is legitimate on your own systems and authorized targets — and illegal anywhere else. Never point it at websites, APIs, or networks without explicit written permission. Employers, <a href="/career/bug-bounty-introduction.html">bug bounty</a> programs with clear scope, and your own lab are the only valid targets.</p>
 
 <div class="tip-box"><strong> Defensive takeaway:</strong> everything Burp reveals about your lab app, attackers can see in real apps too. Use these lessons to build better defenses: validate all input, use secure cookies, enforce HTTPS, and keep software updated.</div>
 
@@ -124,6 +133,14 @@
 <h2>From Lab to Profession</h2>
 <p>Burp skill compounds: proxy fluency → Repeater intuition → understanding authentication flows → spotting logic flaws. Pair each technical step with report writing — describe each lab finding as if billing a client: what, where, impact, fix. After a year of consistent lab work plus the Web Security Academy, you will think about web apps the way professionals do. Our <a href="../career/how-to-become-pentester.html">career guide</a> shows where this skill fits in the bigger journey.</p>
 
+
+<h2>References</h2>
+<p>Sources and further reading for this guide:</p>
+<ul>
+<li><a href="https://portswigger.net/burp/documentation/desktop" target="_blank" rel="noopener">PortSwigger Burp Suite Documentation</a> — Official Burp Suite documentation</li>
+<li><a href="https://owasp.org/www-project-top-ten/" target="_blank" rel="noopener">OWASP Top 10</a> — The OWASP Top 10 list of the most critical web application security risks</li>
+<li><a href="https://cheatsheetseries.owasp.org/" target="_blank" rel="noopener">OWASP Cheat Sheet Series</a> — Practical OWASP guidance on secure application design and coding</li>
+</ul>
 <div class="related-box"><h3> Related Articles</h3><ul>
 <li><a href="web-application-security-basics.html">Web Application Security Basics: Protect Your Own Website</a></li>
 <li><a href="penetration-testing-methodology.html">Penetration Testing Methodology: The Professional Workflow</a></li>

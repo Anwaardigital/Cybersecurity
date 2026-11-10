@@ -20,11 +20,11 @@
 <title>Wireless Security Basics: Secure Your Own WiFi</title>
 <meta name="description" content="Secure your home WiFi properly — WPA3, router hardening, guest networks, and spotting intruders on your own network.">
 <link rel="stylesheet" href="../style.css">
-<link rel="canonical" href="https://anwaardigital.com/Cybersecurity/tools/wireless-security-basics.html">
+<link rel="canonical" href="https://cybersechub.anwaardigital.com/tools/wireless-security-basics.html">
 <meta property="og:title" content="Wireless Security Basics: Secure Your Own WiFi">
 <meta property="og:description" content="Secure your home WiFi properly — WPA3, router hardening, guest networks, and spotting intruders on your own network.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://anwaardigital.com/Cybersecurity/tools/wireless-security-basics.html">
+<meta property="og:url" content="https://cybersechub.anwaardigital.com/tools/wireless-security-basics.html">
 <meta property="og:site_name" content="CyberSec Hub">
 <meta name="twitter:card" content="summary_large_image">
 <meta property="og:image" content="https://cybersechub.anwaardigital.com/cyber-icon-512.png">
@@ -41,13 +41,13 @@
   "publisher": {
     "@type": "Organization",
     "name": "CyberSec Hub",
-    "url": "https://anwaardigital.com/Cybersecurity/"
+    "url": "https://cybersechub.anwaardigital.com/"
   },
   "datePublished": "2026-10-14",
   "dateModified": "2026-10-15",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://anwaardigital.com/Cybersecurity/tools/wireless-security-basics.html"
+    "@id": "https://cybersechub.anwaardigital.com/tools/wireless-security-basics.html"
   }
 }
 </script>
@@ -73,12 +73,21 @@
 <p class="small">Last updated: 5 November 2026</p><div class="article-meta">By CyberSec Hub · 10 min read</div></header>
 <main class="article-body"><div class="ethical-box"><strong> Ethical Use Only:</strong> Only test systems you own or have <strong>written permission</strong> to test. Unauthorized hacking is illegal in Pakistan and worldwide. Everything here is for defensive security education and authorized testing only.</div>
 <p>Your WiFi is the front door to your entire digital home — every phone, laptop, camera, and smart device sits behind it. Yet most people never change a single router setting. This guide hardens <strong>your own</strong> wireless network step by step.</p>
+<div class="tip-box"><h2>What You Will Learn</h2>
+<ul>
+<li>Know Your Current State</li>
+<li>Change Default Credentials</li>
+<li>Use WPA3 (or WPA2-AES)</li>
+<li>Update Router Firmware</li>
+<li>Harden the Settings</li>
+</ul></div>
+
 
 <h2>Know Your Current State</h2>
 <p>First, audit what you have. Log into your own router (usually at <code>192.168.1.1</code> or <code>192.168.0.1</code> — address printed on the router label) and note: the WiFi encryption type, the admin password status, the firmware version, and the list of connected devices. Use our <a href="../hacking/nmap-guide.html">Nmap guide</a> to scan your own network (<code>nmap -sn 192.168.1.0/24</code>) and compare the device list against what you actually own.</p>
 
 <h2>Step 1: Change Default Credentials</h2>
-<p>Router admin panels ship with defaults like admin/admin — and attackers know every brand's defaults. Change the <strong>router admin password</strong> to something long and unique, stored in your password manager. This alone closes one of the most exploited holes in home networking.</p>
+<p>Router admin panels ship with defaults like admin/admin — and attackers know every brand's defaults. Change the <strong>router admin password</strong> to something long and unique, stored in your <a href="/basics/password-security-guide.html">password manager</a>. This alone closes one of the most exploited holes in home networking.</p>
 
 <h2>Step 2: Use WPA3 (or WPA2-AES)</h2>
 <p>In your router's wireless security settings:</p>
@@ -104,13 +113,13 @@
 <p>Smart bulbs, cameras, and plugs are notoriously insecure. Put them on the <strong>guest/IoT network</strong>, separate from your phones and laptops. If a cheap camera gets compromised, it cannot reach your computer. Change every smart device's default password too.</p>
 
 <h2>Step 6: Watch for Intruders (Your Network Only)</h2>
-<p>Periodically review your router's connected-devices list and re-run your Nmap ping scan. An unknown device could be a forgotten gadget — or a neighbor on your WiFi. If you find one: change the WiFi passphrase immediately, check for firmware updates, and review who you have shared the password with.</p>
+<p>Periodically review your router's connected-devices list and re-run your <a href="/hacking/nmap-guide.html">Nmap</a> ping scan. An unknown device could be a forgotten gadget — or a neighbor on your WiFi. If you find one: change the WiFi passphrase immediately, check for firmware updates, and review who you have shared the password with.</p>
 
 <h2>Public WiFi: Different Rules</h2>
 <p>On networks you do not control (cafes, airports), assume eavesdropping is possible:</p>
 <ul>
 <li>Prefer mobile data for sensitive tasks.</li>
-<li>Use a reputable VPN on untrusted networks.</li>
+<li>Use a reputable <a href="/basics/vpn-explained-guide.html">VPN</a> on untrusted networks.</li>
 <li>Confirm sites use HTTPS (padlock icon) before logging in.</li>
 <li>Turn off auto-join for open networks and disable file sharing.</li>
 </ul>
@@ -132,6 +141,15 @@
 <h2>Kids, Guests, and Shared Housing</h2>
 <p>Give visitors the <strong>guest network</strong> password, never the main one — you can change the guest password freely without reconfiguring your own devices. In shared housing, each person should still practice the basics on their own devices (2FA, updates), because one compromised device on any network segment is a foothold. Consider a separate IoT network even in apartments — cheap cameras are the weakest link in most homes.</p>
 
+
+<h2>References</h2>
+<p>Sources and further reading for this guide:</p>
+<ul>
+<li><a href="https://nmap.org/docs.html" target="_blank" rel="noopener">Nmap Documentation</a> — Official Nmap reference guide and documentation</li>
+<li><a href="https://www.wireshark.org/docs/" target="_blank" rel="noopener">Wireshark Documentation</a> — Official Wireshark user guide and documentation</li>
+<li><a href="https://www.kali.org/docs/" target="_blank" rel="noopener">Kali Linux Documentation</a> — Official Kali Linux documentation</li>
+<li><a href="https://pages.nist.gov/800-63-3/sp800-63b.html" target="_blank" rel="noopener">NIST SP 800-63B — Digital Identity Guidelines</a> — NIST guidance on authentication, passwords and memorized secrets</li>
+</ul>
 <div class="related-box"><h3> Related Articles</h3><ul>
 <li><a href="../basics/wifi-security-guide.html">WiFi Security Guide: Secure Your Home Network (2026)</a></li>
 <li><a href="wireshark-basics.html">Wireshark Basics: See Your Network Traffic (Your Own Network)</a></li>

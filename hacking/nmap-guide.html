@@ -20,11 +20,11 @@
 <title>Nmap Beginner's Guide: Scan Your Own Network Safely</title>
 <meta name="description" content="Learn Nmap the safe way — what it is, how to scan your own home network, understand open ports, and improve your defenses.">
 <link rel="stylesheet" href="../style.css">
-<link rel="canonical" href="https://anwaardigital.com/Cybersecurity/hacking/nmap-guide.html">
+<link rel="canonical" href="https://cybersechub.anwaardigital.com/hacking/nmap-guide.html">
 <meta property="og:title" content="Nmap Beginner's Guide: Scan Your Own Network Safely">
 <meta property="og:description" content="Learn Nmap the safe way — what it is, how to scan your own home network, understand open ports, and improve your defenses.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://anwaardigital.com/Cybersecurity/hacking/nmap-guide.html">
+<meta property="og:url" content="https://cybersechub.anwaardigital.com/hacking/nmap-guide.html">
 <meta property="og:site_name" content="CyberSec Hub">
 <meta name="twitter:card" content="summary_large_image">
 <meta property="og:image" content="https://cybersechub.anwaardigital.com/cyber-icon-512.png">
@@ -41,13 +41,13 @@
   "publisher": {
     "@type": "Organization",
     "name": "CyberSec Hub",
-    "url": "https://anwaardigital.com/Cybersecurity/"
+    "url": "https://cybersechub.anwaardigital.com/"
   },
   "datePublished": "2026-10-14",
   "dateModified": "2026-10-15",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://anwaardigital.com/Cybersecurity/hacking/nmap-guide.html"
+    "@id": "https://cybersechub.anwaardigital.com/hacking/nmap-guide.html"
   }
 }
 </script>
@@ -73,12 +73,21 @@
 <p class="small">Last updated: 5 November 2026</p><div class="article-meta">By CyberSec Hub · 11 min read</div></header>
 <main class="article-body"><div class="ethical-box"><strong> Ethical Use Only:</strong> Only test systems you own or have <strong>written permission</strong> to test. Unauthorized hacking is illegal in Pakistan and worldwide. Everything here is for defensive security education and authorized testing only.</div>
 <p><strong>Nmap</strong> (Network Mapper) is the most famous network scanning tool in cybersecurity — free, open source, and used by professionals worldwide. Its legitimate purpose is simple: it tells you <strong>what is on your own network</strong>. Which devices are connected? Which ports are open? What software is running? Knowing this about your own home or office network is the first step to securing it.</p>
+<div class="tip-box"><h2>What You Will Learn</h2>
+<ul>
+<li>Understand why scan Your Own Network</li>
+<li>Understand installing Nmap</li>
+<li>Understand your First Safe Scan: Your Own Computer</li>
+<li>Understand understanding Ports and Services</li>
+<li>Understand scanning Your Home Network (Your WiFi Only)</li>
+</ul></div>
+
 
 <h2>Why Scan Your Own Network?</h2>
-<p>Most people have no idea what is actually on their WiFi — phones, laptops, smart TVs, maybe an old camera with a default password, possibly even a neighbor leeching the connection. Scanning your own network answers critical defensive questions: are there unknown devices? Is my router exposing management ports? Penetration testers use Nmap in every engagement's scanning phase; learning it on your own network teaches you exactly what an attacker would see — so you can close the gaps first.</p>
+<p>Most people have no idea what is actually on their WiFi — phones, laptops, smart TVs, maybe an old camera with a default password, possibly even a neighbor leeching the connection. Scanning your own network answers critical defensive questions: are there unknown devices? Is my router exposing management ports? <a href="/hacking/what-is-penetration-testing.html">Penetration test</a>ers use Nmap in every engagement's scanning phase; learning it on your own network teaches you exactly what an attacker would see — so you can close the gaps first.</p>
 
 <h2>Installing Nmap</h2>
-<p>Nmap runs on Windows, macOS, and Linux. On Windows, download the installer from the official nmap.org site (the graphical version is called Zenmap). On Linux: <code>sudo apt install nmap</code> on Ubuntu/Debian. On macOS: <code>brew install nmap</code>. Always download from the official site to avoid fake versions bundled with malware.</p>
+<p>Nmap runs on Windows, macOS, and Linux. On Windows, download the installer from the official nmap.org site (the graphical version is called Zenmap). On Linux: <code>sudo apt install nmap</code> on Ubuntu/Debian. On macOS: <code>brew install nmap</code>. Always download from the official site to avoid fake versions bundled with <a href="/basics/types-of-cyber-attacks.html">malware</a>.</p>
 
 <h2>Your First Safe Scan: Your Own Computer</h2>
 <p>The safest possible target is your own machine, using the address <code>127.0.0.1</code> ("localhost" — always means "this computer"):</p>
@@ -122,6 +131,15 @@
 <h2>Nmap Scripting Engine (Safe Introduction)</h2>
 <p>Nmap ships with <strong>NSE scripts</strong> that automate checks — many are purely informational and safe on your own systems, like <code>--script=banner</code> or <code>--script=http-titles</code> against your own lab web server. Rule: use only clearly non-intrusive scripts, only on your own equipment, and read what a script does (<code>--script-help</code>) before running it. When in doubt, do not run it.</p>
 
+
+<h2>References</h2>
+<p>Sources and further reading for this guide:</p>
+<ul>
+<li><a href="https://nmap.org/docs.html" target="_blank" rel="noopener">Nmap Documentation</a> — Official Nmap reference guide and documentation</li>
+<li><a href="https://www.wireshark.org/docs/" target="_blank" rel="noopener">Wireshark Documentation</a> — Official Wireshark user guide and documentation</li>
+<li><a href="https://www.kali.org/docs/" target="_blank" rel="noopener">Kali Linux Documentation</a> — Official Kali Linux documentation</li>
+<li><a href="https://pages.nist.gov/800-63-3/sp800-63b.html" target="_blank" rel="noopener">NIST SP 800-63B — Digital Identity Guidelines</a> — NIST guidance on authentication, passwords and memorized secrets</li>
+</ul>
 <div class="related-box"><h3> Related Articles</h3><ul>
 <li><a href="../tools/nmap-advanced-techniques.html">Nmap Advanced Techniques: Deep Scans of Your Own Network</a></li>
 <li><a href="../tools/wireshark-basics.html">Wireshark Basics: See Your Network Traffic (Your Own Network)</a></li>

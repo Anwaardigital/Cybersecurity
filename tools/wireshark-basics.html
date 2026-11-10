@@ -20,11 +20,11 @@
 <title>Wireshark Basics: See Your Network Traffic (Your Own</title>
 <meta name="description" content="Learn Wireshark — the world's top network analyzer — to inspect your own network traffic, diagnose issues, and understand protocols.">
 <link rel="stylesheet" href="../style.css">
-<link rel="canonical" href="https://anwaardigital.com/Cybersecurity/tools/wireshark-basics.html">
+<link rel="canonical" href="https://cybersechub.anwaardigital.com/tools/wireshark-basics.html">
 <meta property="og:title" content="Wireshark Basics: See Your Network Traffic (Your Own">
 <meta property="og:description" content="Learn Wireshark — the world's top network analyzer — to inspect your own network traffic, diagnose issues, and understand protocols.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://anwaardigital.com/Cybersecurity/tools/wireshark-basics.html">
+<meta property="og:url" content="https://cybersechub.anwaardigital.com/tools/wireshark-basics.html">
 <meta property="og:site_name" content="CyberSec Hub">
 <meta name="twitter:card" content="summary_large_image">
 <meta property="og:image" content="https://cybersechub.anwaardigital.com/cyber-icon-512.png">
@@ -41,13 +41,13 @@
   "publisher": {
     "@type": "Organization",
     "name": "CyberSec Hub",
-    "url": "https://anwaardigital.com/Cybersecurity/"
+    "url": "https://cybersechub.anwaardigital.com/"
   },
   "datePublished": "2026-10-14",
   "dateModified": "2026-10-15",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://anwaardigital.com/Cybersecurity/tools/wireshark-basics.html"
+    "@id": "https://cybersechub.anwaardigital.com/tools/wireshark-basics.html"
   }
 }
 </script>
@@ -73,6 +73,15 @@
 <p class="small">Last updated: 5 November 2026</p><div class="article-meta">By CyberSec Hub · 10 min read</div></header>
 <main class="article-body"><div class="ethical-box"><strong> Ethical Use Only:</strong> Only test systems you own or have <strong>written permission</strong> to test. Unauthorized hacking is illegal in Pakistan and worldwide. Everything here is for defensive security education and authorized testing only.</div>
 <p><strong>Wireshark</strong> is the world's most widely used network protocol analyzer — free, open source, and standard equipment for network engineers and security professionals. It captures the packets flowing through <em>your own</em> network interface and displays them in readable form. This guide teaches legitimate uses: understanding your own traffic, diagnosing your own network issues, and learning how protocols work.</p>
+<div class="tip-box"><h2>What You Will Learn</h2>
+<ul>
+<li>Understand what Wireshark Shows You</li>
+<li>Understand installing Wireshark</li>
+<li>Understand your First Capture (Your Own Traffic)</li>
+<li>Understand filtering: Finding the Signal</li>
+<li>Understand legitimate Things to Learn From Your Own Traffic</li>
+</ul></div>
+
 
 <h2>What Wireshark Shows You</h2>
 <p>Every email sent, every page loaded, every video streamed is broken into <strong>packets</strong> — small envelopes of data with source, destination, and contents. Wireshark captures these envelopes as they pass your own computer's network card and decodes them: "this packet is part of a web page load," "this one is a DNS lookup for example.com." Watching real traffic makes abstract networking concepts concrete.</p>
@@ -113,7 +122,7 @@
 <li>Encrypted traffic (HTTPS) is unreadable by design — tools claiming to "decrypt others' traffic" are either scams or attack tools. Do not go there.</li>
 </ul>
 
-<div class="tip-box"><strong> Pair with Nmap:</strong> use our <a href="../hacking/nmap-guide.html">Nmap guide</a> to map your own network's devices, then Wireshark to watch what those devices actually say. Together they teach you more about networking than any course.</div>
+<div class="tip-box"><strong> Pair with <a href="/hacking/nmap-guide.html">Nmap</a>:</strong> use our <a href="../hacking/nmap-guide.html">Nmap guide</a> to map your own network's devices, then Wireshark to watch what those devices actually say. Together they teach you more about networking than any course.</div>
 
 <h2>Following a TCP Stream (Your Own Traffic)</h2>
 <p>Right-click any TCP packet from your own browsing session and choose <strong>Follow → TCP Stream</strong>. Wireshark reconstructs the entire conversation — you will see your browser's request and the server's response as readable text (for unencrypted HTTP on your own lab server). This is the single best way to understand what "a web request" actually is. Try it against your own lab web server running plain HTTP, then compare with an HTTPS site where you will see only encrypted gibberish — a visceral lesson in why encryption matters.</p>
@@ -135,6 +144,15 @@
 <h2>Exporting Evidence From Your Own Captures</h2>
 <p>File → Export Objects → HTTP lets you save files transferred in your own capture — handy for analyzing what your own lab server sent. <strong>Statistics → Protocol Hierarchy</strong> exports nicely into reports. And remember: capture files can contain sensitive data (even your own), so store them securely and delete when done. Professionals treat pcaps like evidence — because they are.</p>
 
+
+<h2>References</h2>
+<p>Sources and further reading for this guide:</p>
+<ul>
+<li><a href="https://nmap.org/docs.html" target="_blank" rel="noopener">Nmap Documentation</a> — Official Nmap reference guide and documentation</li>
+<li><a href="https://www.wireshark.org/docs/" target="_blank" rel="noopener">Wireshark Documentation</a> — Official Wireshark user guide and documentation</li>
+<li><a href="https://www.kali.org/docs/" target="_blank" rel="noopener">Kali Linux Documentation</a> — Official Kali Linux documentation</li>
+<li><a href="https://www.rfc-editor.org/rfc/rfc8446" target="_blank" rel="noopener">RFC 8446 — The Transport Layer Security (TLS) Protocol Version 1.3</a> — The TLS 1.3 specification</li>
+</ul>
 <div class="related-box"><h3> Related Articles</h3><ul>
 <li><a href="../hacking/nmap-guide.html">Nmap Beginner's Guide: Scan Your Own Network Safely</a></li>
 <li><a href="kali-linux-setup.html">Kali Linux Setup Guide: Build Your Ethical Hacking Lab</a></li>
