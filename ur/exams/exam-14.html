@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V8YRBCM0L9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-V8YRBCM0L9');
+</script>
+
+<link rel="icon" type="image/png" sizes="192x192" href="https://cybersechub.anwaardigital.com/cyber-icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="https://cybersechub.anwaardigital.com/cyber-icon-512.png">
+<link rel="apple-touch-icon" href="https://cybersechub.anwaardigital.com/cyber-icon-192.png">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>امتحان 14 — پریکٹس ٹرمینل 4: ویب تحقیق | CyberSec Hub امتحانات</title>
+<meta name="description" content="سیمولیٹڈ ٹرمینل میں ویب سائٹ لاگز — SQL انجیکشن کی کوشش اور حملہ آور کا آئی پی تلاش کرنا۔">
+<link rel="stylesheet" href="../../exams/style.css">
+<link rel="stylesheet" href="../ur.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+<link rel="canonical" href="https://cybersechub.anwaardigital.com/ur/exams/exam-14.html">
+<link rel="alternate" hreflang="en" href="https://cybersechub.anwaardigital.com/exams/exam-14.html">
+<link rel="alternate" hreflang="ur" href="https://cybersechub.anwaardigital.com/ur/exams/exam-14.html">
+<meta property="og:title" content="امتحان 14 — پریکٹس ٹرمینل 4: ویب تحقیق | CyberSec Hub امتحانات">
+<meta property="og:description" content="سیمولیٹڈ ٹرمینل میں ویب سائٹ لاگز — SQL انجیکشن کی کوشش اور حملہ آور کا آئی پی تلاش کرنا۔">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://cybersechub.anwaardigital.com/ur/exams/exam-14.html">
+<script src="../../exams/cookie-consent.js" defer></script>
+</head>
+<body>
+<nav class="navbar"><div class="nav-inner">
+<a href="../index.html" class="brand"><span class="brand-icon"></span><span>CyberSec <span class="green">Hub</span></span></a>
+<div class="nav-actions"><button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark and light theme"><span class="theme-icon theme-icon-sun" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></span><span class="theme-icon theme-icon-moon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span><span class="theme-label">Light</span></button><button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button></div>
+<ul class="nav-links" id="navLinks">
+<li><a href="../index.html">ہوم</a></li>
+<li><a href="../index.html#basics">بنیادی باتیں</a></li>
+<li><a href="../index.html#creator">کریئیٹر سیکیورٹی</a></li>
+<li><a href="../index.html#hacking">اخلاقی ہیکنگ</a></li>
+<li><a href="../index.html#tools">ٹولز گائیڈ</a></li>
+<li><a href="../index.html#career">کیریئر</a></li>
+<li><a href="../missions.html">مشنز</a></li><li><a href="index.html">امتحانات</a></li><li><a href="../leaderboard.html">لیڈر بورڈ</a></li>
+<li><a href="../learning-path.html">سیکھنے کے راستے</a></li>
+<li><a href="../sectools.html">ٹولز</a></li>
+<li><a href="../glossary.html">لغت</a></li>
+<li><a href="../faq.html">سوالات</a></li>
+<li><a href="../about.html">ہمارے بارے میں</a></li>
+<li><a href="../../exams/exam-14.html">English</a></li>
+</ul></div></nav>
+<main><div class="exam-wrap"><div id="screen-start"><div class="exam-hero"><span class="kicker">سائبر سیک ہب امتحانات</span><h1>امتحان 14 — پریکٹس ٹرمینل 4: ویب تحقیق</h1><p>سیمولیٹڈ ٹرمینل میں ویب سائٹ لاگز — SQL انجیکشن کی کوشش اور حملہ آور کا آئی پی تلاش کرنا۔</p><p class="exam-meta" id="examMeta"></p></div><div class="qcard"><h3>امتحان کے اصول</h3><p>وقت: <b>30 منٹ</b> (وقت ختم ہونے پر امتحان خود بخود جمع ہو جائے گا) · پاس ہونے کے لیے <b>3/5 ٹاسکس</b> درکار ہیں (60%)۔<br>اگر آپ ناکام ہوں تو <b>3 دن</b> بعد دوبارہ کوشش کر سکتے ہیں۔ اگر آپ پاس ہوں تو اگلا امتحان <b>1 دن</b> بعد کھلتا ہے۔<br>سیمولیٹڈ ٹرمینل امتحانات <b>اصلی Kali Linux نہیں</b> ہیں — یہ سیکھنے کے لیے بنایا گیا سیمولیٹڈ ٹرمینل ہے۔<br>If you fail, you can retry after <b>3 days</b>. If you pass, the next exam opens <b>1 day</b> later.<br>Simulated terminal exams are <b>not real Kali Linux</b> — this is a simulated terminal built for learning.</p><div id="gateMsg"></div><div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px"><button class="btn" id="startBtn" onclick="startExam()" style="border:none;cursor:pointer">امتحان شروع کریں</button><a class="btn btn-ghost" href="index.html" style="text-decoration:none">← امتحانات کی فہرست</a></div></div></div><div id="screen-exam" class="hidden"><div class="timerbar"><span><b>امتحان 14 — پریکٹس ٹرمینل 4: ویب تحقیق</b></span><span class="t" id="timer">30:00</span></div><div class="card" style="background:#12121a;border:1px solid #2a2a32;border-radius:16px;padding:20px;margin:16px 0"><div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center"><h2 style="margin:0">پریکٹس ٹرمینل</h2><span class="simnote">پریکٹس ٹرمینل (سیمولیٹڈ) — یہ اصلی Kali Linux نہیں ہے</span></div><div class="term" id="termOut" style="margin-top:14px"></div><div class="termrow"><span class="plabel" id="promptLabel">student@hub:~$</span><input type="text" id="termInput" placeholder="کمانڈ لکھیں، مثلاً pwd" autocomplete="off" autocapitalize="off" spellcheck="false"><button class="btn-green" onclick="runCmd()">چلائیں</button></div><p class="lock-note">مشورہ: کمانڈز دیکھنے کے لیے 'help' لکھیں۔ اگلے ٹاسک کے بارے میں اشارہ کے لیے 'hint' لکھیں۔</p><div class="btnrow" style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px"><button class="btn-ghost" onclick="resetTerminal()" style="border:2px solid #333;color:var(--text);background:transparent;padding:10px 18px;border-radius:12px;cursor:pointer;font-weight:700">دوبارہ شروع کریں (ری سیٹ)</button></div></div><div class="card" style="background:#12121a;border:1px solid #2a2a32;border-radius:16px;padding:20px;margin:16px 0"><h2 style="margin:0 0 6px">ٹاسکس — <span id="progText">0/5 مکمل</span></h2><div id="tasksList"></div><div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px"><button class="btn-ghost" onclick="showHint()" style="border:2px solid #333;color:var(--text);background:transparent;padding:10px 18px;border-radius:12px;cursor:pointer;font-weight:700">اشارہ دکھائیں</button></div><div id="hintBox" class="hintbox hidden"></div></div><div style="display:flex;gap:10px;flex-wrap:wrap;margin:16px 0"><button class="btn-ghost" onclick="backToList()" style="border:2px solid #333;color:var(--text);background:transparent;padding:10px 18px;border-radius:12px;cursor:pointer;font-weight:700">← امتحانات کی فہرست</button></div></div><div id="screen-result" class="hidden"><div class="qcard"><h2 id="resTitle">نتیجہ</h2><p id="resScore" style="font-size:20px"></p><p id="resMsg"></p><div class="review" id="review"></div><div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px"><a class="btn" href="index.html" style="text-decoration:none">← امتحانات کی فہرست</a><button class="btn" id="nextExamBtn" style="display:none;border:none;cursor:pointer">اگلا امتحان →</button><a class="btn" id="certBtn" href="certificate.html" style="display:none;text-decoration:none">سرٹیفکیٹ دیکھیں</a></div></div></div></div></main><script>var EXAM_ID = 14;</script>
+<script src="questions.js"></script>
+<script src="exam-lib.js"></script>
+<script src="exam.js"></script>
+
+<footer class="footer"><div class="container">
+<div class="footer-brand"> CyberSec <span class="green">Hub</span></div>
+<p>سائبر سیکیورٹی سیکھیں — اخلاقی اور قانونی طریقے سے۔</p>
+<div class="footer-links">
+<a href="../index.html">ہوم</a><a href="../about.html">ہمارے بارے میں</a><a href="../contact.html">رابطہ</a><a href="../privacy.html">پرائیویسی پالیسی</a><a href="../disclaimer.html">ڈسکلیمر</a><a href="../terms.html">شرائط</a>
+<a class="social-icon" href="https://www.facebook.com/profile.php?id=61595795009514" target="_blank" rel="noopener" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg></a><a class="social-icon" href="https://www.instagram.com/anwaardigital/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg></a><a class="social-icon" href="https://whatsapp.com/channel/0029Vb9yFEE2kNFstKrUJJ0r" target="_blank" rel="noopener" aria-label="WhatsApp Channel"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a><a class="social-icon" href="https://t.me/Anwaardigital1" target="_blank" rel="noopener" aria-label="Telegram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></a></div>
+<p class="foot-email"> <a href="mailto:contact@anwaardigital.com">contact@anwaardigital.com</a></p>
+<p class="copyright">تیار کردہ <strong style="color:#00e676">ملک محمد انوار</strong></p>
+<p class="copyright">© 2026 CyberSec Hub by Anwaar Digital. جملہ حقوق محفوظ ہیں۔ صرف تعلیمی مواد — ہمیشہ تحریری اجازت سے ٹیسٹ کریں۔</p>
+</div></footer>
+<a href="https://wa.me/923288317526" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.6 6.1 1.6h.1c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.6 1.2 1.2-4.5-.3-.4c-1-1.6-1.6-3.5-1.6-5.5C5 9.6 10.6 5 16 5s11 4.6 11 10-5.4 9.8-11 9.8zm6.1-7.3c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.8.1-.3-.2-1.4-.5-2.7-1.6-.9-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6L13 9.5c-.3-.8-.7-.7-1-.7h-.8c-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.5s1.5 4 1.7 4.3c.2.3 2.9 4.4 7 6.2 1 .4 1.7.7 2.3.9.9.3 1.8.2 2.5.2.8-.1 2.3-1 2.7-1.9.3-.9.3-1.7.2-1.9-.1-.1-.3-.2-.7-.4z"/></svg></a>
+<button id="backToTop" class="backtop" aria-label="Back to top" title="Back to top">&#8593;</button>
+<a id="anwaar-ai-btn" class="ai-btn" href="https://anwaardigital.com/ai/?site=hub" target="_blank" rel="noopener" aria-label="Anwaar AI">Anwaar AI</a>
+<script>
+(function(){try{if(localStorage.getItem('hubTheme')==='light'){document.body.classList.add('light');}}catch(e){}})();
+function toggleTheme(){var b=document.body;var light=b.classList.toggle('light');try{localStorage.setItem('hubTheme',light?'light':'dark');}catch(e){}var lb=document.querySelector('.theme-label');if(lb)lb.textContent=light?'Dark':'Light';}
+(function(){var light=document.body.classList.contains('light');var lb=document.querySelector('.theme-label');if(lb)lb.textContent=light?'Dark':'Light';})();
+</script>
+<script>
+(function(){var b=document.getElementById('backToTop');if(!b)return;
+window.addEventListener('scroll',function(){var s=window.pageYOffset||document.documentElement.scrollTop;
+if(s>300){b.style.opacity='1';b.style.visibility='visible';}else{b.style.opacity='0';b.style.visibility='hidden';}},{passive:true});
+b.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+})();
+</script>
+</body>
+</html>
