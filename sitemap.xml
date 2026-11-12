@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://cybersechub.anwaardigital.com/</loc>
-    <lastmod>2026-11-11</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
+    <lastmod>2026-11-12</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
   <url><loc>https://cybersechub.anwaardigital.com/about.html</loc>
     <lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://cybersechub.anwaardigital.com/learning-path.html</loc>
@@ -261,7 +261,7 @@
   </url>
   <url>
     <loc>https://cybersechub.anwaardigital.com/ur/</loc>
-    <lastmod>2026-11-05</lastmod>
+    <lastmod>2026-11-12</lastmod>
   </url>
   <url>
     <loc>https://cybersechub.anwaardigital.com/ur/youtube-channel-hack-recovery-guide.html</loc>
@@ -606,5 +606,13 @@
   <url>
     <loc>https://cybersechub.anwaardigital.com/ur/password-manager-guide.html</loc>
     <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://cybersechub.anwaardigital.com/basics/how-to-tell-if-your-phone-is-hacked-2026-guide.html</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
+    <loc>https://cybersechub.anwaardigital.com/ur/how-to-tell-if-your-phone-is-hacked-2026-guide.html</loc>
+    <lastmod>2026-11-12</lastmod>
   </url>
 </urlset>
